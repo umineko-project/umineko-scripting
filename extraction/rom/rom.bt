@@ -1,0 +1,79 @@
+//--------------------------------------
+//--- 010 Editor v5.0 Binary Template
+//
+// File: DATA.ROM
+// Author: vit9696
+// Revision: 1.0
+// Purpose:
+//--------------------------------------
+
+LittleEndian();
+
+struct header {
+	char magic[4];
+	uint32 version;
+	uint32 header_size;
+	uint32 unk1;
+};
+
+struct pck_chunk (uint32 baseoff) {
+	uint32 nameoff;
+	uint32 off;
+	uint32 size;
+	local uint32 realnameoff;
+	local uint64 realoff;
+	local int32 isdir;
+	local uint64 dstoff = baseoff;
+};
+
+struct grp_chunk (uint32 baseoff, uint32 amount) {
+	pck_chunk chunks(baseoff)[amount] <optimize=false, read=getChunkData>;
+};
+
+string getChunkData(pck_chunk &i) {
+    i.realnameoff = i.nameoff;
+	i.isdir = i.realnameoff & 0x80000000;
+	i.realnameoff &=~ 0x80000000;
+	i.realnameoff += i.dstoff;
+	local string filename = ReadString(i.realnameoff);
+	i.realoff = i.off;
+	// One more bug here
+	// bitshift operator works improperly with big vars
+	// some bits are cut ^_^
+	i.realoff <<= (i.isdir ? 4 : 11);
+	if (filename[0] == '.') i.isdir = 0;
+	local string print_name;
+	SPrintf(print_name, "off %.10X size %.8X %s ", i.realoff, i.size, filename);
+	return print_name;
+}
+
+void loadChunk (uint64 off) {
+	FSeek(off);
+	uint32 count;
+	grp_chunk group(off,count) <optimize=false>;
+	local uint32 i, j, length = count, amount = 0;
+	// 010 bug with overlaping names makes me create more locals.
+	// neither group nor count are present when returning from a recursion
+	for (i = 0; i < length; i++) {
+		// doesn't seem to be executed in time
+		getChunkData(group.chunks[i]);
+		if (group.chunks[i].isdir) {
+			amount++;	
+		}
+	}
+	if (amount == 0) return;
+	local uint64 offs[amount];
+	for (i = 0, j = 0; i < length; i++) {
+		if (group.chunks[i].isdir) {
+			offs[j] = group.chunks[i].realoff;
+			j++;	
+		}
+	}
+	
+	for (i = 0; i < amount; i++) {
+		loadChunk(offs[i]);
+	}
+}
+
+header hdr;
+loadChunk (0x10);

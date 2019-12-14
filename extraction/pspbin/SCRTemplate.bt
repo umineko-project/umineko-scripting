@@ -1,0 +1,218 @@
+//--------------------------------------
+//--- 010 Editor v4.0.4 Binary Template
+//
+// File: SCRTemplate.bt
+// Author: Honyaku-Subs
+// Revision: 0.1
+// Purpose: Umineko PSP Script Parser
+//--------------------------------------
+
+/* --- Definitions --- */
+
+#define second_game 0
+
+typedef uint POINTER <format=hex, bgcolor=0xFF00FF, fgcolor=cYellow>;
+
+struct SCRFILEHEADER {
+	char magic[4];
+	unsigned int number;
+    int chapter_pointers[number];
+};
+
+enum <unsigned short> INSTRUCTION_ID {
+	BLOCK_ENTRY		= 0x0064,
+	UNK1			= 0x0020, //really not a bg instruction
+	LAYER_COMMAND_3	= 0x00A3,
+	LAYER_COMMAND_7	= 0x00A7,
+	LAYER_COMMAND_E	= 0x00AE,
+	UNK4			= 0x004A,
+	UNK5			= 0x000C,
+	UNK6			= 0x0001, //print 1?
+	UNK8			= 0x0012,
+	UNK9			= 0x0065,
+	UNK10			= 0x0049,
+	BG_BLACK		= 0x0059,
+	BG_WHITE		= 0x005B,
+	BG_PORTRAIT1	= 0x001E,
+	BG_AIR_IN1E		= 0x0036,
+	BG_AIR_OUT2A	= 0x0035,
+	BG_G2F_R1A		= 0x0053,
+	BG_SHIP_S1B		= 0x0041,
+	BG_SKY_1B		= 0x0044,
+	BG_MHAL_2A		= 0x005F,
+	SE_28			= 0x0032,
+	SE_1061			= 0x005A,
+    CHAPTER_SET		= 0x006C,
+	WAIT1000		= 0x003C,
+	WAIT6000		= 0x0168,
+	DIALOGUE		= 0x0002,
+	DIALOGUE_PIPE	= 0x0003,
+	PIPE			= 0x0006,
+	TEXTOFF1		= 0x000A, //one of them refreshes screen?
+	TEXTOFF2		= 0x000C,
+	BGMPLAY			= 0x0043,
+};
+
+struct SIMPLE_DIALOGUE {
+	unsigned short type;
+	unsigned short unk0;
+	unsigned short text_len;
+	char text[text_len-2];
+};
+
+struct VOICED_DIALOGUE {
+	unsigned short name_len;
+	if (name_len<3) {
+		Printf("Error 0x%X\n",FTell());
+	}	char name[name_len-2];
+	unsigned short text_len;
+	char text[text_len-2];
+};
+
+struct INSTRUCTION {
+	INSTRUCTION_ID instruction_id <bgcolor=0x0000FF, fgcolor=0xFFFFFF>;
+	local string printable_name="";
+	switch(instruction_id) {
+		case UNK1:
+		case UNK6:
+		case UNK8:
+		case UNK9:
+			printable_name=EnumToString(instruction_id);
+			SPrintf(printable_name,"%s SHORT %s", printable_name, 
+					getBigShortHex(instruction_id));
+		break;
+		case UNK4:
+		case UNK10:
+			printable_name=EnumToString(instruction_id);
+			SPrintf(printable_name,"%s INT %s", printable_name, 					
+					getBigIntHex(ReadUInt(FTell()-2)));
+			unsigned short unk0;
+		break;
+		case LAYER_COMMAND_3:
+		case LAYER_COMMAND_7:
+		case LAYER_COMMAND_E:
+		case UNK5:
+			unsigned short unk0;
+			unsigned short unk1;
+			SPrintf(printable_name,"%s: %s, %s", EnumToString(instruction_id), 
+					getBigShortHex(unk0),getBigShortHex(unk1));
+		break;
+		case BG_BLACK: 		
+		case BG_WHITE:
+		case BG_PORTRAIT1:
+		case BG_AIR_IN1E:
+		case BG_AIR_OUT2A:
+		case BG_G2F_R1A:
+		case BG_SHIP_S1B:
+		case BG_SKY_1B:
+		case BG_MHAL_2A:
+			printable_name = EnumToString(instruction_id);
+			printable_name = SubStr(printable_name,3);
+            unsigned short unk0; //0xFFFF or .... 
+			//Printf("%s - 0x%X\n",printable_name,ReadUShort(FTell()-6));
+			SPrintf(printable_name,"BG: %s,%s",printable_name,getBigShortHex(unk0));
+		break;
+		case SE_28:
+		case SE_1061:
+			printable_name = EnumToString(instruction_id);
+			printable_name = SubStr(printable_name,3);
+            unsigned short volume;
+			SPrintf(printable_name,"SE: %s,%d",printable_name,volume);		
+		break;
+		case BLOCK_ENTRY:
+			printable_name = "BLOCK_ENTRY";
+			//Printf("BLOCK_ENTRY 0x%X\n", FTell()-2);
+		break;
+        case CHAPTER_SET:
+            unsigned short type;
+            if (type == 0x00) {
+                printable_name="NEW_EPISODE";
+            } else if (type == 0x01) {
+                printable_name="NEW_CHAPTER";
+            } else {
+				printable_name="failure, CHAPTER_SET";
+				break;
+			}
+            unsigned short len;
+            char title[len-2];
+            SPrintf(printable_name, "%s: %s", printable_name, title);
+        break;
+		case WAIT1000:
+		case WAIT6000:
+			local int ms = instruction_id*1000/60;
+			SPrintf(printable_name, "WAIT: %d (%d ms)", instruction_id, ms);
+		break;
+		case DIALOGUE:
+		case DIALOGUE_PIPE:
+			unsigned short id;
+			local unsigned short type = ReadUShort(FTell()); //bigger than 4 is length
+			if (type == 0x04) {
+				SIMPLE_DIALOGUE dialogue;
+				SPrintf(printable_name, "DIALOGUE: %d %s", id, dialogue.text);
+			} else {
+				VOICED_DIALOGUE dialogue;
+				SPrintf(printable_name, "DIALOGUE: %d %s %s", id, dialogue.name, dialogue.text);
+			}
+		break;
+		case PIPE:
+			printable_name = "PIPE";
+			local int pipe_count = 0;
+			while(pipe_count < 10) {
+				unsigned short pipe_id;
+				if (pipe_id == 0xFFFF) break;
+				unsigned short unk0;
+				do {
+					unsigned short instruction;
+				} while (instruction != 0x0006);
+				pipe_count++;
+			}
+		break;
+		case TEXTOFF1:
+			printable_name="TEXTOFF1";
+		break;
+		case TEXTOFF2:
+			printable_name="TEXTOFF2";
+		break;
+		default:
+			printable_name="failure";
+		break;
+		case BGMPLAY:
+			unsigned short id;
+			SPrintf(printable_name, "BGMPLAY: %d", id-1);		
+		break;
+	}
+};
+
+struct SCRIPT {
+	INSTRUCTION inst[100] <optimize=false, read=getInstructionString>;
+};
+
+/* --- Retrieval functions --- */
+
+string getInstructionString(INSTRUCTION &i) {
+	return i.printable_name;
+}
+
+string getBigShortHex(unsigned short val) {
+	local string out;
+	SPrintf(out,"0x%0.4X",SwapBytes(val));
+	return out;
+}
+
+string getBigIntHex(unsigned int val) {
+	local string out;
+	SPrintf(out,"0x%0.8X",SwapBytes(val));
+	return out;
+}
+
+
+/* --- Actual file format definition --- */
+
+LittleEndian();
+SCRFILEHEADER header <bgcolor=0xFFAAAA>;
+local int i;
+//Lots of duplicates on Episodes; 47,48 something odd
+for (i = 0; i < header.number; i++) {
+	FSeek(header.chapter_pointers[i]);
+	SCRIPT script;
+}

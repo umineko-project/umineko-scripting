@@ -1,0 +1,1912 @@
+//-----------------------------------------------------------------------------
+//--- 010 Editor Binary Template
+//
+// File: snr.bt
+// Author: Umineko Project
+// Revision: 0.5
+// Purpose: Umineko and Higurashi PS3 Script Parser
+//
+// Copyright (c) 2011-2018 Umineko Project
+//
+// This document is considered confidential and proprietary,
+// and may not be reproduced or transmitted in any form 
+// in whole or in part, without the express written permission
+// of Umineko Project.
+//
+//-----------------------------------------------------------------------------
+
+// Uncomment the game you run this script against and comment the others.
+//#define RONDO 1
+#define NOCTURNE 1
+//#define SUI 1
+
+// Uncomment to perform xml output generation.
+//#define PRINT 1
+
+// Set a valid path for storing xml output.
+// @ will be replaced with an incremental index.
+#define BASENAME "/Users/user/Desktop/umi/scr@.xml"
+
+local int64 snr_size = FileSize();
+#ifdef PRINT
+local int snr_idx = GetFileNum();
+local int log_idx = FileNew("XML",false);
+local int file_id = 0;
+FPrintf(log_idx,"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+FPrintf(log_idx,"<script>\n");
+FileSelect(log_idx);
+FileSave(getFilePath());
+FileSelect(snr_idx);
+#endif
+
+typedef uint POINTER <format=hex, bgcolor=0xFF00FF, fgcolor=cYellow>;
+typedef unsigned short DURATION_IN_FRAMES <bgcolor=cDkGreen,fgcolor=cYellow>;
+typedef unsigned short SLOT <bgcolor=cDkBlue,fgcolor=cYellow>;
+
+enum <unsigned char> INSTRUCTION_ID {
+    REGISTER_MODIFY = 0x41,
+    REGISTER_CALC = 0x42,
+    REGISTER_CONDITION = 0x46,
+    INSTRUCTION_44 = 0x44, // Some sort of math/register instruction - Example: 44 DD 33 00
+    JUMP_TO_ADDRESS = 0x47,
+    GOSUB = 0x48,
+    RETURN_KEYWORD = 0x49,
+    JUMP_ONVALUE_NBRANCHES = 0x4A,
+    INSTRUCTION_4C = 0x4C,
+    STACK_PUSH = 0x4D,
+    STACK_POP = 0x4E,
+    SYSCALL = 0x80,
+    READ_EXTERNAL = 0x81, //chiru
+#ifdef SUI
+    WRITE_EXTERNAL = 0x82,
+#else
+    SPECIAL_WAIT = 0x82, //chiru
+#endif
+    WAIT = 0x83,
+    CLICK_WAIT = 0x84, //chiru
+    TEXTBOX_COMMAND = 0x85,
+    DIALOGUE = 0x86,
+    DIALOGUE_PIPE_WAIT = 0x87,
+    DIALOGUE_CONTINUE_SIGNAL = 0x88,
+    HIDE_DIALOGUE_WINDOW = 0x89,
+
+#ifdef SUI
+    INSTRUCTION_8A = 0x8A,
+    HIDDEN_DIALOGUE = 0x8C,
+    SWITCH = 0x8D,
+    PRINT_COMMAND = 0x8E,
+    INSTRUCTION_8F = 0x8F, //not sure what this is. Instruction only command (no args)
+    BGM_PLAY = 0x90,
+    BGM_FADE = 0x91,
+    BGM_VOLUME = 0x92, // unconfirmed, but likely
+    INSTRUCTION_93 = 0x93, // something bgm related...
+    INSTRUCTION_94 = 0x94,  //not sure what this is. Similar to isntruction 93
+    SFX_PLAY = 0x95,
+    CHANNEL_FADE = 0x96,
+    MIX_CHANNEL_FADE = 0x97,
+    CHANNEL_VOLUME = 0x98, // unconfirmed, but likely
+    CHANNEL_WAIT = 0x99,
+    SFX_PLAY2 = 0x9A, // unconfirmed, but likely
+    RUMBLE = 0x9B, // unconfirmed, but likely
+    SECTION_START = 0xA0,
+    WAITTIMER = 0xA1,
+    CLEARTIMER = 0xA2,
+    UNSETTIMER = 0xA3,
+    SECTION_END = 0xA5,
+    VOICE_PLAY = 0xA6,
+    VOICE_WAIT_FOR_END = 0xA7,
+    TIP_ENTRY_UNLOCK = 0xAA,
+    INSTRUCTION_AC = 0xAC, // No idea what this is - Example: AC 14 00 00 80 01 00 01 80
+    INSTRUCTION_AD = 0xAD,
+    INSTRUCTION_AE = 0xAE,
+    MOVIE_PLAY = 0xAF, // not completely sure, but likely (sui has 0~6)
+    SECTION_MARKER = 0xB0, // probably a different marker instriction...
+    INSTRUCTION_B1 = 0xB1,
+    INSTRUCTION_B2 = 0xB2,
+    INSTRUCTION_B3 = 0xB3,
+    OPEN_TROPHY = 0xB4, // not completely sure, but likely (sui has 0~38 trophies)
+
+    SPRITESET_CLEAR = 0xC0,
+    RESOURCE_COMMAND = 0xC1,
+    SPRITE_COMMAND = 0xC2,
+    SPRITE_COMMAND_WAIT_FOR_END = 0xC3,
+    MASK_COMMAND = 0xC4,
+    SELECT_SPRITESET = 0xC5,
+    SPRITESET_INITIALIZE = 0xC6,
+    SPRITESET_COMMAND = 0xC7,
+    SPRITESET_COMMAND_WAIT_FOR_END = 0xC8,
+
+    GLOBAL_DISPLAY_COMMAND = 0xCA,
+    GLOBAL_DISPLAY_COMMAND_WAIT_FOR_END = 0xCB,
+    SYSTEM_MENU_SHOW = 0xCC, //used only once, related to state
+    GET_RESPONSE_CAKE = 0xCD,
+    GET_RESPONSE_QUIZ = 0xCE,
+    GET_RESPONSE_QUIZ2 = 0xCF,
+    GET_RESPONSE_MURDER_STORY = 0xD0
+#else
+    HIDDEN_DIALOGUE = 0x8B,
+    SWITCH = 0x8C,
+    PRINT_COMMAND = 0x8D,
+    INSTRUCTION_8E = 0x8E,
+    BGM_PLAY = 0x9C,
+    BGM_FADE = 0x9D,
+    BGM_VOLUME = 0x9E,
+    SFX_PLAY = 0xA0,
+    CHANNEL_FADE = 0xA1,
+    MIX_CHANNEL_FADE = 0xA2,
+    CHANNEL_VOLUME = 0xA3,
+    CHANNEL_WAIT = 0xA4,
+    SFX_PLAY2 = 0xA5, //chiru
+    RUMBLE = 0xA6,
+    SECTION_START = 0xB0,
+    MOVIE_PLAY = 0xB1,
+    WAITTIMER = 0xB2,
+    CLEARTIMER = 0xB3,
+    UNSETTIMER = 0xB4,
+    SECTION_END = 0xB6,
+    VOICE_PLAY = 0xB9,
+    VOICE_WAIT_FOR_END = 0xBA,
+    TIP_ENTRY_UNLOCK = 0xBD,
+    OPEN_TROPHY = 0xBE,
+    CHARACTER_ENTRY_UNLOCK = 0xBF,
+
+    SPRITESET_CLEAR = 0xC0,
+    RESOURCE_COMMAND = 0xC1,
+    SPRITE_COMMAND = 0xC2,
+    SPRITE_COMMAND_WAIT_FOR_END = 0xC3,
+    MASK_COMMAND = 0xC4,
+    SELECT_SPRITESET = 0xC5,
+    SPRITESET_INITIALIZE = 0xC6,
+    SPRITESET_COMMAND = 0xC7,
+    SPRITESET_COMMAND_WAIT_FOR_END = 0xC8,
+
+    SECTION_MARKER = 0xC9,
+    GLOBAL_DISPLAY_COMMAND = 0xCA,
+    GLOBAL_DISPLAY_COMMAND_WAIT_FOR_END = 0xCB,
+    SYSTEM_MENU_SHOW = 0xCC, //used only once, related to state
+    GET_RESPONSE_CAKE = 0xCD,
+    GET_RESPONSE_QUIZ = 0xCE,
+    GET_RESPONSE_QUIZ2 = 0xCF,
+    GET_RESPONSE_MURDER_STORY = 0xD0
+#endif
+};
+
+enum <unsigned short> RESOURCE_COMMAND_ID {
+    REMOVE_SLOT = 0,
+    LOAD_SIMPLE = 1,
+    PIC_LOAD = 2,
+    SPRITE_LOAD = 3,
+    ANIME_LOAD = 4,
+#ifdef SUI
+    HIGU_5 = 5,
+    HIGU_6 = 6,
+#else
+    RAIN_LOAD = 5,
+#endif
+    QUIZ = 7, //QUIZ MENU
+    CAKE = 8, //CAKE MENU
+    QUIZ2 = 9,
+    MURDER_STORY = 10
+};
+
+enum <unsigned short> SECTION_TYPE {
+    EPISODE = 0,
+    CHAPTER = 1
+};
+enum <unsigned short> SPRITE_PROPERTY {
+    Z_ORDER = 0,
+    MULTIPLIER_ALPHA = 1, 
+    MULTIPLIER_RED = 2, 
+    MULTIPLIER_GREEN = 3, 
+    MULTIPLIER_BLUE = 4,  // these (RGB) may be the wrong way around
+    MONOCRO = 5, //1 sepia, 2 inverted, 4 greyscale
+    ADD_BLEND = 6, 
+    X_POSITION = 7,
+    Y_POSITION = 8,
+    SPRITE_CENTER_OFFSET_X = 9,
+    SPRITE_CENTER_OFFSET_Y = 10,
+    RESIZE_FACTOR_X = 11,
+    RESIZE_FACTOR_Y = 12,
+    ROTATION_ANGLE = 13,
+    FLIP_MODE = 14, // 0 - same, 1 - horizontal flip, 2 - vertical flip (1 and 3 are used)
+    QUAKE_SPRITE_X_AMPLITUDE = 15,
+    QUAKE_SPRITE_X_CYCLEFRAMES = 16,
+    QUAKE_SPRITE_Y_AMPLITUDE = 17,
+    QUAKE_SPRITE_Y_CYCLEFRAMES = 18,
+    LIPS_ANIM   = 19, //set to 1 by default, reset by sprite remove
+    RAIN_DROPS  = 20,
+    RAIN_SPEED  = 21,
+    RAIN_WIND_FACTOR = 22,
+    PAUSE_LAYER = 23, //Disables rain refresh although it is still here
+    WARP_AMP = 24, //Always 100
+    WARP_WAVELENGTH = 25,
+    WARP_SPEED = 26, //Always 10
+    HIGU_PROP_27 = 27,
+    BLUR_AMOUNT = 34,
+    BREAKUP_VALUE = 35, // indicates progress through breakup; 0=unbroken, 1000=animation over
+    BREAKUP_DIRECTION = 36 //breakup direction flagset BREAKUP_FROM_LEFT = 1 + BREAKUP_FROM_BOTTOM = 2
+};
+enum <unsigned short> SPRITE_WAIT_PROPERTY {
+    UNKNOWN_0   = 0,
+    ALPHA       = 1,
+    POSITION_X  = 5,
+    POSITION_Y  = 6,
+    UNK_HIGU_7  = 7,
+    POSITION_CY = 8, // Centre Y wait, possibly a bug
+    SCALE_X     = 9,
+    SCALE_Y     = 10,
+    ROTATION    = 11,
+    QUAKE_X     = 12,
+    QUAKE_Y     = 14,
+    ANIM        = 16,
+    WARP        = 20,
+    BLUR        = 30,
+    BREAKUP     = 31
+};
+enum <unsigned short> SPRITESET_PROPERTY {
+    SPRITESET_ALPHA             = 0,
+    SPRITESET_X_POSITION        = 6,
+    SPRITESET_Y_POSITION        = 7,
+    SPRITESET_CENTER_OFFSET_X   = 8,
+    SPRITESET_CENTER_OFFSET_Y   = 9,
+    SPRITESET_RESIZE_FACTOR_X   = 10,
+    SPRITESET_RESIZE_FACTOR_Y   = 11,
+    SPRITESET_ROTATION_ANGLE    = 12,
+    SPRITESET_FLIP_MODE         = 13,
+    SPRITESET_WARP_AMP          = 18,
+    SPRITESET_WARP_WAVELENGTH   = 19,
+    SPRITESET_WARP_SPEED        = 20,
+    SPRITESET_PIXELATED_NOISE   = 27, // side size
+    SPRITESET_BLUR_AMOUNT       = 28,
+    SPRITESET_BREAKUP_VALUE     = 29,
+    SPRITESET_BREAKUP_DIRECTION = 30
+};
+enum <unsigned short> SPRITESET_WAIT_PROPERTY {
+    SPRITESET_WAIT_ALPHA            = 0,
+    SPRITESET_WAIT_X_POSITION       = 4,
+    SPRITESET_WAIT_Y_POSITION       = 5,
+    SPRITESET_WAIT_ROTATION_ANGLE   = 10,
+    SPRITESET_WAIT_WARP             = 15,
+    SPRITESET_WAIT_PIXELATED_NOISE  = 24,
+    SPRITESET_WAIT_BREAKUP          = 26
+};
+enum <unsigned char> CHANGESET_FLAGS {
+    VALUE_PROVIDED = 1,
+    FRAMES_PROVIDED = 2,
+    MOTION_EQUATION_PROVIDED = 4
+};
+enum <unsigned short> MOTION_EQUATION {
+    GRADUAL_SPEEDUP = 1, 
+    GRADUAL_SLOWDOWN = 2,
+    SMOOTH_START_STOP = 3,
+    TYPE_64 = 64
+};
+enum <unsigned char> ANIME_PROPERTY {
+    INDEX_PROVIDED          = 1,
+    SINGLE_PLAY_PROVIDED    = 4
+};
+enum <unsigned char> PRINT_PROPERTY {
+    MASK_PROVIDED           = 1,
+    DURATION_PROVIDED       = 2,
+    UNKNOWN_PROVIDED        = 4,
+    ONS_EFFECT_PROVIDED     = 8,
+    BLOCKING_PROVIDED       = 128
+};
+enum <unsigned short> GLOBAL_DISPLAY_PROPERTY {
+    DISPLAY_X_POSITION = 0x04,
+    DISPLAY_Y_POSITION = 0x05,
+    DISPLAY_CENTER_OFFSET_X = 0x06,
+    DISPLAY_CENTER_OFFSET_Y = 0x07,
+    QUAKE_X_AMPLITUDE = 0x0C,
+    QUAKE_X_CYCLEFRAMES = 0x0D,
+    QUAKE_Y_AMPLITUDE = 0x0E,
+    QUAKE_Y_CYCLEFRAMES = 0x0F,
+    DISPLAY_WARP_AMP = 0x10,
+    DISPLAY_WARP_WAVELENGTH = 0x11,
+    DISPLAY_WARP_SPEED = 0x12,
+    BLUR_AMOUNT_DISPLAY_PROPERTY = 0x1A,
+    QUAKE_SINGLE_AXIS = 0x1D,
+    DISPLAY_ONION_ALPHA_OPACITY = 0x1E, // controls how visible the onion effect when moving sprites is
+    DISPLAY_ONION_ALPHA_SCALE_FACTOR = 0x1F
+// only appears in one place which is too complicated to reasonably analyze without building it first
+/* for onion, it could be something like,
+if a movement of a solid color pixel moving left to right would *normally* do this to alpha:
+           255 pixel moves------>
+   frame 1 [255][000][000][000][000]
+   frame 2 [000][255][000][000][000]
+   frame 3 [000][000][255][000][000]
+   frame 4 [000][000][000][255][000]
+   frame 5 [000][000][000][000][255]
+then with onion set to 192 it might instead do
+   frame 1 [255][000][000][000][000]
+   frame 2 [192][255][000][000][000]
+   frame 3 [145][192][255][000][000] (192/255)^2 ...
+   frame 4 [109][145][192][255][000] ^3...
+   frame 5 [082][109][145][192][255] ^4...
+*/
+};
+enum <unsigned short> GLOBAL_DISPLAY_WAIT_PROPERTY {
+    GLOBAL_POSITION_X   = 3,
+    GLOBAL_POSITION_Y   = 4,
+    GLOBAL_QUAKE_X      = 10,
+    GLOBAL_QUAKE_Y      = 12,
+    GLOBAL_QUAKE_XY     = 14,
+    GLOBAL_BLUR_AMOUNT  = 24,
+    GLOBAL_ONION_ALPHA  = 26
+};
+struct STORABLE {
+    signed short value;
+    local string str = "";
+    local int reg = false;
+    if(value<-32000) {
+        SPrintf(str, "reg%i", 32768+value);
+        reg = true;
+    } else {
+        SPrintf(str, "%i", value);
+    }
+};
+struct CALCOP {
+    char value;
+    local string str = "";
+    local int args = 0;
+    if (value == -1) {
+        str = "end";
+    } else if (value == 0) {
+        str = "push";
+        args = 1;
+    } else if (value == 0x1) {
+        str = "add";
+    } else if (value == 0x2) {
+        str = "sub";
+    } else if (value == 0x3) {
+        str = "mul";
+    } else if (value == 0x4) {
+        str = "div";
+    } else {
+        error();
+    }
+};
+struct BITNUMBER {
+    //Value is a number of set bits divided by two
+    STORABLE bits;
+    local unsigned short cbits = bits.reg ? 0 : bits.value;
+    local unsigned short num = 0;
+    while (cbits != 0) {
+        cbits = cbits >> 2;
+        num++;
+    }
+};
+struct SCRIPT;
+
+struct REFERENCE_TABLES_UMI {
+    POINTER script;
+    POINTER masks;
+    POINTER backgrounds;
+    POINTER bustup;
+    POINTER anime;
+    POINTER bgm;
+    POINTER se;
+    POINTER movie;
+    POINTER voice;
+    POINTER picbox;
+    POINTER musbox;
+    POINTER tips;
+    POINTER char_flags;
+    POINTER chars;
+};
+
+struct REFERENCE_TABLES_SUI {
+    POINTER script;
+    POINTER masks;
+    POINTER backgrounds;
+    POINTER bustup;
+    POINTER bgm;
+    POINTER se;
+    POINTER movie;
+    POINTER voice;
+    POINTER picbox;
+    POINTER musbox;
+    POINTER tips;
+    POINTER chapters;
+};
+
+struct SNRFILEHEADER {
+    char magic[4];
+    unsigned int filesize_in_bytes;
+    int dialogue_line_count;
+    int unk_ints[5];
+#ifdef SUI
+    REFERENCE_TABLES_SUI pointers;
+#else
+    REFERENCE_TABLES_UMI pointers;
+#endif
+
+};
+struct TABLE_MASKS {
+    int entries_num;
+    struct {
+        char data[0x0C];
+    } entries[entries_num];
+};
+struct TABLE_BACKGROUNDS {
+    int entries_num;
+    struct TABLE_BACKGROUNDS_ENTRY {
+        char data[0x18];
+        short unk1;
+    } entries[entries_num];
+};
+struct TABLE_BUSTUP {
+    int entries_num;
+    struct {
+        char data1[0x18];
+#ifdef SUI
+        char data2[0x12];
+#else
+        char data2[0x10];
+#endif
+    } entries[entries_num];
+};
+
+struct TABLE_ANIME {
+    int entries_num;
+    struct {
+#ifdef NOCTURNE
+        char data[0x24];
+#else
+        char data[0x20];
+#endif
+        short unk1;
+        short unk2;
+    } entries[entries_num];
+};
+
+struct TABLE_BGM {
+    int entries_num;
+    struct {
+        char filename[0x0C];
+        char songname[0x28];
+    } entries[entries_num];
+};
+
+struct TABLE_SE {
+    int entries_num;
+    struct {
+        char data[0x18];
+    } entries[entries_num];
+};
+
+struct TABLE_MOVIE {
+    int entries_num;
+    struct {
+        char data[0x10];
+        short unk1;
+    } entries[entries_num];
+};
+
+struct TABLE_VOICE {
+    int entries_num;
+    struct {
+        char data1[0x10];
+        uint64 unk_bitmask <format=binary>;
+    } entries[entries_num];
+};
+
+struct CHAR_ENTRY {  
+    unsigned short char_entry_type; //increases with next entry 0x11 0x21 0x31
+    switch(char_entry_type) {
+        case 0x11:
+        case 0x21:
+        case 0x31:
+
+        unsigned short unk1; //0x0200 or 0x0201
+        case 0x12:
+        case 0x22:
+            char char_abbrev[8];
+#ifdef NOCTURNE
+            char char_image[20];
+#else
+            char char_image[16];
+#endif
+            //Printf("data: %s -> %s\n", char_abbrev, char_image);
+        break;
+
+        default:
+            char char_text[(char_entry_type>>4)-2];
+            //Printf("text: %s\n", ConvertString(char_text, CHARSET_JAPANESE, CHARSET_UTF8));
+        break;
+    }
+};
+
+struct TABLE_CHARS {
+    int entries_num;
+    struct {
+        local uint64 start = FTell();
+        unsigned short len;
+        while ((FTell()-(len>>4)-start) > 0) {
+            CHAR_ENTRY entry; 
+        }
+    } entries[entries_num] <optimize=false>;
+};
+struct TABLE_TIPS {
+    int entries_num;
+    struct {
+#ifdef SUI
+        unsigned short id;
+        char path[0x10];
+#else
+        unsigned short len;
+        //char data[(len>>4)-2];
+        string data;
+        string desc;
+        //Printf("title: %s\n", ConvertString(data, CHARSET_JAPANESE, CHARSET_UTF8));
+        //Printf("text: %s\n", ConvertString(desc, CHARSET_JAPANESE, CHARSET_UTF8));
+#endif
+    } entries[entries_num] <optimize=false>;
+};
+
+struct TABLE_CHAR_FLAGS {
+    int entries_num;
+    struct {
+        unsigned int data;
+    } entries[entries_num];
+};
+
+string getPictureEntry(unsigned short &i) {
+    return getBackgroundName(i);
+}
+
+string getMusicEntry(unsigned short &i) {
+    string printable_name;
+    SPrintf(printable_name,"[%X] %s", i, getBGMName(i,0));
+    return printable_name;
+}
+
+struct TABLE_PICTURE_BOX {
+    int entries_num;
+    struct {
+        unsigned char len;
+        unsigned char flags; // 0x80 is hidden
+        unsigned short data[len] <read=getPictureEntry>;
+    } entries[entries_num] <optimize=false>;
+};
+    
+struct TABLE_MUSIC_BOX {
+    int entries_num;
+    struct {
+        unsigned short bgm_index <read=getMusicEntry>;
+        // Probably unused...
+        // Could be umib_%03d index, but it does not match for some tracks
+        unsigned short unk;
+        unsigned short play_once;
+    } entries[entries_num];
+};
+
+struct INSTRUCTION {
+    INSTRUCTION_ID instruction_id <bgcolor=0x0000FF, fgcolor=0xFFFFFF>;
+    local string printable_name="";
+    switch(instruction_id) {
+        
+        case DIALOGUE:                         
+            unsigned short dialogue_number <bgcolor=0xFFFFFF>;
+            unsigned char dialogue_number_hi <bgcolor=0xDDDDDD>;
+            unsigned char plain_dialogue <bgcolor=0xBBBBBB>;
+            unsigned short length <bgcolor=0x999999>;
+            char body[length] <bgcolor=0x777777>;
+            SPrintf(printable_name, "[%i] %s", dialogue_number, body);
+            startInst("DIALOGUE");
+            numField("num", (((unsigned int)dialogue_number_hi) << 16) | dialogue_number);
+            numField("dlgtype",plain_dialogue);
+            strField("data",strConv(body));
+            endInst();
+#ifndef SUI
+            Assert(dialogue_number_hi == 0, "DIALOGUE :: non-zero unk1");
+#endif
+            break;
+        case HIDDEN_DIALOGUE:
+            unsigned short length <bgcolor=0x999999>;
+            char body[length] <bgcolor=0x777777>;
+            SPrintf(printable_name, "[hidden] %s", body);
+            startInst("HIDDEN_DIALOGUE");
+            strField("data",strConv(body));
+            endInst();
+            break;  
+        case DIALOGUE_PIPE_WAIT:                
+            signed short index;
+            SPrintf(printable_name, "Wait for pipe %i", index);
+            startInst("DIALOGUE_PIPE_WAIT");
+            numField("idx",index);
+            endInst();
+            break;
+        case DIALOGUE_CONTINUE_SIGNAL:
+            SPrintf(printable_name, "Send dialogue continue signal");
+            startInst("DIALOGUE_CONTINUE_SIGNAL");
+            endInst();
+            break;
+        case RESOURCE_COMMAND:                   
+            SLOT slot;
+            SPrintf(printable_name, "Resource Command (slot %i)", slot);
+            RESOURCE_COMMAND_ID resource_command_type;
+            switch(resource_command_type) {
+                case REMOVE_SLOT:
+#ifdef SUI
+                    unsigned short unk_2;
+#endif
+                    unsigned char unk_1;
+                    SPrintf(printable_name, "%s: Remove Slot", printable_name);
+                    startInst("REMOVE_SLOT");
+                    numField("slot",slot);
+                    endInst();
+                    break;
+                case PIC_LOAD:
+#ifdef SUI
+                    unsigned short mode;
+#endif
+                    unsigned char bg_provided;
+                    startInst("PIC_LOAD");
+                    numField("slot",slot);
+                    if(bg_provided!=0) {
+                        unsigned short bg_index;
+                        SPrintf(printable_name, "%s PIC Load: %s (%i)", printable_name, getBackgroundName(bg_index), bg_provided);
+                        strField("file",getBackgroundName(bg_index));
+                    } else {
+                        //RGBA {0,0,0,255} (NONE)
+                        SPrintf(printable_name, "%s PIC Load BLACK", printable_name);
+                        strField("file","BLACK");
+                    }
+                    endInst();
+                    break;
+                case SPRITE_LOAD:
+#ifdef SUI
+                    unsigned short unk_2;
+#endif
+                    unsigned char unk_1;
+                    unsigned short sprite_index;
+                    SPrintf(printable_name, "%s Sprite Load: %s (%i)", printable_name, getBustupName(sprite_index), unk_1);
+                    if(unk_1 > 1) {
+                        unsigned short unk_2;
+                    }
+                    startInst("SPRITE_LOAD");
+                    numField("slot",slot);
+                    numField("unk_1",unk_1);
+                    if(unk_1 > 1) numField("unk_2",unk_2);
+                    strField("file",strConv(getBustupName(sprite_index)));
+                    endInst();
+                    break;
+                case ANIME_LOAD:
+                    ANIME_PROPERTY flags;
+                    SPrintf(printable_name, "%s Anime Load(%d):", printable_name, flags);
+                    startInst("ANIME_LOAD");
+                    numField("slot",slot);
+                    if (flags & INDEX_PROVIDED) {
+                        unsigned short anime_index;
+                        SPrintf(printable_name, "%s file %s", printable_name, getAnimeName(anime_index));
+                        strField("file",getAnimeName(anime_index));
+                    } else {
+                        SPrintf(printable_name, "%s file %s", printable_name, getAnimeName(0));
+                        strField("file",getAnimeName(0));
+                    }
+                    if(flags & SINGLE_PLAY_PROVIDED) {
+                        unsigned short single_play;
+                        SPrintf(printable_name, "%s single_play %d", printable_name, single_play);
+                        numField("single_play",single_play);
+                    } else {
+                        SPrintf(printable_name, "%s single_play %d", printable_name, 0);
+                        numField("single_play",0);
+                    }
+                    endInst();
+                    break;
+                case LOAD_SIMPLE:
+                    unsigned char type;
+                    startInst("LOAD_SIMPLE");
+                    numField("slot",slot);
+                    unsigned short colour;
+                    unsigned short width;
+                    unsigned short height;
+#ifndef SUI
+                    unsigned short unk1;
+                    Assert((type == 0x2D && width == 2176 && height == 1224 && unk1 == 72) ||
+                            // These ones are present in chiru tests only, irrelevant for the game
+                            (type == 0xD && width == 1920 && height == 1080 && unk1 == 141), "LOAD_SIMPLE :: unexpected parameters");
+#else
+                    local unsigned short unk1 = 0;
+#endif
+                    switch (colour) {
+                        case 9999:
+                            SPrintf(printable_name, "%s Load Simple: WHITE", printable_name);
+                            strField("file","WHITE");
+                            break;
+                        case 9009:
+                            SPrintf(printable_name, "%s Load Simple: BLUE2", printable_name);
+                            strField("file","BLUE2");
+                            break;
+                        case 9000:
+                            SPrintf(printable_name, "%s Load Simple: BLACK", printable_name);
+                            strField("file","BLACK");
+                            break;
+                        case 9700:
+                            SPrintf(printable_name, "%s Load Simple: RED2", printable_name);
+                            strField("file","RED2");
+                            break;
+                        case 768:
+                            SPrintf(printable_name, "%s Load Simple: 768", printable_name);
+                            strField("file","768");
+                            break;
+                        default:
+                            Assert(0, "LOAD_SIMPLE :: Unrecognised colour");
+                            break;
+                    }
+                    SPrintf(printable_name, "%s %dx%d of %X %d", printable_name, width, height, type, unk1);
+                    endInst();
+                    break;
+#ifdef SUI
+                case HIGU_5:
+                    unsigned char unk1;
+                    unsigned short unk2;
+                    SPrintf(printable_name, "%s HIGU_5: %X, %X)", printable_name, unk1, unk2);
+                    break;
+                case HIGU_6:
+                    unsigned char unk1;
+                    unsigned short unk2;
+                    SPrintf(printable_name, "%s HIGU_6: %X, %X)", printable_name, unk1, unk2);
+                    break;
+#else
+                case RAIN_LOAD:         
+                    unsigned char show; // 0 is rain, 1 is orb
+                    SPrintf(printable_name, "%s Rain Load: (%d", printable_name, show);
+                    startInst("RAIN_LOAD");
+                    numField("slot",slot);
+                    numField("show",show);
+                    if (show == 1) {
+                        unsigned short unk_2;
+                        numField("unk_2",unk_2);
+                        SPrintf(printable_name, "%s, %d", printable_name, unk_2);
+                    }
+                    SPrintf(printable_name, "%s)", printable_name);
+                    endInst();
+                    break;
+#endif
+                case QUIZ:
+                    unsigned char unk_1; //always 1
+                    Assert(unk_1 == 1, "QUIZ :: unk_1");
+                    STORABLE button_msk;
+                    SPrintf(printable_name, "%s QUIZ: (button_msk: %s, unk: %d)", printable_name, button_msk.str, unk_1);
+                    startInst("QUIZ");
+                    numField("slot",slot);
+                    numField("unk_1", unk_1);
+                    strField("button_mask",button_msk.str);
+                    endInst();
+                    break;
+                case CAKE:
+                    unsigned char unk_1; //always 0
+                    Assert(unk_1 == 0, "CAKE :: unk_1");
+                    SPrintf(printable_name, "%s CAKE: (%d)", printable_name, unk_1);
+                    startInst("CAKE");
+                    numField("slot",slot);
+                    numField("unk_1", unk_1);
+                    endInst();
+                    break;      
+                case QUIZ2:
+                    unsigned char unk_1; //always 0
+                    Assert(unk_1 == 0, "QUIZ2 :: unk_1");
+                    SPrintf(printable_name, "%s QUIZ2: (%d)", printable_name, unk_1);
+                    startInst("QUIZ2");
+                    numField("slot",slot);
+                    numField("unk_1", unk_1);
+                    endInst();
+                    break;
+                case MURDER_STORY:
+                    unsigned char unk_1; //always 0
+                    Assert(unk_1 == 0, "MURDER_STORY :: unk_1");
+                    SPrintf(printable_name, "%s MURDER_STORY: (%d)", printable_name, unk_1);
+                    startInst("MURDER_STORY");
+                    numField("slot",slot);
+                    numField("unk_1", unk_1);
+                    endInst();
+                    break;
+                default:
+                    error();
+                    break;
+            }
+            break;
+        case SPRITE_COMMAND:                     
+            STORABLE slot;
+            SPrintf(printable_name, "Sprite Command (slot %s)", slot.str);
+            SPRITE_PROPERTY property;
+            CHANGESET_FLAGS changeset_flags;
+            
+            startInst("SPRITE_COMMAND");
+            strField("slot",slot.str);
+            strField("property",EnumToString(property));
+            Assert(EnumToString(property) != "", "Unknown property");           
+
+            if(changeset_flags & VALUE_PROVIDED) {
+                STORABLE value;
+                SPrintf(printable_name, "%s [value=%s]", printable_name, value.str);
+                strField("value",value.str);
+            }
+            if(changeset_flags & FRAMES_PROVIDED) {
+                STORABLE frames;
+                SPrintf(printable_name, "%s [frames=%s]", printable_name, frames.str);
+                strField("frames",frames.str);
+            }
+            if(changeset_flags & MOTION_EQUATION_PROVIDED) {
+                MOTION_EQUATION motion;
+                SPrintf(printable_name, "%s [equation=%s]", printable_name, EnumToString(motion));
+                strField("equation",EnumToString(motion));
+                Assert(EnumToString(motion) != "", "Unknown equation");
+            }
+            SPrintf(printable_name, "%s -> %s", printable_name, EnumToString(property));
+            endInst();
+            break;
+
+        case SPRITESET_COMMAND:
+            SPrintf(printable_name, "SpriteSet Command");
+            SPRITESET_PROPERTY property;
+            CHANGESET_FLAGS changeset_flags;
+            startInst("SPRITESET_COMMAND");
+            strField("property",EnumToString(property));
+            Assert(EnumToString(property) != "", "Unknown property");
+
+            if(changeset_flags & VALUE_PROVIDED) {
+                STORABLE value;
+                SPrintf(printable_name, "%s [value=%s]", printable_name, value.str);
+                strField("value",value.str);
+            }
+            if(changeset_flags & FRAMES_PROVIDED) {
+                STORABLE frames;
+                SPrintf(printable_name, "%s [frames=%s]", printable_name, frames.str);
+                strField("frames",frames.str);
+            }
+            if(changeset_flags & MOTION_EQUATION_PROVIDED) {
+                MOTION_EQUATION motion;
+                SPrintf(printable_name, "%s [equation=%s]", printable_name, EnumToString(motion));
+                strField("equation",EnumToString(motion));
+                Assert(EnumToString(motion) != "", "Unknown equation");
+            }
+            SPrintf(printable_name, "%s -> %s", printable_name, EnumToString(property));
+            endInst();
+            break;
+        case GLOBAL_DISPLAY_COMMAND:
+            SPrintf(printable_name, "Global Display Command");
+            GLOBAL_DISPLAY_PROPERTY property;
+            CHANGESET_FLAGS changeset_flags;
+            startInst("GLOBAL_DISPLAY_COMMAND");
+            strField("property",EnumToString(property));
+            Assert(EnumToString(property) != "", "Unknown property");
+            if(changeset_flags & VALUE_PROVIDED) {
+                STORABLE value;
+                SPrintf(printable_name, "%s [value=%s]", printable_name, value.str);
+                strField("value",value.str);
+            }
+            if(changeset_flags & FRAMES_PROVIDED) {
+                STORABLE frames;
+                SPrintf(printable_name, "%s [frames=%s]", printable_name, frames.str);
+                strField("frames",frames.str);
+            }
+            if(changeset_flags & MOTION_EQUATION_PROVIDED) {
+                MOTION_EQUATION motion;
+                SPrintf(printable_name, "%s [equation=%s]", printable_name, EnumToString(motion));
+                strField("equation",EnumToString(motion));
+                Assert(EnumToString(motion) != "", "Unknown equation");
+            }
+            SPrintf(printable_name, "%s -> %s", printable_name, EnumToString(property));
+            endInst();
+            break;
+        case SPRITE_COMMAND_WAIT_FOR_END:
+            STORABLE slot;
+            SPRITE_WAIT_PROPERTY property;
+            startInst("SPRITE_COMMAND_WAIT_FOR_END");
+            strField("slot",slot.str);
+            strField("property",EnumToString(property));
+#ifndef SUI
+            Assert(EnumToString(property) != "", "Unknown property");
+#endif
+            endInst();
+            SPrintf(printable_name, "Sprite Command Wait on slot %s, property %s", slot.str, EnumToString(property));
+            break;
+        case SPRITESET_COMMAND_WAIT_FOR_END:
+            SPRITESET_WAIT_PROPERTY property;
+            startInst("SPRITESET_COMMAND_WAIT_FOR_END");
+            strField("property",EnumToString(property));
+            Assert(EnumToString(property) != "", "Unknown property");
+            endInst();
+            SPrintf(printable_name, "SpriteSet Command Wait on property %s", EnumToString(property)); 
+            break;
+        case GLOBAL_DISPLAY_COMMAND_WAIT_FOR_END:
+            GLOBAL_DISPLAY_WAIT_PROPERTY property;
+            startInst("GLOBAL_DISPLAY_COMMAND_WAIT_FOR_END");
+            strField("property",EnumToString(property));
+            Assert(EnumToString(property) != "", "Unknown property");
+            endInst();
+            SPrintf(printable_name, "Global Display Command Wait on property %s", EnumToString(property));
+            break;
+        case SELECT_SPRITESET:
+            unsigned short set_number;
+            startInst("SELECT_SPRITESET");
+            numField("num",set_number);
+            endInst();
+            SPrintf(printable_name, "Select Sprite Set: %i", set_number);
+            break;
+        case SPRITESET_CLEAR:
+            SPrintf(printable_name, "Clear SpriteSet");
+            startInst("SPRITESET_CLEAR");
+            endInst();
+            break;
+        case SPRITESET_INITIALIZE:
+            SPrintf(printable_name, "Initialize SpriteSet");
+            startInst("SPRITESET_INITIALIZE");
+            endInst();
+            break;
+        case MASK_COMMAND:
+            unsigned short mask_number;
+            unsigned short mode; // 0 - same, 1 - horizontal flip, 3 - rotate 180
+            Assert(mode == 0 ||
+                    (mode == 1 && mask_number == 0xE) || //cutb
+                    (mode == 1 && mask_number == 0x19) || //cut_up
+                    (mode == 1 && mask_number == 0x1A) || //cut_down
+                    (mode == 3 && mask_number == 0xD) || //cuta
+                    (mode == 3 && mask_number == 0xE), "MASK_COMMAND :: Unsupported mode");
+            startInst("MASK_COMMAND");
+            strField("mask",getMaskName(mask_number));
+            numField("mode",mode);
+            endInst();
+            SPrintf(printable_name, "Mask: %s (mode %i)", getMaskName(mask_number), mode);
+            break;
+        case RUMBLE:
+            STORABLE strength;
+            STORABLE duration_in_frames;
+            startInst("RUMBLE");
+            strField("strength",strength.str);
+            strField("duration",duration_in_frames.str);
+            endInst();
+            SPrintf(printable_name, "Rumble: strength %s duration %s (frames)", strength.str, duration_in_frames.str);
+            break;
+        case GOSUB:         
+            POINTER address;
+            switch (address) {
+                //rondo
+                case 0x91ca6: //print
+                    SPrintf(printable_name, "sub_91ca6(reg9,reg10);");
+                break;
+                case 0x92a4f: //break_glass
+                    SPrintf(printable_name, "sub_92a4f(reg20);");
+                break;
+                case 0x928a3: //break_glass2
+                    SPrintf(printable_name, "sub_928a3(reg20);");
+                break;
+                case 0x9239f: //display_clock
+                    SPrintf(printable_name, "sub_9239f(reg28,reg29,reg30,reg31,reg32,reg13,reg14);");
+                break;
+                case 0x92bc6: //show_whirl
+                    SPrintf(printable_name, "sub_92bc6();");
+                break;
+                case 0x924c3: //flg_p
+                    SPrintf(printable_name, "sub_924c3(reg27);");
+                break;
+                //chiru, some params may be unexact atm
+                case 0xc6366: //print
+                    SPrintf(printable_name, "sub_c6366(reg9,reg10);");
+                break;
+                case 0xcfa84: //break_glass3
+                    SPrintf(printable_name, "sub_cfa84(reg20);");
+                break;
+                case 0xcf8d5: //break_glass4
+                    SPrintf(printable_name, "sub_cf8d5(reg20);");
+                break;
+                case 0xce0de: //display_clock
+                    SPrintf(printable_name, "sub_9239f(reg28,reg29,reg30,reg31,reg32,reg33,reg13,reg14,reg7,reg8);");
+                break;
+                case 0xcfbfb: //show_whirl
+                    SPrintf(printable_name, "sub_cfbfb();");
+                break;
+                case 0xcfa84: //eye12
+                    SPrintf(printable_name, "sub_cfa84();");
+                break;
+                case 0xcfc2d: //all_presents_discarded
+                    SPrintf(printable_name, "sub_cfc2d(reg13);");
+                break;
+                case 0xce623: //show_coin_counter (quiz)
+                    SPrintf(printable_name, "sub_ce623(reg36);");
+                break;
+                case 0xce904: //show_coin_counter2 (quiz with increment)
+                    SPrintf(printable_name, "sub_ce904(reg36);");
+                break;
+                case 0xcf0db: //show_coin_counter3 (quiz with double increment)
+                    SPrintf(printable_name, "sub_cf0db(reg36);");
+                break;
+                default:
+                    SPrintf(printable_name, "gosub 0x%x;", address);
+                break;
+            }
+            startInst("GOSUB");
+            strField("data",printable_name);
+            endInst();
+            break;
+        case STACK_PUSH:                                  
+            printable_name="push(";
+            unsigned char entries_num;
+            struct {
+                STORABLE value;
+                SPrintf(printable_name, "%s %s", printable_name, value.str);
+            } entries[entries_num] <optimize=false>;
+            SPrintf(printable_name, "%s );", printable_name);
+            startInst("STACK_PUSH");
+            strField("data",printable_name);
+            endInst();
+            break;
+        case STACK_POP:
+            printable_name="";
+            unsigned char entries_num;
+            struct {
+                STORABLE value;
+                SPrintf(printable_name, "%s%s ", printable_name, value.str);
+            } entries[entries_num] <optimize=false>;
+            SPrintf(printable_name, "%s= pop();", printable_name);
+            startInst("STACK_POP");
+            strField("data",printable_name);
+            endInst();
+            break;
+        case SECTION_START:
+            SECTION_TYPE section_type;
+            unsigned char len;
+            char text[len];
+            SPrintf(printable_name, "Section Start: %s", text);
+            startInst("SECTION_START");
+            strField("section_type",EnumToString(section_type));
+            Assert(EnumToString(section_type) != "", "Unrecognised section");
+            strField("section",strConv(text));
+            endInst();
+            break;
+        case BGM_PLAY:
+            unsigned short bgm_index;
+            unsigned short single_play; //0 - loop (bgm), 1 - single (bgmonce)
+            unsigned short volume;
+            unsigned short fadein_time;
+            SPrintf(printable_name, "BGM: %s, volume %i single_play %i (%i)", getBGMName(bgm_index,0), volume, single_play, fadein_time);
+            startInst("BGM_PLAY");
+            strField("bgm_name",getBGMName(bgm_index,1));
+            strField("bgm_file",getBGMFile(bgm_index));
+            numField("volume",volume);
+            numField("single_play",single_play);
+            endInst();
+            break;
+        case SFX_PLAY:
+            unsigned short channel;
+            unsigned short se_index;
+            unsigned short single_play; //0 - loop (me), 1 - single (se)
+            unsigned short volume;
+            unsigned short fadein_time; //always 0 in rondo
+            SPrintf(printable_name, "SFX: channel %i, %s, volume %i single_play %i", channel, getSEName(se_index), volume, single_play);
+            startInst("SFX_PLAY");
+            numField("sfx_channel",channel);
+            strField("sfx_file",getSEName(se_index));
+            numField("volume",volume);
+            numField("single_play",single_play);
+            endInst();
+            break;
+        case CHANNEL_VOLUME:
+            unsigned short channel;
+            unsigned short volume;
+            DURATION_IN_FRAMES duration;
+            SPrintf(printable_name, "CHANNEL_VOLUME: channel %i volume %i in %i frames (%f secs)", channel, volume, duration, duration/60.0);
+            startInst("CHANNEL_VOLUME");
+            numField("channel",channel);
+            numField("volume",volume);
+            numField("duration",duration);
+            endInst();
+            break;
+        case CHANNEL_WAIT:
+            unsigned short channel;
+            unsigned short unk1;
+            // On SUI it can also be 1
+            Assert(unk1 == 2 || unk1 == 1, "CHANNEL_WAIT :: unk1 != 2 && unk1 != 1");
+            SPrintf(printable_name, "CHANNEL_WAIT: channel %i", channel);
+            startInst("CHANNEL_WAIT");
+            numField("channel",channel);
+            //numField("unk1",unk1);
+            endInst();
+            break;
+        case SFX_PLAY2:
+            unsigned short se_index;
+            unsigned short volume;
+            unsigned short single_play; //0 - loop (me), 1 - single (se)
+            SPrintf(printable_name, "SFX2: %s, volume %i single_play %i", getSEName(se_index), volume, single_play);
+            startInst("SFX_PLAY2");
+            strField("sfx_file",getSEName(se_index));
+            numField("volume",volume);
+            numField("single_play",single_play);
+            endInst();
+            break;
+        case CHANNEL_FADE:
+            unsigned short channel;
+            DURATION_IN_FRAMES duration;
+            SPrintf(printable_name, "Channel Fade: channel %i, %i frames (%f secs)", channel, duration, duration/60.0);
+            startInst("CHANNEL_FADE");
+            numField("channel",channel);
+            numField("duration",duration);
+            endInst();
+            break;
+        case BGM_FADE:
+            DURATION_IN_FRAMES duration;
+            startInst("BGM_FADE");
+            numField("duration",duration);
+            endInst();
+            SPrintf(printable_name, "BGM_FADE: in %i frames (%f secs)", duration, duration/60.0);
+            break;
+        case MIX_CHANNEL_FADE:
+            DURATION_IN_FRAMES duration;
+            startInst("MIX_CHANNEL_FADE");
+            numField("duration",duration);
+            endInst();
+            SPrintf(printable_name, "MIX_CHANNEL_FADE: in %i frames (%f secs)", duration, duration/60.0);
+            break;
+        case BGM_VOLUME:
+            unsigned short new_volume;
+            DURATION_IN_FRAMES duration;
+            startInst("BGM_VOLUME");
+            numField("duration",duration);
+            numField("volume",new_volume);
+            endInst();
+            SPrintf(printable_name, "BGM_VOLUME: to %i over %i frames (%f secs)", new_volume, duration, duration/60.0);
+            break;
+#ifdef SUI
+        case INSTRUCTION_93:
+            unsigned short unk1;
+            SPrintf(printable_name, "INSTRUCTION_93: %X", unk1);
+            break;
+        case INSTRUCTION_94:
+            unsigned short unk1;
+            SPrintf(printable_name, "INSTRUCTION_94: %X", unk1);
+            break;
+#else
+        case SPECIAL_WAIT:
+            // used three times in unused tests in chiru
+            // might be unskipable?
+            DURATION_IN_FRAMES duration;
+            SPrintf(printable_name, "special wait %i frames (%f secs)", duration, duration/60.0);
+            startInst("SPECIAL_WAIT");
+            numField("duration",duration);
+            endInst();
+            break;
+#endif
+        case WAIT:
+            DURATION_IN_FRAMES duration;
+            startInst("WAIT");
+            numField("duration",duration);
+            endInst();
+            SPrintf(printable_name, "wait %i frames (%f secs)", duration, duration/60.0);
+            break;
+        case CLICK_WAIT:
+            DURATION_IN_FRAMES duration; //hopefully
+#ifndef SUI
+            Assert(duration == 0, "CLICK_WAIT :: duration != 0");
+#endif
+            SPrintf(printable_name, "wait for click and %i frames", duration);
+            startInst("CLICK_WAIT");
+            numField("duration",duration);
+            endInst();
+            break;
+        case HIDE_DIALOGUE_WINDOW:
+            SPrintf(printable_name, "Hide Dialogue Window");
+            startInst("HIDE_DIALOGUE_WINDOW");
+            endInst();
+            break;   
+        case MOVIE_PLAY:
+            unsigned short movie_index;
+            SPrintf(printable_name,"Play movie: %s", getMovieName(movie_index));
+            startInst("MOVIE_PLAY");
+            strField("file",getMovieName(movie_index));
+            endInst();
+            break;
+        case RETURN_KEYWORD:
+            printable_name="return;";
+            startInst("RETURN");
+            endInst();
+            break;
+        case VOICE_PLAY:
+            unsigned char length;
+            char voice[length];
+            SPrintf(printable_name, "Play voice %s",voice);
+            startInst("VOICE_PLAY");
+            strField("voice",strConv(voice));
+            endInst();
+#ifdef SUI
+            unsigned short volume;
+            unsigned short unk1; // play once?
+#endif
+            break;
+        case VOICE_WAIT_FOR_END:
+            unsigned short unk1; //extra delay
+#ifdef SUI
+            //not sure if instruction before was decoded incorrectly or this function really varies in length
+            if (unk1 == 2) {
+                SPrintf(printable_name, "VOICE_WAIT_FOR_END delay=%d", unk1);
+            } else if(unk1 == 0x3CF2) {
+                unsigned char unk2;
+                SPrintf(printable_name, "VOICE_WAIT_FOR_END delay=%d extra=%d",  unk2, unk2);
+            } else {
+                Assert(false, "VOICE_WAIT_FOR_END :: unk1 is invalid");
+            }
+#else
+            Assert(unk1 == 2, "VOICE_WAIT_FOR_END :: unk1 != 2");
+#endif
+            SPrintf(printable_name, "VOICE_WAIT_FOR_END");
+            startInst("VOICE_WAIT_FOR_END");
+            //strField("unk1",unk1.str);
+            endInst();
+            break;
+        case WAITTIMER: //cannot be skipped as it seems
+            DURATION_IN_FRAMES duration;
+            SPrintf(printable_name, "Wait Timer: %d frames (%f secs)",duration,duration/60.0);
+            startInst("WAITTIMER");
+            numField("duration",duration);
+            endInst();
+            break;
+        case CLEARTIMER:
+            SPrintf(printable_name, "Clear Timer and disable skip");
+            startInst("CLEARTIMER");
+#ifdef NOCTURNE
+            unsigned short unk1;
+            numField("unk1",unk1);
+            Assert(unk1 == 1, "CLEARTIMER :: unk1 != 1");
+#endif
+#ifdef SUI
+            unsigned short unk1;
+            numField("unk1",unk1);
+            Assert(unk1 == 1 || unk1 == 0, "CLEARTIMER :: unk1 != 1 && unk1 != 0");
+#endif
+            endInst();
+            break;
+        case UNSETTIMER:
+            SPrintf(printable_name, "Remove Timer and allow skip");
+            startInst("UNSETTIMER");
+            endInst();
+            break;
+        case SECTION_END:
+            //This seems to print section title in the right corner and INSTRUCTION_80 somehow flags that
+            SPrintf(printable_name, "SECTION_END");
+            startInst("SECTION_END");
+            endInst();
+            break;
+        case SECTION_MARKER:
+            SPrintf(printable_name, "SECTION_MARKER");
+            startInst("SECTION_MARKER");
+            endInst();
+            break;
+#ifndef SUI
+        case CHARACTER_ENTRY_UNLOCK:
+            unsigned short character;
+            unsigned short mode;
+            SPrintf(printable_name,"Character entry unlock: %d mode %d", character, mode);
+            startInst("CHARACTER_ENTRY_UNLOCK");
+            numField("character",character);
+            numField("mode",mode);
+            endInst();
+            break;
+#endif
+        case TIP_ENTRY_UNLOCK:
+            unsigned char num;
+            unsigned short tip[num];
+            local string s;
+            SPrintf(s,"%d",tip[0]);
+            if (num > 1) {
+                local int i; 
+                for (i = 1; i < num; i++) {
+                    SPrintf(s,"%s, %d",s,tip[i]);
+                }
+            }
+            SPrintf(printable_name,"Tip entry unlock: %s", s);
+            startInst("TIP_ENTRY_UNLOCK");
+            strField("data",s);
+            endInst();
+            break;
+        case TEXTBOX_COMMAND:
+            unsigned short textbox_disable;
+            unsigned short align; // 0 - off, 1 - left, 2 - centre, 3 - right
+            SPrintf(printable_name, "Textbox Command: textbox_disable %d align %d",textbox_disable,align);
+            startInst("TEXTBOX_COMMAND");
+            numField("textbox_disable",textbox_disable);
+            numField("align",align);
+            endInst();
+            break;
+        case SWITCH:
+            unsigned short unk1;
+            unsigned short unk2;
+#ifndef SUI
+            // 10001h, 20001h is for SUI
+            Assert(unk1 == 0 && unk2 == 0, "SWITCH :: unk1 != 0 || unk2 != 0");
+#endif
+            STORABLE register;
+            BITNUMBER opts;
+            unsigned char back_size;
+            char back[back_size];
+            unsigned char data_size;
+            char data[data_size];
+            SPrintf(printable_name, "Set switch from %d to %s, default %s", opts.num, register.str, back);
+            startInst("SWITCH");
+            strField("data",strConv2(printable_name));
+            endInst();
+            break;
+        case PRINT_COMMAND:
+            SPrintf(printable_name, "Print Command");
+            startInst("PRINT");
+#ifndef RONDO
+            unsigned char mode;
+            if (mode == 1) {
+                unsigned char extra;
+                numField("glass", mode);
+                SPrintf(printable_name, "%s(glassSmash)(%i): extra(", printable_name, extra);
+                if (extra & 1) {
+                    STORABLE speed;
+                    SPrintf(printable_name, "%sspeed=%s)",printable_name,speed.str);
+                    strField("speed",speed.str);
+                } else {
+                    SPrintf(printable_name, "%sspeed=NO)",printable_name);
+                    strField("speed","NO");                 
+                }
+                endInst();
+                break;
+            }
+#endif
+            PRINT_PROPERTY flags;
+            SPrintf(printable_name, "%s(%i): doTransitionEffect(", printable_name, flags);
+
+            if (flags & MASK_PROVIDED) {
+                STORABLE mask;
+                SPrintf(printable_name, "%stransitionMask=%s", printable_name, mask.reg ? mask.str : getMaskName(mask.value));
+                strField("mask",mask.str);
+            } else {
+                SPrintf(printable_name, "%stransitionMask=NO", printable_name);
+                strField("mask","NO");
+            }
+
+            if (flags & DURATION_PROVIDED) {
+                STORABLE duration;
+                SPrintf(printable_name, "%s duration=%s",printable_name,duration.str);
+                strField("duration",duration.str);
+            } else {
+                SPrintf(printable_name, "%s duration=NO",printable_name);
+                strField("duration","NO");
+            }
+            
+            if (flags & UNKNOWN_PROVIDED) {
+                STORABLE unknown;
+                SPrintf(printable_name, "%s unknown=%s",printable_name,unknown.str);
+                strField("unknown",unknown.str);
+            } else {
+                SPrintf(printable_name, "%s unknown=NO",printable_name);
+                strField("unknown","NO");
+            }
+
+            if (flags & ONS_EFFECT_PROVIDED) {
+                STORABLE ons_ef;
+                SPrintf(printable_name, "%s ons_ef=%s",printable_name,ons_ef.str);
+                strField("ons_ef",ons_ef.str);
+            } else {
+                SPrintf(printable_name, "%s ons_ef=NO",printable_name);
+                strField("ons_ef","NO");
+            }
+
+            if (flags & BLOCKING_PROVIDED) {
+                SPrintf(printable_name, "%s block=1);",printable_name);
+                numField("block",1);
+            } else {
+                SPrintf(printable_name, "%s block=0);",printable_name);
+                numField("block",0);
+            }
+
+            endInst();
+            break;
+        case REGISTER_CONDITION:
+            unsigned char comparison_mode;
+            STORABLE register;
+            STORABLE value;
+            POINTER address;
+            if(comparison_mode==0) {        //correct
+                SPrintf(printable_name, "if(%s==%s) { goto 0x%x; }", register.str, value.str, address);
+            } else if(comparison_mode==1) { //correct
+                SPrintf(printable_name, "if(%s!=%s) { goto 0x%x; }", register.str, value.str, address);
+            } else if(comparison_mode==2) { //correct
+                SPrintf(printable_name, "if(%s>=%s) { goto 0x%x; }", register.str, value.str, address);
+            } else if(comparison_mode==3) { //unused
+                SPrintf(printable_name, "if(%s>%s) { goto 0x%x; }", register.str, value.str, address);
+            } else if(comparison_mode==4) { //correct
+                SPrintf(printable_name, "if(%s<=%s) { goto 0x%x; }", register.str, value.str, address);
+            } else if(comparison_mode==5) { //correct
+                SPrintf(printable_name, "if(%s<%s) { goto 0x%x; }", register.str, value.str, address);
+            } else {
+                SPrintf(printable_name, "if(%s?=%s) (cmp %i) { goto 0x%x; }", register.str, value.str, comparison_mode, address);
+            }
+            startInst("REGISTER_CONDITION");
+            strField("data",strConv2(printable_name));
+            endInst();
+            break;
+        case REGISTER_MODIFY:
+            unsigned char mode; // bitfield, 3 lower bits are operation, 5 upper bits are control
+            STORABLE register;
+            STORABLE value;
+            switch(mode) {
+                case 0: // Signed Assignment
+                    SPrintf(printable_name, "%s=%s;", register.str, value.str);
+                    break;
+                case 1: // Unsigned Assignment
+                    SPrintf(printable_name, "%s=%su;", register.str, value.str);
+                    break;
+                case 2: // Addition
+                    SPrintf(printable_name, "%s+=%s;", register.str, value.str);
+                    break;
+                case 3: // Subtraction
+                    SPrintf(printable_name, "%s-=%s;", register.str, value.str);
+                    break;
+                case 4: // Multiplication (bit uncertain here, noticed in an unused func)
+                    SPrintf(printable_name, "%s*=%s;", register.str, value.str);
+                    break;
+                case 5: // Division (bit uncertain, but it is likely, derived from SUI)
+                    SPrintf(printable_name, "%s/=%s;", register.str, value.str);
+                    break;
+                case 6: // Or (This is a pure assumption from SUI)
+                    SPrintf(printable_name, "%s|=%s;", register.str, value.str);
+                    break;
+                case 7: // And (kills Eva flag)
+                    SPrintf(printable_name, "%s&=%s;", register.str, value.str);
+                    break;
+                case 8: // Something sui special similar to 0x82
+                    unsigned char mode2;
+                    if (mode2 == 0x81) {   //maybe subtraction?
+                        STORABLE value2;
+                        STORABLE value3;
+                        SPrintf(printable_name, "REGISTER_MODIFY :: UKNOWN %s=%s; %s %s", register.str, value.str, value2.str, value3.str);
+                    } else if (mode2 == 0x82) {
+                        STORABLE value2;
+                        STORABLE value3;
+                        SPrintf(printable_name, "%s=%s; [%s]+=%s", register.str, value.str, value2.str, value3.str);
+                    } else if (mode2 == 0x46) {
+                        unsigned char mode3;
+                        STORABLE value2;
+                        STORABLE value3;
+                        STORABLE value4;
+                        STORABLE value5;
+                        Assert(mode3 == 0x0 || mode3 == 0x2, "REGISTER_MODIFY :: mode3 != 0x0 && mode3 != 0x2");
+                        SPrintf(printable_name, "%s=%s; %d %s %s %s %s", register.str, value.str, mode3, value2.str, value3.str, value4.str, value5.str);
+                    } else if (mode2 == 0x41) {
+                        unsigned char mode3;
+                        STORABLE value2;
+                        STORABLE value3;
+                        STORABLE value4;
+                        STORABLE value5;
+                        STORABLE value6;
+                        Assert(mode3 == 0x8, "REGISTER_MODIFY :: mode3 != 0x8");
+                        SPrintf(printable_name, "%s=%s; %d %s %s %s %s %s", register.str, value.str, mode3, value2.str, value3.str, value4.str, value5.str, value6.str);
+                    } else {
+                        Assert(false, "REGISTER_MODIFY :: mode2 is not of the expected value");
+                    }
+                    break;
+                case 0x82: // Two-arg addition with pointer dereference
+                    STORABLE value2;
+                    unsigned char mode2;
+                    Assert(mode2 == 0x82, "REGISTER_MODIFY :: mode2 != 0x82");
+                    STORABLE value3;
+                    STORABLE value4;
+                    // pointer operation is unclear, may be any kind of assignment
+                    // used only once in chiru
+                    SPrintf(printable_name, "%s=%s+%s; [%s]+=%s", register.str, value.str, value2.str, value3.str, value4.str);
+                    break;
+                case 0x83: // Two-arg subtraction
+                    STORABLE value2;
+                    SPrintf(printable_name, "%s=%s-%s;", register.str, value.str, value2.str);
+                    break;
+                case 0x85: // Two-arg division
+                    STORABLE value2;
+                    SPrintf(printable_name, "%s=%s/%s;", register.str, value.str, value2.str);
+                    break;
+                default:
+                    SPrintf(printable_name, "%s?=%s; (operation #%i)", register.str, value.str, mode);
+                    break;
+            }
+
+            startInst("REGISTER_MODIFY");
+            strField("data",strConv2(printable_name));
+            endInst();
+            break;
+        case SYSCALL:
+            STORABLE value;
+            SPrintf(printable_name, "syscall %s;", value.str);
+            startInst("SYSCALL");
+            strField("code", value.str);
+            endInst();
+            break;
+        case READ_EXTERNAL:
+            STORABLE value;
+            STORABLE value2;
+            SPrintf(printable_name, "%s=[%s];", value.str, value2.str);
+            break;
+#ifdef SUI
+        case WRITE_EXTERNAL:
+            STORABLE value;
+            STORABLE value2;
+            SPrintf(printable_name, "[%s]=%s", value.str, value2.str);
+            break;
+#endif
+        case REGISTER_CALC:
+            STORABLE output;
+            SPrintf(printable_name, "%s = (", output.str);
+            local string command = "";
+            do {
+                CALCOP op;
+                if (op.value == -1) break;
+                if (op.args == 0) {
+                    SPrintf(command, "%s%s; ", command, op.str);
+                } else if (op.args == 1) {
+                    STORABLE arg;
+                    SPrintf(command, "%s%s %s; ", command, op.str, arg.str);
+                } else {
+                    error();
+                }
+            } while(1);
+            SPrintf(command, "%send", command);
+            SPrintf(printable_name, "%s%s)", printable_name, command);
+            startInst("REGISTER_CALC");
+            strField("output",output.str);
+            strField("command",command);
+            endInst();
+            break;
+        case JUMP_TO_ADDRESS:         
+            POINTER address;
+            SPrintf(printable_name, "goto 0x%x;", address);
+            startInst("JUMP_TO_ADDRESS");
+            strField("data",printable_name);
+            endInst();
+            break;
+        case JUMP_ONVALUE_NBRANCHES:
+            STORABLE register;
+            unsigned short entries_num;
+            struct {
+                POINTER address;
+            } entries[entries_num];
+            SPrintf(printable_name, "Jump switch with %d branches by %s", entries_num, register.str);
+            startInst("JUMP_ONVALUE_NBRANCHES");
+            strField("data",printable_name);
+            strField("register", register.str);
+            numField("count", entries_num);
+            local unsigned short entryi = 0;
+            local string addrn;
+            while (entryi < entries_num) {
+                SPrintf(addrn, "addr%u", entryi);
+                numField(addrn, entries[entryi].address);
+                entryi++;
+            }
+            endInst();
+            break;
+        case GET_RESPONSE_CAKE:
+            STORABLE outReg;
+            STORABLE slot;
+            SPrintf(printable_name, "GET_RESPONSE_CAKE: output to %s, slot %s",outReg.str,slot.str); 
+            startInst("GET_RESPONSE_CAKE");
+            strField("out",outReg.str);
+            strField("slot",slot.str);
+            endInst();
+            break;      
+        case GET_RESPONSE_QUIZ:
+            STORABLE outReg;
+            STORABLE slot;
+            SPrintf(printable_name, "GET_RESPONSE: output to %s, slot %s",outReg.str,slot.str);
+            startInst("GET_RESPONSE_QUIZ");
+            strField("out",outReg.str);
+            strField("slot",slot.str);
+            endInst();
+            break;
+        case GET_RESPONSE_QUIZ2:
+            STORABLE outReg;
+            STORABLE slot;
+            SPrintf(printable_name, "GET_RESPONSE_QUIZ2: output to %s, slot %s",outReg.str,slot.str);
+            startInst("GET_RESPONSE_QUIZ2");
+            strField("out",outReg.str);
+            strField("slot",slot.str);
+            endInst();
+            break;
+        case GET_RESPONSE_MURDER_STORY:
+            STORABLE outReg;
+            STORABLE slot;
+            SPrintf(printable_name, "GET_RESPONSE_MURDER_STORY: output to %s, slot %s",outReg.str,slot.str);
+            startInst("GET_RESPONSE_MURDER_STORY");
+            strField("out",outReg.str);
+            strField("slot",slot.str);
+            endInst();
+            break;
+        case OPEN_TROPHY:
+            unsigned short id;
+            SPrintf(printable_name, "OPEN_TROPHY: %d",id);
+            startInst("OPEN_TROPHY");
+            numField("id",id);
+            endInst();
+            break;
+#ifdef SUI
+        case INSTRUCTION_44:
+            unsigned char unk1; //maybe this is the register?
+            unsigned short unk2; //guessing this is a short but dunno could be two more registers
+            SPrintf(printable_name, "INSTRUCTION_44: %X %X",unk1, unk2);
+            break;
+
+        case INSTRUCTION_4C:
+            STORABLE value1;
+            STORABLE value2;
+            STORABLE value3;
+            SPrintf(printable_name, "INSTRUCTION_4C: %s %s %s", value1.str, value2.str, value3.str);
+            break;
+        case INSTRUCTION_8A:
+            unsigned short unk1;
+            unsigned short unk2;
+            SPrintf(printable_name, "INSTRUCTION_8A: %X %X", unk1, unk2);
+            break;
+        case INSTRUCTION_8F:
+            printable_name = "INSTRUCTION_8F : Unknown command";
+            break;
+        case INSTRUCTION_AC:
+            STORABLE value1;
+            STORABLE value2;
+            STORABLE value3;
+            STORABLE value4;
+            SPrintf(printable_name, "INSTRUCTION_AC: %s %s %s %s", value1.str, value2.str, value3.str, value4.str);
+            break;
+        case INSTRUCTION_AD:
+            unsigned short unk1;
+            SPrintf(printable_name, "INSTRUCTION_AD: %X",unk1);
+            break;
+        case INSTRUCTION_AE:
+            unsigned char unk1;
+            unsigned char num;
+            unsigned short unk2[num];
+            startInst("INSTRUCTION_AE");
+            numField("unk1",unk1);
+            numField("num",num);
+            endInst();
+            SPrintf(printable_name,"INSTRUCTION_AE: %d %d", unk1, num);
+            break;
+        case INSTRUCTION_B1:
+            unsigned short unk1;
+            unsigned char num;
+            unsigned short unk2[num];
+            SPrintf(printable_name, "INSTRUCTION_B1: %X %X",unk1,num);
+            break;
+        case INSTRUCTION_B2:
+            STORABLE value1;
+            STORABLE value2;
+            STORABLE value3;
+            STORABLE value4;
+            SPrintf(printable_name, "INSTRUCTION_B2: %s %s %s %s", value1.str, value2.str, value3.str, value4.str);
+            break;
+        case INSTRUCTION_B3:
+            // I think this function isn't used very often....
+            printable_name="INSTRUCTION_B3: (No Args)";
+            break;
+#else
+        case INSTRUCTION_8E:
+            // only used once in rondo, multiple times in chiru.
+            // seems to be required following glass-smash and whirl animations.
+            // likely is implementation-defined
+            printable_name="INSTRUCTION_8E";
+            break;
+#endif
+        case SYSTEM_MENU_SHOW:
+            // used only once in chiru, seems to show characters menu
+            STORABLE id;
+            STORABLE unk2;
+            SPrintf(printable_name, "SYSTEM_MENU_SHOW: %s, %s",id.str,unk2.str);
+            startInst("SYSTEM_MENU_SHOW");
+            strField("id",id.str);
+            endInst();
+            break;
+        default:
+            uint64 dummy <bgcolor=0x4444FF, fgcolor=0x000000>;
+            printable_name="INVALID_OPCODE!!!";
+            error();
+            break;
+    }
+};
+struct SCRIPT {
+    local int counter = 0;
+    local uint64 currpos = FTell();
+    while(currpos+5/*8*/ <= snr_size) {
+        INSTRUCTION inst <optimize=false, read=getInstructionString>;
+        currpos = FTell();
+#ifdef PRINT
+        counter++;
+        if (counter == 100000) {
+            counter = 0;
+            FileSelect(log_idx);
+            FileSave(getFilePath());
+            FileClose();
+            FileSelect(snr_idx);
+            log_idx = FileNew("XML",false);
+            file_id++;
+        }
+#endif
+    }
+#ifdef PRINT
+    FPrintf(log_idx,"</script>\n");
+    FileSelect(log_idx);
+    FileSave(getFilePath());
+    FileClose();
+    FileSelect(snr_idx);
+#endif
+};
+
+/* --- Retrieval functions --- */
+string getInstructionString(INSTRUCTION &i) {
+    return i.printable_name;
+}
+string getMovieName(int n) {
+        if(n<movie.entries_num) {
+            return movie.entries[n].data;
+        } else {
+            return "(out of bounds)";
+        }
+}
+string getBustupName(int n) {
+        if(n<bustup.entries_num) {
+            local string out;
+            SPrintf(out,"%s%s",bustup.entries[n].data1,bustup.entries[n].data2);
+            return out;
+        } else {
+            return "(out of bounds)";
+        }
+}
+string getSEName(int n) {
+        if(n<se.entries_num) {
+            return se.entries[n].data;
+        } else {
+            return "(out of bounds)";
+        }
+}
+string getBGMName(int n, int utf) {
+        if(n<bgm.entries_num) {
+            if (utf)
+                return strConv(bgm.entries[n].songname);
+            else
+                return bgm.entries[n].songname;
+        } else {
+            return "(out of bounds)";
+        }
+}
+string getBGMFile(int n) {
+        if(n<bgm.entries_num) {
+            return bgm.entries[n].filename;
+        } else {
+            return "(out of bounds)";
+        }
+}
+string getBackgroundName(int n) {
+        if(n<backgrounds.entries_num) {
+            return backgrounds.entries[n].data;
+        } else {
+            return "(out of bounds)";
+        }
+}
+string getAnimeName(int n) {
+        if(n<anime.entries_num) {
+            return anime.entries[n].data;
+        } else {
+            return "(out of bounds)";
+        }
+}
+string getMaskName(int n) {
+        if(n<masks.entries_num) {
+            return masks.entries[n].data;
+        } else {
+            return "(out of bounds)";
+        }
+}
+
+/* --- Output functions --- */
+void startInst(string type) {
+#ifndef PRINT
+    return;
+#endif
+    FPrintf(log_idx,"<ins type=\"%s\" iaddr=\"0x%x\" ",type,currpos);
+}
+void strField(string name, string value) {
+#ifndef PRINT
+    return;
+#endif
+    FPrintf(log_idx,"%s=\"%s\" ",name,value);
+}
+void numField(string name, int value) {
+#ifndef PRINT
+    return;
+#endif
+    FPrintf(log_idx,"%s=\"%d\" ",name,value);
+}
+string strConv(char value[]) {
+#ifndef PRINT
+    return "";
+#endif
+    local string out;
+    SPrintf(out,"%s",StringToWString(value,CHARSET_JAPANESE));
+    SPrintf(out,"%s",charReplace("&","&amp;",out));
+    SPrintf(out,"%s",charReplace("<","&lt;",out));
+    SPrintf(out,"%s",charReplace(">","&gt;",out));
+    return out;
+}
+string strConv2(string value) {
+#ifndef PRINT
+    return "";
+#endif
+    local string out;
+    SPrintf(out,"%s",StringToWString(value,CHARSET_JAPANESE));
+    SPrintf(out,"%s",charReplace("&","&amp;",out));
+    SPrintf(out,"%s",charReplace("<","&lt;",out));
+    SPrintf(out,"%s",charReplace(">","&gt;",out));
+    return out;
+}
+string charReplace(string pattern, string replacement, string data) {
+    local int const_pattern_length = Strlen(replacement);
+
+    local string out;
+    local string temp_string = data;
+
+    local int pos = Strstr( temp_string, pattern );
+    while (pos != -1) {
+        //append everything before the replaced character to the output string,
+        out += SubStr(temp_string, 0, pos);
+
+        //append the replacement
+        out += replacement;
+
+        //remove the processed section (including the replaced character) from the temp string
+        temp_string = SubStr(temp_string, pos + 1, -1);
+
+        pos = Strstr( temp_string, pattern );
+    }
+
+    //add any leftover parts of the temp_string to the output string
+    out += temp_string;
+
+    return out;
+}
+void endInst() {
+#ifndef PRINT
+    return;
+#endif
+    FPrintf(log_idx,"></ins>\n");
+}
+string getFilePath() {
+    local string str;
+    SPrintf(str,"%d",file_id);
+    SPrintf(str,"%s",charReplace("@",str,BASENAME));
+    return str;
+}
+/* --- Actual file format definition --- */
+LittleEndian();
+SNRFILEHEADER header <bgcolor=0xFFAAAA>;
+FSeek(header.pointers.masks);
+TABLE_MASKS masks <bgcolor=0xAAFFAA>;
+FSeek(header.pointers.backgrounds);
+TABLE_BACKGROUNDS backgrounds <bgcolor=0xAAAAFF>;
+FSeek(header.pointers.bustup);
+TABLE_BUSTUP bustup <bgcolor=0xFF7777>;
+#ifndef SUI
+FSeek(header.pointers.anime);
+TABLE_ANIME anime <bgcolor=0x77FF77>;
+#endif
+FSeek(header.pointers.bgm);
+TABLE_BGM bgm <bgcolor=0x7777FF>;
+FSeek(header.pointers.se);
+TABLE_SE se <bgcolor=0x000000, fgcolor=0x00FFFF>;
+FSeek(header.pointers.movie);
+TABLE_MOVIE movie <bgcolor=0x000000, fgcolor=0xFF00FF>;
+FSeek(header.pointers.voice);
+TABLE_VOICE voice <bgcolor=0x000000, fgcolor=0xFFFFFF>;
+FSeek(header.pointers.tips);
+TABLE_TIPS tips <bgcolor=0x55FFFF, fgcolor=0x000000>;
+#ifndef SUI
+FSeek(header.pointers.chars);
+TABLE_CHARS chars <bgcolor=0x005500, fgcolor=0x00FFFF>;
+FSeek(header.pointers.char_flags);
+TABLE_CHAR_FLAGS char_flags <bgcolor=0x005500, fgcolor=0xFFFFFF>;
+#endif
+FSeek(header.pointers.picbox);
+TABLE_PICTURE_BOX picbox <bgcolor=0x55FFFF, fgcolor=0x0000FF>;
+FSeek(header.pointers.musbox);
+TABLE_MUSIC_BOX musbox <bgcolor=0x55FFFF, fgcolor=0xFF0000>;
+FSeek(header.pointers.script);
+SCRIPT script;
