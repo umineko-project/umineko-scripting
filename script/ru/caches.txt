@@ -1,0 +1,189 @@
+	border_pad_push 5
+	set_window_simple 150,100
+	setwindow5 ":a;graphics\system\empty.png"
+	lsp 10,":s;#FFFFFF`{p:8:{a:c:Пожалуйста, подождите немного.{n}Производится кеширование данных.}}",150,450
+	print 1
+	screenflip 0
+	_csp 10
+	lsp 5,":a/10,0,3;graphics\system\wnd\cursor0.png",0,0
+	lsp s0_3,goa_memory1_src,0,0
+		*goa_1r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`Меня сейчас съедя‐а‐ат!`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory1.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,goa_memory2_src,0,0
+		*goa_2r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Оставьте это мне, а сами идите вперёд!"{n}"Сенпай!"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory2.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,goa_memory3_src,0,0
+		*goa_3r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Простите, что заставил ждать!"{n}"Товарищи... Что вы здесь......"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory3.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,goa_memory4_src,0,0
+		*goa_4r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`Ха‐а, ха‐а`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory4.png"
+		d_continue
+		wait_on_d -1
+	if %CHIRU_MODE = 0 goto *cache_skip_chiru
+	textoff
+	mov %Free9,%msgwnd_type
+	mov %msgwnd_type,3
+	set_name_window_non
+	lsp s0_3,kakera_memory6_src,0,0
+		*kak_6r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Нет, это не так. Правильнее будет сказать 'произошедшее убийство — это не закрытая комната'!`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory6.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory7_src,0,0
+		*kak_7r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Пытаться сопротивляться и сбежать бесполезно.`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory7.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory9_src,0,0
+		*kak_9r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`И не только Кирие‐сан.{n}Джессика тоже сказала нечто подобное по телефону.{n}{n}Нет, ещё с самого начала, когда мы говорили с Годой‐саном и Кумасавой‐сан, и нам позвонила группа дяди Краусса...`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory9.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp 5,":a/10,0,3;graphics\system\wnd\cursor1.png",0,0
+	lsp s0_3,kakera_memory1_src,0,0
+		*kak_1r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Кья‐{p:0:♪} Сакутаро! Давно не виделись!"{n}"Ты выглядишь вку‐, я имею в виду, ми~ло, как всегда!"{n}"Я пер~вая! Кья, сегодня он такой пушистый, мягкий и ми‐лый!"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory1.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory2_src,0,0
+		*kak_2r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"О‐о‐о‐о‐о!!! Выходите!!! Пусть тот из вас, кто хочет попробовать заряженную для меня Марией пулю выйдет вперё‐о‐о‐о‐о‐од!!! Уво‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐о‐ох‐х‐х!!!"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory2.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory3_src,0,0
+		*kak_3r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"............Это не одно из правил господина... И уж точно не одно из твоих. Я сам ввёл это правило. .........Я больше не мебель. .........Я зеро на твоей рулетке!.."`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory3.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory4_src,0,0
+		*kak_4r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Генджи‐сан. ......Отец вызывает вас. Составьте ему компанию."{n}".........Непременно."`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory4.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory5_src,0,0
+		*kak_5r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Спасибо за понимание, Баттлер‐кун. ...Но тебе точно повезло."{n}"А? Почему же?"{n}"Я бы предпочла уйти, если бы могла."{n}"...Ихи‐хи‐хи! Точно. Почему бы вам, взрослым, не повеселиться по‐взрослому, весело проведя время на вашей счастливой семейной встрече вокруг наследства."`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory5.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory8_src,0,0
+		*kak_8r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Хорошо, миледи... Давайте продолжим идти вдоль стены. ...Продолжаем. Идём дальше."`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory8.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory10_src,0,0
+		*kak_10r
+		d2 [ak][text_fade_t 0][text_speed_t 10]`Покачиваясь, возник мой проклятый дед.{n}{n}Хе, он корчит из себя рыцаря, оградив Беато от меня?`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory10.png"
+		d_continue
+		wait_on_d -1
+	mov %msgwnd_type,%Free9
+	*cache_skip_chiru
+	textoff
+	_csp s0_3
+	_csp 5
+	print 1
+	screenflip 1
+	border_pad_pop
+	mov $font_preference,$Free1

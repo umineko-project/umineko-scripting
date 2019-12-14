@@ -1,0 +1,446 @@
+*ura_teatime_1
+log_reset
+mov $name_chapter_r_click,r_click_chapters_1_ura
+mov $name_chapter_save, "1_ura"
+new_ura 1
+gstt 14
+gstc 316
+flush 10,167
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 2
+wait 3000
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 2
+bgmplay 40,0,0
+vol_bgm 70
+wait 50
+seplay 1,52,71
+lss s0_10,"bea","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,3000
+aspt2 alpha,s0_10,255,3000
+sptwait2 breakup,s0_10
+msgwnd_bea
+*d32044
+d [lv 0*"27"*"90700088"]`「…次は何の紅茶を淹れようか？`[@][lv 0*"27"*"90700089"]`　古今のありとあらゆる銘茶を披露しようぞ」`[\]
+textoff
+waits 167
+seplay 2,52,71
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,3000
+aspt2 alpha,s0_8,255,3000
+sptwait2 breakup,s0_8
+msgwnd_non
+*d32045
+d [lv 0*"28"*"92100001"]`「……梅干紅茶。`[@][lv 0*"28"*"92100002"]`……梅干は１パック２００円のヤツよ」`[\]
+lss s0_10,"bea","a13_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32046
+d [lv 0*"27"*"90700090"]`「くっくっく…！`[@][lv 0*"27"*"90700091"]`　…千年、紅茶を嗜んだが、そのようなモノは知らぬ。`[@][lv 0*"27"*"90700092"]`…つくづくこの世は生き飽きぬものよ」`[\]
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_non
+*d32047
+d [lv 0*"28"*"92100003"]`「……………ベアト。`[@][lv 0*"28"*"92100004"]`そんなにも敵意を剥き出しにしなくてもいいわ。`[@][lv 0*"28"*"92100005"]`…私は単なる旅の魔女。`[@][lv 0*"28"*"92100006"]`あなたの領地のルールを侵しに来たつもりはないわ」`[\]
+lss s0_10,"bea","a12_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32048
+d2 [lv 0*"27"*"90700093"]`「…くっくっく、敵意など微塵も。`[@][#][*][lv 0*"27"*"90700094"]`…伝説の魔女、ベルンカステル卿に粗相がないか、気が気でならぬだけよ」`[\]
+wait_on_d 0
+seplay 9,1060,71
+gstc 317
+d_continue
+wait_on_d -1
+msgwnd_ber
+*d32049
+d [lv 0*"28"*"92100007"]`「………誤解があるわね。`[@][lv 0*"28"*"92100008"]`私は無力よ。`[@][lv 0*"28"*"92100009"]`あなたのような、１人を百殺す恐ろしい力を持った魔女の前にはまったくの無力」`[\]
+lss s0_10,"bea","a12_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32050
+d [lv 0*"27"*"90700095"]`「その無力な魔女殿が、何人たりとも寄せ付けぬ力をお持ちなのだから恐れ入る。`[@][lv 0*"27"*"90700096"]`かの大魔女、ラムダデルタ卿を単騎にて退けられたのだから」`[\]
+msgwnd_ber
+*d32051
+d [lv 0*"28"*"92100010"]`「……根競べに勝っただけよ。`[@][lv 0*"28"*"92100011"]`あの子が飽きただけのこと」`[\]
+lss s0_10,"bea","a12_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32052
+d [lv 0*"27"*"90700097"]`「ラムダデルタ卿は、そうは言ってなかったがな？`[@][lv 0*"27"*"90700098"]`　…くっくっく、過ぎた謙遜はかえって醜くもあるぞ、ベルンカステル卿？」`[\]
+textoff
+waits 167
+seplay 1,52,71
+aspt2 breakupdir,s0_8,1
+aspt2 breakup,s0_8,0
+aspt2 breakup,s0_8,1000,1500
+aspt2 alpha,s0_8,0,1500
+sptwait2 breakup,s0_8
+csp_slot s0_8
+flush 1 ;flush2: NO frames
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+lss s0_10,"ber","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+seplay 2,52,71
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,1500
+aspt2 alpha,s0_10,255,1500
+sptwait2 breakup,s0_10
+msgwnd_ber
+*d32053
+d [lv 0*"28"*"92100012"]`「……あの子は恐ろしい力を持ってる。`[@][lv 0*"28"*"92100013"]`…………１人を“必ず”殺す力。`[@][lv 0*"28"*"92100014"]`しかしこの世に“必ず”は存在しない。`[@][lv 0*"28"*"92100015"]`１をいくら割ろうとも決してゼロには出来ぬように」`[\]
+*d32054
+d [lv 0*"28"*"92100016"]`「あの子は、それを“限りなくゼロ”に近付け、“限りなく絶対”を生み出す力を持つ。`[@][lv 0*"28"*"92100017"]`……あんな恐ろしい魔女と戦うのは二度とごめんよ」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_bea
+*d32055
+d [lv 0*"27"*"90700099"]`「しかしそなたは、“ゼロでない限り”必ず成就させる力を持つ。`[@][lv 0*"27"*"90700100"]`……この世に“必ず”は存在しないとのたまう卿ご自身が、“必ず”の力をお持ちでおられる。`[@][lv 0*"27"*"90700101"]`……恐ろしい恐ろしい、くっくっく…！」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 23
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+seplay 2,52,71
+aspt2 breakupdir,s0_8,1
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,1500
+aspt2 alpha,s0_8,255,1500
+sptwait2 breakup,s0_8
+msgwnd_ber
+*d32056
+d [lv 0*"28"*"92100018"]`「……１人を“無限に”殺す力。`[@][lv 0*"28"*"92100019"]`…私は貴女の方が恐ろしいけれども」`[\]
+lss s0_10,"bea","a12_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32057
+d [lv 0*"27"*"90700102"]`「ご冗談を。`[@][lv 0*"27"*"90700103"]`……そなたから見れば、こんなのは瑣末な力。`[@][lv 0*"27"*"90700104"]`褒めても何も出ぬとはまさにこのこと」`[\]
+msgwnd_ber
+*d32058
+d [lv 0*"28"*"92100020"]`「……世辞は滞在費代わりに。`[@][lv 0*"28"*"92100021"]`…私はカケラを渡り退屈から逃れ続ける逃亡の旅人。`[@][lv 0*"28"*"92100022"]`……貴女が面白そうなことを始めたと聞いたからやって来ただけのこと。`[@][lv 0*"28"*"92100023"]`貴女が面白くなくなったら、勝手に出て行くからご心配なく」`[\]
+lss s0_10,"bea","a13_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32059
+d [lv 0*"27"*"90700105"]`「くっくっく…！`[@][lv 0*"27"*"90700106"]`　大ベルンカステル卿にご高覧頂け、このベアトリーチェ、恐悦至極に存じるぞ？`[@][lv 0*"27"*"90700107"]`　くっくっくっく！`[@][lv 0*"27"*"90700108"]`　して、ご感想は？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+meplay 1,17,70
+msgwnd_ber
+*d32060
+d [lv 0*"28"*"92100024"]`「…………ラムダデルタは、とても残酷で恐ろしいけれども、理解できる子だった。`[@][lv 0*"28"*"92100025"]`…貴女は一見、慈しみがあるけれども、まったく理解できない。`[@][lv 0*"28"*"92100026"]`だから、あの子よりずっと恐ろしい」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_me 1,-1,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a31_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_bea
+*d32061
+d2 [lv 0*"27"*"90700109"]`「くっくっくっくっく…！`[@][lv 0*"27"*"90700110"]`　気まぐれなのは我が性分。`[@][lv 0*"27"*"90700111"]`許すがいい。`[@][#][*][lv 0*"27"*"90700112"]`…それに、気まぐれなる賽の目に運命を託すは、ベルンカステル卿も好まれることだったのでは？」`[\]
+wait_on_d 0
+lss s0_10,"bea","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+flush 22
+seplay 1,52,71
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+aspt2 breakupdir,s0_8,1
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,1500
+aspt2 alpha,s0_8,255,1500
+sptwait2 breakup,s0_8
+msgwnd_ber
+*d32062
+d [lv 0*"28"*"92100027"]`「……私は賽を振る時、はっきりと出したい目がある。`[@][lv 0*"28"*"92100028"]`貴女とは違う。`[@][lv 0*"28"*"92100029"]`でも貴女にとっては、全ての目が、貴女の掌を出ない」`[\]
+*d32063
+d [lv 0*"28"*"92100030"]`「そして、どの目であっても、貴女の期待を裏切らない。`[@][lv 0*"28"*"92100031"]`サイコロが何の目を見せようとも“必ず”貴女は満足する。`[@][lv 0*"28"*"92100032"]`………その意味において、貴女は私を遥かに凌駕する」`[\]
+textoff
+waits 167
+seplay 1,52,71
+aspt2 breakup,s0_8,0
+aspt2 breakup,s0_8,1000,1500
+aspt2 alpha,s0_8,0,1500
+sptwait2 breakup,s0_8
+csp_slot s0_8
+flush 1 ;flush2: NO frames
+*d32064
+d [lv 0*"28"*"92100033"]`「………貴女とだけは戦いたくないわ。`[@][lv 0*"28"*"92100034"]`貴女の中にはゼロしかない。`[@][lv 0*"28"*"92100035"]`だから、私の力では貴女から勝機を得られない。`[@][lv 0*"28"*"92100036"]`…最悪の相性よ。`[@][lv 0*"28"*"92100037"]`……ラムダデルタなら、逆に相性がいいのかしら。`[@][lv 0*"28"*"92100038"]`貴女の“無限”を殺せるでしょうから」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a13_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_bea
+*d32065
+d [lv 0*"27"*"90700113"]`「くくくく、くっくっくっくっく！`[@][lv 0*"27"*"90700114"]`　……やはり、紅茶を飲むなら魔女とに限る。`[@][lv 0*"27"*"90700115"]`退屈しない。`[@][lv 0*"27"*"90700116"]`くーっくっくっく！」`[\]
+textoff
+waits 167
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+seplay 2,52,71
+aspt2 breakupdir,s0_8,1
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,1500
+aspt2 alpha,s0_8,255,1500
+sptwait2 breakup,s0_8
+msgwnd_ber
+*d32066
+d [lv 0*"28"*"92100039"]`「……なら良かったわ。`[@][lv 0*"28"*"92100040"]`退屈は私を殺す唯一の毒なの。`[@][lv 0*"28"*"92100041"]`……だから、私を殺さないでね？`[@][lv 0*"28"*"92100042"]`　無限の魔女、ベアトリーチェ卿」`[\]
+lss s0_10,"bea","a33_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32067
+d [lv 0*"27"*"90700117"]`「それがお望みならこのベアトリーチェ、さらに楽しませてお見せしましょう」`[\]
+lss s0_10,"bea","a12_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d32068
+d [lv 0*"27"*"90700118"]`「……なら、すぐにでも次のチェス盤をお持ちした方がよろしいか？`[@][lv 0*"27"*"90700119"]`　そなたにはどうも、紅茶よりも次なる物語の方が御代わりに相応しいらしい」`[\]
+msgwnd_ber
+*d32069
+d [lv 0*"28"*"92100043"]`「……………………………」`[\]
+lss s0_10,"bea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d32070
+d [lv 0*"27"*"90700120"]`「しばし待たれよ。`[@][lv 0*"27"*"90700121"]`……くっくっくっく！」`[\]
+textoff
+waits 167
+seplay 1,52,71
+aspt2 breakup,s0_10,0
+aspt2 breakup,s0_10,1000,3000
+aspt2 alpha,s0_10,0,3000
+sptwait2 breakup,s0_10
+csp_slot s0_10
+flush 1 ;flush2: NO frames
+wait 3000
+lss s0_8,"ber","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_ber
+*d32071
+d [lv 0*"28"*"92100044"]`…………貴方も厄介なのに好かれたようね。`[\]
+*d32072
+d [lv 0*"28"*"92100045"]`力を貸してあげたいのは山々だけれど、聞いての通り、あの子の力と私の力では相性が悪いの。`[@][lv 0*"28"*"92100046"]`お生憎ね。`[\]
+*d32073
+d [lv 0*"28"*"92100047"]`でも、さすがに気の毒だから、少しだけ力を貸してあげるわ。`[\]
+seplay 2,52,71
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+lss s0_9,"bea","a11_defo1" ;1
+color_mod2 s0_9,#ffffff
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"different_space_1a"
+lss s1_8,"ber","a11_defo2" ;1
+aspt2 xpos,s1_8,-370
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakupdir,1,1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+*d32074
+d [lv 0*"28"*"92100048"]`まず、あの子のこと。`[\]
+*d32075
+d [lv 0*"28"*"92100049"]`ベアトリーチェという名の存在を持っているけれども、だからといってそれは“一個体の女性”とは限らない。`[\]
+*d32076
+d [lv 0*"28"*"92100050"]`意味がわかる？`[@][lv 0*"28"*"92100051"]`　つまり、あれはニンゲンの誰かじゃない。`[@][lv 0*"28"*"92100052"]`この世界のルールが擬人化した存在だということ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"chess1"
+flush 22
+*d32077
+d [lv 0*"28"*"92100053"]`あの子を倒すには、この世界のルールを暴き、それを解きほぐさなければならない。`[\]
+*d32078
+d [lv 0*"28"*"92100054"]`それは例えるなら、ルールを知らないチェスを、観戦しながら学んでいくようなもの。`[\]
+*d32079
+d [lv 0*"28"*"92100055"]`まずはチェス盤を見渡しなさい。`[@]`{n}`[|][lv 0*"28"*"92100056"]`そして駒の動きと役割に気付きなさい。`[@]`{n}`[|][lv 0*"28"*"92100057"]`そしてあの子のゲームの勝利条件を探りなさい。`[\]
+*d32080
+d [lv 0*"28"*"92100058"]`それらが暴けた時、そこにあの子の心臓が曝け出される。`[@]`{n}`[|][lv 0*"28"*"92100059"]`後は引き裂くも握り潰すも思いのまま。`[\]
+seplay 2,52,71
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"ber","a11_defo2" ;1
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"chess1"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakupdir,1,1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+*d32081
+d [lv 0*"28"*"92100060"]`……私も気前がいいわね。`[@][lv 0*"28"*"92100061"]`かつて人の身だった頃、私はたったこれだけのことを気付くのに百年をかけたのに。`[\]
+*d32082
+d [lv 0*"28"*"92100062"]`これは、ベアトに囚われた憐れな貴方へのささやかな餞別。さながら一本のスプーン。`[\]
+lss s0_9,"ber","a11_defo1" ;1
+flush 10,167
+*d32083
+d [lv 0*"28"*"92100063"]`スプーンは、スープを飲むのに使うだけじゃない。`[@]`{n}`[|][lv 0*"28"*"92100064"]`貴方を閉じ込める石牢を掘り抜き、魔女の目玉を抉る武器にもなる。`[\]
+*d32084
+d [lv 0*"28"*"92100065"]`……もちろん、永遠の石牢の中で、水のようなスープを延々と啜り続けるのにも使えるだろうけど。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_spiral_1a"
+flush 2
+meplay 1,5,50
+*d32085
+d [lv 0*"28"*"92100066"]`……勘違いしないでほしいのは、私は貴方の味方のつもりはないということ。`[\]
+*d32086
+d [lv 0*"28"*"92100067"]`貴方に感情移入はするけれど、貴方の手助けはしない。`[@]`{n}`[|][lv 0*"28"*"92100068"]`…貴方が、テレビの前でその向こうの人物にいくらエールを送っても届かないのに似てるわ。`[\]
+set_window_simple 80
+*d32087
+d `{a:c:`[lv 0*"28"*"92100069"][text_fade_t 1667]`ダカラ、私ガ魔女ダッテ判ルデショウ？}`[\]
+set_name_window_non
+seplay 2,52,71
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"ber","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"different_spiral_1a"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakupdir,1,1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+msgwnd_ber
+*d32088
+d [lv 0*"28"*"92100070"]`私は、ベアトがこれから紡ぐ無限の物語を飽きるまで楽しむつもり。`[@][lv 0*"28"*"92100071"]`でも、きっとそれじゃ飽きちゃうから。`[\]
+*d32089
+d [lv 0*"28"*"92100072"]`……だから、貴方に力を貸すの。`[@][lv 0*"28"*"92100073"]`私が飽きないために。`[\]
+*d32090
+d [lv 0*"28"*"92100074"]`私は世界で一番残酷な魔女なの。`[@]`{n}`[|][lv 0*"28"*"92100075"]`どんな相手でも、絶対に屈服させる。`[\]
+*d32091
+d [lv 0*"28"*"92100076"]`…無限の魔女、ベアトリーチェであってもね…？`[\]
+lss s0_10,"ber","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d32092
+d [lv 0*"28"*"92100077"]`お前は、私の駒よ。`[@][lv 0*"28"*"92100078"]`せいぜいがんばりなさい。`[@]`{n}`[|][lv 0*"28"*"92100079"]`あの子の目を盗んで、時折助言を与えるわ。`[\]
+*d32093
+d [lv 0*"28"*"92100080"]`私を退屈させないでね……？`[\]
+textoff
+waits 167
+seplay 3,52,71
+aspt2 breakup,s0_10,0
+aspt2 breakup,s0_10,1000,3000
+aspt2 alpha,s0_10,0,3000
+sptwait2 breakup,s0_10
+csp_slot s0_10
+flush 1 ;flush2: NO frames
+*d32094
+d [lv 0*"28"*"92100081"]`くすくすくすくす……。`[\]
+textoff
+waits 167
+wait 3000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 18,3000,msk_1
+vol_mix_fade 6000
+vol_bgm -1,6000
+wait 6000
+wait 3000
+vol_mix_fade 1000
+wait 1000
+ch_done flag_scenario_1_ura
+*ura_1_end
+goto *end_game
+

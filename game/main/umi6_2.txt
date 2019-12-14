@@ -1,0 +1,3158 @@
+*umi6_2
+;ゲームマスター
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_6_2
+mov $name_chapter_save, "6_02"
+~
+new_chapter date_scenario_6_2,scenario_6_2
+gstc 34
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 8
+wait 1000
+seplay 2,22,100
+anim2 s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+wait 500
+seplay 3,22,71
+csp_slot s0_5
+flush 11
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+bgmplay 113,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 2
+*d42611
+d `かつて、ベアトが魔女たちだけを集めて雑談を楽しんだ、魔女の喫煙室。`[\]
+*d42612
+d `そこには、珍しく多くの人影があった。`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_9,"lam","a11_akuwarai1" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d42613
+d [lv 0*"29"*"62200003"]`「うっふふふふ。`[@][lv 0*"29"*"62200004"]`戦人は一体、どういうゲームを見せてくれるのかしらね」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1c"
+flush 24
+seplay 2,52,71
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,370
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_ber
+*d42614
+d [lv 0*"28"*"62100016"]`「……それが退屈を忘れさせ、`[@][lv 0*"28"*"62100017"]`壊し甲斐あるものなら、何でも歓迎よ」`[\]
+seplay 1,11,50
+lss s0_8,"eri","a11_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+msgwnd_eri
+*d42615
+d [lv 0*"46"*"64500028"]`「お任せ下さい、我が主っ！`[@][lv 0*"46"*"64500029"]`　必ずや主の望まれる結果となるよう、最善を尽くします！」`[\]
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d42616
+d2 [lv 0*"28"*"62100018"]`「えぇ、そうしてね。`[@][lv 0*"28"*"62100019"]`……前回のゲームではおかしな表情ばかり見せちゃったから、`[@][#][*][lv 0*"28"*"62100020"]`頬が歪んで変なしわにならないか不安だわ」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_niramu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"eri","a11_warai5" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eri
+*d42617
+d [lv 0*"46"*"64500030"]`「そ、そんなことはありませんっ。`[@][lv 0*"46"*"64500031"]`どんなおしわが出来ようとも、我が主の美貌は完璧ですっ」`[\]
+meplay 1,17,70
+lss s0_8,"eri","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"ber","a21_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d42618
+d [lv 0*"28"*"62100021"]`「……………………ッッッ！！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 24
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_10,"lam","a11_futeki3" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d42619
+d [lv 0*"29"*"62200005"]`「うっふふふふ！`[@][lv 0*"29"*"62200006"]`　ベルンがこんなにも楽しそうなんてね。`[@][lv 0*"29"*"62200007"]`本当にベアトのゲーム盤は素晴らしいわ」`[\]
+seplay 2,43,71
+lss s0_8,"dla","a11_defo3" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_dla
+*d42620
+d [lv 0*"47"*"64600001"]`「……そのゲーム盤の主が、もはや不在なのは悲しいことデス」`[\]
+lss s0_10,"lam","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_lam
+*d42621
+d [lv 0*"29"*"62200008"]`「虎は死んで皮を残す。`[@][lv 0*"29"*"62200009"]`ベアトも死んでゲームを残したわ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d42622
+d [lv 0*"28"*"62100022"]`「チェスは残っても、その作者の名は残ってないわね」`[\]
+lss s0_10,"lam","a11_odoroki3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_lam
+*d42623
+d2 [lv 0*"29"*"62200010"]`「あ、ホントだ！`[@][#][*][lv 0*"29"*"62200011"]`　きゃっはははは、ゲームの作者って不憫ね〜」`[\]
+wait_on_d 0
+lss s0_10,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+seplay 3,37,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+flush 23
+lss s0_9,"eri","a11_akuwarai1" ;1
+flush 24
+msgwnd_eri
+*d42624
+d [lv 0*"46"*"64500032"]`「それにしても、戦人さんはずいぶん待たせるじゃないですか。`[@][lv 0*"46"*"64500033"]`第６のゲームの準備、まだ終わらないんですか？」`[\]
+lss s0_10,"dla","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_dla
+*d42625
+d [lv 0*"47"*"64600002"]`「……ガートルード。`[@][lv 0*"47"*"64600003"]`バトラ卿の準備は如何デス？」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 24
+seplay 1,52,71
+lss s0_10,"ger","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+seplay 2,52,71
+lss s0_8,"cor","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+lss s0_10,"ger","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_ger
+*d42626
+d [lv 0*"48"*"64800001"]`「謹啓、謹んで申し上げる。`[@][lv 0*"48"*"64800002"]`……もうじきのことと知り給えと奉るもの也」`[\]
+lss s0_9,"eri","a11_majime2" ;1
+z_order_override2 s0_9,s0_25
+flush 24
+msgwnd_eri
+*d42627
+d2 [lv 0*"46"*"64500034"]`「待たせるってことは、それだけ自信作なんでしょうよ。`[@][lv 0*"46"*"64500035"]`……前回、我が主の前で、あれだけの恥をかかされたんですっ。`[@][lv 0*"46"*"64500036"]`是が非でも打ち破って見せます…！`[@][#][*][lv 0*"46"*"64500037"]`　特にあんたっ、二度と無様を見せないで下さいよ…！」`[\]
+wait_on_d 0
+lss s0_9,"eri","a11_majime1" ;1
+z_order_override2 s0_9,s0_25
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"cor","a11_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_cor
+*d42628
+d [lv 0*"49"*"64700001"]`「……奮起して臨むもの也や」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d42629
+d `戦人がベアトのゲームの全てを理解したことは、`[@]`先代ゲームマスターのラムダデルタによって保証されている。`[\]
+*d42630
+d `しかし、それを認めさせるには、`[@]`自らの手によるゲームを開催し、やり遂げて見せなければならない。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+*d42631
+d `つまり、ヱリカにとっては、この戦人の手によるゲームを何とか打ち破れば、`[@]`前回の汚名を返上することも意味できるのだ。`[\]
+*d42632
+d `ヱリカはいつでも来いとばかりに鼻息を荒くしているが、`[@]`戦人は遅れているようで、なかなか姿を現さなかった。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 1,22,71
+anim2 s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+*d42633
+d `その時、黄金の蝶の群が、ふわっと現れ、人型を作る。`[\]
+*d42634
+d `それは見慣れたドレスの輪郭だったので、すぐにそれが誰か一同にはわかった。`[\]
+textoff
+waits 167
+seplay 1,52,71
+lss s0_9,"bea","a15_1_warai7" ;1
+textoff
+aspt2 breakup,s0_9,1000
+aspt2 alpha,s0_9,0
+flush 1
+aspt2 breakup,s0_9,0,2000
+aspt2 alpha,s0_9,255,2000
+sptwait2 breakup,s0_9
+wait 1000
+bgmplay 61,71,0
+lss s0_9,"bea","a15_1_defo3" ;1
+flush 2
+wait 3000
+csp_slot s0_5
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1a"
+lss s0_10,"eri","a11_warai3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eri
+*d42635
+d [lv 0*"46"*"64500038"]`「おや、ベアトリーチェさんじゃないですか。`[@][lv 0*"46"*"64500039"]`てっきり前回、死んで消えたとばかり」`[\]
+seplay 1,52,71
+lss s0_8,"ber","a21_defo1" ;1
+aspt2 xpos,s0_8,-550
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+msgwnd_ber
+*d42636
+d [lv 0*"28"*"62100023"]`「……消えたのはプレイヤーのベアトよ。`[@][lv 0*"28"*"62100024"]`こいつは駒でしょ、戦人の」`[\]
+lss s0_9,"dla","a11_defo1" ;1
+flush 24
+msgwnd_dla
+*d42637
+d [lv 0*"47"*"64600004"]`「駒ではあっても、ご本人と変わりありマセン」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 23
+lss s0_9,"bea","a15_1_defo3" ;1
+flush 26
+msgwnd_non
+*d42638
+d `ベアトリーチェは、スカートの裾を摘み、上品に会釈をした姿で現れる。`[\]
+*d42639
+d `高笑いで現れそうな彼女のイメージからすると、`[@]`むしろその畏まった登場は、いよいよ第６のゲームの始まりを告げる緊張感さえ感じさせた…。`[\]
+lss s0_9,"bea","a15_1_warai8" ;1
+flush 80
+msgwnd_bea
+*d42640
+d [lv 0*"27"*"60700001"]`「お父様はもうじきお越しになられます。`[@][lv 0*"27"*"60700002"]`どうかもうしばらくのお時間をお許し下さい……」`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_8,"lam","a11_futeki2" ;1
+aspt2 xpos,s0_8,-550
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d42641
+d2 `「……………。`[@][lv 0*"29"*"62200013"]`…あっは。`[@][#][*][lv 0*"29"*"62200014"]`お父様？　何それ。`[@][lv 0*"29"*"62200015"]`それが今回の趣向？」`[\]
+wait_on_d 0
+lss s0_8,"lam","a11_akuwarai3" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d42642
+d `ベアトが、らしくもない言葉遣いで語り出した上に、`[@]`恐らく戦人のことだろうが、“お父様”と呼んでみせる。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"different_space_1c"
+flush 25
+*d42643
+d `一瞬、呆気に取られていた一行だが、`[@]`すぐにこれが何らかの趣向であることを理解して、ニヤリと笑う。`[\]
+*d42644
+d `ベアトだって、こんな言い方を我慢できるタイプじゃない。`[\]
+*d42645
+d `もうすぐ化けの皮が剥がれて、ケタケタと品の無い笑いで噴き出すだろう。`[\]
+*d42646
+d `やる気満々のヱリカは、さっそくベアトに絡んでいた。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 26
+lss s0_8,"eri","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_eri
+*d42647
+d [lv 0*"46"*"64500040"]`「まさかあの、無能の戦人さんが、`[@][lv 0*"46"*"64500041"]`あなたのゲームの真相に至るなんてね」`[\]
+lss s0_10,"bea","a15_1_warai6" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d42648
+d [lv 0*"27"*"60700003"]`「……お父様なればこそ、深遠を理解されたのでしょう。`[@][lv 0*"27"*"60700004"]`さすがだと思います」`[\]
+lss s0_8,"eri","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eri
+*d42649
+d2 [lv 0*"46"*"64500042"]`「……………。`[@][#][*][lv 0*"46"*"64500043"]`しかしあんたもラッキーです。`[@][lv 0*"46"*"64500044"]`戦人がゲームマスターになれなかったら、二度と復活できなかったんですよ。`[@][lv 0*"46"*"64500045"]`まったく、悪運が強いと言いますか」`[\]
+wait_on_d 0
+lss s0_8,"eri","a11_akuwarai4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a15_1_warai5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42650
+d [lv 0*"27"*"60700005"]`「……悪運？」`[\]
+meplay 1,16,50
+csp_slot s0_8
+lss s0_9,"eri","a11_warai3" ;1
+flush 23
+msgwnd_eri
+*d42651
+d2 [lv 0*"46"*"64500046"]`「まぁいずれにせよ。`[@][lv 0*"46"*"64500047"]`前回の借りはきっちり返させてもらいますので。`[@][#][*][lv 0*"46"*"64500048"]`あんたという戦人の妄想幻想ッ、きっちり消し去って、忘却の深遠に叩き落してやりますから」`[\]
+wait_on_d 0
+lss s0_9,"eri","a11_akuwarai2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a15_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42652
+d2 [lv 0*"27"*"60700006"]`「私も、みすみすやられるわけには参りません。`[@][#][*][lv 0*"27"*"60700007"]`……その、お手柔らかによろしくお願い致します」`[\]
+wait_on_d 0
+lss s0_10,"bea","a15_1_warai6" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lss s0_8,"eri","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+vol_bgm -1,1000
+wait 1000
+lss s0_8,"eri","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eri
+*d42653
+d [lv 0*"46"*"64500049"]`「………………………？？？」`[\]
+msgwnd_non
+*d42654
+d `その頃にはもう、一同の違和感は紛れもないものになっていた。`[\]
+*d42655
+d `確かに、顔もドレスも髪形も、ベアトリーチェに他ならない。`[\]
+*d42656
+d `……しかし、……表情が違うのだ。`[\]
+*d42657
+d `ベアトの顔ではあっても、決してベアトが浮かべないような表情を見せるのだ。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+flush 24
+seplay 1,52,71
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,370
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_ber
+*d42658
+d [lv 0*"28"*"62100025"]`「…………………」`[\]
+seplay 2,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_8,"lam","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d42659
+d [lv 0*"29"*"62200016"]`「……誰よ、あんた」`[\]
+msgwnd_non
+*d42660
+d `場が沈黙する。`[\]
+*d42661
+d `……ラムダデルタの問いは、全員のそれを代弁するものだった。`[\]
+*d42662
+d `最初は、微笑みながらもきょとんとした表情を浮かべていたベアトだったが、`[@]`……場の空気がすっかり乾いてしまったことに気付くと、ようやく表情を曇らせ、俯いた。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 23
+bgmplay 17,71,0
+lss s0_9,"eri","a11_majime1a" ;1
+flush 24
+msgwnd_eri
+*d42663
+d [lv 0*"46"*"64500050"]`「あんた、……誰です」`[\]
+lss s0_10,"dla","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_dla
+*d42664
+d [lv 0*"47"*"64600005"]`「……ベアトリーチェ卿とお見受けしていますが、`[|][lv 0*"47"*"64600006"]`…違うのデスカ…？」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_non
+*d42665
+d `ドラノールでさえ、無礼を承知でそう尋ねざるを得ない。`[\]
+*d42666
+d `それほどに、`[!w417]`……その、`[!w333]`一見、`[!w500]`ベアトに見える女は、別人だった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 24
+lss s0_8,"bea","a15_fuman2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d42667
+d [lv 0*"27"*"60700008"]`「………皆さんの期待されるベアトリーチェとは、`[@][lv 0*"27"*"60700009"]`……違うでしょうか」`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_10,"lam","a11_odoroki4" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d42668
+d [lv 0*"29"*"62200017"]`「あんた、……何、言ってんの」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eri","a12_majime1a" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_eri
+*d42669
+d [lv 0*"46"*"64500051"]`「まさかとは思いますが、`[@][lv 0*"46"*"64500052"]`記憶喪失とか何とか言い出すんじゃないでしょうね…？」`[\]
+meplay 1,16,50
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+flush 26
+msgwnd_bea
+*d42670
+d [lv 0*"27"*"60700010"]`「わ、…私はまだ生まれたばかりですので、記憶は何もありません。`[@][lv 0*"27"*"60700011"]`……で、ですがっ。`[@][lv 0*"27"*"60700012"]`皆さんの期待されるベアトリーチェになれるよう、色々と勉強を…、」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+vol_bgm -1,1000
+set_window_simple 80
+msgwnd_but
+*d42671
+d `{a:c:`[lv 0*"10"*"60100008"]`「ベアト。`[@][lv 0*"10"*"60100009"]`……部屋にいるように言ったはずだ」}`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 2
+*d42672
+d `どこからともなく、戦人の声が聞こえた。`[\]
+*d42673
+d `……少しだけ冷たい口調だった。`[@]`{n}ベアトはまるで小さい子が叱られたような表情を浮かべる。`[\]
+textoff
+waits 167
+seplay 1,22,70
+textoff
+waits 167
+lbg s0_3,"black"
+anim2 s0_17,"no81",1
+flush 1
+waitvideo
+csp_slot s0_17
+textoff
+waits 167
+lbg s0_3,"butterfly_2a"
+flush 1
+wait 1500
+textoff
+waits 167
+lbg s0_3,"efe1"
+flush 48
+textoff
+seplay 1,52,100
+lbg s0_5,"butterfly_4sp2"
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_majime1" ;1
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"efe1"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+vol_me 1,-1,1000
+bgmplay 13,71,0
+*d42674
+d `黄金の蝶の群が渦を巻き、`[@]`……戦人が現れる。`[\]
+*d42675
+d `貫禄ある姿と身なりは、このゲームの支配者に相応しい。`[\]
+*d42676
+d `……しかし表情には憂いが浮かび、`[@]`…その眼差しはベアトに向けられていた。`[\]
+lss s0_9,"but","d11_nayamu4" ;1
+flush 80
+msgwnd_but
+*d42677
+d [lv 0*"10"*"60100010"]`「……部屋に戻れ。`[@][lv 0*"10"*"60100011"]`ここはお前のいる場所でない」`[\]
+csp_slot s0_9
+lss s0_8,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"bea","a15_1_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d42678
+d [lv 0*"27"*"60700013"]`「わ、…私は少しでもお父様のお役に立ちたくて……、」`[\]
+meplay 1,5,50
+lss s0_8,"but","d11_oya1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d42679
+d [lv 0*"10"*"60100012"]`「部屋へ、戻れ」`[\]
+msgwnd_non
+*d42680
+d `静かに強い口調で言う。`[@]`有無を言わせないものだった。`[\]
+*d42681
+d `ベアトは俯きながら、スカートの両端を掴んで、退室前に会釈する…。`[\]
+lss s0_8,"but","d11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d42682
+d [lv 0*"10"*"60100013"]`「それから」`[\]
+lss s0_10,"bea","a15_1_warai5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42683
+d [lv 0*"27"*"60700014"]`「は、はい、お父様」`[\]
+lss s0_8,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d42684
+d [lv 0*"10"*"60100014"]`「……俺の名は戦人だ。`[@][lv 0*"10"*"60100015"]`…二度と他の呼び方をするな」`[\]
+lss s0_10,"bea","a15_1_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42685
+d [lv 0*"27"*"60700015"]`「…は、`[|][lv 0*"27"*"60700016"]`………はい」`[\]
+seplay 1,52,71
+textoff
+aspt2 breakup,s0_10,0
+aspt2 breakup,s0_10,1000,2000
+aspt2 alpha,s0_10,0,2000
+sptwait2 breakup,s0_10
+csp_slot s0_10
+flush 1 ;flush2: NO frames
+msgwnd_non
+*d42686
+d `ベアトは黄金の蝶の群に溶けて消える。`[\]
+csp_slot s0_5
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+*d42687
+d `戦人がゲームマスターになっての物語だから。`[\]
+*d42688
+d `相当に派手な展開が来るだろうと想像していた魔女たちにとって、これは全て想定外。`[\]
+*d42689
+d `……開いた口が塞がらないという感じだった。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_ber
+*d42690
+d [lv 0*"28"*"62100026"]`「……変わった趣向ね」`[\]
+lss s0_8,"but","d11_nayamu1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_but
+*d42691
+d [lv 0*"10"*"60100016"]`「失礼した。`[@][lv 0*"10"*"60100017"]`……今のは忘れて欲しい」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"eri","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eri
+*d42692
+d [lv 0*"46"*"64500053"]`「ふん、うまいこと言って、それも作戦の内ですか？`[@][lv 0*"46"*"64500054"]`　また北風太陽作戦みたいに、印象操作して何かを煙に巻こうって魂胆でしょう」`[\]
+seplay 1,30,71
+lss s0_9,"dla","a11_defo1" ;1
+flush 24
+msgwnd_dla
+*d42693
+d [lv 0*"47"*"64600007"]`「……何かあったのデスカ」`[\]
+lss s0_8,"but","d11_nayamu5" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d42694
+d [lv 0*"10"*"60100018"]`「気にするな。`[@][lv 0*"10"*"60100019"]`お前たちには関係のないことだ」`[\]
+lbg s0_5,"butterfly_4sp1"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+flush 23
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_8,"lam","a11_akuwarai3" ;1
+aspt2 xpos,s0_8,-370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d42695
+d2 [lv 0*"29"*"62200018"]`「そう。`[@][lv 0*"29"*"62200019"]`なら関係ないってことだわ。`[@][#][*][lv 0*"29"*"62200020"]`さぁ戦人！　早く新しいゲームを始めてちょうだい！`[@][lv 0*"29"*"62200021"]`　もう待たされ過ぎちゃって、退屈してたんだから！」`[\]
+wait_on_d 0
+lss s0_8,"lam","a11_futeki3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d42696
+d2 [lv 0*"10"*"60100020"]`「……あぁ。`[@][lv 0*"10"*"60100021"]`第６のゲームを始めよう。`[@][#][*][lv 0*"10"*"60100022"]`……ヱリカ、そしてベルンカステル。`[@][lv 0*"10"*"60100023"]`これが、俺の物語であり、俺がベアトの真相に至ったことの証明だ。`[@][lv 0*"10"*"60100024"]`…ラムダデルタ。`[@][lv 0*"10"*"60100025"]`それを、先代ゲームマスターとして見届けてくれ」`[\]
+wait_on_d 0
+lss s0_10,"but","d11_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"lam","a11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_lam
+*d42697
+d [lv 0*"29"*"62200022"]`「えぇ、楽しみにしてるわー。タイトルは？」`[\]
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42698
+d [lv 0*"10"*"60100026"]`「……“Dawn”。`[@][lv 0*"10"*"60100027"]`…黄金の魔女の夜明け、だ」`[\]
+lbg s0_5,"butterfly_4sp2r"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"eri","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d42699
+d [lv 0*"28"*"62100027"]`「すぐに沈む冬の太陽だけれどね」`[\]
+lss s0_8,"eri","a11_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eri
+*d42700
+d2 [lv 0*"46"*"64500055"]`「もちろんです、我が主。`[@][lv 0*"46"*"64500056"]`すぐに引き摺り下ろしてご覧にいれますっ。`[@][#][*][lv 0*"46"*"64500057"]`タイトルだけはグッドです、そこだけは褒めましょう、戦人さん」`[\]
+wait_on_d 0
+lss s0_8,"eri","a12_warai5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lbg s0_5,"butterfly_4sp1"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_nayamu5" ;1
+flush 23
+lss s0_9,"but","d11_majime6" ;1
+flush 80
+msgwnd_but
+*d42701
+d [lv 0*"10"*"60100028"]`「気に入ってもらえて良かった。`[@][lv 0*"10"*"60100029"]`…では始めよう。`[@][lv 0*"10"*"60100030"]`これより、第６のゲームを開始する」`[\]
+lbg s0_5,"butterfly_4sp2"
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_non
+*d42702
+d `戦人は厳かに、ゲーム開始の宣言をする。`[\]
+*d42703
+d `……前回のゲームの最後で、次で決着をつけてやるとヱリカと火花を散らし合っていた様子からは、`[@]`それはあまりに静かな様子だった……。`[\]
+csp_slot s0_5
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+bgmplay 139,71,0
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 2
+lss s0_10,"fea","b11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 2
+msgwnd_fea
+*d42704
+d [lv 0*"50"*"65000062"]`「……縁寿。`[@][lv 0*"50"*"65000063"]`ベアトの様子が、あまりにこれまでと違うな」`[\]
+lss s0_8,"enj","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d42705
+d [lv 0*"11"*"62000096"]`「私も驚いてるわ。`[@][lv 0*"11"*"62000097"]`……何が何だかさっぱりよ。`[@][lv 0*"11"*"62000098"]`それ以前に、何でベアトが蘇ってるのかさっぱりだわ。`[@][lv 0*"11"*"62000099"]`さっき読ませてもらったけど、……前回の物語の最後で、お兄ちゃんが真相に辿り着く直前に、`[@][lv 0*"11"*"62000100"]`死んで消え去ったんじゃなかったの？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"chess1"
+flush 2
+msgwnd_fea
+*d42706
+d [lv 0*"50"*"65000064"]`「この世界での死は２つある。`[@][lv 0*"50"*"65000065"]`……１つは駒としてゲーム盤より取り除かれること。`[@][lv 0*"50"*"65000066"]`これはゲームにおける死でしかなく、仕切り直せば、何度でも蘇る命だ」`[\]
+msgwnd_enj
+*d42707
+d [lv 0*"11"*"62000101"]`「……だから魔女たちはその命を奪うことに、あまりに無慈悲なわけよね」`[\]
+msgwnd_non
+*d42708
+d `魔女というプレイヤーにとって、ゲーム盤の上の登場人物の命など、`[@]`取ったり取られたりを競うチェスの駒以上でも以下でもない。`[\]
+*d42709
+d `次のゲームが始まれば、また並ぶ駒なのだから。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 6
+msgwnd_fea
+*d42710
+d [lv 0*"50"*"65000067"]`「真里亞における、さくたろうが、その駒の最たるものであっただろう」`[\]
+lss s0_10,"enj","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d42711
+d [lv 0*"11"*"62000102"]`「……さくたろうが、お姉ちゃんの駒…？」`[\]
+msgwnd_non
+*d42712
+d `確かに、……そうかもしれない。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+lss s0_9,"sak","a11_defo1" ;1
+color_mod2 s0_9,#ffffff
+flush 22
+*d42713
+d `お姉ちゃんの内面世界という名のゲーム盤では、確かにさくたろうは存在して、`[@]`お姉ちゃんと常に寄り添っている駒だった。`[\]
+*d42714
+d `現実の世界では、ただの布と綿のぬいぐるみであっても、`[@]`お姉ちゃんのゲーム盤では、それは他の駒と何の区別もない、立派な１つの駒なのだ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+flush 26
+lss s0_8,"enj","a31_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d42715
+d [lv 0*"11"*"62000103"]`「でも、……どうかしら。`[@][lv 0*"11"*"62000104"]`…魔女のゲームの駒なら、簡単に生き返らせることが出来るんでしょ。`[@][lv 0*"11"*"62000105"]`……でも、お姉ちゃんの世界では、さくたろうは蘇ることが出来なかった」`[\]
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_fea
+*d42716
+d [lv 0*"50"*"65000068"]`「……世界でたった一つのぬいぐるみという依り代が失われたからだ。`[@][lv 0*"50"*"65000069"]`だから、駒の存在条件が崩れ、真里亞のゲーム盤では復活することが出来なかった。`[@][lv 0*"50"*"65000070"]`……そなたが、その存在条件を再び満たしてやったからこそ、さくたろうはゲーム盤に蘇ることが出来たのではないか」`[\]
+lss s0_8,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42717
+d [lv 0*"11"*"62000106"]`「………確かに」`[\]
+msgwnd_non
+*d42718
+d `真里亞お姉ちゃんは、`[@]`ぬいぐるみという依り代を失ったから蘇らせられなかっただけ。`[\]
+*d42719
+d `……ベアトのゲーム盤における私の家族みたいに、`[@]`“依り代”が必要なかったなら、いくらでも蘇らせることは出来たのだ。`[\]
+lss s0_8,"enj","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42720
+d [lv 0*"11"*"62000107"]`「そうね。`[@][lv 0*"11"*"62000108"]`……確かに、さくたろうはお姉ちゃんの駒かもしれないわ。`[@][lv 0*"11"*"62000109"]`少なくとも、依り代が無事である限り、何度でも蘇れる存在だわ」`[\]
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42721
+d [lv 0*"50"*"65000071"]`「そう。`[@][lv 0*"50"*"65000072"]`依り代が無事である限り、何度でも蘇ることが出来る。`[@][lv 0*"50"*"65000073"]`それが駒の命というものだ…」`[\]
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42722
+d2 [lv 0*"11"*"62000110"]`「……それが、この世界での死における１つ目。`[@][#][*][lv 0*"11"*"62000111"]`……もう１つは？」`[\]
+wait_on_d 0
+lss s0_8,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42723
+d [lv 0*"50"*"65000074"]`「ゲーム盤の外の存在の死だ。`[@][lv 0*"50"*"65000075"]`さくたろうの話で続けるなら、この場合は、真里亞の死だ」`[\]
+lss s0_8,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42724
+d [lv 0*"11"*"62000112"]`「駒じゃなく、`[@][lv 0*"11"*"62000113"]`……本当のお姉ちゃんの死、ね」`[\]
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42725
+d [lv 0*"50"*"65000076"]`「死だけではない。`[@][lv 0*"50"*"65000077"]`興味や関心の喪失でも同じだ。`[@][lv 0*"50"*"65000078"]`……真里亞がぬいぐるみ遊びを卒業すれば、ゲームのプレイヤーとしての真里亞は死ぬ。`[@][lv 0*"50"*"65000079"]`さながら、テレビに飽きてスイッチを切るかのように、簡単にあっさりと」`[\]
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42726
+d [lv 0*"11"*"62000114"]`「………なるほど。`[@][lv 0*"11"*"62000115"]`つまりプレイヤーとしてのベアトは、前回までのゲームで、勝利を完全に諦めたので、`[@][lv 0*"11"*"62000116"]`……死んで消え去ったわけね。`[@][lv 0*"11"*"62000117"]`…ならつまり、ベアトが再び、お兄ちゃんに勝てるつもりになって戻ってきたら、生き返るってことだわ」`[\]
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42727
+d2 [lv 0*"50"*"65000080"]`「理屈ではそうだ。`[@][lv 0*"50"*"65000081"]`人も魔女も神さえも。`[@][lv 0*"50"*"65000082"]`興味と関心を失えばいつでも死ねる。`[@][lv 0*"50"*"65000083"]`そして、それを取り戻せばいつでも蘇れる。`[@][#][*][lv 0*"50"*"65000084"]`……しかし、神の世界には時間の概念がないから、いつ蘇るも自在だが、`[@][lv 0*"50"*"65000085"]`矢の如く時が過ぎ去る人の世では、それは容易ではないな…」`[\]
+wait_on_d 0
+lss s0_10,"fea","b11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42728
+d [lv 0*"11"*"62000118"]`「そうね。`[@][lv 0*"11"*"62000119"]`１日のズル休みならともかく、３日もサボると、学校に行くのがものすごく億劫になるわ」`[\]
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42729
+d [lv 0*"50"*"65000086"]`「それが１ヶ月、１年、１０年。`[@][lv 0*"50"*"65000087"]`それこそ、魔女の世界のように、千年にも及んだら？」`[\]
+lss s0_8,"enj","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42730
+d [lv 0*"11"*"62000120"]`「……なるほど。`[@][lv 0*"11"*"62000121"]`ズル休みもそれだけになればもはや、社会における“死”ね。`[@][lv 0*"11"*"62000122"]`……それだけの長い間、死んでいたら、`[@][lv 0*"11"*"62000123"]`社会的な遅れを取り戻せないだけじゃなく、当時のモチベーションだって、絶対に蘇らないわ」`[\]
+*d42731
+d [lv 0*"11"*"62000124"]`「……それはつまり、命があっても、一度死んだのと同じことだわ。`[@][lv 0*"11"*"62000125"]`二度と、……元の自分には戻れない。蘇れない」`[\]
+lss s0_10,"fea","b11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42732
+d2 [lv 0*"50"*"65000088"]`「ベアトは、勝てる道理も希望も全て失った。`[@][lv 0*"50"*"65000089"]`……それを知りつつ気付かぬふりをし、あれだけのゲームを戦ってきたのだ。`[@][lv 0*"50"*"65000090"]`だからもう、ベアトは戻らない。`[@][lv 0*"50"*"65000091"]`彼女の希望は潰えた。`[@][lv 0*"50"*"65000092"]`気を取り直して再び戦う気力の全てを、もう費やしている。`[@][lv 0*"50"*"65000093"]`だから。`[@][lv 0*"50"*"65000095"]`……`[#][*]`{p:1:あのベアトリーチェが蘇ることは、二度とない}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+meplay 1,16,50
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"wsan_2c"
+color_mod2 s0_3,#ffffff
+lss s0_9,"be2","a15_1_arigatou" ;1
+color_mod2 s0_9,#ffffff
+flush 2
+msgwnd_non
+*d42733
+d `あの、第５のゲームで、ずっとずっと虚ろな瞳のままぼんやりとしていたベアトはまさに、`[@]`……彼女の骸だったのだ。`[\]
+textoff
+aspt2 breakup,s0_9,0
+aspt2 breakup,s0_9,1000,2000
+aspt2 alpha,s0_9,0,2000
+sptwait2 breakup,s0_9
+csp_slot s0_9
+flush 1 ;flush2: NO frames
+*d42734
+d `それでもゲーム盤に留まったが、`[@]`……消え去ってしまった…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+wait 2000
+lss s0_9,"be2","a15_1_hoshin1star" ;1
+flush 8
+*d42735
+d `もしあの時、ラムダデルタでなく、ベアトがゲームマスターだったなら、`[@]`その時にゲーム盤も消え去り、全ては終わるはずだった。`[\]
+*d42736
+d `思えば、第４のゲームの終盤頃から、ベアトは戦意を失い始めていた。`[\]
+*d42737
+d `ベアトが戦意を失えば、……このゲームの世界は、消える。`[\]
+*d42738
+d `しかし、このゲーム盤の世界を遊び続けたい魔女たちが、ラムダデルタがそれを許さず、`[@]`呪いの枷で彼女を縛った。`[\]
+seplay 1,57,71
+seplay 2,2,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lbg s0_17,"chain2r_sp"
+lss s0_9,"be2","a15_1_hoshin1star" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+seplay 1,57,71
+seplay 2,2,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lbg s0_18,"chain3r_sp"
+lss s0_9,"be2","a15_1_hoshin1star" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+seplay 1,57,71
+seplay 2,2,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lbg s0_19,"chain5r_sp"
+z_order_override2 s0_19,s0_6
+lss s0_9,"be2","a15_1_hoshin1star" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+seplay 1,57,71
+seplay 2,2,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lbg s0_20,"chain7r_sp"
+z_order_override2 s0_20,s0_6
+lss s0_9,"be2","a15_1_hoshin1star" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+*d42739
+d `たとえベアトが戦う意思を失っても、`[@]`ゲーム盤が消え去らないように、枷で固定したのだ。`[\]
+*d42740
+d `それはさながら、チェスで言うなら、`[@]`制限時間を撤廃して無限にしたようなもの。`[\]
+*d42741
+d `しかし、だからといって、無限にベアトの手番で止まってしまっていては、魔女たちは退屈の病で死んでしまう。`[\]
+*d42742
+d `だから、ラムダデルタがゲームマスターを引き継いだ。`[\]
+lss s0_9,"be2","a15_1_hoshin2star" ;1
+flush 80
+*d42743
+d `……その時、ベアトの存在が、このゲームの存在する前提条件で、なくなった。`[\]
+*d42744
+d `多分、それが理由で、彼女をゲーム盤に縛る枷が解けたのだろう。`[\]
+textoff
+aspt2 breakup,s0_9,0
+aspt2 breakup,s0_9,1000,2000
+aspt2 alpha,s0_9,0,2000
+sptwait2 breakup,s0_9
+csp_slot s0_9
+flush 1 ;flush2: NO frames
+*d42745
+d `だから、第５のゲームで彼女は消え去ってしまったのだ…。`[\]
+csp_slot s0_17
+csp_slot s0_18
+csp_slot s0_19
+csp_slot s0_20
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+bgmplay 138,71,0
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 2
+lss s0_10,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d42746
+d [lv 0*"11"*"62000126"]`「……お兄ちゃんは。`[@][lv 0*"11"*"62000127"]`ベアトに、真相に辿り着いたことを教えるには、`[|][lv 0*"11"*"62000128"]`…１つゲームが遅かったということね」`[\]
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d42747
+d [lv 0*"50"*"65000096"]`「第５のゲームなど、ラムダデルタの慈悲だ。`[@][lv 0*"50"*"65000097"]`……戦人の、絶対に真相に辿り着きたいという信念に、絶対の魔女が慈悲を示しただけのこと…」`[\]
+lss s0_10,"enj","a21_fuman2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42748
+d2 [lv 0*"11"*"62000129"]`「………何が慈悲よ。`[@][lv 0*"11"*"62000130"]`ただの魔女たちの暇潰しの気まぐれじゃない。`[@][#][*][lv 0*"11"*"62000131"]`……話を戻すわ。`[@][lv 0*"11"*"62000132"]`じゃあ、あのおかしなベアトは、プレイヤーのベアトじゃないってことになる。`[@][lv 0*"11"*"62000133"]`駒のベアトということだわ」`[\]
+wait_on_d 0
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d42749
+d [lv 0*"50"*"65000098"]`「そうだ。`[@][lv 0*"50"*"65000099"]`……だったら、誰もがよく知るベアトになるはず。`[@][lv 0*"50"*"65000100"]`……戦人も、そういうベアトを望んだはず…」`[\]
+lss s0_10,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42750
+d `「…………………。`[@][lv 0*"11"*"62000135"]`……ぬいぐるみじゃ、`[|][lv 0*"11"*"62000136"]`…嫌だったってこと？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d42751
+d `ぬいぐるみごっこは、`[@]`ぬいぐるみに、自分のもっとも望む人格を投影できる。`[\]
+*d42752
+d `……しかし、自分が演じるからこそ、一切のイレギュラーがない。`[\]
+*d42753
+d `望外の喜びを、一切望めないのだ。`[\]
+meplay 1,19,70
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 2
+*d42754
+d `人の世において、予定調和ほど退屈なものはない。`[\]
+*d42755
+d `だから、ぬいぐるみは世界で一番のお友達でありながらも、`[@]`……いつかは飽き、卒業する…。`[\]
+*d42756
+d `お兄ちゃんは、本当のベアトでないと嫌だったのだ。`[\]
+*d42757
+d `ベアトのふりをさせるぬいぐるみでは、耐えられなかったのだ…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_fea
+*d42758
+d [lv 0*"50"*"65000101"]`「………戦人の駒として生み出されたベアトは、`[@][lv 0*"50"*"65000102"]`戦人の望むとおりに動くだろう」`[\]
+lss s0_10,"enj","a21_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42759
+d2 [lv 0*"11"*"62000137"]`「駒なんだから当然だわ。`[@][lv 0*"11"*"62000138"]`プレイヤーの指す通りに動く。`[@][lv 0*"11"*"62000139"]`……そして、それ以外では、一切動かない。`[@][#][*][lv 0*"11"*"62000140"]`……お兄ちゃんが何を望んでるのかはわかるわ。`[@][lv 0*"11"*"62000141"]`じゃあ、このおかしなベアトは何者なの」`[\]
+wait_on_d 0
+lss s0_10,"enj","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d42760
+d [lv 0*"50"*"65000103"]`「……戦人は、ベアトを本当の意味で蘇らそうとしているのかもしれない。`[@][lv 0*"50"*"65000104"]`……人の子らの、諦めきれぬ夢、だ」`[\]
+lss s0_10,"enj","a13_fuman2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42761
+d [lv 0*"11"*"62000142"]`「あんたはさっき赤を使って、それはないと否定したわ」`[\]
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d42762
+d2 [lv 0*"50"*"65000105"]`「……“あのベアト”が蘇ることは、決して無い。`[@][lv 0*"50"*"65000106"]`しかし、もう一度“ベアト”を生み出すことは、不可能ではないということだ…。`[@][#][*][lv 0*"50"*"65000107"]`忘れたか？`[@][lv 0*"50"*"65000108"]`　第１のゲームの最後で、ベルンカステル自らがベアトの正体を語ったはず…」`[\]
+wait_on_d 0
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42763
+d2 [lv 0*"11"*"62000143"]`「……………………。`[@][lv 0*"11"*"62000144"]`……思い出したわ。`[@][#][*][lv 0*"11"*"62000145"]`…ルールが具現化した存在、みたいなことを言ってた」`[\]
+wait_on_d 0
+lss s0_10,"enj","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d42764
+d2 [lv 0*"50"*"65000109"]`「そのルールと情報が練り上げられ、`[@][lv 0*"50"*"65000110"]`最終的に、あのベアトリーチェという魔女が形作られたのだ。`[@][#][*][lv 0*"50"*"65000111"]`それを再びなぞれば、同じベアトリーチェをもう一度生み出し、`[@][lv 0*"50"*"65000112"]`それをもって復活と呼ぶことも出来よう…」`[\]
+wait_on_d 0
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 1,17,50
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+color_mod2 s0_3,#ffffff
+lss s0_9,"bea","a15_1_warai6" ;1
+color_mod2 s0_9,#ffffff
+flush 22
+msgwnd_enj
+*d42765
+d [lv 0*"11"*"62000146"]`「………つまり、あのおかしなベアトは、`[@][lv 0*"11"*"62000147"]`………さながら、ベアトの卵、…あるいは雛ってところね」`[\]
+msgwnd_fea
+*d42766
+d [lv 0*"50"*"65000113"]`「そう解釈するのが妥当であろう…。`[@][lv 0*"50"*"65000114"]`……即ち、このベアトこそが、あのベアトへ至る雛なのだ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+lss s0_9,"bea","a15_1_defo3" ;1
+color_mod2 s0_9,#ffffff
+flush 2
+msgwnd_enj
+*d42767
+d2 [lv 0*"11"*"62000148"]`「それはつまり。`[@][#][*][lv 0*"11"*"62000149"]`………この純情可憐な子が、やがてはあの、ひねくれてイカれた魔女に成長するってことね」`[\]
+wait_on_d 0
+lss s0_9,"bea","a31_akuwarai2" ;1
+color_mod2 s0_9,#ffffff
+flush 22
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+msgwnd_non
+*d42768
+d `つまりは、あのベアトは、私たちのよく知るベアトの、赤ん坊。`[\]
+*d42769
+d `生まれながらの悪党などいないように、`[@]`……生まれたばかりのベアトもまた、悪ではなかったわけだ。`[\]
+*d42770
+d `それは確かに別人だけれど、………本当に根底の、…魂の部分で、`[@]`……それは確かに、復活と言ってもいいかもしれない。`[\]
+*d42771
+d `……しかしそれはきっと、……受け入れるのは容易ではない現実。`[\]
+*d42772
+d `理屈上では、確かにベアト本人でも、`[@]`……それは紛れもなく、……別人なのだ。`[\]
+*d42773
+d `誰が見ても違和感を覚えてしまうような、あのような感じに……。`[\]
+textoff
+waits 167
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 6
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42774
+d [lv 0*"50"*"65000115"]`「退屈しない…。`[@][lv 0*"50"*"65000116"]`……そなたの朗読は楽しい」`[\]
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d42775
+d [lv 0*"11"*"62000150"]`「……あんたに朗読が必要なのか疑わしいわ。`[@][lv 0*"11"*"62000151"]`…あんたはもうすでに、全てを知っているように見える」`[\]
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42776
+d2 [lv 0*"50"*"65000117"]`「そなたと対話をしているから、その思考に至るだけだ。`[@][lv 0*"50"*"65000118"]`……我が思考は八百万を束ねて超える。`[@][lv 0*"50"*"65000119"]`人の子には、まるでそう見えるだけに過ぎぬ。`[@][#][*][lv 0*"50"*"65000120"]`……されど、そなたがいなければ、思考する力さえない、か弱き病人に過ぎぬ…」`[\]
+wait_on_d 0
+lss s0_10,"fea","b11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42777
+d [lv 0*"11"*"62000152"]`「最初からそう言えば、もっと素直に朗読を引き受けてやったのに」`[\]
+lss s0_10,"fea","b11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42778
+d [lv 0*"50"*"65000121"]`「……私の機嫌が良くなっただけのこと。`[@][lv 0*"50"*"65000122"]`…浮かれるな。`[@][lv 0*"50"*"65000123"]`私はお前の命など、しおり代わりに挟んだまま忘失する木の葉よりも軽んじているぞ…」`[\]
+lss s0_8,"enj","a13_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42779
+d [lv 0*"11"*"62000153"]`「続きを読んで下さい、お願いします、`[@][lv 0*"11"*"62000154"]`って解釈するわ。`[@][lv 0*"11"*"62000155"]`ＯＫ？」`[\]
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42780
+d [lv 0*"50"*"65000124"]`「ふっ……。`[@][lv 0*"50"*"65000125"]`退屈しない。`[@][lv 0*"50"*"65000126"]`…そなたは巫女として優秀だ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"fea_p1ap"
+flush 22
+msgwnd_non
+*d42781
+d `フェザリーヌは揺り椅子を軽く揺らしながら天を仰ぎ、`[@]`そのやり取りさえ小気味良いと笑った。`[\]
+*d42782
+d `縁寿も次第に、このおかしな魔女の扱い方がわかってくる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42783
+d `……彼女もまた、退屈なのだ。`[\]
+*d42784
+d `病床の長い病人は、退屈が過ぎれば時にひねくれもする。`[@]`{n}その一方で、やさしくされることにも少し飽きている。`[\]
+*d42785
+d `自分を目上だと多少は敬ってもほしいが、`[@]`少しぞんざいな口調で扱われる方が、多分、面白いのだ。`[\]
+*d42786
+d `……なぁんだ。`[@]`つまりかつての私と、同じじゃないか。`[\]
+textoff
+waits 167
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 22
+bgmplay 139,71,0
+lss s0_10,"enj","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d42787
+d [lv 0*"11"*"62000156"]`「とにかく。`[@][lv 0*"11"*"62000157"]`……第４のゲームでベアトとお兄ちゃんに何か確執があったことは間違いないの。`[@][lv 0*"11"*"62000158"]`このベアトを知ることは、真相に至る鍵の一つになり得るわ」`[\]
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_fea
+*d42788
+d2 [lv 0*"50"*"65000127"]`「そうであろう。`[@][#][*][lv 0*"50"*"65000128"]`……私も興味を持った。`[@][lv 0*"50"*"65000129"]`…彼女の物語も、併せて読むのだ」`[\]
+wait_on_d 0
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"enj","a11_nayamu2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42789
+d [lv 0*"11"*"62000159"]`「はいはい、仰せのままに。我が主」`[\]
+msgwnd_non
+*d42790
+d `縁寿が指揮者のように両手を振り上げると、不思議な書斎の本棚たちが応える。`[\]
+*d42791
+d `……再び、何冊もの本がふわりと飛び出し、縁寿を中心に渦を作った……。`[\]
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 8
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"mlib_1bp"
+color_mod2 s0_3,#ffffff
+flush 42
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"mlib_1bp"
+flush 42
+*d42792
+d `金蔵の書斎は、ニンゲンの世界での、主の部屋。`[\]
+*d42793
+d `ならばこの、人ならざる世界の書斎は、`[@]`……ニンゲンを俯瞰する、このゲーム盤の主の部屋なのだ。`[\]
+*d42794
+d `だから、書斎の中央に仁王立ちするローブの男は、`[@]`一瞬、金蔵と見紛うかもしれない。`[\]
+bgmplay 97,71,0
+*d42795
+d `違う。`[\]
+*d42796
+d `……それは、ゲームマスターを継承し、`[@]`新たにこの世界の領主となった、戦人だった。`[\]
+textoff
+waits 167
+lss s0_9,"but","d11_nayamu4" ;1
+flush 2
+msgwnd_but
+*d42797
+d [lv 0*"10"*"60100031"]`「……………………………」`[\]
+msgwnd_non
+*d42798
+d `戦人の周囲に、光のカケラが、まるで天体のように渦巻き、`[@]`……床には赤い魔法陣のようなものが浮き上がっている。`[\]
+*d42799
+d `それは傍目には理解の出来ない幾何学模様に過ぎない。`[\]
+*d42800
+d `しかし、その中心に立つ戦人にとっては、`[@]`新しき物語の筋書きそのものなのだ…。`[\]
+lss s0_9,"but","d11_majime5" ;1
+flush 80
+*d42801
+d `戦人の目線を追うように、魔法陣の新しい線が伸びていく。`[\]
+*d42802
+d `そして、複雑な形をした記号にそれが連結した瞬間、魔法陣全体は、力強く瞬いた。`[\]
+textoff
+waits 167
+seplay 1,22,100
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"white"
+flush 2
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+seplay 2,22,100
+seplay 3,55,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+textoff
+textoff
+waits 167
+lbg s0_3,"mlib_1cp"
+spriteset_enable 1
+lbg s1_1,"white"
+lbg s1_3,"white"
+aspritesetpt breakup,1,0
+flush 1
+seplay 1,52,71
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+bgmplay 10,71,0
+lss s0_9,"but","d11_futeki2" ;1
+flush 80
+msgwnd_but
+*d42803
+d [lv 0*"10"*"60100032"]`「……これで、`[|][lv 0*"10"*"60100033"]`……どうだ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mlib_1ap"
+lss s0_8,"gen","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_gen
+*d42804
+d [lv 0*"14"*"61600001"]`「見事です、お館様。`[@][lv 0*"14"*"61600002"]`……第６のゲームの、完成でございます」`[\]
+msgwnd_non
+*d42805
+d `額の汗を拭い、ようやく緊張を弛緩させる戦人に、`[@]`後ろでそれをじっと見守っていた源次は、深く頷いて答えた。`[\]
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d42806
+d2 [lv 0*"10"*"60100034"]`「……俺は、ゲームマスターってのは、もっと好き勝手に物語を作っているものとばかり思っていたが。`[@][#][*][lv 0*"10"*"60100035"]`……想像以上に骨が折れるな、これは」`[\]
+wait_on_d 0
+lss s0_10,"but","d11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"gen","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_gen
+*d42807
+d2 [lv 0*"14"*"61600003"]`「複数の物語を描き、その表裏を合わせねばなりません。`[@][#][*][lv 0*"14"*"61600004"]`……それにしても、初めてとは思えない、見事なお手並みでした。`[@][lv 0*"14"*"61600005"]`……ヱリカさまも、きっとこのゲームならご満足いただけるでしょう」`[\]
+wait_on_d 0
+lss s0_8,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42808
+d2 [lv 0*"10"*"60100036"]`「あの探偵殿の好みに合うといいんだがな。`[@][#][*][lv 0*"10"*"60100037"]`……しかし、…ベアトを純粋に尊敬するぜ。`[@][lv 0*"10"*"60100038"]`…よくあんなややこしい物語をあっさりと作ってみせたもんだ」`[\]
+wait_on_d 0
+lss s0_10,"but","d11_nayamu5" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_gen
+*d42809
+d [lv 0*"14"*"61600006"]`「……あっさりとではありません。`[@][lv 0*"14"*"61600007"]`……ベアトリーチェさまも、深く深く悩み、物語を生み出しては、矛盾に悩み、`[@][lv 0*"14"*"61600008"]`常にロジックエラーと戦われておりました」`[\]
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42810
+d [lv 0*"10"*"60100039"]`「ロジックエラー？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 1,5,50
+textoff
+waits 167
+lbg s0_3,"chess1"
+flush 22
+msgwnd_gen
+*d42811
+d [lv 0*"14"*"61600009"]`「物語の表裏が合わぬこと、矛盾することでございます。`[@][lv 0*"14"*"61600010"]`……これが生じると、ロジックエラーと呼ばれる致命的な反則手となり、即座にゲーム盤は破綻、崩壊いたします。`[@][lv 0*"14"*"61600011"]`魔女側が犯せぬ、最大最悪のミスです」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+msgwnd_but
+*d42812
+d [lv 0*"10"*"60100040"]`「ベアトのゲームも。`[@][lv 0*"10"*"60100041"]`何度かそれに抵触しそうになったのか…？」`[\]
+textoff
+waits 167
+lbg s0_3,"mlib_1cp"
+lss s0_10,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_gen
+*d42813
+d [lv 0*"14"*"61600012"]`「……ゲームを生み出す際には、常にそれと戦われておりました。`[@][lv 0*"14"*"61600013"]`…特に、戦人さまが手強くなられてからは、相当の苦労をなさっていたようです」`[\]
+lss s0_8,"but","d11_futeki4" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d42814
+d [lv 0*"10"*"60100042"]`「…………今回の俺のこのゲームは。`[@][lv 0*"10"*"60100043"]`……ベアトに見せても、`[|][lv 0*"10"*"60100044"]`…恥ずかしくない出来、かな」`[\]
+lss s0_10,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_gen
+*d42815
+d [lv 0*"14"*"61600014"]`「……はい。`[@][lv 0*"14"*"61600015"]`……それはもちろんでございます」`[\]
+lss s0_8,"but","d11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d42816
+d [lv 0*"10"*"60100045"]`「……………。`[@][lv 0*"10"*"60100046"]`……ベアトは、`[@][lv 0*"10"*"60100047"]`まだ目を覚まさないのか」`[\]
+lss s0_10,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_gen
+*d42817
+d `「………………………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mlib_1bp"
+flush 2
+bgmplay 38,71,0
+lss s0_9,"but","d11_majime5" ;1
+flush 4
+msgwnd_but
+*d42818
+d [lv 0*"10"*"60100048"]`「ルールの擬人化から体を組成して、もうだいぶになるはずだ。`[@][lv 0*"10"*"60100049"]`まだ目覚めないのか…」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"mlib_1cp"
+lss s0_10,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_non
+*d42819
+d `源次はしばらくの間、沈黙を守った後、答えた。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+lss s0_10,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_gen
+*d42820
+d2 [lv 0*"14"*"61600017"]`「……三日ほど前に、お目覚めになっております。`[@][#][*][lv 0*"14"*"61600018"]`戦人さまが第６のゲームの設計に集中されておりましたので、お知らせを控えておりました…。`[@][lv 0*"14"*"61600019"]`申し訳ございません…」`[\]
+wait_on_d 0
+bgmplay 64,71,0
+d_continue
+wait_on_d -1
+lss s0_8,"but","d11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d42821
+d2 [lv 0*"10"*"60100050"]`「そうだったかっ。`[@][lv 0*"10"*"60100051"]`あいつめ、だいぶ長いこと寝てたから寝ぼけてやがったに違いない。`[@][#][*][lv 0*"10"*"60100052"]`あいつにぜひ、俺のゲームを見てもらいたかったんだ！`[@][lv 0*"10"*"60100053"]`　いや、あいつに俺はゲームを見せなきゃならないんだ。`[@][lv 0*"10"*"60100054"]`俺が全てを理解したことを、あいつに教えなきゃならない」`[\]
+wait_on_d 0
+lss s0_8,"but","d11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d42822
+d `戦人は表情をほころばせて喜ぶ。`[\]
+*d42823
+d `その表情には、かつてベアトを家族の仇と憎んでいた頃の陰りは見られない…。`[\]
+seplay 1,56,71
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+flush 10,367
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 28
+lips_sprite s0_8_b
+lips_sprite s0_10_b
+meplay 1,16,50
+vol_bgm -1,1000
+wait 1000
+lss s0_23,"enj","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 24
+msgwnd_enj
+*d42824
+d [lv 0*"11"*"62000160"]`「……ある意味。`[@][lv 0*"11"*"62000161"]`…これが第５のゲーム、最後の謎だったわ」`[\]
+lss s0_25,"fea","b12_defo3" ;1
+aspt2 xpos,s0_25,-370
+flush 23
+msgwnd_fea
+*d42825
+d [lv 0*"50"*"65000130"]`「そうだ。`[@][lv 0*"50"*"65000131"]`……戦人は真相に至ると同時に、ベアトに対する心証が大きく変わった」`[\]
+lss s0_23,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_enj
+*d42826
+d [lv 0*"11"*"62000162"]`「それはつまり、やはりお兄ちゃんとベアトには何かの関係があって、`[@][lv 0*"11"*"62000163"]`それを彼が忘失していたと考えるのが適当なの…？」`[\]
+csp_slot s0_21
+csp_slot s0_22
+csp_slot s0_25
+csp_slot s0_23
+lips_sprite s0_8_b,"but"
+lips_sprite s0_10_b,"gen"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+bgmplay 39,71,0
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+rain_pause s0_11
+rain_pause s0_7
+textoff
+waits 167
+lbg s0_3,"m_o1an"
+color_mod2 s0_3,#ffffff
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_25
+color_mod2 s0_10,#ffffff
+lss s0_8,"but","b11_majime4" ;1
+aspt2 xpos,s0_8,-370
+z_order_override2 s0_8,s0_23
+color_mod2 s0_8,#ffffff
+flush 2
+msgwnd_non
+*d42827
+d `しかし、第４のゲームでそれを疑った戦人はそれをベアトに問い掛けている。`[\]
+*d42828
+d `それに対し、赤き真実で、`[@]`“戦人の６年前に、ベアトリーチェという人物は存在しない”`[@]`と物語では語られている…。`[\]
+csp_slot s0_11
+csp_slot s0_7
+csp_slot s0_21
+csp_slot s0_22
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 6
+lss s0_10,"fea","b11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_fea
+*d42829
+d [lv 0*"50"*"65000132"]`「……６年前にベアトが存在しなかったとも受け取れるし、`[@][lv 0*"50"*"65000133"]`６年前には戦人と縁がなかったとも受け取れる。`[@][lv 0*"50"*"65000134"]`しかし、いずれにせよ、戦人はその後、６年間。六軒島には訪れない…」`[\]
+lss s0_8,"enj","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d42830
+d2 [lv 0*"11"*"62000164"]`「ベアトリーチェとお兄ちゃんは、この１９８６年１０月４日が初対面のはず。`[@][#][*][lv 0*"11"*"62000165"]`……なのに、どうしてすでに確執があるの？`[@][lv 0*"11"*"62000166"]`　さっぱり意味がわからないわ」`[\]
+wait_on_d 0
+lss s0_8,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42831
+d [lv 0*"50"*"65000135"]`「……第４のゲームでベアトが戦人に問い掛けた、`[@][lv 0*"50"*"65000136"]`右代宮戦人の罪、に何かの鍵があろうな。`[@][lv 0*"50"*"65000137"]`…その結果が、ベアトリーチェという存在なのかもしれない」`[\]
+lss s0_8,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42832
+d [lv 0*"11"*"62000167"]`「その結果？`[@][lv 0*"11"*"62000168"]`　お兄ちゃんの罪の結果が、ベアト…？」`[\]
+msgwnd_non
+*d42833
+d `それはまるで、`[@]`お兄ちゃん自らがベアトリーチェという魔女を生み出したようにさえ聞こえる…。`[\]
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d42834
+d [lv 0*"50"*"65000138"]`「まるで。`[@][lv 0*"50"*"65000139"]`……ベアトリーチェとは、戦人の駒のようだな」`[\]
+lss s0_8,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d42835
+d [lv 0*"11"*"62000169"]`「……え…？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+meplay 1,17,50
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 2
+msgwnd_fea
+*d42836
+d [lv 0*"50"*"65000140"]`「６年前の戦人の罪。`[@][lv 0*"50"*"65000141"]`その罪で、人が死ぬ。`[@][lv 0*"50"*"65000142"]`殺すのは、ベアトリーチェ。`[@][lv 0*"50"*"65000143"]`……全てが６年前の戦人の罪から連綿と続くと考えるなら、`[@][lv 0*"50"*"65000144"]`…ベアトリーチェを生み出したのは戦人自身。`[@][lv 0*"50"*"65000145"]`まるで、戦人の駒のようだと思った…」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+flush 22
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d42837
+d [lv 0*"11"*"62000170"]`「意味わかんないわ。`[@][lv 0*"11"*"62000171"]`お兄ちゃんが何かの罪を犯したとしても、少なくとも殺人なんかよりよっぽど軽い何かだわ。`[@][lv 0*"11"*"62000172"]`それに対する仕返しがこの大量殺人なのだとしたら、`[@][lv 0*"11"*"62000173"]`あまりにお兄ちゃんの罪と割が合わない」`[\]
+lss s0_10,"enj","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+*d42838
+d [lv 0*"11"*"62000174"]`「ベアトは親族たちを皆殺しにした。`[@][lv 0*"11"*"62000175"]`お父さんもお母さんもお兄ちゃんも、みんなみんな。`[@][lv 0*"11"*"62000176"]`……それに見合う罪がお兄ちゃんにあったなんて、信じられるわけがないっ」`[\]
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_fea
+*d42839
+d [lv 0*"50"*"65000146"]`「罪は量る人間によって重さが異なる。`[@][lv 0*"50"*"65000147"]`戦人にとって忘失できる程度の罪でも、`[@][lv 0*"50"*"65000148"]`ベアトにとっては、６年を経てなお、一族を皆殺しにするほどの恨みを持つに値するものだったのかもしれぬ」`[\]
+*d42840
+d [lv 0*"50"*"65000149"]`「……まぁ、私もそれは、あまりに釣り合わぬと思うし、そして何より、そんな相手だったら、`[@][lv 0*"50"*"65000150"]`真相を知ったとはいえ、戦人があれだけ親身になるとは到底思えぬ…」`[\]
+lss s0_10,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42841
+d [lv 0*"11"*"62000177"]`「…………………………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+meplay 1,19,100
+textoff
+waits 167
+lbg s0_3,"mlib_1cp"
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"but","d11_warai1" ;1
+aspt2 xpos,s0_8,-370
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 24
+lips_sprite s0_8_b
+lips_sprite s0_10_b
+msgwnd_non
+*d42842
+d `フェザリーヌの推測は興味深い。`[\]
+*d42843
+d `ベアトが過去のゲームではっきりと、`[@]`この２日間の惨劇の原因が、お兄ちゃんの６年前の罪にあると宣言している。`[\]
+*d42844
+d `それがどんな罪だったかは、未だわからない。`[\]
+*d42845
+d `しかしそれを、彼は第５のゲームの最後で気付き、`[@]`……ベアトに対し、謝罪の言葉さえ口にした。`[\]
+*d42846
+d `６年前の罪への仕返しに、一族を皆殺しにするような魔女に、`[@]`……戦人は謝罪したのだ。`[\]
+*d42847
+d `……確かに、謝罪したのは、プレイヤーの戦人であって、`[@]`家族を何度も殺されている駒の戦人ではない。`[\]
+*d42848
+d `しかしそれでも、……戦人は、謝罪するに値する何かを、`[@]`前回のゲームの最後に思い出したのだ…。`[\]
+textoff
+waits 167
+vol_me 1,-1,1000
+wait 1000
+lss s0_23,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 24
+msgwnd_enj
+*d42849
+d [lv 0*"11"*"62000178"]`「……その６年前の罪。`[@][lv 0*"11"*"62000179"]`……これまでの物語のどこかに、それが隠されていたとでも言うのかしら…」`[\]
+lss s0_25,"fea","b11_defo2" ;1
+aspt2 xpos,s0_25,-370
+flush 23
+msgwnd_fea
+*d42850
+d [lv 0*"50"*"65000151"]`「…私はすでにある仮説を立てている」`[\]
+lss s0_23,"enj","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_enj
+*d42851
+d [lv 0*"11"*"62000180"]`「へぇ？`[@][lv 0*"11"*"62000181"]`　聞かせてよ」`[\]
+lss s0_25,"fea","b11_warai2" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+msgwnd_fea
+*d42852
+d [lv 0*"50"*"65000152"]`「ふっふふふふふ、まだ話せぬ。`[@][lv 0*"50"*"65000153"]`もうしばらく、私だけ答えを知っているかのような愉悦を楽しむことにする…」`[\]
+lss s0_23,"enj","a11_majime1" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_enj
+*d42853
+d [lv 0*"11"*"62000182"]`「……続き読まないわよ」`[\]
+lss s0_25,"fea","b11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+msgwnd_fea
+*d42854
+d [lv 0*"50"*"65000154"]`「はっはは…、それは困る。`[@][lv 0*"50"*"65000155"]`……しばし堪え、もう少し続きを読め。`[@][lv 0*"50"*"65000156"]`私の仮説もまだ想像の域を出ぬ。`[@][lv 0*"50"*"65000157"]`……確信を持てたら、その時、話すこととしよう」`[\]
+lss s0_23,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_enj
+*d42855
+d [lv 0*"11"*"62000183"]`「はいはい、我が主。`[@][lv 0*"11"*"62000184"]`私だって続きを知りたいわ」`[\]
+textoff
+waits 167
+seplay 1,56,71
+csp_slot s0_21
+csp_slot s0_22
+csp_slot s0_25
+csp_slot s0_23
+lips_sprite s0_8_b,"but"
+lips_sprite s0_10_b,"gen"
+flush 8
+msgwnd_non
+*d42856
+d `お兄ちゃんとベアトリーチェに、`[@]`……一体、何の、どんな関係があるというのか。`[\]
+*d42857
+d `……多分、それを知ることが、この世界の真相に至る、一番大きな鍵になる。`[\]
+*d42858
+d `だって彼は、それを思い出すことによって、`[@]`この世界の真相に、至ったのだから。`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 42
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+wait 3000
+bgmplay 35,71,0
+seplay 3,22,71
+textoff
+waits 167
+lbg s0_3,"se_o1ap"
+flush 8
+msgwnd_but
+*d42859
+d [lv 0*"10"*"60100055"]`「ベアトリーチェ…！！」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"white"
+flush 22
+seplay 1,17,71
+textoff
+waits 167
+lbg s0_3,"sehal_1bp"
+flush 10
+lss s0_8,"kum","a12_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_kum
+*d42860
+d [lv 0*"18"*"61800001"]`「お館様、ようこそお越しを…。`[@][lv 0*"18"*"61800002"]`ベアトリーチェさまがお待ちでございます。`[@][lv 0*"18"*"61800003"]`どうぞこちらへ……」`[\]
+msgwnd_non
+*d42861
+d `ここは、ベアトリーチェのための別荘。`[\]
+*d42862
+d `ベアトが外界に触れることなく、過ごせるように作られた、彼女だけの聖域。`[\]
+*d42863
+d `胸が高鳴る。`[@]`……無事に蘇ってよかった、本当によかった…。`[\]
+*d42864
+d `ベアトはルールの擬人化だ。`[\]
+*d42865
+d `だからこそ、一度滅んだが、もう一度生み出すことが可能なのだ…。`[\]
+*d42866
+d `戦人は、ベアトの体を蘇らすことには早々に成功していたが、その魂がなかなか呼び戻せずにいた。`[\]
+*d42867
+d `しかし、彼が第６のゲームの設計に没頭している間に、目覚めていたのだ。`[@]`それは３日も前のことだった。`[\]
+textoff
+waits 167
+csp_slot s0_8
+flush 4
+*d42868
+d `戦人は案内され、食堂へ向かう。`[\]
+*d42869
+d `その食堂は、ベアトと自分のために用意させたもの。`[\]
+*d42870
+d `……全ての真相に至ったからこその語らいを、紅茶をたしなみながらするための、食堂だった。`[\]
+*d42871
+d `伝えたい。`[\]
+*d42872
+d `自分が真相に至ったことを、ベアトに伝えたい。`[\]
+*d42873
+d `そして、そのための食堂でベアトが自分を待っていてくれる奇跡に、戦人は胸の高鳴りを抑えられずにいた…。`[\]
+lss s0_10,"but","d11_futeki5" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d42874
+d [lv 0*"10"*"60100056"]`「ベアトリーチェはどうなんだ。`[@][lv 0*"10"*"60100057"]`変わりないか。`[@][lv 0*"10"*"60100058"]`元気そうか」`[\]
+lss s0_8,"kum","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_kum
+*d42875
+d2 [lv 0*"18"*"61800004"]`「えぇえぇ、それはもうお元気でいらっしゃいます。`[@][#][*][lv 0*"18"*"61800005"]`お館様がお出でになるのを、ずっとお待ちでいらっしゃいましたとも。えぇえぇ」`[\]
+wait_on_d 0
+lss s0_8,"kum","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"but","d11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42876
+d [lv 0*"10"*"60100059"]`「食堂にいるのか。メシでも食ってるのか。`[@][lv 0*"10"*"60100060"]`あぁ、いいさ、何でも構わない…！」`[\]
+lss s0_8,"kum","a12_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kum
+*d42877
+d [lv 0*"18"*"61800006"]`「ほっほっほ、驚きますよ…」`[\]
+csp_slot s0_10
+flush 24
+msgwnd_but
+*d42878
+d [lv 0*"10"*"60100061"]`「ベアトリーチェ…！！」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 1,16,71
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"white"
+flush 30
+textoff
+waits 167
+lbg s0_3,"se1f_s1ap"
+flush 22
+bgmplay 111,90,0
+msgwnd_non
+*d42879
+d `食堂の扉を勢いよく開けると、`[@]`……そこには、戦人を祝福するかのような光景が広がっていた。`[\]
+*d42880
+d `大きなテーブルの上には、`[@]`ささやかではあるけれど、美しく彩られた料理の皿と、シャンパンの瓶が並べられている。`[\]
+textoff
+waits 167
+lss s0_10,"bea","a15_1_hajirai2" ;1
+aspt2 xpos,s0_10,370
+flush 6
+*d42881
+d `……そして、……美しい金髪と懐かしきドレスの姿の彼女が、深々と頭を下げてお辞儀をして迎えてくれた。`[\]
+lss s0_8,"but","d11_niramu3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d42882
+d [lv 0*"10"*"60100062"]`「……ベ、……ベアトリーチェ…」`[\]
+lss s0_10,"bea","a15_1_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d42883
+d2 [lv 0*"27"*"60700017"]`「私に姿を与えて下さり、……誠にありがとうございます」`[#][*][\]
+wait_on_d 0
+gstc 35
+seplay 9,1060,100
+d_continue
+wait_on_d -1
+csp_slot s0_8
+lss s0_9,"but","d11_naku2" ;1
+flush 23
+msgwnd_but
+*d42884
+d [lv 0*"10"*"60100063"]`「は、…はははは…。`[@][lv 0*"10"*"60100064"]`いいんだ、そんなのは……。`[@][lv 0*"10"*"60100065"]`…良かった…。`[@][lv 0*"10"*"60100066"]`ベアト………」`[\]
+msgwnd_non
+*d42885
+d `戦人は駆け寄って、ベアトを強く抱き締める。`[\]
+*d42886
+d `その姿が霞でも幻でもないことを、力強く確かめるために…。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 5
+textoff
+waits 167
+lbg s0_3,"se1f_s1cp"
+flush 22
+msgwnd_but
+*d42887
+d [lv 0*"10"*"60100067"]`「……俺は、`[|][lv 0*"10"*"60100068"]`……お前の謎を、`[|][lv 0*"10"*"60100069"]`……ちゃんと解いたぞ……。`[@][lv 0*"10"*"60100070"]`なのに、`[|][lv 0*"10"*"60100071"]`それを伝える前に、`[|][lv 0*"10"*"60100072"]`消えちまいやがって……」`[\]
+meplay 1,16,50
+msgwnd_bea
+*d42888
+d [lv 0*"27"*"60700018"]`「……私はここにいます…。`[@][lv 0*"27"*"60700019"]`消えたりなんかしません…」`[\]
+msgwnd_but
+*d42889
+d [lv 0*"10"*"60100073"]`「やめろよ、そんな喋り方。`[@][lv 0*"10"*"60100074"]`恩を着せるつもりなんか全然ない。`[@][lv 0*"10"*"60100075"]`……とにかく、お前に謝りたい。`[@][lv 0*"10"*"60100076"]`そして語らいたい。`[@][lv 0*"10"*"60100077"]`……何から先に口にすればいいかさえわからない」`[\]
+msgwnd_bea
+*d42890
+d [lv 0*"27"*"60700020"]`「私がお父様に謝られることなど、何もありません。`[@][lv 0*"27"*"60700021"]`…私はただ、お父様のお役に立てればそれで幸せなのです」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_bgm -1,1000
+wait 1000
+msgwnd_but
+*d42891
+d [lv 0*"10"*"60100078"]`「………ベアト……？」`[\]
+textoff
+waits 167
+lbg s0_3,"se1f_s1ap"
+flush 26
+lss s0_10,"bea","a15_1_warai7" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d42892
+d [lv 0*"27"*"60700022"]`「ベアトリーチェはお父様のために生まれてきました。`[@][lv 0*"27"*"60700023"]`どうか、あなたの力にならせて下さい。`[@][lv 0*"27"*"60700024"]`そしてお父様。`[@][lv 0*"27"*"60700025"]`第６のゲームの完成、誠におめでとうございます」`[\]
+lss s0_8,"but","d11_niramu3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d42893
+d [lv 0*"10"*"60100079"]`「だからそんな喋り方やめろって。`[@][lv 0*"10"*"60100080"]`胡散臭くてたまらねぇぜ」`[\]
+lss s0_10,"bea","a15_1_nayamu3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42894
+d [lv 0*"27"*"60700026"]`「……この喋り方ではお気に召しませんか？`[@][lv 0*"27"*"60700027"]`　不調法をどうかお許し下さい…」`[\]
+lss s0_8,"but","d11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d42895
+d [lv 0*"10"*"60100081"]`「お気に召しませんかってことはねぇが、らしくねぇぜ。`[@][lv 0*"10"*"60100082"]`やっぱお前は、いつもの口調がぴったりだ」`[\]
+lss s0_10,"bea","a15_1_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42896
+d [lv 0*"27"*"60700028"]`「…………………」`[\]
+msgwnd_non
+*d42897
+d `ベアトは曖昧に笑う。`[\]
+*d42898
+d `戦人にそれは、似合わない口調を互いに笑い合えたように見えたかもしれない。`[\]
+*d42899
+d `……しかしベアトは本当の意味で、曖昧に笑ったのだ。`[\]
+*d42900
+d `だって、どう“喋ればいいのか”、わからなかったから…。`[\]
+lss s0_8,"but","d11_aseru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d42901
+d [lv 0*"10"*"60100083"]`「それよりベアト。`[@][lv 0*"10"*"60100084"]`一体、これは何の冗談だってんだ？`[@][lv 0*"10"*"60100085"]`　まさか、大ベアトリーチェさま自らが、手料理を作ったってのか…？」`[\]
+lss s0_10,"bea","a15_1_warai8" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42902
+d [lv 0*"27"*"60700029"]`「第６のゲームが完成されましたと聞き、`[@][lv 0*"27"*"60700030"]`ささやかですが、労いの席が設けられないかと思いまして……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"se1f_s1ap"
+lss s0_8,"kum","a12_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_kum
+*d42903
+d [lv 0*"18"*"61800007"]`「…ほっほっほ。`[@][lv 0*"18"*"61800008"]`ベアトリーチェさまが、それはもう、大層頑張られてお作りになられたんですよ。`[@][lv 0*"18"*"61800009"]`私は一切手伝っておりませんとも、えぇえぇ」`[\]
+meplay 2,11,80
+msgwnd_non
+*d42904
+d `テーブルの上に並ぶ料理は、確かにささやかで、やや不器用なものだった。`[\]
+*d42905
+d `料理を得意としないベアトが、精一杯がんばって作った苦労が見て取れる…。`[\]
+*d42906
+d `しかしもう、戦人の顔には違和感と焦燥感が浮かび始めている……。`[\]
+lss s0_10,"but","d11_odoroki3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d42907
+d [lv 0*"10"*"60100086"]`「……これは、`[|][lv 0*"10"*"60100087"]`………どういうことだ…」`[\]
+meplay 3,17,50
+lss s0_8,"kum","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kum
+*d42908
+d [lv 0*"18"*"61800010"]`「えぇえぇ、ですから、ベアトリーチェさまがお館様を労おうと……」`[\]
+msgwnd_non
+*d42909
+d `熊沢の額にも、うっすらと汗が浮き始めている…。`[\]
+*d42910
+d `……彼女とて、…違和感を持っているのだ。`[\]
+*d42911
+d `それを見て取り、戦人はそれが自分だけの勘違いではないことを理解する。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"se1f_s1ap"
+lss s0_9,"bea","a15_1_warai7" ;1
+flush 24
+*d42912
+d `ベアトは戦人に背を向けながら、シャンパンの瓶にコルク抜きを刺す。`[\]
+*d42913
+d `そしてそれを戦人に見せる。`[\]
+lss s0_9,"bea","a15_1_warai5" ;1
+flush 80
+msgwnd_bea
+*d42914
+d [lv 0*"27"*"60700031"]`「お父様、第６のゲームの完成、誠におめでとうございます。`[@][lv 0*"27"*"60700032"]`必ずや宿敵、古戸ヱリカに勝利することを祈願して、これを捧げます」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d42915
+d `ポン。`[\]
+*d42916
+d `シャンパンの瓶があって、そう音がしたなら、誰だってコルクが抜けた音だと思う。`[\]
+*d42917
+d `しかし、抜けたのはコルクではなく、……瓶の底だった。`[\]
+meplay 1,28,70
+*d42918
+d `ベアトが用意した上等なシャンパンは、バシャリと落ちて、床と彼女のドレスを汚す。`[\]
+seplay 1,1006,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+show_glass 1300
+seplay 2,1006,85
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+show_glass 1300
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+show_glass 1300
+*d42919
+d `そして同じ音が数度、繰り返す。`[\]
+*d42920
+d `……その度に、テーブルの上の料理の皿が弾けて飛んだ。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+bgmplay 66,71,0
+textoff
+waits 167
+lbg s0_3,"se1f_s1ap"
+lss s0_10,"bea","a15_1_odoroki4" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"bea","a15_1_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42921
+d [lv 0*"27"*"60700033"]`「お、`[|][lv 0*"27"*"60700034"]`……お父様、`[|][lv 0*"27"*"60700035"]`……お気に召しませんでしたか…？」`[\]
+lss s0_8,"but","d11_odoroki3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d42922
+d [lv 0*"10"*"60100088"]`「お前は、……誰だ…」`[\]
+lss s0_10,"bea","a15_1_odoroki5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42923
+d [lv 0*"27"*"60700036"]`「…わ、……私はベアトリーチェでございます。`[@][lv 0*"27"*"60700037"]`…お父様のために生まれてまいりました…」`[\]
+lss s0_8,"but","d11_aseru2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d42924
+d [lv 0*"10"*"60100089"]`「違う…」`[\]
+lss s0_10,"bea","a15_1_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d42925
+d [lv 0*"27"*"60700038"]`「ぇ………」`[\]
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+lips_sprite s0_8_b
+lips_sprite s0_10_b
+lss s0_24,"but","d11_aseru3" ;1
+seplay 1,1006,100
+seplay 2,57,100
+show_glass 0
+msgwnd_but
+*d42926
+d2 [lv 0*"10"*"60100090"]`「こいつは誰だっ。`[@][lv 0*"10"*"60100091"]`ベアトじゃない…！！`[@][lv 0*"10"*"60100092"]`　そして俺を、お父様なんて呼ぶなッ…！！`[@][#][*][lv 0*"10"*"60100093"]`　これはどういうことだ？！`[@][lv 0*"10"*"60100094"]`　何なんだこれは？！`[@][lv 0*"10"*"60100095"]`　ベアトを蘇らせたんじゃなかったのか？！`[@][lv 0*"10"*"60100096"]`　源次ッ、これはどういうことだ！！」`[\]
+wait_on_d 0
+lss s0_24,"but","d11_kuyasigaru1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_24
+lss s0_25,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_25,-370
+lss s0_23,"but","d11_kuyasigaru1" ;1
+aspt2 xpos,s0_23,370
+flush 23
+msgwnd_gen
+*d42927
+d [lv 0*"14"*"61600020"]`「……畏れながら。`[@][lv 0*"14"*"61600021"]`紛れもなくそのお方はベアトリーチェさまでございます」`[\]
+lss s0_23,"but","d11_aseru3" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_but
+*d42928
+d2 [lv 0*"10"*"60100097"]`「そんなはずあるかッ！`[#][*][@][lv 0*"10"*"60100098"]`　これのどこがベアトなんだ？！`[@][lv 0*"10"*"60100099"]`　全然違う、偽者だ！！」`[\]
+wait_on_d 0
+seplay 1,11,71
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_25,"gen","a11_majime1" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+msgwnd_gen
+*d42929
+d [lv 0*"14"*"61600022"]`「いいえ、ベアトリーチェさまでございます。`[@][lv 0*"14"*"61600023"]`ゲーム盤のルールに従い、生み出された、紛れもなくベアトリーチェさまご自身でございます」`[\]
+lss s0_23,"but","d11_kuyasigaru1" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_but
+*d42930
+d [lv 0*"10"*"60100100"]`「いいや、こんなのはベアトじゃない…！！`[@][lv 0*"10"*"60100101"]`　ベアトってのはもっと、おかしな喋り方をして、品の無い笑いをして、それからそれから…ッ！！」`[\]
+lss s0_25,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+msgwnd_gen
+*d42931
+d [lv 0*"14"*"61600024"]`「いいえ、間違いなくベアトリーチェさまご自身でございます」`[\]
+csp_slot s0_25
+csp_slot s0_23
+seplay 1,11,71
+lss s0_24,"but","d11_sakebu1a" ;1
+flush 1
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+msgwnd_but
+*d42932
+d [lv 0*"10"*"60100102"]`「じゃあ、どうしてこんな喋り方をする？`[@][lv 0*"10"*"60100103"]`　どうして俺をお父様なんて呼ぶんだ？！」`[\]
+lss s0_23,"kum","a11_komaru1" ;1
+aspt2 xpos,s0_23,550
+flush 24
+msgwnd_kum
+*d42933
+d [lv 0*"18"*"61800011"]`「ベ、ベアトリーチェさまはお生まれになったばかりでございます…。`[@][lv 0*"18"*"61800012"]`かつてのような振る舞いをいきなり期待されるのは、あまりに酷というものでございます…」`[\]
+lss s0_24,"but","d11_aseru2" ;1
+flush 80
+msgwnd_but
+*d42934
+d [lv 0*"10"*"60100104"]`「まだ記憶が戻らないということなのか？」`[\]
+lss s0_25,"gen","a11_defo1" ;1
+aspt2 xpos,s0_25,-550
+flush 23
+msgwnd_gen
+*d42935
+d [lv 0*"14"*"61600025"]`「………お館様。`[@][lv 0*"14"*"61600026"]`確かにこの方は、ベアトリーチェさまご自身です。`[@][lv 0*"14"*"61600027"]`しかし、お館様がよくご存知のベアトリーチェさまではありません」`[\]
+lss s0_24,"but","d11_aseru5" ;1
+flush 80
+msgwnd_but
+*d42936
+d [lv 0*"10"*"60100105"]`「どういう意味だ…！`[@][lv 0*"10"*"60100106"]`　俺はゲームマスターなんだろ？！`[@][lv 0*"10"*"60100107"]`　どうしてベアトを蘇らせられないんだ…？！」`[\]
+lss s0_23,"kum","a11_odoroki1" ;1
+aspt2 xpos,s0_23,550
+flush 80
+msgwnd_kum
+*d42937
+d [lv 0*"18"*"61800013"]`「えぇえぇ、確かに蘇りましたとも。`[@][lv 0*"18"*"61800014"]`しかし、かつてのベアトリーチェさまは、千年を経られたベアトリーチェさま。`[@][lv 0*"18"*"61800015"]`……一方、こちらのベアトリーチェさまは、ご本人なれど生まれたばかり…！`[@][lv 0*"18"*"61800016"]`　違う人間のように見えるのは、致し方ないことでございます…！」`[\]
+lss s0_24,"but","d11_kuyasigaru1" ;1
+flush 80
+msgwnd_but
+*d42938
+d [lv 0*"10"*"60100108"]`「じゃあ…、どうやったらあのベアトは蘇るんだ？！`[@][lv 0*"10"*"60100109"]`　体はある、ここに！`[@][lv 0*"10"*"60100110"]`　魂はどうやれば蘇る？！」`[\]
+lss s0_25,"gen","a11_majime1" ;1
+aspt2 xpos,s0_25,-550
+flush 80
+msgwnd_gen
+*d42939
+d [lv 0*"14"*"61600028"]`「……同じ千年の人生を歩めば、かつてと同じベアトリーチェさまにもなるでしょう」`[\]
+lss s0_24,"but","d11_sakebu1a" ;1
+flush 80
+msgwnd_but
+*d42940
+d [lv 0*"10"*"60100111"]`「千年を待てと…？！」`[\]
+lss s0_23,"kum","a11_komaru1" ;1
+aspt2 xpos,s0_23,550
+flush 80
+msgwnd_kum
+*d42941
+d [lv 0*"18"*"61800017"]`「ひ、人の性格は生まれながらだけのものではありません。`[@][lv 0*"18"*"61800018"]`その後の生き方や経験によって、如何様にも変わります…」`[\]
+textoff
+waits 167
+csp_slot s0_21
+csp_slot s0_22
+csp_slot s0_25
+csp_slot s0_24
+csp_slot s0_23
+lips_sprite s0_8_b,"but"
+lips_sprite s0_10_b,"bea"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_bgm -1,3000
+wait 3000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"fea_r1c"
+flush 2
+bgmplay 137,71,0
+lss s0_10,"fea","a11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_bu3
+*d42942
+d [lv 0*"56"*"64900066"]`「……意味がわかりますか？`[@][lv 0*"56"*"64900067"]`　同じベアトであっても、同じでないということが」`[\]
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d42943
+d [lv 0*"11"*"62000185"]`「わかるわ。`[@][lv 0*"11"*"62000186"]`……同じ人間が２人いたとしても、生い立ちで人はいくらでも変わる」`[\]
+lss s0_10,"fea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bu3
+*d42944
+d [lv 0*"56"*"64900068"]`「本来は同じ人間であるにもかかわらず、その生い立ちによって、別人と言ってもいいほどに変わり得る。`[@][lv 0*"56"*"64900069"]`……本来、人は人であり、人格そのものを指して人とは呼びません。`[@][lv 0*"56"*"64900070"]`しかし、人格を人だと認めるニンゲンたちにとって、それはさながら他人のようなものでしょう…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"fea_r1a_bg"
+lbg s0_3,"fea_r1a"
+lss s0_8,"ama","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_ama
+*d42945
+d2 [lv 0*"20"*"63000019"]`「……違いねぇですな。`[@][#][*][lv 0*"20"*"63000020"]`お嬢だって、１２年前の気の毒な一件がなけりゃ、今頃は笑顔が似合うキュートな女の子だったかもしれねぇ」`[\]
+wait_on_d 0
+lss s0_8,"ama","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"enj","b21_fuman2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d42946
+d [lv 0*"11"*"62000187"]`「失礼ね。`[@][lv 0*"11"*"62000188"]`今だって充分キュートだってば」`[\]
+msgwnd_non
+*d42947
+d `……意味はわかってる。`[\]
+*d42948
+d `私たちにとって人格が人そのものならば。`[@]`{n}たとえ同じ肉体を共有していても、異なる人格を指して別人であると言い切れるだろう。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"fea_r1e"
+flush 6
+*d42949
+d `少なくとも。`[@]`{n}今の私と、１２年前の私は、まったくの別人だろう。`[\]
+*d42950
+d `そして、１２年前に家族が帰ってきてくれていたなら、`[@]`……やはりその自分と今の自分も、まったくの別人だろう。`[\]
+*d42951
+d `人は、同じ人間であっても、別人になり得る。`[@]`{n}いや、生い立ちと無限の可能性によって、無限の数の別人になり得るのだ。`[\]
+*d42952
+d `……だから、同じベアトだからといって、`[!w583]`……お兄ちゃんのよく知るベアトであるという保証など、まったくないのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"fea_r1c"
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+lss s0_10,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42953
+d [lv 0*"11"*"62000189"]`「ましてや、ベアトリーチェは千年を経た魔女。`[@][lv 0*"11"*"62000190"]`……人は三日あれば、死ぬことだって生まれ変わることだってできる。`[@][lv 0*"11"*"62000191"]`それが千年じゃ、………どうにもならないわね」`[\]
+lss s0_8,"fea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bu3
+*d42954
+d [lv 0*"56"*"64900071"]`「………あなたはなかなか出来る読者のようですね。`[@][lv 0*"56"*"64900072"]`…並の読者相手だったら、同一の人間であっても、その生い立ちと時間によって、`[@][lv 0*"56"*"64900073"]`別人になりうることを説明するために数百ページを割かねばならぬというのに」`[\]
+lss s0_10,"enj","a13_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42955
+d [lv 0*"11"*"62000192"]`「あまり読者を舐めないで。`[@][lv 0*"11"*"62000193"]`私たちはただ読んでるだけじゃない。`[@][lv 0*"11"*"62000194"]`読んで、考えてるの」`[\]
+lss s0_8,"fea","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bu3
+*d42956
+d [lv 0*"56"*"64900074"]`「……１００人に読ませれば、９０人くらいは読める。`[@][lv 0*"56"*"64900075"]`しかし意味がわかるのは、５０人。`[@][lv 0*"56"*"64900076"]`そしてそこからさらに考えられるのは２０人もいない。`[@][lv 0*"56"*"64900077"]`……よく噛んで飲み込みなさいと。`[@][lv 0*"56"*"64900078"]`…ただそれだけの話なのに。くすくす」`[\]
+lss s0_8,"fea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+*d42957
+d [lv 0*"56"*"64900079"]`「しかし、“あなた”はどうやら…、その貴重な２０人の中の１人らしい…。`[@][lv 0*"56"*"64900080"]`だからここへ招いたのです、人の子よ…」`[\]
+lss s0_10,"enj","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_non
+*d42958
+d `この八城十八という人物を好きになるのは、あまりに困難だ。`[\]
+*d42959
+d `……しかし、彼女が書くこの偽書は、……まだ冒頭の部分だけとはいえ、`[@]`確かにメッセージボトルの物語と、とてもよく似た何かを感じる。`[\]
+textoff
+waits 167
+lbg s0_22,"black"
+flush 22
+*d42960
+d `抽象的に言えば、……匂い。`[\]
+*d42961
+d `何とも形容できない、……空気の淀んだ図書室のような、…癖の強い、硬い空気の感じ。`[\]
+*d42962
+d `メッセージボトルを記した“ベアトリーチェ”と、八城十八は別人。`[\]
+*d42963
+d `……であるにもかかわらず、その物語は、同じ匂いを持つ…。`[\]
+*d42964
+d `……なるほど。`[@]`物好きなウィッチハンターたちの一部が、熱烈に信奉するのが、よくわかってきた…。`[\]
+*d42965
+d `彼らの鋭い嗅覚が、この同じ匂いを敏感に嗅ぎ取っているのだ……。`[\]
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+lss s0_8,"fea","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bu3
+*d42966
+d [lv 0*"56"*"64900081"]`「さ。`[@][lv 0*"56"*"64900082"]`……どうぞ、続きを読んで。`[@][lv 0*"56"*"64900083"]`文字を追うあなたの顔を見るのが、何よりも楽しいの。`[@][lv 0*"56"*"64900084"]`そして、言葉を交し合うことも…」`[\]
+lss s0_10,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d42967
+d [lv 0*"11"*"62000195"]`「物書きは感想に飢えてるってのは本当ね。`[@][lv 0*"11"*"62000196"]`……でも申し訳ないけど、こんな分厚い原稿を、延々と読んでる時間はないの。`[@][lv 0*"11"*"62000197"]`それより私はあなたに、……………」`[\]
+meplay 1,11,100
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"fea_r1e"
+flush 22
+msgwnd_bu3
+*d42968
+d [lv 0*"56"*"64900085"]`「……時間なんて、いくらでもあるでしょうに……」`[\]
+meplay 2,17,50
+msgwnd_non
+*d42969
+d `彼女の後ろにある、凝った意匠の飾り時計は、……振り子も秒針も、ずっと動かし続けている。`[\]
+*d42970
+d `なのに、……全然、さっきから時間が経っていない。`[\]
+*d42971
+d `この部屋に通されてから、まだ３分くらいしか経っていないのだ…。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"fea_r1c"
+lss s0_9,"enj","a31_komaru3" ;1
+flush 22
+lss s0_8,"fea","a11_defo2" ;1
+aspt2 xpos,s0_8,-550
+flush 2
+msgwnd_bu3
+*d42972
+d [lv 0*"56"*"64900086"]`「ね？`[@][lv 0*"56"*"64900087"]`　時間など、気にすることもないでしょう。`[@][lv 0*"56"*"64900088"]`……あなたが読み終わるまで、全ての時間はあなたを追い立てない…」`[\]
+lss s0_9,"enj","a11_fuman2" ;1
+flush 80
+msgwnd_enj
+*d42973
+d [lv 0*"11"*"62000198"]`「……………………………」`[\]
+lss s0_10,"ama","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+msgwnd_ama
+*d42974
+d [lv 0*"20"*"63000021"]`「お嬢、次のページ、次のページ」`[\]
+msgwnd_non
+*d42975
+d `天草に次のページをせがまれるので、……私は再び、物語の世界へ戻る。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+meplay 1,16,50
+vol_bgm -1,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 28
+*d42976
+d `……なぜ、彼女の物語は、ベアトリーチェのそれと、同じ匂いがするのだろう…。`[\]
+*d42977
+d `彼女が自称するように、……真相に、至っているから？`[\]
+textoff
+waits 167
+seplay 1,22,71
+anim2 s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+*d42978
+d `真相を知る者には、いくつでもメッセージボトルを無限に生み出すことが出来る、というのだろうか。`[\]
+bgmplay 138,71,0
+*d42979
+d `……それこそが、猫箱の世界…？`[\]
+textoff
+waits 167
+seplay 1,22,71
+csp_slot s0_5
+flush 11
+*d42980
+d `なるほど。`[@]`……確かに彼女もまた、無限の魔女なのかもしれない。`[\]
+*d42981
+d `そして。`[@]`……真相を知ったなら、誰もが無限の魔女になれるのかもしれない。`[\]
+*d42982
+d `無限の魔女たちによる、無限の物語。`[@]`{n}無限に弄ばれる、１９８６年１０月４日からの二日間。`[\]
+*d42983
+d `……終わらせなきゃ。`[\]
+*d42984
+d `この物語から真相の手掛かりを得て、……この無限の物語を、終わらせる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_bgm -1,3000
+wait 3000
+wait 3000
+textoff
+waits 167
+lbg s0_3,"mlib_1bp"
+lss s0_9,"but","d11_futeki5" ;1
+flush 26
+msgwnd_but
+*d42985
+d [lv 0*"10"*"60100112"]`「どうだ、ベアト。`[@][lv 0*"10"*"60100113"]`俺の作った、第６のゲームは」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mlib_1ap"
+flush 3
+lss s0_8,"bea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 2
+msgwnd_bea
+*d42986
+d `「……………………」`[\]
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42987
+d [lv 0*"10"*"60100114"]`「まぁ、素直に褒めるヤツじゃないもんな。`[@][lv 0*"10"*"60100115"]`せいぜい、“無能なりにそこそこ頑張ったではないか”、ってとこだろうぜ」`[\]
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d42988
+d2 [lv 0*"27"*"60700040"]`「くっくくくく。`[@][#][*][lv 0*"27"*"60700041"]`無能なりにそこそこ頑張ったではないか」`[\]
+wait_on_d 0
+vol_mix_fade 1000
+wait 1000
+d_continue
+wait_on_d -1
+bgmplay 117,71,0
+lss s0_10,"but","d11_nayamu3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42989
+d [lv 0*"10"*"60100116"]`「へっ。`[@][lv 0*"10"*"60100117"]`ゲームマスターの立場になってよくわかったぜ。`[@][lv 0*"10"*"60100118"]`……お前も毎回、ずいぶんと苦労してやがったんだってな」`[\]
+lss s0_8,"bea","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d42990
+d `「……………………」`[\]
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42991
+d [lv 0*"10"*"60100119"]`「“ゲームを作るのは楽なことではない。`[@][lv 0*"10"*"60100120"]`よもやそなたと、それを労い合う日が来ようとはな”」`[\]
+lss s0_8,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d42992
+d [lv 0*"27"*"60700043"]`「ゲームを作るのは楽なことではない。`[@][lv 0*"27"*"60700044"]`よもやそなたと、それを労い合う日が来ようとはな」`[\]
+meplay 1,16,50
+lss s0_10,"but","d26_kuyasigaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d42993
+d [lv 0*"10"*"60100121"]`「…………………………」`[\]
+lss s0_8,"bea","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d42994
+d `「…………………………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 1
+vol_me 1,-1,1000
+seplay 1,12,71
+seplay 2,1006,100
+msgwnd_but
+*d42995
+d [lv 0*"10"*"60100122"]`「……違う…。`[@][lv 0*"10"*"60100123"]`……こんなのは、……ベアトじゃないッ…」`[\]
+textoff
+waits 167
+lbg s0_3,"mlib_1bp"
+flush 22
+msgwnd_non
+*d42996
+d `戦人は激しく机を叩くが、駒のベアトは何の反応も示さない。`[\]
+*d42997
+d `……戦人が“それに反応するように”命じないから。`[\]
+*d42998
+d `駒としてなら、あのベアトを蘇らせることは容易い。`[@]`{n}しかしそれは、戦人が望んだ通りに動くだけ。`[\]
+*d42999
+d `……会話だって、これじゃ、`[!w583]`……独り言を言ってるのと、`[!w583]`……何も変わらない………。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d43000
+d `ゲームマスターは、どんな駒でも呼び出せる。`[@]`{n}そして駒たちをどのようにも動かせ、絶対の神として君臨できる。`[\]
+meplay 2,12,50
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+*d43001
+d `……しかし、だからこそ、`[!w500]`……ただの駒。`[\]
+*d43002
+d `それは信じられないほどに、孤独で、`[!w500]`……悲しい。`[\]
+textoff
+waits 167
+vol_me 2,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mlib_1ap"
+lss s0_8,"but","d11_odoroki3" ;1
+aspt2 xpos,s0_8,-370
+flush 2
+lss s0_8,"but","d11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d43003
+d [lv 0*"10"*"60100124"]`「……お前はたくさんの家具たちや、色々な物語を紡ぎ出して来た。`[@][lv 0*"10"*"60100125"]`……俺はそれを見て、……お前はきっと、さぞや楽しいだろうなと思っていた」`[\]
+textoff
+waits 167
+seplay 1,22,71
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 2
+msgwnd_non
+*d43004
+d [lv 0*"00"*"awase6001b"]`「「“だが違う”」」`[\]
+lss s0_8,"but","d11_odoroki3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d43005
+d [lv 0*"10"*"60100127"]`「お前は、……信じられないくらいに、孤独だったんだ」`[\]
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_non
+*d43006
+d [lv 0*"27"*"60700047_b"]`「“お前にとって、…俺という、自らに反逆する対戦相手が、どれほど愉快なものか。`[@][lv 0*"27"*"60700048_b"]`今の俺には、痛いほど理解できる”」`[\]
+csp_slot s0_8
+lss s0_25,"but","d11_kuyasigaru1" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+msgwnd_but
+*d43007
+d [lv 0*"10"*"60100130"]`「………あの、礼儀正しい、おかしなベアトは、`[|][lv 0*"10"*"60100131"]`……確かに、お前なんだろうな。`[@][lv 0*"10"*"60100132"]`……千年前の」`[\]
+lss s0_10,"bea","a11_gaman3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_non
+*d43008
+d [lv 0*"00"*"awase6002_o"]`「「“しかし、`[|][lv 0*"00"*"awase6003_o"]`……別人だ“」」`[\]
+meplay 1,16,50
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"mlib_1ep"
+flush 1
+seplay 1,13,70
+seplay 2,1006,100
+seplay 3,12,50
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_but
+*d43009
+d [lv 0*"10"*"60100135"]`「お前の姿に瓜二つだからこそ、むしろ許せない…！`[@][lv 0*"10"*"60100136"]`　辛い……」`[\]
+msgwnd_non
+*d43010
+d [lv 0*"27"*"60700051_b"]`「“しかし、駒ではないから、俺の意思に背ける”」`[\]
+textoff
+waits 167
+lbg s0_3,"mlib_1ap"
+lss s0_9,"but","d11_aseru3" ;1
+flush 26
+msgwnd_but
+*d43011
+d2 [lv 0*"10"*"60100138"]`「駒のお前なんかより、あのベアトの方がはるかに血は通ってるだろうぜ。`[@][lv 0*"10"*"60100139"]`それは認める！`[@][#][*][lv 0*"10"*"60100140"]`　だが、違うんだ！！`[@][lv 0*"10"*"60100141"]`　あれはお前じゃない！`[@][lv 0*"10"*"60100142"]`　お前の生き別れの妹か何かで、まったくの別人なんだ！`[@][lv 0*"10"*"60100143"]`　だからむしろ、`[|][lv 0*"10"*"60100144"]`……どうしても受け入れられない…！！」`[\]
+wait_on_d 0
+lss s0_9,"but","d11_kuyasigaru1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+meplay 2,5,50
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d43012
+d `……これほどまでに、駒のベアトを嫌悪しながらも。`[\]
+*d43013
+d `戦人はそれ以上に、`[!w583]`……“雛”のベアトを嫌悪する。`[\]
+meplay 3,17,50
+textoff
+waits 167
+lbg s0_3,"different_spiral_1b"
+flush 8
+*d43014
+d `たとえ、千年を経ても。`[@]`二度と元のベアトにはならない。`[\]
+*d43015
+d `仮に、元のベアトの真似をするように命じたところで、……それはただの模倣だ。`[\]
+*d43016
+d `ベアトによく似た別人であって、断じてベアト本人ではない。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+vol_me 3,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mlib_1ap"
+lss s0_9,"bea","a11_1_hoshin3star" ;1
+flush 2
+*d43017
+d `……やはり、………ベアトは前回のゲームで、`[@]`……本当に永遠に、消え去ってしまったのだ…。`[\]
+*d43018
+d `ゲームマスターになってさえも、`[@]`………蘇らせられないのだ………。`[\]
+msgwnd_but
+*d43019
+d [lv 0*"10"*"60100145"]`「……笑えよ。`[@][lv 0*"10"*"60100146"]`この無様な俺を」`[\]
+textoff
+waits 167
+lss s0_9,"bea","a11_warai4" ;1
+flush 2
+msgwnd_bea
+*d43020
+d `「…………。`[@][lv 0*"27"*"60700053"]`……ふっふふふ、`[|][lv 0*"27"*"60700054"]`くっくっくっく。`[@][lv 0*"27"*"60700055"]`ふっ`[|][lv 0*"27"*"60700056"]`ひゃっ`[|][lv 0*"27"*"60700057"]`はっ`[|][lv 0*"27"*"60700058"]`ははははっはっはぁあああ！！」`[\]
+textoff
+waits 167
+lss s0_9,"bea","a11_warai2" ;1
+flush 22
+seplay 1,37,71
+waits 167
+seplay 2,37,100
+wait 1000
+seplay 3,37,100
+seplay 1,37,100
+meplay 1,21,50
+msgwnd_non
+*d43021
+d `うるせぇよ……。`[\]
+*d43022
+d `俺が笑えと命じなきゃ笑えず、`[!w583]`……それを命じ続けなきゃ、それを続けることさえ出来ない、……幻め…。`[@]`……消えてくれッ！！`[\]
+break_glass4
+lbg s0_29,"black"
+csp_slot s0_29
+flush 10,2000
+wait 83
+ch_done flag_scenario_6_2

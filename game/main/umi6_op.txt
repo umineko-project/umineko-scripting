@@ -1,0 +1,604 @@
+*umi6_op
+;オープニング
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_6_op
+mov $name_chapter_save, "6_op"
+~
+new_episode 6
+gstc 28
+flush 10,167
+textoff
+waits 167
+lbg s0_3,"text001"
+flush 2
+wait 5000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"text008"
+flush 2
+seplay 2,32,70
+wait 6000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+meplay 1,5,0
+vol_me 1,70,3000
+wait 3000
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 8
+wait 2000
+textoff
+waits 167
+lbg s0_3,"white"
+flush 8
+vol_mix_fade 1000
+wait 1000
+seplay 1,17,71
+meplay 1,24,40
+bgmplay 135,90,0
+textoff
+waits 167
+lbg s0_3,"wsan_1aw"
+flush 50
+*d42258
+d `荘厳な大聖堂は、天窓より美しい光が差している。`[\]
+*d42259
+d `かつて魔女法廷が開かれた時とは、何かが違う。`[@]`{n}装飾が違う。`[\]
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+wait 1000
+vol_me 1,70
+textoff
+waits 167
+lbg s0_3,"wsan_2cw"
+flush 6
+*d42260
+d `温かに輝く白いリボンは、剃刀のように鋭いけれど、美しく棚引いて飾り付けられ。`[\]
+*d42261
+d `花々は美しく飾り立てられ、どのような場所でさえも祝福して見せる。`[\]
+*d42262
+d `さながら、ワイン樽に一滴の汚水を混ぜれば、その全てを汚染できるかのように。`[\]
+*d42263
+d `花とリボンと、そして赤い絨毯のヴァージンロードは、`[@]`ただ存在するだけで、かつてここが、右代宮夏妃に罪を強いたのと同じ場所であることを疑わせる…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42264
+d `そこはまさしく、……婚礼の大聖堂だった。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"white"
+flush 3
+seplay 3,22,71
+textoff
+waits 167
+lbg s0_3,"wsan_1cw"
+flush 3
+lss s0_10,"zep","a11_warai6" ;1
+aspt2 xpos,s0_10,370
+seplay 1,52,71
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+vol_me 1,-1,1000
+*d42265
+d [lv 0*"51"*"65100001"]`「愛は寛容にして慈悲あり！」`[\]
+seplay 3,54,100
+lss s0_8,"fur","a11_warai6" ;1
+aspt2 xpos,s0_8,-370
+seplay 2,52,71
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+*d42266
+d [lv 0*"52"*"65200001"]`「愛は妬まず、愛は誇らず！」`[\]
+seplay 1,54,100
+waits 167
+seplay 2,54,100
+*d42267
+d `司会の如き二人の悪魔が口にするそれは、神の前で愛を誓う儀式の祝詞の一つ。`[\]
+*d42268
+d `悪魔が祝う婚礼に、司祭の姿があろうはずもない。`[@]`{n}そこにあるのは奇跡を司る魔女の姿。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wsan_2bw"
+flush 2
+seplay 1,52,71
+lss s0_10,"ber","a21_shian1" ;1
+aspt2 xpos,s0_10,370
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d42269
+d2 [lv 0*"28"*"62100001"]`「健やかな時も病める時も。`[@][lv 0*"28"*"62100002"]`……そうね、病める時に支えてこそ妻だわ。`[@][#][*][lv 0*"28"*"62100003"]`そうよね、ヱリカ？」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+meplay 1,16,50
+textoff
+waits 167
+lss s0_8,"eri","c11_majime4" ;1
+aspt2 xpos,s0_8,-370
+flush 6
+msgwnd_eri
+*d42270
+d [lv 0*"46"*"64500001"]`「……はい。`[@][lv 0*"46"*"64500002"]`我が主……」`[\]
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ber
+*d42271
+d [lv 0*"28"*"62100004"]`「似合ってるわよ、それ。`[@][lv 0*"28"*"62100005"]`花婿の征服者として、相応しい装いじゃない。`[@][lv 0*"28"*"62100006"]`くすくすくすくす」`[\]
+lss s0_8,"eri","c11_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eri
+*d42272
+d [lv 0*"46"*"64500003"]`「うっふふふふふふふ。`[@][lv 0*"46"*"64500004"]`光栄です、我が主っ」`[\]
+seplay 1,22,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 6
+meplay 2,24,50
+textoff
+waits 167
+lbg s0_3,"wsan_1aw"
+flush 2
+msgwnd_non
+*d42273
+d `ヴァージンロードの新婦は、古戸ヱリカ。`[@]`{n}……新郎の顔は見えない。`[\]
+textoff
+waits 167
+lbg s0_3,"wsan_2cw"
+flush 6
+lss s0_9,"eri","c11_majime4" ;1
+flush 4
+*d42274
+d `新婦のその姿は見紛う事なき、祝福の、純白の花嫁衣裳。`[\]
+*d42275
+d `神の祝福の白さと、悪魔の酷薄さの白さを兼ね備えた花嫁のヴェール。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 23
+vol_me 2,70
+textoff
+waits 167
+lbg s0_3,"wsan_1bw"
+flush 23
+*d42276
+d `山羊の貴族たちや魔女たち悪魔たち、大勢がこの婚礼に参列している。`[\]
+*d42277
+d `彼らの頭が山羊でさえなかったら、`[@]`それはとても気品溢れる、この大聖堂に相応しい参列者たちだったろう…。`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_25,"lam","a11_akuwarai3" ;1
+aspt2 xpos,s0_25,-370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d42278
+d [lv 0*"29"*"62200001"]`「……さすがよ、ベルン。`[@][lv 0*"29"*"62200002"]`いちいち考えることがエグイったらありゃしない」`[\]
+seplay 1,52,71
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,370
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_ber
+*d42279
+d [lv 0*"28"*"62100007"]`「病める夫に支える妻。`[@][lv 0*"28"*"62100008"]`……素敵じゃない。`[@][lv 0*"28"*"62100009"]`お似合いよ、ヱリカ」`[\]
+lss s0_10,"ber","a21_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d42280
+d [lv 0*"28"*"62100010"]`「……そして、……あなたにもおめでとう、`[|][lv 0*"28"*"62100011"]`……新郎？」`[\]
+textoff
+waits 167
+csp_slot s0_10
+csp_slot s0_25
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"wsan_2aw"
+flush 6
+lss s0_8,"ber","a21_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+aspt2 scalex,s0_8,150
+aspt2 scaley,s0_8,150
+aspt2 ypos,s0_8,250
+aspt2 xpos,s0_8,-500
+flush 6
+msgwnd_non
+*d42281
+d `そしてベルンカステルは、……新郎の顔をじっと覗き込む。`[\]
+textoff
+waits 167
+vol_bgm 50,2000
+vol_me 1,70,2000
+vol_me 2,0,2000
+wait 2000
+*d42282
+d `新郎は、`[!w500]`……応えない。`[\]
+*d42283
+d `瞳の色は灰色。`[\]
+*d42284
+d `……唇は時折、何かを呟くが、それが意味ある言葉なのかはわからない。`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+flush 22
+set_window_simple 80
+msgwnd_ber
+*d42285
+d `{a:c:`[lv 0*"28"*"62100012"]`「ねぇ、……{i:聞いてる}？`[@][lv 0*"28"*"62100013"]`　あんたたち？」}`[\]
+set_name_window_non
+*d42286
+d `新郎に、あんたたちと複数形で語りかける。`[@]`{n}……もちろん、新郎が複数のはずもない。`[\]
+*d42287
+d `そしてもちろん、灰色の瞳の新郎は、それにも応えない…。`[\]
+textoff
+waits 167
+lbg s0_3,"wsan_2cw"
+flush 26
+lss s0_10,"eri","c11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_eri
+*d42288
+d2 [lv 0*"46"*"64500005"]`「くすくすくすくすくす。`[@][lv 0*"46"*"64500006"]`聞こえてはいても、答えられませんか？`[@][#][*][lv 0*"46"*"64500007"]`　……安心して、`[|][lv 0*"46"*"64500008"]`戦人さん？」`[\]
+wait_on_d 0
+lss s0_10,"eri","c11_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+meplay 3,5,50
+msgwnd_but
+*d42289
+d [lv 0*"10"*"60100001"]`「……………ぅ………………く……」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lss s0_9,"eri","c11_majime4" ;1
+flush 4
+msgwnd_eri
+*d42290
+d2 [lv 0*"46"*"64500009"]`「あなたの全てを。`[@][lv 0*"46"*"64500010"]`……私が、躙り尽くしてあげますから……。`[@][#][*][lv 0*"46"*"64500011"]`くっすくすくすくすくすくすくす！！」`[\]
+wait_on_d 0
+lss s0_9,"eri","c11_akuwarai4" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+seplay 1,37,100
+wait 100
+seplay 2,37,71
+seplay 3,21,50
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"wsan_2aw"
+flush 22
+*d42291
+d [lv 0*"46"*"64500012"]`うっふふっはっはははははっはっはっはっはっはッ…！！`[\]
+msgwnd_non
+*d42292
+d `悪魔たちも目を背けたくなるような邪悪の笑みで、奇跡の魔女は嘲笑う。`[\]
+*d42293
+d `その嘲笑にも、`[!w500]`……戦人の灰色の瞳は、`[!w500]`……何も応えない。`[\]
+vol_bgm 90
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+vol_me 3,-1,1000
+seplay 2,54,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 22
+textoff
+seplay 1,52,71
+textoff
+waits 167
+lbg s0_3,"wsan_1bw"
+lss s0_10,"zep","a11_warai3" ;1
+aspt2 xpos,s0_10,370
+spriteset_enable 1
+lbg s1_1,"white"
+lbg s1_3,"white"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+lss s0_10,"zep","a12_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d42294
+d [lv 0*"51"*"65100002"]`「人は、愛のために生きるのです！`[@][lv 0*"51"*"65100003"]`　即ち、今日、あなた方は生まれてきた意味を、目的を成し遂げたッ」`[\]
+seplay 3,52,71
+lss s0_8,"fur","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+seplay 1,54,71
+lss s0_8,"fur","a12_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d42295
+d [lv 0*"52"*"65200002"]`「あぁ、生きる力、愛の力の何と偉大なことか…！`[@][lv 0*"52"*"65200003"]`　今日という日の輝きがどうか、お二人を永遠に祝福しますように！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wsan_2bw"
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_ber
+*d42296
+d [lv 0*"28"*"62100014"]`「……うるさいわ、悪魔ども。`[@][lv 0*"28"*"62100015"]`次の次第は何よ」`[\]
+lss s0_8,"zep","a11_warai8" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_non
+*d42297
+d [lv 0*"51"*"65100004"]`「お二人に永遠の愛の誓約を求めます」`[\]
+lss s0_9,"fur","a11_warai7" ;1
+flush 10,167
+*d42298
+d [lv 0*"52"*"65200004"]`「その次は指輪の交換を…！」`[\]
+meplay 1,17,70
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d42299
+d `戦人の手には、……この世界の領主である証の、片翼の鷲の紋章の入った指輪が。`[\]
+*d42300
+d `そしてヱリカの指には、如何なる奇跡でも砕けることを許さぬ、ダイヤモンドの指輪が。`[\]
+*d42301
+d `ダイヤモンドの石言葉は、“永遠の絆”。`[@]`{n}しかしダイヤモンドはギリシャ語で、“懐かぬ”を意味する。`[\]
+textoff
+waits 167
+lbg s0_3,"wsan_2cw"
+lss s0_9,"eri","c11_akuwarai1" ;1
+flush 2
+*d42302
+d `ヱリカが戦人に永遠の愛を誓うわけもない。`[@]`{n}ただただ、戦人を永遠の所有物として隷属させたいだけ。`[\]
+*d42303
+d `戦人を穢すためだけに、……この婚礼は執り行われようとしている。`[\]
+lss s0_9,"eri","c11_warai3" ;1
+flush 10,167
+vol_me 1,-1,1000
+msgwnd_eri
+*d42304
+d [lv 0*"46"*"64500013"]`「……ご安心を。`[@][lv 0*"46"*"64500014"]`あなたを永遠に愛したりなんかしません。`[@][lv 0*"46"*"64500015"]`だからこの挙式は、……あなたを征服する儀式です。`[@][lv 0*"46"*"64500016"]`…あなたの心は、永遠に脱出不可能の密室に閉じ込められ、……この私、探偵にして真実の魔女、古戸ヱリカに支配される。`[@][lv 0*"46"*"64500017"]`あんたの持つ領主の座もその証の指輪も、私の物となる…」`[\]
+meplay 1,5,50
+msgwnd_but
+*d42305
+d [lv 0*"10"*"60100002"]`「………………………れ`[|][lv 0*"10"*"60100003"]`……ない…」`[\]
+lss s0_9,"eri","c11_akuwarai1" ;1
+flush 10,167
+msgwnd_eri
+*d42306
+d [lv 0*"46"*"64500018"]`「……ん？`[@][lv 0*"46"*"64500019"]`　何です？」`[\]
+meplay 2,17,70
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 1
+set_window_simple 80
+msgwnd_but
+*d42307
+d [lv 0*"10"*"60100004"]`「………く……ぅ………。`[@][lv 0*"10"*"60100005"]`……出られ……ない……」`[\]
+set_name_window_non
+textoff
+waits 167
+vol_me 1,0,2000
+vol_me 2,0,2000
+wait 2000
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+textoff
+waits 167
+seplay 1,54,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 42
+textoff
+waits 167
+lbg s0_3,"wsan_1cw"
+lss s0_8,"goa","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"goa","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 9
+wait 1000
+seplay 1,54,100
+lss s0_24,"eri","c11_majime4" ;1
+flush 2
+wait 1000
+lss s0_24,"eri","c11_warai3" ;1
+flush 80
+wait 1000
+csp_slot s0_24
+seplay 2,54,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 22
+textoff
+waits 167
+lbg s0_3,"wsan_1aw"
+lss s0_8,"ron","a11_defo2" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"gap","a11_warai2a" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"wal","a11_komaru1" ;1
+flush 22
+wait 2000
+seplay 3,54,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"wsan_2aw"
+lss s0_10,"ber","a21_akuwarai4" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"lam","a11_futeki3" ;1
+flush 24
+wait 2000
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"white"
+flush 22
+textoff
+waits 167
+lbg s0_3,"wclo_1c"
+lss s0_10,"cor","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"ger","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_24,"dla","a11_defo3" ;1
+flush 22
+wait 2000
+seplay 1,54,71
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 22
+textoff
+waits 167
+lbg s0_3,"wsan_1aw"
+flush 26
+lss s0_8,"fur","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+lss s0_10,"zep","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+seplay 3,54,100
+lss s0_24,"eri","c11_akuwarai1" ;1
+flush 24
+msgwnd_eri
+*d42308
+d2 [lv 0*"46"*"64500020"]`「ふ、…は、……はっははははははは…！`[@][lv 0*"46"*"64500021"]`　出られないですよね、その密室っ。`[@][lv 0*"46"*"64500022"]`あんたが自分で作った密室なんですからっ。`[@][#][*][lv 0*"46"*"64500023"]`あんたは永遠にその密室で苦しむんです。`[@][lv 0*"46"*"64500024"]`私は妻として、あなたの側に永遠にいて、その苦悶の表情を独り占めします」`[\]
+wait_on_d 0
+lss s0_24,"eri","c11_akuwarai4" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_24,"eri","c11_akuwarai2" ;1
+flush 10,167
+*d42309
+d [lv 0*"46"*"64500025"]`「くすくすくす、あっははははははは…！！`[@][lv 0*"46"*"64500026"]`　あなたを永遠に、私が穢し尽くしてあげます。`[@][lv 0*"46"*"64500027"]`……右代宮戦人ぁあああああああああああッ！！！」`[\]
+textoff
+waits 167
+csp_slot s0_24
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 1
+skip_off
+pam 749,"op56",0
+skip_on
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+textoff
+waits 167
+ch_done flag_scenario_6_op

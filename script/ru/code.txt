@@ -1,0 +1,58 @@
+*set_window_options
+	smart_quotes "‘","’","“","”"
+	hyphen_carry
+return
+
+*sub_get_translation
+	if %track_id == 58 mov $track_id,"video\sub\58_rus.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_rus.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_rus.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_rus.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_rus.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_rus.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_rus.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_rus.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_rus.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_rus.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_rus.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\rus.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\rus.ass" : return
+return
+
+*sub_get_romaji
+	if %track_id == 58 mov $track_id,"video\sub\58_rom_rus.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_rom_rus.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_rom_rus.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_rom_rus.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_rom_rus.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_rom_rus.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_rom_rus.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_rom_rus.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_rom_rus.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_rom_rus.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_rom_rus.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\rom_rus.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\rom_rus.ass" : return
+return
+
+*sub_get_both
+	if %track_id == 58 mov $track_id,"video\sub\58_both_rus.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_both_rus.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_both_rus.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_both_rus.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_both_rus.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_both_rus.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_both_rus.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_both_rus.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_both_rus.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_both_rus.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_both_rus.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\both_rus.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\both_rus.ass" : return
+return
+
+*redefine_text_presets
+return
+
+*backup_disable_lang
+return

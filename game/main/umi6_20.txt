@@ -1,0 +1,1371 @@
+*ura_teatime_6
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_6_ura
+mov $name_chapter_save, "6_ura"
+~
+new_ura 6
+gstc 182
+flush 10,167
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+meplay 1,11,90
+wait 2000
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"different_spiral_1b"
+show_whirl
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 8
+msgwnd_ber
+*d68518
+d [lv 0*"28"*"62100363"]`「…………ラムダ、……どこ……？」`[\]
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"different_space_p1a"
+flush 42
+msgwnd_non
+*d68519
+d `それを口に出すこと自体が、ある種の敗北を認めたようで、……ちょっぴり悔しい。`[\]
+*d68520
+d `頼みもしない時にばかり、うるさく纏わり付いてくるくせに、`[@]`……珍しく名前を呼んでやったら返事もしないなんて、………馬鹿にしてる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d68521
+d `ここは、………どこなの……？`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+textoff
+waits 167
+lbg s0_3,"wsan_2cw"
+color_mod2 s0_3,#ffffff
+flush 22
+*d68522
+d `完全にオチの見えた展開で馬鹿らしくなり、私は大聖堂を出たはずなのだ。`[\]
+*d68523
+d `……どこか、涼しい夜風の当たるテラスでも見つけたら、`[@]`そこで茶番の披露宴が終わるまで時間でも潰してるつもりだった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+msgwnd_ber
+*d68524
+d [lv 0*"28"*"62100364"]`「……確かに、人の顔を見たくなかったから、ひと気のない方へばかり進んだけど。`[@][lv 0*"28"*"62100365"]`………さすがに、これはいないにも程があるわ」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_p1b"
+flush 22
+msgwnd_non
+*d68525
+d `この、大ベルンカステルが、……迷子？`[\]
+*d68526
+d `そんな奇跡、絶対に起こるものか。`[\]
+*d68527
+d `そう、この世に奇跡なんて、存在しない。`[\]
+*d68528
+d `奇跡を生み出すには、無限に等しい時間という、“決して訪れぬ時間”が必要なのだから。`[\]
+*d68529
+d `だから、それに満たない時間で、奇跡らしきものが生まれた時は、`[@]`……それは奇跡ではなく。`[@]`……誰かの、……意図によるものだ。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_p1a"
+flush 22
+*d68530
+d `つまり、……私は今、誰かの意図に飲まれて、`[@]`……こんなおかしな廊下を歩かされていることになる……。`[\]
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d68531
+d [lv 0*"28"*"62100366"]`「………誰？`[@][lv 0*"28"*"62100367"]`　こんな、手の込んだ真似で私を呼ぶのは。`[@][lv 0*"28"*"62100368"]`………よっぽどの恥ずかしがり屋みたいね。`[@][lv 0*"28"*"62100369"]`……こんなひと気のないところに呼び出すんだから」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+wait 1000
+seplay 1,31,71
+msgwnd_non
+*d68532
+d `……その時、……向こうへ伸びる薄暗い廊下から、……音が聞こえた。`[\]
+bgmplay 136,90,0
+waits 167
+set_window_simple 80
+*d68533
+d `{a:c:とっ、とてとてとてとてとて………。}`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_space_p1a"
+flush 2
+*d68534
+d `それは、犬か猫などの小動物が、足早に駆けて行く音に、よく似ていた。`[\]
+*d68535
+d `こんなところに、犬や猫がいる奇跡はない。`[@]`{n}そんな奇跡は“許さない”。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_p1b"
+flush 22
+*d68536
+d `奇跡でないならそれはつまり、`[@]`そちらが導かれる方向ということだ。`[\]
+meplay 1,11,90
+*d68537
+d `………いいわ。`[@]`私を退屈させない、何かの新しい趣向かもしれない。`[\]
+*d68538
+d `もしこれがラムダの新しい遊びだったら、ご褒美に舌で全身にハチミツを塗ってやるわ。`[\]
+*d68539
+d `…そして二度とするなと、両目にパラソルチョコを捻じ込んでやる。`[\]
+meplay 2,16,40
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+*d68540
+d `音の聞こえた廊下の向こうは、……薄暗いどころか、……本当の闇だった。`[\]
+*d68541
+d `しかし、……その暗闇の中に気配が。`[\]
+seplay 1,31,71
+textoff
+waits 167
+anim2 s0_5,"no0006",1,1
+flush 1
+waitvideo
+csp_slot s0_5
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+*d68542
+d `………エメラルドグリーンの２粒の輝きは、……多分、猫の目だ。`[@]`闇によく溶け込む、黒猫の目だ。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_p1a"
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d68543
+d [lv 0*"28"*"62100370"]`「あなたが呼んだの…？`[@][lv 0*"28"*"62100371"]`　………それとも、……あなたが使い…？　……………」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"cateye_1"
+flush 2
+wait 1000
+lbg s0_21,"red_b"
+aspt2 alpha,s0_21,180
+seplay 1,31,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,433,1
+rumble 63,500
+gptwait quakeyamp
+csp_slot s0_21
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+wait 667
+seplay 1,35,100
+textoff
+waits 167
+lbg s0_3,"blood_2a"
+flush 1
+waits 167
+seplay 2,35,80
+textoff
+waits 167
+lbg s0_3,"blood_2b"
+flush 1
+waits 167
+seplay 3,35,60
+textoff
+waits 167
+lbg s0_3,"blood_2c"
+flush 1
+waits 167
+seplay 1,35,40
+textoff
+waits 167
+lbg s0_3,"blood_2d"
+flush 1
+waits 167
+seplay 2,35,20
+textoff
+waits 167
+lbg s0_3,"blood_2e"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d68544
+d `足元を見ると、……真っ赤な猫の足跡が、暗闇の猫の瞳のもとに続いていた。`[\]
+meplay 3,17,50
+textoff
+waits 167
+lbg s0_3,"blood_2d"
+flush 22
+*d68545
+d `……それはまるで、…血溜りを踏んで走ったかのような、薄気味悪い足跡だった。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_p1d"
+flush 8
+*d68546
+d `闇に目が慣れると、………暗闇の中でも、この血の足跡はほのかに浮かび上がっている。`[\]
+*d68547
+d `……光っているというほどのものではないけれど、`[@]`……私を招くための道しるべの役割は充分果たしていた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"cateye_1"
+flush 1
+vol_me 3,-1,1000
+seplay 1,31,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,433,1
+rumble 63,500
+gptwait quakeyamp
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+set_window_simple 80
+*d68548
+d `{a:c:とてとてとてとてとてとて……。}`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_space_p1a"
+flush 26
+*d68549
+d `付いて来いと言わんばかりに、`[@]`……猫は踵を返して、闇の奥へ駆けて行く。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d68550
+d `………………何だろう。`[@]`……すごく、不思議な感覚。`[\]
+*d68551
+d `世界で一番残酷な魔女を名乗るようになってから、久しく忘れている感覚だ。`[\]
+*d68552
+d `……それがどういう感覚なのか、ちょっと思い出せない。`[\]
+*d68553
+d `しかし、……退屈に飽いた私にとって、そのくらいの方がきっと、面白い。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_p1b"
+flush 2
+*d68554
+d `私は、時折立ち止まってはこちらに振り返る猫の、血の足跡を追い、`[@]`…………暗闇の廊下を、どこまでもどこまでも歩かされた……。`[\]
+*d68555
+d `進み、………曲がり、`[@]`………時には、階段らしきものを降りた。`[\]
+*d68556
+d `そして、……暗いからよくわからないけれど、………扉の隙間の中に入った。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_bgm -1,2000
+wait 2000
+msgwnd_ber
+*d68557
+d [lv 0*"28"*"62100372"]`「……………………ここ………？」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+seplay 1,17,71
+wait 2000
+meplay 1,26,70
+msgwnd_non
+*d68558
+d `扉をゆっくりと押し開けるが、……廊下と同じく、中も闇。`[\]
+*d68559
+d `しかし、空気の感じや、足音のちょっとした残響の違いで、`[@]`そこは廊下ではなく、部屋だと理解できた。`[\]
+*d68560
+d `猫の足音は、もうしない。`[\]
+*d68561
+d `……しかし、血の足跡は、続いている。`[\]
+textoff
+waits 167
+vol_me 1,90,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_space_p1c"
+flush 6
+*d68562
+d `何か衝立のようなものの向こうに、……細いスポットライトのような明かりの下で。`[\]
+*d68563
+d `……さっきの黒猫が、ペットフードの皿に盛られたエサを、`[@]`ぴちゃぴちゃくちゃくちゃと食べているのが見えた。`[\]
+*d68564
+d `………なるほど。`[@]`私をここへ連れてきた、ご褒美ってことらしい…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_ber
+*d68565
+d [lv 0*"28"*"62100373"]`「猫……。`[@][lv 0*"28"*"62100374"]`お食事中、悪いけれど。`[@][lv 0*"28"*"62100375"]`……そろそろあんたの主人を呼んでちょうだい。`[@][lv 0*"28"*"62100376"]`………それともまさか、あんたが私を呼んだ本人、ってわけじゃないわよね…？」`[\]
+msgwnd_non
+*d68566
+d `話し掛けても、振り返りもしない。`[\]
+*d68567
+d `……まぁ、食事中の畜生なんてこんなもんよ。`[@]`……蹴飛ばしてやれば、飼い主のところに飛んでくでしょ。`[\]
+textoff
+waits 167
+seplay 1,20,71
+wait 667
+seplay 2,11,90
+textoff
+waits 167
+lbg s0_3,"cateye_1"
+flush 1
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+waits 167
+seplay 3,8,70
+textoff
+waits 167
+lbg s0_3,"blood_2a"
+flush 1
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+wait 50
+seplay 1,8,50
+textoff
+waits 167
+lbg s0_3,"blood_2b"
+flush 1
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+wait 50
+seplay 2,8,30
+textoff
+waits 167
+lbg s0_3,"blood_2c"
+flush 1
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,267,1
+rumble 63,500
+gptwait quakeyamp
+wait 50
+seplay 3,8,10
+textoff
+waits 167
+lbg s0_3,"blood_2d"
+flush 1
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,217,1
+rumble 63,500
+gptwait quakeyamp
+waits 167
+seplay 1,1006,30
+textoff
+waits 167
+lbg s0_3,"blood_1ar"
+flush 1
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+msgwnd_ber
+*d68568
+d [lv 0*"28"*"62100377"]`「………ふん」`[\]
+msgwnd_non
+*d68569
+d `黒猫を蹴り飛ばしてやると、`[@]`……それはまるでぬいぐるみを蹴ったかのように、軽々と飛んでいき、`[@]`壁にぶつかって転がった。`[\]
+seplay 2,38,50
+textoff
+waits 167
+lbg s0_3,"black"
+show_whirl
+*d68570
+d `そしてそのまま、闇に溶けるように、すぅっと消えてしまう……。`[\]
+*d68571
+d `……何、この猫。`[@]`……ただの幻…？`[\]
+meplay 2,17,50
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 22
+msgwnd_ber
+*d68572
+d [lv 0*"28"*"62100378"]`「……………………ッ」`[\]
+msgwnd_non
+*d68573
+d `餌皿を見ると、……そこには、血塗れの、生肉のようなものが盛られていた。`[\]
+*d68574
+d `……まさに、生きた肉をその場で引き裂き、そのまま盛り付けたかのように、`[@]`それは生々しく、そして血生臭かった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_ber
+*d68575
+d [lv 0*"28"*"62100379"]`「………何なの、この趣味の悪い歓待は」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+set_window_simple 80
+msgwnd_non
+*d68576
+d `{a:c:`[lv 0*"50"*"65000393"]`――蹴るとは、酷いことをする。}`[\]
+set_name_window_non
+meplay 1,28,50
+*d68577
+d `その声を聞いた瞬間に、全身の毛が逆立つ。`[\]
+*d68578
+d `すると、……ようやく周りが明るくなる……。`[\]
+*d68579
+d `しかしベルンカステルは、……明るくなる前から、そこがどこか、もう察していた…。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 2
+vol_mix_fade 1000
+wait 1000
+bgmplay 62,71,0
+wait 1000
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"fea_r1ap"
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 42
+wait 2000
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"fea_r1ap"
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"fea","b12_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 42
+wait 1000
+lss s0_8,"fea","b12_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d68580
+d [lv 0*"50"*"65000394"]`「………そなたであろうが。`[@][lv 0*"50"*"65000395"]`……その猫は」`[\]
+lss s0_10,"ber","a21_odoroki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d68581
+d [lv 0*"28"*"62100380"]`「…………………………………」`[\]
+lss s0_8,"fea","b12_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d68582
+d [lv 0*"50"*"65000396"]`「……肉を喰らい、選ぶ道もあることを学んだ猫よ。`[@][lv 0*"50"*"65000397"]`……久しぶりであるな……」`[\]
+lss s0_10,"ber","a21_niramu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d68583
+d [lv 0*"28"*"62100381"]`「あんたが教えなきゃ、気付かずに済んだ道よ。`[@][lv 0*"28"*"62100382"]`……肉の味を教えたバケモノ。`[@][lv 0*"28"*"62100383"]`………生き返ったのね。`[@][lv 0*"28"*"62100384"]`………フェザリーヌ・アウアウローラ…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+flush 23
+lss s0_9,"fea","b11_defo2" ;1
+flush 26
+msgwnd_fea
+*d68584
+d2 [lv 0*"50"*"65000398"]`「……アウグストゥス・アウローラであると…。`[@][lv 0*"50"*"65000399"]`そなたには、何度教えても覚えぬな…。`[@][#][*][lv 0*"50"*"65000400"]`…良い。`[@][lv 0*"50"*"65000401"]`それもまた、懐かしい……。`[@][lv 0*"50"*"65000402"]`噂は聞き及んでいるぞ…？`[@][lv 0*"50"*"65000403"]`　………奇跡の魔女、ベルンカステルを名乗り、………あまり褒められぬカケラ遊びをして回っているとな……」`[\]
+wait_on_d 0
+lss s0_9,"fea","b11_defo1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 24
+wait 500
+lss s0_8,"ber","a21_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 25
+seplay 1,13,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_ber
+*d68585
+d [lv 0*"28"*"62100385"]`「あんたの真似をしてるだけよ。`[@][lv 0*"28"*"62100386"]`到底、及びやしないけれど。`[@][lv 0*"28"*"62100387"]`……もし私の噂が良からぬものならば、あんたはそれに百を掛けるべきだわ」`[\]
+msgwnd_non
+*d68586
+d `ベルンカステルは、勝手知ったるかのように、`[@]`……アンティークチェアに無遠慮に座る。`[\]
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_fea
+*d68587
+d [lv 0*"50"*"65000404"]`「…………何を怯えているか。`[@][lv 0*"50"*"65000405"]`私は、これまでで最も長く過ごした巫女との再会を喜んでいるだけであろうが…。`[@][lv 0*"50"*"65000406"]`使いの猫が、そんなにも気に入らなかったか」`[\]
+msgwnd_non
+*d68588
+d `ベルンカステルの振る舞いは、むしろリラックスしたものに見えるのだが…。`[\]
+*d68589
+d `しかしフェザリーヌはそれに対し、怯えるな、と諭すように言う。`[\]
+lss s0_8,"ber","a21_niramu1" ;1
+aspt2 xpos,s0_8,-370
+flush 25
+*d68590
+d `……そしてそれは、ベルンが浮かべる表情を見る限り、`[@]`……図星らしい…。`[\]
+lss s0_8,"ber","a21_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d68591
+d [lv 0*"28"*"62100388"]`「私に対するあてつけにも程があるわ。`[@][lv 0*"28"*"62100389"]`……血の足跡を残しながら歩き、血塗れの肉を頬張る猫なんてね、露骨にも程があるのよ…」`[\]
+csp_slot s0_8
+flush 24
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fea
+*d68592
+d [lv 0*"50"*"65000407"]`「………………………。`[@][lv 0*"50"*"65000408"]`……怯えるな。`[@][lv 0*"50"*"65000409"]`……よく見よ。`[@][lv 0*"50"*"65000410"]`……血塗れの肉を頬張る猫などどこにいる……？`[@][lv 0*"50"*"65000411"]`　そなたを迎えに行った褒美に、ビスケットの皿を与えただけではないか…」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 2
+msgwnd_ber
+*d68593
+d [lv 0*"28"*"62100390"]`「………………………」`[\]
+textoff
+textoff
+waits 167
+lbg s0_3,"pumpkin2"
+seplay 2,22,71
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"blood_1a"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+msgwnd_non
+*d68594
+d `…………足元の餌皿が、……風も無いのに、煤が払われて飛んでいくような錯覚。`[\]
+*d68595
+d `…そこには、……可愛らしく、…そして平均的な、猫の餌皿と、`[@]`………山と盛られた、……小さなビスケットが…。`[\]
+seplay 1,1006,71
+textoff
+waits 167
+lbg s0_3,"black"
+show_glass 0
+msgwnd_ber
+*d68596
+d [lv 0*"28"*"62100391"]`「…………………ちっ……」`[\]
+msgwnd_non
+*d68597
+d `ベルンカステルは、隠すことなく、不快そうに表情を歪める。`[\]
+*d68598
+d `フェザリーヌは、変わらぬな人の子よ、と肩を竦めて呟き、揺り椅子を揺らした。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 2
+seplay 1,39,50
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+wait 1000
+lss s0_10,"ber","a21_niramu1" ;1
+aspt2 xpos,s0_10,370
+flush 4
+msgwnd_ber
+*d68599
+d [lv 0*"28"*"62100392"]`「………相変わらず不愉快なヤツだわ。`[@][lv 0*"28"*"62100393"]`……でもね、今は愉快よ。`[@][lv 0*"28"*"62100394"]`あんたの真似をしてるとね、本当に退屈しないわ」`[\]
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_fea
+*d68600
+d [lv 0*"50"*"65000412"]`「……詰れ。好きに。`[@][lv 0*"50"*"65000413"]`かつて別れに際し、そなたに許した置き土産だ」`[\]
+lss s0_10,"ber","a21_odoroki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d68601
+d [lv 0*"28"*"62100395"]`「口の悪い巫女は退屈しないから好き、なんだっけ……？`[@][lv 0*"28"*"62100396"]`　ちっ、馬鹿馬鹿しい。`[@][lv 0*"28"*"62100397"]`……あんたを喜ばせるくらいなら、口を噤むわ。`[@][lv 0*"28"*"62100398"]`………それで、……何の用…？」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+bgmplay 114,71,0
+msgwnd_fea
+*d68602
+d [lv 0*"50"*"65000414"]`「ベアトリーチェのゲームが、戦人の勝利によって終わったそうだな。`[@][lv 0*"50"*"65000415"]`……観劇していた。`[@][lv 0*"50"*"65000416"]`なかなか面白かった」`[\]
+lss s0_10,"ber","a21_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+seplay 1,1006,71
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_ber
+*d68603
+d [lv 0*"28"*"62100399"]`「………私が無様な役で、それは面白かったでしょうよ」`[\]
+lss s0_8,"fea","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d68604
+d [lv 0*"50"*"65000417"]`「とんでもない、なかなか好演であった…。`[@][lv 0*"50"*"65000418"]`…………ベアトもそなたに感謝しているだろう」`[\]
+lss s0_10,"ber","a21_odoroki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d68605
+d [lv 0*"28"*"62100400"]`「…………ふん。`[@][lv 0*"28"*"62100401"]`……それで？`[@][lv 0*"28"*"62100402"]`　ベアトのゲームのカケラを朗読しろって言うならお断りよ。`[@][lv 0*"28"*"62100403"]`私はもう、あんたの巫女じゃない」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"fea_r1ep"
+flush 25
+msgwnd_fea
+*d68606
+d [lv 0*"50"*"65000419"]`「私はベアトのゲームを全て観劇してきた。`[@][lv 0*"50"*"65000420"]`……ラムダデルタのゲームも、戦人のゲームも、興味深く観劇させてもらった。`[@][lv 0*"50"*"65000421"]`……一応、全ての謎に私なりの答えを用意できたつもりでいる。`[@][lv 0*"50"*"65000422"]`………犯人。`[@][lv 0*"50"*"65000423"]`動機。`[@][lv 0*"50"*"65000424"]`個別のトリック。`[@][lv 0*"50"*"65000425"]`……碑文の謎は、最後がぎりぎりわからぬが、`[@][lv 0*"50"*"65000426"]`私が実際に六軒島に行き、検証すればわかる程度のレベルまでの推理は持っている」`[\]
+msgwnd_ber
+*d68607
+d [lv 0*"28"*"62100404"]`「……………それで…？」`[\]
+msgwnd_fea
+*d68608
+d [lv 0*"50"*"65000427"]`「無論、真実は一つでない以上、私の推理も、許される可能性の中の一つに過ぎぬだろう。`[@][lv 0*"50"*"65000428"]`……しかし、それは可能性の範囲内であり、瑣末な問題だ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d68609
+d [lv 0*"28"*"62100405"]`「……何よ、あんた。`[@][lv 0*"28"*"62100406"]`………私とベアトのゲームの論争がしたいの？」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+lss s0_10,"fea","b11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_fea
+*d68610
+d2 [lv 0*"50"*"65000429"]`「違う。`[@][#][*][lv 0*"50"*"65000430"]`………したいのは、答え合わせだ、人の子よ」`[\]
+wait_on_d 0
+bgmplay 19,71,0
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d68611
+d `フェザリーヌのその言葉に、ベルンカステルはぴくりと反応する。`[\]
+*d68612
+d `……その小さな反応を、かつての主は見逃さない。`[\]
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 22
+lss s0_9,"fea","b11_defo1" ;1
+flush 24
+msgwnd_fea
+*d68613
+d [lv 0*"50"*"65000431"]`「そなたも出演者として、山椒のように物語を盛り上げてきた。`[@][lv 0*"50"*"65000432"]`その過程で多くの真実も知るだろう。`[@][lv 0*"50"*"65000433"]`……しかし、ベアトが巧みに隠してきたいくつかの謎については、……そなたも知らぬのではないか……？」`[\]
+lss s0_10,"ber","a21_niramu1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_ber
+*d68614
+d2 [lv 0*"28"*"62100407"]`「………………………。`[@][#][*][lv 0*"28"*"62100408"]`………なるほど…。`[@][lv 0*"28"*"62100409"]`………私にまた、……ハラワタを食い千切って、……引き摺り出す役をやらせたいのね」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_9,"fea","b11_defo2" ;1
+flush 80
+msgwnd_fea
+*d68615
+d [lv 0*"50"*"65000434"]`「観劇を終えれば、パンフレットを読み、舞台裏を知るのは、`[@][lv 0*"50"*"65000435"]`そなた風に言うなら、食後にたしなむ紅茶のようなものだ。`[@][lv 0*"50"*"65000436"]`……それは嗜みだが、欠かすことは出来ぬ」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lss s0_8,"ber","a21_niramu1" ;1
+aspt2 xpos,s0_8,-550
+flush 4
+msgwnd_ber
+*d68616
+d [lv 0*"28"*"62100410"]`「生きてるうちは愛でて遊んで、死んだら肉を食らってご機嫌満腹。`[@][lv 0*"28"*"62100411"]`……あんたにとって、猫は二度役に立つわけだわ。`[@][lv 0*"28"*"62100412"]`………死ね、バケモノ」`[\]
+lss s0_9,"fea","b11_warai2" ;1
+flush 80
+msgwnd_fea
+*d68617
+d [lv 0*"50"*"65000437"]`「答え合わせが、したい。`[@][lv 0*"50"*"65000438"]`………そなたも、知りたいはずだ」`[\]
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_ber
+*d68618
+d [lv 0*"28"*"62100413"]`「………………………………」`[\]
+textoff
+waits 167
+lss s0_9,"fea","b11_warai1" ;1
+flush 22
+csp_slot s0_9
+flush 3
+msgwnd_fea
+*d68619
+d [lv 0*"50"*"65000439"]`「ベアトの亡骸を葬ると思い、その葬儀を、そなたに執り行なってほしいということだ。`[@][lv 0*"50"*"65000440"]`……それならばどうか、人の子よ」`[\]
+textoff
+waits 167
+wait 1000
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_ber
+*d68620
+d [lv 0*"28"*"62100414"]`「………多少は、私好みな頼み方になってきたわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+flush 22
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 80
+textoff
+waits 167
+lbg s0_3,"fea_r1ep"
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_non
+*d68621
+d `フェザリーヌが指を鳴らすと、`[@]`乱雑に本が積まれたテーブルに細いスポットライトが当たる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+*d68622
+d `そこには、………ベアトのゲームの、折り畳み式のゲーム盤が畳まれていた。`[\]
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"chess2"
+flush 25
+*d68623
+d `観劇の魔女が、指を小さく回す仕草をすると、そのゲーム盤はひとりでに開き、`[@]`その内側の、黒と白の駒がずらりと整列して仕舞われているのを見せる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_9,"fea","b11_defo1" ;1
+flush 22
+msgwnd_fea
+*d68624
+d [lv 0*"50"*"65000441"]`「………ゲーム盤も駒も、全て揃っている。`[@][lv 0*"50"*"65000442"]`……過去のゲームの棋譜も全て揃っている」`[\]
+seplay 2,22,70
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+seplay 1,1010,71
+waits 167
+seplay 2,1010,71
+waits 167
+seplay 3,1010,71
+waits 167
+seplay 1,1010,71
+waits 167
+seplay 2,1010,71
+waits 167
+seplay 3,13,71
+wait 500
+seplay 1,13,85
+msgwnd_non
+*d68625
+d `ばらばらばらっと、書物がひとりでにページを初めから最後まで捲られて閉じ、`[@]`ゲーム盤の脇に飛んで鎮座する。`[@]`そこには、過去のゲームでの駒の動きが全て記されている…。`[\]
+textoff
+waits 167
+lss s0_10,"ber","a21_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 4
+msgwnd_ber
+*d68626
+d [lv 0*"28"*"62100415"]`「………なるほど。`[@][lv 0*"28"*"62100416"]`足りないのは、プレイヤーと解説者だけってわけ…」`[\]
+csp_slot s0_9
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_fea
+*d68627
+d [lv 0*"50"*"65000443"]`「紅茶も足りぬな。`[@][lv 0*"50"*"65000444"]`……梅干も足りぬか。`[@][lv 0*"50"*"65000445"]`もちろん用意しよう」`[\]
+lss s0_10,"ber","a21_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d68628
+d [lv 0*"28"*"62100417"]`「…………………………。`[@][lv 0*"28"*"62100418"]`………いいわ。`[@][lv 0*"28"*"62100419"]`それに辛子大福もつけてくれたら、手を打つわ」`[\]
+lss s0_8,"fea","b11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d68629
+d [lv 0*"50"*"65000446"]`「交渉は成立だ」`[\]
+lss s0_10,"ber","a21_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d68630
+d [lv 0*"28"*"62100420"]`「条件が一つ」`[\]
+lss s0_8,"fea","b11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fea
+*d68631
+d [lv 0*"50"*"65000447"]`「ほう、それは何か」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1ep"
+flush 26
+msgwnd_ber
+*d68632
+d [lv 0*"28"*"62100421"]`「朗読者は私よ…？`[@][lv 0*"28"*"62100422"]`　………私、愛がないから、色々と、おかしな解釈をしてしまうかもしれない。`[@][lv 0*"28"*"62100423"]`……でも、どう読むか、どう抑揚をつけるかは、朗読者の自由よ」`[\]
+msgwnd_fea
+*d68633
+d [lv 0*"50"*"65000448"]`「私は答え合わせがしたいだけだ。`[@][lv 0*"50"*"65000449"]`……物語になど興味は無い。`[@][lv 0*"50"*"65000450"]`………そなたがどんな物語を紡ごうと、まったく興味が無い。`[@][lv 0*"50"*"65000451"]`…………なるほど。`[@][lv 0*"50"*"65000452"]`ようやくそなたが何をしたいのか、わかった」`[\]
+msgwnd_ber
+*d68634
+d [lv 0*"28"*"62100424"]`「………………飲むでしょ？　条件」`[\]
+msgwnd_fea
+*d68635
+d [lv 0*"50"*"65000453"]`「いいだろう…。`[@][lv 0*"50"*"65000454"]`私は答えが知りたい。そなたは鬱憤が晴らしたい。`[@][lv 0*"50"*"65000455"]`交渉は成立だ」`[\]
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 80
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+flush 22
+msgwnd_non
+*d68636
+d `フェザリーヌがもう一度指を鳴らすと、`[@]`……ベルンカステルに着席を促すような、大きな椅子が現れる。`[\]
+*d68637
+d `それは、この部屋の調度品には不似合いなセンスの、……玉座だった。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"portrait6"
+flush 46
+wait 1000
+*d68638
+d `いや、見覚えはある。`[@]`………それは、`[\]
+msgwnd_fea
+*d68639
+d [lv 0*"50"*"65000456"]`「認めようぞ。座るが良い。`[@][lv 0*"50"*"65000457"]`ゲームマスターは、そなただ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+meplay 1,16,50
+vol_bgm -1,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_10,"ber","a21_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d68640
+d [lv 0*"28"*"62100425"]`「………いいのね？`[@][lv 0*"28"*"62100426"]`　……本当に、……いいのね…？」`[\]
+lss s0_8,"fea","b11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_fea
+*d68641
+d2 [lv 0*"50"*"65000458"]`「そなたの鬱憤が晴れるような、好きな物語を紡げばいい。`[@][lv 0*"50"*"65000459"]`私には興味ないことだ。`[@][#][*][lv 0*"50"*"65000460"]`ただし、私からも条件を一つ。`[@][lv 0*"50"*"65000461"]`……私の求める答え合わせを、全てせよ。`[@][lv 0*"50"*"65000462"]`隠し事も包み隠しも誤魔化しも、一切なしだ」`[\]
+wait_on_d 0
+lss s0_8,"fea","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+meplay 2,17,50
+lss s0_10,"ber","a21_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d68642
+d [lv 0*"28"*"62100427"]`「ふっ、……ふっふふふふふふふ…！`[@][lv 0*"28"*"62100428"]`　任せなさい。`[@][lv 0*"28"*"62100429"]`……ハラワタ引き裂いて、中身を全て引き摺り出すのは私のもっとも得意とするところ。`[@][lv 0*"28"*"62100430"]`………あんたの仕込みだもの」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+lss s0_9,"fea","b11_defo2" ;1
+flush 23
+msgwnd_fea
+*d68643
+d [lv 0*"50"*"65000463"]`「紅茶を淹れよう。`[@][lv 0*"50"*"65000464"]`……魔法でなく、私自らの手でな。`[@][lv 0*"50"*"65000465"]`……主が、巫女に、茶を淹れて進ぜようぞ…」`[\]
+textoff
+waits 167
+skip_off
+wait 500
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+bgmplay2 161,100,1
+lsp 2,"*8"
+flush 1
+vol_bgm 70
+wait 500
+msgwnd_ber
+*d68644
+d2 [lv 0*"28"*"62100431"][ak][text_speed_t 5]`「かつてベアトは私に、紅茶を飲むなら魔女とに限ると言ったわ」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d -1
+lss s0_9,"fea","b11_defo1" ;1
+flush 80
+msgwnd_fea
+*d68645
+d2 [lv 0*"50"*"65000466"][ak][text_speed_t 5]`「我らには、どうやら違うようだな……。`[#][*][|][lv 0*"50"*"65000467"]`……ふ、…ふっふふふふふふふふふふ」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"pumpkin2"
+flush 22
+wait 500
+textoff
+seplay 1,38,90
+textoff
+waits 167
+lbg s0_3,"blood_1ar"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"pumpkin2"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+msgwnd_non
+*d68646
+d2 [ak][text_speed_t 5]`……いつの間にか、……あのビスケットの盛られた餌皿が、`[#][*]`……真っ赤な飛沫を散らせた、引き千切られた生肉の山に戻っている。`[#][*]`いや、肉だけでなく、……腸さえ……。`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d 1
+wait 1667
+d_continue
+wait_on_d 2
+wait 1667
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+wait 100
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 22
+msgwnd_fea
+*d68647
+d2 [lv 0*"50"*"65000468"][ak][text_speed_t 5]`「……紅茶を飲むなら、」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d -1
+textoff
+waits 167
+seplay 1,38,90
+textoff
+waits 167
+lbg s0_3,"blood_1ar"
+flush 22
+wait 500
+lss s0_8,"fea","b12_defo2" ;1
+aspt2 xpos,s0_8,-370
+aspt2 scalex,s0_8,180
+aspt2 scaley,s0_8,180
+aspt2 ypos,s0_8,300
+aspt2 xpos,s0_8,-500
+aspt2 darken_g,s0_8,0
+aspt2 darken_b,s0_8,0
+lss s0_10,"ber","a21_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+aspt2 scalex,s0_10,180
+aspt2 scaley,s0_10,180
+aspt2 ypos,s0_10,400
+aspt2 xpos,s0_10,500
+aspt2 darken_g,s0_10,0
+aspt2 darken_b,s0_10,0
+flush 2
+wait 1500
+msgwnd_non
+*d68648
+d2 [lv 0*"00"*"awase6100_o"][ak][text_speed_t 5]`「「バケモノ同士に限るわ」」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d -1
+vol_bgm 100
+seplay 1,1006,100
+seplay 2,1006,100
+seplay 3,36,100
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+show_glass 0
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+lbg2 s0_3,"end_6b"
+drop_cache "end_6b"
+aspt2 scaley,s0_3,200
+aspt2 ypos,s0_3,20000
+flush 1
+aspt2 ypos,s0_3,-11460,102760
+aspt2 ypos,s0_3,-12000,2907,1
+sptwait2 ypos,s0_3
+wait 1000
+seplay 1,2,100
+seplay 2,1006,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"black"
+show_glass 0
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"white"
+flush 45
+vol_bgm 70
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_8,"ber","a21_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 8
+msgwnd_ber
+*d68649
+d2 [lv 0*"28"*"62100433"][ak][text_speed_t 5]`「………では、駒の準備を始めるわ。`[#][*][|][lv 0*"28"*"62100434"]`通し番号で言うと、第７のゲーム？」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d -1
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_fea
+*d68650
+d2 [lv 0*"50"*"65000470"][ak][text_speed_t 5]`「そうなる。`[#][*][|][lv 0*"50"*"65000471"]`縁起のいい数字だ」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d -1
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d68651
+d2 [lv 0*"28"*"62100435"][ak][text_speed_t 5]`「それはベアトにとってではないわね」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"chess2"
+flush 2
+msgwnd_non
+*d68652
+d2 [ak][text_speed_t 5]`ベルンカステルは、……ゆっくりと、黒い駒を摘み上げる。`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d -1
+*d68653
+d2 [ak][text_speed_t 5]`それは、……ベアトリーチェを意味する駒。`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d -1
+*d68654
+d2 [ak][text_speed_t 5]`時にキングでありクイーンでありナイトにもなれる。`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d -1
+*d68655
+d2 [ak][text_speed_t 5]`……しかしそれは、プロモーションを迎えればの話。`[#][*]`{n}それまでは、ポーンにも等しい、クズ駒だ。`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d 1
+wait 1667
+d_continue
+wait_on_d -1
+*d68656
+d2 [ak][text_speed_t 5]`まずは、駒の配置。`[#][*]`もうこの時点から、魔女のゲームは幕を開けている。`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d 1
+wait 1667
+d_continue
+wait_on_d -1
+*d68657
+d2 [ak][text_speed_t 5]`そしてベルンカステルは、ベアトの駒を、………ゆっくりと振り上げる。`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d -1
+textoff
+waits 167
+wait 500
+seplay 1,20,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 6
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_ber
+*d68658
+d2 [lv 0*"28"*"62100436"][ak][text_speed_t 5]`「初手、配置。`[#][*][|][lv 0*"28"*"62100437"]`ｄ８ベアトリーチェ」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d -1
+seplay 1,66,100
+seplay 2,66,100
+textoff
+waits 167
+lbg s0_3,"chess2"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 3,36,100
+seplay 2,57,100
+seplay 1,46,100
+textoff
+waits 167
+bg #4a1010,0
+lbg s0_3,"ep2_text"
+flush 1
+agpt quakeycycle,100
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+wait 3000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+skip_on
+wait 1000
+wait 3000
+textoff
+waits 167
+lbg s0_3,"black"
+bg black,0
+flush 22
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+ch_done flag_scenario_6_ura
+*ura_6_end
+goto *end_game
+

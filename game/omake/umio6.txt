@@ -1,0 +1,107 @@
+*o_chiru_start
+wait 1000
+vol_bgm -1,3000
+wait 3000
+if %omake_level > 1 goto *omake_chiru_menu
+meplay 1,13,71
+meplay 2,14,71
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+lbg s0_3,"forest_p1an"
+flush 2
+wait 4000
+lbg s0_12,"black"
+flush 3
+waits 167
+csp_slot s0_12
+lbg s0_3,"forest_p1bn"
+flush 3
+wait 3000
+lbg s0_12,"black"
+flush 3
+waits 167
+csp_slot s0_12
+lbg s0_3,"forest_p2an"
+flush 3
+wait 3000
+msgwnd_non
+*o6_0
+d `Hmm...`[@]` Looks like there is absolutely nothing here.`[@]` ......At all.`[\]
+textoff
+waits 167
+lbg s0_12,"black"
+flush 3
+waits 167
+csp_slot s0_12
+lbg s0_3,"forest_p3bn"
+wait 3000
+if $flag_scenario_5_ura == "●" && %omake_level == 0 jumpf
+rain_style 1
+aspt alpha,s0_11,200
+aspt darken_r,s0_11,245
+aspt darken_g,s0_11,100
+aspt darken_b,s0_11,30
+aspt alpha,s0_7,160
+aspt darken_r,s0_7,245
+aspt darken_g,s0_7,100
+aspt darken_b,s0_7,30
+rain_params s0_11,500,1000,0
+rain_params s0_7,500,1000,0
+vol_me 1,100,1000
+vol_me 2,100,1000
+~
+flush 3
+wait 5000
+*o6_1
+d `This rain is getting harder.`[@]` I'd better return to the mansion...`[\]
+textoff
+wait 3000
+; If no ura, skip!
+if $flag_scenario_5_ura != "●" goto *o_chiru_pre_end
+*o6_2
+d `.....................?`[\]
+textoff
+waits 167
+vol_me 1,50,1000
+vol_me 2,50,1000
+wait 1000
+seplay 1,22,71
+anim s0_17,"no81",1
+flush 1
+waitvideo
+csp_slot s0_17
+wait 3000
+vol_me 1,71,1000
+vol_me 2,71,1000
+flush 2
+wait 1000
+*o6_3
+d2 `Huh?`[#][*]` What is that...?`[\]
+wait_on_d 0
+seplay 2,31,71
+d_continue
+wait_on_d -1
+set_window_simple 80
+*o6_4
+d2 `"High‐explosive armor‐piercing {p:41:{f:5:golden bullets}}.`[#][*][@]`{n}They profane science, but are effective for making peppered rabbit.`[@]`{n}Use these toys intelligently when in need"...`[\]
+wait_on_d 0
+seplay 9,1062,100
+d_continue
+wait_on_d -1
+textoff
+set_name_window_non
+*o6_5
+d `I can think of a use for these.`[@]` Time to dance a rondo with some bunny girls...`[\]
+textoff
+wait 3000
+if %omake_level = 0 mov %omake_level,1
+*o_chiru_pre_end
+vol_mix_fade 2000
+csp_slot s0_11
+csp_slot s0_7
+lbg s0_3,"black"
+flush 5
+goto *o_chiru_end

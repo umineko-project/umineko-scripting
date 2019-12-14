@@ -1,0 +1,2515 @@
+*umi8_1
+;六軒島へ
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_8_1
+mov $name_chapter_save, "8_01"
+~
+new_chapter date_scenario_8_1,scenario_8_1
+gstc 79
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+meplay 5,16,50
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+wait 5000
+meplay 1,2,0
+vol_me 1,70,3000
+wait 3000
+vol_me 5,-1,1000
+meplay 2,4,100
+bgmplay 3,71,0
+agpt quakeycycle,50
+agpt quakeyamp,50,500
+agpt quakexcycle,33
+agpt quakexamp,10,500
+rumble 100,1000
+textoff
+waits 167
+lbg s0_3,"sea_1a"
+flush 1
+gptwait quakeyamp ;missed 500
+msgwnd_but
+*d56852
+d [lv 0*"10"*"80100069"]`「のわぁあああああぁああぁあ！！`[@][lv 0*"10"*"80100070"]`　落ちる落ちる落ちるぅうううぅぅッ！！！」`[\]
+msgwnd_non
+*d56853
+d `六軒島へ向かう川畑船長の連絡船は、今日も快速、絶好調だった。`[\]
+textoff
+waits 167
+lbg s0_3,"white"
+flush 22
+agpt quakeyamp,0
+agpt quakexamp,0
+gptwait quakexamp
+gptwait quakeyamp
+vol_bgm 70,1000
+vol_me 1,50,1000
+vol_me 2,50,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"sky_1b"
+flush 22
+*d56854
+d `そう。`[@]`１９８６年１０月４日の物語はいつだって、騒がしい戦人の声から幕を開けるのだ。`[\]
+*d56855
+d `でも、それがいつもと一つだけ違うところがある。`[@]`{n}戦人の大騒ぎに、もう一つの大騒ぎが重なっているのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d56856
+d `戦人のそれは悲鳴。`[@]`{n}もう一つのそれは、大はしゃぎ？`[\]
+agpt quakeycycle,167
+agpt quakeyamp,50,500
+agpt quakexcycle,333
+agpt quakexamp,10,500
+rumble 100,1000
+textoff
+waits 167
+lbg s0_3,"ship_s2a"
+lss s0_10,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 1
+gptwait quakeyamp ;missed 500
+msgwnd_but
+*d56857
+d2 [lv 0*"10"*"80100071"]`「落ちる落ちる落ちるぅううぅうう！！`[#][*][@][lv 0*"10"*"80100072"]`　あひぃよぉおおおおぉおぉお…！！」`[\]
+wait_on_d 0
+d_continue
+wait_on_d -1
+gstc 80
+seplay 9,1060,71
+seplay 1,48,71
+lss s0_9,"en2","a14_defo1f" ;1
+flush 26
+msgwnd_enj
+*d56858
+d [lv 0*"11"*"82000041"]`「面白い面白い面白いぃーー！！`[@][lv 0*"11"*"82000042"]`　きゃっきゃ、きゃっきゃきゃっきゃ！！」`[\]
+lss s0_8,"mar","a22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+seplay 1,48,71
+msgwnd_mar
+*d56859
+d [lv 0*"13"*"80400001"]`「戦人、変なカオ、変なカオ！！`[@][lv 0*"13"*"80400002"]`　きゃっきゃ、きゃっきゃきゃっきゃ！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+agpt quakeycycle,1000
+agpt quakeyamp,40,500
+agpt quakexcycle,1333
+agpt quakexamp,10,500
+rumble 39,1000
+textoff
+waits 167
+lbg s0_3,"ship_s2b"
+flush 22
+gptwait quakeyamp ;missed 500
+msgwnd_non
+*d56860
+d `手すりにしがみ付き、いい年をしてぎゃーぎゃー喚く兄と、`[@]`同じく手すりにしがみ付き、まるで遊園地で遊ぶかのようにはしゃぐ妹たちの対比に、譲治たちは思わず噴き出さずにはいられない。`[\]
+lss s0_10,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_geo
+*d56861
+d [lv 0*"07"*"80300001"]`「６年を経ても、戦人くんは本当に賑やかだねぇ」`[\]
+lss s0_9,"jes","a11_defo1" ;1
+flush 24
+msgwnd_jes
+*d56862
+d [lv 0*"04"*"80200001"]`「縁寿も真里亞も、今年は一際賑やかだぜ」`[\]
+lss s0_10,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_geo
+*d56863
+d [lv 0*"07"*"80300002"]`「いとこ５人が全員揃うのって、ひょっとしてこれが初めて？」`[\]
+csp_slot s0_9
+lss s0_8,"jes","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_jes
+*d56864
+d [lv 0*"04"*"80200002"]`「あれ、そうかな？`[@][lv 0*"04"*"80200003"]`　なるほどね。`[@][lv 0*"04"*"80200004"]`今年はこれまでになく、最高に賑やかってわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+agpt quakeycycle,167
+agpt quakeyamp,50,500
+agpt quakexcycle,333
+agpt quakexamp,10,500
+rumble 100,1000
+waits 167
+textoff
+waits 167
+lbg s0_3,"ship_s2a"
+lss s0_10,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+gptwait quakeyamp ;missed 500
+msgwnd_but
+*d56865
+d [lv 0*"10"*"80100073"]`「じょ、譲治の兄貴ぃいいぃ！！`[@][lv 0*"10"*"80100074"]`　これ、速すぎねぇかぁ？！`[@][lv 0*"10"*"80100075"]`　頼むよ、船の人に言って、スピードを下げてもらってくれぇ！！」`[\]
+seplay 1,47,71
+lss s0_9,"mar","a22_warai2" ;1
+flush 26
+msgwnd_mar
+*d56866
+d [lv 0*"13"*"80400003"]`「きっひはははははは！`[@][lv 0*"13"*"80400004"]`　こんなので速すぎなんて、戦人情けない、戦人情けない！」`[\]
+seplay 2,48,71
+lss s0_8,"en2","a14_defo1f" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+msgwnd_enj
+*d56867
+d [lv 0*"11"*"82000043"]`「縁寿、もっと速いのがいい！！`[@][lv 0*"11"*"82000044"]`　もっともっと！`[@][lv 0*"11"*"82000045"]`　きゃっきゃっきゃ！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+agpt quakeyamp,0
+agpt quakexamp,0
+gptwait quakexamp
+gptwait quakeyamp
+textoff
+waits 167
+lbg s0_3,"sky_1b"
+flush 26
+msgwnd_but
+*d56868
+d [lv 0*"10"*"80100076"]`「これ以上速くなったら、お兄ちゃん、船から落ちちゃうぞ？！`[@][lv 0*"10"*"80100077"]`　いいのか、落ちて？！`[@][lv 0*"10"*"80100078"]`　落ちるぅううぅううぅうぅぅ！！」`[\]
+msgwnd_geo
+*d56869
+d [lv 0*"07"*"80300003"]`「ははは。`[@][lv 0*"07"*"80300004"]`多数決の結果、戦人くんの速度を下げるという提案は、」`[\]
+msgwnd_jes
+*d56870
+d [lv 0*"04"*"80200005"]`「却下みてぇだぜ？`[@][lv 0*"04"*"80200006"]`　あっははははははは」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 24
+agpt quakeycycle,167
+agpt quakeyamp,50,500
+agpt quakexcycle,333
+agpt quakexamp,10,500
+rumble 100,1000
+textoff
+waits 167
+lbg s0_3,"ship_s2a"
+lss s0_8,"en2","a14_defo1f" ;1
+aspt2 xpos,s0_8,-370
+lss s0_9,"but","b22_odoroki2" ;1
+z_order_override2 s0_9,s0_7
+flush 1
+lss s0_8,"en2","a11_defo1a" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+gptwait quakeyamp ;missed 500
+msgwnd_enj
+*d56871
+d [lv 0*"11"*"82000046"]`「ほらほら、お兄ちゃん、落ちちゃうよ落ちちゃうよ？`[@][lv 0*"11"*"82000047"]`　あっはははははは！！」`[\]
+lss s0_10,"mar","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d56872
+d2 [lv 0*"13"*"80400005"]`「怖がりの戦人はくすぐりの刑だー！！`[@][#][*][lv 0*"13"*"80400006"]`　きっひひひひひー！！」`[\]
+wait_on_d 0
+seplay 1,48,71
+wait 100
+seplay 2,48,71
+d_continue
+wait_on_d -1
+lss s0_9,"but","b11_komaru1" ;1
+z_order_override2 s0_9,s0_7
+flush 80
+msgwnd_but
+*d56873
+d2 [lv 0*"10"*"80100079"]`「よ、よせやめろ、真里亞！！`[@][#][*][lv 0*"10"*"80100080"]`　縁寿もやめろッ！`[@][#][*][lv 0*"10"*"80100081"]`　ら、らめぇえええぇええぇええぇぇ！！」`[\]
+wait_on_d 0
+seplay 1,48,71
+wait 50
+seplay 2,48,71
+wait 50
+seplay 2,48,71
+d_continue
+wait_on_d 1
+seplay 1,48,71
+wait 100
+seplay 2,48,71
+wait 100
+seplay 1,48,71
+wait 100
+seplay 2,3,71
+lss s0_9,"but","b22_odoroki2" ;1
+z_order_override2 s0_9,s0_7
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+agpt quakeycycle,1000
+agpt quakeyamp,40,500
+agpt quakexcycle,1333
+agpt quakexamp,10,500
+rumble 39,1000
+textoff
+waits 167
+lbg s0_3,"ship_s2b"
+lss s0_10,"kir","a11_komaru1" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"rud","a11_defo1" ;1
+flush 24
+lss s0_10,"kir","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+gptwait quakeyamp ;missed 500
+msgwnd_kir
+*d56874
+d [lv 0*"09"*"81300001"]`「よかった。`[@][lv 0*"09"*"81300002"]`縁寿の体調、心配だったんだけど」`[\]
+lss s0_9,"rud","a13_defo2" ;1
+flush 80
+msgwnd_rud
+*d56875
+d [lv 0*"08"*"81200001"]`「ひとりだけ留守番じゃ気の毒だしな。`[@][lv 0*"08"*"81200002"]`無理にでも連れてきて良かったぜ」`[\]
+lss s0_8,"eva","b11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_eva
+*d56876
+d [lv 0*"05"*"81000001"]`「直前に大きく体調を崩したって聞いてたけれど？」`[\]
+lss s0_10,"kir","a11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_kir
+*d56877
+d [lv 0*"09"*"81300003"]`「それが今朝になったらケロリよ。`[@][lv 0*"09"*"81300004"]`子供って本当にすごいわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"ship_s2a"
+lss s0_10,"hid","a11_odayaka1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_hid
+*d56878
+d [lv 0*"06"*"81100001"]`「緊張が体調に出るタイプなんやろな！`[@][lv 0*"06"*"81100002"]`　そういうのは、いざ当日を迎えるとけろっと治ることもあるもんや」`[\]
+lss s0_8,"ros","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_ros
+*d56879
+d [lv 0*"12"*"81400001"]`「いとこ５人ではしゃぐのが、楽しくて楽しくて仕方ないんでしょうね」`[\]
+lss s0_24,"kum","a11_warai1" ;1
+flush 24
+msgwnd_kum
+*d56880
+d [lv 0*"18"*"81800001"]`「ほっほっほ。`[@][lv 0*"18"*"81800002"]`子供たちが楽しそうにしているのを見ていると、こっちまで元気になってきますねぇ」`[\]
+msgwnd_non
+*d56881
+d `子供たちの大はしゃぎを眺めながら、大人たちは微笑み合う。`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 22
+agpt quakeyamp,0
+agpt quakexamp,0
+gptwait quakexamp
+gptwait quakeyamp
+textoff
+waits 167
+lbg s0_3,"sky_1b"
+flush 22
+*d56882
+d `体調を大きく崩し、一時は欠席を予告されていた縁寿は、奇跡的に体調を回復。`[\]
+*d56883
+d `本人の強い希望もあり、親族会議についてきたのだった。`[\]
+*d56884
+d `こうして。`[\]
+*d56885
+d `いとこ５人が、初めて同時に揃う。`[@]`{n}初めての、１９８６年１０月４日となった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+vol_mix_fade 1000
+wait 1000
+bgmplay 8,71,0
+textoff
+waits 167
+wait 1500
+textoff
+waits 167
+lbg s0_3,"beach_1a"
+flush 22
+wait 1500
+textoff
+waits 167
+lbg s0_3,"beach_s1a"
+flush 22
+wait 1500
+textoff
+waits 167
+lbg s0_3,"beach_s2a"
+flush 22
+wait 1500
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"forest_p1a"
+flush 22
+wait 1500
+textoff
+waits 167
+lbg s0_3,"forest_s1ac"
+flush 22
+*d56886
+d `船着場から薔薇庭園へ至る道を、子供たちが駆け上っていく。`[\]
+*d56887
+d `元気盛りの彼らには、もはやのんびり歩くことすら退屈なのだろう。`[\]
+seplay 1,3,71
+textoff
+waits 167
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"rose_1ac"
+flush 26
+lss s0_9,"but","b11_warai1" ;1
+flush 25
+seplay 1,13,50
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_but
+*d56888
+d [lv 0*"10"*"80100082"]`「わっはははは！`[@][lv 0*"10"*"80100083"]`　見たかー！`[@][lv 0*"10"*"80100084"]`　一番〜！」`[\]
+msgwnd_non
+*d56889
+d `ゴールの薔薇庭園に、一番で飛び込んだのは戦人だった。`[\]
+*d56890
+d `船での汚名を返上するため、陸の上では負けないとばかりに張り切ったようだ。`[\]
+*d56891
+d `だいぶ遅れて、縁寿と真里亞がデッドヒートを繰り広げながら辿り着く。`[\]
+textoff
+waits 167
+seplay 2,3,71
+lss s0_8,"mar","a22_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+waits 167
+seplay 1,3,71
+lss s0_10,"en2","a14_defo2a" ;1
+aspt2 xpos,s0_10,550
+flush 24
+lss s0_8,"mar","a22_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_mar
+*d56892
+d [lv 0*"13"*"80400007"]`「真里亞が２番ー！！`[@][lv 0*"13"*"80400008"]`　縁寿より速い〜、うーうーうー！！」`[\]
+csp_slot s0_10
+lss s0_23,"en2","b11_defo4b" ;1
+aspt2 xpos,s0_23,550
+flush 1
+seplay 1,13,50
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_enj
+*d56893
+d [lv 0*"11"*"82000048"]`「違うよ、真里亞お姉ちゃんはズルしたもん！！`[@][lv 0*"11"*"82000049"]`　縁寿が２番だもんー！！」`[\]
+csp_slot s0_23
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"sky_1b"
+flush 26
+msgwnd_non
+*d56894
+d `育ち盛りの年頃で、縁寿と真里亞の３つの歳の差は大きい。`[\]
+*d56895
+d `真里亞の方が速いのは当り前なのだが、スタートの時に肩がぶつかった云々で、縁寿は納得が行かないようだった。`[\]
+*d56896
+d `真里亞お姉ちゃんはズルをしたからビリ！`[@]`　学校の先生がズルしたらビリだって言ってたもん！　と抗議している。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"garden_1cc"
+lss s0_8,"jes","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_jes
+*d56897
+d [lv 0*"04"*"80200007"]`「ほらほら、喧嘩するなって。`[@][lv 0*"04"*"80200008"]`それにしても、二人とも本当に速ぇなぁ…！」`[\]
+lss s0_10,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_geo
+*d56898
+d [lv 0*"07"*"80300005"]`「こんなに走ったのはずいぶん久しぶりだよ……。`[@][lv 0*"07"*"80300006"]`あぁ、風が気持ちいいね」`[\]
+lss s0_9,"but","b11_warai2" ;1
+flush 24
+msgwnd_but
+*d56899
+d [lv 0*"10"*"80100085"]`「譲治の兄貴は運動不足じゃねぇのー？`[@][lv 0*"10"*"80100086"]`　毎朝の遅刻レースに鍛えられてりゃ、誰だって足腰は強くなるもんだぜー？」`[\]
+lss s0_10,"geo","a23_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_geo
+*d56900
+d [lv 0*"07"*"80300007"]`「つまり、その足の速さは朝寝坊の証ってわけだね」`[\]
+csp_slot s0_10
+flush 24
+lss s0_10,"en2","a15_defo1b" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_enj
+*d56901
+d [lv 0*"11"*"82000050"]`「お兄ちゃんはお寝坊なの！`[@][lv 0*"11"*"82000051"]`　今朝も起きなかったから、縁寿が起こしたんだよ！`[@][lv 0*"11"*"82000052"]`　ねー！」`[\]
+lss s0_9,"but","b11_aseru1" ;1
+flush 80
+msgwnd_but
+*d56902
+d [lv 0*"10"*"80100087"]`「ストンピングからフライングエルボー。`[@][lv 0*"10"*"80100088"]`最後のトップロープからのボディプレスは強烈だったな」`[\]
+lss s0_8,"jes","a11_atya3" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_jes
+*d56903
+d [lv 0*"04"*"80200009"]`「起きるどころか、永遠に起きれなくなりそうな目覚めだぜ…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"rose_1ac"
+lss s0_24,"mar","a22_warai2" ;1
+flush 24
+msgwnd_mar
+*d56904
+d [lv 0*"13"*"80400009"]`「面白そう！`[@][lv 0*"13"*"80400010"]`　真里亞もやる、真里亞もやる！」`[\]
+lss s0_23,"en2","a11_defo1e" ;1
+aspt2 xpos,s0_23,550
+flush 24
+msgwnd_enj
+*d56905
+d [lv 0*"11"*"82000053"]`「お兄ちゃん、きっと明日も寝坊するよ！`[@][lv 0*"11"*"82000054"]`　今度は真里亞お姉ちゃんと一緒に起こすよ、きゃっきゃ、きゃっきゃ！」`[\]
+textoff
+waits 167
+seplay 1,47,71
+aspt2 ypos,s0_24,-20,167
+aspt2 ypos,s0_23,-20,167
+sptwait2 ypos,s0_24
+wait 17
+aspt2 ypos,s0_24,0,167
+aspt2 ypos,s0_23,0,167
+sptwait2 ypos,s0_24
+wait 17
+seplay 1,47,71
+aspt2 ypos,s0_24,-20,167
+aspt2 ypos,s0_23,-20,167
+sptwait2 ypos,s0_24
+wait 17
+aspt2 ypos,s0_24,0,167
+aspt2 ypos,s0_23,0,167
+sptwait2 ypos,s0_24
+wait 17
+lss s0_8,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_geo
+*d56906
+d [lv 0*"07"*"80300008"]`「……今夜は、夜更かしは大概にした方が良さそうだね」`[\]
+csp_slot s0_24
+csp_slot s0_23
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"rose_1ec"
+flush 22
+wait 1000
+textoff
+waits 167
+lbg s0_3,"forest_s1a"
+flush 22
+wait 1000
+msgwnd_non
+*d56907
+d `ようやく、大人たちがやって来るのが見える。`[\]
+*d56908
+d `いとこたちが、早く早くと手を振る。`[@]`{n}縁寿と真里亞は、待ちきれなくて興奮しているようだった。`[\]
+*d56909
+d `いとこが５人揃うだけで。`[@]`{n}縁寿がただ加わるだけで。`[\]
+*d56910
+d `今日という日は、ここまで賑やかになるのだった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"m_o1ac"
+flush 2
+bgmplay 2,71,0
+wait 2000
+textoff
+waits 167
+lbg s0_1,"ment_1b_bg"
+lbg s0_3,"ment_1b"
+flush 2
+wait 1000
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+seplay 1,19,71
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mdin_1a"
+flush 22
+lss s0_10,"sha","a11_tokui1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_sha
+*d56911
+d [lv 0*"15"*"80500001"]`「失礼いたします。`[@][lv 0*"15"*"80500002"]`親族の皆様方が、ご到着いたしました」`[\]
+lss s0_8,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d56912
+d [lv 0*"02"*"80800001"]`「無事に着いたかね。`[@][lv 0*"02"*"80800002"]`では、私は親父殿に伝えてくるとしよう」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"nat","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_nat
+*d56913
+d [lv 0*"03"*"80900001"]`「皆さんは、今はゲストハウスに？」`[\]
+lss s0_9,"kan","a11_warai3" ;1
+flush 24
+msgwnd_kan
+*d56914
+d [lv 0*"16"*"80600001"]`「はい。`[@][lv 0*"16"*"80600002"]`荷物を置かれましたら、こちらへ挨拶に来られるとのことです」`[\]
+lss s0_8,"nat","a11_majime2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_nat
+*d56915
+d [lv 0*"03"*"80900002"]`「わかりました。`[@][lv 0*"03"*"80900003"]`嘉音は皆さんのご案内を。`[@][lv 0*"03"*"80900004"]`紗音は紅茶の準備を急ぐように」`[\]
+lss s0_10,"sha","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"kan","a12_nayamu1" ;1
+flush 80
+msgwnd_non
+*d56916
+d [lv 0*"00"*"awase8001"]`「「畏まりました、奥様」」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_1,"m2f_p1c_bg"
+lbg s0_3,"m2f_p1c"
+flush 2
+wait 1000
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+seplay 1,19,71
+wait 1000
+msgwnd_cla
+*d56917
+d [lv 0*"02"*"80800003"]`「お父さん。蔵臼です。`[@][lv 0*"02"*"80800004"]`そろそろご準備をお願いします」`[\]
+seplay 1,17,71
+textoff
+waits 167
+lbg s0_1,"mlib_1b_bg"
+lbg s0_3,"mlib_1b"
+flush 50
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_non
+*d56918
+d `ノックしながらそう告げると、内側からがちゃりと扉が開いた。`[\]
+lss s0_10,"cla","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_cla
+*d56919
+d [lv 0*"02"*"80800005"]`「おや、南條先生。`[@][lv 0*"02"*"80800006"]`親父殿は」`[\]
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_nan
+*d56920
+d [lv 0*"19"*"81900001"]`「ご安心を。`[@][lv 0*"19"*"81900002"]`もう着替えておりますぞ。`[@][lv 0*"19"*"81900003"]`ただ、少し緊張されているようですな」`[\]
+lss s0_24,"kin","a11_ikari1" ;1
+flush 1
+seplay 1,7,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+seplay 2,13,71
+msgwnd_kin
+*d56921
+d [lv 0*"01"*"81500001"]`「誰が緊張しているというのかッ！！`[@][lv 0*"01"*"81500002"]`　えぇい、お気に入りの片翼のネクタイピンが見つからぬ！`[@][lv 0*"01"*"81500003"]`　だからいつも夏妃に言っているのだ！`[@][lv 0*"01"*"81500004"]`　勝手に物の場所を動かすなと…！」`[\]
+textoff
+waits 167
+csp_slot s0_24
+flush 24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"mlib_1a_bg"
+lbg s0_3,"mlib_1a"
+flush 24
+msgwnd_non
+*d56922
+d `金蔵はネクタイ１本、ネクタイピン１つ選ぶだけで、さっきから大騒ぎらしかった。`[\]
+*d56923
+d `当主としての威厳を何よりも重んじる金蔵は、その身形も相応しくあるべきだと、いつも大騒ぎしているのだ。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+seplay 1,13,50
+wait 500
+seplay 2,12,30
+waits 167
+seplay 3,13,70
+wait 500
+seplay 1,13,50
+wait 500
+seplay 2,12,30
+waits 167
+seplay 3,13,70
+textoff
+waits 167
+lbg s0_1,"mlib_1b_bg"
+lbg s0_3,"mlib_1b"
+flush 22
+lss s0_8,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d56924
+d [lv 0*"02"*"80800007"]`「……何とかなりそうですかな？」`[\]
+lss s0_10,"nan","a2_fumu1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nan
+*d56925
+d [lv 0*"19"*"81900004"]`「もうしばらく時間をいただけますかな。`[@][lv 0*"19"*"81900005"]`準備が出来たら下へ参りますので」`[\]
+lss s0_8,"cla","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_cla
+*d56926
+d [lv 0*"02"*"80800008"]`「わかりました。`[@][lv 0*"02"*"80800009"]`南條先生、よろしくお願いします。`[@][lv 0*"02"*"80800010"]`……お父さん。`[@][lv 0*"02"*"80800011"]`そのネクタイピンでも、よく似合っていますよ」`[\]
+lss s0_24,"kin","a11_majime1" ;1
+flush 1
+seplay 1,7,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+wait 333
+lss s0_24,"kin","a11_naku2" ;1
+flush 1
+seplay 2,13,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+msgwnd_kin
+*d56927
+d [lv 0*"01"*"81500005"]`「そのネクタイピンとは何か、“その”とは！！`[@][lv 0*"01"*"81500006"]`　年に一度しかない親族会議の日であるぞ！`[@][lv 0*"01"*"81500007"]`　えぇい妥協など許せんぞ、あのネクタイピンでなくては駄目だ！`[@][lv 0*"01"*"81500008"]`　どこだどこだどこだ…！！」`[\]
+textoff
+waits 167
+seplay 2,3,71
+seplay 1,47,71
+aspt2 xpos,s0_24,1500,500
+sptwait2 xpos,s0_24
+waits 167
+seplay 2,48,71
+lss s0_9,"kin","a11_ikari1" ;1
+aspt2 xpos,s0_9,1500
+z_order_override2 s0_9,s0_7
+flush 1
+aspt2 xpos,s0_9,-1500,833
+sptwait2 xpos,s0_9
+seplay 3,47,71
+lss s0_9,"kin","a11_naku2" ;1
+aspt2 ypos,s0_9,4000
+z_order_override2 s0_9,s0_11
+aspt2 scalex,s0_9,200
+aspt2 scaley,s0_9,200
+flush 1
+aspt2 ypos,s0_9,1000,1667
+sptwait2 ypos,s0_9
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_nan
+*d56928
+d [lv 0*"19"*"81900006"]`「金蔵さん、その引き出しはさっき調べたでしょうが……。`[@][lv 0*"19"*"81900007"]`それに、素晴らしいネクタイピンをいくつもお持ちのはずだ。`[@][lv 0*"19"*"81900008"]`今日というお日柄に合わせて、相応しいものをセレクトするのも、お洒落の見せ所ですぞ」`[\]
+textoff
+waits 167
+aspt2 ypos,s0_9,4000,833
+sptwait2 ypos,s0_9
+csp_slot s0_9
+flush 10,167
+lss s0_24,"kin","a11_defo1" ;1
+flush 26
+seplay 1,4,50
+lss s0_24,"kin","a11_warai2" ;1
+flush 1
+msgwnd_kin
+*d56929
+d [lv 0*"01"*"81500009"]`「う〜む、そうであるか？`[@][lv 0*"01"*"81500010"]`　片翼の鷲じゃなくても良いのか…？`[@][lv 0*"01"*"81500011"]`　うむむむむ……」`[\]
+lss s0_8,"cla","a11_nayamu2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_non
+*d56930
+d `金蔵をなだめる南條を見ながら。`[@]`蔵臼はどうしてこの人が自分の母親でなかったのか、理解に苦しむのだった。`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"mlib_1c_bg"
+lbg s0_3,"mlib_1c"
+flush 22
+*d56931
+d `まぁ、いつものことだ。`[\]
+*d56932
+d `こうして、見えないところでは大騒ぎしながらも、本番になればバッチリ決めてみせる。`[\]
+*d56933
+d `遅くともランチまでには必ず降りてくるようにお願いしますと南條に伝え、蔵臼はそっと書斎を出る…。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+wait 3000
+textoff
+waits 167
+lbg s0_1,"mkit_1a_bg"
+lbg s0_3,"mkit_1a"
+flush 2
+wait 1000
+lss s0_10,"goh","a11_omakase2" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_goh
+*d56934
+d [lv 0*"17"*"81700001"]`「どうです？　いい香りでしょう！`[@][lv 0*"17"*"81700002"]`　そして珍しいでしょう！」`[\]
+lss s0_8,"sha","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_sha
+*d56935
+d [lv 0*"15"*"80500004"]`「パンプキンティーなんて、初めて飲みました…。`[@][lv 0*"15"*"80500005"]`ほんのり甘くて美味しいですね」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mkit_1c"
+flush 22
+msgwnd_non
+*d56936
+d `客人たちに振舞う予定の紅茶を、郷田は先に紗音に振舞っていた。`[\]
+*d56937
+d `紗音はそれまで、使用人たる者は、家人や客人と同じ物を口にするなどとんでもないと思っていた。`[\]
+*d56938
+d `しかし、郷田に言わせるとそれは違うらしい。`[\]
+lss s0_10,"goh","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_goh
+*d56939
+d [lv 0*"17"*"81700003"]`「お客様にお出しする物を、味も知らずに出すことは出来ません。`[@][lv 0*"17"*"81700004"]`……例えば、訪れたレストランで。`[@][lv 0*"17"*"81700005"]`初めて知る料理に興味を持った時、ウェイターを呼び止めたならこう聞くでしょう？`[@][lv 0*"17"*"81700006"]`　この料理はどんな味ですか、と」`[\]
+lss s0_8,"sha","a11_tokui1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_sha
+*d56940
+d [lv 0*"15"*"80500006"]`「そうですね…。`[@][lv 0*"15"*"80500007"]`そこで、食べたことがないから知りませんでは、何だかおかしな話ですものね……」`[\]
+lss s0_10,"goh","a11_omakase2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_goh
+*d56941
+d [lv 0*"17"*"81700007"]`「そういうことです。`[@][lv 0*"17"*"81700008"]`給仕に携る者ならば、お客様にお出しするお茶やお料理の味については、熟知していて当然なのです」`[\]
+lss s0_9,"kum","a11_warai1" ;1
+flush 24
+msgwnd_kum
+*d56942
+d [lv 0*"18"*"81800003"]`「ほっほっほっほ。`[@][lv 0*"18"*"81800004"]`それに、自分で飲んで美味しかったお茶なら、お出しする時にも、自然と嬉しくなってしまうものですしねぇ」`[\]
+lss s0_8,"sha","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_sha
+*d56943
+d [lv 0*"15"*"80500008"]`「その通りですね。`[@][lv 0*"15"*"80500009"]`こんな美味しいお茶なら、ぜひ皆さんにも飲んでもらいたいって気持ちになります」`[\]
+seplay 1,4,50
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+csp_slot s0_9
+textoff
+waits 167
+csp_slot s0_22
+lss s0_24,"kum","a11_defo2" ;1
+flush 22
+msgwnd_kum
+*d56944
+d [lv 0*"18"*"81800005"]`「だからこそ！`[@][lv 0*"18"*"81800006"]`　私たち使用人は、あらゆるお料理の味に熟知しなければならないのです。`[@][lv 0*"18"*"81800007"]`だから私が、ひょいと摘み食いをしてしまったとしても、それも使用人の務め務め…、ほっほっほ」`[\]
+lss s0_10,"goh","a11_omakase1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_goh
+*d56945
+d [lv 0*"17"*"81700009"]`「役得であり、仕事であるわけです。`[@][lv 0*"17"*"81700010"]`わかりましたか？」`[\]
+lss s0_8,"sha","a11_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_sha
+*d56946
+d [lv 0*"15"*"80500010"]`「はいっ」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mkit_1a_bg"
+lbg s0_3,"mkit_1a"
+flush 24
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_gen
+*d56947
+d [lv 0*"14"*"81600001"]`「……準備ご苦労。`[@][lv 0*"14"*"81600002"]`お茶の方は問題ないか」`[\]
+lss s0_8,"goh","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_goh
+*d56948
+d [lv 0*"17"*"81700011"]`「あぁ、源次さんもぜひ飲んでみて下さい。`[@][lv 0*"17"*"81700012"]`ハロウィンらしく、今日はカボチャの紅茶ですよ」`[\]
+lss s0_10,"gen","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_gen
+*d56949
+d [lv 0*"14"*"81600003"]`「後でもらおう。`[@][lv 0*"14"*"81600004"]`もうじき親族の方々がお屋敷にいらっしゃられる。`[@][lv 0*"14"*"81600005"]`……お子様方もご一緒しそうな雰囲気だ」`[\]
+lss s0_9,"sha","a11_defo1" ;1
+flush 24
+msgwnd_sha
+*d56950
+d [lv 0*"15"*"80500011"]`「はい。`[@][lv 0*"15"*"80500012"]`カップの用意も万全です」`[\]
+textoff
+waits 167
+seplay 1,29,90
+wait 2000
+seplay 1,53,71
+csp_slot s0_10
+flush 80
+msgwnd_non
+*d56951
+d `その時、厨房の内線電話が鳴る。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"mkit_1c"
+flush 23
+*d56952
+d `すぐ近くに立っていた源次は、コール音を二度鳴らせず、素早く受話器を取る。`[\]
+*d56953
+d `紗音たちは源次のそれを、いつも、まるでお侍の居合い斬りみたいだと思っていた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_gen
+*d56954
+d [lv 0*"14"*"81600006"]`「……わかった。`[@][lv 0*"14"*"81600007"]`粗相のないようにご案内を」`[\]
+seplay 1,53,71
+msgwnd_non
+*d56955
+d `短くそう告げ、源次は受話器を置く。`[\]
+textoff
+waits 167
+lbg s0_3,"mkit_1c"
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+wait 500
+lss s0_10,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_gen
+*d56956
+d [lv 0*"14"*"81600008"]`「嘉音からだ。`[@][lv 0*"14"*"81600009"]`今から、親族方がこちらにお出でになる。`[@][lv 0*"14"*"81600010"]`お子様方もご一緒とのことだ。`[@][lv 0*"14"*"81600011"]`紗音と熊沢はお出迎えを。`[@][lv 0*"14"*"81600012"]`郷田は紅茶の準備を急ぐように」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_1,"mkit_1a_bg"
+lbg s0_3,"mkit_1a"
+flush 24
+waits 167
+lss s0_8,"goh","a11_omakase1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"sha","a11_warai2" ;1
+lss s0_10,"kum","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 1
+seplay 1,3,50
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_non
+*d56957
+d [lv 0*"00"*"awase8002"]`「「「はいっ」」」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d56958
+d `使用人たちにとって最大のイベント、親族会議。`[@]`これを今年も結束して乗り越えようと、彼らの士気は上々だった。`[\]
+textoff
+waits 167
+wait 2000
+textoff
+waits 167
+lbg s0_3,"m_o1ac"
+flush 26
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"kan","a12_nayamu1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kan
+*d56959
+d [lv 0*"16"*"80600004"]`「失礼いたします。`[@][lv 0*"16"*"80600005"]`親族の皆様をお連れしました」`[\]
+lss s0_8,"cla","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d56960
+d [lv 0*"02"*"80800012"]`「おぉ、よく来たね。`[@][lv 0*"02"*"80800013"]`道中、問題はなかったかね？」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d56961
+d [lv 0*"05"*"81000002"]`「兄さん、儲けてるんでしょ？`[@][lv 0*"05"*"81000003"]`　そろそろ自家用ジェットを買いなさいよ」`[\]
+lss s0_9,"hid","a21_warai1" ;1
+flush 24
+msgwnd_hid
+*d56962
+d [lv 0*"06"*"81100003"]`「わはははは。`[@][lv 0*"06"*"81100004"]`今回の機内も、右代宮家しかおらんかったからな！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"m1f_s1c"
+lss s0_10,"nat","a12_tukare2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nat
+*d56963
+d [lv 0*"03"*"80900005"]`「縁寿ちゃん。`[@][lv 0*"03"*"80900006"]`来られて良かったですね。`[@][lv 0*"03"*"80900007"]`体調が悪いから欠席するかもしれないと聞いて、心配していたのですよ」`[\]
+lss s0_9,"en2","a11_defo1" ;1
+lss s0_8,"kir","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+lss s0_8,"kir","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_kir
+*d56964
+d [lv 0*"09"*"81300005"]`「ご心配をお掛けしました。`[@][lv 0*"09"*"81300006"]`今朝になったら急に元気になりまして」`[\]
+lss s0_9,"en2","a11_defo1e" ;1
+flush 80
+msgwnd_enj
+*d56965
+d [lv 0*"11"*"82000055"]`「お腹痛いのどっか行っちゃったー！`[@][lv 0*"11"*"82000056"]`　お腹をぐるぐる時計回りにさするの！」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"mar","a22_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_mar
+*d56966
+d [lv 0*"13"*"80400011"]`「うーうー！`[@][lv 0*"13"*"80400012"]`　お腹痛いのが治る、魔法のおまじないなの！」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"ros","a32_nayamu1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_ros
+*d56967
+d [lv 0*"12"*"81400002"]`「こら、真里亞、少し静かにしなさい…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_9,"cla","a11_defo1" ;1
+lss s0_10,"nat","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+lss s0_9,"cla","a11_akuwarai1" ;1
+flush 80
+msgwnd_cla
+*d56968
+d [lv 0*"02"*"80800014"]`「おぉ、そっちは戦人くんかね…！`[@][lv 0*"02"*"80800015"]`　大きくなった！」`[\]
+lss s0_10,"nat","a11_tukare2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_nat
+*d56969
+d [lv 0*"03"*"80900008"]`「６年ぶりですね。`[@][lv 0*"03"*"80900009"]`本当に立派になりました」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"m1f_s1c"
+lss s0_8,"but","b11_aseru1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_but
+*d56970
+d [lv 0*"10"*"80100089"]`「いやぁ……、いっひっひ。`[@][lv 0*"10"*"80100090"]`お陰様で背ばっか伸びまして…」`[\]
+lss s0_10,"jes","b21_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_jes
+*d56971
+d [lv 0*"04"*"80200010"]`「肝っ玉の方は相変わらずみてぇだけどな！」`[\]
+lss s0_9,"geo","a11_warai1" ;1
+flush 24
+msgwnd_geo
+*d56972
+d [lv 0*"07"*"80300009"]`「むしろ、相変わらず戦人くんでいてくれて、僕は安心したけどね」`[\]
+msgwnd_non
+*d56973
+d `わっははははははは。`[@]`体格は立派になっても、やはり戦人は戦人だと、みんな笑い合う。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"m1f_s1d"
+flush 22
+msgwnd_rud
+*d56974
+d [lv 0*"08"*"81200003"]`「こいつは飛行機でも船でも、落ちるの何のと相変わらず賑やかでなぁ」`[\]
+msgwnd_kir
+*d56975
+d [lv 0*"09"*"81300007"]`「明日夢さんの血でしょ？」`[\]
+msgwnd_rud
+*d56976
+d [lv 0*"08"*"81200004"]`「多分アレだぜ。`[@][lv 0*"08"*"81200005"]`こいつが小さい頃、遊園地で激し目なのばっか乗せて回ったからだ」`[\]
+msgwnd_eva
+*d56977
+d [lv 0*"05"*"81000004"]`「身長制限で乗れないんじゃないのぅ？」`[\]
+msgwnd_rud
+*d56978
+d [lv 0*"08"*"81200006"]`「いやいや。`[@][lv 0*"08"*"81200007"]`ティーカップとか、足漕ぎボートとか色々あるだろ？`[@][lv 0*"08"*"81200008"]`　そういうのを、ちょいと激し目に付き合せたのがまずかったみたいだ」`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_8,"ros","a11_komaru3" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_ros
+*d56979
+d [lv 0*"12"*"81400003_b"]`「留弗夫兄さんは、昔からそういうの、やり過ぎる性質だから」`[\]
+lss s0_10,"nat","a11_tukare1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nat
+*d56980
+d [lv 0*"03"*"80900010"]`「それはそれは……。`[@][lv 0*"03"*"80900011"]`可哀想に」`[\]
+lss s0_9,"cla","a11_akuwarai2" ;1
+flush 24
+msgwnd_cla
+*d56981
+d [lv 0*"02"*"80800016"]`「はは、戦人くんには同情するよ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_eva
+*d56982
+d [lv 0*"05"*"81000005"]`「でも安心したわ。`[@][lv 0*"05"*"81000006"]`乗り物嫌いでこそ、戦人くんって感じだものね」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+flush 23
+seplay 1,47,71
+lss s0_9,"en2","a13_defo1b" ;1
+flush 1
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_enj
+*d56983
+d [lv 0*"11"*"82000057"]`「お兄ちゃんは乗り物が嫌いなんじゃないの。`[@][lv 0*"11"*"82000058"]`落ちるから嫌いなのっ」`[\]
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_mar
+*d56984
+d [lv 0*"13"*"80400013"]`「落ちるー落ちるー！！`[@][lv 0*"13"*"80400014"]`　うーうーうー！！」`[\]
+textoff
+waits 167
+seplay 1,3,71
+csp_slot s0_9
+flush 23
+seplay 1,3,71
+csp_slot s0_10
+flush 23
+lss s0_10,"ros","a12_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ros
+*d56985
+d [lv 0*"12"*"81400004"]`「こらっ、走り回らないの…！`[@][lv 0*"12"*"81400005"]`　真里亞！　お姉ちゃんでしょ？`[@][lv 0*"12"*"81400006"]`　お手本を見せなさい！」`[\]
+textoff
+waits 167
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+msgwnd_sha
+*d56986
+d [lv 0*"15"*"80500014"]`「失礼します。`[@][lv 0*"15"*"80500015"]`お茶の配膳に参りました」`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_8,"sha","a11_tokui1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_non
+*d56987
+d `良い香りと共に、紗音が配膳台車を押しながらやって来る。`[\]
+*d56988
+d `はしゃぎ回っていた縁寿と真里亞も、飲食があるとわかれば素直にソファーに座る。`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"m1f_s1c"
+lss s0_8,"rud","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_rud
+*d56989
+d [lv 0*"08"*"81200009"]`「ところで、親父はどうしてんだ？」`[\]
+lss s0_10,"cla","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_cla
+*d56990
+d [lv 0*"02"*"80800017"]`「もうじき降りてくるだろう。`[@][lv 0*"02"*"80800018"]`ネクタイ一本選ぶのに、朝から大騒ぎだよ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_eva
+*d56991
+d [lv 0*"05"*"81000007"]`「相変わらず、当主として威厳ある服装がどうのこうの？」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"ros","a13_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_ros
+*d56992
+d [lv 0*"12"*"81400007"]`「お父さんって、昔からネクタイにはやたらうるさいわよね」`[\]
+lss s0_9,"nat","a11_warai1" ;1
+flush 24
+msgwnd_nat
+*d56993
+d [lv 0*"03"*"80900012"]`「こだわりがあられるのでしょう。`[@][lv 0*"03"*"80900013"]`お洒落なのは良いことです」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"cla","a14_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d56994
+d [lv 0*"02"*"80800019"]`「その割りに、結局いつも同じネクタイで現れるがね」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d56995
+d `親族たちは大笑いする。`[\]
+*d56996
+d `郷田特選のパンプキンティーの良い香りが客間いっぱいに広がり、和やかな空気を一層、盛り上げてくれるのだった。`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"ros","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+lss s0_9,"mar","a22_warai1" ;1
+flush 24
+msgwnd_mar
+*d56997
+d [lv 0*"13"*"80400015"]`「ママ見てママ見て！`[@][lv 0*"13"*"80400016"]`　パンプキンのクッキーだよ、ハロウィンだー！！」`[\]
+lss s0_10,"ros","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_ros
+*d56998
+d [lv 0*"12"*"81400008"]`「あら、本当ね。`[@][lv 0*"12"*"81400009"]`この甘い匂いはカボチャなのかしら？」`[\]
+lss s0_8,"sha","a11_tokui1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_sha
+*d56999
+d [lv 0*"15"*"80500016"]`「はい。`[@][lv 0*"15"*"80500017"]`今日のお紅茶は、珍しいパンプキンのフレーバーなんですよ。`[@][lv 0*"15"*"80500018"]`とっても美味しいですから、最初はぜひストレートで召し上がってみて下さい」`[\]
+csp_slot s0_9
+csp_slot s0_10
+flush 23
+lss s0_9,"kan","a11_nayamu1" ;1
+flush 24
+msgwnd_kan
+*d57000
+d [lv 0*"16"*"80600006"]`「姉さん、袖。`[@][lv 0*"16"*"80600007"]`気を付けて」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"m1f_s1c"
+lss s0_10,"jes","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_jes
+*d57001
+d [lv 0*"04"*"80200011"]`「へー。`[@][lv 0*"04"*"80200012"]`カボチャの紅茶なんてあるんだー。`[@][lv 0*"04"*"80200013"]`郷田さんはよくこんなのを見つけてくるよなー」`[\]
+lss s0_8,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_geo
+*d57002
+d [lv 0*"07"*"80300010"]`「美味しいね。`[@][lv 0*"07"*"80300011"]`なかなかいいよ。`[@][lv 0*"07"*"80300012"]`カボチャの自然な甘味が感じられるね」`[\]
+lss s0_9,"but","b11_defo1" ;1
+flush 24
+msgwnd_but
+*d57003
+d [lv 0*"10"*"80100091"]`「カボチャを紅茶にねぇ。`[@][lv 0*"10"*"80100092"]`でもよ、カボチャと言ったら天ぷらが一番だよな！」`[\]
+csp_slot s0_8
+flush 23
+lss s0_8,"mar","a22_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_mar
+*d57004
+d [lv 0*"13"*"80400017"]`「うー！`[@][lv 0*"13"*"80400018"]`　カボチャじゃないの、パンプキンなのー！」`[\]
+csp_slot s0_10
+flush 24
+lss s0_10,"en2","b11_buu1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_enj
+*d57005
+d [lv 0*"11"*"82000059"]`「パンプキンはカボチャじゃないの！`[@][lv 0*"11"*"82000060"]`　パンプキンなのー！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d57006
+d `真里亞はニュアンスの違いにこだわって言ったようだが、`[@]`縁寿の方は心の底から、パンプキンとカボチャは別の存在だと思っているようだ。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1d"
+flush 22
+*d57007
+d `一同は大笑いするが、縁寿にはなぜ笑われたのかわからず、納得いかない顔で小首を傾げている。`[\]
+*d57008
+d `機嫌を損ねてグズるかと思ったが、真里亞がクッキーゲームなる遊びを教えると、すぐにそれに夢中になってしまった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+*d57009
+d `その時、廊下から、ズカズカズカと踵を効かせた足音が近付いてくるのが聞こえた。`[\]
+*d57010
+d `それが誰の足音であるか察しが付いている親族たちは、ピンと背筋を伸ばす。`[\]
+*d57011
+d `早足な足音は客間の扉の前で一度止まる。`[\]
+*d57012
+d `……まるで、大きく息を吸って、タメを作っているかのような間。`[\]
+*d57013
+d `そして、バーンと破裂するかのように扉を開け、源次と南條を従えた金蔵は開口一番に叫ぶ。`[\]
+seplay 1,16,71
+seplay 2,2,85
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_9,"kin","a12_fumu1" ;1
+flush 2
+wait 2000
+seplay 1,2,100
+seplay 3,27,70
+lss s0_9,"kin","a13_akuwarai1" ;1
+flush 1
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_kin
+*d57014
+d [lv 0*"01"*"81500012"]`「んんんんハッピーハロウィーン！！`[@][lv 0*"01"*"81500013"]`　エぇえぇンド、トリック・オア・トリィイイイイィィートッ！！」`[\]
+bgmplay 3,71,0
+seplay 1,54,71
+seplay 2,2,100
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"m1f_s1c"
+lss s0_8,"jes","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"mar","a22_warai2" ;1
+lss s0_10,"geo","a11k_warai1k" ;1
+aspt2 xpos,s0_10,550
+flush 1
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_non
+*d57015
+d [lv 0*"00"*"awase8003"]`「「「トリック・オア・トリーート！！」」」`[\]
+*d57016
+d `いとこたちも威勢良くそれに応える。`[@]`{n}大人たちは、照れ臭そうに俯きながら応える。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"m1f_s1c"
+lss s0_9,"en2","a11_defo2c" ;1
+flush 22
+*d57017
+d `縁寿だけは、何事かわからず、`[@]`ぽかんと口を開けてしまう。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_9,"kin","a23_akuwarai2" ;1
+flush 24
+msgwnd_kin
+*d57018
+d [lv 0*"01"*"81500014"]`「よくぞ来たぞ、我が孫たち！！`[@][lv 0*"01"*"81500015"]`　お菓子をくれなきゃ、イタズラしてしまうぞであるーー！！」`[\]
+lss s0_8,"ros","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_ros
+*d57019
+d [lv 0*"12"*"81400010"]`「ほら、真里亞」`[\]
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_mar
+*d57020
+d [lv 0*"13"*"80400020"]`「お祖父さま、ハッピーハロウィーン！！`[@][lv 0*"13"*"80400021"]`　今年はすごいの、驚いて驚いて！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"m1f_s1d"
+flush 22
+msgwnd_non
+*d57021
+d `真里亞がソファーの陰に隠してあったプレゼントボックスを取り出す。`[\]
+*d57022
+d `気付けば、親族たちもみんな、同様のものをいつの間にか手にしていた。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_10,"kir","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_kir
+*d57023
+d [lv 0*"09"*"81300008"]`「ほら、縁寿も。`[@][lv 0*"09"*"81300009"]`これをお祖父さまに渡して」`[\]
+msgwnd_non
+*d57024
+d `霧江も縁寿に、素敵な包装のされたプレゼントボックスを持たせる。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+flush 22
+seplay 1,48,71
+lss s0_9,"kin","a23_akuwarai2" ;1
+flush 26
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_kin
+*d57025
+d [lv 0*"01"*"81500016"]`「おおおおぉ、真里亞ぁあぁあ、いつもありがとぉおおおぉ！！`[@][lv 0*"01"*"81500017"]`　お祖父ちゃんは嬉しいぞぉおおおぉおおぉ！！」`[\]
+msgwnd_non
+*d57026
+d `真里亞のプレゼントボックスを受け取った金蔵は、破顔しながらそれに頬擦りをする。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_8,"gen","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_gen
+*d57027
+d [lv 0*"14"*"81600013"]`「………お館様。`[@][lv 0*"14"*"81600014"]`威厳をお忘れでございます」`[\]
+lss s0_10,"kin","a11_fumu1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_kin
+*d57028
+d [lv 0*"01"*"81500018"]`「むむっ、そ、そうであったな。`[@][lv 0*"01"*"81500019"]`……嬉しいぞ、我が孫、真里亞よ。`[@][lv 0*"01"*"81500020"]`お菓子をくれたので、今年はイタズラは勘弁してやろうぞ」`[\]
+lss s0_9,"mar","a22_warai2" ;1
+flush 24
+msgwnd_mar
+*d57029
+d [lv 0*"13"*"80400022"]`「今度はお祖父さまの番ー！！`[@][lv 0*"13"*"80400023"]`　お菓子をくれなきゃ、イタズラしちゃうぞー！！」`[\]
+lss s0_10,"kin","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_kin
+*d57030
+d [lv 0*"01"*"81500021"]`「うむうむ、心得ておるぞ。`[@][lv 0*"01"*"81500022"]`源次…！」`[\]
+lss s0_8,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_gen
+*d57031
+d [lv 0*"14"*"81600015"]`「こちらを」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d57032
+d `源次は、サンタクロースのように担いでいた大袋の中から、真里亞宛てのプレゼントを探し出し、`[@]`それを金蔵に手渡す。`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"kin","a23_akuwarai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kin
+*d57033
+d [lv 0*"01"*"81500023"]`「ほぅれ、真里亞〜！！`[@][lv 0*"01"*"81500024"]`　お祖父ちゃんからのプレゼントであるぞぉおおぉ！！`[@][lv 0*"01"*"81500025"]`　これはなぁぁ、んんんん可愛いぞおぉおぉお！！`[@][lv 0*"01"*"81500026"]`　真里亞にあげるのが惜しいワイ♪」`[\]
+lss s0_8,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+msgwnd_gen
+*d57034
+d [lv 0*"14"*"81600016"]`「………お館様。威厳」`[\]
+seplay 1,5,50
+lss s0_10,"kin","a11_fukigen1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_kin
+*d57035
+d [lv 0*"01"*"81500027"]`「んぬぉぉぉ…。`[@][lv 0*"01"*"81500028"]`こ、これは右代宮家当主からの、真里亞へのプレゼントである…。`[@][lv 0*"01"*"81500029"]`これはその、可愛い、……んん、ゴホンゴホンッ。`[@][lv 0*"01"*"81500030"]`う、右代宮家の貫禄に相応しい品であるぞ。`[@][lv 0*"01"*"81500031"]`こ、心して受け取るが良い……」`[\]
+lss s0_24,"mar","a22_warai2" ;1
+flush 23
+msgwnd_mar
+*d57036
+d [lv 0*"13"*"80400024"]`「ありがとう、お祖父さまぁ！！`[@][lv 0*"13"*"80400025"]`　だ〜い好き！！`[@][lv 0*"13"*"80400026"]`　チュッチュッチュ！」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"m1f_s1d"
+flush 26
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+seplay 3,1,71
+msgwnd_kin
+*d57037
+d2 [lv 0*"01"*"81500032"]`「ぬッ、ぬほぉおおおおぉおおぉ…！！`[@][lv 0*"01"*"81500033"]`　おぉおぉ真里亞ぁあぁあぁ、我が可愛い孫よぉおおおお！！`[@][#][*][lv 0*"01"*"81500034"]`　ちゅっちゅっちゅ〜〜〜〜〜！！！」`[\]
+wait_on_d 0
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_gen
+*d57038
+d [lv 0*"14"*"81600017"]`「……………………」`[\]
+msgwnd_non
+*d57039
+d `さすがの源次も、金蔵にそれ以上、威厳を保たせるのを諦める。`[\]
+*d57040
+d `それでも、今年の当主の威厳は、普段より１０秒ちょっとはもったようだ。`[\]
+csp_slot s0_10
+flush 23
+lss s0_8,"geo","a12_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_geo
+*d57041
+d [lv 0*"07"*"80300014"]`「お祖父さま。ハッピーハロウィン。`[@][lv 0*"07"*"80300015"]`これは僕からです」`[\]
+lss s0_10,"jes","a11_tereru1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_jes
+*d57042
+d [lv 0*"04"*"80200015"]`「ハッピーハロウィン。これは私から。`[@][lv 0*"04"*"80200016"]`気に入ってくれるといいんだけど」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"m1f_s1d"
+flush 26
+msgwnd_kin
+*d57043
+d [lv 0*"01"*"81500035"]`「おおぉおおぉ、譲治に朱志香。`[@][lv 0*"01"*"81500036"]`今年もありがとう。`[@][lv 0*"01"*"81500037"]`私は、……私は嬉しいぞぉ…」`[\]
+msgwnd_non
+*d57044
+d `金蔵はぼろぼろと涙を零しながら、譲治と朱志香の二人を抱き締める。`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"kin","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_kin
+*d57045
+d [lv 0*"01"*"81500038"]`「おぉ、そして戦人か。`[@][lv 0*"01"*"81500039"]`……よく戻ってきたな、右代宮家に。`[@][lv 0*"01"*"81500040"]`……寂しかったぞ、この６年間…」`[\]
+lss s0_8,"but","b11_aseru1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d57046
+d [lv 0*"10"*"80100094"]`「……いや、……まぁ、その…。`[@][lv 0*"10"*"80100095"]`………ハッピーハロウィン。`[@][lv 0*"10"*"80100096"]`気に入ってくれるかわからねぇけど…」`[\]
+csp_slot s0_10
+lss s0_9,"kin","a11_naku2" ;1
+flush 24
+msgwnd_kin
+*d57047
+d [lv 0*"01"*"81500041"]`「良いのだ……、良いのだ、戦人よ……。`[@][lv 0*"01"*"81500042"]`言いたいこともあろう、聞きたいこともあろう。`[@][lv 0*"01"*"81500043"]`……だが今はそれはなしだ」`[\]
+lss s0_8,"but","b11_oya2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d57048
+d [lv 0*"10"*"80100097"]`「祖父さま……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_kin
+*d57049
+d [lv 0*"01"*"81500044"]`「よく、………右代宮家に戻ってきてくれたな……。`[@][lv 0*"01"*"81500045"]`……私は、……嬉しいぞ……」`[\]
+msgwnd_non
+*d57050
+d `金蔵はゆっくりと、……戦人を抱き締める。`[\]
+*d57051
+d `戦人は最初、面食らったが、やがて金蔵の気持ちを理解し、同じように抱き締めた。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_9,"en2","a11_defo3c" ;1
+flush 22
+*d57052
+d `その光景を、……縁寿は呆然と見ていた。`[\]
+*d57053
+d `右代宮金蔵って、…………こんな人だったっけ……？`[\]
+lss s0_10,"rud","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rud
+*d57054
+d [lv 0*"08"*"81200010"]`「縁寿。`[@][lv 0*"08"*"81200011"]`次はお前の番だぞ」`[\]
+lss s0_8,"kir","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_kir
+*d57055
+d [lv 0*"09"*"81300010"]`「ほら、それをお祖父さまに渡して」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_enj
+*d57056
+d [lv 0*"11"*"82000061"]`「…………ぁ、………うん」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+bgmplay 9,71,0
+msgwnd_non
+*d57057
+d `縁寿は、何が何だか、……よくわからない。`[\]
+*d57058
+d `母に持たされたプレゼントボックスを持って、……おずおずと前へ出る。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_9,"kin","a11_defo1" ;1
+flush 2
+*d57059
+d `……それまで、あんなにも上機嫌に顔を綻ばせていた金蔵の顔が、`[@]`なぜか縁寿が歩み出た途端に、一際険しくなったように感じられた。`[\]
+*d57060
+d `いいや、険しくなったんじゃない。`[\]
+*d57061
+d `その表情こそが、………縁寿が想像する金蔵が、いつも浮かべているもののはずなのだ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_spiral_1a"
+flush 22
+*d57062
+d `それこそが、右代宮金蔵。`[\]
+*d57063
+d `いつも険しい表情をしていて、短気で気紛れ。`[@]`……右代宮家で、最も恐ろしい人間…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_enj
+*d57064
+d [lv 0*"11"*"82000062"]`「………………………」`[\]
+msgwnd_kin
+*d57065
+d [lv 0*"01"*"81500046"]`「……………………………」`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_10,"kin","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+wait 1000
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_non
+*d57066
+d `私の時にだけ、世界が静まり返った気がする。`[\]
+*d57067
+d `……どうして？`[@]`　どうして私だけ？`[\]
+*d57068
+d `でも、なら、……これがむしろ、正しいのでは？`[@]`{n}これが、私が期待、……いや、理解する右代宮金蔵なのでは……？`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d57069
+d `まるで、お茶を運ぶカラクリ人形のように。`[@]`{n}私はプレゼントボックスを突き出すように持ちながら、呆然と歩き、……金蔵の前で止まった。`[\]
+*d57070
+d `金蔵は表情一つ変えずに、`[@]`ゆっくりとプレゼントボックスに触れる……。`[\]
+textoff
+waits 167
+lbg s0_3,"ep802"
+flush 22
+seplay 1,48,71
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_kin
+*d57071
+d [lv 0*"01"*"81500047"]`「んんんんん縁寿ぇえええぇえぇええぇぬぇええぇえぇえぇぇッ！！！」`[\]
+msgwnd_non
+*d57072
+d `途端、プレゼントボックスごと激しく抱擁。`[@]`{n}金蔵はその白ヒゲを、縁寿の頬にぞりぞりと押し付ける。`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_9,"kin","a11_naku2" ;1
+lss s0_9,"kin","a11_naku2" ;1
+flush 22
+seplay 1,48,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_kin
+*d57073
+d2 [lv 0*"01"*"81500048"]`「お祖父ちゃんはッ、お祖父ちゃんは嬉しいぞぉおおぉおぉぉ！！`[@][#][*][lv 0*"01"*"81500049"]`　私はこんなにも可愛らしい孫たちを持てて嬉しい！！`[@][lv 0*"01"*"81500050"]`　嬉ちい！！`[@][lv 0*"01"*"81500051"]`　嬉ちくて涙が止まらん、止まらぬぅううぅぅぅうぅぅううう！！」`[\]
+wait_on_d 0
+lss s0_9,"kin","a13_naku2" ;1
+flush 10,167
+seplay 2,48,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_8,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_gen
+*d57074
+d [lv 0*"14"*"81600018"]`「………お館様。鼻水が。`[@][lv 0*"14"*"81600019"]`……ついでに威厳もお忘れなく」`[\]
+lss s0_9,"kin","a21_naku1" ;1
+flush 80
+msgwnd_kin
+*d57075
+d [lv 0*"01"*"81500052"]`「うむッ、源次、すまぬ！！`[@][lv 0*"01"*"81500053"]`　あひおふあふぅううぅううぅぅぅぅッ！！`[@][lv 0*"01"*"81500054"]`　ずびびー！！」`[\]
+msgwnd_non
+*d57076
+d `ハンカチで鼻をかむその姿は、孫たちからの贈り物に感涙を浮かべる、ただの好々爺にしか見えない。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"m1f_s1d"
+flush 26
+msgwnd_kin
+*d57077
+d [lv 0*"01"*"81500055"]`「ありがとう、縁寿。`[@][lv 0*"01"*"81500056"]`聞けば、体調が悪いのに無理をして来てくれたそうだな…。`[@][lv 0*"01"*"81500057"]`お祖父ちゃんは本当に嬉しいぞ…！`[@][lv 0*"01"*"81500058"]`　さぁ、お前にはこれだ」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d57078
+d `縁寿の胸に、大きなプレゼントボックスを押し付ける。`[\]
+*d57079
+d `……今になって気付いたが、金蔵からのお返しのプレゼントは、包装も箱の大きさも、全員違うものだった。`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"but","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d57080
+d [lv 0*"10"*"80100098"]`「縁寿には何だろうな。`[@][lv 0*"10"*"80100099"]`毎年、祖父さまが誰に何を贈るか、自分で考えてるそうだぜ。`[@][lv 0*"10"*"80100100"]`これだけの大人数を、よくやるもんだよな」`[\]
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d57081
+d [lv 0*"11"*"82000063"]`「………毎年。`[@][lv 0*"11"*"82000064"]`……自分で。`[@][lv 0*"11"*"82000065"]`…………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d57082
+d `毎年。`[@]`……何を？`[@]`{n}自分で。`[@]`……何を？`[\]
+*d57083
+d `この、おかしなセレモニーが、……毎年。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_8,"but","b11_warai1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"jes","a11_akuwarai1" ;1
+lss s0_10,"geo","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+*d57084
+d `いとこたちは、今年のハロウィンプレゼントは何かなと嬉々としてはしゃぎ合っている。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_9,"mar","a22_warai1" ;1
+flush 22
+*d57085
+d `真里亞が、プレゼントの重さ比べをしようと言ってきたが、`[@]`縁寿はなぜか、ぼんやりしてしまう。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"m1f_s1d"
+flush 22
+*d57086
+d `その後、大人たちも次々にプレゼントを渡していき、`[@]`金蔵はそれらにも皆、返礼を渡し、体を気遣う言葉や、近況を問う言葉を掛けるのだった。`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"goh","a11_omakase2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+*d57087
+d `そして全員とのやり取りが終わる頃を見計らって、郷田が現れ、`[@]`ランチの準備が整っていると告げた。`[\]
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_kin
+*d57088
+d [lv 0*"01"*"81500059"]`「そうか、準備が出来たか…！`[@][lv 0*"01"*"81500060"]`　さぁ、一同諸君！`[@][lv 0*"01"*"81500061"]`　郷田自慢のランチに舌鼓を打とうではないか。`[@][lv 0*"01"*"81500062"]`さぁさぁ、食堂へ移動しよう！」`[\]
+csp_slot s0_8
+csp_slot s0_10
+lss s0_9,"goh","a11_defo1" ;1
+flush 24
+msgwnd_goh
+*d57089
+d [lv 0*"17"*"81700014"]`「どうぞ、皆様。`[@][lv 0*"17"*"81700015"]`ご案内いたします」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_10,"sha","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"kan","a11_defo1" ;1
+flush 23
+lss s0_10,"sha","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_sha
+*d57090
+d [lv 0*"15"*"80500019"]`「プレゼントは私どもで、ゲストハウスのお部屋へお運びいたします」`[\]
+lss s0_9,"kan","a11_nayamu1" ;1
+flush 80
+msgwnd_kan
+*d57091
+d [lv 0*"16"*"80600008"]`「どうぞ、置いたままでお食事に向かわれて下さい」`[\]
+msgwnd_non
+*d57092
+d `親族たちはプレゼントボックスをテーブルやソファーに置いたまま立ち上がり、金蔵の後を追って客間を出て行く。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d57093
+d `……縁寿だけが、金蔵からのプレゼントボックスを抱いたまま、`[@]`……いつまでもぼんやりと立ち尽くしていた…。`[\]
+textoff
+waits 167
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+bgmplay 8,71,0
+textoff
+waits 167
+lbg s0_1,"mdin_1g_bg"
+lbg s0_3,"mdin_1g"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_1,"mdin_1c_bg"
+lbg s0_3,"mdin_1c"
+lss s0_9,"goh","a11_defo1" ;1
+flush 6
+*d57094
+d `郷田のランチは、一度だってその期待を裏切ったことはない。`[\]
+*d57095
+d `これが楽しみで親族会議に来ているんだと秀吉が言うと、みんなも大笑いしながら頷きあった。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mdin_1e"
+flush 22
+*d57096
+d `美味しい食事は、自然と会話も弾ませる。`[\]
+*d57097
+d `大きくなったわね。`[@]`最近の調子はどう？`[@]`　ぼちぼちでんな。`[\]
+*d57098
+d `互いの近況を尋ね合い、笑い合う楽しい食卓だった。`[\]
+*d57099
+d `右代宮家の食卓は、序列に従った特殊な座り方になっており、`[@]`金蔵と親族兄弟、いとこたち、そしてその母親たちがそれぞれグループになるようになっている。`[\]
+*d57100
+d `だから、ますます自然に会話が弾むのだ。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d57101
+d `縁寿は、いとこたちのおしゃべりからちょっと抜け、周りの様子をうかがってみた。`[\]
+*d57102
+d `……金蔵と親族兄弟はどんな様子だろう？`[\]
+textoff
+waits 167
+lbg s0_3,"mdin_1f"
+lss s0_8,"eva","b25_warai1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"cla","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+*d57103
+d `和気藹々と、楽しそうだった。`[\]
+*d57104
+d `親族兄弟たちは、普段はそれぞれの家庭で父親や母親を務めている。`[\]
+*d57105
+d `しかし、金蔵の前で兄弟たちだけで集まる時には、それらの責務を肩から下ろして、`[@]`まるで子供の頃に戻ったかのように、若々しく、楽しそうにしているのだ。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mdin_1a"
+lss s0_8,"rud","a12_warai1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"ros","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 23
+*d57106
+d `普段は飄々としながらも貫禄のある父親の留弗夫も、`[@]`そのグループではまるで、戦人がもう一人いると錯覚するくらい、陽気で楽しげだった。`[\]
+*d57107
+d `金蔵だって、和気藹々としている。`[\]
+*d57108
+d `カネがどうのこうの、遺産がどうのこうのなんてことは、一言だって口にしない。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mdin_1e"
+lss s0_9,"kin","a23_akuwarai2" ;1
+flush 22
+*d57109
+d `それどころか、兄弟たちを無能だの何だのと罵りさえしない。`[\]
+*d57110
+d `年に一度の、自分の家族の勢揃いに喜ぶ、右代宮金蔵という名の、ただの上機嫌な老人のように見えた。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mdin_1f"
+lss s0_14,"kir","a11_warai1" ;1
+aspt2 xpos,s0_14,700
+lss s0_13,"hid","a11_odayaka1" ;1
+aspt2 xpos,s0_13,200
+lss s0_15,"nat","a11_warai1" ;1
+aspt2 xpos,s0_15,-700
+lss s0_12,"nan","a1_defo1" ;1
+aspt2 xpos,s0_12,-200
+flush 24
+*d57111
+d `母親たちのグループも、同じく和気藹々だった。`[\]
+*d57112
+d `子供の教育問題から家庭の話、家族の健康問題まで、母親らしい話題が次々に飛び出している。`[\]
+*d57113
+d `秀吉も南條もその輪に加わり、楽しそうに話をしていた。`[\]
+csp_slot s0_12
+csp_slot s0_13
+csp_slot s0_14
+csp_slot s0_15
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d57114
+d `そして、いとこたちのグループは？`[\]
+*d57115
+d `……こんな楽しげな食卓で、楽しげなグループに囲まれて、……賑やかでないわけもない。`[\]
+textoff
+waits 167
+lbg s0_3,"mdin_1a"
+lss s0_10,"jes","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"mar","a22_warai1" ;1
+lss s0_8,"geo","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+lss s0_9,"mar","a22_warai2" ;1
+flush 80
+*d57116
+d `真里亞は絶好調で、ハロウィンにまつわるウンチク話を続けている。`[\]
+textoff
+waits 167
+lss s0_8,"geo","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"jes","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+wait 500
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"mdin_1c_bg"
+lbg s0_3,"mdin_1c"
+lss s0_8,"but","b11_oya2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+wait 500
+lss s0_10,"mar","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+lss s0_10,"mar","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+*d57117
+d `それに譲治や朱志香が相槌をうち、戦人がボケては、真里亞に笑われる。`[\]
+lss s0_24,"en2","a11_defo1" ;1
+flush 24
+*d57118
+d2 `私が望めば、その輪には自然に加われ、`[@][#][*]`私がデザートに興味を移せば、自然と輪から抜けることが出来る。`[\]
+wait_on_d 0
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"but","b11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+aspt2 ypos,s0_24,-20,167
+sptwait2 ypos,s0_24
+aspt2 ypos,s0_24,0,167
+sptwait2 ypos,s0_24
+seplay 1,47,71
+aspt2 ypos,s0_24,-20,167
+sptwait2 ypos,s0_24
+aspt2 ypos,s0_24,0,167
+sptwait2 ypos,s0_24
+seplay 1,3,71
+csp_slot s0_24
+flush 23
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"but","b11_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d57119
+d `そんな、……楽しくて、それがとても当り前に感じられる幸せ。`[\]
+*d57120
+d `……まるで、春の日差しの中でまどろみを覚えているかのような気持ちにさせられた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+meplay 1,24,50
+textoff
+waits 167
+lbg s0_3,"mdin_1f"
+lss s0_10,"kin","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 2
+msgwnd_kin
+*d57121
+d [lv 0*"01"*"81500063"]`「天気予報によると、今夜辺りからだいぶ崩れるらしいな」`[\]
+lss s0_8,"rud","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_rud
+*d57122
+d [lv 0*"08"*"81200012"]`「台風らしいからな。`[@][lv 0*"08"*"81200013"]`こりゃ、今年も一泊じゃ済まなさそうだぜ」`[\]
+lss s0_10,"kin","a23_akuwarai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_kin
+*d57123
+d [lv 0*"01"*"81500064"]`「私は一向に構わんぞ、一泊と言わず、いつまででも泊まっていくがいい。`[@][lv 0*"01"*"81500065"]`可愛い孫の顔が何日でも見られるなら、私は毎日、雨乞いをしても良いぞ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_eva
+*d57124
+d [lv 0*"05"*"81000008"]`「よしてよ、仕事があるんだから」`[\]
+lss s0_9,"ros","a11_defo1" ;1
+flush 24
+msgwnd_ros
+*d57125
+d [lv 0*"12"*"81400011"]`「お父様が島を出ればいいんじゃない？`[@][lv 0*"12"*"81400012"]`　そうすれば、もっと好きな時に孫の顔を見られるでしょうに」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"cla","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d57126
+d [lv 0*"02"*"80800020"]`「はっははは。確かに。`[@][lv 0*"02"*"80800021"]`風情はあるが、離島の暮らしはそろそろ堪えるんじゃありませんか？」`[\]
+lss s0_10,"kin","a11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"mdin_1g_bg"
+lbg s0_3,"mdin_1g"
+flush 26
+msgwnd_kin
+*d57127
+d [lv 0*"01"*"81500066"]`「……都会はうるさい。`[@][lv 0*"01"*"81500067"]`私の家族だけしかいない、静かな島が一番だ。`[@][lv 0*"01"*"81500068"]`私はここを気に入っている」`[\]
+msgwnd_ros
+*d57128
+d [lv 0*"12"*"81400013"]`「でも、六軒島じゃ、いざという時、お医者様を呼ぶのにも時間がかかるわ」`[\]
+msgwnd_eva
+*d57129
+d [lv 0*"05"*"81000009"]`「同感よ。`[@][lv 0*"05"*"81000010"]`もうお父様も歳なんだから、せめて新島に引っ越すべきだと思うわ」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mdin_1e"
+lss s0_10,"kin","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"kin","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_kin
+*d57130
+d [lv 0*"01"*"81500069"]`「……私はもう、老いた。`[@][lv 0*"01"*"81500070"]`家族だけに囲まれて、静かに暮らしたい。`[@][lv 0*"01"*"81500071"]`……そして私は幸せ者だ。`[@][lv 0*"01"*"81500072"]`それを実現できる、この島があるのだから」`[\]
+lss s0_8,"cla","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_cla
+*d57131
+d [lv 0*"02"*"80800022"]`「お父さん……」`[\]
+textoff
+waits 167
+lss s0_10,"kin","a11_fumu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+vol_me 1,-1,1000
+wait 1000
+lss s0_10,"kin","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_kin
+*d57132
+d [lv 0*"01"*"81500073"]`「む……。`[@][lv 0*"01"*"81500074"]`しんみりさせてしまったな。`[@][lv 0*"01"*"81500075"]`諸君、これで郷田のランチは終了だ。`[@][lv 0*"01"*"81500076"]`孫たちよ、明日からはずっと雨らしい。`[@][lv 0*"01"*"81500077"]`晴れているのは今しかないぞ。`[@][lv 0*"01"*"81500078"]`薔薇を愛でて、それから浜辺を散歩してはどうか」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"mdin_1a"
+lss s0_8,"geo","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_geo
+*d57133
+d [lv 0*"07"*"80300016"]`「そうですね。`[@][lv 0*"07"*"80300017"]`じゃあ、みんな。`[@][lv 0*"07"*"80300018"]`そうさせてもらおうか」`[\]
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_mar
+*d57134
+d [lv 0*"13"*"80400027"]`「うー！`[@][lv 0*"13"*"80400028"]`　薔薇を愛でて、浜辺を散歩するー！`[@][lv 0*"13"*"80400029"]`　貝殻拾いして、ガラス拾いもするー！」`[\]
+lss s0_9,"but","b11_aseru1" ;1
+flush 24
+msgwnd_but
+*d57135
+d [lv 0*"10"*"80100101"]`「ガラス拾い？`[@][lv 0*"10"*"80100102"]`　何だそりゃ、危ないな…！」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"jes","a11_futeki1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_jes
+*d57136
+d [lv 0*"04"*"80200017"]`「ガラスの欠片が、波に洗われて丸くなって、綺麗な石になって流れ着いてるんだよ。`[@][lv 0*"04"*"80200018"]`忘れたかよ、戦人。`[@][lv 0*"04"*"80200019"]`昔、一緒に拾ったろ？」`[\]
+lss s0_9,"but","b11_oya2" ;1
+flush 80
+msgwnd_but
+*d57137
+d [lv 0*"10"*"80100103"]`「あぁ……、あれ、ガラスの欠片だったのか。`[@][lv 0*"10"*"80100104"]`俺はてっきり、そういう綺麗な石なんだと思い込んでたぜ」`[\]
+csp_slot s0_10
+flush 23
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_1,"mdin_1c_bg"
+lbg s0_3,"mdin_1c"
+flush 24
+lss s0_10,"mar","a22_niyari1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d57138
+d [lv 0*"13"*"80400030"]`「縁寿はガラスの石、見たことある？！」`[\]
+lss s0_9,"en2","a12_defo2" ;1
+flush 23
+msgwnd_enj
+*d57139
+d [lv 0*"11"*"82000066"]`「……ない」`[\]
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d57140
+d [lv 0*"13"*"80400031"]`「じゃあ行こう！！`[@][lv 0*"13"*"80400032"]`　真里亞が教えてあげるよ！！`[@][lv 0*"13"*"80400033"]`　行こう行こう！`[@][lv 0*"13"*"80400034"]`　でも早い者勝ちだよ！`[@][lv 0*"13"*"80400035"]`　真里亞が全部拾っちゃうー！」`[\]
+textoff
+waits 167
+seplay 1,3,71
+csp_slot s0_10
+flush 23
+lss s0_8,"jes","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_jes
+*d57141
+d [lv 0*"04"*"80200020"]`「へへっ、なら私も負けないぜ。`[@][lv 0*"04"*"80200021"]`誰が一番綺麗で大きなガラス石を拾えるか、競争しよう！」`[\]
+lss s0_10,"but","b11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_but
+*d57142
+d [lv 0*"10"*"80100105"]`「やれやれ！`[@][lv 0*"10"*"80100106"]`　ここは一つ、童心に戻るとするかな！`[@][lv 0*"10"*"80100107"]`　負けねぇぞー！」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"geo","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_geo
+*d57143
+d [lv 0*"07"*"80300019"]`「じゃあ、僕たちは浜辺へ行って来ます」`[\]
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+textoff
+waits 167
+lbg s0_3,"mdin_1a"
+lss s0_10,"kin","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_kin
+*d57144
+d [lv 0*"01"*"81500079"]`「うむ。`[@][lv 0*"01"*"81500080"]`いとこ同士、のんびりしてくるが良い」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"mdin_1f"
+flush 22
+msgwnd_non
+*d57145
+d `いとこたちは席を立ち、賑やかに食堂を出る。`[\]
+*d57146
+d `縁寿は真里亞にぐいぐい手を引っ張られて、走らされる。`[\]
+*d57147
+d `でもその表情は、真里亞の満面の笑顔と違って、どこか上の空のような表情をしていた……。`[\]
+textoff
+waits 167
+wait 2000
+break_glass3
+lbg s0_29,"black"
+csp_slot s0_29
+flush 10,2000
+wait 83
+ch_done flag_scenario_8_1

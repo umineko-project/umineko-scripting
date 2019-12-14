@@ -1,0 +1,1363 @@
+*o3_start
+;Entrance movie
+seplay 1,22,71
+anim s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+;Show meta
+wait 1000
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+flush 10,367
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 28
+;Question part
+;Fullwidth window
+set_window_simple 1,1
+setwindow5 ":a;graphics\system\empty.png"
+border_pad_push 5
+lsp 501,show_dream1,0,0
+lsp 503,show_dream2,0,0
+lsp 504,show_dream3,0,0
+align_message_c 501,503,504
+if %omake3_skip < 5 jumpf
+	lsp 505,show_dream4,0,0
+	align_message_c 505
+	msp 505,0,105
+~
+border_pad_pop
+;Question ask
+*o3_jump_q
+mov %Free29,0 ;allow skipping intros
+btndef ""
+spbtn 503,503
+spbtn 504,504
+spbtn 505,505
+btnwait %BtnRes
+if %BtnRes = 503 btndef "" : inc %omake3_skip : goto *o3_jump_in
+if %BtnRes = 504 btndef "" : goto *o3_jump_out
+if %BtnRes = 505 btndef "" : mov %Free29,1 : inc %omake3_skip : goto *o3_jump_in
+if %BtnRes = -1 btndef "" : goto *o3_jump_out
+if %BtnRes = -51 btndef "" : goto *o3_jump_out
+goto *o3_jump_q
+;We are going out unfortunately
+*o3_jump_out
+_csp 501
+_csp 503
+_csp 504
+_csp 505
+break_glass2
+wait 500
+goto *o3_end
+;We continue
+*o3_jump_in
+set_name_window_non
+skip_off
+mov %Free11,0 ;golden bullets
+mov %Free9,1
+mov $Free8,"" ;char
+mov %Free7,6 ;life
+mov %Free6,5 ;bullets
+mov %Free5,0 ;bgm playback
+_csp 501
+_csp 503
+_csp 504
+_csp 505
+csp_slot s0_21
+csp_slot s0_22
+flush 22
+seplay 1,22,100
+anim s0_5,"no85",1
+flush 1
+waitvideo
+csp_slot s0_5
+wait2 1000
+lsp 746,":s;#FFFFFF`{p:7:Disclaimer: This is nothing but a performance test (=}`",-1560,980
+flush 1
+seplay 2,59,100
+spt xpos,746,1600,900,3
+sptwait xpos,746
+wait 3000
+spt xpos,746,-1600,900,3
+sptwait xpos,746
+_csp 746
+flush 1
+wait2 1500
+;Draw the scene
+rain_load s0_18
+rain_load s0_6
+rain_params s0_18,400,800,0
+rain_params s0_6,400,500,0
+;FIXME: orbs
+;rain_load s0_19,1
+;rain_load s0_7,1
+;rain_params s0_19,50,500,1000
+;rain_params s0_7,50,500,1000
+rnd %Free1,4 ;Load random bg
+if %Free1 = 0 lbg s0_2,"forest_p1br"
+if %Free1 = 1 lbg s0_2,"rose_1ar"
+if %Free1 = 2 lbg s0_2,"different_garden1a"
+if %Free1 = 3 lbg s0_2,"cit_3a"
+*o3_load_again
+chvol 0,%dlg_vol
+lss s0_8,"wal","a12_akuwarai2" ;1
+lss s0_9,"bea","a33_akuwarai2" ;1
+lss s0_10,"ev2","a12_akuwarai8" ;1
+aspt2 xpos,s0_8,-450
+aspt2 xpos,s0_10,450
+;Darken the sprites
+aspt2 darken_r,s0_8,156
+aspt2 darken_g,s0_8,156
+aspt2 darken_b,s0_8,160
+aspt2 darken_r,s0_9,156
+aspt2 darken_g,s0_9,156
+aspt2 darken_b,s0_9,160
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+if %Free9 > 1 aspt2 darken_r,s0_8,80 : aspt2 darken_g,s0_8,80 : aspt2 darken_b,s0_8,82 : aspt2 alpha,s0_8,150
+if %Free9 > 2 aspt2 darken_r,s0_9,80 : aspt2 darken_g,s0_9,80 : aspt2 darken_b,s0_9,82 : aspt2 alpha,s0_9,150
+;Cache the sounds for better performance
+cache_snd 1,"sound\voice\30\43200145.ogg"
+cache_snd 1,"sound\voice\27\50700008.ogg"
+cache_snd 1,"sound\voice\34\33300178.ogg"
+seplay 1,52,100
+show_whirl
+if %Free5 == 0 bgmplay 65,100,0 : meplay 1,13,71 : meplay 2,14,71 : inc %Free5 ;don't reload the bgm
+if %Free29 == 1 jumpf ; skip intro
+	if %Free9 <= 1 lv 2,"30","43200145"
+	if %Free9 <= 2 lv 1,"27","50700008"
+	lv 0,"34","33300178"
+	waitvoice 1
+	;Witch intro
+	if %Free9 = 1 gosub *o3_wal
+	if %Free9 = 2 gosub *o3_bea
+	if %Free9 = 3 gosub *o3_ev2
+~
+;Recharging should end by the next round.
+if %Free6 = 0 mov %Free6,5
+;If the character is not set
+if $Free8 = "" gosub *o3_char_select : goto *o3_play
+;Cleanup
+csp_slot s0_3
+for %Free1 = s0_17 to s0_8
+	csp_slot %Free1
+next
+flush 99,1000,"whirl.dll/p"
+goto *o3_play
+
+;Wal turn
+*o3_wal
+seplay 1,52,71
+aspt2 breakupdir,s0_9,2
+aspt2 breakup,s0_9,0
+aspt2 breakup,s0_9,1000,1500
+aspt2 alpha,s0_9,0,1500
+aspt2 breakupdir,s0_10,2
+aspt2 breakup,s0_10,0
+aspt2 breakup,s0_10,1000,1500
+aspt2 alpha,s0_10,0,1500
+sptwait2 breakup,s0_9
+sptwait2 breakup,s0_10
+csp_slot s0_9
+csp_slot s0_10
+flush 1
+;Undarken Wal
+aspt2 darken_r,s0_8,255,1000
+aspt2 darken_g,s0_8,255,1000
+aspt2 darken_b,s0_8,255,1000
+;aspt2 xpos,s0_8,0,1000
+sptwait2 darken_b,s0_8
+;sptwait2 xpos,s0_8
+lbg s0_3,"no65_00159"
+pam s0_4,"no65",0
+seplay 1,27,100
+aspt2 ypos,s0_3,1080,500,1
+csp_slot s0_3
+flush 1
+msgwnd_wal
+*o3_wal_1
+d [ak][lv 0*"30"*"43200067"]`"......Come, arise, goat attendants."`[|][\]
+textoff
+;Remove Wal
+seplay 1,52,71
+aspt2 warp_spd,s0_3,25
+aspt2 warp_wave,s0_3,600
+aspt2 warp_amp,s0_3,250,150
+aspt2 warp_spd,s0_8,25
+aspt2 warp_wave,s0_8,250
+aspt2 warp_amp,s0_8,100,150
+aspt2 alpha,s0_3,0,600
+aspt2 alpha,s0_8,0,600
+sptwait2 alpha,s0_8
+aspt2 warp_amp,s0_3,0
+aspt2 warp_wave,s0_3,0
+aspt2 warp_amp,s0_8,0
+aspt2 warp_wave,s0_8,0
+csp_slot s0_3
+csp_slot s0_8
+flush 1
+wait 2000
+;Show goats
+lss s0_12,"goa","a11_defo1" ;1
+aspt2 xpos,s0_12,-550
+flush 2
+waits 167
+seplay 2,22,80
+lss s0_13,"goa","a11_defo1" ;1
+flush 2
+waits 167
+seplay 3,22,90
+vol_me 1,80
+lss s0_14,"goa","a11_defo1" ;1
+aspt2 xpos,s0_14,550
+flush 2
+waits 167
+msgwnd_go2
+*o3_wal_2
+d [ak][lv 0*"45"*"yagim2001"]`"........................"`[|][\]
+textoff
+waits 167
+seplay 1,57,100
+lss s0_12,"goa","a11b_defo1" ;1
+aspt2 xpos,s0_12,-550
+flush 10,167
+waits 167
+seplay 2,57,100
+lss s0_13,"goa","a11b_defo1" ;1
+flush 10,167
+waits 167
+seplay 3,57,100
+lss s0_14,"goa","a11b_defo1" ;1
+aspt2 xpos,s0_14,550
+flush 10,167
+wait 1000
+return
+
+;Bea turn
+*o3_bea
+seplay 1,52,71
+aspt2 breakupdir,s0_8,1
+aspt2 breakup,s0_8,0
+aspt2 breakup,s0_8,1000,1500
+aspt2 alpha,s0_8,0,1500
+aspt2 breakupdir,s0_10,2
+aspt2 breakup,s0_10,0
+aspt2 breakup,s0_10,1000,1500
+aspt2 alpha,s0_10,0,1500
+sptwait2 breakup,s0_8
+sptwait2 breakup,s0_10
+csp_slot s0_8
+csp_slot s0_10
+flush 1
+;Undarken Beato
+aspt2 darken_r,s0_9,255,1000
+aspt2 darken_g,s0_9,255,1000
+aspt2 darken_b,s0_9,255,1000
+sptwait2 darken_b,s0_9
+lbg s0_3,"no54_00059"
+seplay 1,60,100
+pam s0_4,"no54",0
+seplay 1,62,100
+seplay 2,62,100
+seplay 3,2,100
+wait 500
+lbg s0_3,"no55_00000"
+aspt2 blur,s0_3,800
+flush 10,1000
+aspt2 blur,s0_3,0,1000
+sptwait2 blur,s0_3
+seplay 1,56,70
+lbg s0_3,"no55_00059"
+pam s0_4,"no55",0
+seplay 2,2,100
+seplay 3,56,100
+seplay 1,56,100
+msgwnd_bea
+*o3_bea_1
+d [ak][lv 0*"27"*"30700921"]`"Come, arise, Seven Stakes of Purgatory."`[|][\]
+textoff
+;Remove Beato
+seplay 1,52,71
+aspt2 warp_spd,s0_3,25
+aspt2 warp_wave,s0_3,600
+aspt2 warp_amp,s0_3,250,150
+aspt2 warp_spd,s0_9,25
+aspt2 warp_wave,s0_9,250
+aspt2 warp_amp,s0_9,100,150
+aspt2 alpha,s0_3,0,600
+aspt2 alpha,s0_9,0,600
+sptwait2 alpha,s0_9
+aspt2 warp_amp,s0_3,0
+aspt2 warp_wave,s0_3,0
+aspt2 warp_amp,s0_9,0
+aspt2 warp_wave,s0_9,0
+csp_slot s0_3
+csp_slot s0_9
+flush 1
+wait 2000
+;Load the rgs
+lss s0_12,"rg7","a12_hohoemi1" ;1
+aspt2 xpos,s0_12,-750
+lss s0_13,"rg6","a12_akuwarai1" ;1
+aspt2 xpos,s0_13,-450
+lss s0_14,"rg5","a12_akuwarai2" ;1
+aspt2 xpos,s0_14,-150
+lss s0_15,"rg4","a12_defo1" ;1
+aspt2 xpos,s0_15,150
+lss s0_16,"rg3","a12_fuman1" ;1
+aspt2 xpos,s0_16,450
+lss s0_17,"rg2","a12_hohoemi1" ;1
+aspt2 xpos,s0_17,750
+lss s0_9,"rg1","a31_hohoemi1" ;1
+aspt2 flip,s0_9,1 ;horizontal flip
+seplay 1,57,100
+seplay 2,57,100
+z_order_override2 s0_9,s0_17
+aspt2 breakup,s0_9,1000
+aspt2 breakup,s0_12,1000
+aspt2 breakup,s0_13,1000
+aspt2 breakup,s0_14,1000
+aspt2 breakup,s0_15,1000
+aspt2 breakup,s0_16,1000
+aspt2 breakup,s0_17,1000
+aspt2 alpha,s0_12,0
+aspt2 alpha,s0_13,0
+aspt2 alpha,s0_14,0
+aspt2 alpha,s0_15,0
+aspt2 alpha,s0_16,0
+aspt2 alpha,s0_17,0
+flush 1
+aspt2 breakup,s0_9,0,1000
+aspt2 breakup,s0_12,0,1000
+aspt2 breakup,s0_13,0,1000
+aspt2 breakup,s0_14,0,1000
+aspt2 breakup,s0_15,0,1000
+aspt2 breakup,s0_16,0,1000
+aspt2 breakup,s0_17,0,1000
+aspt2 alpha,s0_12,255,1000
+aspt2 alpha,s0_13,255,1000
+aspt2 alpha,s0_14,255,1000
+aspt2 alpha,s0_15,255,1000
+aspt2 alpha,s0_16,255,1000
+aspt2 alpha,s0_17,255,1000
+sptwait2 breakup,s0_9
+sptwait2 breakup,s0_12
+sptwait2 breakup,s0_13
+sptwait2 breakup,s0_14
+sptwait2 breakup,s0_15
+sptwait2 breakup,s0_16
+sptwait2 breakup,s0_17
+seplay 1,37,71
+msgwnd_non
+*o3_bea_2
+d2 [ak][#][*]`""""""Kyahhahahahahahahaha{0}ha{0}ha{0}ha{0}ha!!""""""`[!w2677][\]
+wait_on_d 0
+lv 1,"99","awase0015"
+lips_channel 1,"rg7","rg6","rg5","rg4","rg3","rg2","rg1"
+dwaveplay 1
+mov ?voice_s[1],0
+d_continue
+wait_on_d -1
+textoff
+wait 1000
+return
+
+;Ev2 turn
+*o3_ev2
+seplay 1,52,71
+aspt2 breakupdir,s0_8,1
+aspt2 breakup,s0_8,0
+aspt2 breakup,s0_8,1000,1500
+aspt2 alpha,s0_8,0,1500
+aspt2 breakupdir,s0_9,2
+aspt2 breakup,s0_9,0
+aspt2 breakup,s0_9,1000,1500
+aspt2 alpha,s0_9,0,1500
+sptwait2 breakup,s0_8
+sptwait2 breakup,s0_9
+csp_slot s0_8
+csp_slot s0_9
+flush 1
+;Undarken Eva
+aspt2 darken_r,s0_10,255,1000
+aspt2 darken_g,s0_10,255,1000
+aspt2 darken_b,s0_10,255,1000
+sptwait2 darken_b,s0_10
+vol_bgm 0,5000
+wait2 5000
+rain_style 1
+aspt alpha,s0_18,200
+aspt darken_r,s0_18,245
+aspt darken_g,s0_18,100
+aspt darken_b,s0_18,30
+aspt alpha,s0_6,160
+aspt darken_r,s0_6,245
+aspt darken_g,s0_6,100
+aspt darken_b,s0_6,30
+rain_params s0_18,500,1000,0
+rain_params s0_6,500,1000,0
+msgwnd_ev2
+*o3_ev2_1
+d2 [ak][lv 0*"34"*"33300505"]`"Come, arise, furniture suitable for me...!!`[|][@][lv 0*"34"*"33300506"]` Not that cheap furniture, much much stronger ones!`[|][@][lv 0*"34"*"33300507"]` Cruel ones!!`[#][*][|][@][lv 0*"34"*"33300508"]` Ahhaha{0}ha{0}ha{0}ha{0}ha{0}ha{0}ha{0}ha{0}hahyahhyahhya!!!"`[|][\]
+wait_on_d 0
+seplay 1,27,100
+d_continue
+wait_on_d -1
+textoff
+wait2 4000
+lss s0_10,"s41","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_s41
+*o3_ev2_2
+d [ak][lv 0*"36"*"33500001"]`"Chiester{ruby:four‐one‐zero:410}. Right here."`[|][\]
+lss s0_8,"s45","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_s45
+*o3_ev2_3
+d [ak][lv 0*"35"*"33400001"]`"Chiester{ruby:forty‐five:45}. Right here."`[|][\]
+textoff
+wait2 1000
+return
+
+;Choose the player
+*o3_char_select
+spriteset_enable 1
+aspritesetpt ypos,1,-1080
+lbg s1_3,"white"
+lsp s1_4,":a;graphics\big_chars\ep3_1_rud_d_EP3_1_rud_d.png",-250,70
+lsp s1_5,":a;graphics\big_chars\ep3_1_kir_d_EP3_1_kir_d.png",50,70
+lsp s1_6,":a;graphics\big_chars\ep3_1_kla_d_EP3_1_kla_d.png",350+35,70
+lsp s1_7,":a;graphics\big_chars\ep3_1_nat_d_EP3_1_nat_d.png",650+35,70
+lsp s1_8,":a;graphics\big_chars\ep3_1_hid_d_EP3_1_hid_d.png",1050,70
+lsp s1_9,":a;graphics\big_chars\ep3_1_ros_d_EP3_1_ros_d.png",1350,70
+border_pad_push 5
+lsp s1_10,":s;#FFFFFF`{p:24:———}{p:22:{a:c:Choose your character}{p:24:———}{n}}`",0,40
+;popped in the end
+flush 1
+;Move stuff back
+spritesetpt ypos,1,1080,250,3
+spritesetptwait ypos,1
+;Click logic
+*o3_char_select_loop
+btndef ""
+transbtn
+spbtn s1_4,s1_4
+spbtn s1_5,s1_5
+spbtn s1_6,s1_6
+spbtn s1_7,s1_7
+spbtn s1_8,s1_8
+spbtn s1_9,s1_9
+btnwait %BtnRes
+	if %BtnRes == s1_4 mov $Free8,"rud" : goto *o3_chose_char
+	if %BtnRes == s1_5 mov $Free8,"kir" : goto *o3_chose_char
+	if %BtnRes == s1_6 mov $Free8,"cla" : goto *o3_chose_char
+	if %BtnRes == s1_7 mov $Free8,"nat" : goto *o3_chose_char
+	if %BtnRes == s1_8 mov $Free8,"hid" : goto *o3_chose_char
+	if %BtnRes == s1_9 mov $Free8,"ros" : goto *o3_chose_char
+	goto *o3_char_select_loop
+
+;They chose the player
+*o3_chose_char
+seplay 1,27,100
+if $Free8 == "rud" lsp s1_4,":a;graphics\big_chars\ep3_1_rud_EP3_1_rud.png",-250,70
+if $Free8 == "kir" lsp s1_5,":a;graphics\big_chars\ep3_1_kir_EP3_1_kir.png",50,70
+if $Free8 == "cla" lsp s1_6,":a;graphics\big_chars\ep3_1_kla_EP3_1_kla.png",350+35,70
+if $Free8 == "nat" lsp s1_7,":a;graphics\big_chars\ep3_1_nat_EP3_1_nat.png",650+35,70
+if $Free8 == "hid" lsp s1_8,":a;graphics\big_chars\ep3_1_hid_EP3_1_hid.png",1050,70
+if $Free8 == "ros" lsp s1_9,":a;graphics\big_chars\ep3_1_ros_EP3_1_ros.png",1350,70
+print 1
+wait2 3000
+;Cleanup choice window
+csp_slot s0_3
+for %Free1 = s0_17 to s0_8
+	csp_slot %Free1
+next
+aspritesetpt breakup,1,0
+flush 1
+seplay 1,52,71
+aspritesetpt breakupdir,1,1
+aspritesetpt breakup,1,1000,1500
+spritesetptwait breakup,1
+csp -11
+flush 1
+wait 1000
+;Show character intro
+mov $Free3, "*o3_show_" + $Free8
+gosub $Free3
+return
+	
+*o3_show_rud
+	lbg s0_21,"c_c0902_a" ;full
+	seplay 2,52,71
+	flush 99,1000,"whirl.dll/l"
+	seplay 1,30,71
+	msgwnd_rud
+	*o3_rud
+	d [ak][lv 0*"08"*"31200369"]`"Don't look down on the generation that loves westerns, got it?`[|][@][lv 0*"08"*"31200370"]` Brats don't know jack squat about the refinement of a lever‐action."`[|][\]
+	textoff
+	csp_slot s0_21
+	seplay 1,52,71
+	flush 99,1000,"whirl.dll/r"
+return
+
+*o3_show_kir
+	lbg s0_21,"c_c0901_ca"
+	aspt2 xpos,s0_21,1920
+	aspt2 ypos,s0_21,1080
+	flush 1
+	seplay 1,30,71
+	aspt2 xpos,s0_21,0,500
+	aspt2 ypos,s0_21,0,500
+	sptwait2 xpos,s0_21
+	msgwnd_kir
+	*o3_kir
+	d [ak][lv 0*"09"*"31300339"]`"You know, I can be pretty brutal when my husband isn't around."`[|][\]
+	textoff
+	aspt2 xpos,s0_21,1920,500
+	sptwait2 xpos,s0_21
+	csp_slot s0_21
+	flush 1
+return
+
+*o3_show_cla
+	lss s0_22,"cla","a15_defo1" ;1
+	aspt2 xpos,s0_22,-450
+	seplay 1,30,71
+	flush 10,167
+	msgwnd_cla
+	*o3_cla
+	d [ak][lv 0*"02"*"30800067"]`"Ludicrous...!`[|][@][lv 0*"02"*"10800310"]` In any event, this does not leave the realm of nonsense...!"`[|][\]
+	textoff
+	seplay 1,20,71
+	aspt2 xpos,s0_22,-1920,500
+	sptwait2 xpos,s0_22
+	csp_slot s0_22
+	flush 1
+return
+
+*o3_show_nat
+	lbg s0_21,"c_e0101_wall"
+	aspt2 xpos,s0_21,1920
+	aspt2 ypos,s0_21,1080
+	lbg s0_22,"c_e0101_c"
+	aspt2 xpos,s0_22,1920
+	aspt2 ypos,s0_22,1080
+	flush 1
+	seplay 1,30,71
+	aspt2 xpos,s0_21,0,500
+	aspt2 ypos,s0_21,0,500
+	aspt2 xpos,s0_22,0,500
+	aspt2 ypos,s0_22,0,500
+	sptwait2 xpos,s0_22
+	msgwnd_nat
+	*o3_nat
+	d [ak][lv 0*"03"*"10900371"]`"I am Ushiromiya Natsuhi!!`[|][@][lv 0*"03"*"10900372"]` Although I do not have the right to wear the One‐winged Eagle on my body, it is certainly engraved in my heart!!"`[|][\]
+	textoff
+	aspt2 xpos,s0_21,1920,500
+	aspt2 ypos,s0_21,1080,500
+	aspt2 xpos,s0_22,1920,500
+	aspt2 ypos,s0_22,1080,500
+	sptwait2 xpos,s0_22
+	csp_slot s0_21
+	csp_slot s0_22
+	flush 1
+return
+
+*o3_show_hid
+	lss s0_22,"hid","a22_warai2" ;1
+	aspt2 xpos,s0_22,450
+	seplay 1,30,71
+	flush 10,167
+	msgwnd_hid
+	*o3_hid
+	d [ak][lv 0*"06"*"11100021"]`"There you go!`[|][@][lv 0*"06"*"11100022"]` Well said!`[|][@][lv 0*"06"*"11100023"]` How about some candy as a reward?!"`[|][\]
+	textoff
+	seplay 1,20,71
+	aspt2 xpos,s0_22,1920,500
+	sptwait2 xpos,s0_22
+	csp_slot s0_22
+	flush 1
+return
+
+*o3_show_ros
+	lbg s0_21,"c_c0205_wall"
+	aspt2 xpos,s0_21,-1920
+	lbg s0_22,"c_c0205_b"
+	aspt2 xpos,s0_22,-1920
+	flush 1
+	seplay 1,30,71
+	aspt2 xpos,s0_21,0,500
+	aspt2 xpos,s0_22,0,500
+	sptwait2 xpos,s0_22
+	msgwnd_ros
+	*o3_ros
+	d2 [ak][lv 0*"12"*"21400906"]`"I'll show you...`[|][@][#][*][lv 0*"12"*"21400907"]`what a golden dream looks liiiiiiiiiiike!!!"`[|][\]
+	wait_on_d 0
+	lbg s0_22,"c_c0205_c"
+	flush 1
+	d_continue
+	wait_on_d -1
+	textoff
+	aspt2 xpos,s0_21,-1920,500
+	aspt2 xpos,s0_22,-1920,500
+	sptwait2 xpos,s0_22
+	csp_slot s0_21
+	csp_slot s0_22
+	flush 1
+return
+
+*o3_show_hp
+	if %omake_level > 0 && %Free9 = 3 jumpf
+	if %Free7 = 6 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥♥♥♥}}`",40,40 : return
+	if %Free7 = 5 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥♥♥}}`",40,40 : return
+	if %Free7 = 4 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥♥}}`",40,40 : return
+	if %Free7 = 3 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥}}`",40,40 : return
+	if %Free7 = 2 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥}}`",40,40 : return
+	if %Free7 = 1 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥}}`",40,40 : return
+	~
+	if %Free11 = 1 jumpf ; if Golden Bullets
+	if %Free7 = 6 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥♥♥♥}{n}{n}On next reload: Golden Bullets}`",40,40 : return
+	if %Free7 = 5 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥♥♥}{n}{n}On next reload: Golden Bullets}`",40,40 : return
+	if %Free7 = 4 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥♥}{n}{n}On next reload: Golden Bullets}`",40,40 : return
+	if %Free7 = 3 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥♥}{n}{n}On next reload: Golden Bullets}`",40,40 : return
+	if %Free7 = 2 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥♥}{n}{n}On next reload: Golden Bullets}`",40,40 : return
+	if %Free7 = 1 lsp s0_28,":s;#FFFFFF`{p:11:{c:ff0000:♥}{n}{n}On next reload: Golden Bullets}`",40,40 : return
+	~
+	if %Free7 = 6 lsp s0_28,":s;#FFFFFF`{p:11:{c:ffaa00:♥♥♥♥♥♥}}`",40,40 : return
+	if %Free7 = 5 lsp s0_28,":s;#FFFFFF`{p:11:{c:ffaa00:♥♥♥♥♥}}`",40,40 : return
+	if %Free7 = 4 lsp s0_28,":s;#FFFFFF`{p:11:{c:ffaa00:♥♥♥♥}}`",40,40 : return
+	if %Free7 = 3 lsp s0_28,":s;#FFFFFF`{p:11:{c:ffaa00:♥♥♥}}`",40,40 : return
+	if %Free7 = 2 lsp s0_28,":s;#FFFFFF`{p:11:{c:ffaa00:♥♥}}`",40,40 : return
+	if %Free7 = 1 lsp s0_28,":s;#FFFFFF`{p:11:{c:ffaa00:♥}}`",40,40 : return
+	csp_slot s0_28
+return
+
+*o3_show_bullets
+	if %Free11 = 1 jumpf ; if Golden Bullets
+	if %Free6 = 5 lsp s0_27,":s;#FFFFFF`{p:11:{c:cccccc:⦿⦿⦿⦿⦿}}`",40,80 : return
+	if %Free6 = 4 lsp s0_27,":s;#FFFFFF`{p:11:{c:cccccc:⦿⦿⦿⦿}}`",40,80 : return
+	if %Free6 = 3 lsp s0_27,":s;#FFFFFF`{p:11:{c:cccccc:⦿⦿⦿}}`",40,80 : return
+	if %Free6 = 2 lsp s0_27,":s;#FFFFFF`{p:11:{c:cccccc:⦿⦿}}`",40,80 : return
+	if %Free6 = 1 lsp s0_27,":s;#FFFFFF`{p:11:{c:cccccc:⦿}}`",40,80 : return
+	if %Free6 = 0 lsp s0_27,":s;#FFFFFF`{p:11:{c:cccccc:RECHARGING}}`",40,80 : return
+	~
+	if %Free6 = 5 lsp s0_27,":s;#FFFFFF`{p:11:{c:ffaa00:⦿⦿⦿⦿⦿}}`",40,80 : return
+	if %Free6 = 4 lsp s0_27,":s;#FFFFFF`{p:11:{c:ffaa00:⦿⦿⦿⦿}}`",40,80 : return
+	if %Free6 = 3 lsp s0_27,":s;#FFFFFF`{p:11:{c:ffaa00:⦿⦿⦿}}`",40,80 : return
+	if %Free6 = 2 lsp s0_27,":s;#FFFFFF`{p:11:{c:ffaa00:⦿⦿}}`",40,80 : return
+	if %Free6 = 1 lsp s0_27,":s;#FFFFFF`{p:11:{c:ffaa00:⦿}}`",40,80 : return
+	if %Free6 = 0 lsp s0_27,":s;#FFFFFF`{p:11:{c:ffaa00:RECHARGING}}`",40,80 : return
+return
+
+*o3_play
+;Return the window back for width reasons
+set_window_simple 1,1
+border_pad_push 5
+if %Free9 = 1 lsp s0_25,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: Level 1 }{p:10:——————}}`",0,450
+if %Free9 = 2 lsp s0_25,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: Level 2 }{p:10:——————}}`",0,450
+if %Free9 = 3 lsp s0_25,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: Level 3 }{p:10:——————}}`",0,450
+gosub *o3_show_bullets
+gosub *o3_show_hp
+border_pad_pop
+flush 99,500,"trvswave.dll"
+seplay 1,30,100
+set_name_window_non
+wait2 3000
+csp_slot s0_25
+flush 99,500,"trvswave.dll"
+custom_cursor "cross"
+;Time to fight
+if %Free9 = 1 goto *o3_wal_fight
+if %Free9 = 2 goto *o3_bea_fight
+if %Free9 = 3 goto *o3_ev2_fight
+
+*o3_play_cleared
+	seplay 1,54,71
+	set_window_simple 1,1
+	border_pad_push 5
+	if %Free9 = 1 lsp s0_25,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: Level 1 cleared! }{p:10:——————}}`",0,450
+	if %Free9 = 2 lsp s0_25,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: Level 2 cleared! }{p:10:——————}}`",0,450
+	if %Free9 = 3 lsp s0_25,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: Level 3 cleared! }{p:10:——————}}`",0,450
+	border_pad_pop
+	flush 99,500,"trvswave.dll"
+	set_name_window_non
+	wait2 3000
+	csp_slot s0_25
+	flush 99,500,"trvswave.dll"
+return
+
+*o3_btn_reload
+	btntime %Free16
+	inc %Free15
+	if %Free21 != -1 spbtn s0_5,s0_5
+	if %Free22 != -1 spbtn s0_6,s0_6
+	if %Free23 != -1 spbtn s0_7,s0_7
+	if %Free24 != -1 spbtn s0_8,s0_8
+	if %Free25 != -1 spbtn s0_9,s0_9
+	if %Free26 != -1 spbtn s0_10,s0_10
+	if %Free27 != -1 spbtn s0_11,s0_11
+	print 18,50,msk_down
+return
+
+*o3_play_set
+	mov %Free21,-1
+	mov %Free22,-1
+	mov %Free23,-1
+	mov %Free24,-1
+	mov %Free25,-1
+	mov %Free26,-1
+	mov %Free27,-1
+	mov %Free15,0 ;killed
+	mov %Free14,0 ;present
+	dwaveload 0,"sound\se\umise_046.ogg"
+	chvol 0,%sfx_vol
+return
+
+*o3_wal_fight
+;Normal sprites
+lsph s0_5,":a;sprites\goa\1\goa_a11_defo1.png",0,0
+lsph s0_6,":a;sprites\goa\1\goa_a11_defo1.png",0,0
+lsph s0_7,":a;sprites\goa\1\goa_a11_defo1.png",0,0
+;Bladed sprites
+lsph s0_12,":a;sprites\goa\1\goa_a11b_defo1.png",0,0
+lsph s0_13,":a;sprites\goa\1\goa_a11b_defo1.png",0,0
+lsph s0_14,":a;sprites\goa\1\goa_a11b_defo1.png",0,0
+;Variables and sounds
+gosub *o3_play_set
+mov %Free16,1500 ;btntime
+;START!
+btndef ""
+btntime %Free16
+
+*o3_wal_fight_l
+	transbtn
+	rnd2 %Free17,1,2 ;How many
+	mov %Free19,0
+
+	~
+	if %Free14 == 10 jumpf
+	if %Free19 == %Free17 jumpf
+	inc %Free19
+		rnd %Free18,3 ;pos
+		mul %Free18,530
+		if %Free21 == %Free18 || %Free22 == %Free18 || %Free23 == %Free18 jumpb
+		if %Free21 == -1 mov %Free21,%Free18 : amsp s0_5,%Free21,-143 : vsp s0_5,1 : spbtn s0_5,s0_5 : inc %Free14 : jumpb
+		if %Free22 == -1 mov %Free22,%Free18 : amsp s0_6,%Free22,-143 : vsp s0_6,1 : spbtn s0_6,s0_6 : inc %Free14 : jumpb
+		if %Free23 == -1 mov %Free23,%Free18 : amsp s0_7,%Free23,-143 : vsp s0_7,1 : spbtn s0_7,s0_7 : inc %Free14 : jumpb
+		jumpb ;next
+	~
+	print 1
+
+	btnwait2 %BtnRes
+	;Shoot
+	if %BtnRes == -1 || %BtnRes == -2 || %BtnRes == -3 goto *o3_wal_fight_l
+	if %BtnRes == -5 jumpf
+		dwaveplay 0
+		dec %Free6
+		border_pad_push 5
+		gosub *o3_show_bullets
+		border_pad_pop
+		mov %Free16,700
+		if %BtnRes == s0_5 btndef "" : vsp s0_5,0 : mov %Free21,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_6 btndef "" : vsp s0_6,0 : mov %Free22,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_7 btndef "" : vsp s0_7,0 : mov %Free23,-1 : gosub *o3_btn_reload
+		print 1
+		if %Free15 == 10 goto *o3_wal_success
+		if %Free6 != 0 jumpf
+			;Recharge
+			wait2 300
+			seplay 1,43,100 
+			wait2 500 
+			mov %Free6,5 
+			mov %Free16,200
+			border_pad_push 5
+			gosub *o3_show_bullets
+			border_pad_pop 
+			print 1
+	~
+	;Fail
+	if %BtnRes != -5 jumpf
+		;Pick a sprite
+		mov %Free19,0
+		if %Free21 != -1 && %Free19 == 0 mov %Free19,s0_12 : amsp %Free19,%Free21,-143 : mov %Free21,-1
+		if %Free22 != -1 && %Free19 == 0 mov %Free19,s0_13 : amsp %Free19,%Free22,-143 : mov %Free22,-1
+		if %Free23 != -1 && %Free19 == 0 mov %Free19,s0_14 : amsp %Free19,%Free23,-143 : mov %Free23,-1
+		if %Free19 == 0 jumpf ;no sprite present
+		btndef ""
+		;Blade a sprite
+		seplay 1,57,100
+		vsp %Free19,1
+		print 1
+		wait2 100
+		;Show a cutscene
+		anim s0_17,"no05",1
+		blend_mode add,s0_17
+		flush 1
+		seplay 1,58,100
+		waitvideo
+		csp_slot s0_17
+		;Hide the sprite
+		vsp %Free19,0
+		dec %Free7
+		;Reduce hp
+		border_pad_push 5
+		gosub *o3_show_hp
+		border_pad_pop 
+		print 1
+		mov %Free16,1500
+		gosub *o3_btn_reload
+		dec %Free15
+		dec %Free14
+
+		if %Free7 == 0 goto *o3_wal_lost
+	~
+goto *o3_wal_fight_l
+
+*o3_bea_fight
+;Normal sprites
+lsph s0_5,":a;sprites\rg1\1\rg1_a13_akuwarai1.png",-706,161
+lsph s0_6,":a;sprites\rg2\1\rg2_a12_hohoemi1.png",-706,160
+lsph s0_7,":a;sprites\rg3\1\rg3_a12_fuman1.png",-706,160
+lsph s0_8,":a;sprites\rg4\1\rg4_a12_defo1.png",-706,162
+lsph s0_9,":a;sprites\rg5\1\rg5_a12_akuwarai2.png",-706,173
+lsph s0_10,":a;sprites\rg6\1\rg6_a12_akuwarai1.png",-706,173
+lsph s0_11,":a;sprites\rg7\1\rg7_a12_hohoemi1.png",-706,173
+;Variables and sounds
+gosub *o3_play_set
+mov %Free16,1500 ;btntime
+agpt quakeycycle,100
+agpt quakeyamp,50,500
+agpt quakexcycle,67
+agpt quakexamp,10,500
+;START!
+btndef ""
+btntime %Free16
+
+*o3_bea_fight_l
+	transbtn
+	rnd2 %Free17,1,4 ;How many
+	mov %Free19,0
+
+	~
+	if %Free14 == 30 jumpf
+	if %Free19 == %Free17 jumpf
+	inc %Free19
+		rnd %Free18,7 ;pos
+		mul %Free18,300
+		if %Free21 == %Free18 || %Free22 == %Free18 || %Free23 == %Free18 || %Free24 == %Free18 jumpb
+		if %Free25 == %Free18 || %Free26 == %Free18 || %Free27 == %Free18 jumpb
+		if %Free21 == -1 mov %Free21,%Free18 : amsp s0_5,%Free21-706,161 : vsp s0_5,1 : spbtn s0_5,s0_5 : inc %Free14 : jumpb
+		if %Free22 == -1 mov %Free22,%Free18 : amsp s0_6,%Free22-706,160 : vsp s0_6,1 : spbtn s0_6,s0_6 : inc %Free14 : jumpb
+		if %Free23 == -1 mov %Free23,%Free18 : amsp s0_7,%Free23-706,160 : vsp s0_7,1 : spbtn s0_7,s0_7 : inc %Free14 : jumpb
+		if %Free24 == -1 mov %Free24,%Free18 : amsp s0_8,%Free24-706,162 : vsp s0_8,1 : spbtn s0_8,s0_8 : inc %Free14 : jumpb
+		if %Free25 == -1 mov %Free25,%Free18 : amsp s0_9,%Free25-706,173 : vsp s0_9,1 : spbtn s0_9,s0_9 : inc %Free14 : jumpb
+		if %Free26 == -1 mov %Free26,%Free18 : amsp s0_10,%Free26-706,173 : vsp s0_10,1 : spbtn s0_10,s0_10 : inc %Free14 : jumpb
+		if %Free27 == -1 mov %Free27,%Free18 : amsp s0_11,%Free27-706,173 : vsp s0_11,1 : spbtn s0_11,s0_11 : inc %Free14 : jumpb
+		jumpb ;next
+	~
+	print 1
+
+	btnwait2 %BtnRes
+	;Shoot
+	if %BtnRes == -1 || %BtnRes == -2 || %BtnRes == -3 goto *o3_bea_fight_l
+	if %BtnRes == -5 jumpf
+		dwaveplay 0
+		dec %Free6
+		border_pad_push 5
+		gosub *o3_show_bullets
+		border_pad_pop
+		mov %Free16,700
+		if %BtnRes == s0_5 btndef "" : vsp s0_5,0 : mov %Free21,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_6 btndef "" : vsp s0_6,0 : mov %Free22,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_7 btndef "" : vsp s0_7,0 : mov %Free23,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_8 btndef "" : vsp s0_8,0 : mov %Free24,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_9 btndef "" : vsp s0_9,0 : mov %Free25,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_10 btndef "" : vsp s0_10,0 : mov %Free26,-1 : gosub *o3_btn_reload
+		if %BtnRes == s0_11 btndef "" : vsp s0_11,0 : mov %Free27,-1 : gosub *o3_btn_reload
+		print 1
+		if %Free15 == 30 goto *o3_bea_success
+		if %Free6 != 0 jumpf
+			;Recharge
+			wait2 300
+			seplay 1,43,100 
+			wait2 500 
+			mov %Free6,5 
+			mov %Free16,200
+			border_pad_push 5
+			gosub *o3_show_bullets
+			border_pad_pop 
+			print 1
+	~
+	;Fail
+	if %BtnRes != -5 jumpf
+		;Pick a sprite
+		mov %Free19,0
+		if %Free21 != -1 && %Free19 == 0 vsp s0_5,0 : mov %Free21,-1 : mov %Free19,1
+		if %Free22 != -1 && %Free19 == 0 vsp s0_6,0 : mov %Free22,-1 : mov %Free19,1
+		if %Free23 != -1 && %Free19 == 0 vsp s0_7,0 : mov %Free23,-1 : mov %Free19,1
+		if %Free24 != -1 && %Free19 == 0 vsp s0_8,0 : mov %Free24,-1 : mov %Free19,1
+		if %Free25 != -1 && %Free19 == 0 vsp s0_9,0 : mov %Free25,-1 : mov %Free19,1
+		if %Free26 != -1 && %Free19 == 0 vsp s0_10,0 : mov %Free26,-1 : mov %Free19,1
+		if %Free27 != -1 && %Free19 == 0 vsp s0_11,0 : mov %Free27,-1 : mov %Free19,1
+		if %Free19 == 0 jumpf ;no sprite present
+		btndef ""
+		;Show a cutscene
+		pam 749,"no59",0
+		sub %Free7,2
+		;Reduce hp
+		border_pad_push 5
+		gosub *o3_show_hp
+		border_pad_pop 
+		print 1
+		mov %Free16,1500
+		gosub *o3_btn_reload
+		dec %Free15
+		dec %Free14
+
+		if %Free7 <= 0 goto *o3_bea_lost
+	~
+goto *o3_bea_fight_l
+
+*o3_ev2_fight
+gosub *o3_play_set
+mov %Free16,1500 ;btntime
+mov %Free11,0 ;golden bullets (what is splatting this?)
+mov %Free28,0 ; death cause unknown
+if %Free6 >= %Free7 mov %Free28,1 ; death cause -> bullets >= ammo
+;lsph s0_25,":c;graphics\efe\blood_2a.png",-254,-143
+;lsph s0_26,":c;graphics\efe\no64_00000.png",0,0
+
+
+;;Load them
+;lss s0_10,"s41","a11_akuwarai1" ;1
+;aspt2 xpos,s0_10,550
+;lss s0_8,"s45","a11_defo1" ;1
+;aspt2 xpos,s0_8,-550
+;flush 10,167
+lsp s0_10,":a;sprites\s41\1\s41_a11_akuwarai1.png",1129,-40
+lsp s0_8,":a;sprites\s45\1\s45_a11_defo1.png",6,19
+print 1
+;START!
+
+*o3_ev2_fight_l
+	btndef ""
+	btntime %Free16
+	mov %Free16,1500
+	transbtn
+	spbtn s0_10,s0_10
+	spbtn s0_8,s0_8
+	btnwait2 %BtnRes
+	;debug_var %BtnRes,"Game:BtnRes:"
+	;debug_var %Free6,"Game:Free6(Bullets):"
+	;debug_var %Free7,"Game:Free7(Life):"
+	;debug_var %Free11,"Game:Free11(Golden bullets flag):"
+	;debug_var %Free28,"Game:Free28(Death cause flag):"
+	;Shoot
+	if %BtnRes == -1 || %BtnRes == -2 || %BtnRes == -3 goto *o3_ev2_fight_l ;wrong button, ignore
+	if %BtnRes != -5 dec %Free6 : dwaveplay 0		; If we shoot, consume a bullet and play gunfire SFX	
+	if %BtnRes != s0_8 && %BtnRes != s0_10 dec %Free7	; Lose one life unless we shot the bunnies (on wait or miss)
+	; Update the visual display
+	border_pad_push 5
+	gosub *o3_show_bullets
+	gosub *o3_show_hp
+	border_pad_pop
+	print 1
+	if %BtnRes != s0_8 && %BtnRes != s0_10 jumpf
+	; If we shot the bunnies
+		if %Free11 == 1 goto *o3_ev2_success ; Win if we have golden bullets
+		mov %Free28,2 : goto *o3_ev2_death ; Otherwise die
+	~
+	if %BtnRes != -5 jumpf
+	; If we did not shoot:
+		seplay 2,12,71 ; Getting hit SFX
+		if %Free7 == 0 goto *o3_ev2_death ; Death by waiting around
+		lv 0,"36","43500005" ; "You're slow" voice
+		goto *o3_ev2_fight_l
+	~
+	if %Free28 == 0 mov %Free28,3 ; Shot at least once, so make the default death message 3 instead of 0
+	if %Free7 == 0 && %Free11 == 0 goto *o3_ev2_death ; Death by shooting and missing (no golden bullets)
+	if %Free7 == 0 && %Free11 == 1 mov %Free28,4 : goto *o3_ev2_death ; Death by shooting and missing (golden bullets)
+	if %omake_level > 0 && %Free6 == 0 && %Free11 == 0 goto *o3_load_golden_bullets
+	if %omake_level == 0 && %Free6 == 0 goto *o3_ev2_death ;out of ammo and no golden bullets
+	goto *o3_ev2_fight_l
+	*o3_load_golden_bullets
+		;Recharge
+		wait 300
+		seplay 1,43,100 
+		wait 500 
+		mov %Free6,5 
+		mov %Free11,1
+		border_pad_push 5
+		gosub *o3_show_bullets
+		gosub *o3_show_hp
+		set_window_simple 1,500
+		seplay 2,37,100
+		*o3_golden_bullets_diag
+		d [ak]`{p:41:{a:c:Golden bullets. Magic...to destroy...magic...}}`[!w3000][\]
+		set_name_window_non
+		border_pad_pop 
+		print 1
+goto *o3_ev2_fight_l
+
+*o3_ev2_death
+	custom_cursor "default"
+	csp_slot s0_27
+	csp_slot s0_28
+	flush 1
+	aspt2 blur,s0_2,5000,3000
+	sptwait2 blur,s0_2
+	csp_slot s0_8
+	csp_slot s0_10
+	lbg s0_20,"system1"
+	flush 1
+	wait 667
+	seplay 3,57,100
+	textoff
+	waits 167
+	lbg s0_20,"system2"
+	flush 1
+	wait 667
+	seplay 2,57,100
+	textoff
+	waits 167
+	lbg s0_20,"system3"
+	flush 1
+	wait 667
+	seplay 3,57,100
+	textoff
+	waits 167
+	lbg s0_20,"system4"
+	flush 1
+	wait 667
+	seplay 2,57,100
+	textoff
+	waits 167
+	lbg s0_20,"system5"
+	flush 1
+	wait 667
+	seplay 1,57,100
+	textoff
+	wait2 1000
+	csp_slot s0_20
+	flush 10,600
+	anim s0_17,"no33a",1
+	blend_mode add,s0_17
+	flush 1
+	seplay 1,57,100
+	wait 133
+	seplay 2,57,100
+	wait 133
+	seplay 3,57,100
+	wait 133
+	seplay 1,57,100
+	wait 133
+	seplay 2,57,100
+	wait 133
+	seplay 3,57,100
+	wait 133
+	seplay 1,57,100
+	waitvideo
+	csp_slot s0_17
+	seplay 2,36,100
+	textoff
+	waits 167
+	lbg s0_3,"blood_1ar"
+	flush 1
+	agpt quakeycycle,100
+	agpt quakeyamp,30
+	agpt quakeyamp,0,1167,1
+	rumble 63,500
+	gptwait quakeyamp
+	vol_me 1,0,5000
+	vol_me 2,0,5000
+	wait2 5000
+	goto *o3_show_lost
+
+*o3_wal_success
+	custom_cursor "default"
+	csp_slot s0_5
+	csp_slot s0_6
+	csp_slot s0_7
+	gosub *o3_play_cleared
+	inc %Free9
+	goto *o3_load_again
+
+*o3_bea_success
+	custom_cursor "default"
+	csp_slot s0_5
+	csp_slot s0_6
+	csp_slot s0_7
+	csp_slot s0_8
+	csp_slot s0_9
+	csp_slot s0_10
+	csp_slot s0_11
+	print 1
+	agpt quakeyamp,0,500
+	agpt quakexamp,0,500
+	gptwait quakeyamp
+	gptwait quakexamp
+	gosub *o3_play_cleared
+	inc %Free9
+	goto *o3_load_again
+
+*o3_ev2_success
+	;Die the desu!
+	custom_cursor "default"
+	lbg s0_16,"red_b"
+	aspt2 alpha,s0_16,0
+	anim2 s0_17,"laser_b",1
+	blend_mode2 add,s0_17
+	aspt2 flip,s0_17,1
+	seplay 1,74,100
+	seplay 2,36,100
+	seplay 3,75,100
+	
+	; Load up the lss versions of the sprites that were mistakenly loaded during the fight in previous versions
+	csp_slot s0_8
+	csp_slot s0_10
+	lss s0_10,"s41","a11_akuwarai1" ;1
+	aspt2 xpos,s0_10,550
+	lss s0_8,"s45","a11_defo1" ;1
+	aspt2 xpos,s0_8,-550
+
+	flush 1
+	lss s0_10,"s41","a11_odoroki1" ;1
+	aspt2 xpos,s0_10,550
+	wait 1000
+	flush 1
+	aspt2 breakup,s0_17,0
+	aspt2 alpha,s0_16,70,500
+	aspt2 alpha,s0_8,220,500
+	aspt2 alpha,s0_10,220,500
+	aspt2 breakup,s0_17,1000,500
+	aspt2 alpha,s0_17,0,500
+	sptwait2 breakup,s0_17
+	csp_slot s0_17
+	anim2 s0_17,"laser_r",1
+	blend_mode2 add,s0_17
+	seplay 4,74,100
+	seplay 5,36,100
+	seplay 6,75,100
+	flush 1
+	lss s0_8,"s45","a11_komaru1" ;1
+	aspt2 xpos,s0_8,-550
+	wait 1000
+	flush 1
+	aspt2 breakupdir,s0_17,1
+	aspt2 breakup,s0_17,0
+	aspt2 alpha,s0_16,100,500
+	aspt2 alpha,s0_8,180,500
+	aspt2 alpha,s0_10,180,500
+	aspt2 breakup,s0_17,1000,500
+	aspt2 alpha,s0_17,0,500
+	sptwait2 breakup,s0_17
+	csp_slot s0_17
+	anim2 s0_17,"laser_g",1
+	blend_mode2 add,s0_17
+	aspt2 flip,s0_17,1
+	seplay 7,74,100
+	seplay 8,36,100
+	seplay 9,75,100
+	flush 1
+	wait 1000
+	aspt2 breakup,s0_17,0
+	aspt2 alpha,s0_16,150,500
+	aspt2 alpha,s0_8,160,500
+	aspt2 alpha,s0_10,160,500
+	aspt2 breakup,s0_17,1000,500
+	aspt2 alpha,s0_17,0,500
+	sptwait2 breakup,s0_17
+	csp_slot s0_17
+	anim2 s0_17,"laser_g",1
+	blend_mode2 add,s0_17
+	seplay 4,74,100
+	seplay 5,36,100
+	seplay 6,75,100
+	flush 1
+	wait 1000
+	aspt2 breakupdir,s0_17,1
+	aspt2 breakup,s0_17,0
+	aspt2 alpha,s0_16,180,500
+	aspt2 alpha,s0_8,140,500
+	aspt2 alpha,s0_10,140,500
+	aspt2 breakup,s0_17,1000,500
+	aspt2 alpha,s0_17,0,500
+	sptwait2 breakup,s0_17
+	csp_slot s0_17
+	anim2 s0_17,"no31",1
+	blend_mode2 add,s0_17
+	flush 1
+	seplay 1,2,100
+	seplay 2,2,100
+	wait 100
+	seplay 2,2,100
+	seplay 3,2,100
+	wait 100
+	seplay 3,2,100
+	seplay 1,2,100
+	wait 100
+	seplay 1,2,100
+	seplay 2,2,100
+	wait 100
+	seplay 2,2,100
+	seplay 3,2,100
+	wait 100
+	seplay 3,2,100
+	seplay 1,2,100
+	wait 100
+	seplay 1,2,100
+	seplay 2,2,100
+	wait 100
+	seplay 2,2,100
+	seplay 3,2,100
+	wait 100
+	seplay 3,2,100
+	seplay 1,2,100
+	wait 100
+	seplay 4,1006,100
+	wait 100
+	seplay 5,1100,100
+	;waitvideo
+	csp_slot s0_16
+	csp_slot s0_17
+	csp_slot s0_8
+	csp_slot s0_10
+	show_glass 0
+	seplay 1,1100,100
+	wait 100
+	seplay 2,1100,100
+	wait 100
+	seplay 3,1100,100
+	wait 100
+	seplay 4,1100,100
+	wait 100
+	gosub *o3_play_cleared
+	goto *o3_show_win
+
+;21,27, (30,43,46),35 54 57
+*o3_wal_lost
+	custom_cursor "default"
+	vol_bgm 0,5000
+	vol_me 1,0,5000
+	vol_me 2,0,5000
+	wait2 5000
+	csp_slot s0_27
+	lbg s0_20,"no52_00089"
+	pam 749,"no52",0
+	goto *o3_show_lost
+
+*o3_bea_lost
+	custom_cursor "default"
+	agpt quakeyamp,0,500
+	agpt quakexamp,0,500
+	vol_bgm 0,5000
+	vol_me 1,0,5000
+	vol_me 2,0,5000
+	gptwait quakeyamp
+	gptwait quakexamp
+	wait2 5000
+	csp_slot s0_27
+	lbg s0_20,"blood_2a"
+	flush 1
+	wait 667
+	seplay 3,35,100
+	textoff
+	waits 167
+	lbg s0_20,"blood_2b"
+	flush 1
+	wait 667
+	seplay 2,35,100
+	textoff
+	waits 167
+	lbg s0_20,"blood_2c"
+	flush 1
+	wait 667
+	seplay 3,35,100
+	textoff
+	waits 167
+	lbg s0_20,"blood_2d"
+	flush 1
+	wait 667
+	seplay 2,35,100
+	textoff
+	waits 167
+	lbg s0_20,"blood_2e"
+	flush 1
+	wait 667
+	seplay 1,36,100
+	textoff
+	waits 167
+	lbg s0_20,"blood_1ar"
+	wait2 2000
+	goto *o3_show_lost
+
+*o3_show_lost
+	border_pad_pop
+	set_window_simple 1,1
+	border_pad_push 5
+	lsp s0_25,":s;#FFFFFF`{p:24:———}{p:22:{a:c:You undoubtedly failed!}{p:24:———}{n}}`",0,-120
+	border_pad_pop
+	set_name_window_non
+	print 1
+	aspt ypos,s0_25,480,2000,1
+	sptwait ypos,s0_25
+	wait 1500
+	;omake is not unlocked: "You do not have enough wisdom to make any sense of it."
+	;bullets >= life upon starting round 3 (impossible to get Golden Bullets): "It takes energy to achieve your goals."
+	;shooting bunnies without golden bullets and dying: "You cannot destroy magic with mere iron."
+	;waiting without golden bullets and dying: "It is useless to just stand and wait forever."
+	;shooting and missing and dying (without golden bullets) — since you started with bullets < life (or you would get an above message), 
+	;  this can only happen if you waited at least once during the bunny battle and lost a heart that way so that you ended up with bullets >= life again,
+	;  so the real cause of this death was that wait: "Goals are not achieved by waiting around."
+	if %omake_level == 0 lsp s0_26,":s;#FFFFFF`{p:7:You do not have enough wisdom to make any sense of it.}`",-1560,980 : jumpf
+	; set in the beginning
+	if %Free28 == 1 lsp s0_26,":s;#FFFFFF`{p:7:It takes energy to achieve your goals.}`",-1560,980 : jumpf
+	; set at shooting into a bunny
+	if %Free28 == 2 lsp s0_26,":s;#FFFFFF`{p:7:You cannot destroy magic with mere iron.}`",-1560,980 : jumpf
+	; set at shooting yourself to death with missing (without golden bullets)
+	if %Free28 == 3 lsp s0_26,":s;#FFFFFF`{p:7:Goals are not achieved by waiting around.}`",-1560,980 : jumpf
+	; set at shooting yourself to death with missing (with golden bullets)
+	if %Free28 == 4 lsp s0_26,":s;#FFFFFF`{p:7:Golden bullets are effective for making peppered rabbit.}`",-1560,980 : jumpf
+	; nothing happened
+	if %Free28 == 0 lsp s0_26,":s;#FFFFFF`{p:7:It is useless to just stand and wait forever.}`",-1560,980 : jumpf
+	~
+	flush 1
+	seplay 2,59,100
+	spt xpos,s0_26,1600,900,3
+	sptwait xpos,s0_26
+	wait 3000
+	spt xpos,s0_26,-1600,900,3
+	sptwait xpos,s0_26
+	_csp s0_26
+	flush 1
+	wait2 3500
+	csp_slot s0_25
+	break_glass2
+	rain_style 0
+	wait 500
+	skip_on
+	goto *o3_end
+
+*o3_show_win
+	textoff
+	wait 5000
+	lsp2 s0_16,":c;sound\bgm\Treasure.png",960,540,1,1
+	seplay 1,1010,100
+	flush 1
+	aspt2 rot,s0_16,-720,600
+	aspt2 scalex,s0_16,75,600
+	aspt2 scaley,s0_16,75,600
+	sptwait2 scaley,s0_16
+	set_window_simple 80
+	*o3_congr_d
+	d `Congratulations!`[@]` It has been quite some time, but you made it here.`[@]`{n}{n}For all your effort, the Golden Witch gifted you with the keys to Lord {f:5:Goldsmith}'s Archive.`[@]` For you, it may become a place of rest and long forgotten memories.`[@]`{n}{n}Good luck with reaching the end of the game!`[\]
+	textoff
+	wait 5000
+	if %omake_level = 1 mov %omake_level,2
+	goto *o3_end

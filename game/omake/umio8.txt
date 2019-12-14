@@ -1,0 +1,1121 @@
+*o8_0
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+resettimer
+wait 1500
+lbg s0_3,"different_spiral_1a"
+flush 2
+wait 2200
+seplay 1,22,71
+lbg s0_17,"kakera_memory4"
+color_mod2 s0_17,#ffffff
+aspt2 alpha,s0_17,0
+agpt onionalpha,192
+aspt2 warp_spd,s0_17,10
+aspt2 warp_amp,s0_17,100,1667
+flush 1
+sptwait2 warp_amp,s0_17
+aspt2 alpha,s0_17,255,4533 ;1667
+sptwait2 alpha,s0_17
+aspt2 warp_amp,s0_17,0,1000
+agpt onionalpha,0,1000
+sptwait2 warp_amp,s0_17
+csp_slot s0_17
+lbg s0_3,"kakera_memory4"
+color_mod2 s0_3,#ffffff
+flush 1
+waittimer 15117-1000
+seplay 2,52,71
+waits 167
+lbg s0_3,"kakera_memory5"
+color_mod2 s0_3,#ffffff
+spriteset_enable 1
+lbg s1_1,"kakera_memory4"
+lbg s1_3,"kakera_memory4"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+aspritesetpt breakupdir,1,2
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+waittimer 17870
+seplay 2,52,71
+waits 167
+lbg s0_3,"kakera_memory6"
+color_mod2 s0_3,#ffffff
+spriteset_enable 1
+lbg s1_1,"kakera_memory5"
+lbg s1_3,"kakera_memory5"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+aspritesetpt breakupdir,1,3
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+waittimer 23330
+seplay 2,52,71
+waits 167
+waittimer 9635
+lbg s0_3,"kakera_memory7"
+color_mod2 s0_3,#ffffff
+spriteset_enable 1
+lbg s1_1,"kakera_memory6"
+lbg s1_3,"kakera_memory6"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+aspritesetpt breakupdir,1,1
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+waittimer 28340
+seplay 2,52,71
+waits 167
+lbg s0_3,"kakera_memory8"
+color_mod2 s0_3,#ffffff
+spriteset_enable 1
+lbg s1_1,"kakera_memory7"
+lbg s1_3,"kakera_memory7"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+waittimer 33740
+seplay 2,52,71
+waits 167
+lbg s0_3,"kakera_memory9"
+color_mod2 s0_3,#ffffff
+spriteset_enable 1
+lbg s1_1,"kakera_memory8"
+lbg s1_3,"kakera_memory8"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+aspritesetpt breakupdir,1,2
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+waittimer 39890
+seplay 2,52,71
+waits 167
+lbg s0_3,"kakera_memory10"
+color_mod2 s0_3,#ffffff
+spriteset_enable 1
+lbg s1_1,"kakera_memory9"
+lbg s1_3,"kakera_memory9"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+aspritesetpt breakupdir,1,3
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+waittimer 44500
+seplay 2,52,71
+waits 167
+lbg s0_3,"black"
+spriteset_enable 1
+lbg s1_1,"kakera_memory10"
+lbg s1_3,"kakera_memory10"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+aspritesetpt breakupdir,1,1
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+*o8_1
+d2 [ak][text_speed_t 5]`The tales up until now...`[#][*]`......one after another...`[#][*]`......after another.........`[#][*][\]
+wait_on_d 0
+waittimer 48467
+d_continue
+wait_on_d 1
+waittimer 49267
+d_continue
+wait_on_d 2
+waittimer 50267
+d_continue
+wait_on_d -1
+*o8_2
+d2 [ak][text_speed_t 5]`Vergilius guided Dante to Mount Purgatory,`[#][*]` ......and led him to Beatrice, the eternal lady who waited at the top.`[#][*][\]
+
+wait_on_d 0
+waittimer 52284
+d_continue
+wait_on_d 1
+waittimer 53951
+d_continue
+wait_on_d -1
+*o8_3
+d2 [ak][text_speed_t 5]`Therefore,`[#][*]` .........the innermost depths lay not at the bottom,`[#][*]` .........but at the peak of Mount Purgatory.`[#][*][\]
+wait_on_d 0
+waittimer 55284
+d_continue
+wait_on_d 1
+waittimer 56084
+d_continue
+wait_on_d 2
+waittimer 57084
+d_continue
+wait_on_d -1
+*o8_4
+d2 [ak][text_speed_t 5]`The eternal lady...`[#][*]`...had been waiting there for Dante...`[#][*]`...the whole time......`[#][*][\]
+wait_on_d 0
+waittimer 58551
+d_continue
+wait_on_d 1
+waittimer 59351
+d_continue
+wait_on_d 2
+waittimer 60351
+d_continue
+wait_on_d -1
+textoff
+waittimer 61234
+set_window_simple 80
+*o8_5
+d2 [ak][#][text_speed_t -222][text_fade_t 833]`{a:c:And then.........I knew.}`[\]
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+lbg s0_3,"map01"
+flush 18,150,msk_1
+lbg s0_3,"kakera_memory8"
+flush 18,150,msk_1
+lbg s0_3,"map04"
+flush 18,150,msk_1
+lbg s0_1,"mlib_1c_bg"
+lbg s0_3,"mlib_1c"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"kakera_memory3"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"magicsquare_gap"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"rose_g1a"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"g1f_p1c"
+flush 18,150,msk_1
+lbg s0_3,"map09"
+flush 18,150,msk_1
+lbg s0_3,"gold2"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"kakera_memory1"
+flush 18,150,msk_1
+waits 333
+lbg s0_1,"glob_1ar_bg"
+lbg s0_3,"glob_1ar"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"kakera_memory5"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"forest_p3b"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"m1f_s1c"
+flush 18,150,msk_1
+waits 333
+lbg s0_1,"mlib_1a_bg"
+lbg s0_3,"mlib_1a"
+flush 18,150,msk_1
+lbg s0_3,"mkit_1c"
+flush 18,150,msk_1
+lbg s0_3,"sweet2"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"map05"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"text010"
+flush 18,150,msk_1
+waits 333
+lbg s0_1,"mhal_2ar_bg"
+lbg s0_3,"mhal_2ar"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"mhal_2cr"
+flush 18,150,msk_1
+waits 333
+lbg s0_3,"portrait2"
+flush 18,2000,msk_1
+wait 1000
+waits 1600
+wait_on_d -1
+set_name_window_non
+csp_slot s0_11
+textoff
+waittimer 75615
+lbg s0_3,"portrait2"
+flush 10,1667
+wait 500
+seplay 1,1006,100
+seplay 2,1006,100
+seplay 3,57,100
+csp_slot s0_1
+lbg s0_3,"black"
+show_glass 0
+textoff
+waits 167
+vol_mix_fade 2000
+waittimer 82120
+lbg s0_3,"different_space_2b"
+spriteset_enable 1
+lbg s1_1,"black"
+lbg s1_3,"black"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+*o8_6
+d2 [ak][text_speed_t 5]`......I finally...reached the truth.........`[#][*][\]
+wait_on_d 0
+vol_bgm -1,3000
+waittimer 86768
+d_continue
+wait_on_d -1
+*o8_7
+d2 [ak][text_speed_t 5]`.........In the depths, ...no,`[#][*]` .........at the peak...of Mount Purgatory...............`[#][*][\]
+wait_on_d 0
+waittimer 87734
+d_continue
+wait_on_d 1
+waittimer 89101
+d_continue
+wait_on_d -1
+textoff
+waits 167
+resettimer
+bgmplay2 132,80,1
+lsp 2,"*8"
+flush 1
+vol_me 1,-1,1000
+*o8_8
+d2 [ak][text_speed_t 5]`............Idiot............`[#][*][\]
+wait_on_d 0
+waittimer 2600
+d_continue
+wait_on_d -1
+*o8_9
+d2 [ak][text_speed_t 5]`......You...`[#][*]`......really are...`[#][*]`...an idiot......`[#][*][\]
+wait_on_d 0
+waittimer 3250
+d_continue
+wait_on_d 1
+waittimer 3667
+d_continue
+wait_on_d 2
+waittimer 4667
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+waittimer 6084
+msgwnd_but
+*o8_10
+d2 [lv 0*"10"*"50101369"][ak][text_speed_t 5]`"...Ah,`[#][*][|][lv 0*"10"*"50101370"]` ......gwah...`[#][*][|][lv 0*"10"*"50101371"]`.........that hurts........."`[#][*][\]
+wait_on_d 0
+waittimer 7126
+d_continue
+wait_on_d 1
+waittimer 8367
+d_continue
+wait_on_d 2
+waittimer 12041
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"wsan_1a"
+flush 6
+msgwnd_non
+*o8_11
+d2 [ak][text_speed_t 5]`He woke from the sleep of death,`[#][*]` ......and bit by bit......his sense of pain came back to him......`[#][*][\]
+wait_on_d 0
+waittimer 15834
+d_continue
+wait_on_d 1
+waittimer 17800
+d_continue
+wait_on_d -1
+*o8_12
+d2 [ak][text_speed_t 5]`As Battler hung there pierced by the longsword, his head still tilted towards the heavens,`[#][*]` ......life gradually returned to his face...through an expression of suffering......`[#][*][\]
+wait_on_d 0
+waittimer 21200
+d_continue
+wait_on_d 1
+waittimer 22867
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+set_window_simple 80
+msgwnd_but
+*o8_13
+d2 [lv 0*"10"*"50101372"][ak][text_speed_t 5]`"You...`[#][*][|][lv 0*"10"*"50101373"]`......really are...`[#][*][|][lv 0*"10"*"50101374"]`...an idiot......`[#][*][lv 0*"10"*"50101375"]` ......A huge idiot........."`[#][*][\]
+wait_on_d 0
+waittimer 25082
+d_continue
+wait_on_d 1
+waittimer 28308
+d_continue
+wait_on_d 2
+waittimer 29671
+d_continue
+wait_on_d 3
+waittimer 31474
+d_continue
+wait_on_d -1
+set_name_window_non
+*o8_14
+d2 [ak][text_speed_t 5]`Battler...noticed.`[#][*][\]
+wait_on_d 0
+waittimer 33966
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"wsan_2c"
+lss s0_9,"be2","a15_1_arigatou" ;1
+flush 2
+*o8_15
+d2 [ak][text_speed_t 5]`......The whole time,`[#][*]` .........Beato had been snuggling up against him......sleeping.`[#][*][\]
+wait_on_d 0
+waittimer 36416
+d_continue
+wait_on_d 1
+waittimer 38283
+d_continue
+wait_on_d -1
+*o8_16
+d2 [ak][text_speed_t 5]`And when he held her,`[#][*]` .........he found...`[#][*]`......that it was not Beato...`[#][*]`......but her crumbling...`[#][*]`...remains.`[#][*][\]
+wait_on_d 0
+waittimer 40100
+d_continue
+wait_on_d 1
+waittimer 40983
+d_continue
+wait_on_d 2
+waittimer 41616
+d_continue
+wait_on_d 3
+waittimer 42416
+d_continue
+wait_on_d 4
+waittimer 44283
+d_continue
+wait_on_d -1
+textoff
+waits 167
+seplay 1,22,70
+aspt2 breakupdir,s0_9,2
+textoff
+aspt2 breakup,s0_9,0
+aspt2 breakup,s0_9,1000,10000
+aspt2 alpha,s0_9,0,10000
+sptwait2 breakup,s0_9
+csp_slot s0_9
+flush 1 ;flush2: NO frames
+waittimer 54522
+*o8_17
+d2 [ak][text_speed_t 5]`And because her form was as fragile as ash,`[#][*]` when Battler tried to hold it,`[#][*]` .........just like a sand castle made on a beach...`[#][*]`...being washed away by a small wave,`[#][*]` ......it fell apart and lost its form......`[#][*][\]
+wait_on_d 0
+waittimer 56600
+d_continue
+wait_on_d 1
+waittimer 57400
+d_continue
+wait_on_d 2
+waittimer 58400
+d_continue
+wait_on_d 3
+waittimer 58900
+d_continue
+wait_on_d 4
+waittimer 60567
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 6
+*o8_18
+d2 [ak][text_speed_t 5]`At Battler's feet......lay nothing but the ragged remnants of Beato's dress......and a pile of ash.`[#][*][\]
+wait_on_d 0
+waittimer 66467
+d_continue
+wait_on_d -1
+*o8_19
+d2 [ak][text_speed_t 5]`No, ......on top of that pile of ash......he could see something sparkling gold.`[#][*][\]
+wait_on_d 0
+waittimer 68967
+d_continue
+wait_on_d -1
+*o8_20
+d2 [ak][text_speed_t 5]`......It was...`[#][*]`.........the husk...`[#][*]`...of a single gold butterfly...`[#][*]`...which had been torn to bits......`[#][*][\]
+wait_on_d 0
+waittimer 69750
+d_continue
+wait_on_d 1
+waittimer 70250
+d_continue
+wait_on_d 2
+waittimer 70667
+d_continue
+wait_on_d 3
+waittimer 72334
+d_continue
+wait_on_d -1
+textoff
+lbg s0_3,"wsan_1a"
+flush 2
+waittimer 75145
+*o8_21
+d2 [ak][text_speed_t 5]And so, .........Battler...`[#][*]`knew......`[#][*]`{n}I......did reach the truth...`[#][*][\]
+wait_on_d 0
+waittimer 75583
+d_continue
+wait_on_d 1
+waittimer 76625
+d_continue
+wait_on_d 2
+waittimer 77667
+d_continue
+wait_on_d -1
+*o8_22
+d2 [ak][text_speed_t 5]`......But......I wasn't able to do it...`[#][*]`......while Beato...`[#][*]`......still remained in this world............`[#][*][\]
+wait_on_d 0
+waittimer 80434
+d_continue
+wait_on_d 1
+waittimer 81451
+d_continue
+wait_on_d 2
+waittimer 83118
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_but
+*o8_23
+d2 [lv 0*"10"*"50101376"][ak][text_speed_t 5]`"......Beato......`[#][*][|][lv 0*"10"*"50101377"]`......you...`[#][*][|][lv 0*"10"*"50101378"]`......really are...`[#][*][|][lv 0*"10"*"50101379"]`......an idiot......"`[#][*][\]
+wait_on_d 0
+waittimer 85490
+d_continue
+wait_on_d 1
+waittimer 87689
+d_continue
+wait_on_d 2
+waittimer 90404
+d_continue
+wait_on_d 3
+waittimer 91998
+d_continue
+wait_on_d -1
+set_window_simple 80
+*o8_24
+d2 [lv 0*"10"*"50101380"][ak][text_speed_t 5]`I finally reached the truth...`[#][*][lv 0*"10"*"50101381"]`...of this ridiculous riddle...`[#][*][|][lv 0*"10"*"50101382"]`...you created......`[#][*][\]
+wait_on_d 0
+waittimer 97169
+d_continue
+wait_on_d 1
+waittimer 100252
+d_continue
+wait_on_d 2
+waittimer 102005
+d_continue
+wait_on_d -1
+*o8_25
+d2 [lv 0*"10"*"50101383"][ak][text_speed_t 5]`......Just...`[#][*][|][lv 0*"10"*"50101384"]`...like you wanted......!`[#][*][\]
+wait_on_d 0
+waittimer 103379
+d_continue
+wait_on_d 1
+waittimer 106454
+d_continue
+wait_on_d -1
+*o8_26
+d2 [lv 0*"10"*"50101385"][ak][text_speed_t 5]`I didn't lose heart...`[#][*][|][lv 0*"10"*"50101386"]`...and I finally...`[#][*][|][lv 0*"10"*"50101387"]`...made it all the way to the end.........`[#][*][\]
+wait_on_d 0
+waittimer 108405
+d_continue
+wait_on_d 1
+waittimer 110037
+d_continue
+wait_on_d 2
+waittimer 112294
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"wsan_2c"
+color_mod2 s0_3,#ffffff
+lss s0_9,"but","b11_naku1" ;1
+color_mod2 s0_9,#ffffff
+lips_sprite s0_9_b
+flush 2
+*o8_27
+d2 [lv 0*"10"*"50101388"][ak][text_speed_t 5]`So why...`[#][*][lv 0*"10"*"50101389"]`......did you lose heart...`[#][*][|][lv 0*"10"*"50101390"]`.........without waiting for me......?`[#][*]`{n}`[|][lv 0*"10"*"50101391"]`......You believed so strongly, didn't you......?`[#][*]`{n}`[|][lv 0*"10"*"50101392"]` That I'd......definitely reach the truth......`[#][*][\]
+wait_on_d 0
+waittimer 117489
+d_continue
+wait_on_d 1
+waittimer 119401
+d_continue
+wait_on_d 2
+waittimer 121436
+d_continue
+wait_on_d 3
+waittimer 125757
+d_continue
+wait_on_d 4
+waittimer 129501
+d_continue
+wait_on_d -1
+lss s0_9,"but","b11_sakebu2a" ;1
+color_mod2 s0_9,#ffffff
+lips_sprite s0_9_b
+flush 22
+*o8_28
+d2 [lv 0*"10"*"50101393"][ak][text_speed_t 5]`So, .........why.........?`[#][*][\]
+wait_on_d 0
+waittimer 133295
+d_continue
+wait_on_d -1
+*o8_29
+d2 [lv 0*"10"*"50101394"][ak][text_speed_t 5]`Why...`[#][*][|][lv 0*"10"*"50101395"]`............couldn't you believe with me...`[#][*][|][lv 0*"10"*"50101396"]`.........and wait............?`[#][*][\]
+wait_on_d 0
+waittimer 134997
+d_continue
+wait_on_d 1
+waittimer 137319
+d_continue
+wait_on_d 2
+waittimer 139039
+d_continue
+wait_on_d -1
+*o8_30
+d2 [lv 0*"10"*"50101397"][ak][text_speed_t 5]`It wasn't you who was forcing an endless torture on someone.`[#][*][\]
+wait_on_d 0
+waittimer 142447
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 1
+*o8_31
+d2 [lv 0*"10"*"50101398"][ak][text_speed_t 5]`It was me...!`[#][*][lv 0*"10"*"50101399"]` I've been the one putting you through a cruel torture...!`[#][*][\]
+wait_on_d 0
+waittimer 144508
+d_continue
+wait_on_d 1
+waittimer 147642
+d_continue
+wait_on_d -1
+*o8_32
+d2 [lv 0*"10"*"50101400"][ak][text_speed_t 5]`You resisted until the very end and kept on appealing to me......`[#][*]`{n}`[|][lv 0*"10"*"50101401"]` ........And now...`[#][*][lv 0*"10"*"50101402"]`...even though I finally...`[#][*][lv 0*"10"*"50101403"]`......reached the truth...`[#][*][\]
+wait_on_d 0
+waittimer 151276
+d_continue
+wait_on_d 1
+waittimer 152831
+d_continue
+wait_on_d 2
+waittimer 154731
+d_continue
+wait_on_d 3
+waittimer 156558
+d_continue
+wait_on_d -1
+*o8_33
+d2 [lv 0*"10"*"50101404"][ak][text_speed_t 5]`You...`[#][*][lv 0*"10"*"50101405"]`......couldn't wait any longer...`[#][*][lv 0*"10"*"50101406"]`......and it's all too late.........`[#][*][\]
+wait_on_d 0
+waittimer 158394
+d_continue
+wait_on_d 1
+waittimer 159634
+d_continue
+wait_on_d 2
+waittimer 162634
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"wsan_2a"
+flush 25
+*o8_34
+d2 [lv 0*"10"*"50101407"][ak][text_speed_t 5]`"Y-.........`[#][*][|][lv 0*"10"*"50101408"]`...............you idiooooot.........`[#][*][lv 0*"10"*"50101409"]` ......Why......did you give in...`[#][*][|][lv 0*"10"*"50101410"]`......before meeeeeee..."`[#][*][\]
+wait_on_d 0
+waittimer 164487
+d_continue
+wait_on_d 1
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,1000,1
+rumble 63,500
+gptwait quakeyamp
+waittimer 167163
+d_continue
+wait_on_d 2
+waittimer 170111
+d_continue
+wait_on_d 3
+waittimer 173895
+d_continue
+wait_on_d -1
+msgwnd_non
+*o8_35
+d2 [ak][text_speed_t 5]`It's my......fault......`[#][*]` I forced her to endure this torture.`[#][*]`{n}In fact, I'm amazed she endured for so long......`[#][*][\]
+wait_on_d 0
+waittimer 174895
+d_continue
+wait_on_d 1
+waittimer 175695
+d_continue
+wait_on_d 2
+waittimer 177362
+d_continue
+wait_on_d -1
+*o8_36
+d2 [ak][text_speed_t 5]`She kept on appealing to me, over and over and over again,`[#][*]` .........and because I was so incompetent......I couldn't even begin to understand the truth.`[#][*][\]
+wait_on_d 0
+waittimer 179695
+d_continue
+wait_on_d 1
+waittimer 181362
+d_continue
+wait_on_d -1
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"wsan_1c"
+lss s0_9,"but","b11_naku2" ;1
+flush 22
+lss s0_9,"but","b11_naku1" ;1
+flush 10,167
+msgwnd_but
+*o8_37
+d2 [lv 0*"10"*"50101411"][ak][text_speed_t 5]`"Idiot......`[#][*][|][lv 0*"10"*"50101412"]`......idiot.........`[#][*][lv 0*"10"*"50101413"]` ......Your riddles...`[#][*][|][lv 0*"10"*"50101414"]`...were too damn twisted......!!`[#][*][lv 0*"10"*"50101415"]` ......Why couldn't...`[#][*][|][lv 0*"10"*"50101416"]`...you say it...`[#][*][|][lv 0*"10"*"50101417"]`.........more simply......?`[#][*][lv 0*"10"*"50101418"]` ...You foo{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}o{-}ool!!`[#][*][lv 0*"10"*"50101419"]` Aaa{0}a{0}a{0}a{0}a{0}a{0}a{0}a{0}a{0}a{0}a{0}a{0}a{0}a{0}agg{0}gh{0}h{0}hhh!!"`[#][*][\]
+wait_on_d 0
+waittimer 185096
+d_continue
+wait_on_d 1
+waittimer 188523
+d_continue
+wait_on_d 2
+waittimer 191597
+d_continue
+wait_on_d 3
+waittimer 193339
+d_continue
+wait_on_d 4
+waittimer 194768
+d_continue
+wait_on_d 5
+waittimer 196213
+d_continue
+wait_on_d 6
+lss s0_9,"but","b11_sakebu2a" ;1
+flush 10,167
+waittimer 198521
+d_continue
+wait_on_d 7
+waittimer 205480
+d_continue
+wait_on_d 8
+waittimer 211076
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"wsan_1b"
+flush 2
+waits 568
+resettimer
+bgmplay2 132,80,1
+lsp 2,"*8"
+flush 1
+msgwnd_non
+*o8_38
+d2 [ak][text_speed_t 5]`His scream of pain...`[#][*]`...filled...`[#][*]`......this cathedral of sorrow...`[#][*][\]
+wait_on_d 0
+waittimer 1000
+d_continue
+wait_on_d 1
+waittimer 1583
+d_continue
+wait_on_d 2
+waittimer 2950
+d_continue
+wait_on_d -1
+*o8_39
+d2 [ak][text_speed_t 5]`The sad witch who wasn't able to let Battler know of the truth.`[#][*]`{n}The sad man who wasn't able to understand the witch's truth.`[#][*][\]
+wait_on_d 0
+waittimer 4883
+d_continue
+wait_on_d 1
+waittimer 6550
+d_continue
+wait_on_d -1
+*o8_40
+d2 [ak][text_speed_t 5]`Battler howled in anger and sadness for both of them......`[#][*][\]
+wait_on_d 0
+waittimer 9616
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 6
+seplay 1,71,90
+*o8_40_1
+d2 [ak][text_speed_t 5]`The clock hung in the cathedral showed that it was midnight on October 5th, 1986.`[#][*][\]
+wait_on_d 0
+waittimer 14350
+d_continue
+wait_on_d -1
+*o8_41
+d2 [ak][text_speed_t 5]`Time was up...`[#][*]`......for everything.........`[#][*][\]
+wait_on_d 0
+waittimer 15066
+d_continue
+wait_on_d 1
+waittimer 16366
+d_continue
+wait_on_d -1
+*o8_42
+d2 [ak][text_speed_t 5]`If you're going to create a riddle as hard as this and be so proud of it,`[#][*]` ...don't go and set a goddamned time limit on it......`[#][*][\]
+wait_on_d 0
+waittimer 17400
+d_continue
+wait_on_d 1
+waittimer 20567
+d_continue
+wait_on_d -1
+textoff
+lbg s0_3,"wsan_1a"
+flush 25
+msgwnd_but
+*o8_43
+d2 [lv 0*"10"*"50101420"][ak][text_speed_t 5]`".........No,`[#][*][|][lv 0*"10"*"50101421"]` ......I understand......`[#][*][lv 0*"10"*"50101422"]` Even though there was such a faint chance of that miracle happening,`[#][*][|][lv 0*"10"*"50101423"]` .........you prayed for it to happen......`[#][*][lv 0*"10"*"50101424"]` ......You're...`[#][*][|][lv 0*"10"*"50101425"]`......just like Grandfather."`[#][*][\]
+wait_on_d 0
+waittimer 23800
+d_continue
+wait_on_d 1
+waittimer 26377
+d_continue
+wait_on_d 2
+waittimer 29294
+d_continue
+wait_on_d 3
+waittimer 32388
+d_continue
+wait_on_d 4
+waittimer 33939
+d_continue
+wait_on_d 5
+waittimer 37996
+d_continue
+wait_on_d -1
+msgwnd_non
+*o8_44
+d2 [ak][text_speed_t 5]`You prayed for and bet on the power of a miracle...`[#][*]`......one so unlikely that it was totally impossible, less likely than finding a bead you've dropped on a sandy beach.........`[#][*][\]
+wait_on_d 0
+waittimer 40000
+d_continue
+wait_on_d 1
+waittimer 43000
+d_continue
+wait_on_d -1
+*o8_45
+d2 [ak][text_speed_t 5]`And because you did...I {i:have} now arrived at that miracle.`[#][*][\]
+wait_on_d 0
+waittimer 46667
+d_continue
+wait_on_d -1
+*o8_46
+d2 [ak][text_speed_t 5]`But......your time...`[#][*]`...didn't last long enough............`[#][*][\]
+wait_on_d 0
+waittimer 47384
+d_continue
+wait_on_d 1
+waittimer 49051
+d_continue
+wait_on_d -1
+*o8_47
+d2 [ak][text_speed_t 5]`If I had reached this point even a little sooner...`[#][*][\]
+wait_on_d 0
+waittimer 51400
+d_continue
+wait_on_d -1
+*o8_48
+d2 [ak][text_speed_t 5]`If I could have {y:1:‘seen’}{n:1:seen} the truth......!!`[#][*][\]
+wait_on_d 0
+waittimer 53449
+d_continue
+wait_on_d -1
+*o8_49
+d2 [ak][text_speed_t 5]`Even if it had been right before time was up,`[#][*]` .........I might...`[#][*]`......have been able to save you...!!`[#][*][\]
+wait_on_d 0
+waittimer 54534
+d_continue
+wait_on_d 1
+waittimer 55117
+d_continue
+wait_on_d 2
+waittimer 56784
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"blood_2e"
+flush 26
+*o8_50
+d2 [ak][text_speed_t 5]`But now, ......I've been run through pathetically,`[#][*]` ......and I can't......even hold what remains of you......!`[#][*][\]
+wait_on_d 0
+waittimer 59079
+d_continue
+wait_on_d 1
+waittimer 61034
+d_continue
+wait_on_d -1
+*o8_51
+d2 [ak][text_speed_t 5]`......I struggled, attempting to pull the longsword out,`[#][*]` ......or at least touch her remains by stretching out my arms......but neither worked.`[#][*][\]
+wait_on_d 0
+waittimer 62801
+d_continue
+wait_on_d 1
+waittimer 65601
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"wsan_2a"
+flush 22
+msgwnd_but
+*o8_52
+d2 [lv 0*"10"*"50101426"][ak][text_speed_t 5]`"......Shiiiiiit......`[#][*][|][lv 0*"10"*"50101427"]`dammiiiiiiiiiittt.........!!!"`[#][*][\]
+wait_on_d 0
+waittimer 71132
+d_continue
+wait_on_d 1
+seplay 1,38,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+waittimer 74541
+d_continue
+wait_on_d -1
+waittimer 75409
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+meplay 1,16,50
+msgwnd_non
+*o8_53
+d2 [ak][text_speed_t 5]`.........At that time, I noticed a golden glint on the palm of my hand.`[#][*][\]
+wait_on_d 0
+wait 2300
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"butterfly_2a"
+flush 8
+*o8_54
+d2 [ak][text_speed_t 5]`It was............a single wing from a gold butterfly.`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d -1
+*o8_55
+d2 [ak][text_speed_t 5]`That small fragment of gold...`[#][*]`......was the only piece of Beato...`[#][*]`...that I was permitted to touch.........`[#][*][\]
+wait_on_d 0
+wait 583
+d_continue
+wait_on_d 1
+wait 500
+d_continue
+wait_on_d 2
+wait 1667
+d_continue
+wait_on_d -1
+*o8_56
+d2 [ak][text_speed_t 5]`I cried with all my strength, .........gripped that fragment...and pressed it against my head, apologizing.`[#][*][\]
+wait_on_d 0
+wait 2667
+d_continue
+wait_on_d -1
+*o8_57
+d2 [ak][text_speed_t 5]`......Why couldn't I reach the truth earlier......?`[#][*][\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d -1
+*o8_58
+d2 [ak][text_speed_t 5]`Then I pressed it to my chest,`[#][*]` ............promising that even though things had come to this,`[#][*]` ......I would never again...`[#][*]`...lose...`[#][*]`...the truth......`[#][*][\]
+wait_on_d 0
+wait 500
+d_continue
+wait_on_d 1
+wait 500
+d_continue
+wait_on_d 2
+wait 333
+d_continue
+wait_on_d 3
+wait 417
+d_continue
+wait_on_d 4
+wait 1667
+d_continue
+wait_on_d -1
+*o8_59
+d2 [ak][text_speed_t 5]`When I pressed my hand against my chest, ......the sword piercing my chest cut my wrist, and blood dribbled out.`[#][*][\]
+wait_on_d 0
+wait 2667
+d_continue
+wait_on_d -1
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2a"
+flush 1
+*o8_60
+d2 [ak][text_speed_t 5]`That blood spread throughout my fist...`[#][*]`......and it must have...`[#][*]`...soaked that gold fragment with my red blood.`[#][*][\]
+wait_on_d 0
+wait 583
+d_continue
+wait_on_d 1
+wait 500
+d_continue
+wait_on_d 2
+wait 1667
+d_continue
+wait_on_d -1
+*o8_61
+d2 [ak][text_speed_t 5]`It must have been......the only way of telling her...`[#][*]`...that I'd found the truth she had wanted to tell me......`[#][*][\]
+wait_on_d 0
+wait 800
+d_continue
+wait_on_d 1
+wait 1667
+d_continue
+wait_on_d -1
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2c"
+flush 1
+*o8_62
+d2 [ak][text_speed_t 5]`I clutched the wing of the gold butterfly...`[#][*]`...with my freshly bleeding hand...`[#][*]`......and pressed it against the red sword that impaled me......`[#][*][\]
+wait_on_d 0
+wait 333
+d_continue
+wait_on_d 1
+wait 583
+d_continue
+wait_on_d 2
+wait 1667
+d_continue
+wait_on_d -1
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2e"
+flush 1
+*o8_63
+d2 [ak][text_speed_t 5]`In this moment,`[#][*]` ......Ushiromiya Battler...knew.`[#][*]` And understood.`[#][*][\]
+wait_on_d 0
+wait 500
+d_continue
+wait_on_d 1
+wait 500
+d_continue
+wait_on_d 2
+wait 1667
+d_continue
+wait_on_d -1
+*o8_64
+d2 [ak][text_speed_t 5]`......He had arrived...`[#][*]`......at the entirety...`[#][*]`...of this tale......`[#][*][\]
+wait_on_d 0
+wait 583
+d_continue
+wait_on_d 1
+wait 500
+d_continue
+wait_on_d 2
+wait 1667
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 18,5000,msk_1
+*o8_65
+d2 [ak][text_speed_t 5]`At that moment, ......it seemed as though a faint golden light...`[#][*]`...leaked out of the gaps in his clenched fist.`[#][*][\]
+wait_on_d 0
+wait 800
+d_continue
+wait_on_d 1
+wait 1667
+d_continue
+wait_on_d -1
+textoff
+waits 167
+vol_bgm -1,3000
+wait 3000
+mov %title_skip,1
+mov $omake_return,"omake8"
+definereset

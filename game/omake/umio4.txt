@@ -1,0 +1,416 @@
+
+
+*o4_0
+wait 1000
+bgmplay 66,71,0
+wait 1000
+lbg s0_3,"white"
+flush 10
+lbg s0_3,"cit_2a"
+flush 2
+msgwnd_non
+*o4_1
+d `A warm welcome to you, traveler, and congratulations on your final steps to complete our port of {i:Umineko no Naku Koro ni ~Rondo of the Witch and Reasoning~}.`[@]` We appreciate your effort to check every hidden part of the game.`[\]
+*o4_2
+d `Those who have been waiting for this since 2011, when the first promo videos appeared, please accept our deep apologies.`[\]
+*o4_3
+d2 `After all that arduous labor, we have finally reached the grand finale of the first half.`[#][*][@]` Each month was needed to refine things to the level they are now, and it has to be admitted that our current schedule matches our planned deadlines very closely.`[@]` Your wild applause, please.`[\]
+wait_on_d 0
+seplay 1,54,71
+wait 300
+d_continue
+wait_on_d -1
+*o4_4
+d `This omake is likely going to be the last one, and we thought long and hard about what to include in it.`[@]` Maybe some scary stories of what happened to us during the development, reverse‐engineering, and translation process.`[@]` Perhaps the minutes of blank despair we had.`[@]` The times we wanted to sit down, pour our glasses full of something heavy, and send the whole thing to ashes.`[@]` Or even the upcoming news we plan to announce sooner or later.`[\]
+*o4_5
+d `We even thought of sharing some of the experiences we had.`[@]` But, no, that would have been boring.`[\]
+*o4_6
+d `In the end we decided to talk about some easter eggs(?) that we found in the remake.`[@]` Most of them you are supposed to find yourself, so call ours an appetizer preceding the next reread.`[\]
+textoff
+lbg s0_3,"black"
+vol_bgm -1,3000
+flush 10,3000
+skip_off
+pam 749,"op_new",0
+skip_on
+bgmplay 27,71,0
+lbg s0_3,"mhal_2c"
+flush 22
+*o4_7
+d `Hope you enjoyed the opening video for at least the fifth time.`[\]
+*o4_8
+d `Did you notice anything strange in it?`[@]` Here is a hint: it's on the record at the beginning.`[\]
+*o4_9
+d `The first thing that comes to mind is "Senza {nobreak:{m:-5:——}—}, la verità non si vede".`[@]`{n}Without {nobreak:{m:-5:——}—}, the truth cannot be seen.`[@]`{n}We think that word is "a monocle", since that small blurry text on the edges of the record that cannot be seen is:`[\]
+textoff
+set_window_simple 80
+*o4_10
+d `“Il destino, chi festeggerà?/{0}Oh Maga!/{0}Oh Maga!/{0}Che cosa mi annuncerai?{n}Il vento diviene bufera/{0}Infuriano i marosi/{0}Il mare chiama mugghiando la Maga che ha vissuto mille anni/{0}Ho tanto atteso questo giorno! Ho tanto temuto questo giorno!`[\]
+*o4_11
+d `Beatrice! Maga crudele!/{0}Di bellezza senza pari/{0}Beatrice! Oh! Di dolcezza capricciosa/{0}Mai potrò liberarmi dal tuo incantesimo/{0}Se questa pena deve durare, almeno una volta abbi pietà”`[\]
+set_name_window_non
+textoff
+*o4_12
+d2 `We doubt we need to say where these lyrics come from.`[@]` And your homework will be to decipher the first twenty seconds of Igreja of Echoing Vows.`[#][*][\]
+wait_on_d 0
+seplay 1,37,71
+wait 300
+d_continue
+wait_on_d -1
+*o4_13
+d `Incidentally, while we're on the topic of music, let's ask a simple question.`[@]` What's the BGM playing now?`[\]
+*o4_14
+d2 `The answer is "suspicion".`[@]` (Those of you who have BGM Title Display enabled get zero points.)`[@]` However, on PS3—Episodes 1 to 4 only—you will actually hear a {i:different track} under this name.`[@]` Furthermore, under the name of the other track, you will find that it instead plays "suspicion".`[@]` Not so bad for your next piece of homework?`[#][*][\]
+wait_on_d 0
+seplay 1,37,71
+wait 300
+d_continue
+wait_on_d -1
+*o4_15
+d `Next up: Alchemist did some level of harm to Umineko by the means of censorship.`[@]` Not only did they remove the references to Touhou and tsurupettan, but also the words from system0.`[@]` For some reason probably relating to ratings boards and Japan's drinking age, they removed references to Battler drinking alcohol in Episodes 1, 2, and 4.`[@]` They also removed a number of references to real people, brands, and places, including references to Doraemon, Card Captor Sakura, Steve McQueen, Château Pétrus, and Germany.`[\]
+*o4_16
+d `Furthermore, there are unused voice files left on the disc that show that at one point, they were even considering deleting references to Higurashi, referring instead to "the mystery novel you were reading the other day".`[@]` To our relief, they ultimately found this unnecessary.`[@][lv 0*"28"*"92100173"]` Mii,`[|][lv 0*"28"*"92100174"]` nipah~{p:0:☆}`[\]
+*o4_17
+d `In fact, the disc has a number of treasures hidden in the voice files—not only censored and uncensored dialogues, but also faulty texts and incorrect speakers.`[@]` There are also a few interesting errors that actually made it into the game.`[@]` We'd like to take you on a tour of them now.`[\]
+textoff
+csp_slot s0_3
+vol_bgm -1,3000
+flush 10,3000
+;omk_1st entry
+lbg s0_1,"mdin_1g_bg"
+lbg s0_3,"mdin_1g"
+show_whirl
+bgmplay 10,71,0
+*o4_18
+d `The guests had already been greeted, so it was time for some tea to be prepared for them.`[\]
+*o4_19
+d `...That tea was late, and having the guests talk about making some themselves was an embarrassment for the host.`[\]
+*o4_20
+d `Natsuhi bit her lower lip, frustrated with the ineptitude of the servants who were taking too long to bring the tea.`[\]
+*o4_21
+d `...Seeing her face, Eva, without hesitation, started to giggle.`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mdin_1a"
+flush 22
+*o4_22
+d `......Of course, Shannon had no way of knowing what was taking place in the parlor.`[\]
+*o4_23
+d `As she came in pushing a dish cart piled with tea cups,`[@]` Natsuhi gave her a pained look for no apparent reason, and Shannon couldn't help but flinch without knowing what she had done wrong.`[\]
+lss s0_10,"sha","a11_fuman1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_sha
+*o4_24
+d [lv 0*"15"*"10500001"]`"......E‐excuse me.`[@][lv 0*"15"*"10500002"]` I shall prepare some tea for you."`[\]
+lss s0_8,"hid","a21_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_hid
+*o4_25
+d [lv 0*"06"*"11100088"]`"Oh, Shannon‐chan, it's been a while!`[@][lv 0*"06"*"11100089"]` You keep getting prettier every time I see you!"`[\]
+lss s0_10,"sha","a11_hajirai2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_sha
+*o4_26
+d [lv 0*"15"*"10500003"]`".........Oh,`[|][lv 0*"15"*"10500004"]` ...um,`[|][lv 0*"15"*"10500005"]` .........thanks—"`[\]
+lss s0_9,"nat","a21_hisu1" ;1
+flush 10,167
+msgwnd_nat
+*o4_27
+d [lv 0*"03"*"10900016"]`"Leave the chatting for after you've set the table.`[@][lv 0*"03"*"10900017"]` The tea will get cold."`[\]
+vol_bgm -1,1000
+vol_me 1,30
+vol_me 2,30
+seplay 1,56,90
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+flush 10,367
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 28
+msgwnd_non
+*o4_28
+d `Notice anything strange here?`[\]
+*o4_29
+d `The answer is:`[@]` the location.`[@]` For some reason, even though the text describes them {i:twice} as being in the parlor, this is definitely the dining hall!`[@]` The background file is even called "{nobr:mdin}", short for "mansion dining".`[\]
+*o4_30
+d `This error was present in the released PS3 game, and we fixed it in our port.`[@]` Worst of all is that this is the very first time you ever see the parlor, and in PS3 it is presented with dining hall backgrounds throughout this scene, confusing readers as to what the parlor is meant to look like.`[@]` We think that Episode 1 was quite rushed.`[\]
+*o4_31
+d `Returning to the scene a few moments later, we found something buried in the unused voice files.`[\]
+textoff
+csp_slot s0_9
+csp_slot s0_21
+csp_slot s0_22
+lbg s0_3,"m1f_s1c"
+lss s0_10,"eva","b21_akire2" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"sha","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-550
+bgmplay 10,71,0
+show_whirl
+msgwnd_eva
+*o4_32
+d [lv 0*"05"*"11000103"]`"Shannon‐chan?`[@][lv 0*"05"*"11000104"]` Do you know what silver spoons are used for?`[@][lv 0*"05"*"11000105"]` Or why they have to be silver?`[@][lv 0*"05"*"11000106"]` Do you know why?"`[\]
+lss s0_8,"sha","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_sha
+*o4_33
+d [lv 0*"15"*"10500015"]`"...............no...`[|][lv 0*"15"*"10500016"]`.........umm......"`[\]
+msgwnd_non
+*o4_34
+d `Eva's eyes played over Shannon, who was setting the table, as a catty smile floated onto her face.`[\]
+*o4_35
+d `...Taken on its own, the expression on Eva's face may have been charming, in an impish sort of way.`[\]
+*o4_36
+d `However, the words being spun from her lips held within them the keenness of a razor.`[\]
+*o4_37
+d `Shannon tried with all her might to avoid Eva's gaze, which continued to focus on her.`[\]
+*o4_38
+d2 `Grasping that Shannon was hard‐pressed for an answer, Rosa promptly gave some timely help.`[@][#][*]` ({i:Courtesy of the unused voice files, Rosa's part will be played today by Eva herself!})`[\]
+wait_on_d 0
+bgmplay 89,33,0
+d_continue
+wait_on_d -1
+msgwnd_eva
+*o4_39
+d2 [lv 0*"05"*"11000107"]`"They say that silver dims if it is touched by poison.`[@][lv 0*"05"*"11000108"]` ...*giggle*, you've learned something, right, Shannon‐chan?"`[|][#][*][\]
+wait_on_d 0
+lss s0_9,"ros","a11_defo1" ;1
+flush 10,167
+lv 0,"12","11400069_2"
+waitvoice
+wait 1000
+d_continue
+wait_on_d -1
+textoff
+csp_slot s0_3
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+;omk_2nd entry
+wait 2000
+lbg s0_3,"g1f_s1a"
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,550
+show_whirl
+msgwnd_mar
+*o4_40
+d [lv 0*"13"*"90400026"]`"I have a memo with the epitaph on it!`[@][lv 0*"13"*"90400027"]` Let's all solve the puzzle, let's all solve the puzzle...!"`[\]
+lss s0_8,"geo","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_geo
+*o4_41
+d [lv 0*"07"*"90300023"]`"This story probably went wrong ever since that time."`[\]
+lss s0_10,"kan","a11_defo1"
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_kan
+*o4_42
+d2 [lv 0*"16"*"90600010"]`".........That may be so.`[@][lv 0*"16"*"90600011"]` Maybe we should have tried solving the epitaph's riddle from the beginning, like {f:5:Beatrice}‐sama said."`[|]` ({i:Hold on, wasn't this line supposed to belong to...})`[#][*][\]
+wait_on_d 0
+lss s0_9,"sha","a11_tokui1" ;1
+flush 10,167
+wait 1000
+lv 0,"15","90500020_2"
+d_continue
+wait_on_d -1
+textoff
+csp_slot s0_3
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+;omk_3rd entry
+meplay 1,12,40
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+waits 167
+lbg s0_3,"rose_1an"
+show_whirl
+rain_pause s0_7
+rain_pause s0_11
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+flush 10,367
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 28
+aspt2 alpha,s0_22,150
+lss s0_23,"but","b22_naku1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*o4_43
+d2 [lv 0*"10"*"30100631"]`"It makes no fucking sense!!`[#][*][@][lv 0*"10"*"30100632"]` Don't talk to meeeeeeeeeee, uuo{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}oohhh!!!"`[\]
+wait_on_d 0
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+meplay 1,17,60
+lss s0_25,"bea","a11_akuwarai5" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_bea
+*o4_44
+d [lv 0*"27"*"30701110_1"]`"C'mon c'mon c'mon c'mon, don't cry, alright??`[@][lv 0*"27"*"30701110_2"]` Kaboom, kabang, it's magic!!"`[\]
+lss s0_25,"bea","a21_akuwarai4" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*o4_45
+d [lv 0*"27"*"30701110_3"]`"If you want, I'll crush the moon and make comets fall like rain!`[@][lv 0*"27"*"30701110_4"]` I can even bury the whole island in those {b:sexy dynamite nee‐chans} you like so much, seeeeeeeeee??`[@][lv 0*"27"*"30701110_5"]` Hihhihhihhihhi!!"`[\]
+vol_me 1,-1,1000
+textoff
+csp_slot s0_3
+csp_slot s0_7
+csp_slot s0_11
+csp_slot s0_21
+csp_slot s0_22
+csp_slot s0_23
+csp_slot s0_25
+;omk_4th entry
+wait 1000
+lbg s0_3,"sky_1a"
+show_whirl
+msgwnd_non
+*o4_46
+d `When I think about it, the world is so vast, ......and yet so small.`[\]
+*o4_47
+d `Billions of people live on the Earth.`[@]`{n}But I probably won't meet even one percent of those people.`[\]
+*o4_48
+d `Even so, I will speak of the world.`[@]`{n}Without knowing even one percent of the world—I will speak of "my world".`[\]
+msgwnd_rg5
+*o4_49
+d [lv 0*"42"*"42700298"]`"I'm not qualified to deny the laws of a world I don't know.`[@][lv 0*"42"*"42700299"]` ......So just because magic doesn't exist in my world, I can't deny that magic exists in a world I don't know."`[\]
+*o4_50
+d [lv 0*"42"*"42700300"]`"That makes it a true Devil's Proof.`[@][lv 0*"42"*"42700301"]` No, maybe it's more like "when in Rome, do as the Romans do"."`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+agpt quakeycycle,1333
+agpt quakeyamp,30,500
+agpt quakexcycle,2000
+agpt quakexamp,10,500
+rumble 39,1000
+textoff
+waits 167
+lbg s0_3,"sea_1c"
+flush 22
+msgwnd_non
+*o4_51
+d `I can be confident in the world I know.`[@]` So even if my world {i:is} denied by a complete stranger who doesn't know a thing about it, that's nothing to worry about.`[\]
+*o4_52
+d `And in the same way, just because I don't know another world,`[@]` that doesn't make me qualified to deny it.`[\]
+textoff
+waits 167
+lbg s0_3,"ship_s2af"
+flush 26
+lss s0_9,"rg5","a11_warai1" ;1
+flush 10,167
+msgwnd_rg5
+*o4_53
+d2 [lv 0*"42"*"42700302"]`"Which is why,`[@][lv 0*"42"*"42700303"]` regardless of whether there is magic in my world or not,`[#][*][@][lv 0*"42"*"42700304"]` ......I cannot deny the magic Maria onee‐chan taught me."`[\]
+wait_on_d 0
+lss s0_12,"enj","b21_fuman2" ;1
+aspt2 xpos,s0_12,1200
+flush 10,167
+aspt2 xpos,s0_12,960,667,1
+sptwait2 xpos,s0_12
+wait 1000
+d_continue
+wait_on_d -1
+vol_bgm -1,3000
+textoff
+csp_slot s0_3
+csp_slot s0_9
+csp_slot s0_12
+wait 2000
+agpt quakeyamp,0,1000,1
+agpt quakexamp,0,1000,1
+gptwait quakexamp
+gptwait quakeyamp
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+wait 1000
+lbg s0_1,"mvip_1a_bg"
+lbg s0_3,"mvip_1a"
+show_whirl
+bgmplay 66,71,0
+msgwnd_non
+*o4_54
+d `We are pretty grateful for the materials they left on the disc, actually.`[@]` Leaving the fixed and uncensored unused dialogues untouched in the resources actually allowed us to implement a more complete port.`[\]
+*o4_55
+d2 `They were likely in a hurry.`[@]` If you play the game on PSP, you will notice that some sprites stop smiling where inappropriate.`[#][*][\]
+wait_on_d 0
+seplay 1,37,71
+wait 300
+d_continue
+wait_on_d -1
+*o4_56
+d `Some mistakes didn't get a fix even there.`[\]
+textoff
+lbg s0_4,"butterfly_4sp2r"
+flush 22
+seplay 1,52,71
+lss s0_9,"bea","b14_akuwarai1" ;1
+aspt2 breakup,s0_9,1000
+aspt2 alpha,s0_9,0
+flush 1
+aspt2 breakup,s0_9,0,2000
+aspt2 alpha,s0_9,255,2000
+sptwait2 breakup,s0_9
+*o4_57
+d2 `Hmm, something feels wrong here.`[@]` No, the water‐proof makeup still looks fine.`[#][*]` Oh, right, did {f:5:Beatrice} randomly lose her previously obtained ring for no reason?`[\]
+wait_on_d 0
+lss s0_9,"bea","b15_akuwarai3" ;1
+flush 10,167
+seplay 1,37,71
+d_continue
+wait_on_d -1
+textoff
+wait 1000
+csp_slot s0_11
+csp_slot s0_9
+csp_slot s0_4
+csp_slot s0_3
+csp_slot s0_1
+;does not fit
+;lsp2 s0_3,":c;sound\bgm\Treasure.png",1075,540,110,110
+show_whirl
+vol_bgm 100,1000
+*o4_58
+d `In the end we would like to once again thank all our testers for spending their time on our work.`[@]` Without you it would not have been seen!`[\]
+textoff
+csp_slot s0_10
+csp_slot s0_8
+lbg s0_3,"portrait_ep4"
+aspt2 ypos,s0_3,1620
+aspt2 scalex,s0_3,250
+aspt2 scaley,s0_3,250
+flush 22
+wait 1000
+aspt2 ypos,s0_3,400,4500,3 ;0 is lowest, leave Battler/rg faces
+sptwait2 ypos,s0_3
+wait 1000
+*o4_59
+d [lv 0*"10"*"30100105"]`That's all I want to say.`[@][lv 0*"10"*"30100106"]` Well then,`[|][lv 0*"10"*"30100107"]` <see you again, have a nice day>.`[\]
+textoff
+csp_slot s0_3
+goto *o4_end

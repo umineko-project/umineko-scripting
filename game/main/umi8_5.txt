@@ -1,0 +1,235 @@
+*umi8_5
+;クイズ大会（前半）
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_8_5
+mov $name_chapter_save, "8_05"
+~
+new_chapter date_scenario_8_5,scenario_8_5
+gstc 85
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+bgmplay 187,71,0
+*d58260
+d `私はハロウィンパーティーのお姫様になり、`[@]`私のためだけのクイズとなぞなぞ大会が開かれることになった。`[\]
+textoff
+waits 167
+lbg s0_3,"medaru_1"
+flush 22
+*d58261
+d `正解する度に、メダルがもらえるらしい。`[\]
+textoff
+waits 167
+lbg s0_3,"medaru_2"
+flush 22
+*d58262
+d `いっぱいもらえば、お祖父さまから素敵なご褒美があるらしい。`[\]
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"en2","a11_defo2" ;1
+flush 22
+*d58263
+d `よし、がんばる。`[\]
+lss s0_9,"en2","a11_defo1" ;1
+flush 80
+msgwnd_enj
+*d58264
+d [lv 0*"11"*"82000402"]`「誰からクイズをもらえばいいのかな」`[\]
+lss s0_10,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58265
+d [lv 0*"05"*"81000053"]`「誰からでもいいそうよ。`[@][lv 0*"05"*"81000054"]`好きな人に話し掛けてごらんなさい」`[\]
+lss s0_8,"rud","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_rud
+*d58266
+d [lv 0*"08"*"81200032"]`「今の内に、何か取って置きの問題を考えておかないとなぁ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_h1c"
+lss s0_10,"ros","a13_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ros
+*d58267
+d [lv 0*"12"*"81400024"]`「真里亞ー、あなた、クイズの本を鞄に入れてなかった？」`[\]
+lss s0_8,"mar","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_mar
+*d58268
+d [lv 0*"13"*"80400077"]`「うー！　あるよー！`[@][lv 0*"13"*"80400078"]`　きっひひひひひひ、意地悪な問題で縁寿をいじめるの…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58269
+d `真里亞お姉ちゃんがすっごく意地悪そうな顔で笑う。`[\]
+*d58270
+d `みんな、私をいじめる気だ。`[@]`きっとすっごく難しい問題を出してくる。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","a11_defo1" ;1
+flush 22
+msgwnd_eva
+*d58271
+d [lv 0*"05"*"81000055"]`「大丈夫よ、伯母さんが助けてあげる」`[\]
+lss s0_8,"en2","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d58272
+d [lv 0*"11"*"82000403"]`「本当…？」`[\]
+lss s0_9,"eva","a11_warai1" ;1
+flush 80
+msgwnd_eva
+*d58273
+d [lv 0*"05"*"81000056"]`「えぇ。`[@][lv 0*"05"*"81000057"]`だって伯母さんは、お姫様の付き人じゃない。`[@][lv 0*"05"*"81000058"]`だから二人でがんばって、いっぱいいっぱいメダルを集めちゃおう」`[\]
+lss s0_8,"en2","a11_defo1e" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d58274
+d [lv 0*"11"*"82000404"]`「うん…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"goh","a11_omakase1" ;1
+flush 24
+msgwnd_goh
+*d58275
+d [lv 0*"17"*"81700036"]`「さぁさぁ、縁寿さま。`[@][lv 0*"17"*"81700037"]`誰からでも結構でございますよ。`[@][lv 0*"17"*"81700038"]`この郷田も、いつでも挑戦をお受けいたします」`[\]
+lss s0_10,"kin","a11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kin
+*d58276
+d [lv 0*"01"*"81500180"]`「まぁ待て待て。`[@][lv 0*"01"*"81500181"]`最初に姫君に謁見する栄誉はこの私のものだ。`[@][lv 0*"01"*"81500182"]`縁寿よ、まずは私の挑戦を受けてみよ…！」`[\]
+lss s0_25,"en2","a11_defo2b" ;1
+aspt2 xpos,s0_25,-550
+flush 23
+msgwnd_enj
+*d58277
+d [lv 0*"11"*"82000405"]`「は、はいっ」`[\]
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58278
+d `思わず緊張してしまい、お腹がきゅうっと痛くなる。`[\]
+*d58279
+d `すると絵羽伯母さんがやさしく手を握ってくれた。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"eva","b25_hohoemi2" ;1
+flush 22
+wait 500
+lss s0_9,"eva","b25_warai1" ;1
+flush 80
+msgwnd_eva
+*d58280
+d [lv 0*"05"*"81000059"]`「大丈夫よ。`[@][lv 0*"05"*"81000060"]`一緒にがんばりましょ！」`[\]
+lss s0_8,"en2","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d58281
+d [lv 0*"11"*"82000406"]`「う、……うんっ」`[\]
+lss s0_10,"kin","a11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kin
+*d58282
+d [lv 0*"01"*"81500183"]`「では行くぞ、縁寿よ。`[@][lv 0*"01"*"81500184"]`これは、クリスマスの日の話、１２月２５日の話だ」`[\]
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_enj
+*d58283
+d [lv 0*"11"*"82000407"]`「クリスマス…？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58284
+d `まだ１０月だというのに、唐突にクリスマスの話をされる。`[@]`{n}クリスマスは何日かという問題だろうか？`[\]
+*d58285
+d `そんなの知ってる。`[@]`１２月２５日だ。`[\]
+textoff
+waits 167
+snow s0_4
+lbg s0_3,"cit_2a"
+flush 26
+msgwnd_kin
+*d58286
+d [lv 0*"01"*"81500185"]`「クリスマスの日。`[@][lv 0*"01"*"81500186"]`夜空を見上げながら、女は言った。`[@][lv 0*"01"*"81500187"]`『やがて夜が明けて朝になるわね。`[@][lv 0*"01"*"81500188"]`そしてまた日が沈んで夜になっても、またクリスマスだったらいいのに』。`[@][lv 0*"01"*"81500189"]`すると男は言った。`[@][lv 0*"01"*"81500190"]`『いいよ。`[@][lv 0*"01"*"81500191"]`その夢を叶えてあげるよ』と。`[@][lv 0*"01"*"81500192"]`そんなことが、果たして可能だろうか…？」`[\]
+textoff
+waits 167
+csp_slot s0_4
+lbg s0_3,"black"
+flush 22
+snow -1
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"en2","a15_defo2a" ;1
+flush 24
+msgwnd_enj
+*d58287
+d [lv 0*"11"*"82000408"]`「クリスマスの次の日は２６日で普通の日だもん。`[@][lv 0*"11"*"82000409"]`そんなの無理」`[\]
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d58288
+d [lv 0*"05"*"81000061"]`「夜が明けてもまだクリスマス……。`[@][lv 0*"05"*"81000062"]`あ、伯母さん、わーかった」`[\]
+lss s0_9,"en2","a15_defo2b" ;1
+flush 80
+msgwnd_enj
+*d58289
+d [lv 0*"11"*"82000410"]`「え？　どうして？！`[@][lv 0*"11"*"82000411"]`　どうしてクリスマスの次の日がまたクリスマスなの？！」`[\]
+lss s0_10,"kin","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kin
+*d58290
+d [lv 0*"01"*"81500193"]`「わっははははは。`[@][lv 0*"01"*"81500194"]`縁寿も考えてみるがよい」`[\]
+ch_done flag_scenario_8_5
+csp_slot s0_11
+flush 1

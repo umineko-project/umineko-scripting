@@ -1,0 +1,1869 @@
+*umi7_1
+;ベアトリーチェ殺人事件
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_7_1
+mov $name_chapter_save, "7_01"
+~
+new_chapter date_scenario_7_1,scenario_7_1
+gstc 60
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+wait 1000
+vol_mix_fade 1000
+wait 1000
+meplay 1,12,0
+vol_me 1,70,3000
+wait 3000
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o1a"
+flush 22
+wait 3000
+bgmplay 150,71,0
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+flush 2
+*d50637
+d `静かに、静かに。`[@]`……雨が降っている。`[\]
+*d50638
+d `悲しみの雨は、礼拝堂の外壁を濡らして流し、現世の塵を静かに払う。`[\]
+*d50639
+d `礼拝堂の扉は開かれていた。`[\]
+*d50640
+d `婚儀ならば、参列者は招待状を持つ者に限られる。`[\]
+*d50641
+d `しかし、葬儀ならば、故人を偲ぶ者すべてに、扉は開かれている。`[\]
+*d50642
+d `……だからこれは、葬儀に違いなかった。`[\]
+*d50643
+d `傘を持つ人影が、礼拝堂へ近付いていく。`[\]
+*d50644
+d `それは、……ウィルだった。`[\]
+textoff
+waits 167
+lss s0_9,"wil","a11_defo1" ;1
+flush 2
+wait 1000
+lss s0_9,"wil","a11_nayamu1" ;1
+flush 80
+msgwnd_wil
+*d50645
+d [lv 0*"54"*"75400081"]`「………………………」`[\]
+seplay 1,17,71
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 10
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"cha_o3a_bg"
+lbg s0_3,"cha_o3a"
+flush 22
+msgwnd_non
+*d50646
+d `礼拝堂の入口には机が出され、受付が設けられていた。`[\]
+textoff
+waits 167
+lss s0_8,"kan","a12_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 6
+*d50647
+d `その人影に気付くと、受付に座っていた嘉音は立ち上がり、黙礼で迎えた。`[\]
+lss s0_8,"kan","a12_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kan
+*d50648
+d [lv 0*"16"*"70600001"]`「……こちらが受付でございます。`[@][lv 0*"16"*"70600002"]`弔問の皆様にはご芳名を賜っております。`[@][lv 0*"16"*"70600003"]`ご記帳をお願い致します」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d50649
+d [lv 0*"54"*"75400082"]`「悪いな。`[@][lv 0*"54"*"75400083"]`弔問じゃねェ。`[@][lv 0*"54"*"75400084"]`……待ち合わせだ」`[\]
+lss s0_8,"kan","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_non
+*d50650
+d `葬儀の会場で、待ち合わせ…？`[@]`　嘉音は怪訝そうな表情を浮かべる。`[\]
+*d50651
+d `ウィルは懐より、一通の封筒を取り出すと、その差出人名を示した。`[\]
+lss s0_8,"kan","a12_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kan
+*d50652
+d [lv 0*"16"*"70600004"]`「………失礼いたしました。`[@][lv 0*"16"*"70600005"]`どうぞ、お入りを」`[\]
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50653
+d [lv 0*"54"*"75400085"]`「すまねェな。`[@][lv 0*"54"*"75400086"]`……せめてそいつを、もらえるか」`[\]
+lss s0_8,"kan","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kan
+*d50654
+d [lv 0*"16"*"70600006"]`「……ありがとうございます。`[@][lv 0*"16"*"70600007"]`……きっと、お喜びになられると思います」`[\]
+msgwnd_non
+*d50655
+d `嘉音は、弔問者に渡している手向けの黄金の薔薇を一輪、手渡す。`[\]
+*d50656
+d `ウィルはそれを受け取り、`[!w167]`……静かに頭を下げてから、礼拝堂に入った。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+seplay 1,17,71
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+flush 10
+*d50657
+d `礼拝堂の中には、故人の遺族と思われる人々が、何人かのグループに集まっていて、`[@]`それぞれが故人の思い出に耽っているようだった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+flush 22
+lss s0_9,"kin","a21_naku1" ;1
+flush 26
+msgwnd_kin
+*d50658
+d [lv 0*"01"*"71500001"]`「うぉぉおおぉぉぉ…。`[@][lv 0*"01"*"71500002"]`ベアトリーチェぇえぇ…、`[@][lv 0*"01"*"71500003"]`なぜにッ、`[|][lv 0*"01"*"71500004"]`なぜにぃいいぃいぃ…`[|][lv 0*"01"*"71500005"]`おおぉおぉぉぉ……」`[\]
+lss s0_10,"nat","a11_tukare1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nat
+*d50659
+d [lv 0*"03"*"70900001"]`「お父様、どうかしっかり……。`[@][lv 0*"03"*"70900002"]`控え室の方で少し休みましょう…」`[\]
+lss s0_8,"gen","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_gen
+*d50660
+d `「……………………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+flush 24
+lss s0_9,"ros","a11_komaru4" ;1
+flush 26
+msgwnd_ros
+*d50661
+d [lv 0*"12"*"71400001"]`「私が殺したのよ…、`[|][lv 0*"12"*"71400002"]`私が……！」`[\]
+lss s0_8,"kum","a12_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_kum
+*d50662
+d [lv 0*"18"*"71800001"]`「とんでもない…！`[@][lv 0*"18"*"71800002"]`　どうして楼座さまが殺したことになりましょう…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+lss s0_10,"kir","a11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kir
+*d50663
+d [lv 0*"09"*"71300001"]`「お父さん、すごい泣きようね」`[\]
+lss s0_8,"rud","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_rud
+*d50664
+d [lv 0*"08"*"71200001"]`「……ベアトリーチェぇぇぇ、か」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"eva","b25_akire2go" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d50665
+d [lv 0*"05"*"71000001"]`「絶対、お母様が亡くなった時より泣いてるわ」`[\]
+lss s0_9,"hid","a11_fumu1" ;1
+flush 23
+msgwnd_hid
+*d50666
+d [lv 0*"06"*"71100001"]`「こら。`[@][lv 0*"06"*"71100002"]`今はそんなこと言う時、ちゃうで」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d50667
+d `あるグループは涙を隠すことなく咽び、`[@]`あるグループは遠い昔の思い出のように静かに語り合い。`[\]
+*d50668
+d `……それぞれの形で、故人を偲んでいる、……ように見えた。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+flush 2
+*d50669
+d `ウィルが祭壇へ近付くと、何人かが振り返る。`[@]`{n}もちろんウィルに面識のある人間など、いようはずもない。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_his"
+flush 22
+*d50670
+d `ウィルは気にせず、黄金の薔薇で埋めるように飾られた祭壇の、棺の前に立つ。`[\]
+*d50671
+d `……棺の中に、遺体はなかった。`[\]
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"book1"
+flush 2
+*d50672
+d `そこにはまるで、体の代わりとでも言うように、`[@]`……一冊の、豪華な装丁の分厚い本が納められている。`[\]
+*d50673
+d `そしてその周りを、無数の黄金の薔薇が埋めていた。`[\]
+*d50674
+d `本の表紙に、文字が記されている。`[\]
+*d50675
+d `“愛するベアトリーチェへ。`[@]`１９８６年１０月５日”`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_bgm -1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+flush 2
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 6
+msgwnd_wil
+*d50676
+d [lv 0*"54"*"75400087"]`「……ミス・ベアトリーチェ。`[@][lv 0*"54"*"75400088"]`ミセスだったら許しな。`[@][lv 0*"54"*"75400089"]`……会ったことはねェ。`[@][lv 0*"54"*"75400090"]`だが、お悔やみ申し上げるぜ」`[\]
+msgwnd_non
+*d50677
+d `棺の中に、入口で受け取った薔薇を置く。`[\]
+*d50678
+d `……ベアトリーチェなる御婦人とはまったく縁はない。`[@]`{n}しかし、この葬儀の場に訪れた以上、死者への最低限の礼儀はあるべきだ。`[\]
+*d50679
+d `その最低限に従い、ウィルは故人の冥福を祈った……。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+bgmplay 162,71,0
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+flush 2
+lss s0_10,"cla","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_cla
+*d50680
+d [lv 0*"02"*"70800001"]`「失礼だが、`[|][lv 0*"02"*"70800002"]`……どちら様かな？`[@][lv 0*"02"*"70800003"]`　私は右代宮蔵臼。`[@][lv 0*"02"*"70800004"]`喪主の代行です。`[@][lv 0*"02"*"70800005"]`こっちは子供の理御」`[\]
+gstc 61
+seplay 9,1060,100
+lss s0_8,"rio","a12_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_rio
+*d50681
+d [lv 0*"53"*"75300001"]`「初めまして。`[@][lv 0*"53"*"75300002"]`右代宮理御です」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1i"
+lss s0_9,"wil","a11_majime2" ;1
+flush 24
+msgwnd_wil
+*d50682
+d [lv 0*"54"*"75400091"]`「……理御？`[@][lv 0*"54"*"75400092"]`　………誰だ、お前」`[\]
+csp_slot s0_9
+lss s0_8,"wil","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"rio","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d50683
+d [lv 0*"53"*"75300003"]`「理科の“理”に、御するの“御”で、リオンと読みます。`[@][lv 0*"53"*"75300004"]`……ちょっと日本人っぽくない名前ですよね」`[\]
+lss s0_8,"wil","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50684
+d [lv 0*"54"*"75400093"]`「………………………」`[\]
+msgwnd_non
+*d50685
+d `ウィルは怪訝そうな顔をして、まじまじと理御の顔を見る。`[\]
+*d50686
+d `蔵臼に対しては特に何も関心がないのに、理御にだけは、何か思うところがあるようだった。`[\]
+*d50687
+d `関心、というよりは違和感という感じだった。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_10,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_gen
+*d50688
+d [lv 0*"14"*"71600002"]`「……旦那様。`[@][lv 0*"14"*"71600003"]`奥様がそろそろと……」`[\]
+lss s0_8,"cla","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_cla
+*d50689
+d2 [lv 0*"02"*"70800006"]`「む、そうか。`[@][#][*][lv 0*"02"*"70800007"]`……一同の諸君。`[@][lv 0*"02"*"70800008"]`ここで賑やかにしては、故人もうるさがるだろう。`[@][lv 0*"02"*"70800009"]`控え室の準備が整ったそうだ。`[@][lv 0*"02"*"70800010"]`場所を変えようではないか」`[\]
+wait_on_d 0
+lss s0_8,"cla","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d50690
+d `蔵臼が一同に呼びかけると、皆ぞろぞろと、礼拝堂内の控え室へ移動していく。`[\]
+lss s0_8,"cla","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_cla
+*d50691
+d [lv 0*"02"*"70800011"]`「すまん。`[@][lv 0*"02"*"70800012"]`理御はしばし、お客様のお相手を頼む。`[@][lv 0*"02"*"70800013"]`私はみんなを控え室に案内する」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"rio","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d50692
+d [lv 0*"53"*"75300005"]`「はい、父さん」`[\]
+msgwnd_non
+*d50693
+d `それは、父と子のまったく違和感のない、自然なやり取りに見えた。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1i"
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d50694
+d [lv 0*"54"*"75400094"]`「親子、なのか」`[\]
+lss s0_8,"rio","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_rio
+*d50695
+d [lv 0*"53"*"75300006"]`「そうですが、何か…？」`[\]
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50696
+d [lv 0*"54"*"75400095"]`「右代宮蔵臼の子供は朱志香のはずだ」`[\]
+lss s0_8,"rio","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_rio
+*d50697
+d [lv 0*"53"*"75300007"]`「朱志香は妹です。`[@][lv 0*"53"*"75300008"]`お呼びする必要はありますか…？」`[\]
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50698
+d [lv 0*"54"*"75400096"]`「………………。`[@][lv 0*"54"*"75400097"]`……いや、ない」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 1,12,50
+msgwnd_non
+*d50699
+d `どうやら、……さっそく、何かの座興が始まっているらしい。`[\]
+*d50700
+d `ウィルは面倒臭そうに頭を掻きながら、辺りをじろりと見回す。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_10,"rio","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d50701
+d [lv 0*"53"*"75300009"]`「……失礼ですが、貴方様は、故人とはどのようなご関係で？」`[\]
+lss s0_8,"wil","a23_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50702
+d [lv 0*"54"*"75400098"]`「まったく何もねェ。`[@][lv 0*"54"*"75400099"]`……迷惑な話さ」`[\]
+lss s0_10,"rio","a11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50703
+d [lv 0*"53"*"75300010"]`「…………ではあなたは、どうしてこの葬儀に？」`[\]
+msgwnd_non
+*d50704
+d `温和な理御だから、きょとんとした表情で済む。`[@]`{n}……普通の人間ならとっくに、怪訝な表情を浮かべている頃だろう。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d50705
+d `ウィルは面倒臭そうに頭を掻きながら、理御以外の誰かに向かって不機嫌そうに怒鳴った。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+msgwnd_wil
+*d50706
+d [lv 0*"54"*"75400100"]`「来たぜ。`[@][lv 0*"54"*"75400101"]`そろそろ顔を出しやがれ」`[\]
+meplay 1,16,50
+meplay 2,12,50
+textoff
+waits 167
+lbg s0_3,"cha_i1l"
+flush 22
+msgwnd_non
+*d50707
+d `すでに右代宮家の親族たちは、蔵臼の号令で皆、控え室に移動している。`[\]
+*d50708
+d `この、黄金の薔薇に飾られた寒々しい広さを持つ礼拝堂には、`[@]`すでにウィルと理御の二人の姿以外は存在しなかった。`[\]
+bgmplay 163,71,0
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+set_window_simple 80
+*d50709
+d [lv 0*"28"*"72100001"]`「……よく来たわね。`[@][lv 0*"28"*"72100002"]`……異端審問官、魔術師狩りのライト」`[\]
+set_name_window_non
+*d50710
+d `その少女の声は、彼らの後ろから唐突に聞こえた。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+flush 2
+wait 2000
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"cha_i1ip"
+flush 8
+seplay 2,52,71
+lss s0_9,"ber","a21_defo1" ;1
+textoff
+aspt2 breakup,s0_9,1000
+aspt2 alpha,s0_9,0
+flush 1
+aspt2 breakup,s0_9,0,2000
+aspt2 alpha,s0_9,255,2000
+sptwait2 breakup,s0_9
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+wait 1000
+*d50711
+d `理御が驚いて振り返ると、祭壇の上に、何処からかフワリと舞い降りた少女の姿があった。`[\]
+*d50712
+d `神聖な、それも葬儀の祭壇の上に、さも当然のように土足で舞い降り、`[@]`黄金の薔薇を踏み躙る…。`[\]
+*d50713
+d `無論、理御はその少女のことなど知りもしない。`[\]
+*d50714
+d `……次々と現れる、葬儀と無関係の人間たちの登場に、`[@]`何が起こっているのかと目を白黒させるのがやっとだった。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"cha_i1dp"
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50715
+d [lv 0*"54"*"75400102"]`「俺はもう引退だ。`[@][lv 0*"54"*"75400103"]`仕事なら新しいライトに頼みな」`[\]
+seplay 1,52,71
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_ber
+*d50716
+d [lv 0*"28"*"72100003"]`「いいえ。`[@][lv 0*"28"*"72100004"]`あなたに頼みたいのよ。`[@][lv 0*"28"*"72100005"]`この事件を。`[@][lv 0*"28"*"72100006"]`……送った“物語”は読んでくれたかしら…？」`[\]
+lss s0_8,"wil","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50717
+d [lv 0*"54"*"75400104"]`「……斜め読み程度にはな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1ip"
+lss s0_9,"rio","a11_komaru1a" ;1
+flush 23
+msgwnd_rio
+*d50718
+d [lv 0*"53"*"75300011"]`「あ、貴方がどなたか存じませんが、そこから降りて下さい。`[@][lv 0*"53"*"75300012"]`そこは神聖な祭壇ですよ」`[\]
+msgwnd_non
+*d50719
+d `理御は我に返り、少女に祭壇から降りるように言うが、当の少女はまったく意にも介さない。`[\]
+*d50720
+d `そしてウィルも、理御などまったくどうでもいいかのように、少女との話を続けていた。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"cha_i1ep"
+lss s0_10,"wil","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50721
+d [lv 0*"54"*"75400105"]`「理御とか言ったな。`[@][lv 0*"54"*"75400106"]`こいつは何者だ」`[\]
+lss s0_8,"ber","a21_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d50722
+d [lv 0*"28"*"72100007"]`「その子が名乗った通りよ」`[\]
+msgwnd_non
+*d50723
+d `右代宮、理御。`[\]
+*d50724
+d `そのような名の人物が登場した例は、過去のゲームにない。`[\]
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50725
+d [lv 0*"54"*"75400107"]`「お前の駒なのか」`[\]
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d50726
+d [lv 0*"28"*"72100008"]`「いいえ。`[@][lv 0*"28"*"72100009"]`このゲーム盤の、正しく正当な駒。`[@][lv 0*"28"*"72100010"]`登場人物よ」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50727
+d [lv 0*"54"*"75400108"]`「ゲームマスターはお前だ。`[@][lv 0*"54"*"75400109"]`なら、お前の駒だろう」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 1,5,50
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 2
+msgwnd_ber
+*d50728
+d [lv 0*"28"*"72100011"]`「くすくす……。`[@][lv 0*"28"*"72100012"]`……ベアトの猫箱より、もっと大きな猫箱で閉ざしただけよ。`[@][lv 0*"28"*"72100013"]`理御は、その中で生まれ得る可能性を持つ、一つの駒」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"cha_i1ip"
+lss s0_9,"wil","a11_nayamu1" ;1
+flush 22
+msgwnd_wil
+*d50729
+d [lv 0*"54"*"75400110"]`「………そういうことか。`[@][lv 0*"54"*"75400111"]`……結局、お前の駒というわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"cha_i1ep"
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d50730
+d [lv 0*"28"*"72100014"]`「私が置いた駒、という意味では正しいわ」`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50731
+d [lv 0*"54"*"75400112"]`「ただし、ヱリカのような配下の駒ではない、ということか」`[\]
+lss s0_10,"ber","a21_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d50732
+d [lv 0*"28"*"72100015"]`「……ヱリカって誰？`[@][lv 0*"28"*"72100016"]`　……くすくすくす」`[\]
+textoff
+waits 167
+seplay 1,52,71
+textoff
+aspt2 breakup,s0_10,0
+aspt2 breakup,s0_10,1000,2000
+aspt2 alpha,s0_10,0,2000
+sptwait2 breakup,s0_10
+csp_slot s0_10
+flush 1 ;flush2: NO frames
+lss s0_8,"wil","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50733
+d [lv 0*"54"*"75400113"]`「…………………」`[\]
+lss s0_10,"rio","a11_komaru1a" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d50734
+d [lv 0*"53"*"75300013"]`「……ヱリカ、さん？`[@][lv 0*"53"*"75300014"]`　？？？？」`[\]
+lss s0_8,"wil","a21_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50735
+d [lv 0*"54"*"75400114"]`「理解しようとするな。`[@][lv 0*"54"*"75400115"]`頭痛にならァ」`[\]
+msgwnd_non
+*d50736
+d `理御には、彼らが何の話をしているのか、さっぱり理解できない。`[\]
+*d50737
+d `しかし、面識さえない彼らが、右代宮家の内情について詳しく知っていることは、間違いなさそうだった。`[\]
+lss s0_10,"rio","a11_akire1a" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50738
+d [lv 0*"53"*"75300015"]`「わ、私には貴方たちが何の話をしているのかわかりません…。`[@][lv 0*"53"*"75300016"]`とにかく、そこのお嬢さん。`[@][lv 0*"53"*"75300017"]`その祭壇から降りて下さいっ。`[@][lv 0*"53"*"75300018"]`右代宮家、次期当主としてお願い申し上げますっ」`[\]
+msgwnd_non
+*d50739
+d `平然と祭壇に土足で立って会話を続ける少女に、とうとう理御も声を荒げる。`[\]
+*d50740
+d `だが、当の少女はまったく意にも介さない。`[@]`{n}しかし、ウィルはわずかに反応を見せた。`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50741
+d [lv 0*"54"*"75400116"]`「………次期当主は蔵臼のはずだ」`[\]
+lss s0_10,"rio","a12_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50742
+d [lv 0*"53"*"75300019"]`「父、蔵臼は、私が二十歳になるまでの間の当主代行です。`[@][lv 0*"53"*"75300020"]`二十歳になると同時に、次期当主である私が、当主を継承することになっています」`[\]
+lss s0_8,"wil","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50743
+d [lv 0*"54"*"75400117"]`「初耳だ。`[@][lv 0*"54"*"75400118"]`証拠はあるのか」`[\]
+lss s0_10,"rio","a11_akire1a" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_non
+*d50744
+d `温和な理御も、さすがにそろそろカチンと来たようだった。`[@]`{n}その穏やかな表情の眉間が、少しだけ歪む。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"cha_i1lp"
+flush 22
+msgwnd_rio
+*d50745
+d [lv 0*"53"*"75300021"]`「これは次期当主に許されている、片翼の鷲の、銀の指輪です。`[@][lv 0*"53"*"75300022"]`これで証拠になりますか？」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1ip"
+lss s0_10,"wil","a11_niramu1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_wil
+*d50746
+d [lv 0*"54"*"75400119"]`「………銀の指輪？`[@][lv 0*"54"*"75400120"]`　金の、当主の指輪は何度も登場したが、次期当主の、銀の指輪など初耳だ。`[@][lv 0*"54"*"75400121"]`……蔵臼も朱志香も、そんなものを指に通していた記憶がねェ」`[\]
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_ber
+*d50747
+d [lv 0*"28"*"72100017"]`「くすくす……。`[@][lv 0*"28"*"72100018"]`嬉しいわ。`[@][lv 0*"28"*"72100019"]`斜め読みにしてはちゃんと読んでくれてるじゃない」`[\]
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50748
+d [lv 0*"54"*"75400122"]`「魔女の寄越す文章は、どこにろくでもねぇことが書いてあるか、わかったもんじゃねェ。`[@][lv 0*"54"*"75400123"]`ましてやそれが、元老院の大魔女と来りゃあな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"cha_i1np"
+lss s0_9,"rio","a11_odoroki1" ;1
+flush 23
+msgwnd_rio
+*d50749
+d2 [lv 0*"53"*"75300023"]`「あ、`[|][lv 0*"53"*"75300024"]`……貴方がたは、`[|][lv 0*"53"*"75300025"]`……一体、何者なんですかっ？！`[@][#][*][lv 0*"53"*"75300026"]`　失礼だが、私には何の話をしているのか、さっぱりわかりませんっ。`[@][lv 0*"53"*"75300027"]`故人への献花がお済でしたら、どうぞお引取りを。`[@][lv 0*"53"*"75300028"]`どうやら貴方がたは、当家がお持て成しすべき方々ではないようです」`[\]
+wait_on_d 0
+lss s0_9,"rio","a11_ikari1a" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d50750
+d `理御の堪忍袋の緒も、とうとう切れる。`[@]`{n}温和な理御なりの、最大限の厳しい言葉がぶつけられた。`[\]
+*d50751
+d `しかし、ウィルと少女には、まるで蛙の面に水という感じだ…。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"cha_i1dp"
+flush 24
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50752
+d [lv 0*"54"*"75400124"]`「俺も、来たくて来たわけじゃねェ」`[\]
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d50753
+d2 [lv 0*"28"*"72100020"]`「時間の無駄だから話を進めるわ。`[@][#][*][lv 0*"28"*"72100021"]`……ライト。`[@][lv 0*"28"*"72100022"]`このゲームに挑みなさい。`[@][lv 0*"28"*"72100023"]`ゲームマスター、ベルンカステルの名において、このゲームにあなたを招待してあげるわ」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50754
+d [lv 0*"54"*"75400125"]`「お断りだ」`[\]
+lss s0_10,"ber","a21_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d50755
+d [lv 0*"28"*"72100024"]`「どうして？」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50756
+d [lv 0*"54"*"75400126"]`「俺ァ、もう引退する身だ。`[@][lv 0*"54"*"75400127"]`……推理もミステリーも知ったことか」`[\]
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d50757
+d [lv 0*"28"*"72100025"]`「何をして余生を過ごすというの？`[@][lv 0*"28"*"72100026"]`　魔術師狩りのライトが魔女狩りを辞めて」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"cha_i1lp"
+flush 22
+msgwnd_wil
+*d50758
+d [lv 0*"54"*"75400128"]`「……狐狩りでも潮干狩りでもするさ。`[@][lv 0*"54"*"75400129"]`俺がここに来たのは、あんたと余生を語るためじゃねェ」`[\]
+msgwnd_ber
+*d50759
+d [lv 0*"28"*"72100027"]`「断るために来たと？」`[\]
+msgwnd_wil
+*d50760
+d [lv 0*"54"*"75400130"]`「ご賢察いただき、光栄の極みと知り給え也や……」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1dp"
+lss s0_10,"ber","a21_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_ber
+*d50761
+d [lv 0*"28"*"72100028"]`「なら、好きにしたらいいわ。`[@][lv 0*"28"*"72100029"]`どこへでも行けばいい。`[@][lv 0*"28"*"72100030"]`……ただし、ここから立ち去れればの話だけれど」`[\]
+lss s0_8,"wil","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50762
+d [lv 0*"54"*"75400131"]`「……………………ち。`[@][lv 0*"54"*"75400132"]`……それで。`[@][lv 0*"54"*"75400133"]`条件と報酬は」`[\]
+msgwnd_non
+*d50763
+d `ウィルは、実際は最初から、諦めている。`[\]
+*d50764
+d `あの大ベルンカステル卿の誘いを、断れる権利など、あるはずもないのだから。`[\]
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d50765
+d2 [lv 0*"28"*"72100031"]`「“ベアトリーチェを殺したのは誰か”。`[@][lv 0*"28"*"72100032"]`それが私のゲームよ。`[@][#][*][lv 0*"28"*"72100033"]`報酬は私に対するその無礼な口の利き方を許すことと、この礼拝堂を立ち去る権利」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50766
+d [lv 0*"54"*"75400134"]`「退屈を愛さない魔女は、ぞんざいな言葉を愛すると聞いたぜ」`[\]
+lss s0_10,"ber","a21_niramu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d50767
+d [lv 0*"28"*"72100034"]`「それは千年を生き飽きたババァ魔女の話よ。`[@][lv 0*"28"*"72100035"]`私はまだまだ若いから、あんたみたいな言葉遣いの男を、`[@][lv 0*"28"*"72100036"]`どんな過酷な運命に閉じ込めてやろうかと夢想することを愛するの……」`[\]
+lss s0_8,"wil","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50768
+d [lv 0*"54"*"75400135"]`「……ち。`[@][lv 0*"54"*"75400136"]`それで？`[@][lv 0*"54"*"75400137"]`　敵は誰だ」`[\]
+lss s0_10,"ber","a21_shian1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d50769
+d [lv 0*"28"*"72100037"]`「いないわ。`[@][lv 0*"28"*"72100038"]`妨害などするわけもない。`[@][lv 0*"28"*"72100039"]`このゲームを、あなたが美しく詰めるところを、ただ私たちは観劇したいだけ……。`[@][lv 0*"28"*"72100040"]`仲間も用意する。`[@][lv 0*"28"*"72100041"]`それが、その理御よ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1ip"
+lss s0_9,"rio","a11_komaru1" ;1
+flush 23
+lss s0_9,"rio","a11_komaru1a" ;1
+flush 80
+msgwnd_rio
+*d50770
+d [lv 0*"53"*"75300029"]`「……？」`[\]
+msgwnd_non
+*d50771
+d `唐突に自分の名前が出され、理御は再び眉間を歪める。`[\]
+*d50772
+d `とにかく事情がわからず、勝手に話が進んでいるようで、実に不快なようだった。`[\]
+seplay 1,52,71
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+msgwnd_ber
+*d50773
+d [lv 0*"28"*"72100042"]`「理御は右代宮家の人間。`[@][lv 0*"28"*"72100043"]`右代宮家の誰とも面識のないあなたには、心強い味方となってくれるでしょう」`[\]
+csp_slot s0_9
+lss s0_10,"rio","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_rio
+*d50774
+d [lv 0*"53"*"75300030"]`「……何の話かわかりかねますが、事情のわからない話には、何もご協力は出来かねますよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1ep"
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50775
+d [lv 0*"54"*"75400138"]`「だそうだ。`[@][lv 0*"54"*"75400139"]`……頼もしい限りだな」`[\]
+lss s0_10,"ber","a21_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d50776
+d [lv 0*"28"*"72100044"]`「私と、……我が主を楽しませなさい、魔術師狩りのライト。`[@][lv 0*"28"*"72100045"]`……アウアウは行儀のいい観劇者だけれど、`[@][lv 0*"28"*"72100046"]`私は退屈すると、ポップコーンを投げつけたりしちゃうかもね…？」`[\]
+lss s0_8,"wil","a23_niramu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50777
+d [lv 0*"54"*"75400140"]`「…………………………」`[\]
+msgwnd_non
+*d50778
+d `ウィルは不機嫌そうに頭をばりばりと掻く。`[\]
+*d50779
+d `まったく乗り気ではないが、`[@]`……ベルンカステルの命令に逆らえないことも、もはや理解できているようだった。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"cha_i1ip"
+flush 24
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+*d50780
+d `そして、再び棺に近付き、`[@]`黄金の薔薇で埋まったその中身を見ろというような仕草をしながら言う。`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50781
+d2 [lv 0*"54"*"75400141"]`「ベアトリーチェ殺人事件の依頼とのことだが。`[@][lv 0*"54"*"75400142"][#][*]`{p:1:ヴァンダイン二十則、第７則。`[@][lv 0*"54"*"75400143"]`死体なき事件であることを禁ず}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"cha_i1dp"
+lss s0_8,"ber","a21_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d50782
+d2 [lv 0*"28"*"72100047"][#][*]`「{p:2:悪魔の証明ね。`[@][lv 0*"28"*"72100048"]`棺にないだけじゃない？`[@][lv 0*"28"*"72100049"]`　死体が存在しないことをあなたが証明できない限り、これはミステリーよ}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_10,"wil","a11_niramu1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_wil
+*d50783
+d2 [lv 0*"54"*"75400144"][#][*]`「{p:1:第１則。手掛り全ての揃わぬ事件を禁ず}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_8,"ber","a21_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d50784
+d2 [lv 0*"28"*"72100050"][#][*]`「{p:1:安心なさい。`[@][lv 0*"28"*"72100051"]`全てはここに揃っている}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_10,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50785
+d [lv 0*"54"*"75400145"]`「…………………………」`[\]
+msgwnd_non
+*d50786
+d `ウィルの不満げな表情は相変わらずだが、`[@]`……とりあえずの体裁が整っていることは確認できたらしい。`[\]
+*d50787
+d `……奔放にて移り気で残忍な元老院の大魔女に呼びつけられたという時点で、`[@]`異端審問官など、ただの下っ端役人扱いだ。`[@]`元より、断りようなどなかった…。`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50788
+d2 [lv 0*"54"*"75400146"]`「………この、空っぽの棺の主を殺したのは誰か。`[@][lv 0*"54"*"75400147"]`……引き受けてやらァ。`[@][#][*][lv 0*"54"*"75400148"]`ただし、俺の流儀でやらせてもらう」`[\]
+wait_on_d 0
+lss s0_10,"wil","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d50789
+d [lv 0*"28"*"72100052"]`「ご自由に」`[\]
+textoff
+waits 167
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+seplay 1,52,71
+textoff
+aspt2 breakup,s0_8,0
+aspt2 breakup,s0_8,1000,2000
+aspt2 alpha,s0_8,0,2000
+sptwait2 breakup,s0_8
+csp_slot s0_8
+flush 1 ;flush2: NO frames
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+meplay 1,12,0
+vol_bgm 0,2000
+vol_me 1,50,2000
+wait 2000
+vol_bgm -1,1000
+textoff
+waits 167
+lbg s0_3,"cha_i1np"
+lss s0_10,"rio","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+wait 1000
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50790
+d [lv 0*"54"*"75400149"]`「まず最初にすることは、………お前に現状を、理解させることだな」`[\]
+lss s0_10,"rio","b11_akire1a" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50791
+d [lv 0*"53"*"75300031"]`「……それをお願いできると、私もとても助かります」`[\]
+msgwnd_non
+*d50792
+d `理御は呆れるやら、腹立たしいやら、わけがわからないやらの、`[@]`不満の感情のシチューみたいな表情を浮かべている。`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50793
+d [lv 0*"54"*"75400150"]`「来な。`[@][lv 0*"54"*"75400151"]`……実際に見た方が早ェ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_10,"rio","a11_akire1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50794
+d [lv 0*"53"*"75300032"]`「……いいでしょう？`[@][lv 0*"53"*"75300033"]`　お供しましょうとも」`[\]
+csp_slot s0_10
+flush 24
+msgwnd_non
+*d50795
+d `ウィルは理御に、ついてくるように顎で合図して、勝手に踵を返す。`[\]
+*d50796
+d `理御は不満げな鼻息をひとつ漏らしてから、`[@]`何をどう説明してくれるか見物だとばかりに、その後を追う。`[\]
+meplay 2,16,50
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"cha_i1ap"
+flush 22
+*d50797
+d `……礼拝堂から出て行こうとする二人を見送りながら、`[@]`……ベルンカステルは冷酷な笑みで声なく嘲笑う。`[\]
+lss s0_9,"ber","a21_warai1" ;1
+flush 22
+msgwnd_ber
+*d50798
+d [lv 0*"28"*"72100053"]`「………尊厳なる観劇と戯曲と傍観の魔女、`[@][lv 0*"28"*"72100054"]`フェザリーヌ・何とか・アウアウローラの巫女にして奇跡の魔女、`[@][lv 0*"28"*"72100055"]`ベルンカステルの名において、このゲームの開始を宣言するわ」`[\]
+lss s0_9,"ber","a21_warai4" ;1
+flush 80
+*d50799
+d [lv 0*"28"*"72100056"]`「……物語のタイトルは、“黄金の魔女の鎮魂歌”。`[@][lv 0*"28"*"72100057"]`……ベアトの葬儀に相応しい物語を、紡ぎなさい。`[@][lv 0*"28"*"72100058"]`……くすくすくす。`[@][lv 0*"28"*"72100059"]`さて、どんなハラワタを引き摺り出してくれるやら」`[\]
+seplay 1,52,71
+textoff
+aspt2 breakup,s0_9,0
+aspt2 breakup,s0_9,1000,2000
+aspt2 alpha,s0_9,0,2000
+sptwait2 breakup,s0_9
+csp_slot s0_9
+flush 1 ;flush2: NO frames
+msgwnd_non
+*d50800
+d `二人が礼拝堂から出るのを見届けて。`[\]
+*d50801
+d `ベルンカステルの姿は現れた時と同様に、虚空にふわりと溶け散って消えた。`[\]
+*d50802
+d `くすくすけらけらと、不快な笑い声だけを残して……。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+meplay 3,5,0
+vol_me 1,70,3000
+vol_me 2,0,3000
+vol_me 3,70,3000
+wait 3000
+vol_me 2,-1,1000
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+flush 22
+wait 3000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"cha_i3a"
+flush 22
+*d50803
+d `外は、相変わらず雨が降り続けている。`[\]
+textoff
+waits 167
+lss s0_8,"kan","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+wait 500
+lss s0_8,"kan","a12_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+*d50804
+d `客人と次期当主が姿を現したことに気付くと、受付の嘉音は深々とお辞儀する。`[\]
+lss s0_10,"rio","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d50805
+d2 [lv 0*"53"*"75300034"]`「……ご苦労様です。`[@][lv 0*"53"*"75300035"]`休んで結構ですので、外してもらえますか？`[@][#][*][lv 0*"53"*"75300036"]`　えっと、`[|][lv 0*"53"*"75300037"]`…………」`[\]
+wait_on_d 0
+lss s0_10,"rio","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"kan","a12_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kan
+*d50806
+d [lv 0*"16"*"70600008"]`「……………嘉音です。`[@][lv 0*"16"*"70600009"]`畏まりました」`[\]
+csp_slot s0_8
+flush 24
+msgwnd_non
+*d50807
+d `嘉音は最敬礼してから、姿を消す。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+flush 22
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50808
+d [lv 0*"54"*"75400152"]`「下々の名前までは、いちいち覚えていないってか」`[\]
+lss s0_10,"rio","a11_akire2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50809
+d2 [lv 0*"53"*"75300038"]`「……当家には若い使用人が大勢出入りしており、入れ替わりも頻繁ですので。`[@][#][*][lv 0*"53"*"75300039"]`さて。`[@][lv 0*"53"*"75300040"]`何をどう理解させてくれるのですか？`[@][lv 0*"53"*"75300041"]`　貴方様は何者で、当家にどのような御用がおありで？`[@][lv 0*"53"*"75300042"]`　もちろん、納得させてくれなくて構いません。`[@][lv 0*"53"*"75300043"]`このままお帰りいただければいいだけですので」`[\]
+wait_on_d 0
+lss s0_10,"rio","a11_akire1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50810
+d [lv 0*"54"*"75400153"]`「もう帰れねェのさ。`[@][lv 0*"54"*"75400154"]`俺も、`[|][lv 0*"54"*"75400155"]`……誰もな」`[\]
+meplay 2,16,50
+lss s0_10,"rio","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50811
+d [lv 0*"53"*"75300044"]`「もういい加減にしてくれませんか？`[@][lv 0*"53"*"75300045"]`　そのよくわからない煙に巻くような喋り方はっ。`[@][lv 0*"53"*"75300046"]`私にだって我慢の限界というものがあります。`[@][lv 0*"53"*"75300047"]`私では見送りにならないというなら、源次と郷田にお送りさせてもいいのですよ？」`[\]
+lss s0_8,"wil","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d50812
+d [lv 0*"54"*"75400156"]`「騒ぐな。`[@][lv 0*"54"*"75400157"]`………こいつを見てろ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_10,"rio","a11_akire1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50813
+d [lv 0*"53"*"75300048"]`「見ればわかります。`[@][lv 0*"53"*"75300049"]`葬儀用の薔薇です。`[@][lv 0*"53"*"75300050"]`まさか手品でも見せてくれるおつもりで？」`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"rose_t1a"
+flush 22
+msgwnd_non
+*d50814
+d `ウィルは受付の上に並べられた献花用の薔薇の１本を取り、`[@]`タネも仕掛けもありません、とでも言うかのように理御に見せ付ける。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d50815
+d `そして、それをおもむろに振り上げた。`[\]
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+lss s0_9,"wil","a11_nayamu1" ;1
+flush 22
+msgwnd_wil
+*d50816
+d [lv 0*"54"*"75400158"]`「……見てろ」`[\]
+lss s0_8,"rio","a11_akire1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_rio
+*d50817
+d2 [lv 0*"53"*"75300051"]`「えぇ、見てますよ？`[@][lv 0*"53"*"75300052"]`　鳩でも飛び出すんですか？`[@][lv 0*"53"*"75300053"]`　それともクラッカーと万国旗にでも？`[@][#][*][lv 0*"53"*"75300054"]`　………え？」`[\]
+wait_on_d 0
+vol_mix_fade 1000
+wait 1000
+lss s0_8,"rio","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+seplay 1,20,71
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 1
+bgmplay 164,71,0
+msgwnd_non
+*d50818
+d `ウィルは薔薇を放る。`[\]
+meplay 1,13,50
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+flush 22
+*d50819
+d `それは放物線を描いて飛び、`[@]`……風雨の中、水溜りに落ちると、誰もが想像しただろう。`[\]
+seplay 1,22,71
+*d50820
+d `それを裏切るから、理御は絶句する。`[\]
+*d50821
+d `ウィルの放った薔薇は、確かに投げられた時には、普通に放物線を描いた。`[\]
+*d50822
+d `ぴゅうっと、素早く飛んだはずだった。`[\]
+*d50823
+d2 `しかしそれが、ひさしを出て、風雨の中に飛び出そうとする辺りで、`[@][#][*]`……まるで水飴の中にでも飛び込んだかのように、`[!w500]`どろりと風雨の中空に突き刺さり、停止したのだ。`[\]
+wait_on_d 0
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_3,"cha_o2a"
+color_mod2 nega1,s0_3
+flush 2
+meplay 2,17,70
+d_continue
+wait_on_d -1
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"rose_t1a"
+flush 22
+*d50824
+d `それだけではない。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"rose_t1a"
+color_mod2 s0_3,#ffffff
+flush 8
+seplay 1,22,70
+*d50825
+d2 `宙に浮いたままの薔薇は、美しい黄金の花びらをどんどん、どんどんくすませていき、`[@][#][*]`……やがて消し炭のような、真っ黒な屑になってしまった。`[\]
+wait_on_d 0
+lbg s0_3,"black"
+flush 2
+d_continue
+wait_on_d -1
+meplay 3,16,70
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+flush 22
+*d50826
+d `そして、そうなってもなお、まだ宙に止まり続けていた……。`[\]
+seplay 1,27,70
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+wait 500
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+lss s0_9,"rio","a11_odoroki1" ;1
+flush 22
+msgwnd_rio
+*d50827
+d2 [lv 0*"53"*"75300055"]`「……これは、何の手品ですか？`[@][#][*][lv 0*"53"*"75300056"]`　………ッ、」`[\]
+wait_on_d 0
+lss s0_10,"wil","a11_niramu1" ;1
+aspt2 xpos,s0_10,370
+lss s0_9,"rio","a11_ikari1a" ;1
+flush 1
+seplay 1,12,71
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+lss s0_10,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50828
+d [lv 0*"54"*"75400159"]`「動くな」`[\]
+msgwnd_non
+*d50829
+d `理御は、宙になおも止まり続けている薔薇の屑に触れようと近付いた。`[\]
+*d50830
+d `それをウィルが乱暴に腕で遮って静止する。`[\]
+*d50831
+d `まるで、ここを出れば死ぬぞ、と言わんばかりだった。`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50832
+d [lv 0*"54"*"75400160"]`「……この礼拝堂がカケラから切り離されたんだ。`[@][lv 0*"54"*"75400161"]`この礼拝堂は今、濃縮された時間の渦に閉じ込められている」`[\]
+csp_slot s0_9
+lss s0_8,"rio","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_rio
+*d50833
+d [lv 0*"53"*"75300057"]`「それは、`[|][lv 0*"53"*"75300058"]`……どういうことですか…！」`[\]
+textoff
+waits 167
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+vol_bgm 70,1000
+vol_me 1,70,1000
+vol_me 2,0,1000
+vol_me 3,0,1000
+wait 1000
+vol_me 2,-1,1000
+vol_me 3,-1,1000
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50834
+d [lv 0*"54"*"75400162"]`「………面倒臭ェから端折る。`[@][lv 0*"54"*"75400163"]`つまり、さっきの魔女のゲームに付き合わねぇ限り、誰もここから出られねェ」`[\]
+lss s0_8,"rio","a11_ikari1a" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_rio
+*d50835
+d [lv 0*"53"*"75300059"]`「な、……何ですって…？！`[@][lv 0*"53"*"75300060"]`　もう葬儀は終わっています！`[@][lv 0*"53"*"75300061"]`　お屋敷やゲストハウスに戻りたい方々もいらっしゃるでしょう。`[@][lv 0*"53"*"75300062"]`こんなことは困りますっ」`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 2,5,50
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o1a"
+flush 22
+msgwnd_wil
+*d50836
+d [lv 0*"54"*"75400164"]`「恨むならあの魔女を恨め。`[@][lv 0*"54"*"75400165"]`俺も帰れなくて、いい迷惑だ」`[\]
+msgwnd_rio
+*d50837
+d [lv 0*"53"*"75300063"]`「あの少女はあなたの友人でしょう？！`[@][lv 0*"53"*"75300064"]`　この変なのを止めさせて下さいっ」`[\]
+msgwnd_wil
+*d50838
+d [lv 0*"54"*"75400166"]`「あいつは今頃、ポップコーンのバケツでも抱いて観客席だろうよ。`[@][lv 0*"54"*"75400167"]`呼んだって現われねェ」`[\]
+msgwnd_rio
+*d50839
+d [lv 0*"53"*"75300065"]`「わ、わけがわからないッ！！」`[\]
+seplay 1,21,50
+msgwnd_non
+*d50840
+d `その短い一言が、理御の全ての感情を語り尽くしていた。`[\]
+textoff
+waits 167
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"rose_t1a"
+color_mod2 s0_3,#ffffff
+flush 22
+*d50841
+d `しかし、ウィルが放った薔薇が、風雨の闇の中で一瞬で朽ち果てるのを目撃した。`[\]
+*d50842
+d `……試しに、自分も薔薇を取り、放って試すが、結果は同じだった。`[\]
+*d50843
+d `薔薇を瞬時に朽ちさせる恐ろしい何かを、自分の身で試そうとは夢にも思わない……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 2,70,1000
+wait 1000
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o1a"
+flush 22
+msgwnd_wil
+*d50844
+d [lv 0*"54"*"75400168"]`「ここから解放される方法はただ一つ。`[@][lv 0*"54"*"75400169"]`……ベルンカステルのゲームに付き合うことだけだ」`[\]
+msgwnd_rio
+*d50845
+d [lv 0*"53"*"75300066"]`「……ベアトリーチェを殺したのは誰か、……でしたか？」`[\]
+msgwnd_wil
+*d50846
+d [lv 0*"54"*"75400170"]`「そいつを調べろと仰せだ。`[@][lv 0*"54"*"75400171"]`お前がそれを聞かせてくれりゃ、話は早い。`[@][lv 0*"54"*"75400172"]`……気まぐれ魔女は大満足。`[@][lv 0*"54"*"75400173"]`お前は厄介払いが出来て、俺は帰ってダイアナとデートだ。`[@][lv 0*"54"*"75400174"]`……あまり待たせ過ぎると、またソファーをズタボロにしちまわァ」`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,50,1000
+vol_me 2,50,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"cha_i2a"
+flush 22
+lss s0_10,"rio","a11_akire1a" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d50847
+d [lv 0*"53"*"75300067"]`「ベアトリーチェを殺したのは誰か、なんて……。`[@][lv 0*"53"*"75300068"]`葬儀に押し掛けて、遺族に聞くこととは思えませんね」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50848
+d2 [lv 0*"54"*"75400175"]`「遺族に聞き込みはミステリーの基本だ。`[@][lv 0*"54"*"75400176"]`諦めろ。`[@][#][*][lv 0*"54"*"75400177"]`……ベアトリーチェってのは、当主金蔵の愛人だってのはわかってる」`[\]
+wait_on_d 0
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"rio","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50849
+d2 [lv 0*"53"*"75300069"]`「…………………。`[@][lv 0*"53"*"75300070"]`貴方は本当に不思議な人だ。`[@][#][*][lv 0*"53"*"75300071"]`……どうしてそこまで、当家のことをご存知なのですか。`[@][lv 0*"53"*"75300072"]`……やはり、当家に縁のある方なのでは…？」`[\]
+wait_on_d 0
+lss s0_10,"rio","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"rose_g1af"
+color_mod2 s0_3,#ffffff
+flush 22
+msgwnd_non
+*d50850
+d `ウィルが右代宮家のことを詳しいのは、ベルンカステルがこれまでのカケラを全て見せてくれたからだ。`[\]
+*d50851
+d `もちろん、右代宮家と縁などあるわけもない。`[@]`{n}そもそも、彼らの存在する階層さえ、異なる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"portrait2"
+color_mod2 s0_3,#ffffff
+flush 2
+msgwnd_wil
+*d50852
+d [lv 0*"54"*"75400178"]`「しかし、ベアトリーチェはだいぶ昔に死んでいる。`[@][lv 0*"54"*"75400179"]`源次の証言では、屋敷の竣工前に死んでるってことになってるが、`[@][lv 0*"54"*"75400180"]`死んだ理由は明らかじゃねェ。`[@][lv 0*"54"*"75400181"]`………正直なところ、“殺された”ってのは初耳だ。`[@][lv 0*"54"*"75400182"]`……聞かせてくれ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+meplay 1,12,50
+textoff
+waits 167
+lbg s0_3,"cha_i3a"
+flush 22
+lss s0_8,"rio","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_rio
+*d50853
+d [lv 0*"53"*"75300073"]`「………私の名は、右代宮理御と申します」`[\]
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d50854
+d [lv 0*"54"*"75400183"]`「ウィラードだ。`[@][lv 0*"54"*"75400184"]`ウィルでいい」`[\]
+msgwnd_non
+*d50855
+d `初めて、ウィルは理御に名乗る。`[\]
+*d50856
+d `互いの自己紹介をようやく終え、理御にとっての、対等な対話のための禊ぎは済まされる。`[\]
+lss s0_8,"rio","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+*d50857
+d `……しかしながら、理御は深く溜息を漏らし、曖昧な笑みを浮かべながら、風雨の空を見上げた。`[\]
+lss s0_8,"rio","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_rio
+*d50858
+d [lv 0*"53"*"75300074"]`「ウィルさん」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50859
+d [lv 0*"54"*"75400185"]`「ウィルでいい。`[@][lv 0*"54"*"75400186"]`俺も理御と呼ぶ」`[\]
+lss s0_8,"rio","a11_akire1a" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_rio
+*d50860
+d [lv 0*"53"*"75300075"]`「……ウィル。`[@][lv 0*"53"*"75300076"]`正直なところ、……私にも、ベアトリーチェという人物のことが、よくわからないのです」`[\]
+lss s0_10,"wil","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d50861
+d [lv 0*"54"*"75400187"]`「……………なるほど。`[@][lv 0*"54"*"75400188"]`一応、ゲームにはなるわけか」`[\]
+msgwnd_non
+*d50862
+d `理御が全てを教えてくれて、自分の出番はなく真相を究明……。`[\]
+*d50863
+d `やはりそう甘くはないようだった。`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+seplay 1,17,71
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+flush 10
+bgmplay 163,71,0
+wait 1000
+lss s0_10,"rio","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d50864
+d [lv 0*"53"*"75300077"]`「ベアトリーチェの名と姿を、右代宮家に出入りする者で、知らぬ者はないでしょう」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d50865
+d [lv 0*"54"*"75400189"]`「大広間にでかい肖像画が飾ってあるからな。`[@][lv 0*"54"*"75400190"]`肖像画の掲示は、１９８４年の４月だ」`[\]
+lss s0_10,"rio","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d50866
+d2 [lv 0*"53"*"75300078"]`「本当に貴方は、……どうしてそんなことまで。`[@][#][*][lv 0*"53"*"75300079"]`……やれやれ。`[@][lv 0*"53"*"75300080"]`それを疑問に思うのも、もう止めることにします。`[@][lv 0*"53"*"75300081"]`どうせ貴方にまた、煙に巻かれるんですからね」`[\]
+wait_on_d 0
+lss s0_10,"rio","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"cha_i1l"
+flush 22
+msgwnd_non
+*d50867
+d `理御は本家に住む、次期当主。`[@]`{n}普段から、金蔵の相手をすることが多かった。`[\]
+*d50868
+d `なので、気難しい相手や、会話が噛み合わない相手とのやり取りには慣れがあったに違いない。`[\]
+*d50869
+d `瑣末なことは気にするだけ無駄だと割り切り、`[@]`正体不明の男、ウィルと、まるでずっと前からの友人であるかのように、自然と振舞えてしまうのだった……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+lss s0_9,"wil","a11_defo1" ;1
+flush 23
+msgwnd_wil
+*d50870
+d [lv 0*"54"*"75400191"]`「誰もがベアトリーチェを知っている。`[@][lv 0*"54"*"75400192"]`なのに、誰も知らねェ。`[@][lv 0*"54"*"75400193"]`会ったことがあるのは、当主金蔵だけだ」`[\]
+lss s0_8,"rio","a11_fuman1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_rio
+*d50871
+d [lv 0*"53"*"75300082"]`「……当主様は、今日は特にお心が不安定でいらっしゃいます。`[@][lv 0*"53"*"75300083"]`タイミングを見て、私が紹介しますので、なるべく慎んだ態度でお願いしますよ、ウィルさん」`[\]
+csp_slot s0_9
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_wil
+*d50872
+d [lv 0*"54"*"75400194"]`「話が早ェな。`[@][lv 0*"54"*"75400195"]`……てっきりもっと、非協力的かと思ってたぜ」`[\]
+lss s0_8,"rio","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_rio
+*d50873
+d [lv 0*"53"*"75300084"]`「長年、当主様のお相手をしていると。`[@][lv 0*"53"*"75300085"]`大抵の理不尽な事態とは、ある種の諦めを持って接することが出来るようになりますので」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 1,13,70
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o1a"
+flush 22
+msgwnd_non
+*d50874
+d `ベルンカステルによる、礼拝堂を外界から隔離する“結界”。`[\]
+*d50875
+d `それを解くには、“ベアトリーチェを殺したのは誰か”を探らなければならない。`[\]
+*d50876
+d `金蔵に大抵の大騒ぎを付き合わされた理御にとっては、それだけが理解できれば、充分な話だった……。`[\]
+textoff
+waits 167
+wait 2000
+break_glass3
+lbg s0_29,"black"
+csp_slot s0_29
+flush 10,2000
+wait 83
+ch_done flag_scenario_7_1

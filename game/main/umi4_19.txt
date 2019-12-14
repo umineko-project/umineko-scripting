@@ -1,0 +1,3356 @@
+*umi4_19
+;右代宮縁寿
+log_reset
+mov $name_chapter_r_click,r_click_chapters_4_19
+mov $name_chapter_save, "4_19"
+new_chapter date_scenario_4_19,scenario_4_19
+textoff
+waits 167
+bgmplay 106,90,0
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 8
+gstc 294
+*d30299
+d `世界が真っ白に染まる……。`[\]
+*d30300
+d `それは白ではない。`[@]`…極限まで眩い黄金の色。`[\]
+textoff
+waits 167
+lbg s0_5,"butterfly_4sp1"
+seplay 1,52,71
+textoff
+waits 167
+lbg s0_3,"rose_2ap"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"white"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+*d30301
+d `そこは、……右代宮家の美しき薔薇庭園だった。`[\]
+*d30302
+d `しかし、薔薇の花は全て黄金。`[\]
+*d30303
+d `……蜜も黄金色。`[@]`それに集まる蝶たちも、また黄金。`[\]
+lbg s0_5,"butterfly_4sp2"
+textoff
+waits 167
+lbg s0_3,"rose_2bp"
+flush 22
+meplay 1,16,50
+*d30304
+d `…………ここが、黄金郷…………。`[\]
+*d30305
+d `マリアージュ・ソルシエールの魔女たちが、やがて導かれる約束の地…。`[\]
+*d30306
+d `そこでは全ての願いが叶い、全ての魔法と夢が生まれ出す。`[\]
+textoff
+waits 167
+lbg s0_5,"butterfly_4sp2"
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"bea","a31_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+*d30307
+d `…………その、黄金の薔薇の園に、`[@]`……………二人の、そして二人だけの魔女がいた。`[\]
+*d30308
+d `私という招かれざる客人が現れ、`[@]`その不穏に天気が揺らぐ。`[\]
+meplay 2,16,50
+*d30309
+d `………ざぁっと、彼女らにとって不吉な風が、黄金の薔薇をうねらせた。`[\]
+*d30310
+d `その風が散らす黄金の花びらによる、あまりに美し過ぎる光景は、`[@]`紛れもなくこの世ならざるものだった……。`[\]
+*d30311
+d `黄金の薔薇の小道を散策していた二人は私の姿に気付き、驚く。`[\]
+lss s0_8,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_mar
+*d30312
+d2 [lv 0*"13"*"40401315"]`「……縁寿……？`[@][#][*][lv 0*"13"*"40401316"]`　………ベアト、縁寿だ……！！」`[\]
+wait_on_d 0
+lss s0_8,"mar","b11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a11_fuman3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30313
+d2 [lv 0*"27"*"40700886"]`「……………どうやってここへ…？`[@][#][*][lv 0*"27"*"40700887"]`　………引き取られよ。`[@][lv 0*"27"*"40700888"]`妾はもはや、ここへは誰も招かぬのだ」`[\]
+wait_on_d 0
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d30314
+d `ベアトは冷たく言い放つ。`[@]`………かつて不敵に嘲笑って見せた彼女とはまるで別人のよう。`[\]
+*d30315
+d `心を閉ざし、真里亞お姉ちゃんと二人だけの世界に閉じ篭っているのだ。`[\]
+csp_slot s0_5
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_1ep"
+flush 22
+*d30316
+d `仲良しの真里亞お姉ちゃんといつまでも二人きりで、`[@]`魔法談義をしながらお茶を飲んでいられる世界。`[\]
+*d30317
+d `……誰にも急かされず、何にも拒まれない。`[\]
+*d30318
+d `傷つけるかもしれないような誰一人すらも、彼女ら以外に存在しない世界。`[\]
+*d30319
+d `そう、それは二人にとって完成された、もはや小さな宇宙……。`[\]
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_10,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_enj
+*d30320
+d2 [lv 0*"11"*"42001809"]`「………悪いわね。`[@][lv 0*"11"*"42001810"]`……あんたに、ここに引き篭もられちゃ困るのよ。`[@][#][*][lv 0*"11"*"42001811"]`………私たちは、あんたが戻ってこなきゃ、ゲームが進まないの」`[\]
+wait_on_d 0
+lss s0_10,"enj","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"bea","a11_fuman3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30321
+d [lv 0*"27"*"40700889"]`「妾は飽きたから止めたと言った。`[@][lv 0*"27"*"40700890"]`もうゲームには戻らぬ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_9,"mar","b11_akuwarai1" ;1
+flush 23
+msgwnd_mar
+*d30322
+d2 [lv 0*"13"*"40401317"]`「……………ベアトはね、ずっとここで真里亞と一緒にいるの。`[@][lv 0*"13"*"40401318"]`ここで一緒にお茶を飲んでね、色々な遊びを考えるの…！`[@][#][*][lv 0*"13"*"40401319"]`　縁寿も一緒に遊んでいいんだよ」`[\]
+wait_on_d 0
+lss s0_9,"mar","b11_warai1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_9
+flush 10,167
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"bea","a12_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30323
+d2 [lv 0*"27"*"40700891"]`「……マリア。`[@][lv 0*"27"*"40700892"]`それはならぬと言ったはず。`[@][lv 0*"27"*"40700893"]`妾にはそなただけがいれば良い。`[@][#][*][lv 0*"27"*"40700894"]`だからそなたも、妾だけがいれば良いと、言っておくれ」`[\]
+wait_on_d 0
+lss s0_10,"bea","a12_hanbeso1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"mar","b11_niyari1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_mar
+*d30324
+d2 [lv 0*"13"*"40401320"]`「…………………。`[@][#][*][lv 0*"13"*"40401321"]`……うん。`[@][lv 0*"13"*"40401322"]`……ありがとう。`[@][lv 0*"13"*"40401323"]`真里亞を、そこまで必要としてくれる人は、ベアトだけだよ。`[@][lv 0*"13"*"40401324"]`なら、ベアトと一緒にいる。`[@][lv 0*"13"*"40401325"]`二人きりでいい」`[\]
+wait_on_d 0
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a12_hanbeso6" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30325
+d [lv 0*"27"*"40700895"]`「………マリア……、……すまぬ……。`[@][lv 0*"27"*"40700896"]`…………ありがとう………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d30326
+d `ベアトは真里亞を深く抱き、`[@]`その組み合った腕の中に温かな宇宙さえ生み出していた…。`[\]
+*d30327
+d `………多分それは、世界でもっとも小さい宇宙の誕生。`[@]`{n}…互いを必要とし合う二人が生み出せる、世界でもっとも小さい宇宙…。`[\]
+*d30328
+d `それはどんなに小さくても、完成された世界。`[@]`{n}…………でも、私は切り裂かなくてはならない。`[@]`{n}…………………。`[\]
+seplay 1,2,100
+seplay 2,1006,100
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_enj
+*d30329
+d2 [lv 0*"11"*"42001812"]`「……悪いけど。`[@][lv 0*"11"*"42001813"]`………そういうわけにはいかないの。`[@][#][*][lv 0*"11"*"42001814"]`私はこの、マリアージュ・ソルシエールの黄金郷を、ぶっ壊しにやって来たわ」`[\]
+wait_on_d 0
+lss s0_10,"enj","a21_komaru5" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"bea","a12_gaman3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30330
+d2 [lv 0*"27"*"40700897"]`「…………なぜ、`[|][lv 0*"27"*"40700898"]`……妾の世界を、`[|][lv 0*"27"*"40700899"]`……壊すのか………。`[@][#][*][lv 0*"27"*"40700900"]`こ、この世界が妾と真里亞以外の誰に迷惑を掛けたというのか……？！」`[\]
+wait_on_d 0
+lss s0_8,"bea","a12_gaman1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"enj","a11_ikari2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+seplay 1,12,71
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_enj
+*d30331
+d [lv 0*"11"*"42001815"]`「あんたが始めて、終わらせずに放ったらかしたゲームで、`[@][lv 0*"11"*"42001816"]`お兄ちゃんがずっと待たされてるッ！`[@][lv 0*"11"*"42001817"]`　あんたが席に戻らなくちゃ、勝負は永遠に終わらないのよ…！！」`[\]
+lss s0_8,"bea","a13_iiwake3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30332
+d2 [lv 0*"27"*"40700901"]`「………ははははは、は…！`[@][#][*][lv 0*"27"*"40700902"]`　あのゲームに、もはやプレイヤーはひとりもおらぬわ。`[@][lv 0*"27"*"40700903"]`戦人は消え去り、妾もまた消え去りここにいる。`[@][lv 0*"27"*"40700904"]`あのゲームはもはや終わったのだ」`[\]
+wait_on_d 0
+lss s0_8,"bea","a13_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"enj","a21_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30333
+d2 [lv 0*"11"*"42001818"]`「終わってないッ！`[#][*][@][lv 0*"11"*"42001819"]`　あんたの始めたゲームでしょう！！`[@][lv 0*"11"*"42001820"]`　最後まできっちり責任を持って終わらせなさい！」`[\]
+wait_on_d 0
+seplay 1,12,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+lss s0_10,"enj","a21_komaru5" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30334
+d [lv 0*"11"*"42001821"]`「戦人を打ち負かし、あなたが本当に望んだ世界を生み出すか！`[@][lv 0*"11"*"42001822"]`　あなたが打ち負かされ、あなたの魔法に飲み込まれた全てを解放するか！！`[@][lv 0*"11"*"42001823"]`　しっかり最後まで責任を取りなさいッ！！」`[\]
+csp_slot s0_8
+csp_slot s0_10
+flush 10,167
+lss s0_9,"mar","b11_majime1" ;1
+flush 10,167
+msgwnd_mar
+*d30335
+d2 [lv 0*"13"*"40401326"]`「……………駄目だよ、縁寿。`[@][lv 0*"13"*"40401327"]`ベアトはこの世界で、真里亞と永遠に二人きりで過ごすの。`[@][#][*][lv 0*"13"*"40401328"]`……真里亞も、ベアトさえいれば、他には何もいらないの。`[@][lv 0*"13"*"40401329"]`……ここでは全ての願いが叶う。`[@][lv 0*"13"*"40401330"]`全てがある」`[\]
+wait_on_d 0
+lss s0_9,"mar","b11_odoroki1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d30336
+d `…………この黄金郷は、真里亞お姉ちゃんとベアトリーチェの二人の想いの結晶だけで作られている。`[\]
+*d30337
+d `……この世界からベアトを引き摺り出すには、`[@]`……この世界を、`[!w667]`……破壊しなくてはならない………。`[\]
+*d30338
+d `………………ベアトリーチェにとっての、最後の安らぎの世界に違いないこの黄金郷を、`[@]`………破壊する……。`[\]
+csp_slot s0_9
+flush 10,167
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30339
+d2 [lv 0*"11"*"42001824"]`「お姉ちゃん。それは違う。`[@][#][*][lv 0*"11"*"42001825"]`この黄金郷は嘘つきだわ。`[@][lv 0*"11"*"42001826"]`お姉ちゃんの、本当に叶えたい願いを、叶えてくれていない」`[\]
+wait_on_d 0
+lss s0_8,"enj","a33_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_8
+flush 10,167
+lss s0_9,"mar","b11_fukigen2" ;1
+flush 10,167
+msgwnd_mar
+*d30340
+d [lv 0*"13"*"40401331"]`「………そんなことないよ！！`[@][lv 0*"13"*"40401332"]`　ここでは何でも叶うの！`[@][lv 0*"13"*"40401333"]`　見て、ここにはやさしいママだっている！！」`[\]
+textoff
+waits 167
+seplay 1,22,80
+anim s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+wait 500
+seplay 2,22,85
+csp_slot s0_5
+flush 31
+seplay 3,52,71
+lss s0_10,"ros","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_non
+*d30341
+d `真里亞の後に黄金の蝶が集まり、`[@]`やさしく微笑む楼座叔母さんを形作った。`[\]
+*d30342
+d `………そして私ににっこり微笑むと、`[@]`ざあっと黄金の花びらになって崩れ落ちる。`[\]
+textoff
+waits 167
+lss s0_10,"ros","a13_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+seplay 1,22,71
+aspt2 breakupdir,s0_10,2
+aspt2 breakup,s0_10,0
+aspt2 breakup,s0_10,1000,3000
+aspt2 alpha,s0_10,0,3000
+sptwait2 breakup,s0_10
+csp_slot s0_10
+flush 1 ;flush2: NO frames
+wait 500
+lss s0_9,"mar","b11_akuwarai1" ;1
+flush 10,167
+msgwnd_mar
+*d30343
+d2 [lv 0*"13"*"40401334"]`「ここでは何だって生み出せるの。`[@][lv 0*"13"*"40401335"]`縁寿だって生み出せるよ、戦人だって、譲治お兄ちゃんだって、朱志香お姉ちゃんだって…！！`[@][#][*][lv 0*"13"*"40401336"]`　いくらでも呼び出せるよ、みんなやさしくしてくれるよ…！！`[@][lv 0*"13"*"40401337"]`　縁寿もおいでよ、一緒に遊ぼ……！！」`[\]
+wait_on_d 0
+lss s0_9,"mar","b22_warai2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d30344
+d `…………ごめん、お姉ちゃん…………。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+msgwnd_enj
+*d30345
+d [lv 0*"11"*"42001827"]`「さくたろうは……？」`[\]
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_10,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_mar
+*d30346
+d [lv 0*"13"*"40401338"]`「………っ」`[\]
+msgwnd_non
+*d30347
+d `さくたろうの名に、お姉ちゃんは窒息したような表情を浮かべる。`[\]
+lss s0_9,"bea","a11_komaru3" ;1
+flush 10,167
+msgwnd_bea
+*d30348
+d [lv 0*"27"*"40700905"]`「よせ……。`[@][lv 0*"27"*"40700906"]`その名を口にするな……」`[\]
+msgwnd_non
+*d30349
+d `ベアトもまた血相を変える。`[@]`{n}そして真里亞の肩を庇うように抱いた。`[\]
+*d30350
+d `………未だにさくたろうの名は、お姉ちゃんの禁句なのだ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_9,"enj","a11_komaru2" ;1
+flush 24
+msgwnd_enj
+*d30351
+d [lv 0*"11"*"42001828"]`「どうして口にしちゃいけないの？`[@][lv 0*"11"*"42001829"]`　真里亞お姉ちゃんの、一番の親友の名前よ」`[\]
+lss s0_9,"enj","a31_komaru3" ;1
+flush 10,167
+*d30352
+d [lv 0*"11"*"42001830"]`「……どうしてその親友を、この素敵な黄金郷に招いてあげないの？`[@][lv 0*"11"*"42001831"]`　どうしてこの何でも願いの叶う黄金郷では、さくたろうだけ呼び出すことが出来ないの？」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"rose_3ap"
+lss s0_8,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"bea","a12_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 23
+lss s0_10,"bea","a12_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30353
+d2 [lv 0*"27"*"40700907"]`「そ、…それは……。`[@][#][*][lv 0*"27"*"40700908"]`……良いのだぞ、マリア？`[@][lv 0*"27"*"40700909"]`　さくたろうのことを思い出さなくても…、」`[\]
+wait_on_d 0
+lss s0_10,"bea","a12_iiwake2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+seplay 3,21,85
+lss s0_8,"mar","b23_sakebu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_mar
+*d30354
+d2 [lv 0*"13"*"40401339"]`「…………さくたろは、ママに殺されたんだよッ！！！！」`[#][*][\]
+wait_on_d 0
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_2bp"
+flush 22
+seplay 1,22,100
+anim s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+seplay 2,22,85
+aspt2 breakup,s0_5,0
+aspt2 breakup,s0_5,1000,2000
+aspt2 alpha,s0_5,0,2000
+sptwait2 breakup,s0_5
+csp_slot s0_5
+flush 1 ;flush2: NO frames
+wait 1000
+msgwnd_non
+*d30355
+d `真里亞お姉ちゃんがものすごい表情で激昂する。`[\]
+*d30356
+d `その声に驚き、庭園中の蝶たちが一斉に舞い上がり、`[!w583]`……まるで花びらの台風のように吹雪いた。`[\]
+lss s0_9,"enj","a11_fuman1" ;1
+flush 10,167
+msgwnd_enj
+*d30357
+d [lv 0*"11"*"42001832"]`「えぇ、知ってるわ。`[@][lv 0*"11"*"42001833"]`楼座叔母さんが、……大切なさくたろうのぬいぐるみを、引き裂いたわ……！！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 1
+msgwnd_mar
+*d30358
+d2 [lv 0*"13"*"40401340"]`「ぎやああああああぁあああああああああああああぁああああああッ！！！」`[#][*][\]
+wait_on_d 0
+seplay 1,1006,100
+seplay 2,1006,100
+seplay 3,1006,100
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lbg s0_5,"butterfly_4sp1"
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+flush 22
+msgwnd_non
+*d30359
+d `真里亞の絶叫が、嵐となって黄金の花びらや木の葉を乱暴に散らす。`[\]
+*d30360
+d `それはまさに、黄金の暴風。`[\]
+lss s0_10,"bea","a11_aseru1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_bea
+*d30361
+d [lv 0*"27"*"40700910"]`「やめよ…！！`[@][lv 0*"27"*"40700911"]`　やめよやめよやめよ…！！！`[@][lv 0*"27"*"40700912"]`　なぜマリアの心の傷を再び引き裂こうとするのか…？！`[@][lv 0*"27"*"40700913"]`　妾と真里亞の、大切な親友の眠りを汚すなッ…！！」`[\]
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_enj
+*d30362
+d [lv 0*"11"*"42001834"]`「なら、どうして、その大切な親友を、あなたの魔法で蘇らせてあげないの？」`[\]
+lss s0_10,"bea","a11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_bea
+*d30363
+d [lv 0*"27"*"40700914"]`「それが出来るものならやっている…！！`[@][lv 0*"27"*"40700915"]`　しかし、あのぬいぐるみは、楼座による手作りの品！`[@][lv 0*"27"*"40700916"]`　そのたった一つが引き裂かれた魔法的意味は、」`[\]
+lss s0_8,"enj","a11_fuman1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_enj
+*d30364
+d2 [lv 0*"11"*"42001835"]`「誤魔化さないで。`[@][lv 0*"11"*"42001836"]`どうしてさくたろうが蘇らせられないか？`[@][#][*][lv 0*"11"*"42001837"]`　答えはひとつだわ。`[@][lv 0*"11"*"42001838"]`あなたが、本当の魔女じゃないからよ！」`[#][*][\]
+wait_on_d 0
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+d_continue
+wait_on_d 1
+seplay 1,2,100
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a11_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_bea
+*d30365
+d2 [lv 0*"27"*"40700917"]`「………蘇らせられるとも…！！`[@][#][*][lv 0*"27"*"40700918"]`　妾の魔法でいくらでもこうして蘇らせられるとも！！」`[\]
+wait_on_d 0
+lss s0_10,"bea","a11_iiwake3" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lss s0_12,"sak","a11_warai1" ;1
+aspt2 alpha,s0_12,150
+seplay 1,52,71
+aspt2 breakup,s0_12,1000
+aspt2 alpha,s0_12,0
+flush 1
+aspt2 breakup,s0_12,0,2000
+aspt2 alpha,s0_12,150,2000
+sptwait2 breakup,s0_12
+*d30366
+d [lv 0*"27"*"40700919"]`「さくたろうでこの庭園を埋めることだって出来ようぞ…！！」`[\]
+textoff
+waits 167
+seplay 1,52,71
+aspt2 breakup,s0_12,0
+aspt2 breakup,s0_12,1000,2000
+aspt2 alpha,s0_12,0,2000
+sptwait2 breakup,s0_12
+csp_slot s0_12
+flush 1 ;flush2: NO frames
+lss s0_8,"enj","a11_ikari1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_enj
+*d30367
+d [lv 0*"11"*"42001839"]`「えぇ、出来るでしょうね、あなたの魔法では！`[@][lv 0*"11"*"42001840"]`　でも、あなたの生み出したさくたろうは決してお姉ちゃんには見えない！」`[\]
+lss s0_8,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+*d30368
+d [lv 0*"11"*"42001841"]`「…………どうしてかわかってるでしょう？`[@][lv 0*"11"*"42001842"]`　もう一度言うわ。`[@][lv 0*"11"*"42001843"]`あなたが本当の魔女でないからなのよ…！！」`[\]
+seplay 1,57,100
+csp_slot s0_5
+textoff
+waits 167
+lbg s0_26,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_26
+lbg s0_5,"butterfly_4sp2"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_9,"mar","b23_sakebu1" ;1
+flush 2
+msgwnd_mar
+*d30369
+d [lv 0*"13"*"40401341"]`「やめてぇえええぇ！！`[@][lv 0*"13"*"40401342"]`　どうして縁寿はそんなひどいことばかり言うの…？！`[@][lv 0*"13"*"40401343"]`　ベアトはたくさん魔法が使えるよ…！`[@][lv 0*"13"*"40401344"]`　とても素敵な魔女なんだよ…！！」`[\]
+lss s0_9,"mar","b23_komaru1" ;1
+flush 10,167
+*d30370
+d [lv 0*"13"*"40401345"]`「さくたろだけは蘇らせられなかったけど、……他のことなら、何だってできるの…！！`[@][lv 0*"13"*"40401346"]`　だから、さくたろだけは……がまん、`[|][lv 0*"13"*"40401347"]`…できるの……」`[\]
+lbg s0_5,"butterfly_4sp1"
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"rose_3ap"
+lss s0_10,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_enj
+*d30371
+d2 [lv 0*"11"*"42001844"]`「うぅん、お姉ちゃん、それは違うわ。`[@][#][*][lv 0*"11"*"42001845"]`………魔女に出来ないことなんてないの。`[@][lv 0*"11"*"42001846"]`それが出来ない時点で。`[@][lv 0*"11"*"42001847"]`ベアトリーチェは本当の魔女じゃないわ」`[\]
+wait_on_d 0
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_mar
+*d30372
+d [lv 0*"13"*"40401348"]`「そ、それは違うよ……！！`[@][lv 0*"13"*"40401349"]`　さくたろの依り代のぬいぐるみは、ママの手作りの特別なものだから、」`[\]
+lss s0_10,"enj","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30373
+d [lv 0*"11"*"42001848"]`「だから蘇らせられないの？`[@][lv 0*"11"*"42001849"]`　ベアトリーチェの、あなたの魔法はそんなにも不便なの？」`[\]
+lbg s0_5,"butterfly_4sp2"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_10,"bea","a11_aseru1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_bea
+*d30374
+d2 [lv 0*"27"*"40700920"]`「く、………な、……ならば、……そなたなら、さくたろうを蘇らせられるというのか？！`[@][#][*][lv 0*"27"*"40700921"]`　そなたの魔法ならばそれが出来るというのか？！」`[\]
+wait_on_d 0
+lss s0_10,"bea","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"enj","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30375
+d2 [lv 0*"11"*"42001850"]`「出来るわ」`[#][*][\]
+wait_on_d 0
+seplay 1,2,100
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30376
+d [lv 0*"27"*"40700922"]`「………何だと………、」`[\]
+lss s0_8,"enj","a11_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30377
+d [lv 0*"11"*"42001851"]`「真里亞お姉ちゃん！！`[@][lv 0*"11"*"42001852"]`　私が本当の魔法を見せてあげるわ。`[@][lv 0*"11"*"42001853"]`私がさくたろうを蘇らせてあげる！！」`[\]
+lbg s0_5,"butterfly_4sp1"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_10,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d30378
+d [lv 0*"13"*"40401350"]`「……ほ、`[|][lv 0*"13"*"40401351"]`………本当……？`[@][lv 0*"13"*"40401352"]`　ベアトリーチェも出来なかったんだよ……？`[@][lv 0*"13"*"40401353"]`　…ほ、`[|][lv 0*"13"*"40401354"]`………本当に……？！」`[\]
+lss s0_8,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30379
+d2 [lv 0*"11"*"42001854"]`「えぇ、出来るわ！`[@][#][*][lv 0*"11"*"42001855"]`　その代わり約束して。`[@][lv 0*"11"*"42001856"]`私がさくたろうを蘇らせてあげたなら」`[\]
+wait_on_d 0
+lss s0_8,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"mar","b11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_mar
+*d30380
+d [lv 0*"13"*"40401355"]`「うん…！」`[\]
+lss s0_8,"enj","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30381
+d [lv 0*"11"*"42001857"]`「この黄金郷から、出ていきなさい」`[\]
+lss s0_10,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_mar
+*d30382
+d [lv 0*"13"*"40401356"]`「…………ッ、」`[\]
+lbg s0_5,"butterfly_4sp2"
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_8,"bea","a11_aseru1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d30383
+d [lv 0*"27"*"40700923"]`「そ、そんなことは許さぬ…！！`[@][lv 0*"27"*"40700924"]`　ここは妾とマリアの世界！！`[@][lv 0*"27"*"40700925"]`　マリアがいなくなったら、`[|][lv 0*"27"*"40700926"]`……壊れてしまう…！！」`[\]
+msgwnd_non
+*d30384
+d `ニンゲンが宇宙を生み出すための最少人数は、２人。`[@]`{n}それが崩れれば、世界は滅ぶ。`[\]
+*d30385
+d `黄金郷に引き篭もった魔女を引き摺り出すには、この世界を滅ぼさなければならない…！`[\]
+lss s0_10,"enj","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30386
+d [lv 0*"11"*"42001858"]`「……そう、それこそがあなたが魔女でない証拠よ。`[@][lv 0*"11"*"42001859"]`……本当の魔女ならね、宇宙は１人で生み出せるのよ」`[\]
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30387
+d [lv 0*"11"*"42001860"]`「マリアージュ・ソルシエール魔女同盟！`[@][lv 0*"11"*"42001861"]`　……この同盟の存在自体が、あなたが魔女でないことの証になっている…！！」`[\]
+lss s0_8,"bea","a12_gaman6" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30388
+d2 [lv 0*"27"*"40700927"]`「い、嫌だ…！！`[#][*][@][lv 0*"27"*"40700928"]`　マリアは渡さぬ…！！`[@][lv 0*"27"*"40700929"]`　そなたは嫌いだ、今すぐに帰れ…！！`[@][lv 0*"27"*"40700930"]`　ここから出て行けぇえええぇえぇぇ！！」`[\]
+wait_on_d 0
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+csp_slot s0_8
+csp_slot s0_10
+flush 10,167
+lss s0_9,"enj","a33_komaru5" ;1
+flush 10,167
+msgwnd_enj
+*d30389
+d [lv 0*"11"*"42001862"]`「勝手にみんなをゲームに引き摺り込んでおいて、自分は機嫌一つで飽きたり追い出したり！！`[@][lv 0*"11"*"42001863"]`　なんて自分勝手なの？」`[\]
+lss s0_9,"enj","a11_ikari2" ;1
+flush 10,167
+*d30390
+d [lv 0*"11"*"42001864"]`「見なさい、ベアトリーチェ！！`[@][lv 0*"11"*"42001865"]`　そして真里亞お姉ちゃん！！`[@][lv 0*"11"*"42001866"]`　これが、本当の魔法なのよ………！！！」`[\]
+csp_slot s0_5
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+lbg s0_5,"butterfly_4sp1"
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_10,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d30391
+d [lv 0*"13"*"40401357"]`「ほ、……本当にさくたろを蘇らせられるの…？！」`[\]
+lss s0_8,"bea","a11_hanbeso5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30392
+d2 [lv 0*"27"*"40700931"]`「出来るわけがない！！`[#][*][@][lv 0*"27"*"40700932"]`　ここは妾と真里亞の二人だけの黄金郷…！`[@][lv 0*"27"*"40700933"]`　部外者のそなたに使える魔法などひとつもない！`[@][lv 0*"27"*"40700934"]`　今のそなたには、蝶一匹生み出すことさえ叶わぬわッ！！」`[\]
+wait_on_d 0
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_10,"mar","b11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_mar
+*d30393
+d2 [lv 0*"13"*"40401358"]`「静かにして、ベアトッ！！`[#][*][@][lv 0*"13"*"40401359"]`　縁寿を邪魔しないで…！！」`[\]
+wait_on_d 0
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+seplay 1,2,100
+seplay 2,1006,100
+csp_slot s0_5
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+lbg s0_5,"butterfly_4sp1"
+textoff
+waits 167
+lbg s0_3,"rose_2bp"
+flush 22
+meplay 1,16,40
+wait 100
+meplay 2,16,40
+wait 1000
+csp_slot s0_5
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+seplay 1,22,70
+textoff
+waits 167
+lbg s0_3,"rose_2ap"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"white"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,6000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+msgwnd_non
+*d30394
+d `真里亞が叫ぶと、`[!w500]`……暴風はぴたりと止み、あたりはシンと静まり返った。`[\]
+*d30395
+d `………吹き上げられた大量の黄金の花びらが、静かに舞い降りてくるその光景は、`[@]`……まるで、黄金の雪が降るかのように幻想的だった……。`[\]
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_9,"mar","b11_odoroki1" ;1
+flush 22
+lss s0_9,"mar","b11_komaru1" ;1
+flush 10,167
+*d30396
+d `真里亞は、まさかひょっとしての奇跡に、`[@]`無意識の内に両手を組んで祈るような仕草をしてしまう。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"rose_1cp"
+lss s0_10,"bea","a11_gaman3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+*d30397
+d `……ベアトはそんな真里亞を見て、はらはらしている。`[\]
+*d30398
+d `………もし万が一ということがあったなら…、`[!w500]`真里亞は、`[!w583]`……この世界は……。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d30399
+d `でも、……考えられない……！`[@]`　絶対に不可能…。`[\]
+*d30400
+d `あの、世界でたったひとつのぬいぐるみは引き裂かれて捨てられて、`[@]`糸くずさえも残っていないのだ。`[\]
+*d30401
+d `蘇らせるなど、絶対の絶対に不可能……！！`[\]
+textoff
+waits 167
+lbg s0_3,"rose_1cp"
+lss s0_9,"bea","a11_gaman3" ;1
+flush 26
+lss s0_9,"bea","a11_gaman1" ;1
+flush 10,167
+set_window_simple 80
+*d30402
+d2 [#][*]`{p:1:ここは妾の黄金郷}…！`[@]`{n}`[#][*]`{p:1:妾以外の魔法は絶対に存在できない世界}！！！`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d -1
+set_name_window_non
+lss s0_9,"bea","a11_gaman6" ;1
+flush 10,167
+msgwnd_bea
+*d30403
+d2 [lv 0*"27"*"40700935"]`「で、`[|][lv 0*"27"*"40700936"]`……出来るものなら、`[|][lv 0*"27"*"40700937"]`……やってみろぉおおおお、右代宮縁寿えええぇえええええええぇええッ！！！」`[#][*][\]
+wait_on_d 0
+seplay 1,2,100
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+seplay 1,60,71
+seplay 2,2,70
+seplay 3,1006,100
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"rose_1ep"
+color_mod2 nega1,s0_3
+flush 22
+msgwnd_non
+*d30404
+d `ベアトの悲鳴のような叫びに、世界が音を失う。`[\]
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 8
+*d30405
+d `私はゆっくりと、本当の魔法を、呪文を、唱える……。`[\]
+textoff
+waits 167
+seplay 2,22,71
+textoff
+waits 167
+lbg s0_3,"black"
+flush 6
+bgmplay 76,71,0
+msgwnd_enj
+*d30406
+d [lv 0*"11"*"42001867"]`「……………さぁさ、思い出して御覧なさい。`[@][lv 0*"11"*"42001868"]`真里亞の親友のさくたろう」`[\]
+textoff
+waits 167
+lbg s0_27,"sakutaro1ab"
+aspt2 alpha,s0_27,50
+flush 2
+*d30407
+d [lv 0*"11"*"42001869"]`「………あなたがどんな姿をしていたのか、思い出して御覧なさい」`[\]
+textoff
+waits 167
+lbg s0_27,"sakutaro1ab"
+aspt2 alpha,s0_27,100
+flush 2
+*d30408
+d [lv 0*"11"*"42001870"]`「………あなたがどんなに愛くるしいぬいぐるみだったのか、思い出して御覧なさい」`[\]
+csp_slot s0_27
+textoff
+waits 167
+lbg s0_3,"sakutaro1a"
+flush 2
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_8,"bea","a11_komaru4" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"mar","b11_komaru1" ;1
+flush 22
+lss s0_9,"mar","b11_odoroki1" ;1
+flush 10,167
+msgwnd_mar
+*d30409
+d [lv 0*"13"*"40401360"]`「え、………………ぁ、…ぁ………、」`[\]
+lss s0_8,"bea","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_bea
+*d30410
+d [lv 0*"27"*"40700938"]`「………………………………ッ、」`[\]
+msgwnd_non
+*d30411
+d `……二人が、驚愕の表情を浮かべる。`[\]
+csp_slot s0_9
+flush 10,167
+seplay 1,11,40
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+*d30412
+d `そして、……ベアトの肘を弾いて、真里亞が駆け出す……。`[\]
+seplay 1,22,85
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"sakutaro1b"
+flush 42
+msgwnd_mar
+*d30413
+d [lv 0*"13"*"40401361"]`「………くたろ………、`[@][lv 0*"13"*"40401362"]`………さくたろぉ………！！」`[\]
+msgwnd_non
+*d30414
+d `そして、私ごと、`[@]`………しがみつく。`[\]
+textoff
+waits 167
+lbg s0_3,"sakutaro1a"
+flush 22
+set_window_simple 80
+msgwnd_enj
+*d30415
+d2 [lv 0*"11"*"42001871"]`「……大丈夫。`[@][lv 0*"11"*"42001872"]`さくたろうは、消えないよ。`[@][lv 0*"11"*"42001873"]`…………。`[@]`{n}`[|][lv 0*"33"*"44200551"]`『うりゅ、`[@][lv 0*"33"*"44200552"]`真里亞。ただいま』」`[#][*][\]
+wait_on_d 0
+gstc 295
+d_continue
+wait_on_d -1
+lss s0_10,"mar","b23_naku1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+textoff
+set_name_window_non
+msgwnd_mar
+*d30416
+d2 [lv 0*"13"*"40401363"]`「さくたろ、`[|][lv 0*"13"*"40401364"]`……さくたろ……、`[|][lv 0*"13"*"40401365"]`……ううぅうううううぅ、`[#][*][|][lv 0*"13"*"40401366"]`うわああああぁあぁうう！！`[@][#][*][lv 0*"13"*"40401367"]`　さくたろぉおおぉ……、`[|][lv 0*"13"*"40401368"]`会いたかった……、`[|][lv 0*"13"*"40401369"]`…よぉぉ……………」`[\]
+wait_on_d 0
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 1
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,667,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_9,"mar","b23_naku1" ;1
+flush 22
+meplay 1,16,65
+msgwnd_non
+*d30417
+d `それは紛れもなく、`[!w583]`………あの、ライオンの、`[!w417]`……さくたろうのぬいぐるみ。`[\]
+*d30418
+d `そのやわらかさを、生地も縫い目も何もかも、`[!w583]`………真里亞は忘れていた。`[\]
+*d30419
+d `でも、`[@]`………ぬいぐるみを抱いた瞬間に、その全てを鮮明に鮮明に思い出す……。`[\]
+textoff
+waits 167
+seplay 1,52,71
+lss s0_8,"sak","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,3000
+aspt2 alpha,s0_8,255,3000
+sptwait2 breakup,s0_8
+vol_bgm 95,1000
+wait 1000
+lss s0_8,"sak","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_sak
+*d30420
+d [lv 0*"33"*"44200553"]`『うりゅ。`[@][lv 0*"33"*"44200554"]`真里亞、`[@][lv 0*"33"*"44200555"]`……ただいま』`[\]
+lss s0_9,"mar","b11_komaru1" ;1
+flush 10,167
+msgwnd_mar
+*d30421
+d [lv 0*"13"*"40401370"]`「さくたろ、さくたろ…！！`[@][lv 0*"13"*"40401371"]`　体は平気なの？`[@][lv 0*"13"*"40401372"]`　どこも痛くない？`[@][lv 0*"13"*"40401373"]`　あんなに、……ひどいことされたのに、どこも平気なの……？！」`[\]
+lss s0_8,"sak","a12_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+seplay 1,3,50
+msgwnd_sak
+*d30422
+d [lv 0*"33"*"44200556"]`『うりゅ…！`[@][lv 0*"33"*"44200557"]`　縁寿が魔法で蘇らせてくれたから、全然平気なの…！』`[\]
+lss s0_9,"mar","b23_naku1" ;1
+flush 10,167
+msgwnd_mar
+*d30423
+d [lv 0*"13"*"40401374"]`「よかった……、`[|][lv 0*"13"*"40401375"]`よかった……。`[@][lv 0*"13"*"40401376"]`お帰りさくたろ……、`[|][lv 0*"13"*"40401377"]`ううぅううううぅッ！！」`[\]
+lss s0_8,"sak","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_sak
+*d30424
+d2 [lv 0*"33"*"44200558"]`『もう、真里亞といつまでも一緒だよ。`[@][lv 0*"33"*"44200559"]`永遠に一緒だよ。`[@][#][*][lv 0*"33"*"44200560"]`……だからボクを、`[@][lv 0*"33"*"44200561"]`離さないでね………』`[\]
+wait_on_d 0
+lss s0_8,"sak","a21_naku1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+msgwnd_mar
+*d30425
+d [lv 0*"13"*"40401378"]`「うん、……離さないよ……。`[@][lv 0*"13"*"40401379"]`……永遠に…………………」`[\]
+msgwnd_non
+*d30426
+d `そして、さくたろうを抱き締めたまま、`[@]`涙をぼろぼろ零した瞳で私を見上げた…。`[\]
+textoff
+waits 167
+wait 2000
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_10,"mar","b23_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 2
+msgwnd_mar
+*d30427
+d2 [lv 0*"13"*"40401380"]`「……ありがとう、縁寿…！`[@][lv 0*"13"*"40401381"]`　………縁寿の魔法はすごい……。`[@][#][*][lv 0*"13"*"40401382"]`……どうして？`[@][lv 0*"13"*"40401383"]`　どうしてさくたろうを蘇らせることが出来たの？！`[@][lv 0*"13"*"40401384"]`　ベアトにも出来なかったのに…！」`[\]
+wait_on_d 0
+lss s0_10,"mar","b11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"bea","a12_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30428
+d2 [lv 0*"27"*"40700939"]`「………………ありえぬ…。`[@][lv 0*"27"*"40700940"]`……ありえぬ……。`[@][#][*][lv 0*"27"*"40700941"]`……どうして？`[@][lv 0*"27"*"40700942"]`　……どうして妾の黄金郷で、妾以外の人間が魔法を使えるのかッ？！？！`[@][lv 0*"27"*"40700943"]`　こんなことは、`[|][lv 0*"27"*"40700944"]`………断じてありえぬ………！」`[\]
+wait_on_d 0
+lss s0_8,"bea","a12_hanbeso5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_9,"enj","a11_fuman2" ;1
+flush 24
+msgwnd_enj
+*d30429
+d [lv 0*"11"*"42001873_b"]`「何をうろたえているのよ、ベアトリーチェ。`[@][lv 0*"11"*"42001873_c"]`………………これが、魔法でしょ？」`[\]
+meplay 2,5,50
+csp_slot s0_9
+flush 10,167
+lss s0_8,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"bea","a11_gaman1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+lss s0_10,"bea","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30430
+d2 [lv 0*"27"*"40700945"]`「魔法のわけがない…！！`[@][lv 0*"27"*"40700946"][#][*]`　{p:1:ここは妾の黄金郷}！！`[@][lv 0*"27"*"40700947"][#][*]`　{p:1:妾以外の魔法は絶対に存在できない世界}！！`[@][lv 0*"27"*"40700948"]`　そして妾の`[|][lv 0*"27"*"40700949"][#][*]`{p:1:魔法でさくたろうを蘇らせることは出来なかった}…！！」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d 2
+seplay 3,59,71
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a11_gaman6" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30431
+d2 [lv 0*"27"*"40700950"]`「出来るはずがないのだッ！！`[@][lv 0*"27"*"40700951"][#][*]`　{p:1:そのぬいぐるみは特別なぬいぐるみ}！`[@][lv 0*"27"*"40700952"][#][*]`　{p:1:楼座が娘の誕生日のために作った、世界でたった一つの}、`[|][lv 0*"27"*"40700953"][#][*]`………あ、`[@][lv 0*"27"*"40700954"]`………………ぅ、`[@][lv 0*"27"*"40700955"]`……………あ……、」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d 2
+lss s0_10,"bea","a11_gaman7" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"enj","a11_naku1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30432
+d [lv 0*"11"*"42001874"]`「…………………ね、`[@][lv 0*"11"*"42001875"]`…魔法でしょう？」`[\]
+lss s0_10,"bea","a11_gaman6" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30433
+d [lv 0*"27"*"40700956"]`「う、`[|][lv 0*"27"*"40700957"]`……お……、`[|][lv 0*"27"*"40700958"]`……あ、`[|][lv 0*"27"*"40700959"]`………あぁぁ、`[|][lv 0*"27"*"40700960"]`…………ぁぁぁぁぁぁ……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 42
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d30434
+d `ベアトは到底受け容れることの出来ぬ奇跡に、`[@]`………私の魔法の全てを、理解する……。`[\]
+*d30435
+d `そして、無邪気に戯れあう真里亞とさくたろうを見て、`[!w667]`……私を見て、`[!w667]`………それから、`[!w417]`………膝を落とし、`[!w500]`……両手までも地に着いて、`[!w667]`……………泣いた。`[\]
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_10,"bea","a12_hanbeso6" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+msgwnd_mar
+*d30436
+d [lv 0*"13"*"40401387"]`「ベアトリーチェ…！　これは本当に魔法なんだよね…？！`[@][lv 0*"13"*"40401388"]`　魔法なんだよね？！`[@][lv 0*"13"*"40401389"]`　ベアトリーチェ…！！！」`[\]
+lss s0_10,"bea","a12_gaman5" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30437
+d [lv 0*"27"*"40700961"]`「……………うむ………。`[@][lv 0*"27"*"40700962"]`……魔法であるぞ……。`[@][lv 0*"27"*"40700963"]`……それこそが、`[|][lv 0*"27"*"40700964"]`………本当の、`[|][lv 0*"27"*"40700965"]`………魔法であるぞ………」`[\]
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_mar
+*d30438
+d2 [lv 0*"13"*"40401390"]`「どうしてベアトにも出来ない魔法を縁寿が使えるの？！`[@][lv 0*"13"*"40401391"]`　どうして？！`[@][lv 0*"13"*"40401392"]`　どうしてッ？！`[@][#][*][lv 0*"13"*"40401393"]`　縁寿すごい、縁寿はすごい魔女！`[@][lv 0*"13"*"40401394"]`　真里亞なんかよりもずっとずっとすごい、本当の魔女だよ……！！！」`[\]
+wait_on_d 0
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_10,"enj","a11_naku1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d30439
+d2 [lv 0*"11"*"42001876"]`「えぇ、そうよ、お姉ちゃん。`[@][#][*][lv 0*"11"*"42001877"]`……………私は、反魂の魔女エンジェ。`[@][lv 0*"11"*"42001878"]`……私に蘇らせられないものはないわ」`[\]
+wait_on_d 0
+lss s0_10,"enj","a11_hanbeso1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_8,"sak","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_9,"mar","b22_warai2" ;1
+flush 23
+wait 500
+lss s0_9,"mar","b11_odoroki1" ;1
+flush 10,167
+msgwnd_mar
+*d30440
+d2 [lv 0*"13"*"40401395"]`「すごいよすごい！！`[@][lv 0*"13"*"40401396"]`　反魂の魔法って、一番難しいってベアトも言ってたのに！！`[@][#][*][lv 0*"13"*"40401397"]`　エンジェはすごい！！`[@][lv 0*"13"*"40401398"]`　本当の本当の、大魔女なんだ……ッ！！！」`[\]
+wait_on_d 0
+lss s0_9,"mar","b22_warai2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"white"
+flush 2
+seplay 2,52,71
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"white"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+msgwnd_non
+*d30441
+d `その時、真里亞とさくたろうの姿が黄金色に瞬き、`[@]`……二人の姿が黄金の花びらに変わって、崩れ去った……。`[\]
+*d30442
+d `二人は黄金の風になって混じりあいながら、`[@]`………ここではない、別の安らぎの地へ、去っていく。`[\]
+*d30443
+d2 `ベアトは真里亞を、……約束どおり、黄金郷から追放したのだ。`[#][*][\]
+wait_on_d 0
+gstc 296
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+wait 1000
+meplay 1,5,50
+textoff
+waits 167
+lbg s0_3,"rose_3ap"
+lss s0_10,"enj","a11_naku1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_enj
+*d30444
+d2 [lv 0*"11"*"42001879"]`「……さよなら、…真里亞お姉ちゃん。`[@][lv 0*"11"*"42001880"]`そしていつまでも、お幸せに。`[@][#][*][lv 0*"11"*"42001881"]`…………大丈夫よ、お姉ちゃんの世界にも必ずあなたはいるわ。`[@][lv 0*"11"*"42001882"]`でもそれは、{i:あなたのことじゃない}」`[\]
+wait_on_d 0
+bgmplay 106,85,0
+lss s0_10,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+seplay 1,2,100
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"rose_3ap"
+lss s0_9,"bea","a11_gaman5" ;1
+flush 22
+msgwnd_bea
+*d30445
+d [lv 0*"27"*"40700966"]`「……………よかったな、`[|][lv 0*"27"*"40700967"]`……真里亞……。`[@][lv 0*"27"*"40700968"]`……妾はそなたの親友として、`[|][lv 0*"27"*"40700969"]`………その再会を、心より祝福するぞ………」`[\]
+msgwnd_non
+*d30446
+d `ベアトの表情には、……おそらく人間が浮かべることの出来る、全ての表情が入り混じっていた。`[\]
+*d30447
+d `それは、`[@]`喜びであり、`[@]`怒りであり、`[@]`哀しみであり。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"rose_3ap"
+lss s0_10,"enj","a11_komaru2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d30448
+d2 [lv 0*"11"*"42001883"]`「………それが、魔法の根源よね。`[@][#][*][lv 0*"11"*"42001884"]`…………愛がなければ。`[@][lv 0*"11"*"42001885"]`悲しみがなければ。`[@][lv 0*"11"*"42001886"]`怒りがなければ。`[@][lv 0*"11"*"42001887"]`…………魔法は、視えない」`[\]
+wait_on_d 0
+lss s0_10,"enj","a11_naku1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+meplay 2,17,90
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"rose_2bp"
+flush 2
+wait 1000
+textoff
+waits 167
+lbg s0_3,"rose_2bn"
+flush 9
+seplay 1,60,71
+seplay 2,2,100
+seplay 3,1006,100
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_non
+*d30449
+d `大地が、震える。`[@]`……地震。`[\]
+*d30450
+d `………それは次第に大きな地割れを呼び、`[@]`ベアトリーチェの最後の楽園を、引き裂き始める。`[\]
+meplay 3,16,60
+textoff
+waits 167
+lbg s0_3,"rose_2an"
+flush 22
+anim s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+*d30451
+d `黄金の蝶たちは逃げ惑うが、どこにも逃げ場などない。`[@]`{n}…そして、ベアトリーチェも。`[\]
+textoff
+waits 167
+lbg s0_3,"rose_3an"
+flush 22
+seplay 1,60,100
+seplay 2,2,100
+seplay 3,1006,100
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+*d30452
+d `黄金郷は崩れ去ってゆく。`[\]
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+vol_me 3,-1,1000
+seplay 1,1006,100
+seplay 2,61,100
+seplay 3,66,100
+csp_slot s0_5
+textoff
+waits 167
+lbg s0_3,"black"
+flush 10,167
+*d30453
+d `大地はまるで抜け落ちる床のように崩れ落ち、`[!w500]`………ベアトリーチェを漆黒の闇の底へ飲み込んでいく。`[\]
+textoff
+waits 167
+wait 2000
+seplay 3,1006,100
+seplay 2,12,85
+seplay 1,39,90
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 1
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+*d30454
+d `そして無慈悲に漆黒の床に叩き付けられた。`[\]
+gstc 297
+*d30455
+d `……そこは、とても薄暗い、喫煙室。`[\]
+*d30456
+d `出ることの出来る扉はなく、窓はあれど光も差さぬ、`[!w500]`……薄暗きベアトリーチェの喫煙室。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 6
+*d30457
+d `ベアトはその冷たく硬い床に叩き付けられた痛みに呻きながらも、`[@]`ふらふらと立ち上がる……。`[\]
+*d30458
+d `そこには席が。`[\]
+*d30459
+d `……彼女が退席したままの形で残っている、……ゲームのテーブルが。`[\]
+*d30460
+d `ゲーム盤もまた、ベアトが放置した状態で残されている。`[\]
+lss s0_10,"enj","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30461
+d [lv 0*"11"*"42001888"]`「そこがあなたの席よ。`[@][lv 0*"11"*"42001889"]`座りなさい」`[\]
+lss s0_8,"bea","a11_hanbeso1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30462
+d [lv 0*"27"*"40700970"]`「……………妾に座るべき席は、`[|][lv 0*"27"*"40700971"]`………ここしかない、ということなのか………」`[\]
+msgwnd_non
+*d30463
+d `ベアトは自らの席に手を付き、……悲しく笑う。`[\]
+lss s0_10,"enj","a11_hanbeso1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30464
+d [lv 0*"11"*"42001890"]`「勝つか、負けるか。`[@][lv 0*"11"*"42001891"]`あなたに与えられるのはそれだけよ。`[@][lv 0*"11"*"42001892"]`それに行き着く過程での引き分けは許されるでしょう」`[\]
+lss s0_10,"enj","a11_hanbeso2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30465
+d [lv 0*"11"*"42001893"]`「………でも、中断して投げ出すことだけは許さない！`[@][lv 0*"11"*"42001894"]`　勝って生き残るか、負けて消え去るか、`[@][lv 0*"11"*"42001895"]`そのどちらかになるまで、あなたはその席を立つことなんて許されない！！」`[\]
+*d30466
+d [lv 0*"11"*"42001896"]`「それが魔女のゲームのホストである、黄金の魔女ベアトリーチェの唯一の務めでしょう…！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 5
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_non
+*d30467
+d `ベアトは力なく笑いながら、その席に、`[!w417]`……座る。`[\]
+*d30468
+d `……そして肘を付き、両手で顔を覆って、`[!w583]`………口だけはせめて笑って見せた。`[\]
+msgwnd_bea
+*d30469
+d [lv 0*"27"*"40700972"]`「………勝てぬゲームを逃げることは許されぬか。`[@][lv 0*"27"*"40700973"]`………ならばよかろう。`[@][lv 0*"27"*"40700974"]`……妾が負けるまで、……繰り返そうではないか……」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"enj","a11_hanbeso3" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_enj
+*d30470
+d [lv 0*"11"*"42001897"]`「何を気弱な！`[@][lv 0*"11"*"42001898"]`　勝ちなさいよ。`[@][lv 0*"11"*"42001899"]`あなたの最善手を尽くしなさい…！！`[@][lv 0*"11"*"42001900"]`　あなたが始めたゲーム！`[@][lv 0*"11"*"42001901"]`　あなたには最善手を指す義務があるッ！！`[@][lv 0*"11"*"42001902"]`　いい加減に優柔不断にふざけるのはやめて！」`[\]
+textoff
+waits 167
+seplay 1,57,100
+seplay 3,16,100
+seplay 2,44,100
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+seplay 1,32,100
+msgwnd_non
+*d30471
+d `その時、激しい音がした。`[@]`{n}……ベアトは足に冷たく痛々しい感触を覚える。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 22
+seplay 1,57,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"lam","a11_akuwarai5" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_lam
+*d30472
+d [lv 0*"29"*"42200219"]`「……つゥかまえたァ…！`[@][lv 0*"29"*"42200220"]`　やっと捕まえたわよ、ベアトぉ〜？」`[\]
+lss s0_10,"bea","a11_gaman4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30473
+d [lv 0*"27"*"40700975"]`「おや、大ラムダデルタ卿ではないか…。`[@][lv 0*"27"*"40700976"]`………まだおられたとはな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+msgwnd_non
+*d30474
+d `ベアトの足には、凍え切った鋼鉄の足枷がはめられ、`[@]`……自らの座る椅子に括り付けられている。`[\]
+seplay 3,32,100
+*d30475
+d `……もう、この席から逃げることは出来ない。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 22
+seplay 1,57,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"lam","a11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_lam
+*d30476
+d [lv 0*"29"*"42200221"]`「をーっほっほっほ！`[@][lv 0*"29"*"42200222"]`　もう逃げられないんだからね？`[@][lv 0*"29"*"42200223"]`　私、こう見えてもしつこいの、意外でしょう？」`[\]
+lss s0_8,"bea","a11_iiwake3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30477
+d [lv 0*"27"*"40700977"]`「…………自覚がなかった方が意外であるわ」`[\]
+lss s0_10,"lam","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_lam
+*d30478
+d2 [lv 0*"29"*"42200224"]`「あんたには中座も中断も許されてないのよ。`[@][lv 0*"29"*"42200225"]`永遠に戦うのよ、勝つためにね？`[@][#][*][lv 0*"29"*"42200226"]`　………負けたくはないでしょう？`[@][lv 0*"29"*"42200227"]`　負けたらどんな素敵な世界に叩き落されるか、ちょっぴりだけ覗いてみたいぃ？」`[\]
+wait_on_d 0
+lss s0_10,"lam","a11_akuwarai5" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"lam","a11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30479
+d [lv 0*"29"*"42200228"]`「ダイジョウブよ。`[@][lv 0*"29"*"42200229"]`勝てるわよ、この大ラムダデルタ卿が、{i:あんたが勝つまで}、付きっ切りで永遠に面倒を見てあげるから…！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+flush 25
+msgwnd_bea
+*d30480
+d [lv 0*"27"*"40700978"]`「……………………………。`[@][lv 0*"27"*"40700979"]`……ふ、……ははははは。`[@][lv 0*"27"*"40700980"]`………しかし、戦いたくとも、妾の向かいに対戦相手はおらぬぞ……？」`[\]
+textoff
+waits 167
+seplay 1,52,71
+wait 2000
+lss s0_9,"ber","a11_defo2" ;1
+flush 65
+seplay 2,11,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_ber
+*d30481
+d [lv 0*"28"*"42100126"]`「………大丈夫よ、戦人を見つけてきたわ」`[\]
+textoff
+waits 167
+seplay 1,9,71
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"white"
+flush 1
+wait 100
+seplay 2,13,71
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 1
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_non
+*d30482
+d2 `ベルンカステルが現れて、手をパンと打つと、`[@]`宙より戦人が現れて、どさりと向かいの席に落ちる。`[#][*][\]
+wait_on_d 0
+gstc 298
+d_continue
+wait_on_d -1
+*d30483
+d `戦人は目を薄っすらと開けてはいるが、輝きはなく、まるで人形のようだった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d30484
+d `自分の魂を確立する柱の一本を欠き、`[!w500]`…………暗闇の底の底まで落ち、ずっと漂っていた。`[\]
+*d30485
+d `……そのまま、霧のように散って消えてしまうはずだった。`[\]
+*d30486
+d `それをベルンカステルが掻き集めてきた。`[@]`{n}よくも人の形にまで戻せたものだ。`[\]
+*d30487
+d `しかし、肉体は戻っても、魂がまだ戻ってこない。`[@]`{n}……ベアトリーチェに存在を否定されて吹き飛ばされた。`[@]`{n}容易には戻らない。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"ber","a11_defo1" ;1
+flush 26
+msgwnd_ber
+*d30488
+d [lv 0*"28"*"42100127"]`「……………戦人もこの戦いを逃げないわよ。`[@][lv 0*"28"*"42100128"]`あんたに勝つまでね。`[@][lv 0*"28"*"42100129"]`……勝ち目がなくなってきたからって、全て投げ出して逃げるなんて、そんな無粋を許しはしない」`[\]
+lss s0_9,"ber","a11_defo2" ;1
+flush 10,167
+*d30489
+d [lv 0*"28"*"42100130"]`「彼だって、そんなことを望んではいないわ。`[@][lv 0*"28"*"42100131"]`…………でしょう、右代宮戦人…？」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1a"
+flush 23
+meplay 1,16,40
+msgwnd_non
+*d30490
+d `戦人は答えない。`[@]`……心がまだ、死んでいる。`[\]
+*d30491
+d `問い掛けに、わずかに目を震わせるが、返事は出来ない。`[\]
+lss s0_10,"enj","b21_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30492
+d2 [lv 0*"11"*"42001903"]`「戦人…！`[#][*][@][lv 0*"11"*"42001904"]`　しっかり！`[@][lv 0*"11"*"42001905"]`　あなたはここにいるわよ。`[@][lv 0*"11"*"42001906"]`そして敵は目の前にいる…！`[@][lv 0*"11"*"42001907"]`　戦って！`[@][lv 0*"11"*"42001908"]`　勝つために！！」`[\]
+wait_on_d 0
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+msgwnd_non
+*d30493
+d `戦人はぼんやりとそれを、うわ言のように復唱する。`[\]
+*d30494
+d `………戻ってきた。`[\]
+*d30495
+d `魂に負った傷は浅くない。`[\]
+*d30496
+d `それは無理からぬこと。`[@]`{n}ベアトリーチェに赤を織り交ぜ、否定された。`[\]
+*d30497
+d `敬愛していた母親が、生みの親でなかったことを知り、`[@]`………自分が誰なのかわからないのだ。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+set_window_simple 80
+msgwnd_but
+*d30498
+d [lv 0*"10"*"40100847"]`……自分は右代宮戦人では、`[|][lv 0*"10"*"40100848"]`……ない…………。`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"enj","a11_ikari1" ;1
+flush 1
+seplay 1,11,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_enj
+*d30499
+d [lv 0*"11"*"42001909"]`「馬鹿なこと言ってんじゃないわッ！`[@][lv 0*"11"*"42001910"]`　あんたは他の誰でもない、右代宮戦人よ！」`[\]
+lss s0_9,"enj","a21_komaru4" ;1
+flush 10,167
+*d30500
+d [lv 0*"11"*"42001911"]`「誰が認めようと否定しようと、あなたがそれを信じなさい…！！`[@][lv 0*"11"*"42001912"]`　あなたの世界はね、あなただけが作れるのよ。`[@][lv 0*"11"*"42001913"]`あなたが右代宮戦人である世界を、失わないで！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1c"
+flush 25
+msgwnd_but
+*d30501
+d [lv 0*"10"*"40100849"]`「……………じゃあ、`[|][lv 0*"10"*"40100850"]`…………俺は、`[|][lv 0*"10"*"40100851"]`……誰なんだよ………？`[@][lv 0*"10"*"40100852"]`　お袋の子じゃないんだぜ……？`[@][lv 0*"10"*"40100853"]`　俺はどこから生まれてきたんだよ……？」`[\]
+msgwnd_non
+*d30502
+d `戦人は輝きの戻らぬ瞳で、ぼんやりと天井を見たまま、それを問う。`[\]
+*d30503
+d `もちろん彼女は即答する。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_enj
+*d30504
+d2 [lv 0*"11"*"42001914"]`「えぇ、そうね。`[@][lv 0*"11"*"42001915"]`ベアトが赤き真実で宣言したわ。`[@][#][*][lv 0*"11"*"42001916"]`……だから私も宣言する。`[@][lv 0*"11"*"42001917"][#][*]`{p:1:右代宮戦人は右代宮明日夢の息子ではないわ}」`[\]
+wait_on_d 0
+lss s0_10,"enj","a23_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d 1
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_8,"bea","a11_iiwake1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d30505
+d [lv 0*"27"*"40700981"]`「………ふっ、……なれば、我がゲームの対戦相手の資格はないではないか…」`[\]
+lss s0_10,"enj","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30506
+d [lv 0*"11"*"42001918"]`「ベアトリーチェに復唱要求。`[@][lv 0*"11"*"42001919"]`“右代宮戦人は右代宮金蔵の孫ではない”」`[\]
+lss s0_8,"bea","a11_fukigen1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+vol_me 1,-1,1000
+msgwnd_bea
+*d30507
+d [lv 0*"27"*"40700982"]`「…………………………」`[\]
+msgwnd_non
+*d30508
+d `ベアトが眉間にしわをよせながら、`[!w500]`……辛そうに苦笑いを浮かべる。`[\]
+lss s0_10,"enj","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_enj
+*d30509
+d2 [lv 0*"11"*"42001920"]`「復唱拒否ね。`[@][lv 0*"11"*"42001921"]`ベアトが宣言した２つの赤き真実、`[@][lv 0*"11"*"42001922"][#][*]`“{p:1:戦人は明日夢の息子ではない}”、`[@][lv 0*"11"*"42001923"]`そして`[|][lv 0*"11"*"42001924"][#][*]`“{p:1:金蔵の孫である戦人にしか対戦相手の資格がない}”」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d -1
+lss s0_10,"enj","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30510
+d [lv 0*"11"*"42001925"]`「これに矛盾せずに戦人に資格を認められるのは、以下の仮説よ。`[@][lv 0*"11"*"42001926"]`これが私の青き真実、聞きなさい…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+seplay 3,27,100
+wait 500
+seplay 1,1006,100
+seplay 2,57,100
+anim s0_17,"no37",1
+blend_mode add,s0_17
+flush 1
+waitvideo
+csp_slot s0_17
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+set_window_simple 80
+*d30511
+d2 [lv 0*"11"*"42001927"][#][*]`{p:2:ベアトの対戦相手の資格は、“金蔵の孫である右代宮戦人”であって、`[@][lv 0*"11"*"42001928"][#][*]`“明日夢の息子”であるか否かは問題ではない}。`[\]
+wait_on_d 0
+seplay 1,2,100
+d_continue
+wait_on_d 1
+seplay 2,2,100
+d_continue
+wait_on_d -1
+*d30512
+d2 [lv 0*"11"*"42001929"][#][*]`{p:2:即ち、あなたは明日夢の息子でなくても、金蔵の孫であることは出来る}。`[\]
+wait_on_d 0
+seplay 3,2,100
+d_continue
+wait_on_d -1
+*d30513
+d2 [lv 0*"11"*"42001930"][#][*]`{p:2:留弗夫の息子でさえあるならば}！`[\]
+wait_on_d 0
+seplay 1,2,100
+d_continue
+wait_on_d -1
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"lam","a11_futeki2" ;1
+flush 26
+lss s0_9,"lam","a12_akuwarai4" ;1
+flush 10,167
+msgwnd_lam
+*d30514
+d [lv 0*"29"*"42200230"]`「フン、下らない言葉遊びよね？」`[\]
+lss s0_8,"ber","a11_defo2" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_ber
+*d30515
+d [lv 0*"28"*"42100132"]`「……………青き真実、有効よ。`[@][lv 0*"28"*"42100133"]`ベアト、赤き真実での反論は？`[@][lv 0*"28"*"42100134"]`　赤き真実で受けられないなら、戦人の対戦資格は何の問題もない」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d30516
+d [lv 0*"27"*"40700983"]`「……………………………」`[\]
+msgwnd_non
+*d30517
+d `………戦人はまだぼんやりしている。`[@]`{n}彼女が何を言ってくれたのか、まだよく理解できないのだ。`[\]
+*d30518
+d `……しかしそれでも、少しずつ魂が戻ってきている…。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","b11_nayamu1" ;1
+flush 6
+lss s0_9,"but","b11_kuyasigaru1" ;1
+flush 10,167
+msgwnd_but
+*d30519
+d [lv 0*"10"*"40100854"]`「………………じゃあ、`[|][lv 0*"10"*"40100855"]`…………俺は、`[|][lv 0*"10"*"40100856"]`………誰なんだよ……？」`[\]
+lss s0_10,"enj","a21_komaru4" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_enj
+*d30520
+d [lv 0*"11"*"42001931"]`「しっかりなさいッ！`[@][lv 0*"11"*"42001932"]`　あんたは右代宮戦人！`[@][lv 0*"11"*"42001933"]`　確かに明日夢お母さんがあなたを生んだわけではないかもしれない。`[@][lv 0*"11"*"42001934"]`でも、だから何？！`[@][lv 0*"11"*"42001935"]`　あなたにとって母親であることに、何も変わりはないでしょう？！」`[\]
+lss s0_10,"enj","a11_hanbeso3" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+*d30521
+d [lv 0*"11"*"42001936"]`「………例えば、あなたにとって右代宮縁寿は何？`[@][lv 0*"11"*"42001937"]`　血は繋がってないかもしれないけど、それでも妹でしょ？！`[@][lv 0*"11"*"42001938"]`　血じゃないでしょ、絆でしょうッ？！」`[\]
+lss s0_9,"but","b22_odoroki1" ;1
+flush 10,167
+msgwnd_but
+*d30522
+d [lv 0*"10"*"40100857"]`「…………そりゃ、そうさ……。`[@][lv 0*"10"*"40100858"]`……縁寿は、……血が繋がってなくても、`[|][lv 0*"10"*"40100859"]`………妹だ」`[\]
+lss s0_10,"enj","a21_komaru4" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_enj
+*d30523
+d [lv 0*"11"*"42001939"]`「赤で言って！`[@][lv 0*"11"*"42001940"]`　縁寿は妹だって言って！！」`[\]
+lss s0_9,"but","b22_kuyasigaru1" ;1
+flush 10,167
+msgwnd_but
+*d30524
+d2 [lv 0*"10"*"40100860"]`「………`[|][lv 0*"10"*"40100861"][#][*]`{p:1:縁寿は、……俺の妹だ}。`[@][#][*][lv 0*"10"*"40100862"]`………ぁ、………言えた」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+lss s0_9,"but","b22_oyaa1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_9
+csp_slot s0_10
+lss s0_9,"but","b11_komaru2" ;1
+flush 10,167
+lss s0_8,"enj","a21_komaru4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+lss s0_9,"but","b11_kuyasigaru1" ;1
+flush 10,167
+seplay 1,12,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+msgwnd_non
+*d30525
+d `まだぼんやりして、椅子に全身を預けている戦人を、後から強く抱き締める。`[@]`痛いくらいに。`[\]
+lss s0_8,"enj","a11_hanbeso2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30526
+d [lv 0*"11"*"42001941"]`「どういう事情で、明日夢お母さんがあなたの生みのお母さんじゃないかはわからない。`[@][lv 0*"11"*"42001942"]`でも、あなたは今日まで、そして今でも母親だと信じてるでしょう？！`[@][lv 0*"11"*"42001943"]`　世の中にはね、母親さえ、`[|][lv 0*"11"*"42001944"]`……家族さえいない人だって大勢いるのよッ！！」`[\]
+lss s0_8,"enj","a11_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d30527
+d [lv 0*"11"*"42001945"]`「明日夢お母さんはあなたを寂しがらせたことがある？`[@][lv 0*"11"*"42001946"]`　ないでしょ？！`[@][lv 0*"11"*"42001947"]`　あなたの平和だった家族を簡単に捨て去らないでッ！！`[@][lv 0*"11"*"42001948"]`　あんたは６年も家族のもとから離れてたから家族の絆が希薄過ぎるのよ！！」`[\]
+lss s0_8,"enj","a11_hanbeso2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d30528
+d [lv 0*"11"*"42001949"]`「もっともっと、家族の絆を強く感じて！`[@][lv 0*"11"*"42001950"]`　思い出して！！`[@][lv 0*"11"*"42001951"]`明日夢お母さんのためにも、こんな下らない魔女の妄言で、愛情を失わないでッ！」`[\]
+lss s0_9,"but","b22_naku2" ;1
+flush 10,167
+msgwnd_but
+*d30529
+d [lv 0*"10"*"40100863"]`「………………………。`[@][lv 0*"10"*"40100864"]`………そうさ……。`[@][lv 0*"10"*"40100865"]`……お袋は、……いつだって俺の味方だったんだ……」`[\]
+lss s0_9,"but","b26_naku3" ;1
+flush 10,167
+*d30530
+d [lv 0*"10"*"40100866"]`「……………ここはどこだよ……？`[@][lv 0*"10"*"40100867"]`　……暗ぇよ……、`[|][lv 0*"10"*"40100868"]`……帰りてぇよ……。`[@][lv 0*"10"*"40100869"]`俺の家族は、`[|][lv 0*"10"*"40100870"]`みんなは、`[|][lv 0*"10"*"40100871"]`……どこなんだよ………」`[\]
+msgwnd_non
+*d30531
+d `戦人の目にまだ光は戻らない。`[@]`{n}でも、……涙が浮かぶ。`[\]
+lss s0_8,"enj","a11_hanbeso3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30532
+d [lv 0*"11"*"42001952"]`「お家であなたの妹が帰りを待ってるわ。`[@][lv 0*"11"*"42001953"]`せめてあなただけでも帰ってあげないと、……彼女はいつまでも独りぼっち…！`[@][lv 0*"11"*"42001954"]`　妹のためにも、どうか魔女のゲームに勝って…！！」`[\]
+lss s0_9,"but","b22_naku2" ;1
+flush 10,167
+msgwnd_but
+*d30533
+d [lv 0*"10"*"40100872"]`「…………縁寿……、`[|][lv 0*"10"*"40100873"]`俺の、`[|][lv 0*"10"*"40100874"]`……妹………。`[@][lv 0*"10"*"40100875"]`……でもよ、`[|][lv 0*"10"*"40100876"]`………わからねぇんだ…。`[@][lv 0*"10"*"40100877"]`………どうして、`[|][lv 0*"10"*"40100878"]`俺はベアトと、こんなわけのわかんねぇ、残酷なゲームを永遠に繰り返さなきゃならねぇんだ……？`[@][lv 0*"10"*"40100879"]`　……もう、`[|][lv 0*"10"*"40100880"]`……嫌だ……」`[\]
+lss s0_8,"enj","a11_ikari2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_enj
+*d30534
+d [lv 0*"11"*"42001955"]`「なら、早くこんなゲームに決着をつけて、お家へ帰りなさいッ！！`[@][lv 0*"11"*"42001956"]`　右代宮戦人、いつまでこんなところで遊んでいるのッ？！`[@][lv 0*"11"*"42001957"]`　妹が帰りを待ってるわよッ！！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_non
+*d30535
+d `………そう。`[\]
+*d30536
+d `戦人は気付いた時にはもう、このおかしなゲームに巻き込まれていた。`[\]
+*d30537
+d `そして、何のために戦うかさえもわからないまま、`[@]`ずっとずっと、魔女のペースに飲み込まれて、遊ばれ、戦わされてきた。`[\]
+*d30538
+d `それはもっとも素朴な、最初の疑問であるべきなのだ。`[\]
+*d30539
+d `……そこが理解できてないから、戦いの目的を喪失してしまう…！！`[\]
+*d30540
+d `だから私の声が、戦人の耳に、届かない…！`[\]
+*d30541
+d `魔女に勝つためとか、許せないとか、そんなあやふやな目的じゃなくて。`[\]
+*d30542
+d `……彼には、必ず勝つための目的を自覚しなくてはならない。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+meplay 1,5,50
+msgwnd_but
+*d30543
+d [lv 0*"10"*"40100881"]`「………そうだ……。`[@][lv 0*"10"*"40100882"]`……帰りたい……、`[|][lv 0*"10"*"40100883"]`……親父やお袋、`[|][lv 0*"10"*"40100884"]`……縁寿のところに帰りたい……。`[@][lv 0*"10"*"40100885"]`………もう嫌だ、`[|][lv 0*"10"*"40100886"]`……ここは嫌だ……。`[@][lv 0*"10"*"40100887"]`……もう魔女は嫌だ、ゲームも殺人も嫌だ……、`[|][lv 0*"10"*"40100888"]`……嫌だ、`[|][lv 0*"10"*"40100889"]`嫌だ……」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"lam","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 26
+lss s0_10,"lam","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_lam
+*d30544
+d [lv 0*"29"*"42200231"]`「戦人の魂が、…戻り掛けてる」`[\]
+lss s0_8,"ber","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_ber
+*d30545
+d [lv 0*"28"*"42100135"]`「……………でも、あとちょっとが、届いていない」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"enj","a11_hanbeso3" ;1
+flush 22
+lss s0_9,"enj","a11_ikari2" ;1
+flush 10,167
+msgwnd_enj
+*d30546
+d [lv 0*"11"*"42001958"]`「もう嫌でしょう？！`[@][lv 0*"11"*"42001959"]`　なら、家族のもとへ帰るためにも戦って！！`[@][lv 0*"11"*"42001960"]`　ベアトリーチェを打ち破って、帰ってきて！！」`[\]
+textoff
+waits 167
+lbg s0_26,"black"
+flush 22
+vol_bgm 0,1000
+wait 1000
+csp_slot s0_9
+flush 10,167
+lss s0_8,"enj","a11_ikari2" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"but","b22_naku2" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_26
+flush 2
+lss s0_10,"but","b22_naku3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_but
+*d30547
+d [lv 0*"10"*"40100890"]`「嫌だ、……もう魔女は嫌だ…！`[@][lv 0*"10"*"40100891"]`　ベアトも嫌だ、…どいつもこいつも嫌だ、お前も嫌だ、お前だってどうせきっと、魔女の仲間だ…。`[@][lv 0*"10"*"40100892"]`いつまた裏切るかもわからない…！！」`[\]
+csp_slot s0_8
+csp_slot s0_10
+flush 10,167
+lss s0_9,"but","b22_naku1" ;1
+flush 10,167
+seplay 1,12,71
+seplay 2,2,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+*d30548
+d2 [lv 0*"10"*"40100893"][#][*]`「{p:1:何も信用できない、赤くない言葉は何も信用できない}…！！`[@][lv 0*"10"*"40100894"]`　俺に構うな、構うなぁあああぁあああぁ！！」`[\]
+wait_on_d 0
+seplay 3,59,71
+d_continue
+wait_on_d -1
+msgwnd_non
+*d30549
+d `戦人の魂が吼える。`[@]`それを、彼女は後から痛いくらいに強く、その頭を抱き締める。`[\]
+seplay 1,11,85
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 1
+textoff
+waits 167
+lbg s0_3,"e0407"
+flush 2
+vol_bgm 90,1000
+wait 1000
+msgwnd_enj
+*d30550
+d2 [lv 0*"11"*"42001961"][#][*]`「{p:1:早く帰ってきて、お兄ちゃんッ}！！`[@][lv 0*"11"*"42001962"][#][*]`　{p:1:私を独りぼっちにしないでッ}！！！」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d -1
+msgwnd_but
+*d30551
+d [lv 0*"10"*"40100895"]`「……………え、……。`[@][lv 0*"10"*"40100896"]`………お前、`[|][lv 0*"10"*"40100897"]`………、……誰……」`[\]
+msgwnd_enj
+*d30552
+d2 [lv 0*"11"*"42001963"][#][*]`「{p:1:私よ、縁寿よ}…！！`[@][lv 0*"11"*"42001964"][#][*]`　{p:1:お父さんもお母さんもお兄ちゃんも、誰も帰ってこないッ}！！`[@][lv 0*"11"*"42001965"][#][*]`　{p:1:寂しいよ}！！`[@][lv 0*"11"*"42001966"][#][*]`　{p:1:お願いだからッ、早く帰ってきてッ}！」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d 2
+seplay 3,59,71
+d_continue
+wait_on_d 3
+seplay 1,59,71
+d_continue
+wait_on_d -1
+msgwnd_but
+*d30553
+d [lv 0*"10"*"40100898"]`「……え、………縁寿……。`[@][lv 0*"10"*"40100899"]`………お前、………縁寿だったのか…………」`[\]
+msgwnd_enj
+*d30554
+d2 [lv 0*"11"*"42001967"][#][*]`「{p:1:そうよ、縁寿よ}！！`[@][lv 0*"11"*"42001968"][#][*]`　{p:1:誰も帰って来ない世界の右代宮縁寿}…！！`[@][lv 0*"11"*"42001969"][#][*]`　………{p:1:私の家族は全て、あの日の六軒島から帰って来ない}…！！」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d 2
+seplay 3,59,71
+d_continue
+wait_on_d -1
+*d30555
+d2 [lv 0*"11"*"42001970"][#][*]`「{p:1:目の前のあの魔女が、家族を全て、お兄ちゃんさえも奪い取ってしまった}…！`[@][lv 0*"11"*"42001971"][#][*]`　………{p:1:お兄ちゃんだけが、あいつをやっつけられる}！！`[@][lv 0*"11"*"42001972"][#][*]`　{p:1:あいつをやっつけて}…！！」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d 2
+seplay 3,59,71
+d_continue
+wait_on_d -1
+*d30556
+d2 [lv 0*"11"*"42001973"][#][*]`「{p:1:そして、家族を取り戻して}！！`[@][lv 0*"11"*"42001974"][#][*]`　{p:1:そして、………私のところに帰ってきて}……！！！」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 2,59,71
+d_continue
+wait_on_d -1
+msgwnd_but
+*d30557
+d [lv 0*"10"*"40100900"]`「……………ベアトが、`[|][lv 0*"10"*"40100901"]`……俺の家族を………」`[\]
+flush 10,167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"bea","a11_nayamu1" ;1
+flush 23
+msgwnd_bea
+*d30558
+d2 [lv 0*"27"*"40700984"]`「……ふ、…………そうとも。`[@][#][*][lv 0*"27"*"40700985"]`逃げも隠れもせぬわ。`[@][lv 0*"27"*"40700986"]`……妾が右代宮縁寿から家族を奪った」`[\]
+wait_on_d 0
+lss s0_9,"bea","a11_majime1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lss s0_9,"bea","a11_fuman2" ;1
+flush 10,167
+wait 1000
+lss s0_9,"bea","a31_warai1" ;1
+flush 10,167
+vol_me 1,-1,1000
+seplay 1,2,100
+textoff
+waits 167
+lbg s0_26,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_26
+lss s0_9,"bea","a21_akuwarai2" ;1
+flush 80
+*d30559
+d [lv 0*"27"*"40700987"]`「戦人は妾の玩具よ！`[@][lv 0*"27"*"40700988"]`　その父親も母親も全て玩具よ。`[@][lv 0*"27"*"40700989"]`……そなたには返さぬわ。`[@][lv 0*"27"*"40700990"]`……永遠に独りぼっちで、帰らぬ家族の帰りを待って、彷徨い続けるがいいわ……！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_non
+*d30560
+d `抱き締める縁寿の腕から、…………たった一人残された妹の、`[@]`……あまりに辛く悲しく、寂しい日々が、戦人の中に流れ込んでくる……。`[\]
+seplay 1,22,70
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+*d30561
+d `……自分がこんなところで遊んでいたせいで、`[@]`…………ひとり残された妹は、………こんなにも、`[@]`…………辛い日々を……………！！`[\]
+textoff
+waits 167
+lss s0_9,"but","b22_naku1" ;1
+flush 26
+seplay 1,11,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_but
+*d30562
+d [lv 0*"10"*"40100902"]`「…縁寿、………縁寿………！！`[@][lv 0*"10"*"40100903"]`　くそ、……俺は、………何をやってたんだ………！！`[@][lv 0*"10"*"40100904"]`　ありがとうな、縁寿…。`[@][lv 0*"10"*"40100905"]`お兄ちゃんは、……大切なことをずっと忘れていた……！」`[\]
+msgwnd_non
+*d30563
+d `戦人は振り返ろうとするが、`[@]`縁寿はものすごい力で戦人の頭にしがみ付いていて、振り返ることが出来なかった。`[\]
+textoff
+waits 167
+seplay 1,35,71
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"blood_2a"
+flush 1
+*d30564
+d `……汗？`[\]
+textoff
+waits 167
+seplay 2,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2b"
+flush 1
+*d30565
+d `熱い雫がぼたりぼたりと戦人のうなじを濡らす。`[\]
+*d30566
+d `……それの正体を、自分にしがみつく縁寿の腕を抱いていて、知る。`[\]
+*d30567
+d `………戦人の手を、指を、赤く染めたから。`[\]
+msgwnd_but
+*d30568
+d [lv 0*"10"*"40100906"]`「………血…、`[@][lv 0*"10"*"40100907"]`……え、縁寿？！`[@][lv 0*"10"*"40100908"]`　だ、大丈夫か？！`[@][lv 0*"10"*"40100909"]`　お、おい……？！」`[\]
+meplay 1,28,70
+textoff
+waits 167
+seplay 3,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2c"
+flush 1
+wait 500
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2d"
+flush 1
+msgwnd_non
+*d30569
+d `それは、ぼたりぼたりと、ぼたぼたと。`[\]
+*d30570
+d `何が何やらわからない。`[\]
+*d30571
+d `戦人には振り向けないからわからないが、`[@]`きっとこの背中全体に染みるこの熱い雫は全て、……血なのだ。`[\]
+msgwnd_enj
+*d30572
+d [lv 0*"11"*"42001975"]`「…………お兄ちゃんを助けるために、`[|][lv 0*"11"*"42001976"]`ここに来るために、`[@][lv 0*"11"*"42001977"]`唯一守らなきゃいけないルールが、`[|][lv 0*"11"*"42001978"]`……あったの…。`[@][lv 0*"11"*"42001979"]`…………それが、`[|][lv 0*"11"*"42001980"]`…………これ。`[@][lv 0*"11"*"42001981"]`………お兄ちゃんに、`[|][lv 0*"11"*"42001982"]`………私が縁寿だと、`[|][lv 0*"11"*"42001983"]`……知られてしまう、`[|][lv 0*"11"*"42001984"]`……こと………」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 2
+set_window_simple 80
+*d30573
+d [lv 0*"11"*"42001985"]`……辛かったよ………。`[\]
+*d30574
+d [lv 0*"11"*"42001986"]`お兄ちゃんが目の前にいるのに、……それを口に出来ないなんて………。`[\]
+*d30575
+d [lv 0*"11"*"42001987"]`このルールさえ守れば、……ずっと永遠にお兄ちゃんの側にいられるはずだった。`[\]
+*d30576
+d [lv 0*"11"*"42001988"]`………お兄ちゃんと一緒に、`[|][lv 0*"11"*"42001989"]`…魔女と戦うゲームを、`[|][lv 0*"11"*"42001990"]`……永遠に遊べるはずだった……。`[\]
+set_name_window_non
+seplay 1,2,100
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+msgwnd_enj
+*d30577
+d [lv 0*"11"*"42001991"]`「でも、`[|][lv 0*"11"*"42001992"]`………それじゃ駄目」`[\]
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2a"
+flush 1
+*d30578
+d [lv 0*"11"*"42001993"]`「…………お兄、`[|][lv 0*"11"*"42001994"]`……ッ、`[|][lv 0*"11"*"42001995"]`………ちゃんは、`[|][lv 0*"11"*"42001996"]`……帰らなきゃ」`[\]
+seplay 2,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2b"
+flush 1
+*d30579
+d [lv 0*"11"*"42001997"]`「………お家で、`[|][lv 0*"11"*"42001998"]`……あなたの妹が待っているもの……」`[\]
+seplay 3,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2c"
+flush 1
+*d30580
+d [lv 0*"11"*"42001999"]`「………それは私のことではないけれど、`[|][lv 0*"11"*"42002000"]`…………それで、あなたの妹は、`[|][lv 0*"11"*"42002001"]`…救われる………」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_24,"but","b22_kuyasigaru1" ;1
+flush 22
+lss s0_24,"but","b22_odoroki2" ;1
+flush 10,167
+msgwnd_but
+*d30581
+d [lv 0*"10"*"40100910"]`「縁寿？！`[@][lv 0*"10"*"40100911"]`　縁寿！！`[@][lv 0*"10"*"40100912"]`　こんなに血が…！！`[@][lv 0*"10"*"40100913"]`　こんなに、こんなに！！」`[\]
+msgwnd_non
+*d30582
+d `振り向きたいが、縁寿に力強く頭を抱えられ、振り向けない。`[\]
+*d30583
+d `しかし、その溢れ出す血と縁寿の辛そうな息遣いで、`[@]`彼女が今、大変なことになっていることは理解できた。`[\]
+textoff
+waits 167
+csp_slot s0_24
+lbg s0_3,"black"
+lss s0_24,"but","b22_odoroki2" ;1
+flush 22
+msgwnd_enj
+*d30584
+d [lv 0*"11"*"42002002"]`「…………気に…しないで………。`[@][lv 0*"11"*"42002003"]`……私は所詮、……駒だから……。`[@][lv 0*"11"*"42002004"]`………あのね、チェスではね、……サクリファイスって、言うんだって……」`[\]
+lss s0_24,"but","b22_kuyasigaru1" ;1
+flush 10,167
+msgwnd_but
+*d30585
+d2 [lv 0*"10"*"40100914"]`「サクリ、……何だって？！`[@][#][*][lv 0*"10"*"40100915"]`　そんなことはどうでもいい！！`[@][lv 0*"10"*"40100916"]`　早く手当てを！！`[@][lv 0*"10"*"40100917"]`　この手を一度離すんだ、縁寿…！！」`[\]
+wait_on_d 0
+lss s0_24,"but","b22_odoroki1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_24
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d30586
+d [lv 0*"27"*"40700991"]`「………サクリファイスとは、捨て駒のことよ。`[@][lv 0*"27"*"40700992"]`戦略的展望のために、わざと損を承知で駒を見捨てることを言う…」`[\]
+csp_slot s0_10
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"chess1"
+flush 22
+msgwnd_non
+*d30587
+d `チェスにおいての至上目的は相手に勝利すること。`[@]`{n}……だから、最終的にそれに結びつくならば、個々の駒の犠牲は問題にならない。`[\]
+*d30588
+d `縁寿は、冷静に判断したのだ。`[\]
+*d30589
+d `………繰り返し、自分はプレイヤーではなく駒だと教えられてきた。`[\]
+*d30590
+d `……駒らしく振舞い、戦人を救うには、今、自らが捨て駒とならねばならないのだ。`[\]
+*d30591
+d `…………戦人は、知らなければならない。`[\]
+*d30592
+d `この魔女のゲームの目的は、魔女をやっつけるなんて抽象的なものであってはならない。`[\]
+*d30593
+d `ゲームに打ち勝ち、自らを解放し、家族を連れ帰らなければならないのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d30594
+d `なぜ？`[@]`　………帰りを待っている、妹という家族がいるから。`[\]
+*d30595
+d `右代宮縁寿の声を届けるために、生み出された存在。`[\]
+*d30596
+d `それが私、エンジェ・ベアトリーチェ…！！`[\]
+*d30597
+d `私という駒を生贄に、`[@]`お兄ちゃんに戦う意思を、目的を！`[\]
+*d30598
+d `私の目的はお兄ちゃんと永遠に魔女のゲームで遊ぶことじゃない！`[\]
+*d30599
+d `私は右代宮縁寿の嘆きと悲しみを、あなたに届けに来たッ！`[@]`　それこそが私の揺ぎ無い目的！`[\]
+textoff
+waits 167
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2a"
+flush 1
+wait 500
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2b"
+flush 1
+wait 500
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2c"
+flush 1
+msgwnd_but
+*d30600
+d2 [lv 0*"10"*"40100918"]`「……縁寿！！`[@][lv 0*"10"*"40100919"]`　縁寿！！`[@][lv 0*"10"*"40100920"]`　うおおおぉおおおおおぉ！！」`[#][*][\]
+wait_on_d 0
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+msgwnd_non
+*d30601
+d `戦人を抱き締めるその白くか細い腕は、……まるで蝋のように白く透き通っている。`[\]
+*d30602
+d `…なのに鮮血が、あまりにも残酷に、それを染めている……。`[\]
+textoff
+waits 167
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2d"
+flush 1
+msgwnd_enj
+*d30603
+d [lv 0*"11"*"42002005"]`「…私は………、`[|][lv 0*"11"*"42002006"]`…もう消えちゃうけれど……。`[@][lv 0*"11"*"42002007"]`……お兄ちゃんは、がんばって戦って、`[|][lv 0*"11"*"42002008"]`………きっと、私のところへ`[|][lv 0*"11"*"42002009"]`………帰ってきてね………」`[\]
+textoff
+waits 167
+seplay 1,35,71
+textoff
+waits 167
+lbg s0_3,"blood_2e"
+flush 1
+*d30604
+d [lv 0*"11"*"42002010"]`「…………待ってるよ、`[|][lv 0*"11"*"42002011"]`…………ずっと……………。`[@][lv 0*"11"*"42002012"]`……お兄ちゃんをもっといっぱい、手助けしてあげるつもりだったのに、`[|][lv 0*"11"*"42002013"]`……何も出来なかった。`[@][lv 0*"11"*"42002014"]`……ごめんね…………………」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_24,"but","b22_naku1" ;1
+flush 26
+msgwnd_but
+*d30605
+d [lv 0*"10"*"40100921"]`「い、いいんだ……！！`[@][lv 0*"10"*"40100922"]`　お前は俺に、……教えてくれたじゃねぇか……！`[@][lv 0*"10"*"40100923"]`　どうして俺が、勝たなくちゃならないか…！`[@][lv 0*"10"*"40100924"]`　そして俺が、…絶対に勝って、お前のところに帰ってやらなくちゃ、って……！！」`[\]
+lss s0_24,"but","b22_sakebu2" ;1
+flush 10,167
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+*d30606
+d [lv 0*"10"*"40100925"]`「俺は、………何をこんなところでぼんやりと遊んでいたんだ……！！`[@][lv 0*"10"*"40100926"]`　あぁ、もうこんなところで遊んでなんかいないぞ…！！`[@][lv 0*"10"*"40100927"]`　帰るからな、帰るからな！！`[@][lv 0*"10"*"40100928"]`　お土産持って、きっと帰るからなッ、約束する……！！！」`[\]
+msgwnd_enj
+*d30607
+d [lv 0*"11"*"42002015"]`「………いらないから、`[|][lv 0*"11"*"42002016"]`…………ひとつだけ約束して……」`[\]
+lss s0_24,"but","b22_naku1" ;1
+flush 10,167
+msgwnd_but
+*d30608
+d [lv 0*"10"*"40100929"]`「何だよ、何でも約束する…ッ！！」`[\]
+msgwnd_enj
+*d30609
+d [lv 0*"11"*"42002017"]`「……この手を、今から離すね……。`[@][lv 0*"11"*"42002018"]`痛かったでしょ……？`[@][lv 0*"11"*"42002019"]`　ぎゅっとしてて、`[|][lv 0*"11"*"42002020"]`………ごめんね………」`[\]
+*d30610
+d [lv 0*"11"*"42002021"]`「………私は大丈夫だから、`[|][lv 0*"11"*"42002022"]`……振り返らなくていいから…。`[@][lv 0*"11"*"42002023"]`………だから最後にお兄ちゃんの、`[|][lv 0*"11"*"42002024"]`……一番かっこいいところを、`[|][lv 0*"11"*"42002025"]`…見せて……。`[@][lv 0*"11"*"42002026"]`……席を立って、`[|][lv 0*"11"*"42002027"]`……目の前の魔女を指差して、`[|][lv 0*"11"*"42002028"]`……ゲームの再開を宣言して………」`[\]
+textoff
+waits 167
+wait 1000
+msgwnd_non
+*d30611
+d `縁寿の手が、……するりと、`[!w583]`………後へ消える。`[\]
+*d30612
+d `そこには、彼女の爪から滲んでいた血の指の跡がくっきりと残されていた…。`[\]
+*d30613
+d `しかし俺はすぐに振り返る。`[@]`{n}縁寿の怪我を手当てするために…！`[\]
+textoff
+waits 167
+csp_slot s0_24
+flush 10,167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+lss s0_10,"enj","b21_naku2" ;1
+aspt2 xpos,s0_10,370
+flush 64
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+msgwnd_but
+*d30614
+d [lv 0*"10"*"40100930"]`「縁寿ええぇえぇッ、`[|][lv 0*"10"*"40100931"]`ぇぇぇ…ぇ………、`[|][lv 0*"10"*"40100932"]`……………………。`[@][lv 0*"10"*"40100933"]`……縁寿…？」`[\]
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"lam","a12_futeki3" ;1
+flush 22
+msgwnd_lam
+*d30615
+d [lv 0*"29"*"42200232"]`「あ〜あ、振り向いちゃ駄目って、約束したのにィ…」`[\]
+lss s0_10,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_but
+*d30616
+d [lv 0*"10"*"40100934"]`「……え、……縁寿………。`[@][lv 0*"10"*"40100935"]`ぁ、ぅ、…ど、どこへ……、」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 42
+msgwnd_non
+*d30617
+d `俺の椅子の後には、`[@]`………まるで、……血の詰まった西瓜をまとめて十個くらいを、`[!w333]`……叩き潰したような、`[!w333]`……ぐちゃぐちゃぼきゅぶぎゃの、`[!w417]`……山があった…。`[\]
+*d30618
+d `そしてその血と挽き肉の山の周りに、`[!w500]`……縁寿の着ていた服や靴が、`[@]`……脱ぎ捨てたようにぐしゃぐしゃに潰れていた…。`[\]
+*d30619
+d `……まるで、人間の中身だけを、磨り潰して捨てたかのように。`[\]
+*d30620
+d `……ついさっきまでそこに立っていた縁寿をそのままに、潰してしまったかのように………。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"ber","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"lam","a11_futeki3" ;1
+flush 26
+lss s0_10,"but","b11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_but
+*d30621
+d2 [lv 0*"10"*"40100936"]`「縁寿……？`[@][#][*][lv 0*"10"*"40100937"]`　え、……縁寿はどこだよ……？`[@][lv 0*"10"*"40100938"]`　縁寿はどこに消えたんだよ……？`[@][#][*][lv 0*"10"*"40100939"]`　お、おい！`[#][*][@][lv 0*"10"*"40100940"]`　縁寿はどこに消えたんだよ？！」`[\]
+wait_on_d 0
+lss s0_10,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d 1
+lss s0_10,"but","a21_sakebu1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d 2
+seplay 1,12,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_8,"ber","a11_defo2" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"lam","a11_akuwarai3" ;1
+flush 10,167
+msgwnd_non
+*d30622
+d `幼そうな二人の魔女は何も言わず、ただ無言で、`[@]`………その血と肉と服の山を見ている。`[\]
+*d30623
+d `でも、……俺は認めたくない。`[@]`{n}……絶対に認めたくないッ！！！`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+flush 23
+lss s0_9,"bea","a11_nayamu1" ;1
+flush 10,167
+bgmplay 24,71,0
+msgwnd_bea
+*d30624
+d2 [lv 0*"27"*"40700993"]`「………………妾は、そなたの正面で。`[@][lv 0*"27"*"40700994"]`………ずっと見ていた。`[@][#][*][lv 0*"27"*"40700995"]`そなたの後で、縁寿が、………どうなっていくかを」`[\]
+wait_on_d 0
+lss s0_9,"bea","a11_majime1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_9
+flush 10,167
+lss s0_10,"bea","a11_fukigen3" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"but","b22_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_but
+*d30625
+d [lv 0*"10"*"40100941"]`「……お、……お前は知ってるのか……？`[@][lv 0*"10"*"40100942"]`　………縁寿は、…どこへ行ったんだ………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+msgwnd_bea
+*d30626
+d [lv 0*"27"*"40700996"]`「………生きながら。`[@][lv 0*"27"*"40700997"]`焼けたでっかいペンチで、ひと摘み、ひと摘み、`[|][lv 0*"27"*"40700998"]`……親指大の大きさに、全身の肉を引き千切って、`[|][lv 0*"27"*"40700999"]`……捨てていくんだよ」`[\]
+*d30627
+d [lv 0*"27"*"40701000"]`「………妾は見ていた。`[@][lv 0*"27"*"40701001"]`魔女の窯で真っ赤に焼かれた無数の残忍な工具が、縁寿を後から、`[@][lv 0*"27"*"40701002"]`ひと摘みひと摘み、……肉を啄ばみ、捻り、引き千切り、……細切れにするのを見ていた」`[\]
+textoff
+waits 167
+lss s0_9,"enj","a22_naku2" ;1
+flush 10,167
+seplay 1,1006,100
+seplay 2,36,100
+seplay 3,37,100
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"red_b"
+flush 18,3000,":c;graphics\system\fade\blood.png"
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+textoff
+waits 167
+lbg s0_3,"blood_2e"
+flush 1
+*d30628
+d [lv 0*"27"*"40701003"]`「…………縁寿は誇っていい。`[@][lv 0*"27"*"40701004"]`兄と最後の言葉を交わすために、`[|][lv 0*"27"*"40701005"]`……その苦痛の喘ぎを、最後まで堪えたことを、`[|][lv 0*"27"*"40701006"]`……誇っていい」`[\]
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 22
+meplay 1,16,50
+msgwnd_non
+*d30629
+d `……そんな、馬鹿なことがあっていいものか……。`[\]
+*d30630
+d `でも、……その肉と服の山の上に、`[!w417]`……ちょこんと転がるのは、`[!w583]`…………間違いなく、あいつが頭に付けていた、ピンクの珠の…髪飾りだ。`[\]
+*d30631
+d `正直、彼女にはちょっと子どもっぽ過ぎてあまりに似合ってないなと思っていた…。`[\]
+*d30632
+d `……だからよく覚えてる。`[\]
+*d30633
+d `……………縁寿は何だって、こんな安っぽい髪飾りをずっと……？`[\]
+*d30634
+d `じゃなくてじゃなくて、`[@]`……これが縁寿だなんて、`[!w500]`……そんな、`[!w417]`……、う、うぅうううぅぅ…！`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"ber","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d30635
+d [lv 0*"28"*"42100136"]`「…………………ベアトも正直ね」`[\]
+lss s0_8,"lam","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_lam
+*d30636
+d [lv 0*"29"*"42200233"]`「戦人には見えてなかったんだから、`[@][lv 0*"29"*"42200234"]`蝶々になって飛んでいったとか言って、誤魔化しちゃえばいいのに」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+meplay 2,5,70
+msgwnd_but
+*d30637
+d [lv 0*"10"*"40100943"]`「……お、`[|][lv 0*"10"*"40100944"]`…お前らも、`[|][lv 0*"10"*"40100945"]`………そ、……それを、`[|][lv 0*"10"*"40100946"]`………見ていたのか……？」`[\]
+*d30638
+d [lv 0*"10"*"40100947"]`「え、`[|][lv 0*"10"*"40100948"]`……縁寿が、`[|][lv 0*"10"*"40100949"]`……ばらばらに引き千切られていくところを、`[|][lv 0*"10"*"40100950"]`………見ていたのかよ…？」`[\]
+*d30639
+d [lv 0*"10"*"40100951"]`「見てて。`[@][lv 0*"10"*"40100952"]`………そんな、`[|][lv 0*"10"*"40100953"]`……平然とした顔を、`[|][lv 0*"10"*"40100954"]`……してたのかよ………？！」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_non
+*d30640
+d `ベルンカステルもラムダデルタも、`[@]`そしてベアトリーチェも、何も答えず、じっと俺を、`[@]`……ある者は憐れみ、…ある者は嘲笑うように、……見ている………。`[\]
+*d30641
+d `今までは、……グレーテルと名乗ってたから、`[@]`前回のワルギリアのこともあって、ひょっとするとベアトの手先かもしれないと思って、`[@]`味方ではあっても心を許さないように気をつけていた…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d30642
+d `そして、`[!w500]`…………実は縁寿だったとわかったら、`[!w417]`……その顔を見ることが許されなくて、`[\]
+seplay 1,36,71
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 1
+textoff
+waits 167
+lbg s0_3,"blood_1ar"
+flush 22
+*d30643
+d `………振り返ったら、`[!w417]`……こんな、`[!w417]`………こと、`[!w500]`………なんて、`[!w667]`…………ぅううぅおおぉ………！`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"bea","a11_fuman1" ;1
+flush 26
+lss s0_9,"bea","a11_fuman3" ;1
+flush 10,167
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+msgwnd_bea
+*d30644
+d [lv 0*"27"*"40701007"]`「良いではないか。`[@][lv 0*"27"*"40701008"]`………妹のことなど」`[\]
+msgwnd_but
+*d30645
+d [lv 0*"10"*"40100955"]`「……な、……んだと…………」`[\]
+lss s0_9,"bea","a11_majime2" ;1
+flush 10,167
+msgwnd_bea
+*d30646
+d2 [lv 0*"27"*"40701009"]`「どうせそなたは、永遠にここから帰れなどせぬわ。`[@][#][*][lv 0*"27"*"40701010"]`………そなたが帰らぬ世界の妹など、どうなろうが知ったことではなかろうが」`[\]
+wait_on_d 0
+lss s0_9,"bea","a31_akuwarai5" ;1
+flush 10,167
+seplay 1,37,100
+d_continue
+wait_on_d -1
+*d30647
+d [lv 0*"27"*"40701011"]`「そなたがここで遊んでいる限り、無数の世界の縁寿が孤独となり、`[@][lv 0*"27"*"40701012"]`今の最期と同じ苦痛を、十年以上にもかけて薄めて、強いられる」`[\]
+lss s0_9,"bea","a21_akuwarai2" ;1
+flush 10,167
+*d30648
+d [lv 0*"27"*"40701013"]`「………だが、そんなことはどうでもいいことではないか。`[@][lv 0*"27"*"40701014"]`ここにいるそなたには視えない。`[@][lv 0*"27"*"40701015"]`観測できない。`[@][lv 0*"27"*"40701016"]`観測できない真実は、赤き真実を用いねば立証できない」`[\]
+lss s0_9,"bea","a11_akuwarai4" ;1
+flush 10,167
+*d30649
+d2 [lv 0*"27"*"40701017"]`「だから、縁寿のその後の不幸は、そなたの杞憂かも知れない。`[@][lv 0*"27"*"40701018"]`…………案外、留弗夫の遺産で、のんびりと生涯働かずに暮らせてたりしてなぁ？`[@][#][*][lv 0*"27"*"40701019"]`　くっくっくくくくくくく…！」`[\]
+wait_on_d 0
+seplay 1,37,100
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+meplay 1,17,70
+msgwnd_non
+*d30650
+d `……それは、`[@]`…嘘だ。`[\]
+*d30651
+d `縁寿の腕から、その後の全ての悲しい世界が俺に、あの一瞬で流れ込んできたから。`[\]
+*d30652
+d `俺が、`[!w500]`………こんなところで、`[!w417]`………いつまでもぼんやりと、`[!w583]`………遊んでいるから………！！`[\]
+*d30653
+d `……俺は、`[@]`俺一人のことしか考えてなかった……。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 1,1006,100
+seplay 2,2,100
+seplay 3,57,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 2
+meplay 1,5,50
+*d30654
+d `こいつを倒し！`[@]`　家族を取り返して、`[@]`……俺は留守をしている、縁寿のところへ、………一秒でも早く帰らなければ………！`[\]
+*d30655
+d `こうして魔女に付き合っている間にも、`[@]`縁寿の心は、悲しみで細切れにされ続けているのだから…！！`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+bgmplay 107,85,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","b11_kuyasigaru1" ;1
+flush 26
+lss s0_9,"but","b11_nayamu1" ;1
+flush 10,167
+msgwnd_but
+*d30656
+d [lv 0*"10"*"40100956"]`「…………縁寿、……お前が見たかったのは、`[|][lv 0*"10"*"40100957"]`………これだよな……？」`[\]
+msgwnd_non
+*d30657
+d `俺は、……縁寿の無残な最期を淡々と語った、その残忍なる魔女をゆっくりと、`[@][!w417]`……だけれども、`[!w417]`……渾身の力で、`[!w500]`……指差す……。`[\]
+csp_slot s0_9
+lss s0_9,"but","b25_majime4" ;1
+flush 10,167
+msgwnd_but
+*d30658
+d [lv 0*"10"*"40100958"]`「………ベアトリーチェ……」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d30659
+d [lv 0*"27"*"40701020"]`「うむ」`[\]
+lss s0_10,"but","b11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_but
+*d30660
+d2 [lv 0*"10"*"40100959"]`「…………ゲームの、再開だ。`[@][#][*][lv 0*"10"*"40100960"]`………もう俺は逃げねぇし、……お前も逃がさない」`[\]
+wait_on_d 0
+lss s0_10,"but","b25_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lss s0_8,"bea","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+wait 1000
+lss s0_8,"bea","a21_akuwarai5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+seplay 1,2,100
+msgwnd_bea
+*d30661
+d2 [lv 0*"27"*"40701021"]`「望むところよ。`[@][lv 0*"27"*"40701022"]`妾はもはや、逃げも隠れも出来ぬわ。`[@][lv 0*"27"*"40701023"]`………妾とそなたの決着を、確実につけようぞ。`[@][#][*][lv 0*"27"*"40701024"]`………どちらかが勝つ。`[@][lv 0*"27"*"40701025"]`どちらかが敗れて、滅ぶ。`[@][lv 0*"27"*"40701026"]`それ以外の結末は、存在しない」`[\]
+wait_on_d 0
+lss s0_8,"bea","a11_akuwarai3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"but","b25_kuyasigaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_but
+*d30662
+d2 [lv 0*"10"*"40100961"]`「………俺は勝つ。`[@][lv 0*"10"*"40100962"]`どれほどの時間を掛けようとも、絶対にお前を打ち破る…！！`[@][#][*][lv 0*"10"*"40100963"]`　この勝負にもう妥協も中断も不戦敗もないッ！！`[@][lv 0*"10"*"40100964"]`　俺は逃げない！`[@][lv 0*"10"*"40100965"]`　逃がさない！！」`[\]
+wait_on_d 0
+lss s0_10,"but","b25_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"but","b25_sakebu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30663
+d [lv 0*"10"*"40100966"]`「俺を本気で倒しに来いよ…！！`[@][lv 0*"10"*"40100967"]`　下らない騙しも誤魔化しも、おかしな交流も馴れ合いも一切必要ないッ！！`[@][lv 0*"10"*"40100968"]`　お前と俺は敵同士…！！！`[@][lv 0*"10"*"40100969"]`　一秒でも早く決着をつけて、………俺は縁寿のところへ家族を連れ帰らなきゃならないッ！！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+flush 22
+set_window_simple 80
+msgwnd_bea
+*d30664
+d [lv 0*"27"*"40701027"]`……揺るぎ無き決意。`[@][lv 0*"27"*"40701028"]`…絶対の意思。`[\]
+*d30665
+d [lv 0*"27"*"40701029"]`ニンゲンの絶対なる意思は絶対の魔力となる。`[@]`{n}`[|][lv 0*"27"*"40701030"]`……それは奇跡に通じ、それを約束する。`[\]
+*d30666
+d [lv 0*"27"*"40701031"]`そう、これは、約束された、{i:絶対の奇跡}。`[\]
+*d30667
+d [lv 0*"27"*"40701032"]`………………妾の勝ちは百億にひとつも、{n}`[|][lv 0*"27"*"40701033"]`いや………、{i:ひとカケラの奇跡も絶対になく}、{n}`[|][lv 0*"27"*"40701034"]`ありえぬということか。`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"black"
+flush 26
+seplay 1,32,71
+set_window_simple 80
+msgwnd_bea
+*d30668
+d [lv 0*"27"*"40701035"]`妾の足にはいつの間にか、音もなく、もう片方の足にも冷たく頑丈な鎖が絡みつき、`[@][lv 0*"27"*"40701036"]`この椅子に縛り付けている…。`[\]
+*d30669
+d [lv 0*"27"*"40701037"]`…………妾に残されたる運命は、戦人に殺され敗北することか、`[@][lv 0*"27"*"40701038"]`それを拒み、永遠に引き分けを繰り返すことのみ。`[\]
+*d30670
+d [lv 0*"27"*"40701039"]`……いや、殺されるための心の整理がつくまで、引き分けを繰り返すの間違いか。`[\]
+*d30671
+d [lv 0*"27"*"40701040"]`いずれにせよ、妾は。`[@]`{n}`[|][lv 0*"27"*"40701041"]`………敗れるためだけに、戦わねばならぬ。`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+set_window_simple 80
+msgwnd_bea
+*d30672
+d [lv 0*"27"*"40701042"]`もう永遠の鎖は妾を縛り付けた。`[@]`{n}`[|][lv 0*"27"*"40701043"]`そして戦人もまた、妾を逃さない。`[\]
+*d30673
+d [lv 0*"27"*"40701044"]`……みっともなく許しを乞うか…？`[@]`{n}`[|][lv 0*"27"*"40701045"]`同情を乞うために、憐れみの心に訴えかけるか…？`[\]
+*d30674
+d [lv 0*"27"*"40701046"]`形振り構わず土下座して？`[\]
+seplay 1,32,71
+*d30675
+d [lv 0*"27"*"40701047"]`鎖のせいでそれも叶わぬわ。`[@]`{n}`[|][lv 0*"27"*"40701048"]`……チェックメイト。`[\]
+*d30676
+d [lv 0*"27"*"40701049"]`これは完全なる詰めだ。`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+set_window_simple 80
+msgwnd_bea
+*d30677
+d [lv 0*"27"*"40701050"]`……………………………だが。`[\]
+set_name_window_non
+seplay 1,2,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+meplay 1,5,70
+textoff
+waits 167
+lbg s0_3,"portrait2"
+flush 22
+set_window_simple 80
+msgwnd_bea
+*d30678
+d [lv 0*"27"*"40701051"]`妾は、黄金の魔女、ベアトリーチェ。`[\]
+*d30679
+d [lv 0*"27"*"40701052"]`黄金郷に君臨したる黄金の魔王。`[@]`{n}`[|][lv 0*"27"*"40701053"]`敗れるための戦いであっても、妾には相応しき態度がある。`[@]`{n}`[|][lv 0*"27"*"40701054"]`そして、妾には、妾に相応しき散り際を飾る権利がある。`[\]
+set_name_window_non
+seplay 3,27,50
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"portrait2"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,4000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+lss s0_9,"bea","a11_majime1" ;1
+flush 10,167
+msgwnd_bea
+*d30680
+d [lv 0*"27"*"40701055"]`「………妾とて同じよ。`[@][lv 0*"27"*"40701056"]`そなたに我が魔法を、存在を認めさせてこの島に黄金郷の扉を開く。`[@][lv 0*"27"*"40701057"]`そなたはその最初の茶会の主賓となるだろう」`[\]
+lss s0_9,"bea","a11_nayamu1" ;1
+flush 10,167
+*d30681
+d2 [lv 0*"27"*"40701058"]`「そなた以外は全員がすでに揃っているぞ？`[@][lv 0*"27"*"40701059"]`　主賓の到着が遅れているから、いつまでも茶会が開けない。`[@][#][*][lv 0*"27"*"40701060"]`そなたの父親も、母親も、いとこたちもみんなみんな、お前の到着を待ちくたびれているぞ」`[\]
+wait_on_d 0
+lss s0_9,"bea","a11_majime4" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+seplay 1,20,71
+csp_slot s0_9
+flush 10,167
+lss s0_10,"bea","a11_majime4" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"but","a21_sakebu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+seplay 2,2,100
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_but
+*d30682
+d [lv 0*"10"*"40100970"]`「あぁッ、上等だぜ、まったくにもって上等だッ！！`[@][lv 0*"10"*"40100971"]`　何が魔法だ、何が魔女だ…！！`[@][lv 0*"10"*"40100972"]`　お前との遊びはこれまでだ！！`[@][lv 0*"10"*"40100973"]`　行くぞ、ベアトリーチェ…！！！」`[\]
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d30683
+d [lv 0*"27"*"40701061"]`「存分に来るがよいぞ、妥協も中断も不戦敗もない。`[@][lv 0*"27"*"40701062"]`どちらかが勝ち、どちらかが滅ぶ」`[\]
+lss s0_10,"bea","a11_majime4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30684
+d [lv 0*"27"*"40701063"]`「お前に負ける意思がないというなら、妾を倒すしかない、殺すしかない。`[@][lv 0*"27"*"40701064"]`しかし、妾もむざむざと殺されはしない。`[@][lv 0*"27"*"40701065"]`妾に相応しき最期をそなたが用意できるまで、抵抗を繰り返すことが出来る」`[\]
+meplay 2,17,70
+lss s0_10,"bea","a11_fuman3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30685
+d2 [lv 0*"27"*"40701066"]`「そなたにそれが出来るか？`[@][lv 0*"27"*"40701067"]`　……いや、出来るだろう。`[@][lv 0*"27"*"40701068"]`必ず出来るさ。`[@][lv 0*"27"*"40701069"]`来いよ、殺しに。`[@][lv 0*"27"*"40701070"]`………………。`[@][#][*][lv 0*"27"*"40701071"]`…………………やりにくいか？`[@][lv 0*"27"*"40701072"]`　ならばいつもの調子で行こう。`[@][lv 0*"27"*"40701073"]`…………………」`[\]
+wait_on_d 0
+lss s0_10,"bea","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_4,"ep4last00"
+vsp2 s0_4,0
+lss s0_10,"bea","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+wait 2000
+lbg s0_5,"ep4last01"
+vsp2 s0_5,0
+lss s0_10,"bea","a31_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30686
+d2 [lv 0*"27"*"40701074"]`「ひゃっははッ！！`[#][*][@][lv 0*"27"*"40701075"]`　殺されるかよ、`[|][lv 0*"27"*"40701076"]`せめて勝てなくても、お前に勝ちを譲らない程度の嫌がらせは出来るんだぜぇえええぇ？！」`[\]
+wait_on_d 0
+seplay 1,37,100
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lbg s0_6,"ep4last02"
+vsp2 s0_6,0
+lss s0_8,"but","b22_sakebu2" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"bea","a11_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30687
+d2 [lv 0*"27"*"40701077"]`「ほぉ、いい面構えだ！`[@][#][*][lv 0*"27"*"40701078"]`　……くっくくくくっく、`[#][*][|][lv 0*"27"*"40701079"]`うっひゃっはははははははは、`[#][*][|][lv 0*"27"*"40701080"]`あーっきゃっきゃっきゃっきゃっきゃ！！」`[\]
+wait_on_d 0
+seplay 1,37,85
+d_continue
+wait_on_d 1
+seplay 2,37,100
+d_continue
+wait_on_d 2
+seplay 3,37,100
+seplay 1,1006,100
+d_continue
+wait_on_d -1
+lbg s0_7,"ep4last03"
+vsp2 s0_7,0
+lss s0_10,"bea","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d30688
+d [lv 0*"27"*"40701081"]`「殺してみろッ、`[|][lv 0*"27"*"40701082"]`殺してみろよォ、右代宮戦人ァあああああああぁあああぁああああああぁあうおおおおおおおあああああああああぁああぁぁあっぁぁあぁぁッ！！！」`[\]
+textoff
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_3
+lbg s0_8,"ep4last04"
+lbg s0_9,"ep4last05"
+lbg s0_10,"ep4last06"
+lbg s0_11,"ep4last07"
+lbg s0_12,"ep4last08"
+vsp2 s0_8,0
+vsp2 s0_9,0
+vsp2 s0_10,0
+vsp2 s0_11,0
+vsp2 s0_12,0
+vol_bgm 100
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+vsp2 s0_4,1
+flush 1
+wait 500
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+csp_slot s0_4
+vsp2 s0_5,1
+flush 1
+waits 167
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+vsp2 s0_5,0
+vsp2 s0_6,1
+flush 1
+wait 100
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+vsp2 s0_6,0
+vsp2 s0_7,1
+flush 1
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+vsp2 s0_7,0
+vsp2 s0_8,1
+flush 1
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+vsp2 s0_8,0
+vsp2 s0_9,1
+flush 1
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+vsp2 s0_9,0
+vsp2 s0_10,1
+flush 1
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+vsp2 s0_10,0
+vsp2 s0_11,1
+flush 1
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+vsp2 s0_11,0
+vsp2 s0_12,1
+flush 1
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+vsp2 s0_12,0
+vsp2 s0_5,1
+flush 1
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+csp_slot s0_5
+vsp2 s0_6,1
+flush 1
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+csp_slot s0_6
+vsp2 s0_7,1
+flush 1
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+csp_slot s0_7
+vsp2 s0_8,1
+flush 1
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+csp_slot s0_8
+vsp2 s0_9,1
+flush 1
+seplay 1,46,90
+seplay 3,36,90
+textoff
+waits 167
+csp_slot s0_9
+vsp2 s0_10,1
+flush 1
+seplay 1,46,90
+seplay 2,36,90
+textoff
+waits 167
+csp_slot s0_10
+vsp2 s0_11,1
+flush 1
+vol_bgm 90
+seplay 1,27,100
+seplay 2,2,100
+seplay 3,36,100
+textoff
+waits 167
+csp_slot s0_11
+vsp2 s0_12,1
+flush 1
+textoff
+waits 167
+csp_slot s0_12
+lbg s0_3,"end_2d"
+flush 18,4000,msk_1
+wait 6000
+meplay 1,12,50
+textoff
+waits 167
+lbg s0_3,"black"
+flush 18,12000,msk_1
+vol_bgm -1,6000
+wait 3000
+ch_done flag_scenario_4_19
+*umi4_end
+goto *end_game

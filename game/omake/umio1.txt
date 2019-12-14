@@ -1,0 +1,229 @@
+*o1_0
+bgmplay 89,71,0
+wait 2000
+seplay 1,27,71
+lbg s0_3,"black"
+flush 22
+msgwnd_jes
+*o1_1
+d [lv 0*"04"*"10200442"]`"KyaaaaaAAAAAAaaaaaAAaa!!!"`[\]
+msgwnd_non
+*o1_2
+d `Jessica's piercing shriek rang out.`[\]
+*o1_3
+d `...But that was just because Jessica's scream was the loudest.`[@]` ...The same thing spilled out of Battler and George's mouths as well...`[\]
+meplay 1,13,40
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"warehous_o2a"
+lss s0_10,"nat","a35_odoroki2" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"eva","a11_ikari2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+*o1_4
+d `Eva, just like Natsuhi, spread her arms, and with a terrible expression roared at the kids.`[\]
+lss s0_8,"eva","b23_ikari2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eva
+*o1_5
+d [lv 0*"05"*"11000358"]`"George, take everyone and return to the mansion!!!`[@][lv 0*"05"*"11000359"]` Quickly!!`[@][lv 0*"05"*"11000360"]` Right now!!"`[\]
+msgwnd_non
+*o1_6
+d `When Natsuhi had spread her arms, I had thought that she was trying to prevent us from advancing any further.`[\]
+*o1_7
+d `...However, right now, that wasn't why Eva was spreading her arms.`[\]
+*o1_8
+d `.........Because her right arm is obviously doing something behind her back...`[\]
+*o1_9
+d `What is she hiding there?!`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 1
+meplay 2,5,71
+msgwnd_but
+*o1_10
+d [lv 0*"10"*"10100727"]`"......Is this some kind of joke? Is it...?!"`[\]
+wait2 200
+msgwnd_non
+*o1_11
+d `{p:1:Yes}.`[\]
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 22
+meplay 3,17,71
+msgwnd_non
+*o1_12
+d `...I had seen this kind of cheap scene all too often.`[@]`{n}In manga, TV, anime, movies,`[!w300]` and visual novels about crickets that won't be released for 20 years, I had seen it over and over again...`[\]
+*o1_13
+d `This was just, just seeing something appear in real life that I had seen plenty of times before in some of those more sensational movies, wasn't it...?!!`[\]
+*o1_14
+d `That alone shouldn't...`[!w417]` Aaaaah,`[!w500]` but that, that suit,`[!w333]` ...it's that old bastard's, isn't it...?`[@]` I get it, then that's Uncle Krauss...`[@]` And Kyrie‐san, and Auntie Rosa, uwooOOOOOOoooooOOo!!!`[\]
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"warehous_o2a"
+lss s0_8,"nat","a34_odoroki2" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"jes","a11_ikari1" ;1
+aspt2 xpos,s0_10,550
+flush 64
+msgwnd_jes
+*o1_15
+d [lv 0*"04"*"10200443"]`"Dad, DAD!!!"`[\]
+csp_slot s0_8
+flush 10,167
+lss s0_9,"nat","a32_odoroki2" ;1
+flush 10,167
+msgwnd_nat
+*o1_16
+d2 [lv 0*"03"*"10900263"]`"You mustn't, Jessica!!`[@][lv 0*"03"*"10900264"]` You mustn't go in!!`[@][lv 0*"03"*"10900265"]` You mustn't look!!!`[@][#][*]` Especially Gohda, he's REALLY ****'d up."`[\]
+wait_on_d 0
+lss s0_9,"nat","a32_hisu1"
+cell2 s0_9_b,2
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_jes
+*o1_17
+d2 [lv 0*"04"*"10200444"]`"Dad, Dad!!`[@][#][*][lv 0*"04"*"10200445"]` HyyaaaaaAAAAAAa!!!"`[\]
+wait_on_d 0
+seplay 1,27,71
+csp_slot s0_11
+csp_slot s0_7
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 1
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"warehous_i1a_bg"
+lbg s0_3,"warehous_i1a"
+lss s0_9,"nan","a1_komaru2" ;1
+flush 26
+msgwnd_nan
+;[lv 0*"19"*"11900114"] removed
+*o1_18
+d [lv 0*"19"*"11900111"]`".........Rigor mortis has set in across the entire body...`[@][lv 0*"19"*"11900112"]` ......Probably,`[|][lv 0*"19"*"11900113"]` at least six hours have passed since death...`[@]` As far as I can tell by looking at the damaged area, there is a high probability that they were murdered by half-naked demon girls..."`[\]
+csp_slot s0_9
+flush 10,167
+lss s0_10,"nan","a1_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+;[lv 0*"19"*"11900115"] and [lv 0*"19"*"11900116"] removed 
+*o1_19
+d `"......No, I must watch what I say...!`[@]` I'm a fat old man, and girls are outside my area of expertise...!"`[\]
+lss s0_8,"hid","a11_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_hid
+*o1_20
+d2 `"......I'm hungry."`[#][*][\]
+wait_on_d 0
+seplay 1,11,71
+agpt quakeymul,3
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+seplay 1,11,71
+agpt quakeymul,3
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*o1_21
+d `Aunt Natsuhi caught Jessica in her arms and Auntie Eva caught George‐aniki,`[@]` ......so I was the only one who could approach the entrance to the storehouse.`[\]
+*o1_22
+d `............Aah,`[!w500]` ...if only there had been someone here to catch me too,`[@]` ......I wouldn't have needed to have this horrible, evil scene burned into my eyes...`[\]
+textoff
+waits 167
+lbg s0_1,"warehous_i1a_bg"
+lbg s0_3,"warehous_i1a"
+flush 2
+*o1_23
+d `......No, that's not it.`[\]
+*o1_24
+d `...I'm standing here, not because the people who would catch me aren't here...`[@]` {i:but because the people who would catch me are all sticky and gross, aren't they!!}`[\]
+*o1_25
+d `...Just as Jessica had said, it did look like a storehouse used to keep gardening tools and corpses and stuff.`[\]
+textoff
+waits 167
+lbg s0_1,"warehous_i1c_bg"
+lbg s0_3,"warehous_i1c"
+flush 22
+*o1_26
+d `A lawn mower with extra blades,`[@]` a grass sickle and a hammer,`[@]` a saw and Houjou Teppei's left arm...`[@]` Piled up potted plants and bags of that shit you feed plants with.`[\]
+*o1_27
+d `And treated just the same, the corpses of several people had been laid to rest there.`[@]` No, had been thrown in there!`[\]
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 2
+*o1_28
+d `I could tell them by their clothes.`[\]
+*o1_29
+d2 `......That old bastard and Kyrie‐san.`[@]` ...Uncle Krauss and Auntie Rosa.`[@]` ......Further back, ...Gohda‐san and...`[#][*][@]`there's still more of them?`[@]` How many people died...`[@]` ......Fucking hell, I can't even count them on one hand, god fucking dammit!!!!!!!`[#][*][\]
+wait_on_d 0
+;seplay 9,1061,100
+;gstc 18
+d_continue
+wait_on_d 1
+seplay 1,11,71
+agpt quakeymul,4
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_8,"but","b11_komaru2"
+aspt2 xpos,s0_8,-370
+flush 10,167
+*o1_30
+d `...Although Grandfather could do it with his feet, right?`[@]` Damn him...`[\]
+csp_slot s0_8
+flush 10,167
+*o1_31
+d `I didn't know whether it had been one of these gardening tools, which if used for something other than their intended purpose could definitely be wielded with a naked brutality,`[@]` ......wait, that just sounds wrong...`[\]
+*o1_32
+d `Better not let Beato hear me say stuff like that.`[\]
+textoff
+goto *o1_end

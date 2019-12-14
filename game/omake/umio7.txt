@@ -1,0 +1,480 @@
+*omake_chiru_menu
+*omakeeee
+textoff
+;waits 167
+lbg s0_3,"black"
+flush 50
+textoff
+meplay 1,12,40
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+if $omake_return == "trailer" mov $omake_return,"" : bgmplay 8,71,0 : goto *omakeeee_m1f_p1br
+if $omake_return == "omake" mov $omake_return,"" : bgmplay 8,71,0 : goto *omakeeee_ment_1br
+if $omake_return == "omake8" mov $omake_return,"" : bgmplay 8,71,0 : goto *omakeeee_m1f_p1br
+seplay 1,17,71
+waits 167
+lbg s0_1,"mhal_2ar_bg"
+lbg s0_3,"mhal_2ar"
+flush 50
+wait 1000
+bgmplay 8,71,0
+
+*omakeeee_mhal_2ar
+waits 167
+lbg s0_1,"mhal_2ar_bg"
+lbg s0_3,"mhal_2ar"
+flush 24
+;lsp 110,":a/10,80,2;graphics\system\wnd\cursor1.png",500,690
+*omakeeee_mhal_2ar_loop
+;btndef ""
+btndef ":a;graphics\omake\mhal_2ar_omake.png"
+transbtn
+btn 101,1250,512,567,370,1250,512 ;up
+btn 102,0,0,108,1080,0,0 ;left
+btn 103,1819,0,108,1080,1820,0 ;right
+btn 104,485,676,476,266,485,675 ;sofa
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee_mhal_2ar_up
+if %BtnRes == 102 goto *omakeeee_mhal_2ar_left
+if %BtnRes == 103 goto *omakeeee_mhal_2ar_right
+if %BtnRes == 104 goto *omakeeee_mhal_2ar_sofa
+goto *omakeeee_mhal_2ar_loop
+*omakeeee_mhal_2ar_sofa
+msgwnd_non
+d `Пожалуй, стоит немного отдохнуть...`[\]
+textoff
+seplay 1,18,71
+csp_slot s0_1
+csp_slot s0_3
+lbg s0_3,"black"
+vol_bgm -1,3000
+vol_me 1,-1,3000
+flush 11
+wait 3000
+E_A
+goto *quick_reload
+
+*omakeeee_mhal_2br
+*omakeeee_mhal_2ar_up
+waits 167
+lbg s0_1,"mhal_2br_bg"
+lbg s0_3,"mhal_2br"
+flush 24
+*omakeeee_mhal_2br_loop
+btndef ":a;graphics\omake\mhal_2br_omake.png"
+btn 101,0,975,1920,105,0,975 ;down
+btn 102,0,0,926,880,0,0 ;up
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee_mhal_2br_down
+if %BtnRes == 102 goto *omakeeee_mhal_2br_up
+goto *omakeeee_mhal_2br_loop
+
+*omakeeee_mhal_2br_down
+goto *omakeeee_mhal_2ar
+
+*omakeeee_mhal_2br_up
+btndef ""
+repaint
+spt2 xpos,s0_1,-163,1000
+spt2 xpos,s0_3,-163,1000
+spt2 ypos,s0_1,143,2000
+spt2 ypos,s0_3,143,2000
+spt2 xpos,s0_1,163,1000
+spt2 xpos,s0_3,163,1000
+sptwait2 xpos,s0_3
+msgwnd_non
+d `Интересно, когда же тайфун закончится...`[\]
+spt2 xpos,s0_1,-163,1000
+spt2 xpos,s0_3,-163,1000
+spt2 ypos,s0_1,-143,2000
+spt2 ypos,s0_3,-143,2000
+spt2 xpos,s0_1,163,1000
+spt2 xpos,s0_3,163,1000
+d `Второй этаж недоступен.`[\]
+sptwait2 xpos,s0_3
+textoff
+goto *omakeeee_mhal_2br_loop
+
+*omakeeee_ment_1br
+*omakeeee_mhal_2ar_right
+waits 167
+lbg s0_1,"ment_1br_bg"
+lbg s0_3,"ment_1br"
+flush 24
+*omakeeee_ment_1br_loop
+btndef ":a;graphics\omake\ment_1br_omake.png"
+btn 101,788,404,42,314,788,404 ;up_left
+btn 102,0,975,1920,105,0,975 ;down
+btn 103,845,513,87,170,0,0 ;trailer_chiru
+btn 104,1270,320,69,674,0,0 ;1_door
+btn 105,1138,417,34,412,0,0 ;2_door
+btn 106,1085,452,20,314,0,0 ;3_door
+btn 107,1065,466,10,272,0,0 ;4_door
+btn 108,1046,478,14,245,0,0 ;5_door
+btn 109,1025,494,15,209,0,0 ;6_door
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee_ment_1br_up_left
+if %BtnRes == 102 goto *omakeeee_ment_1br_down
+if %BtnRes == 103 goto *omakeeee_ment_1br_bunnies
+if %BtnRes == 104 goto *omakeeee_ment_1br_1_door
+if %BtnRes == 105 goto *omakeeee_ment_1br_2_door
+if %BtnRes == 106 goto *omakeeee_ment_1br_3_door
+if %BtnRes == 107 goto *omakeeee_ment_1br_4_door
+if %BtnRes == 108 goto *omakeeee_ment_1br_5_door
+if %BtnRes == 109 goto *omakeeee_ment_1br_6_door
+goto *omakeeee_ment_1br_loop
+*omakeeee_ment_1br_up_left
+goto *omakeeee_mhal_2ar
+
+*omakeeee_ment_1br_bunnies
+csp_slot s0_1
+lbg s0_3,"mvip_1ar"
+flush 24
+lss s0_8,"s00","a13_majime2" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"s41","a13_akuwarai2" ;1
+aspt2 xpos,s0_10,-240
+lss s0_9,"s45","a13_defo2" ;1
+aspt2 xpos,s0_9,70
+flush 10,167
+wait2 3000
+lss s0_13,"s55","a11_warai1" ;1
+aspt2 xpos,s0_13,500
+flush 10,167
+wait2 3000
+msgwnd_non
+d `Пожалуй, мне не стоит им мешать...`[\]
+textoff
+wait2 1000
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_13
+goto *omakeeee_ment_1br
+
+*omakeeee_ment_1br_1_door
+*omakeeee_ment_1br_2_door
+*omakeeee_ment_1br_3_door
+*omakeeee_ment_1br_4_door
+*omakeeee_ment_1br_5_door
+*omakeeee_ment_1br_6_door
+
+lsp s0_15,":c;graphics\colour\black.png",0,0,black_toukaritu
+
+set_window_simple 1,1
+border_pad_push 5
+lsp s0_16,":s;#C7C7C7#FF0000`{a:c:{p:11:Омаке 1}}`",0,400
+lsp s0_17,":s;#C7C7C7#FF0000`{a:c:{p:11:Омаке 2}}`",0,480
+lsp s0_18,":s;#C7C7C7#FF0000`{a:c:{p:11:Омаке 3}}`",0,560
+lsp s0_19,":s;#C7C7C7#FF0000`{a:c:{p:11:Омаке 4}}`",0,640
+lsp s0_20,":s;#C7C7C7#FF0000`{a:c:{p:11:Покинуть это место}}`",0,720
+border_pad_pop
+set_name_window_non
+
+flush 24
+
+*omakeee_omake_choose_loop
+btndef ""
+spbtn s0_16,s0_16
+spbtn s0_17,s0_17
+spbtn s0_18,s0_18
+spbtn s0_19,s0_19
+spbtn s0_20,s0_20
+btnwait2 %BtnRes
+if %BtnRes = s0_16 vol_mix_fade 1000 : vol_bgm -1,1000 : wait 1000 : csp_rst : flush 24 : gosub *jump_sysdata_set1 : goto *o1
+if %BtnRes = s0_17 vol_mix_fade 1000 : vol_bgm -1,1000 : wait 1000 : csp_rst : flush 24 : gosub *jump_sysdata_set1 : goto *o2
+if %BtnRes = s0_18 vol_mix_fade 1000 : vol_bgm -1,1000 : wait 1000 : csp_rst : flush 24 : gosub *jump_sysdata_set1 : goto *o3
+if %BtnRes = s0_19 vol_mix_fade 1000 : vol_bgm -1,1000 : wait 1000 : csp_rst : flush 24 : gosub *jump_sysdata_set1 : goto *o4
+if %BtnRes = s0_20 csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : csp_slot s0_19 : csp_slot s0_20 : goto *omakeeee_ment_1br
+if %BtnRes = -1  csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : csp_slot s0_19 : csp_slot s0_20 : goto *omakeeee_ment_1br
+if %BtnRes = -10 csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : csp_slot s0_19 : csp_slot s0_20 : goto *omakeeee_ment_1br
+if %BtnRes = -51 csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : csp_slot s0_19 : csp_slot s0_20 : goto *omakeeee_ment_1br
+
+goto *omakeee_omake_choose_loop
+
+goto *omakeeee_ment_1br_loop
+
+*omakeeee_m1f_p2br
+*omakeeee_ment_1br_down
+waits 167
+lbg s0_1,"m1f_p2br_bg"
+lbg s0_3,"m1f_p2br"
+flush 24
+*omakeeee_m1f_p2br_loop
+btndef ":a;graphics\omake\m1f_p2br_omake.png"
+btn 101,780,409,62,301,780,409 ;up_left
+btn 102,0,975,1920,105,0,975 ;down
+btn 103,1284,296,78,710,0,0 ;1_door
+btn 104,1085,449,26,309,0,0 ;2_door
+btn 105,1043,481,21,233,0,0 ;3_door
+btn 106,896,496,95,189,0,0 ;4_door
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee_m1f_p2br_up_left
+if %BtnRes == 102 goto *omakeeee_m1f_p2br_down
+if %BtnRes == 103 goto *omakeeee_m1f_p2br_1_door
+if %BtnRes == 104 goto *omakeeee_m1f_p2br_2_door
+if %BtnRes == 105 goto *omakeeee_m1f_p2br_3_door
+if %BtnRes == 106 goto *omakeeee_m1f_p2br_4_door
+goto *omakeeee_m1f_p2br_loop
+*omakeeee_m1f_p2br_up_left
+goto *omakeeee_ment_1br
+*omakeeee_m1f_p2br_1_door
+
+lsp s0_15,":c;graphics\colour\black.png",0,0,black_toukaritu
+
+set_window_simple 1,1
+border_pad_push 5
+lsp s0_16,":a/2,0,3;graphics\omake\icon_newop.png",260,300
+lsp s0_17,":a/2,0,3;graphics\omake\icon_oldop.png",940,300
+lsp s0_18,":s;#C7C7C7#FF0000`{a:c:{p:11:Покинуть это место}}`",0,720
+border_pad_pop
+set_name_window_non
+
+flush 24
+
+*omakeee_op_choose_loop
+btndef ""
+spbtn s0_16,s0_16
+spbtn s0_17,s0_17
+spbtn s0_18,s0_18
+btnwait2 %BtnRes
+if %BtnRes = s0_16 mov %Free11,%legacy_op : mov %legacy_op,0 : goto *omakeee_op_choose_play
+if %BtnRes = s0_17 mov %Free11,%legacy_op : mov %legacy_op,1 : goto *omakeee_op_choose_play
+if %BtnRes = s0_18 csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : goto *omakeeee_m1f_p2br
+if %BtnRes = -1  csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : goto *omakeeee_m1f_p2br
+if %BtnRes = -10 csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : goto *omakeeee_m1f_p2br
+if %BtnRes = -51 csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : goto *omakeeee_m1f_p2br
+
+goto *omakeee_op_choose_loop
+
+*omakeee_op_choose_play
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+csp_rst
+bg black,0
+flush 2
+wait 500
+pam 100,"op",1
+meplay 1,12,40
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+waits 167
+bgmplay 8,71,0
+mov %legacy_op,%Free11
+goto *omakeeee_m1f_p2br
+
+*omakeeee_m1f_p2br_2_door
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+csp_rst
+bg black,0
+flush 2
+wait 500
+pam 100,"op4",1
+meplay 1,12,40
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+waits 167
+bgmplay 8,71,0
+goto *omakeeee_m1f_p2br
+
+*omakeeee_m1f_p2br_3_door
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+csp_rst
+bg black,0
+flush 2
+wait 500
+pam 100,"op56",1
+meplay 1,12,40
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+waits 167
+bgmplay 8,71,0
+goto *omakeeee_m1f_p2br
+
+*omakeeee_m1f_p2br_4_door
+if %UMINEKOEND < 70 jumpf
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+csp_rst
+bg black,0
+flush 2
+wait 500
+pam 100,"op78",1
+meplay 1,12,40
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+waits 167
+bgmplay 8,71,0
+~
+if %UMINEKOEND >= 70 jumpf
+seplay 1,7,71
+~
+goto *omakeeee_m1f_p2br
+
+*omakeeee_m1f_p1br
+*omakeeee_m1f_p2br_down
+waits 167
+lbg s0_1,"m1f_p1br_bg"
+lbg s0_3,"m1f_p1br"
+flush 24
+*omakeeee_m1f_p1br_loop
+btndef ":a;graphics\omake\m1f_p1br_omake.png"
+btn 101,796,406,70,320,796,406 ;up_left
+btn 102,0,975,1920,105,0,975 ;down
+btn 103,1144,404,100,478,0,0 ;double_door
+btn 104,1048,491,17,222,0,0 ;door
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee_m1f_p1br_up_left
+if %BtnRes == 102 goto *omakeeee_m1f_p1br_down
+if %BtnRes == 103 goto *omakeeee_m1f_p1br_double_door
+if %BtnRes == 104 goto *omakeeee_m1f_p1br_door
+goto *omakeeee_m1f_p1br_loop
+*omakeeee_m1f_p1br_up_left
+goto *omakeeee_m1f_p2br
+*omakeeee_m1f_p1br_double_door
+
+lsp s0_15,":c;graphics\colour\black.png",0,0,black_toukaritu
+
+lsp s0_16,":s;#FFFFFF`{p:11:Вы бы хотели насладиться трейлером Chiru?}`",0,0
+lsp s0_17,action_yes,0,0
+lsp s0_18,action_no,0,0
+align_message_l s0_16,s0_17,s0_18
+
+btndef ""
+
+spbtn s0_17,s0_17
+spbtn s0_18,s0_18
+
+*omakeeee_m1f_p1br_double_door_loop
+
+btnwait2 %btnRes
+
+if %btnRes = s0_17 jumpf
+if %btnRes = s0_18 csp_slot s0_15 : csp_slot s0_16 : csp_slot s0_17 : csp_slot s0_18 : goto *omakeeee_m1f_p1br
+
+goto *omakeeee_m1f_p1br_double_door_loop
+
+~
+csp_rst
+bg black,0
+vol_mix_fade 1000
+flush 2
+wait 500
+goto *chiru_trailer
+
+*omakeeee_m1f_p1br_door
+csp_rst
+bg black,0
+vol_mix_fade 1000
+flush 2
+wait 500
+goto *o8_0
+goto *omakeeee_m1f_p1br_loop
+
+*omakeeee_mhal_2cr
+if %omake_portrait < 1 || %omake_portrait > 3 mov %omake_portrait,1
+goto *omakeeee_mhal_2cr_portrait2
+*omakeeee_mhal_2cr_loop
+btndef ":a;graphics\omake\mhal_2cr_omake.png"
+btn 101,0,0,108,1080,0,0 ;left
+btn 102,1812,0,108,1080,1812,0 ;right
+btn 103,25,654,202,424,126,654 ;portrait_text
+;btn 104,0,996,1920,84,0,0 ;down
+btn 105,708,46,668,951,708,46 ;portrait
+btn 106,1463,156,263,808,1463,156 ;portrait_right
+btn 107,380,156,263,808,380,156 ;portrait_left
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee_mhal_2cr_left
+if %BtnRes == 102 goto *omakeeee_mhal_2cr_right
+if %BtnRes == 103 goto *omakeeee_mhal_2cr_portrait_text
+;if %BtnRes == 104 goto *omakeeee_mhal_2cr_down
+if %BtnRes == 105 goto *omakeeee_mhal_2cr_portrait
+if %omake_portrait >= 1 && %omake_portrait < 3 && %BtnRes == 106 inc %omake_portrait : goto *omakeeee_mhal_2cr_portrait2
+if %omake_portrait >= 3 && %BtnRes == 106 mov %omake_portrait,1 : goto *omakeeee_mhal_2cr_portrait2
+if %omake_portrait >  1 && %BtnRes == 107 dec %omake_portrait : goto *omakeeee_mhal_2cr_portrait2
+if %omake_portrait <= 1 && %BtnRes == 107 mov %omake_portrait,3 : goto *omakeeee_mhal_2cr_portrait2
+;if %BtnRes == 107 dec %omake_portrait : goto *omakeeee_mhal_2cr_portrait2
+goto *omakeeee_mhal_2cr_loop
+*omakeeee_mhal_2cr_left
+goto *omakeeee_mhal_2ar
+*omakeeee_mhal_2cr_right
+goto *omakeeee_mhal_1ar
+;*omakeeee_mhal_2cr_down
+;goto *omakeeee_mhal_1ar
+*omakeeee_mhal_2cr_portrait
+waits 167
+if %omake_portrait=1 lbg s0_16,"portrait1"
+if %omake_portrait=2 lbg s0_16,"portrait3"
+if %omake_portrait=3 lbg s0_16,"portrait4"
+flush 2
+if %omake_portrait=1 aspt2 ypos,s0_16,1200,6667,1
+goto *omakeeee_omakeeee_hibun_loop
+*omakeeee_mhal_2cr_portrait2
+waits 167
+if %omake_portrait=1 lbg s0_3,"mhal_2cr"
+if %omake_portrait=2 lbg s0_3,"mhal_2cr2"
+if %omake_portrait=3 lbg s0_3,"mhal_2cr3"
+flush 24
+goto *omakeeee_mhal_2cr_loop
+
+*omakeeee_hibun
+*omakeeee_mhal_2cr_portrait_text
+waits 167
+;wait 5000
+;lsp2 s0_16,hibun,960,540,1,1
+lsp2 s0_16,hibun,130,744,1,1
+seplay 1,1010,100
+flush 1
+aspt2 rot,s0_16,-360,400
+aspt2 scalex,s0_16,180,400
+aspt2 scaley,s0_16,180,400
+aspt2 xpos,s0_16,960,350
+aspt2 ypos,s0_16,540,350
+sptwait2 scaley,s0_16
+*omakeeee_omakeeee_hibun_loop
+btndef ""
+btn 101,0,0,1920,1080,0,0 ;click
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee_hibun_click
+if %BtnRes == -1 goto *omakeeee_hibun_click
+if %BtnRes == -10 goto *omakeeee_hibun_click
+goto *omakeeee_omakeeee_hibun_loop
+*omakeeee_hibun_click
+csp_slot s0_16
+goto *omakeeee_mhal_2cr_loop
+
+*omakeeee_mhal_1ar
+*omakeeee_m1f_p1br_down
+*omakeeee_mhal_2ar_left
+waits 167
+lbg s0_1,"mhal_1ar_bg"
+lbg s0_3,"mhal_1ar"
+flush 24
+*omakeeee_mhal_1ar_loop
+btndef ":a;graphics\omake\mhal_1ar_omake.png"
+transbtn
+btn 101,534,454,300,228,534,454 ;up_right
+btn 102,0,0,108,1080,0,0 ;left
+btn 103,0,975,1920,105,0,975 ;down
+btnwait %BtnRes
+if %BtnRes == 101 goto *omakeeee__mhal_1ar_up_right
+if %BtnRes == 102 goto *omakeeee__mhal_1ar_left
+if %BtnRes == 103 goto *omakeeee__mhal_1ar_down
+goto *omakeeee_mhal_1ar_loop
+*omakeeee__mhal_1ar_up_right
+goto *omakeeee_m1f_p1br
+*omakeeee__mhal_1ar_left
+goto *omakeeee_mhal_2cr
+*omakeeee__mhal_1ar_down
+goto *omakeeee_mhal_2ar

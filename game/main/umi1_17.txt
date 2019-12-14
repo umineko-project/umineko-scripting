@@ -1,0 +1,38 @@
+*umi1_17
+;ワインボトルのノート片
+log_reset
+mov $name_chapter_r_click,r_click_chapters_1_17
+mov $name_chapter_save, "1_17"
+new_chapter date_scenario_1_17,scenario_1_17
+skip_off
+lbg2 s0_3,"end_1a_1"
+drop_cache "end_1a_1"
+lbg2 s0_4,"end_1a_2"
+drop_cache "end_1a_2"
+lbg2 s0_5,"end_1a_3"
+drop_cache "end_1a_3"
+aspt2 ypos,s0_3,17280
+aspt2 ypos,s0_4,17280
+aspt2 ypos,s0_5,17280
+flush 1
+bgmplay 1010,100,1
+textoff
+aspt2 ypos,s0_3,540,209170 ;-10260
+aspt2 ypos,s0_4,540,209170
+aspt2 ypos,s0_5,540,209170
+sptwait2 ypos,s0_5
+aspt2 ypos,s0_5,0,10830,1
+sptwait2 ypos,s0_5
+wait 8000
+textoff
+waits 167
+lbg s0_5,"black"
+flush 18,5000,msk_1
+vol_mix_fade 4000
+vol_bgm -1,4000
+wait 4000
+wait 2000
+skip_on
+ch_done flag_scenario_1_17
+*umi1_end
+goto *end_game

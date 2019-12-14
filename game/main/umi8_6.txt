@@ -1,0 +1,4731 @@
+*umi8_6
+;クイズ大会（第一問）
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_8_6
+mov $name_chapter_save, "8_06"
+~
+new_chapter date_scenario_8_6,scenario_8_6
+if %bgm_current_id != 187 bgmplay 187,71,0
+rain_load s0_11
+rain_params s0_11,500,300,0
+z_order_override s0_11,s0_1
+gstc 86
+mov %eva_button_enabled,0
+mov %quiz_answer_count,2
+mov %pair_answers_counter,0
+mov %eva_hint_counter,0
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mondai_1"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5a1c36
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5a2e7e
+if %branch_tmp = 1 goto *uu_uu_0x5a1c5a
+*uu_uu_0x5a1c5a
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"en2","a15_defo2b" ;1
+flush 24
+msgwnd_enj
+*d58291
+d [lv 0*"11"*"82000412"]`「クリスマスの次の日はクリスマスじゃないもん。`[@][lv 0*"11"*"82000413"]`そんなの絶対ありえない」`[\]
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_kin
+*d58292
+d [lv 0*"01"*"81500195"]`「くっくっく。`[@][lv 0*"01"*"81500196"]`残念であるな、ハズレだ」`[\]
+csp_slot s0_9
+lss s0_10,"en2","a15_defo2a" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_enj
+*d58293
+d [lv 0*"11"*"82000414"]`「えー、どうして…！」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","b23_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d58294
+d [lv 0*"05"*"81000063"]`「縁寿ちゃん、一日の始まりは何時から？」`[\]
+lss s0_10,"en2","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d58295
+d [lv 0*"11"*"82000415"]`「真夜中の午前０時」`[\]
+lss s0_8,"eva","b23_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eva
+*d58296
+d [lv 0*"05"*"81000064"]`「ほら。`[@][lv 0*"05"*"81000065"]`午前０時は夜じゃない」`[\]
+lss s0_10,"en2","a11_defo3a" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d58297
+d [lv 0*"11"*"82000416"]`「……あっ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+snow s0_4
+lbg s0_3,"cit_2a"
+flush 22
+msgwnd_non
+*d58298
+d `そうか。`[@]`最初の夜とは、１２月２５日の午前０時直後くらいの話なのだ。`[\]
+*d58299
+d `つまり、前日が終わって、クリスマスになったばかりの時間。`[\]
+*d58300
+d `確かにそれもクリスマスの日だし、夜なんだ。`[\]
+textoff
+waits 167
+csp_slot s0_1
+csp_slot s0_4
+lbg s0_3,"black"
+flush 22
+snow -1
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"eva","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"en2","a11_defo3a" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+wait 500
+lss s0_8,"en2","a11_defo2b" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_enj
+*d58301
+d [lv 0*"11"*"82000417"]`「そして、２５日の朝が来て、また夜になったら、それも２５日の夜……」`[\]
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58302
+d [lv 0*"05"*"81000066"]`「そういうこと！`[@][lv 0*"05"*"81000067"]`　よく出来たわね」`[\]
+lss s0_9,"kin","a21_akuwarai2" ;1
+flush 23
+msgwnd_kin
+*d58303
+d [lv 0*"01"*"81500197"]`「ほっほっほっほ！`[@][lv 0*"01"*"81500198"]`　もう少し早く思いつくことが出来ればよかったがのぉ」`[\]
+msgwnd_non
+*d58304
+d `お祖父さまはサンタクロースのような声で笑う。`[\]
+lss s0_10,"eva","a11_akire1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+lss s0_9,"kin","a11_warai2" ;1
+flush 80
+*d58305
+d `絵羽伯母さんは、答えをちゃんと思いついたのだから正解にしてあげたらと訴えたが、お祖父さまは首を横に振る。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_eva
+*d58306
+d [lv 0*"05"*"81000068"]`「もう…！`[@][lv 0*"05"*"81000069"]`　ケチなお祖父ちゃんねぇ？」`[\]
+msgwnd_enj
+*d58307
+d [lv 0*"11"*"82000418"]`「でも、要領はわかった。`[@][lv 0*"11"*"82000419"]`次をがんばる」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"kin","a11_warai2" ;1
+flush 22
+msgwnd_kin
+*d58308
+d [lv 0*"01"*"81500199"]`「むむ。`[@][lv 0*"01"*"81500200"]`その意気込みであるぞ。`[@][lv 0*"01"*"81500201"]`それでこそ我が孫である」`[\]
+lss s0_8,"en2","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_enj
+*d58309
+d [lv 0*"11"*"82000420"]`「ありがとう、お祖父ちゃんっ。`[@][lv 0*"11"*"82000421"]`もう大丈夫。`[@][lv 0*"11"*"82000422"]`これからはいっぱい正解するっ」`[\]
+csp_slot s0_9
+lss s0_10,"kin","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_kin
+*d58310
+d [lv 0*"01"*"81500202"]`「うむ。`[@][lv 0*"01"*"81500203"]`がんばるが良い。`[@][lv 0*"01"*"81500204"]`お祖父ちゃんも素敵な景品を用意して待っておるぞ」`[\]
+lss s0_8,"en2","a11_defo1f" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+wait 500
+csp_slot s0_8
+flush 24
+textoff
+waits 167
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+msgwnd_non
+*d58311
+d `私はお祖父さまに頭を下げてから、絵羽伯母さんと共にみんなの方へ駆け出すのだった。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+goto *uu_uu_0x5a54b8
+*uu_uu_0x5a2e7e
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"en2","a13_defo1" ;1
+flush 22
+msgwnd_enj
+*d58312
+d [lv 0*"11"*"82000423"]`「あ、そうか。`[@][lv 0*"11"*"82000424"]`可能だ…！」`[\]
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d58313
+d [lv 0*"05"*"81000070"]`「そうそう。`[@][lv 0*"05"*"81000071"]`１日の間に夜って、２回あるのよね」`[\]
+lss s0_9,"en2","a13_defo1b" ;1
+flush 80
+msgwnd_enj
+*d58314
+d [lv 0*"11"*"82000425"]`「うん！`[@][lv 0*"11"*"82000426"]`　１２月２５日は真夜中の午前０時から始まる。`[@][lv 0*"11"*"82000427"]`午前０時は夜だから、それが最初の夜。`[@][lv 0*"11"*"82000428"]`それから、朝になってまた夜になっても、夜中の１２時まではまだ同じ日！」`[\]
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eva
+*d58315
+d [lv 0*"05"*"81000072"]`「そういうこと。`[@][lv 0*"05"*"81000073"]`そのどちらの夜も、確かにクリスマスの日の夜よね」`[\]
+lss s0_9,"en2","a11_defo1a" ;1
+flush 80
+msgwnd_enj
+*d58316
+d [lv 0*"11"*"82000429"]`「えへへへへ。`[@][lv 0*"11"*"82000430"]`縁寿すごい？　縁寿すごい…？！」`[\]
+msgwnd_non
+*d58317
+d `絵羽伯母さんは最高の笑顔で、私の頭をいっぱい撫でてくれた。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"mhal_h1c"
+lss s0_8,"kin","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+wait 500
+lss s0_8,"kin","a21_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kin
+*d58318
+d [lv 0*"01"*"81500205"]`「わっはっはっは！`[@][lv 0*"01"*"81500206"]`　見事であるぞ、縁寿。`[@][lv 0*"01"*"81500207"]`難しい問題のつもりだったのに、あっさり解かれてしまったわい」`[\]
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_gen
+*d58319
+d [lv 0*"14"*"81600042"]`「おめでとうございます、縁寿さま。`[@][lv 0*"14"*"81600043"]`……これが、第１問正解のメダルでございます」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58320
+d `源次さんが金色のメダルを差し出す。`[@]`{n}受け取るが良いと、お祖父さまは微笑んだ。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"en2","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58321
+d [lv 0*"11"*"82000431"]`「あ、ありがとうっ」`[\]
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_kin
+*d58322
+d [lv 0*"01"*"81500208"]`「その調子で、がんばるが良い。`[@][lv 0*"01"*"81500209"]`さぁ、私の出題はおしまいだ。`[@][lv 0*"01"*"81500210"]`向こうへ行き、好きな人に話し掛けてクイズを出してもらうが良いっ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58323
+d `ずっしりと重い、金色のメダル。`[\]
+*d58324
+d `いっぱい正解していっぱい集めたら、ポケットが破けちゃうかも？`[\]
+*d58325
+d `破けるくらい集めて、みんなに自慢しようっ。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"eva","a11_defo1" ;1
+lss s0_10,"en2","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+wait 500
+lss s0_9,"eva","a11_warai1" ;1
+lss s0_10,"en2","a11_defo1e" ;1
+aspt2 xpos,s0_10,550
+flush 80
+wait 500
+csp_slot s0_9
+csp_slot s0_10
+flush 23
+*d58326
+d `私はお祖父さまに頭を下げてから、`[@]`絵羽伯母さんと共にみんなの方へ駆け出すのだった。`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+flush 22
+*d58327
+d `そんな縁寿の姿を、`[@]`金蔵は温かい眼差しで見送るのだった。`[\]
+textoff
+waits 167
+lss s0_9,"kin","a11_defo1" ;1
+flush 22
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+lss s0_9,"kin","a11_warai2" ;1
+flush 22
+bgmplay 10,71,0
+msgwnd_kin
+*d58328
+d [lv 0*"01"*"81500211"]`「ちょいと、簡単過ぎたかな…？」`[\]
+lss s0_10,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_gen
+*d58329
+d [lv 0*"14"*"81600044"]`「いいえ。`[@][lv 0*"14"*"81600045"]`ちょうど良かったと思います」`[\]
+csp_slot s0_9
+lss s0_8,"kin","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_kin
+*d58330
+d [lv 0*"01"*"81500212"]`「…………源次。`[@][lv 0*"01"*"81500213"]`私は良いお祖父ちゃんを、演じられただろうか…？」`[\]
+lss s0_10,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_gen
+*d58331
+d [lv 0*"14"*"81600046"]`「無論でございます」`[\]
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kin
+*d58332
+d [lv 0*"01"*"81500214"]`「縁寿は幼い。`[@][lv 0*"01"*"81500215"]`そして、体調を崩し、六軒島へ来ないことも多かった。`[@][lv 0*"01"*"81500216"]`……私をよく覚えては、いないだろう」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58333
+d `幼き子には、特有の酷薄さがある。`[\]
+*d58334
+d `それは、やさしさに対して、当然に享受できるものであると思い込んでいること。`[\]
+*d58335
+d `だから、人のやさしさが当り前過ぎて、……それを記憶に留めない。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"gen","a11_defo1" ;1
+flush 22
+lss s0_9,"gen","a11_komaru1" ;1
+flush 80
+msgwnd_gen
+*d58336
+d [lv 0*"14"*"81600047"]`「………親の恩と同じです。`[@][lv 0*"14"*"81600048"]`それを理解するには、縁寿さまもお歳を重ねられる必要があるでしょう」`[\]
+lss s0_10,"kin","a11_fumu1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kin
+*d58337
+d [lv 0*"01"*"81500217"]`「やがては。`[@][lv 0*"01"*"81500218"]`………私のことを、面白いお祖父ちゃんだったと、思い出してくれるだろうか」`[\]
+lss s0_9,"gen","a11_defo1" ;1
+flush 80
+msgwnd_gen
+*d58338
+d [lv 0*"14"*"81600049"]`「……はい。`[@][lv 0*"14"*"81600050"]`必ずです」`[\]
+lss s0_10,"kin","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_kin
+*d58339
+d [lv 0*"01"*"81500219"]`「………………………………」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58340
+d `金蔵の表情が、少しだけ曇る。`[\]
+*d58341
+d `……やがて縁寿も年を経れば、右代宮金蔵が、世間でどのような評判を持つかを知るだろう。`[\]
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+*d58342
+d `世間が知る右代宮金蔵と、孫に接する金蔵は、まったく違う。`[\]
+*d58343
+d `それを知る時。`[@]`……縁寿は右代宮金蔵を思い出して、世間の知る暴君の一面と、微笑んだ笑顔のどちらを思い出してくれるだろう。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_kin
+*d58344
+d [lv 0*"01"*"81500220"]`「………出来るなら、私の笑顔を思い出してほしいが、……それは高望みであろうな」`[\]
+msgwnd_gen
+*d58345
+d [lv 0*"14"*"81600051"]`「……………………………」`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"bea","a11_1_warai8" ;1
+flush 24
+msgwnd_bea
+*d58346
+d [lv 0*"27"*"80700224"]`「仕方あるまい。`[@][lv 0*"27"*"80700225"]`子供とはそういうものだ」`[\]
+lss s0_8,"kin","a11_fumu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_kin
+*d58347
+d [lv 0*"01"*"81500221"]`「ベアトか」`[\]
+csp_slot s0_9
+lss s0_10,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_bea
+*d58348
+d [lv 0*"27"*"80700226"]`「子供はやさしさに飽食し、それを決して記憶に留めぬ。`[@][lv 0*"27"*"80700227"]`あれが１２年を経れば、右代宮金蔵がどれほどの奇人変人であったかを知るだろう。`[@][lv 0*"27"*"80700228"]`それに塗り潰され、そなたの笑顔など、忘れ去られる運命よ」`[\]
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kin
+*d58349
+d [lv 0*"01"*"81500222"]`「………であろうな。`[@][lv 0*"01"*"81500223"]`いくら甘やかせど、報われぬ愛である」`[\]
+lss s0_10,"bea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d58350
+d [lv 0*"27"*"80700229"]`「だが。`[@][lv 0*"27"*"80700230"]`親の恩を思い出すのに、長い時間を掛けるように。`[@][lv 0*"27"*"80700231"]`……縁寿もやがて、きっと思い出すだろう。`[@][lv 0*"27"*"80700232"]`……そなたが孫に、どのような笑顔で接していたのかをな」`[\]
+lss s0_8,"kin","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kin
+*d58351
+d [lv 0*"01"*"81500224"]`「ふっ……。`[@][lv 0*"01"*"81500225"]`忘れても良い。`[@][lv 0*"01"*"81500226"]`ただ一時、私に向けて微笑んでくれただけで、私には何よりもの冥土の土産になるのだ。`[@][lv 0*"01"*"81500227"]`これが、無償の愛の境地である」`[\]
+lss s0_10,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d58352
+d [lv 0*"27"*"80700233"]`「祖父とは、報われぬ存在であるな」`[\]
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kin
+*d58353
+d [lv 0*"01"*"81500228"]`「報われておるとも。`[@][lv 0*"01"*"81500229"]`先ほどの縁寿の微笑みが思い出せれば。`[@][lv 0*"01"*"81500230"]`私は今夜、お迎えが来ても一向に構わんぞ。`[@][lv 0*"01"*"81500231"]`わっはははははははは……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+flush 4
+textoff
+waits 167
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+msgwnd_non
+*d58354
+d `金蔵は寂しく笑うと、マントを翻す。`[\]
+*d58355
+d `彼が祖父として縁寿に施す愛は、もう充分だ。`[\]
+*d58356
+d `記憶に残って欲しい気持ちはあるが、それを願ってはならない。`[\]
+*d58357
+d `それが、無償の愛の境地。`[\]
+*d58358
+d `そんな金蔵の後姿を見てから、ベアトは再び縁寿の後姿を見つめる。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_bea
+*d58359
+d [lv 0*"27"*"80700234"]`「…………縁寿。`[@][lv 0*"27"*"80700235"]`……それでもいつか、思い出してやれ。`[@][lv 0*"27"*"80700236"]`……金蔵がそなたに、どんな笑顔を見せていたのかを、な」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+*uu_uu_0x5a54b8
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a11_defo1" ;1
+flush 22
+bgmplay 3,71,0
+msgwnd_non
+*d58360
+d `さぁ、今度は誰にクイズを出してもらおうかな。`[\]
+*d58361
+d `どんどん挑戦して、どんどん正解してメダルをいっぱいもらって、素敵なご褒美をもらってみんなに自慢しよう。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"mhal_h2a_bg"
+lbg s0_3,"mhal_h2a"
+lss s0_10,"cla","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"nat","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+*d58362
+d `あそこには蔵臼伯父さんと夏妃伯母さん。`[\]
+*d58363
+d `こっちを見ながら微笑んでる。`[@]`きっと、面白い問題の用意があるのだろう。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"hid","a11_odayaka1" ;1
+flush 23
+*d58364
+d `あっちでは秀吉伯父さんが手招きしてる。`[\]
+*d58365
+d `面白い伯父さんだから、きっと面白い問題を出してくれるだろう。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mhal_h1c"
+lss s0_9,"rud","a11_defo1" ;1
+lss s0_10,"kir","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+*d58366
+d `むこうにはお父さんとお母さん。`[@]`{n}たくさん楽しんでおいでと手を振っている。`[\]
+*d58367
+d `……お父さんって結構、意地悪な問題を色々知ってそう。`[@]`手強いかもしれない。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_h2c"
+lss s0_9,"mar","a22_niyari1" ;1
+lss s0_8,"ros","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+*d58368
+d `そこには楼座叔母さんと真里亞お姉ちゃん。`[@]`{n}二人でクイズの本を読んで、問題を探してるみたいだ。`[\]
+lss s0_9,"mar","a11_akuwarai1" ;1
+flush 80
+*d58369
+d `時折、真里亞お姉ちゃんが私をちらりと見て、きひひひひと笑う。`[\]
+*d58370
+d `たまにお姉ちゃんは意地悪だから、問題もきっと意地悪なのに違いない。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"but","b11_warai1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"jes","a11_warai1" ;1
+lss s0_10,"geo","a11k_defo1k" ;1
+aspt2 xpos,s0_10,550
+flush 22
+*d58371
+d `その奥には、戦人お兄ちゃんと譲治お兄ちゃんと朱志香お姉ちゃん。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d58372
+d `……戦人お兄ちゃんは普段はやさしいけど、`[@]`たまにすごい意地悪なことを言って、私を困らせて遊ぶことがある気がする。`[\]
+*d58373
+d `……きっと意地悪な問題を出す。`[@]`そんな気がする。`[\]
+*d58374
+d `意地悪じゃなさそうな問題を出す人はいないだろうか。`[\]
+*d58375
+d `頭の回転が本調子になるまで、出来ればやさしい問題から挑戦したい。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"gen","a11_defo1" ;1
+flush 24
+*d58376
+d `あそこには源次さんと南條先生がいる。`[@]`{n}この二人は意地悪なことをしないと思う。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_1,"mhal_h2a_bg"
+lbg s0_3,"mhal_h2a"
+lss s0_10,"sha","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"kan","a11_defo1" ;1
+flush 22
+*d58377
+d `それから、紗音と嘉音。`[\]
+*d58378
+d `紗音は色々なクイズやお伽噺を知ってる。`[@]`きっとユニークなものを出してくれるだろう。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_h1c"
+lss s0_8,"kum","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"goh","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+*d58379
+d `そして、お茶の配膳をしてる、郷田さんと熊沢さん。`[\]
+*d58380
+d `熊沢さんは手強いかもしれない。`[@]`……何だか、すっごい煙に巻くような問題を出しそう。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d58381
+d `……結構、みんな手強いかもしれない。`[@]`{n}うーん………。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"hid","a21_warai1" ;1
+flush 24
+msgwnd_hid
+*d58382
+d [lv 0*"06"*"81100013"]`「縁寿ちゃん。`[@][lv 0*"06"*"81100014"]`取って置きの問題を用意したで…！`[@][lv 0*"06"*"81100015"]`　こっち来てやー！」`[\]
+msgwnd_non
+*d58383
+d `秀吉伯父さんが呼んでいる。`[@]`{n}……どうしよう。`[@]`挑戦してみる？`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mhal_h2c"
+lss s0_9,"eva","a11_hohoemi1" ;1
+flush 23
+msgwnd_eva
+*d58384
+d [lv 0*"05"*"81000074"]`「秀吉伯父さんのところ、行ってみる？」`[\]
+lss s0_25,"en2","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 23
+msgwnd_enj
+*d58385
+d [lv 0*"11"*"82000432"]`「うん。`[@][lv 0*"11"*"82000433"]`順番なんて関係ない。`[@][lv 0*"11"*"82000434"]`だって私は全員に挑戦するんだから」`[\]
+msgwnd_non
+*d58386
+d `私は腕まくりをしながら、秀吉伯父さんのところへ向かう。`[\]
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"hid","a21_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+lss s0_10,"en2","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+wait 500
+lss s0_8,"hid","a11_odayaka1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_hid
+*d58387
+d [lv 0*"06"*"81100016"]`「わははははははは、よく来たなぁ。`[@][lv 0*"06"*"81100017"]`わしのは難しいでぇ」`[\]
+lss s0_9,"eva","a11_defo1" ;1
+flush 24
+msgwnd_eva
+*d58388
+d [lv 0*"05"*"81000075"]`「あなたが出す問題ってどんなのかしら。`[@][lv 0*"05"*"81000076"]`あまり難し過ぎるのを出しちゃ駄目よ？」`[\]
+lss s0_10,"en2","a11_defo1b" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58389
+d [lv 0*"11"*"82000435"]`「難しくてもいい。`[@][lv 0*"11"*"82000436"]`解くもん」`[\]
+lss s0_8,"hid","a21_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_hid
+*d58390
+d [lv 0*"06"*"81100018"]`「おぉ、頼もしいことや…！`[@][lv 0*"06"*"81100019"]`　ほな、行くで！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58391
+d `秀吉伯父さんはコホンと咳払いをしてから、問題を語り出す…。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"hid","a11_defo1" ;1
+flush 22
+msgwnd_hid
+*d58392
+d [lv 0*"06"*"81100020"]`「わしのはな、なぞなぞやで。`[@][lv 0*"06"*"81100021"]`えぇか、よく聞いてや。`[@][lv 0*"06"*"81100022"]`桃太郎の話は知ってるやろ？」`[gstg 2][\]
+lss s0_10,"en2","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58393
+d [lv 0*"11"*"82000437"]`「川から桃がどんぶらこ？」`[\]
+lss s0_9,"hid","a11_odayaka1" ;1
+flush 80
+msgwnd_hid
+*d58394
+d [lv 0*"06"*"81100023"]`「そや。`[@][lv 0*"06"*"81100024"]`しかしな、その川には甘栗が流れてきたんや」`[\]
+lss s0_10,"en2","a11_defo2a" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d58395
+d [lv 0*"11"*"82000438"]`「甘栗？？」`[\]
+lss s0_9,"hid","a21_warai1" ;1
+flush 80
+msgwnd_hid
+*d58396
+d [lv 0*"06"*"81100025"]`「そや！`[@][lv 0*"06"*"81100026"]`　そしたら次の日にはな、いよかんが流れてきたんや！」`[\]
+lss s0_10,"en2","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d58397
+d [lv 0*"11"*"82000439"]`「いよかん、酸っぱいから嫌い」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"different_spiral_1a"
+flush 22
+msgwnd_hid
+*d58398
+d [lv 0*"06"*"81100027"]`「その次の日にはな、今度は、瓜が流れてきたんや！`[@][lv 0*"06"*"81100028"]`　その次の日には枝豆が。`[@][lv 0*"06"*"81100029"]`その次の日にはオクラが。`[@][lv 0*"06"*"81100030"]`その次の日には柿が流れてきたんや！」`[\]
+msgwnd_eva
+*d58399
+d [lv 0*"05"*"81000077"]`「くすくす。`[@][lv 0*"05"*"81000078"]`変な話よね。`[@][lv 0*"05"*"81000079"]`上流に八百屋さんでもあるのかしら」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_25,"en2","a11_defo2" ;1
+aspt2 xpos,s0_25,-550
+lss s0_10,"hid","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+wait 500
+lss s0_10,"hid","a21_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_hid
+*d58400
+d [lv 0*"06"*"81100031"]`「さて、問題や。`[@][lv 0*"06"*"81100032"]`その次の日には、何が流れてきたと思う？！」`[\]
+lss s0_25,"en2","a11_defo2a" ;1
+aspt2 xpos,s0_25,-550
+flush 80
+msgwnd_enj
+*d58401
+d [lv 0*"11"*"82000440"]`「え…？！」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58402
+d [lv 0*"05"*"81000080"]`「伯母さん、わーかった。`[@][lv 0*"05"*"81000081"]`縁寿ちゃんはわかる？」`[\]
+lss s0_25,"en2","a11_defo3a" ;1
+aspt2 xpos,s0_25,-550
+flush 80
+msgwnd_enj
+*d58403
+d [lv 0*"11"*"82000441"]`「わかんない」`[\]
+lss s0_10,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58404
+d [lv 0*"05"*"81000082"]`「じゃあヒントをあげるわね。`[@][lv 0*"05"*"81000083"]`流れてきたものには、ちゃんと順番があるのよ。`[@][lv 0*"05"*"81000084"]`何の順番か、わかるかしら？」`[\]
+lss s0_9,"hid","a21_warai2" ;1
+flush 24
+msgwnd_hid
+*d58405
+d [lv 0*"06"*"81100033"]`「わはははは！`[@][lv 0*"06"*"81100034"]`　そら大ヒントやな…！」`[\]
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+mov %eva_button_enabled,0
+mov %quiz_answer_count,3
+mov %pair_answers_counter,0
+textoff
+waits 167
+lbg s0_3,"mondai_2"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5a7c9f
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5a815f
+if %branch_tmp = 1 goto *uu_uu_0x5a7cc7
+if %branch_tmp = 2 goto *uu_uu_0x5a7cc7
+*uu_uu_0x5a7cc7
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a15_defo2a" ;1
+flush 22
+seplay 1,7,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_enj
+*d58406
+d [lv 0*"11"*"82000442"]`「………全然、わかんないっ」`[\]
+lss s0_8,"hid","a11_odayaka1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_hid
+*d58407
+d [lv 0*"06"*"81100035"]`「わっははははははは。`[@][lv 0*"06"*"81100036"]`ちょいと難し過ぎたか…！」`[\]
+lss s0_10,"eva","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58408
+d [lv 0*"05"*"81000085"]`「伯母さんはその次の日に流れてくるのもわかるわよ？`[@][lv 0*"05"*"81000086"]`　きっと栗が流れてくるのよね？」`[\]
+lss s0_8,"hid","a21_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_hid
+*d58409
+d [lv 0*"06"*"81100037"]`「そや。`[@][lv 0*"06"*"81100038"]`そして、その次の日には多分、……け、………け…。`[@][lv 0*"06"*"81100039"]`……けで始まる野菜が思いつかんなぁ！」`[\]
+lss s0_9,"en2","a15_defo3a" ;1
+flush 80
+msgwnd_non
+*d58410
+d `ちょっとよくわからない。`[@]`うーん、残念。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+goto *uu_uu_0x5a8828
+*uu_uu_0x5a815f
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a13_defo1b" ;1
+flush 22
+msgwnd_enj
+*d58411
+d [lv 0*"11"*"82000443"]`「わかった！`[@][lv 0*"11"*"82000444"]`　キャベツ！」`[\]
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_eva
+*d58412
+d [lv 0*"05"*"81000087"]`「そう、正解よ。`[@][lv 0*"05"*"81000088"]`選択肢にはなかったけど、キュウリでもきっと正解ね」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58413
+d `これは五十音順だったのだ。`[@]`甘栗の“あ”。`[@]`いよかんの“い”。`[@]`瓜の“う”。`[\]
+*d58414
+d `こんな感じで、あ・い・う・え・お・か、と続いていたのだ。`[\]
+*d58415
+d `となれば、“か”の次は“き”だ。`[@]`だから正解は、“き”で始まるものということになる。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"en2","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_enj
+*d58416
+d [lv 0*"11"*"82000445"]`「ありがとう、伯母さんのヒントで解けたっ」`[\]
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_eva
+*d58417
+d [lv 0*"05"*"81000089"]`「くすくす。`[@][lv 0*"05"*"81000090"]`縁寿ちゃんが自分で解いたのよ。`[@][lv 0*"05"*"81000091"]`すごいわ」`[\]
+lss s0_9,"hid","a11_odayaka1" ;1
+flush 23
+msgwnd_hid
+*d58418
+d [lv 0*"06"*"81100040"]`「いやいやっ、お見事や！`[@][lv 0*"06"*"81100041"]`　ほな、正解のメダルをあげような…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58419
+d `秀吉は金色のメダルを取り出すと、それを私の手の平に置いてくれた。`[\]
+*d58420
+d `ずしりとした手応え。`[@]`うん、勝ったって感じがする。`[\]
+*d58421
+d `この調子でがんばろう！`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+*uu_uu_0x5a8828
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+flush 22
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+lss s0_9,"hid","a11_defo1" ;1
+flush 24
+bgmplay 2,71,0
+msgwnd_hid
+*d58422
+d [lv 0*"06"*"81100042"]`「わしな、絵羽の分もなのか、もう１枚メダルをもらっとんのや。`[@][lv 0*"06"*"81100043"]`しかし、問題がもう思い付かんのや」`[\]
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58423
+d [lv 0*"05"*"81000092"]`「じゃあ、私が縁寿ちゃんに出題しちゃおっかなぁ？」`[\]
+lss s0_25,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_25,-550
+flush 23
+msgwnd_enj
+*d58424
+d [lv 0*"11"*"82000446"]`「え？`[@][lv 0*"11"*"82000447"]`　絵羽伯母さんが？」`[\]
+lss s0_10,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58425
+d [lv 0*"05"*"81000093"]`「そうよ。`[@][lv 0*"05"*"81000094"]`お姫様への、付き人からのクイズ♪`[@][lv 0*"05"*"81000095"]`　ちょっと面白いクイズが思いついたから、ぜひ挑戦してほしいのよぅ！」`[\]
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58426
+d `絵羽伯母さんは上機嫌に笑う。`[\]
+*d58427
+d `メダルは１枚でも多い方がいいし、そのチャンスももちろん多い方がいい。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+lss s0_10,"en2","a11_defo1b" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58428
+d [lv 0*"11"*"82000448"]`「うんっ、挑戦する」`[\]
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eva
+*d58429
+d [lv 0*"05"*"81000096"]`「くす。その意気よ。`[@][lv 0*"05"*"81000097"]`じゃあ、出題するわね」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"airp_w1d"
+color_mod2 s0_3,#ffffff
+flush 22
+*d58430
+d [lv 0*"05"*"81000098"]`「伯母さんは旅行が大好きだって話は、したことがあったかしら？」`[\]
+msgwnd_enj
+*d58431
+d [lv 0*"11"*"82000449"]`「うん。`[@][lv 0*"11"*"82000450"]`絵羽伯母さんはよく、海外旅行へ行くって言ってた」`[\]
+msgwnd_eva
+*d58432
+d [lv 0*"05"*"81000099"]`「そうよ。`[@][lv 0*"05"*"81000100"]`だから旅行の問題を出すわね。`[@][lv 0*"05"*"81000101"]`あるところに旅人がいたの」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_enj
+*d58433
+d [lv 0*"11"*"82000451"]`「旅人？」`[\]
+msgwnd_eva
+*d58434
+d [lv 0*"05"*"81000102"]`「その旅人は、まず北へ５ｋｍ歩いたわ」`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"en2","a11_defo2a" ;1
+flush 22
+msgwnd_enj
+*d58435
+d [lv 0*"11"*"82000452"]`「……その問題、紙に書いた方がいい？」`[\]
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_eva
+*d58436
+d [lv 0*"05"*"81000103"]`「大丈夫よ。`[@][lv 0*"05"*"81000104"]`そんな難しい問題じゃないから、聞くだけでＯＫ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+*d58437
+d [lv 0*"05"*"81000105"]`「旅人は、まず北へ５ｋｍ歩いた。`[@][lv 0*"05"*"81000106"]`そして次に東へ５ｋｍ歩いた。`[@][lv 0*"05"*"81000107"]`そして次には南へ５ｋｍ歩いたの」`[\]
+msgwnd_enj
+*d58438
+d [lv 0*"11"*"82000453"]`「…………北へ５ｋｍ。`[@][lv 0*"11"*"82000454"]`東へ５ｋｍ。`[@][lv 0*"11"*"82000455"]`南へ５ｋｍ。`[@][lv 0*"11"*"82000456"]`……コの字みたいに歩いたの？」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"hid","a11_odayaka1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_hid
+*d58439
+d [lv 0*"06"*"81100044"]`「そういうことやな！`[@][lv 0*"06"*"81100045"]`　スタート地点から東に５ｋｍの地点にいる計算になるで」`[\]
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_eva
+*d58440
+d [lv 0*"05"*"81000108"]`「そのはずでしょう？`[@][lv 0*"05"*"81000109"]`　ところがなんと、旅人はスタート地点に戻ってしまっていたの。`[@][lv 0*"05"*"81000110"]`……こんなおかしなことって、ありえると思う？」`[\]
+lss s0_10,"hid","a21_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_hid
+*d58441
+d [lv 0*"06"*"81100046"]`「わはは、そんなことあるわけないで！`[@][lv 0*"06"*"81100047"]`　方位磁石がイカレたんとちゃうか」`[\]
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_eva
+*d58442
+d [lv 0*"05"*"81000111"]`「そんなのじゃないわよ！`[@][lv 0*"05"*"81000112"]`　うふふふふ、縁寿ちゃん、わかるぅ？」`[\]
+lss s0_24,"en2","a11_defo2" ;1
+flush 23
+msgwnd_enj
+*d58443
+d [lv 0*"11"*"82000457"]`「方位磁石のせいじゃないの？`[@][lv 0*"11"*"82000458"]`　……これはなぞなぞ？」`[\]
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_eva
+*d58444
+d [lv 0*"05"*"81000113"]`「いいえ、ちゃんとしたクイズよう？`[@][lv 0*"05"*"81000114"]`　ヒントはね、地球儀でよく考えてみて？」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+mov %eva_button_enabled,0
+mov %quiz_answer_count,3
+textoff
+waits 167
+lbg s0_3,"mondai_3"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5a9d1a
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5a9d42
+if %branch_tmp = 1 goto *uu_uu_0x5aab1f
+if %branch_tmp = 2 goto *uu_uu_0x5a9d42
+*uu_uu_0x5a9d42
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_enj
+*d58445
+d [lv 0*"11"*"82000459"]`「…………わかんないっ」`[\]
+msgwnd_non
+*d58446
+d `海外旅行なんて全然行ったことない。`[\]
+*d58447
+d `ひょっとすると世界のどこかには、コの字に歩いても元の場所に戻ってきてしまうおかしな場所があるのかもしれない。`[\]
+*d58448
+d `……バミューダトライアングルとか、何とか…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","a11_akire1" ;1
+flush 22
+msgwnd_eva
+*d58449
+d [lv 0*"05"*"81000115"]`「うーん……。`[@][lv 0*"05"*"81000116"]`縁寿ちゃんには、ちょっと難しかったかしら」`[\]
+lss s0_10,"en2","a15_defo2a" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58450
+d [lv 0*"11"*"82000460"]`「北に行って東に行って南に行ったら、元の場所に戻ってくるところなんて、あるわけない」`[\]
+csp_slot s0_9
+lss s0_8,"eva","b23_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_eva
+*d58451
+d [lv 0*"05"*"81000117"]`「それがね、あるのよ？`[@][lv 0*"05"*"81000118"]`　地球上のある場所にね。`[@][lv 0*"05"*"81000119"]`お家に地球儀があったら、それを見ながら色々考えてみてね。`[@][lv 0*"05"*"81000120"]`どうしてもわからなかったら、お父さんに聞いてみなさい？」`[\]
+lss s0_10,"en2","a11_defo2b" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d58452
+d [lv 0*"11"*"82000461"]`「うん、聞いてみるっ。`[@][lv 0*"11"*"82000462"]`だから正解、教えて…！」`[\]
+lss s0_8,"eva","b25_hohoemi2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eva
+*d58453
+d [lv 0*"05"*"81000121"]`「くす。`[@][lv 0*"05"*"81000122"]`正解は、とても寒〜い場所よ？`[@][lv 0*"05"*"81000123"]`　寒い場所って地球のどこかしら？`[@][lv 0*"05"*"81000124"]`　よく考えてみてね。`[@][lv 0*"05"*"81000125"]`わかったら、縁寿ちゃんもクラスのみんなに出題してみるといいわよ。`[@][lv 0*"05"*"81000126"]`みんなきっと驚くわよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+meplay 1,5,70
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+msgwnd_non
+*d58454
+d `寒いところってどこだろう。`[@]`……北海道？`[\]
+*d58455
+d `北海道だって、北に行って東に行って南に行ったら、そこはスタート地点じゃないと思う。`[\]
+*d58456
+d `……うーん。`[@]`わからない。`[@]`降参。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"hid","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"eva","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+wait 500
+lss s0_8,"hid","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_hid
+*d58457
+d [lv 0*"06"*"81100048"]`「さ、これでわしらの問題はおしまいや！`[@][lv 0*"06"*"81100049"]`　他の人に問題を出してもらうといいで！」`[\]
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eva
+*d58458
+d [lv 0*"05"*"81000127"]`「行きましょ！`[@][lv 0*"05"*"81000128"]`　次は誰に挑戦しようかしらね！」`[\]
+textoff
+waits 167
+csp_slot s0_10
+flush 23
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+flush 23
+msgwnd_non
+*d58459
+d `こんな難しい問題を知ってるんだから、きっと絵羽伯母さんはクイズとか得意だろう。`[\]
+*d58460
+d `伯母さんと一緒なら、きっとメダルもいっぱい集まるに違いない。`[\]
+*d58461
+d `今度は誰に問題を出してもらおうかな…！`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+goto *uu_uu_0x5ad9f6
+*uu_uu_0x5aab1f
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_enj
+*d58462
+d [lv 0*"11"*"82000463"]`「わかった…！`[@][lv 0*"11"*"82000464"]`　とても寒い場所！`[@][lv 0*"11"*"82000465"]`　うん、そこはすごい寒いよ、絶対！」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","a11_hohoemi1" ;1
+flush 22
+wait 500
+lss s0_9,"eva","a11_warai1" ;1
+flush 80
+msgwnd_eva
+*d58463
+d [lv 0*"05"*"81000129"]`「大正解！`[@][lv 0*"05"*"81000130"]`　すごいわ、縁寿ちゃんの歳でわかるなんて、本当に天才よぅ」`[\]
+lss s0_8,"hid","a11_odayaka1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_hid
+*d58464
+d [lv 0*"06"*"81100050"]`「南極点がスタート地点だったなら、北に進み、東に進んでも、それは南極点に対して円を描いて回ってるのと同じや。`[@][lv 0*"06"*"81100051"]`だから南へ進めば、また南極点に戻るだけの話っちゅうわけや」`[\]
+csp_slot s0_9
+lss s0_10,"eva","b25_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_eva
+*d58465
+d [lv 0*"05"*"81000131"]`「取って置きの難しい問題のつもりだったんだけど、`[@][lv 0*"05"*"81000132"]`縁寿ちゃんは本当にすごいわ」`[\]
+lss s0_8,"hid","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_hid
+*d58466
+d [lv 0*"06"*"81100052"]`「おめでとさんや！`[@][lv 0*"06"*"81100053"]`　ほな、これが、もう１枚のメダルや」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_non
+*d58467
+d `金色の、ずしりと重いメダルをもらう。`[\]
+*d58468
+d `よしよし、やったやった…！`[@]`　絵羽伯母さんとガッツポーズ。`[\]
+msgwnd_hid
+*d58469
+d [lv 0*"06"*"81100048"]`「さ、これでわしらの問題はおしまいや！`[@][lv 0*"06"*"81100049"]`　他の人に問題を出してもらうといいで！」`[\]
+msgwnd_enj
+*d58470
+d [lv 0*"11"*"82000466"]`「うん、ありがとう、秀吉伯父さん…！」`[\]
+msgwnd_hid
+*d58471
+d [lv 0*"06"*"81100056"]`「絵羽伯母さんは賢いで…！`[@][lv 0*"06"*"81100057"]`　二人一緒なら、メダルもざっくざくや！」`[\]
+msgwnd_eva
+*d58472
+d [lv 0*"05"*"81000133"]`「えぇ、そうよ。ざっくざくよ！」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+lss s0_10,"en2","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58473
+d [lv 0*"11"*"82000467"]`「うん。`[@][lv 0*"11"*"82000468"]`一緒にがんばろ、絵羽伯母さん」`[\]
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+msgwnd_non
+*d58474
+d `私は駆け出す。`[@]`{n}今度は誰に問題を出してもらおうかな…！`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"hid","a11_odayaka1" ;1
+flush 22
+*d58475
+d `秀吉伯父さんは、いってらっしゃいと微笑みながら、手を振ってくれるのだった……。`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+mov %branch_tmp,%pair_answers_counter
+if %branch_tmp = 0 goto *uu_uu_0x5ad9f6
+if %branch_tmp = 1 goto *uu_uu_0x5ad9f6
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+bgmplay 90,71,0
+*d58476
+d `次の出題者を求め、嬉々と走り出す縁寿を、`[@]`秀吉と絵羽が見守っていた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_eva
+*d58477
+d [lv 0*"05"*"81000134"]`「………あんなにも可愛らしい笑顔を浮かべられる子なのに、`[@][lv 0*"05"*"81000135"]`……私が、………それを奪うのね…」`[\]
+msgwnd_hid
+*d58478
+d [lv 0*"06"*"81100058"]`「絵羽……………」`[\]
+msgwnd_non
+*d58479
+d `絵羽は俯く。`[@]`目元には、涙が一粒、光っていた…。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","b25_komaru1" ;1
+flush 22
+msgwnd_eva
+*d58480
+d [lv 0*"05"*"81000136"]`「彼女の気持ちを考えれば、それは当然のことなのよ。`[@][lv 0*"05"*"81000137"]`……でも、私はそれを受け止め切れなかった……」`[\]
+lss s0_10,"hid","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_hid
+*d58481
+d [lv 0*"06"*"81100059"]`「しゃあない。`[@][lv 0*"06"*"81100060"]`お前かて人間やで。`[@][lv 0*"06"*"81100061"]`そうそう人間、割り切れるもんとちゃう」`[\]
+csp_slot s0_9
+lss s0_8,"eva","b25_odoroki2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_eva
+*d58482
+d [lv 0*"05"*"81000138"]`「それでも、私が悪いのよ…！`[@][lv 0*"05"*"81000139"]`　仮にも一児を育てた母だったのよ？！`[@][lv 0*"05"*"81000140"]`　………あの子の母親に、私はなるべきだった。`[@][lv 0*"05"*"81000141"]`……なのに、私は悲しみに溺れ、それをしなかった…」`[\]
+csp_slot s0_10
+lss s0_9,"hid","a11_majime1" ;1
+flush 24
+msgwnd_hid
+*d58483
+d [lv 0*"06"*"81100062"]`「しゃあない。しゃあない…！`[@][lv 0*"06"*"81100063"]`　お前だけが悪いわけとちゃうで…！`[@][lv 0*"06"*"81100064"]`　そんなに自分を責めたらあかん！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58484
+d `もう絵羽は、嗚咽を止められなくなっていた…。`[@]`{n}大粒の涙をぼろぼろと零しながら、俯いて震える…。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_eva
+*d58485
+d [lv 0*"05"*"81000142"]`「私は、何て罪を……。`[@][lv 0*"05"*"81000143"]`………悲しいのは私もあの子もまったく同じだった…！`[@][lv 0*"05"*"81000144"]`　なのに私は自分の方が悲しいと決め付けて、……あの子の気持ちをまったく受け止めなくて……。`[@][lv 0*"05"*"81000145"]`………私は母失格なんだわ…。`[@][lv 0*"05"*"81000146"]`あの子の母になって、………あげられなかった………」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_kir
+*d58486
+d [lv 0*"09"*"81300027"]`「いいえ。`[@][lv 0*"09"*"81300028"]`……あなたはがんばってくれたわ、絵羽姉さん」`[\]
+msgwnd_eva
+*d58487
+d [lv 0*"05"*"81000147"]`「霧江さん…」`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"rud","a11_majime2" ;1
+lss s0_10,"kir","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_non
+*d58488
+d `いつの間にか、絵羽の後ろに霧江がいた。留弗夫もいた。`[\]
+lss s0_10,"kir","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_kir
+*d58489
+d [lv 0*"09"*"81300029"]`「あなたが縁寿と打ち解けようと、色々な努力をしてくれたことを知っているわ」`[\]
+lss s0_9,"rud","a11_defo1" ;1
+flush 80
+msgwnd_rud
+*d58490
+d [lv 0*"08"*"81200033"]`「……姉貴はよく堪えてくれたぜ。`[@][lv 0*"08"*"81200034"]`そんな姉貴の苦労も知らず、うちの娘が本当に迷惑をかけたな」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"sea_1cf"
+color_mod2 s0_3,#ffffff
+flush 22
+msgwnd_non
+*d58491
+d `六軒島の事故の後。`[\]
+*d58492
+d `ひとり六軒島より生還した絵羽は、当日を欠席して生き残った縁寿を養子に迎えた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d58493
+d `……後に、互いを傷つけ合うような悲しい関係になる二人も、`[@]`最初からそうだったわけではないのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"gdin_1ad2"
+color_mod2 s0_3,#ffffff
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+lss s0_10,"eva","b25_komaru1" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+flush 22
+csp_slot s0_10
+lss s0_9,"eva","b25_komaru1" ;1
+color_mod2 s0_9,#ffffff
+flush 4
+*d58494
+d `絵羽は縁寿の新しい親として、最後の唯一の肉親として愛情を注ごうと努力したのだ。`[@]`自身の悲しみを懸命に堪えて。`[\]
+textoff
+waits 167
+lss s0_8,"en2","a11_defo2b" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+lss s0_9,"eva","b25_komaru1" ;1
+color_mod2 s0_9,#ffffff
+flush 80
+wait 500
+csp_slot s0_8
+flush 24
+lss s0_9,"eva","b25_odoroki1" ;1
+color_mod2 s0_9,#ffffff
+flush 80
+*d58495
+d `しかし縁寿はそれを受け容れなかった。`[@]`{n}唯一生還した絵羽を、自分の親を奪ったと罵ったのだ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+*d58496
+d `……６歳の幼子の傷心を理解し、絵羽はそれでも耐えた。`[@]`{n}歯を食いしばって、報われぬ愛情を縁寿に注いだのだ。`[\]
+*d58497
+d `しかし、………絵羽だって、深く深く傷付いていた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"hos_r1c"
+color_mod2 s0_3,#ffffff
+flush 22
+*d58498
+d `彼女の悲しい努力はついに報われず、`[@]`…………続く未来は、悲しいものとなる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"eva","b25_naku1" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+lss s0_10,"kir","a11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kir
+*d58499
+d [lv 0*"09"*"81300030"]`「あなたは縁寿に、譲治くんに注いだのと同じ愛情を、与えようとしてくれたわ」`[\]
+lss s0_8,"eva","b25_naku2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_eva
+*d58500
+d [lv 0*"05"*"81000148"]`「でも、……それは私だけの独りよがりで、……縁寿ちゃんにはまったく届かなかった…」`[\]
+lss s0_9,"rud","a11_nayamu1" ;1
+flush 24
+msgwnd_rud
+*d58501
+d [lv 0*"08"*"81200035"]`「それを受け止めなかったのは縁寿だ。`[@][lv 0*"08"*"81200036"]`姉貴のせいじゃない」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+seplay 1,7,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_eva
+*d58502
+d [lv 0*"05"*"81000149"]`「６歳の縁寿ちゃんにそれを求めるなんて酷よ…！`[@][lv 0*"05"*"81000150"]`　それでも私は気持ちを伝えられるよう、もっともっと……、堪えなければならなかったのに…！」`[\]
+msgwnd_kir
+*d58503
+d [lv 0*"09"*"81300031"]`「絵羽姉さん。`[@][lv 0*"09"*"81300032"]`これだけは信じて」`[\]
+msgwnd_eva
+*d58504
+d [lv 0*"05"*"81000151"]`「………………………」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"kir","a11_warai2" ;1
+flush 24
+msgwnd_kir
+*d58505
+d [lv 0*"09"*"81300033"]`「私たちはあなたを、……責めてなんかいないのよ」`[\]
+lss s0_8,"eva","b25_naku4" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_eva
+*d58506
+d [lv 0*"05"*"81000152"]`「……霧江さん……………」`[\]
+lss s0_9,"kir","a11_warai1" ;1
+flush 80
+msgwnd_kir
+*d58507
+d [lv 0*"09"*"81300034"]`「縁寿のために、深く深く傷付いてくれて、ありがとう……。`[@][lv 0*"09"*"81300035"]`………あの子に人の心があるなら、いつか必ず、あなたが注いでくれた愛情に気がついてくれるはず」`[\]
+lss s0_10,"rud","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_rud
+*d58508
+d [lv 0*"08"*"81200037"]`「ありがとう、姉貴。`[@][lv 0*"08"*"81200038"]`俺たちは、いつまでも感謝してるんだぜ……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_h1c"
+lss s0_9,"hid","a11_naku1" ;1
+flush 23
+msgwnd_hid
+*d58509
+d [lv 0*"06"*"81100065"]`「…………良かったな、絵羽……。`[@][lv 0*"06"*"81100066"]`……お前のがんばりはな、……ちゃんと、……認められとんのやで……」`[\]
+lss s0_10,"eva","b25_naku2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eva
+*d58510
+d [lv 0*"05"*"81000153"]`「ううぅ……、うううぅぅぅぅ………っ…」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 2000
+*uu_uu_0x5ad9f6
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+flush 22
+lss s0_9,"goh","a11_omakase1" ;1
+flush 26
+bgmplay 187,71,0
+msgwnd_goh
+*d58511
+d [lv 0*"17"*"81700039"]`「如何ですか、縁寿さま。`[@][lv 0*"17"*"81700040"]`よろしければ、ぜひこの郷田にも挑戦していただけませんか」`[\]
+lss s0_10,"kum","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kum
+*d58512
+d [lv 0*"18"*"81800013"]`「ほっほっほっほ。`[@][lv 0*"18"*"81800014"]`この熊沢も、難し〜い問題を用意しましたよぅ？」`[\]
+csp_slot s0_9
+lss s0_8,"goh","a11_omakase1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+lss s0_9,"en2","a11_defo1e" ;1
+flush 24
+msgwnd_enj
+*d58513
+d [lv 0*"11"*"82000469"]`「難しい問題でもへっちゃら。`[@][lv 0*"11"*"82000470"]`縁寿ひとりだけじゃないもん。`[@][lv 0*"11"*"82000471"]`絵羽伯母さんと一緒に解くもん！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58514
+d `郷田と熊沢が挑戦しないかと誘ってくる。`[@]`{n}どうせ全員に挑むのだから、誰から先だって関係ないのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 26
+*d58515
+d `絵羽伯母さん早く〜と、手を振ると、`[@]`伯母さんが駆けてきた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_13,"en2","a11_defo1" ;1
+aspt2 xpos,s0_13,700
+flush 23
+lss s0_14,"eva","a11_defo1" ;1
+aspt2 xpos,s0_14,200
+flush 23
+msgwnd_eva
+*d58516
+d [lv 0*"05"*"81000154"]`「今度はこの二人が出題？`[@][lv 0*"05"*"81000155"]`　どっちから挑戦する？」`[\]
+lss s0_13,"en2","a11_defo1b" ;1
+aspt2 xpos,s0_13,700
+flush 80
+msgwnd_enj
+*d58517
+d [lv 0*"11"*"82000472"]`「じゃあ、郷田さん」`[\]
+lss s0_12,"goh","a11_hohoemi1" ;1
+aspt2 xpos,s0_12,-200
+flush 24
+msgwnd_goh
+*d58518
+d [lv 0*"17"*"81700041"]`「はいはい、畏まりました。`[@][lv 0*"17"*"81700042"]`それでは問題を出させていただきます」`[\]
+lss s0_15,"kum","a11_defo2" ;1
+aspt2 xpos,s0_15,-700
+flush 24
+flush 23
+msgwnd_kum
+*d58519
+d [lv 0*"18"*"81800015"]`「ほっほほほほほ。`[@][lv 0*"18"*"81800016"]`難しいですよぅ？」`[\]
+lss s0_13,"en2","a11_defo1e" ;1
+aspt2 xpos,s0_13,700
+flush 80
+msgwnd_enj
+*d58520
+d [lv 0*"11"*"82000473"]`「それでも解く。`[@][lv 0*"11"*"82000474"]`コツはもう、わかったもん」`[\]
+lss s0_14,"eva","a11_warai1" ;1
+aspt2 xpos,s0_14,200
+flush 24
+msgwnd_eva
+*d58521
+d [lv 0*"05"*"81000156"]`「縁寿ちゃんを甘く見ちゃ駄目よ？`[@][lv 0*"05"*"81000157"]`　ねー！」`[\]
+lss s0_13,"en2","a11_defo1f" ;1
+aspt2 xpos,s0_13,700
+flush 80
+msgwnd_enj
+*d58522
+d [lv 0*"11"*"82000475"]`「ねー！」`[\]
+lss s0_12,"goh","a11_omakase1" ;1
+aspt2 xpos,s0_12,-200
+flush 23
+msgwnd_goh
+*d58523
+d [lv 0*"17"*"81700043"]`「それはそれは。`[@][lv 0*"17"*"81700044"]`…それでは、郷田らしく、台所とお料理の問題を出させていただきます」`[\]
+csp_slot s0_12
+csp_slot s0_13
+csp_slot s0_14
+csp_slot s0_15
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_eva
+*d58524
+d [lv 0*"05"*"81000158"]`「今度は共闘しましょ。`[@][lv 0*"05"*"81000159"]`わからない時は伯母さんを頼ってね？`[@][lv 0*"05"*"81000160"]`　何かヒントを出せるようにするわ」`[\]
+msgwnd_enj
+*d58525
+d [lv 0*"11"*"82000476"]`「……ヒントもらうとメダルはもらえない？」`[\]
+msgwnd_eva
+*d58526
+d [lv 0*"05"*"81000161"]`「メダルとは関係ないから、じゃんじゃん頼ってね！」`[\]
+mov %eva_button_enabled,1
+mov %quiz_answer_count,4
+mov %pair_answers_counter,0
+*uu_uu_0x5ae699
+textoff
+waits 167
+lbg s0_3,"mondai_4"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5ae73f
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5aeb5f
+if %branch_tmp = 1 goto *uu_uu_0x5aeb5f
+if %branch_tmp = 2 goto *uu_uu_0x5aeb5f
+if %branch_tmp = 3 goto *uu_uu_0x5af3dc
+if %branch_tmp = 4 goto *uu_uu_0x5ae76f
+*uu_uu_0x5ae76f
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"eva","b25_hohoemi2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+wait 500
+lss s0_10,"eva","b25_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+*d58527
+d [lv 0*"05"*"81000162"]`「伯母さん、わーかった。`[@][lv 0*"05"*"81000163"]`ヒントはね、魔女の帰りが普段よりとても遅くなったってところよ？」`[\]
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d58528
+d [lv 0*"11"*"82000477"]`「……普段より遅いと何かあるの？」`[\]
+lss s0_10,"eva","b25_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eva
+*d58529
+d [lv 0*"05"*"81000164"]`「よく考えて？`[@][lv 0*"05"*"81000165"]`　いつもの決まった時間に出来立てのご飯を作っておいたのよ？`[@][lv 0*"05"*"81000166"]`　ということは、それよりずっと帰りが遅くなったら、……どうなっちゃうかしら？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+add %eva_hint_counter,1
+mov %eva_button_enabled,0
+goto *uu_uu_0x5ae699
+*uu_uu_0x5aeb5f
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a15_defo2a" ;1
+flush 22
+msgwnd_enj
+*d58530
+d [lv 0*"11"*"82000478"]`「………わかんない。`[@][lv 0*"11"*"82000479"]`食べ物が喋るなんておかしいもん」`[\]
+lss s0_8,"goh","a12_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_goh
+*d58531
+d [lv 0*"17"*"81700045"]`「いやいえ、これはそういうお伽噺の問題ですので……」`[\]
+lss s0_10,"kum","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kum
+*d58532
+d [lv 0*"18"*"81800017"]`「ほっほほほほほほ…。`[@][lv 0*"18"*"81800018"]`どうやら、おわかりにはならなかったようでございますねぇ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58533
+d `私が適当に選んだ選択肢は、どうやら外れていたらしい。`[@]`……残念。`[\]
+msgwnd_enj
+*d58534
+d [lv 0*"11"*"82000480"]`「じゃあ、正解を教えて。`[@][lv 0*"11"*"82000481"]`絵羽伯母さんはわかったんでしょ？`[@][lv 0*"11"*"82000482"]`　教えて！」`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","a11_hohoemi1" ;1
+flush 24
+msgwnd_eva
+*d58535
+d [lv 0*"05"*"81000167"]`「いいわよ。`[@][lv 0*"05"*"81000168"]`答えはね、」`[\]
+lss s0_10,"goh","a12_omakase1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_goh
+*d58536
+d [lv 0*"17"*"81700046"]`「絵羽さま、それはどうかお許しを…！`[@][lv 0*"17"*"81700047"]`　レシピとなぞなぞの答えは、秘密である内が華と言うものでございます」`[\]
+lss s0_9,"eva","b22_akire2go" ;1
+flush 80
+msgwnd_eva
+*d58537
+d [lv 0*"05"*"81000169"]`「そうぉ…？`[@][lv 0*"05"*"81000170"]`　うふふ、なら郷田さんのいないところで、あとでこっそり教えてあげるからねー」`[\]
+lss s0_10,"goh","a12_odoroki1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+lss s0_8,"en2","a11_defo1f" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_enj
+*d58538
+d [lv 0*"11"*"82000483"]`「うん、約束っ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58539
+d `しかし、後になって答えを教えられても、ハズレはハズレ。`[\]
+*d58540
+d `仕方ない。`[@]`気を取り直して、今度は熊沢さんの問題に挑戦してみよう。`[\]
+goto *uu_uu_0x5afaef
+*uu_uu_0x5af3dc
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a13_defo1f" ;1
+flush 22
+msgwnd_enj
+*d58541
+d [lv 0*"11"*"82000484"]`「アイスクリーム！`[@][lv 0*"11"*"82000485"]`　魔女は帰りがすごく遅かったんだから、その頃にはもう溶けちゃってる。`[@][lv 0*"11"*"82000486"]`だから食べられない！」`[\]
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58542
+d [lv 0*"05"*"81000171"]`「さすが！`[@][lv 0*"05"*"81000172"]`　どぅお？`[@][lv 0*"05"*"81000173"]`　縁寿ちゃんは本当に賢いでしょう？」`[\]
+lss s0_8,"goh","a11_omakase1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_goh
+*d58543
+d [lv 0*"17"*"81700048"]`「おめでとうございます、縁寿さまっ。`[@][lv 0*"17"*"81700049"]`感服いたしました。`[@][lv 0*"17"*"81700050"]`この郷田の、腕によりを掛けた難問が、こうもあっさり解かれてしまうとは…！」`[\]
+lss s0_9,"en2","a11_defo1c" ;1
+flush 80
+msgwnd_enj
+*d58544
+d [lv 0*"11"*"82000487"]`「全然簡単だったもん。`[@][lv 0*"11"*"82000488"]`絵羽伯母さんの問題の方が難しかった」`[\]
+lss s0_10,"eva","b25_hohoemi2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58545
+d [lv 0*"05"*"81000174"]`「くすくす、ありがと」`[\]
+lss s0_8,"goh","a11_omakase1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_goh
+*d58546
+d [lv 0*"17"*"81700051"]`「おめでとうございます。`[@][lv 0*"17"*"81700052"]`こちらが、私の問題に正解したご褒美のメダルでございます」`[\]
+lss s0_9,"en2","a11_defo1a" ;1
+flush 80
+msgwnd_enj
+*d58547
+d [lv 0*"11"*"82000489"]`「ありがとう！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_non
+*d58548
+d `よしよし、こんなの楽勝楽勝。`[@]`{n}次は熊沢さんの問題に挑戦してみよう。`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+*uu_uu_0x5afaef
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"kum","a11_defo2" ;1
+flush 22
+wait 500
+lss s0_9,"kum","a11_warai1" ;1
+flush 80
+msgwnd_kum
+*d58549
+d [lv 0*"18"*"81800019"]`「次は私でございますねぇ。`[@][lv 0*"18"*"81800020"]`では取って置きの、難し〜い問題で縁寿さまを試してみましょうね。`[@][lv 0*"18"*"81800021"]`では参りますよ？」`[\]
+lss s0_10,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_enj
+*d58550
+d [lv 0*"11"*"82000490"]`「難しいって、`[@][lv 0*"11"*"82000491"]`どのくらい？」`[\]
+csp_slot s0_9
+lss s0_8,"kum","a11_defo2" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_kum
+*d58551
+d [lv 0*"18"*"81800022"]`「ほっほほほほほほ。`[@][lv 0*"18"*"81800023"]`それは挑戦してみてのお楽しみ。`[@][lv 0*"18"*"81800024"]`それでは私はサバのデザートの問題を出しましょう」`[\]
+lss s0_10,"en2","a11_defo2a" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58552
+d [lv 0*"11"*"82000492"]`「サバのデザート…？」`[\]
+lss s0_9,"eva","a11_defo1" ;1
+flush 24
+msgwnd_eva
+*d58553
+d [lv 0*"05"*"81000175"]`「熊沢さんのこと、きっとおかしな問題に違いないわ。`[@][lv 0*"05"*"81000176"]`注意してかかりましょ」`[\]
+lss s0_10,"en2","a11_defo1d" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58554
+d [lv 0*"11"*"82000493"]`「うんっ」`[\]
+mov %eva_button_enabled,1
+mov %quiz_answer_count,4
+*uu_uu_0x5b001e
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mondai_5"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5b00c4
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5b0527
+if %branch_tmp = 1 goto *uu_uu_0x5b0527
+if %branch_tmp = 2 goto *uu_uu_0x5b10d5
+if %branch_tmp = 3 goto *uu_uu_0x5b0527
+if %branch_tmp = 4 goto *uu_uu_0x5b00f4
+*uu_uu_0x5b00f4
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"en2","a11_defo2" ;1
+flush 22
+*d58555
+d [lv 0*"11"*"82000494"]`「伯母さん、わかった？」`[\]
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d58556
+d [lv 0*"05"*"81000177"]`「一文字を足せばって言うんだから、ダジャレみたいな答えに違いないわ。`[@][lv 0*"05"*"81000178"]`サバに一文字を加えて、デザートにならないか考えて……。`[@][lv 0*"05"*"81000179"]`……あ、わーかった！」`[\]
+lss s0_9,"en2","a11_defo1b" ;1
+flush 80
+msgwnd_enj
+*d58557
+d [lv 0*"11"*"82000495"]`「え？！`[@][lv 0*"11"*"82000496"]`　何？　何？！」`[\]
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_eva
+*d58558
+d [lv 0*"05"*"81000180"]`「とにかく、語尾に一文字を足してみて？`[@][lv 0*"05"*"81000181"]`　それがまさに、答えそのものだから」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+add %eva_hint_counter,1
+mov %eva_button_enabled,0
+goto *uu_uu_0x5b001e
+*uu_uu_0x5b0527
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"kum","a11_defo2" ;1
+flush 22
+msgwnd_kum
+*d58559
+d [lv 0*"18"*"81800025"]`「ぶっぶー。`[@][lv 0*"18"*"81800026"]`ハズレでございますよー」`[\]
+lss s0_10,"en2","a15_defo2b" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_enj
+*d58560
+d [lv 0*"11"*"82000497"]`「えー？！`[@][lv 0*"11"*"82000498"]`　わかんない！`[@][lv 0*"11"*"82000499"]`　全然わかんない…！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_kum
+*d58561
+d [lv 0*"18"*"81800027"]`「ほっほほほほほほ、ハズレはハズレでございます。`[@][lv 0*"18"*"81800028"]`ちょっと縁寿さまには難しゅうございましたでしょうか」`[\]
+msgwnd_eva
+*d58562
+d [lv 0*"05"*"81000182"]`「もう、熊沢さんったら。`[@][lv 0*"05"*"81000183"]`いやらしい問題ねぇ…」`[\]
+seplay 1,7,71
+agpt quakexcycle,17
+agpt quakexamp,30
+agpt quakexamp,0,167,1
+rumble 63,500
+gptwait quakexamp
+msgwnd_enj
+*d58563
+d [lv 0*"11"*"82000500"]`「こんなのおかしい！`[@][lv 0*"11"*"82000501"]`　サバがデザートになんかなるわけない！`[@][lv 0*"11"*"82000502"]`　答えは何？`[@][lv 0*"11"*"82000503"]`　教えて！」`[\]
+msgwnd_kum
+*d58564
+d [lv 0*"18"*"81800029"]`「ほほほほほ、それを教えたら面白くございません。`[@][lv 0*"18"*"81800030"]`早く答えを見つけないと、……本当にデザートがサバになってしまいますよぅ？`[@][lv 0*"18"*"81800031"]`　いっひひひひひひひひひ……」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"kum","a11_warai1" ;1
+lss s0_10,"en2","a15_defo4b" ;1
+aspt2 xpos,s0_10,550
+flush 24
+seplay 1,6,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_enj
+*d58565
+d [lv 0*"11"*"82000504"]`「答えー、教えてー」`[\]
+lss s0_9,"kum","a11_defo2" ;1
+flush 80
+msgwnd_kum
+*d58566
+d [lv 0*"18"*"81800032"]`「だぁめでございますよ」`[\]
+msgwnd_non
+*d58567
+d `熊沢は朗らかに笑っているが、頑として譲らない。`[@]`{n}いくら粘っても、答えは教えてくれないだろう。`[\]
+lss s0_8,"goh","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_goh
+*d58568
+d [lv 0*"17"*"81700053"]`「以上で、私どもの問題はおしまいでございます。`[@][lv 0*"17"*"81700054"]`他の方も縁寿さまが挑みに来るのを心待ちにしているでしょう。`[@][lv 0*"17"*"81700055"]`さぁ、次の方へぜひ挑戦を」`[\]
+lss s0_9,"kum","a11_defo1" ;1
+flush 80
+msgwnd_kum
+*d58569
+d [lv 0*"18"*"81800033"]`「縁寿さまのご武運をお祈りいたしておりますよ」`[\]
+lss s0_10,"en2","a11_defo2b" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58570
+d [lv 0*"11"*"82000505"]`「うんっ。`[@][lv 0*"11"*"82000506"]`もっともっとがんばって、いっぱいメダルを集める！」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_eva
+*d58571
+d [lv 0*"05"*"81000184"]`「そうよ、挫けない挫けない。`[@][lv 0*"05"*"81000185"]`まだまだがんばりましょ！」`[\]
+textoff
+waits 167
+seplay 1,3,71
+csp_slot s0_8
+csp_slot s0_10
+flush 24
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+msgwnd_non
+*d58572
+d `私たちは駆け出す。`[@]`{n}さぁ、次は誰に挑もうかな…！`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+goto *uu_uu_0x5b3ca9
+*uu_uu_0x5b10d5
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+flush 22
+lss s0_9,"en2","a13_defo1b" ;1
+flush 26
+msgwnd_enj
+*d58573
+d [lv 0*"11"*"82000507"]`「わかった！`[@][lv 0*"11"*"82000508"]`　足す文字は“く”！`[@][lv 0*"11"*"82000509"]`　サバに“く”を足して、サバク！」`[\]
+lss s0_10,"kum","a12_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kum
+*d58574
+d [lv 0*"18"*"81800034"]`「ほっほほほほほほ、`[@][lv 0*"18"*"81800035"]`正解でございますよ」`[\]
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_eva
+*d58575
+d [lv 0*"05"*"81000186"]`「サバクはつまり“砂漠”のこと。`[@][lv 0*"05"*"81000187"]`砂漠は英語でデザートって読むものね…！」`[\]
+lss s0_9,"en2","a11_defo1d" ;1
+flush 80
+msgwnd_enj
+*d58576
+d [lv 0*"11"*"82000510"]`「縁寿、英語知ってた。`[@][lv 0*"11"*"82000511"]`すごい？　すごい？！」`[\]
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_eva
+*d58577
+d [lv 0*"05"*"81000188"]`「さっすが縁寿ちゃん、賢ぉい！`[@][lv 0*"05"*"81000189"]`　頭なでなでしてあげる…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+seplay 1,48,71
+wait 500
+seplay 1,48,71
+msgwnd_enj
+*d58578
+d [lv 0*"11"*"82000512"]`「んーー。`[@][lv 0*"11"*"82000513"]`伯母さんに撫でてもらうの、気持ちよくて好き」`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"kum","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kum
+*d58579
+d [lv 0*"18"*"81800036"]`「サバに“く”を足したらデザートにもなるなんて。`[@][lv 0*"18"*"81800037"]`本当にサバはすごいですねぇ」`[\]
+lss s0_8,"goh","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_goh
+*d58580
+d [lv 0*"17"*"81700056"]`「そんなダジャレでデザートをサバにした日には、私の首が飛んでしまいそうです……」`[\]
+lss s0_9,"en2","a11_defo3" ;1
+flush 24
+msgwnd_enj
+*d58581
+d [lv 0*"11"*"82000514"]`「縁寿もやだ。`[@][lv 0*"11"*"82000515"]`デザートはアイスがいい」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58582
+d [lv 0*"05"*"81000190"]`「あっはははははは、確かに。`[@][lv 0*"05"*"81000191"]`大丈夫よね？`[@][lv 0*"05"*"81000192"]`　今日のデザート」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_kum
+*d58583
+d [lv 0*"18"*"81800038"]`「をっほほほほほほほ……。`[@][lv 0*"18"*"81800039"]`厨房で、サバのフルーツパフェが、皆さんを驚かそうと待ち構えておりますよぅ？」`[\]
+msgwnd_enj
+*d58584
+d [lv 0*"11"*"82000516"]`「そんなの嫌ぁ！！」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58585
+d `みんなが大笑いする。`[\]
+*d58586
+d `私はしばらくの間、サバが綺麗に盛り付けられてパフェになっているという恐ろしい想像に、苛まれ続けるのだった…。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"en2","a11_defo3a" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"kum","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+wait 500
+lss s0_8,"kum","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kum
+*d58587
+d [lv 0*"18"*"81800040"]`「これは残念……。`[@][lv 0*"18"*"81800041"]`縁寿さまに素敵なご褒美をあげないよう、邪魔をしてやろうと、知恵を絞った問題がこんなにもあっさり解かれるとは」`[\]
+msgwnd_non
+*d58588
+d `とは言いながらも、熊沢は朗らかに笑う。`[@]`{n}彼女のしわしわの手に、金色のメダルが輝いている。`[\]
+csp_slot s0_10
+lss s0_9,"en2","a11_defo1" ;1
+flush 24
+*d58589
+d `縁寿はそれを受け取った。`[\]
+lss s0_8,"kum","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kum
+*d58590
+d [lv 0*"18"*"81800042"]`「さぁ、これで私たちの問題はおしまいですよ」`[\]
+lss s0_10,"goh","a11_omakase1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_goh
+*d58591
+d [lv 0*"17"*"81700057"]`「この調子で、どんどんメダルを手に入れて、お館様から素敵なご褒美を獲得して下さいね！」`[\]
+lss s0_9,"en2","a11_defo1b" ;1
+flush 80
+msgwnd_enj
+*d58592
+d [lv 0*"11"*"82000517"]`「うんっ。ありがとう。`[@][lv 0*"11"*"82000518"]`もっともっとがんばるね…！`[@][lv 0*"11"*"82000519"]`　やったね、絵羽伯母さん！」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d58593
+d [lv 0*"05"*"81000193"]`「うふふ！`[@][lv 0*"05"*"81000194"]`　この調子でどんどん行きましょ！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+msgwnd_non
+*d58594
+d `私たちは駆け出す。`[@]`{n}さぁ、次は誰に挑もうかな…！`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+mov %branch_tmp,%pair_answers_counter
+if %branch_tmp = 0 goto *uu_uu_0x5b3ca9
+if %branch_tmp = 1 goto *uu_uu_0x5b3ca9
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"goh","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"kum","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+bgmplay 9,71,0
+msgwnd_kum
+*d58595
+d [lv 0*"18"*"81800043"]`「霧江さまの陰に隠れて、おどおどしていた幼子が、`[@][lv 0*"18"*"81800044"]`いつの間にかあんなに元気になって…」`[\]
+lss s0_8,"goh","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_goh
+*d58596
+d [lv 0*"17"*"81700058"]`「……親族会議を重ねる度に、若者の成長を感じるものです。`[@][lv 0*"17"*"81700059"]`あと数年も経てば、縁寿さまも恋を覚え、化粧を覚え、`[@][lv 0*"17"*"81700060"]`やがては一人前のレディに成長されるのでしょうね」`[\]
+lss s0_10,"kum","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_kum
+*d58597
+d [lv 0*"18"*"81800045"]`「そうですねぇ……。`[@][lv 0*"18"*"81800046"]`普通に、年月を重ねて下さったなら…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"cit_2a"
+color_mod2 s0_3,#ffffff
+flush 22
+msgwnd_non
+*d58598
+d `残酷な運命は、`[@]`……縁寿という雛に、ひとりぼっちの未来を強いる。`[\]
+*d58599
+d `卵は温めなければ、孵らない。`[@]`{n}彼女という卵は、誰にも温められず、孵ることもなく…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_goh
+*d58600
+d [lv 0*"17"*"81700061"]`「縁寿さまは冷え切った卵のまま、`[@][lv 0*"17"*"81700062"]`孤独な未来を迎える他ないのでしょうか…」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"goh","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"kum","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+wait 500
+lss s0_8,"kum","a12_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kum
+*d58601
+d [lv 0*"18"*"81800047"]`「……卵の殻は、いつだって内側から破られるもの。`[@][lv 0*"18"*"81800048"]`……冷え切った殻は、とてもとても硬いでしょうが、それでも破れぬものではありません」`[\]
+lss s0_10,"goh","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_goh
+*d58602
+d [lv 0*"17"*"81700063"]`「縁寿さまに、その強さがあるでしょうか」`[\]
+lss s0_8,"kum","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_kum
+*d58603
+d [lv 0*"18"*"81800049"]`「それを、得ることが出来るか否か。`[@][lv 0*"18"*"81800050"]`それがこの最後のゲームと聞いています」`[\]
+lss s0_10,"goh","a11_komaru2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_goh
+*d58604
+d [lv 0*"17"*"81700064"]`「私たちはもっと、メッセージを送るべきではないでしょうか。`[@][lv 0*"17"*"81700065"]`……せめて温められぬ卵なら、殻が割りやすいよう、少しでも外から叩くとか」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_kum
+*d58605
+d [lv 0*"18"*"81800051"]`「自らの殻を割る力もない雛を、無理に卵の外へ出せば、`[@][lv 0*"18"*"81800052"]`寒風に耐えることは出来ないでしょうね。`[@][lv 0*"18"*"81800053"]`縁寿さまは、その力とたくましさを、自ら得なければならないのです」`[\]
+msgwnd_goh
+*d58606
+d [lv 0*"17"*"81700066"]`「……ですから、その力とたくましさを、`[@][lv 0*"17"*"81700067"]`私たちは何とか伝えることは出来ないんでしょうか」`[\]
+msgwnd_kum
+*d58607
+d [lv 0*"18"*"81800054"]`「言葉とは、与えられるものでなく、受け止めるものです。`[@][lv 0*"18"*"81800055"]`……私たちが何を与えようとも、縁寿さまが受け止めなければ、何の意味もない」`[\]
+msgwnd_goh
+*d58608
+d [lv 0*"17"*"81700068"]`「…………そうですね。`[@][lv 0*"17"*"81700069"]`私たちが何を伝えても、縁寿さまが耳を貸さなければ、意味がない」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"kum","a12_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_kum
+*d58609
+d [lv 0*"18"*"81800056"]`「ほほほほ……。`[@][lv 0*"18"*"81800057"]`見守るしかないんですよ、私たちには。`[@][lv 0*"18"*"81800058"]`馬を水場に連れて行くことは出来ても、飲ませることは出来ないのですから」`[\]
+lss s0_8,"goh","a11_omakase2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_goh
+*d58610
+d [lv 0*"17"*"81700070"]`「縁寿さまが、より良い未来を自ら選択してくれることを、`[@][lv 0*"17"*"81700071"]`……祈るしかありませんな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"air_out2b"
+color_mod2 s0_3,#ffffff
+lss s0_8,"but","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+lss s0_9,"en2","a11_defo1" ;1
+color_mod2 s0_9,#ffffff
+lss s0_10,"kir","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+flush 22
+msgwnd_kum
+*d58611
+d [lv 0*"18"*"81800059"]`「縁寿さまが、諦めと悲しみを紛らわせるためだけの怒りに身を任せず。`[@][lv 0*"18"*"81800060"]`……本当に縁寿さまが求めておられる、たった一つの願いに純粋であってさえくれれば。`[@][lv 0*"18"*"81800061"]`彼女は絶対に、自分の一番の願いを叶えることが出来るでしょう」`[\]
+msgwnd_goh
+*d58612
+d [lv 0*"17"*"81700072"]`「皮肉なものです。`[@][lv 0*"17"*"81700073"]`……その一番の願いを、自ら一番最初に、否定されているのですから」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"goh","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"kum","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"kum","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_kum
+*d58613
+d [lv 0*"18"*"81800062"]`「笑う門に福来る。`[@][lv 0*"18"*"81800063"]`泣きっ面に蜂。`[@][lv 0*"18"*"81800064"]`信ずる者は救われる。`[@][lv 0*"18"*"81800065"]`……人の思いが、その強さが、自分の未来を自ら生み出すのです」`[\]
+lss s0_8,"goh","a11_iiwake1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_goh
+*d58614
+d [lv 0*"17"*"81700074"]`「せめて、その言葉だけでも掛けてあげたいものですが……」`[\]
+lss s0_10,"kum","a12_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_kum
+*d58615
+d [lv 0*"18"*"81800066"]`「戦人さまも厳しい。`[@][lv 0*"18"*"81800067"]`……そのような言葉さえも許さず、縁寿さまが自分の力だけで気付いてくれることを願っている」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_goh
+*d58616
+d [lv 0*"17"*"81700075"]`「………私たちには、見守ることしか出来ないのですね」`[\]
+msgwnd_kum
+*d58617
+d [lv 0*"18"*"81800068"]`「だから、せめて祈りましょう。`[@][lv 0*"18"*"81800069"]`彼女が、最も望む未来を、その手に掴めるように」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+*uu_uu_0x5b3ca9
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"gen","a21_kashikomari1" ;1
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+bgmplay 43,71,0
+msgwnd_nan
+*d58618
+d [lv 0*"19"*"81900015"]`「おや、私どもをご指名ですか」`[\]
+lss s0_8,"en2","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_enj
+*d58619
+d [lv 0*"11"*"82000520"]`「うん。`[@][lv 0*"11"*"82000521"]`どうせ全員に挑むもん。`[@][lv 0*"11"*"82000522"]`ねー、伯母さん！」`[\]
+csp_slot s0_9
+flush 23
+lss s0_9,"eva","a11_warai1" ;1
+flush 24
+msgwnd_eva
+*d58620
+d [lv 0*"05"*"81000195"]`「ねー！`[@][lv 0*"05"*"81000196"]`　さぁ、私たちに問題を出してちょうだい。`[@][lv 0*"05"*"81000197"]`サクサク解いちゃうんだから！」`[\]
+lss s0_10,"nan","a2_fumu1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_nan
+*d58621
+d [lv 0*"19"*"81900016"]`「はっはっはっは。`[@][lv 0*"19"*"81900017"]`そうですかそうですか。`[@][lv 0*"19"*"81900018"]`では、取って置きの問題を出さないといけませんな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_h1c"
+lss s0_10,"kin","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_kin
+*d58622
+d [lv 0*"01"*"81500232"]`「源次。`[@][lv 0*"01"*"81500233"]`お前も何か出題してやるがいい。`[@][lv 0*"01"*"81500234"]`取って置きをな」`[\]
+lss s0_8,"gen","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_gen
+*d58623
+d [lv 0*"14"*"81600052"]`「畏まりました。`[@][lv 0*"14"*"81600053"]`……それでは、取って置きを」`[\]
+msgwnd_non
+*d58624
+d `うわ。`[\]
+*d58625
+d `源次さんならシンプルな問題を出してくると思ったのに、取って置きとか言い出す。`[@]`怖い。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d58626
+d `でも、いずれは倒す相手。`[@]`怖いとか言ってらんない。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"nan","a1_defo1" ;1
+flush 22
+msgwnd_nan
+*d58627
+d [lv 0*"19"*"81900019"]`「では、私から参りましょう。`[@][lv 0*"19"*"81900020"]`私はお医者さんですからな。`[@][lv 0*"19"*"81900021"]`救急車の問題でも出すとしましょう」`[\]
+mov %eva_button_enabled,1
+mov %quiz_answer_count,5
+mov %pair_answers_counter,0
+*uu_uu_0x5b4558
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mondai_6"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5b45fe
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5b4c58
+if %branch_tmp = 1 goto *uu_uu_0x5b4c58
+if %branch_tmp = 2 goto *uu_uu_0x5b4c58
+if %branch_tmp = 3 goto *uu_uu_0x5b5823
+if %branch_tmp = 4 goto *uu_uu_0x5b4c58
+if %branch_tmp = 5 goto *uu_uu_0x5b4632
+*uu_uu_0x5b4632
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_enj
+*d58628
+d [lv 0*"11"*"82000523"]`「“？”は数字なの？`[@][lv 0*"11"*"82000524"]`　でも“救急”は文字でしょ？`[@][lv 0*"11"*"82000525"]`　数字＋文字なんて計算できないよ？」`[\]
+lss s0_10,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_eva
+*d58629
+d [lv 0*"05"*"81000198"]`「救急ってのが、何だかダジャレっぽいわねぇ。`[@][lv 0*"05"*"81000199"]`ほら、キューキューって“９９”とも聞こえない？」`[\]
+lss s0_8,"en2","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d58630
+d [lv 0*"11"*"82000526"]`「つまり、？に９９を足すと救急車になるってこと？」`[\]
+lss s0_10,"eva","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eva
+*d58631
+d2 [lv 0*"05"*"81000200"]`「？＋９９で出てくる数字が、どうして救急車になるのかしら。`[@][#][*][lv 0*"05"*"81000201"]`…………あ、わーかった！」`[\]
+wait_on_d 0
+lss s0_10,"eva","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"en2","a11_defo1b" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d58632
+d [lv 0*"11"*"82000527"]`「え、本当？！`[@][lv 0*"11"*"82000528"]`　何々、どうして？！」`[\]
+lss s0_10,"eva","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eva
+*d58633
+d [lv 0*"05"*"81000202"]`「ヒントね。`[@][lv 0*"05"*"81000203"]`救急車じゃない赤いランプの車とは、パトカーのことよ？`[@][lv 0*"05"*"81000204"]`　くすくす、もうわかったんじゃない？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+add %eva_hint_counter,1
+mov %eva_button_enabled,0
+goto *uu_uu_0x5b4558
+*uu_uu_0x5b4c58
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a15_defo3a" ;1
+flush 22
+msgwnd_enj
+*d58634
+d [lv 0*"11"*"82000529"]`「え、……んーー……、`[@][lv 0*"11"*"82000530"]`……わかんない…」`[\]
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_nan
+*d58635
+d [lv 0*"19"*"81900022"]`「おやおや、わかりませんかな？`[@][lv 0*"19"*"81900023"]`　簡単な問題のつもりだったんですがな」`[\]
+msgwnd_non
+*d58636
+d `わからなかった問題にそう言われると、カチンと来る。`[\]
+*d58637
+d `しかし、悔しいけれど、カチンと来ようがゴチンと来ようが、答えはさっぱりだった。`[\]
+lss s0_10,"eva","a11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58638
+d [lv 0*"05"*"81000205"]`「んーー、惜しいわねぇ。`[@][lv 0*"05"*"81000206"]`いいところまで思い付いてたと思うんだけど…」`[\]
+msgwnd_non
+*d58639
+d `絵羽伯母さんは答えがわかってたらしい。`[@]`私に同じものが閃かなくて残念そうだった。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"kin","a11_fumu1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_kin
+*d58640
+d2 [lv 0*"01"*"81500235"]`「………むむむむ…？`[@][#][*][lv 0*"01"*"81500236"]`　あぁ、なるほど、わかったぞ！`[@][lv 0*"01"*"81500237"]`　救急車から２を引き、さらに６０を足すと、天気までわかるな」`[\]
+wait_on_d 0
+lss s0_10,"kin","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_nan
+*d58641
+d [lv 0*"19"*"81900024"]`「お見事だ、金蔵さん。`[@][lv 0*"19"*"81900025"]`では、このメダルは金蔵さんに渡さなくてはなりませんな」`[\]
+csp_slot s0_10
+lss s0_9,"kin","a11_warai1" ;1
+flush 24
+lss s0_9,"kin","a21_akuwarai2" ;1
+flush 80
+msgwnd_kin
+*d58642
+d [lv 0*"01"*"81500238"]`「わはははははは。`[@][lv 0*"01"*"81500239"]`悪いな、縁寿。`[@][lv 0*"01"*"81500240"]`このメダルはお祖父ちゃんのものだ」`[\]
+lss s0_10,"en2","a15_defo2a" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_enj
+*d58643
+d [lv 0*"11"*"82000531"]`「………悔しくないもん」`[\]
+msgwnd_non
+*d58644
+d `南條の手から、金色のメダルが金蔵に渡される。`[\]
+*d58645
+d `あのメダルは私のものになるはずだったのに……。`[@]`悔やんでも手遅れだ。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d58646
+d `救急車から２を引き６０を足して…？`[@]`　それがどうして天気がわかることに…？？`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_eva
+*d58647
+d [lv 0*"05"*"81000207"]`「天気予報を教えてくれるダイヤルは何番だっけ？」`[\]
+lss s0_10,"en2","a15_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d58648
+d [lv 0*"11"*"82000532"]`「…………？？？」`[\]
+msgwnd_non
+*d58649
+d `やっぱり、さっぱりわからない。`[@]`{n}気を取り直し、源次の問題に挑戦することにしよう。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+goto *uu_uu_0x5b603a
+*uu_uu_0x5b5823
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_enj
+*d58650
+d [lv 0*"11"*"82000533"]`「２０！`[@][lv 0*"11"*"82000534"]`　２０に救急（９９）を加えると、１１９。`[@][lv 0*"11"*"82000535"]`救急車を呼ぶ番号！」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"en2","a13_defo1f" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 25
+wait 500
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_eva
+*d58651
+d [lv 0*"05"*"81000208"]`「１３０から２０を引くと、１１０。`[@][lv 0*"05"*"81000209"]`こっちはパトカーを呼ぶ番号ね」`[\]
+lss s0_9,"nan","a1_fumu1" ;1
+flush 24
+msgwnd_nan
+*d58652
+d [lv 0*"19"*"81900026"]`「お見事！　正解だ。`[@][lv 0*"19"*"81900027"]`やはり縁寿さんは頭が柔軟ですな」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"kin","a21_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_kin
+*d58653
+d [lv 0*"01"*"81500241"]`「おぉおおおぉ、やるではないか、縁寿ぇええぇえぇ！`[@][lv 0*"01"*"81500242"]`　さすが賢いぞ、我が孫よ！」`[\]
+lss s0_9,"nan","a1_defo1" ;1
+flush 80
+msgwnd_nan
+*d58654
+d [lv 0*"19"*"81900028"]`「おめでとう。`[@][lv 0*"19"*"81900029"]`これはあんたのメダルだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58655
+d `南條の手に光る、金色のメダルは今や縁寿のものだ。`[\]
+*d58656
+d `よし、この調子で源次も打ち破って、もう１枚をいただこう。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","a11_warai1" ;1
+flush 22
+msgwnd_eva
+*d58657
+d [lv 0*"05"*"81000210"]`「そうそう、その意気よ。`[@][lv 0*"05"*"81000211"]`どんどん、解いていっちゃいましょ！」`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+*uu_uu_0x5b603a
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mhal_h1c"
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+msgwnd_nan
+*d58658
+d [lv 0*"19"*"81900030"]`「では源次さん、どうぞ」`[\]
+lss s0_10,"kin","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kin
+*d58659
+d [lv 0*"01"*"81500243"]`「我が友は、黙して語らぬがこう見えて博識だ。`[@][lv 0*"01"*"81500244"]`どんな問題が飛び出すやら、私も興味深いぞ」`[\]
+lss s0_24,"gen","a11_majime1" ;1
+flush 24
+msgwnd_gen
+*d58660
+d [lv 0*"14"*"81600054"]`「それでは縁寿さま。`[@][lv 0*"14"*"81600055"]`お覚悟を。`[@][lv 0*"14"*"81600056"]`出題させていただきます」`[\]
+msgwnd_non
+*d58661
+d `……クイズを出すのに、お覚悟を何て言われたのは初めてだ。`[\]
+*d58662
+d `無駄に緊張してしまい、お腹が痛くなる…。`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_eva
+*d58663
+d [lv 0*"05"*"81000212"]`「大丈夫よ。`[@][lv 0*"05"*"81000213"]`しっかり！」`[\]
+msgwnd_non
+*d58664
+d `絵羽伯母さんがぎゅっと手を握ってくれると、お腹の痛みがちょっとだけ和らいだ。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_gen
+*d58665
+d [lv 0*"14"*"81600057"]`「……縁寿さまは、割り算は出来ますか？」`[\]
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_enj
+*d58666
+d [lv 0*"11"*"82000536"]`「う、うん。`[@][lv 0*"11"*"82000537"]`塾で習った」`[\]
+lss s0_9,"eva","a11_defo1" ;1
+flush 24
+msgwnd_eva
+*d58667
+d [lv 0*"05"*"81000214"]`「すごいわね、まだ６歳なのに？」`[\]
+lss s0_10,"gen","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_gen
+*d58668
+d [lv 0*"14"*"81600058"]`「では問題なさそうです。`[@][lv 0*"14"*"81600059"]`出題させていただきます」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58669
+d `困ったな…。`[@]`割り算は一応習ったけど、かなり不得意……。`[\]
+mov %eva_button_enabled,1
+mov %quiz_answer_count,5
+*uu_uu_0x5b6893
+textoff
+waits 167
+lbg s0_3,"mondai_7"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5b6939
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5b71d4
+if %branch_tmp = 1 goto *uu_uu_0x5b71d4
+if %branch_tmp = 2 goto *uu_uu_0x5b71d4
+if %branch_tmp = 3 goto *uu_uu_0x5b71d4
+if %branch_tmp = 4 goto *uu_uu_0x5b7c62
+if %branch_tmp = 5 goto *uu_uu_0x5b696d
+*uu_uu_0x5b696d
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"candle_1"
+flush 22
+set_window_simple 80
+msgwnd_eva
+*d58670
+d2 [lv 0*"05"*"81000215"]`「１時間ごとにその時の長さの半分が燃えるのね…？`[@][#][*][lv 0*"05"*"81000216"]`　最初の１時間で５ｃｍの半分。`[@][#][*][lv 0*"05"*"81000217"]`それが次の１時間でさらに半分。`[@][#][*][lv 0*"05"*"81000218"]`そして３時間目でさらに半分……」`[\]
+wait_on_d 0
+lbg s0_3,"candle_2"
+flush 22
+d_continue
+wait_on_d 1
+lbg s0_3,"candle_3"
+flush 22
+d_continue
+wait_on_d 2
+lbg s0_3,"candle_4"
+flush 22
+d_continue
+wait_on_d -1
+msgwnd_enj
+*d58671
+d [lv 0*"11"*"82000538"]`「……電卓ないとよくわかんない。`[@][lv 0*"11"*"82000539"]`伯母さん、わかる？」`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","a11_akire1" ;1
+flush 22
+wait 500
+lss s0_9,"eva","a11_warai1" ;1
+flush 80
+msgwnd_eva
+*d58672
+d [lv 0*"05"*"81000219"]`「あ、……わーかった。`[@][lv 0*"05"*"81000220"]`くす、意地悪な問題だわ、これ」`[\]
+lss s0_10,"en2","a15_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58673
+d [lv 0*"11"*"82000540"]`「意地悪って？」`[\]
+lss s0_9,"eva","a11_defo1" ;1
+flush 80
+msgwnd_eva
+*d58674
+d [lv 0*"05"*"81000221"]`「これ、割り算は関係ないわ。`[@][lv 0*"05"*"81000222"]`よく問題の文章を読み返してみて？」`[\]
+msgwnd_non
+*d58675
+d `……えっと、`[@]`……何だったっけ……。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+add %eva_hint_counter,1
+mov %eva_button_enabled,0
+goto *uu_uu_0x5b6893
+*uu_uu_0x5b71d4
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"gen","a11_defo1" ;1
+flush 22
+wait 1000
+lss s0_9,"gen","a11_komaru1" ;1
+flush 80
+msgwnd_gen
+*d58676
+d [lv 0*"14"*"81600060"]`「申し訳ございませんが、ハズレでございます」`[\]
+lss s0_10,"en2","a15_defo2b" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_enj
+*d58677
+d [lv 0*"11"*"82000541"]`「えー？！`[@][lv 0*"11"*"82000542"]`　どうして？！`[@][lv 0*"11"*"82000543"]`　縁寿、ちゃんと計算した…！」`[\]
+lss s0_8,"eva","b25_hohoemi2" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_eva
+*d58678
+d [lv 0*"05"*"81000223"]`「この問題はね、計算の必要はなかったのよ？`[@][lv 0*"05"*"81000224"]`　んー、すっかり騙されちゃったわねぇ…」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"kin","a21_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_kin
+*d58679
+d [lv 0*"01"*"81500245"]`「わっははははははは。`[@][lv 0*"01"*"81500246"]`残念であるな、縁寿よ。`[@][lv 0*"01"*"81500247"]`南條はわかったか？」`[\]
+csp_slot s0_9
+flush 23
+lss s0_9,"nan","a1_fumu1" ;1
+flush 24
+msgwnd_nan
+*d58680
+d [lv 0*"19"*"81900031"]`「えぇ、もちろん。`[@][lv 0*"19"*"81900032"]`割り算は不要ですな。`[@][lv 0*"19"*"81900033"]`これは縁寿さんでも解ける、やさしい問題でした」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58681
+d `絵羽伯母さんだけでなく、みんなに計算の必要はなかったと言われる。`[\]
+*d58682
+d `せっかく割り算がんばったのに……。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_8,"gen","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_gen
+*d58683
+d [lv 0*"14"*"81600061"]`「私からの問題は、以上でございます。`[@][lv 0*"14"*"81600062"]`他の方も、縁寿さまが挑みに来るのを、心待ちにしておられるでしょう。`[@][lv 0*"14"*"81600063"]`さぁ、ぜひ次の方へ挑戦を」`[\]
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_nan
+*d58684
+d [lv 0*"19"*"81900034"]`「がんばれ、縁寿さん。`[@][lv 0*"19"*"81900035"]`あんたの武運を祈ってるよ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d58685
+d [lv 0*"05"*"81000225"]`「そうよ。`[@][lv 0*"05"*"81000226"]`こんなところでへこたれてなんかいられないわ！`[@][lv 0*"05"*"81000227"]`　ここから挽回よ」`[\]
+lss s0_24,"en2","a11_defo1" ;1
+flush 24
+msgwnd_enj
+*d58686
+d [lv 0*"11"*"82000505"]`「うんっ。`[@][lv 0*"11"*"82000506"]`もっともっとがんばって、いっぱいメダルを集める！」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+msgwnd_non
+*d58687
+d `私たちは駆け出す。`[\]
+*d58688
+d `まだまだ問題をくれる人は大勢いる。`[@]`メダルをもらえるチャンスだっていっぱいある。`[\]
+*d58689
+d `さぁ、次は誰に挑もうかな…！`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+goto *uu_uu_0x5bac09
+*uu_uu_0x5b7c62
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"en2","a11_defo3b" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+lss s0_10,"en2","a11_defo3a" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58690
+d [lv 0*"11"*"82000546"]`「……５ｃｍが１時間で２.５ｃｍになって、`[@][lv 0*"11"*"82000547"]`また１時間で１.２５ｃｍになって、`[@][lv 0*"11"*"82000548"]`また１時間で０.６２５ｃｍになって……」`[\]
+lss s0_8,"gen","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_gen
+*d58691
+d [lv 0*"14"*"81600064"]`「………………………」`[\]
+lss s0_9,"eva","a11_hohoemi1" ;1
+flush 24
+msgwnd_eva
+*d58692
+d [lv 0*"05"*"81000228"]`「縁寿ちゃん。`[@][lv 0*"05"*"81000229"]`計算は必要ないのよ。`[@][lv 0*"05"*"81000230"]`問題をよく思い出してみて…？`[@][lv 0*"05"*"81000231"]`　ロウソクは、……何ｃｍになったら消えちゃうんだっけ…？」`[\]
+seplay 1,48,71
+lss s0_10,"en2","a13_defo1a" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58693
+d [lv 0*"11"*"82000549"]`「あ！`[@][lv 0*"11"*"82000550"]`　騙されるとこだった…！`[@][lv 0*"11"*"82000551"]`　長さが１ｃｍになったら消えちゃうんだから、どう燃えても関係ないんだ！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58694
+d `このロウソクは、長さが１ｃｍになったら火が消える。`[@]`{n}つまり、１ｃｍ未満には絶対にならないのだ。`[\]
+*d58695
+d `だから正解は５番目の「約１０ｍｍ」だ…！`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_eva
+*d58696
+d [lv 0*"05"*"81000232"]`「その通り…！」`[\]
+lss s0_10,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_gen
+*d58697
+d [lv 0*"14"*"81600065"]`「正解でございます」`[\]
+lss s0_9,"kin","a11_warai1" ;1
+flush 24
+msgwnd_kin
+*d58698
+d [lv 0*"01"*"81500248"]`「おお、素晴らしいぞ、縁寿！`[@][lv 0*"01"*"81500249"]`　よく惑わされなかった！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_enj
+*d58699
+d [lv 0*"11"*"82000552"]`「割り算なんか必要ない問題だった。`[@][lv 0*"11"*"82000553"]`引っ掛かるところだった…！」`[\]
+msgwnd_eva
+*d58700
+d [lv 0*"05"*"81000233"]`「源次さんも意地が悪いわぁ。`[@][lv 0*"05"*"81000234"]`割り算は出来ますか、何て聞いておいて。`[@][lv 0*"05"*"81000235"]`あれが引っ掛けだったわけね？」`[\]
+msgwnd_gen
+*d58701
+d [lv 0*"14"*"81600066"]`「はい。`[@][lv 0*"14"*"81600067"]`申し訳ございませんでした」`[\]
+msgwnd_nan
+*d58702
+d [lv 0*"19"*"81900036"]`「はっははははは。`[@][lv 0*"19"*"81900037"]`源次さんはたまに表情一つ変えずに引っ掛けてきますからなぁ」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"en2","a11_defo1e" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+wait 500
+lss s0_8,"gen","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_gen
+*d58703
+d [lv 0*"14"*"81600068"]`「おめでとうございます、縁寿さま。`[@][lv 0*"14"*"81600069"]`こちらが、私の問題を正解したことの証である、メダルでございます」`[\]
+lss s0_10,"en2","a11_defo1b" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58704
+d [lv 0*"11"*"82000554"]`「ありがとう！`[@][lv 0*"11"*"82000555"]`　えへへ、絵羽伯母さん、またメダルが集まった…！」`[\]
+lss s0_9,"eva","a11_defo1" ;1
+flush 24
+msgwnd_eva
+*d58705
+d [lv 0*"05"*"81000236"]`「うふふ、いい調子ね！」`[\]
+lss s0_10,"en2","a11_defo1d" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58706
+d [lv 0*"11"*"82000556"]`「まだまだ集める。`[@][lv 0*"11"*"82000557"]`いっぱい集めて、お祖父さまに素敵なご褒美をもらうの！」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"kin","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_kin
+*d58707
+d [lv 0*"01"*"81500250"]`「うむ。`[@][lv 0*"01"*"81500251"]`張り切るが良いぞ、我が孫よ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_h1c"
+lss s0_9,"nan","a1_defo1" ;1
+flush 23
+msgwnd_nan
+*d58708
+d [lv 0*"19"*"81900034"]`「がんばれ、縁寿さん。`[@][lv 0*"19"*"81900035"]`あんたの武運を祈ってるよ」`[\]
+lss s0_8,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_gen
+*d58709
+d [lv 0*"14"*"81600070"]`「他の方もお待ちでしょう。`[@][lv 0*"14"*"81600071"]`さぁ、ぜひ次の方に挑戦を」`[\]
+lss s0_10,"en2","a11_defo1b" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_enj
+*d58710
+d [lv 0*"11"*"82000517"]`「うんっ。ありがとう。`[@][lv 0*"11"*"82000559"]`もっともっとがんばるね…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+msgwnd_non
+*d58711
+d `私たちは駆け出す。`[\]
+*d58712
+d `まだまだ問題をくれる人は大勢いる。`[@]`メダルをもらえるチャンスだっていっぱいある。`[\]
+*d58713
+d `さぁ、次は誰に挑もうかな…！`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+mov %branch_tmp,%pair_answers_counter
+if %branch_tmp = 0 goto *uu_uu_0x5bac09
+if %branch_tmp = 1 goto *uu_uu_0x5bac09
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d58714
+d `縁寿と絵羽が駆け出したあと、`[@]`……その様子を見守っていた戦人がやって来る。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"but","b11_defo3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+bgmplay 10,71,0
+msgwnd_but
+*d58715
+d [lv 0*"10"*"80100398"]`「縁寿の調子はどうかな」`[\]
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_kin
+*d58716
+d [lv 0*"01"*"81500252"]`「戦人か。`[@][lv 0*"01"*"81500253"]`調子はわからぬが、楽しんではおるようだぞ」`[\]
+lss s0_10,"but","b11_futeki1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_but
+*d58717
+d [lv 0*"10"*"80100399"]`「源次さんの問題、聞いてたぜ。`[@][lv 0*"10"*"80100400"]`俺もうっかり騙されちまうところだったぜ」`[\]
+lss s0_9,"gen","a21_kashikomari1" ;1
+flush 24
+msgwnd_gen
+*d58718
+d [lv 0*"14"*"81600072"]`「恐縮でございます」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_but
+*d58719
+d [lv 0*"10"*"80100401"]`「しかし意外だぜ。`[@][lv 0*"10"*"80100402"]`源次さんが、こういうフェイクっぽい問題を出すなんてな。`[@][lv 0*"10"*"80100403"]`もっと素直な、わかりやすい問題を出すとばっかり思ってたぜ」`[\]
+msgwnd_kin
+*d58720
+d [lv 0*"01"*"81500254"]`「はっははははははは。`[@][lv 0*"01"*"81500255"]`我が友は無口であるから、そう思われがちであるが。`[@][lv 0*"01"*"81500256"]`……こやつめ、こう見えてなかなかの策士」`[\]
+msgwnd_nan
+*d58721
+d [lv 0*"19"*"81900040"]`「ですな。`[@][lv 0*"19"*"81900041"]`源次さんとチェスを戦えば、それがよくわかりますぞ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"gen","a21_kashikomari1" ;1
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+wait 500
+lss s0_8,"kin","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_kin
+*d58722
+d [lv 0*"01"*"81500257"]`「私とて時折、騙される。`[@][lv 0*"01"*"81500258"]`この真面目そうな顔で、しゃあしゃあと私を引っ掛けるのだ。`[@][lv 0*"01"*"81500259"]`昔からそうであるぞ。`[@][lv 0*"01"*"81500260"]`なのに何度騙されても私は引っ掛かる。`[@][lv 0*"01"*"81500261"]`わっはっはははははははは」`[\]
+lss s0_10,"but","b11_oya2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_but
+*d58723
+d [lv 0*"10"*"80100404"]`「そういえばさ。`[@][lv 0*"10"*"80100405"]`………源次さんと祖父さまって、どういう縁なんだ？」`[\]
+lss s0_8,"kin","a11_fumu1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_non
+*d58724
+d `金蔵が一瞬だけ、源次の表情をうかがう。`[\]
+*d58725
+d `源次がわずかでも首を横に振れば、それに触れるつもりはなかったらしい。`[\]
+lss s0_9,"gen","a11_majime1" ;1
+flush 80
+*d58726
+d `しかし、源次は今さら隠す話でもないと、自ら口を開いた。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_gen
+*d58727
+d [lv 0*"14"*"81600073"]`「……私とお館様はかつて、台湾にてご縁がありました」`[\]
+msgwnd_kin
+*d58728
+d [lv 0*"01"*"81500262"]`「わっはっは、ご縁とはよそよそしい…！`[@][lv 0*"01"*"81500263"]`　悪友であるわ！`[@][lv 0*"01"*"81500264"]`　こやつも私も、金持ちの放蕩息子。`[@][lv 0*"01"*"81500265"]`親に迷惑を掛けてばかりのろくでなしであったわ」`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"but","b11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_but
+*d58729
+d [lv 0*"10"*"80100406"]`「源次さんが放蕩息子…？`[@][lv 0*"10"*"80100407"]`　そりゃびっくりだぜ……。`[@][lv 0*"10"*"80100408"]`じゃあ、源次さんもかつて台湾に移住してて、そこで祖父さまに？」`[\]
+lss s0_8,"gen","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_gen
+*d58730
+d [lv 0*"14"*"81600074"]`「……………いえ。`[@][lv 0*"14"*"81600075"]`私は台湾の人間でした」`[\]
+lss s0_9,"nan","a1_fumu1" ;1
+flush 24
+msgwnd_nan
+*d58731
+d [lv 0*"19"*"81900042"]`「源次さんは台湾の出身なのです。`[@][lv 0*"19"*"81900042b"]`………いえ、戦前は日本領でしたから、源次さんももちろん日本人でしたがな」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"kin","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_kin
+*d58732
+d [lv 0*"01"*"81500266"]`「負けん気の強い男でな。`[@][lv 0*"01"*"81500267"]`出会ったばかりの頃は喧嘩ばかりよ。`[@][lv 0*"01"*"81500268"]`意気投合してからは、竹馬の友と呼ぶに相応しい最高の友人であった」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_gen
+*d58733
+d [lv 0*"14"*"81600076"]`「……戦後に色々と混乱がありました。`[@][lv 0*"14"*"81600077"]`その混乱の中、私を助けて下さったのがお館様なのです。`[@][lv 0*"14"*"81600078"]`……その時のご恩は、生涯かけても、返し切れないものです」`[\]
+msgwnd_kin
+*d58734
+d [lv 0*"01"*"81500269"]`「………それを言うな、我が友よ。`[@][lv 0*"01"*"81500270"]`……私がもう少し上手に説得できていれば、お前の家族たちも連れて来ることが出来た…。`[@][lv 0*"01"*"81500271"]`私が不甲斐ないばかりに、お前しか救えなかった…」`[\]
+textoff
+waits 167
+lbg s0_3,"sea_1cf"
+color_mod2 s0_3,#ffffff
+flush 22
+msgwnd_non
+*d58735
+d `台湾の歴史には詳しくないが、`[@]`戦争が終わって日本が引き上げた後にも、色々な混乱があったらしい。`[\]
+*d58736
+d `金蔵はその混乱をいち早く察し、`[@]`源次とその一族が脱出できるよう手配した。`[\]
+*d58737
+d `しかし、源次の一族は台湾において大きな財産を保有していた。`[@]`それを捨てることが出来ず、台湾に残ることを選んだのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"gold1"
+color_mod2 s0_3,#ffffff
+flush 22
+*d58738
+d `その財産は、当時の体制下によって築き上げられたものだった。`[\]
+*d58739
+d `そんな彼らが、戦後の新しい体制下で歓迎されたとは、思い難い。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d58740
+d `様々な混乱が起こった。`[@]`そして、源次だけが難を逃れたのだ。`[\]
+*d58741
+d `……放蕩息子のろくでなしと金蔵が称す彼が、`[@]`今日のような性格に激変するような、どんな体験があったのかは、わからない。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+lss s0_8,"kin","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 2
+*d58742
+d `それは二人の間の、友情を巡る物語であり、`[@]`……無関係の人間が歴史書を紐解いて、好き勝手に論じたところで、何の意味もない。`[\]
+*d58743
+d `二人は昔からの旧友であり、そして命の恩人でもあり。`[@]`激動の時代に翻弄されながらも、友情を末永く維持し…。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 22
+*d58744
+d `表向きは使用人の頭ということになっているが、`[@]`……二人きりで書斎にいる時は、少しだけ若い頃に戻って、酒を酌み交わすこともある。`[\]
+*d58745
+d `……今でも、そんな二人なのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d58746
+d `当時を懐かしむ金蔵と源次を残し、戦人はそっと離れる。`[\]
+*d58747
+d `それ以上を聞くのは無粋なことだし、聞く必要もない。`[\]
+*d58748
+d `金蔵と源次が昔からの親友であること。`[@]`{n}そんなことは、すでに知っているのだから。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+*uu_uu_0x5bac09
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"eva","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+bgmplay 187,71,0
+msgwnd_eva
+*d58749
+d [lv 0*"05"*"81000237"]`「どう？`[@][lv 0*"05"*"81000238"]`　次は夏妃伯母さんたちに挑戦してみない？」`[\]
+lss s0_8,"en2","a11_defo1b" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d58750
+d [lv 0*"11"*"82000560"]`「うん。`[@][lv 0*"11"*"82000561"]`やっつけるっ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_cla
+*d58751
+d [lv 0*"02"*"80800049"]`「はははは、胸を貸そうじゃないか」`[\]
+lss s0_9,"nat","a11_warai1" ;1
+flush 24
+msgwnd_nat
+*d58752
+d [lv 0*"03"*"80900028"]`「私たちも手応えのある問題を用意しておきました」`[\]
+lss s0_8,"cla","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_cla
+*d58753
+d [lv 0*"02"*"80800050"]`「私から出すかね。`[@][lv 0*"02"*"80800051"]`それとも君から？」`[\]
+lss s0_9,"nat","a11_tukare2" ;1
+flush 80
+msgwnd_nat
+*d58754
+d [lv 0*"03"*"80900029"]`「では私から」`[\]
+lss s0_8,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_cla
+*d58755
+d [lv 0*"02"*"80800052"]`「うむ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_9,"nat","a11_warai1" ;1
+flush 80
+msgwnd_nat
+*d58756
+d [lv 0*"03"*"80900030"]`「今から言うのをよく聞いて下さい。`[@][lv 0*"03"*"80900031"]`白黒白黒白？黒白黒白黒白」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"mhal_h1c"
+lss s0_10,"en2","a11_defo2a" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58757
+d [lv 0*"11"*"82000562"]`「え？`[@][lv 0*"11"*"82000563"]`　白黒白黒…、……え？？」`[\]
+lss s0_8,"nat","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_nat
+*d58758
+d [lv 0*"03"*"80900032"]`「もう一度言いますよ。`[@][lv 0*"03"*"80900033"]`白黒白黒白？黒白黒白黒白。`[@][lv 0*"03"*"80900034"]`……この？には何が入るでしょう」`[\]
+msgwnd_non
+*d58759
+d `これは、……とんでもない難問だ。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d58760
+d `白黒白黒白？黒白黒白黒白。`[\]
+*d58761
+d `白と黒が交互に並んでるように見えるが、？は白と黒に挟まれている。`[\]
+*d58762
+d `答えは、……灰色？？`[@]`　そんな単純な問題だろうか…？`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"nat","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"eva","b25_komaru4" ;1
+aspt2 xpos,s0_10,550
+flush 22
+wait 500
+lss s0_10,"eva","b25_odoroki1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58763
+d [lv 0*"05"*"81000239"]`「な、……夏妃姉さんにしてはずいぶん難しいじゃないの……」`[\]
+msgwnd_non
+*d58764
+d `絵羽伯母さんも唸ってる。`[@]`どうやら、かなり難しいようだ。`[\]
+lss s0_8,"nat","a11_odoroki2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_nat
+*d58765
+d [lv 0*"03"*"80900035"]`「そ、そんなに難しいでしょうか…？」`[\]
+lss s0_9,"cla","a11_akuwarai1" ;1
+flush 24
+msgwnd_cla
+*d58766
+d [lv 0*"02"*"80800053"]`「……経験のない人にはわからん可能性もあるな」`[\]
+lss s0_8,"nat","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_nat
+*d58767
+d [lv 0*"03"*"80900036"]`「絵羽さんはともかく、縁寿ちゃんなら、学校や幼稚園で結構見ていたかも……」`[\]
+lss s0_10,"eva","b25_komaru4" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58768
+d [lv 0*"05"*"81000240"]`「な、何よぅ、私には絶対わからないっていうの？！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58769
+d `絵羽伯母さんより、私の方がわかる問題だというのだろうか……。`[\]
+*d58770
+d `……難しい。`[\]
+mov %eva_button_enabled,1
+mov %quiz_answer_count,5
+mov %pair_answers_counter,0
+*uu_uu_0x5bbad5
+textoff
+waits 167
+lbg s0_3,"mondai_8"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5bbb7b
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5bccf9
+if %branch_tmp = 1 goto *uu_uu_0x5bc242
+if %branch_tmp = 2 goto *uu_uu_0x5bc242
+if %branch_tmp = 3 goto *uu_uu_0x5bc242
+if %branch_tmp = 4 goto *uu_uu_0x5bc242
+if %branch_tmp = 5 goto *uu_uu_0x5bbbaf
+*uu_uu_0x5bbbaf
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_eva
+*d58771
+d [lv 0*"05"*"81000241"]`「ヒントは夏妃姉さんの言ってた、学校や幼稚園で見たことがあるかも、というやつね。`[@][lv 0*"05"*"81000242"]`……縁寿ちゃんにはわかる？」`[\]
+msgwnd_enj
+*d58772
+d [lv 0*"11"*"82000564"]`「うぅん、全然」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"eva","b25_komaru4" ;1
+aspt2 xpos,s0_10,550
+flush 22
+seplay 1,6,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_eva
+*d58773
+d [lv 0*"05"*"81000243"]`「ほらっ、縁寿ちゃんも全然わからないって言ってるわよ？！`[@][lv 0*"05"*"81000244"]`　少しヒントを出しなさいよぅ」`[\]
+lss s0_8,"nat","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_nat
+*d58774
+d2 [lv 0*"03"*"80900037"]`「そ、そうですか。`[@][lv 0*"03"*"80900038"]`では、ヒントを……。`[@][#][*][lv 0*"03"*"80900039"]`白黒白黒……、色々ありますけど、どれを押しても、とても綺麗な音がなりますよ」`[\]
+wait_on_d 0
+lss s0_8,"nat","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"eva","b25_odoroki1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58775
+d [lv 0*"05"*"81000245"]`「綺麗な音……？`[@][lv 0*"05"*"81000246"]`　その白黒は音をさせるものなの？」`[\]
+lss s0_9,"en2","a11_defo3a" ;1
+flush 24
+msgwnd_enj
+*d58776
+d [lv 0*"11"*"82000565"]`「押すと音が出る白黒……？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+add %eva_hint_counter,1
+mov %eva_button_enabled,0
+goto *uu_uu_0x5bbad5
+*uu_uu_0x5bc242
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_10,"en2","a15_defo3a" ;1
+aspt2 xpos,s0_10,550
+flush 22
+wait 500
+lss s0_10,"en2","a15_defo2b" ;1
+aspt2 xpos,s0_10,550
+flush 80
+*d58777
+d [lv 0*"11"*"82000566"]`「…………わかんない」`[\]
+lss s0_9,"eva","b25_odoroki1" ;1
+flush 24
+msgwnd_eva
+*d58778
+d [lv 0*"05"*"81000247"]`「私もだわ、降参よ。`[@][lv 0*"05"*"81000248"]`……夏妃姉さんのくせに、ずいぶん難しい問題を知ってるじゃない」`[\]
+lss s0_8,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d58779
+d [lv 0*"02"*"80800054"]`「ははははは。`[@][lv 0*"02"*"80800055"]`育ちが出る問題だからね。`[@][lv 0*"02"*"80800056"]`お前には難しかったかもしれん」`[\]
+lss s0_9,"eva","b25_odoroki2" ;1
+flush 80
+msgwnd_eva
+*d58780
+d [lv 0*"05"*"81000249"]`「なッ、何ですってぇええぇえぇ…？！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_enj
+*d58781
+d [lv 0*"11"*"82000567"]`「……夏妃伯母さん。`[@][lv 0*"11"*"82000568"]`答えを教えて？」`[\]
+msgwnd_nat
+*d58782
+d [lv 0*"03"*"80900040"]`「答えは、鍵盤ですよ」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+lss s0_8,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d58783
+d [lv 0*"11"*"82000569"]`「鍵盤？`[@][lv 0*"11"*"82000570"]`　ピアノとかの？」`[\]
+lss s0_10,"nat","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_nat
+*d58784
+d [lv 0*"03"*"80900041"]`「そうです。`[@][lv 0*"03"*"80900042"]`白黒白黒は鍵盤の色の並びですよ。`[@][lv 0*"03"*"80900043"]`なら、もう答えがわかったでしょう」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58785
+d `夏妃伯母さんはそう微笑むが、私は鍵盤の並びなんてよく覚えてない。`[\]
+*d58786
+d `……んー、残念。`[\]
+*d58787
+d `今度は蔵臼伯父さんの問題に挑戦して、名誉挽回しよう。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a11_defo1" ;1
+lss s0_10,"eva","b25_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 22
+wait 500
+lss s0_10,"eva","b25_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eva
+*d58788
+d [lv 0*"05"*"81000250"]`「ほら。`[@][lv 0*"05"*"81000251"]`今度は兄さんの番よ？`[@][lv 0*"05"*"81000252"]`　私と縁寿ちゃんであっさり解いて、けちょんけちょんにしてあげるわぁ？」`[\]
+goto *uu_uu_0x5bd911
+*uu_uu_0x5bccf9
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"en2","a13_defo1a" ;1
+flush 22
+msgwnd_enj
+*d58789
+d [lv 0*"11"*"82000571"]`「この白黒白黒ね、……鍵盤だ！`[@][lv 0*"11"*"82000572"]`　ピアノと同じ！」`[\]
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d58790
+d [lv 0*"05"*"81000253"]`「あ、……そういうこと？！`[@][lv 0*"05"*"81000254"]`　これ、鍵盤なのね？！」`[\]
+msgwnd_non
+*d58791
+d `幼稚園や学校にあって、白黒白黒がいっぱい並んでるもの。`[\]
+*d58792
+d `それは楽器。`[@]`{n}これは、鍵盤ハーモニカやピアノの鍵盤のことなのだ。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_eva
+*d58793
+d [lv 0*"05"*"81000255"]`「２つの黒い鍵盤は、ドレミの間。`[@][lv 0*"05"*"81000256"]`３つの黒い鍵盤はファソラシの間だから……」`[\]
+msgwnd_enj
+*d58794
+d [lv 0*"11"*"82000573"]`「白黒白黒白？黒、だから……、白が３つで、ド・レ・ミ……」`[\]
+msgwnd_eva
+*d58795
+d [lv 0*"05"*"81000257"]`「ミとファの間に黒い鍵盤はないわ。`[@][lv 0*"05"*"81000258"]`ミの次はすぐファになる！」`[\]
+msgwnd_enj
+*d58796
+d [lv 0*"11"*"82000574"]`「つまり、ミの次が？だから、正解は“ファ”。`[@][lv 0*"11"*"82000575"]`……つまりつまり、」`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 26
+msgwnd_non
+*d58797
+d [lv 0*"00"*"awase8004_o"]`「「正解は、白！」」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"nat","a11_tukare2" ;1
+flush 22
+msgwnd_nat
+*d58798
+d [lv 0*"03"*"80900044"]`「正解です。`[@][lv 0*"03"*"80900045"]`ちょっと難し過ぎたかと思いましたが、さすがですね」`[\]
+lss s0_8,"cla","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_cla
+*d58799
+d [lv 0*"02"*"80800057"]`「やるじゃないかね、二人とも。`[@][lv 0*"02"*"80800058"]`さ、夏妃」`[\]
+lss s0_9,"nat","a11_warai1" ;1
+flush 80
+msgwnd_nat
+*d58800
+d [lv 0*"03"*"80900046"]`「おめでとう、縁寿ちゃん。`[@][lv 0*"03"*"80900047"]`これが私からのメダルです」`[\]
+csp_slot s0_9
+flush 23
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"eva","b25_defo1" ;1
+aspt2 xpos,s0_10,550
+lss s0_9,"en2","a11_defo1" ;1
+flush 23
+lss s0_8,"nat","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+lss s0_9,"en2","a12_defo1f" ;1
+flush 80
+msgwnd_enj
+*d58801
+d [lv 0*"11"*"82000577"]`「やった！`[@][lv 0*"11"*"82000578"]`　絵羽伯母さん、また１つ集まったよ！」`[\]
+lss s0_10,"eva","b25_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58802
+d [lv 0*"05"*"81000260"]`「順調ね。`[@][lv 0*"05"*"81000261"]`さ、次は兄さんが出す番よ。`[@][lv 0*"05"*"81000262"]`あっさり解いて、けちょんけちょんにしてあげるわぁ？」`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+*uu_uu_0x5bd911
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"cla","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+wait 500
+seplay 1,2,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+lss s0_8,"cla","a11_akuwarai3" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+bgmplay 107,71,0
+msgwnd_cla
+*d58803
+d [lv 0*"02"*"80800059"]`「上等じゃないかね。`[@][lv 0*"02"*"80800060"]`返り討ちにして差し上げようじゃないか」`[\]
+lss s0_10,"en2","a11_defo4b" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_enj
+*d58804
+d [lv 0*"11"*"82000579"]`「やめてー、絵羽伯母さんっ、挑発しないでっ。`[@][lv 0*"11"*"82000580"]`問題が難しくなっちゃうー！」`[\]
+seplay 1,20,50
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+seplay 2,20,50
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+seplay 3,20,70
+lss s0_9,"cla","a11_akuwarai2" ;1
+flush 23
+waits 167
+seplay 1,2,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+lss s0_9,"cla","a14_akuwarai3" ;1
+flush 22
+msgwnd_cla
+*d58805
+d [lv 0*"02"*"80800061"]`「くっくくくくく。`[@][lv 0*"02"*"80800062"]`恨むなら絵羽を恨むんだな！`[@][lv 0*"02"*"80800063"]`　さぁ食らいたまえッ、難問だ！`[@][lv 0*"02"*"80800064"]`　これは私が投資に関わったビルのテナントを巡る問題だ」`[\]
+seplay 1,66,71
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"white"
+flush 2
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+mov %eva_button_enabled,1
+mov %quiz_answer_count,5
+*uu_uu_0x5be0c3
+textoff
+waits 167
+lbg s0_3,"mondai_9"
+show_coin_counter %total_coin_count
+quiz
+flush 10,500
+*get_response_0x5be169
+get_response_quiz
+mov %branch_tmp,%get_response_value
+if %branch_tmp = 0 goto *uu_uu_0x5bea20
+if %branch_tmp = 1 goto *uu_uu_0x5bf0ea
+if %branch_tmp = 2 goto *uu_uu_0x5bea20
+if %branch_tmp = 3 goto *uu_uu_0x5bea20
+if %branch_tmp = 4 goto *uu_uu_0x5bea20
+if %branch_tmp = 5 goto *uu_uu_0x5be19d
+*uu_uu_0x5be19d
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_10,"en2","a15_defo2b" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_enj
+*d58806
+d [lv 0*"11"*"82000581"]`「どこのビルか知らないし、`[@][lv 0*"11"*"82000582"]`わかるわけない……」`[\]
+msgwnd_non
+*d58807
+d `１２階より上は何が入っているかわかってるのだから、答えは１階から１１階の間のどこかだ。`[@]`それはきっと間違いない。`[\]
+lss s0_10,"en2","a11_defo3a" ;1
+aspt2 xpos,s0_10,550
+flush 80
+lss s0_8,"cla","a14_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d58808
+d [lv 0*"02"*"80800065"]`「ふっふふふ。`[@][lv 0*"02"*"80800066"]`降参かね？」`[\]
+lss s0_9,"eva","a11_odoroki2" ;1
+flush 1
+seplay 1,8,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,100,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_eva
+*d58809
+d [lv 0*"05"*"81000263"]`「こ、降参なんかしないわよッ、きー！！`[@][lv 0*"05"*"81000264"]`　村越出版は何階にあるかですって？！」`[\]
+lss s0_8,"cla","a11_akuwarai3" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_cla
+*d58810
+d [lv 0*"02"*"80800067"]`「何階かじゃない。`[@][lv 0*"02"*"80800068"]`何がいか、だ」`[\]
+lss s0_10,"en2","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_enj
+*d58811
+d [lv 0*"11"*"82000583"]`「どっちも同じ“階”だよ…？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_eva
+*d58812
+d [lv 0*"05"*"81000265"]`「……あ。`[@][lv 0*"05"*"81000266"]`……………………………」`[\]
+msgwnd_non
+*d58813
+d `絵羽伯母さんは突然、何かを閃く。`[@]`{n}そして指を折りながら、１階から順に数えていく……。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_9,"eva","b25_odoroki1" ;1
+flush 22
+msgwnd_eva
+*d58814
+d [lv 0*"05"*"81000267"]`「わかったわ、縁寿ちゃん…！`[@][lv 0*"05"*"81000268"]`　１階から順に、声に出して読んでみて…！`[@][lv 0*"05"*"81000269"]`　１つしかないから！」`[\]
+lss s0_10,"en2","a11_defo2a" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d58815
+d [lv 0*"11"*"82000584"]`「え？`[@][lv 0*"11"*"82000585"]`　ど、どういうこと……？」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+add %eva_hint_counter,1
+mov %eva_button_enabled,0
+goto *uu_uu_0x5be0c3
+*uu_uu_0x5bea20
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_25,"en2","a15_defo2b" ;1
+aspt2 xpos,s0_25,-550
+flush 22
+msgwnd_enj
+*d58816
+d [lv 0*"11"*"82000586"]`「………わかんない」`[\]
+lss s0_10,"eva","b25_ikari1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58817
+d [lv 0*"05"*"81000270"]`「これ、何階かじゃなくて、何“がい”か、ってのがポイントなのね？」`[\]
+lss s0_9,"cla","a11_akuwarai2" ;1
+flush 24
+msgwnd_cla
+*d58818
+d [lv 0*"02"*"80800069"]`「そうだ。`[@][lv 0*"02"*"80800070"]`ある意味、出題の時点ですでに答えを示しているがね」`[\]
+lss s0_25,"en2","a15_defo2" ;1
+aspt2 xpos,s0_25,-550
+flush 80
+msgwnd_enj
+*d58819
+d [lv 0*"11"*"82000587"]`「どういうこと…？」`[\]
+lss s0_10,"eva","b25_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58820
+d [lv 0*"05"*"81000271"]`「例えばだけど、１４階ってあるわよね？`[@][lv 0*"05"*"81000272"]`　１４階は、１４カイとも１４ガイとも読むわよね？`[@][lv 0*"05"*"81000273"]`　でも１階は１カイとは読んでも、１ガイとは読まない」`[\]
+lss s0_9,"cla","a11_akuwarai1" ;1
+flush 80
+msgwnd_cla
+*d58821
+d [lv 0*"02"*"80800071"]`「そういうことだ。`[@][lv 0*"02"*"80800072"]`１階から１１階までの間で、ガイと読むのは１つしかない」`[\]
+lss s0_25,"en2","a11_defo3a" ;1
+aspt2 xpos,s0_25,-550
+flush 80
+msgwnd_enj
+*d58822
+d [lv 0*"11"*"82000588"]`「あ、………あー…………」`[\]
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d58823
+d `私も今頃になって答えがわかる。`[\]
+*d58824
+d `出題された時の、蔵臼伯父さんのちょっとした発音の違和感に気付いていれば……。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_cla
+*d58825
+d [lv 0*"02"*"80800073"]`「はっはははははは。`[@][lv 0*"02"*"80800074"]`悪いね。`[@][lv 0*"02"*"80800075"]`伯父さんのメダルは、お預けだ」`[\]
+goto *uu_uu_0x5bf9db
+*uu_uu_0x5bf0ea
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+flush 22
+seplay 1,2,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+lss s0_9,"en2","a13_defo1b" ;1
+flush 22
+msgwnd_enj
+*d58826
+d [lv 0*"11"*"82000589"]`「３階！」`[\]
+lss s0_8,"cla","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_cla
+*d58827
+d [lv 0*"02"*"80800076"]`「むっ」`[\]
+lss s0_10,"eva","b25_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_eva
+*d58828
+d [lv 0*"05"*"81000274"]`「お見事っ、正解よ…！`[@][lv 0*"05"*"81000275"]`　１階から１１階の間に、ガイと読めるフロアは３階（３ガイ）だけだわ」`[\]
+lss s0_9,"en2","a13_defo1f" ;1
+flush 80
+msgwnd_enj
+*d58829
+d [lv 0*"11"*"82000590"]`「うん！`[@][lv 0*"11"*"82000591"]`　３階だけは３ガイとも読めるけど、それ以外で１１階までは、どれもカイとしか読まない」`[\]
+lss s0_8,"cla","a11_nayamu2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_cla
+*d58830
+d [lv 0*"02"*"80800077"]`「や、……やるじゃないかね…。`[@][lv 0*"02"*"80800078"]`私には、答えを教えられるまでサッパリだったというのに……」`[\]
+msgwnd_non
+*d58831
+d `どうやら、蔵臼伯父さんもかつてこの問題を出され、答えがわからなかったらしい。`[\]
+*d58832
+d `それを私に解かれて、ちょっぴりだけ悔しいようだ。`[\]
+lss s0_10,"eva","b25_akire2go" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"cla","a11_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+*d58833
+d `……私じゃなくて、絵羽伯母さんに解かれたのが悔しいみたいだ。`[@]`変なの。`[\]
+lss s0_10,"eva","b23_akire1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58834
+d [lv 0*"05"*"81000276"]`「ほらっ。`[@][lv 0*"05"*"81000277"]`さっさとメダルを寄越しなさいよ」`[\]
+lss s0_8,"cla","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_cla
+*d58835
+d [lv 0*"02"*"80800079"]`「これは縁寿ちゃんの知恵に評するメダルだ。`[@][lv 0*"02"*"80800080"]`絵羽にやるわけではない」`[\]
+lss s0_10,"eva","b25_futeki1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eva
+*d58836
+d [lv 0*"05"*"81000278"]`「ふん、負け惜しみを…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_enj
+*d58837
+d [lv 0*"11"*"82000592"]`「ありがとう、蔵臼伯父さんっ。`[@][lv 0*"11"*"82000593"]`縁寿すごい？　縁寿すごい？！」`[\]
+msgwnd_cla
+*d58838
+d [lv 0*"02"*"80800081"]`「うむ。`[@][lv 0*"02"*"80800082"]`伯父さんより、よほど頭が柔軟だ。`[@][lv 0*"02"*"80800083"]`君が姪で、私は誇らしいよ」`[\]
+show_coin_counter2 %total_coin_count
+add %pair_answers_counter,1
+*uu_uu_0x5bf9db
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"cla","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"nat","a11_tukare2" ;1
+aspt2 xpos,s0_10,550
+flush 22
+wait 500
+lss s0_10,"nat","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+bgmplay 7,71,0
+msgwnd_nat
+*d58839
+d [lv 0*"03"*"80900048"]`「これで、私たちの問題はおしまいです」`[\]
+lss s0_8,"cla","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_cla
+*d58840
+d [lv 0*"02"*"80800084"]`「楽しんでもらえたならいいのだがね」`[\]
+lss s0_9,"en2","a11_defo1b" ;1
+flush 24
+msgwnd_enj
+*d58841
+d [lv 0*"11"*"82000594"]`「うんっ。`[@][lv 0*"11"*"82000595"]`ありがとう、夏妃伯母さん、蔵臼伯父さんっ」`[\]
+lss s0_8,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_cla
+*d58842
+d [lv 0*"02"*"80800085"]`「メダルの枚数など気にせず、みんなの奇問難問をたっぷり楽しんで欲しい」`[\]
+lss s0_10,"nat","a11_tukare2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_nat
+*d58843
+d [lv 0*"03"*"80900049"]`「今夜が、あなただけの素敵な夜になることを願っていますよ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_eva
+*d58844
+d [lv 0*"05"*"81000279"]`「楽しんでるわよねぇ、私たちっ」`[\]
+lss s0_9,"en2","a11_defo1f" ;1
+flush 80
+msgwnd_enj
+*d58845
+d [lv 0*"11"*"82000596"]`「うん！`[@][lv 0*"11"*"82000597"]`　私たち、すっごい楽しい！」`[\]
+textoff
+waits 167
+seplay 1,3,71
+csp_slot s0_8
+csp_slot s0_9
+flush 24
+textoff
+waits 167
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+msgwnd_non
+*d58846
+d `二人が駆け出すのを、蔵臼と夏妃は微笑みながら見送るのだった。`[\]
+mov %branch_tmp,%pair_answers_counter
+if %branch_tmp = 0 goto *uu_uu_0x5c1c58
+if %branch_tmp = 1 goto *uu_uu_0x5c1c58
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"nat","a11_zutuu1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+lss s0_10,"bea","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+bgmplay 9,71,0
+msgwnd_bea
+*d58847
+d [lv 0*"27"*"80700237"]`「おぉ、夏妃か。`[@][lv 0*"27"*"80700238"]`どうだった、お前たちの問題は」`[\]
+lss s0_8,"nat","a11_tukare2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_nat
+*d58848
+d [lv 0*"03"*"80900050"]`「私たちなりに選りすぐりを出題したつもりです。`[@][lv 0*"03"*"80900051"]`……楽しんでもらえたかどうか」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"en2","a11_defo1d" ;1
+lss s0_8,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_non
+*d58849
+d `向こうでは、縁寿と絵羽が、これまでに集めたメダルの枚数を数えている。`[\]
+lss s0_9,"en2","a11_defo1" ;1
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+*d58850
+d `縁寿と絵羽。`[@]`……不思議な組み合わせだが、とても楽しそうだった。`[\]
+msgwnd_bea
+*d58851
+d [lv 0*"27"*"80700239"]`「……血の繋がらぬ、未来の親子か。`[@][lv 0*"27"*"80700240"]`こうして見ている分には、本当の親子そのものにしか見えぬ」`[\]
+msgwnd_nat
+*d58852
+d [lv 0*"03"*"80900052"]`「えぇ。`[@][lv 0*"03"*"80900053"]`………絆は、心で育むものです。`[@][lv 0*"03"*"80900054"]`血の繋がりなど、それに劣るものです」`[\]
+msgwnd_non
+*d58853
+d `夏妃はそれを言ってから、`[@]`……自らの言葉を噛み締め、ひとり俯く。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_bea
+*d58854
+d [lv 0*"27"*"80700241"]`「どうした」`[\]
+msgwnd_nat
+*d58855
+d [lv 0*"03"*"80900055"]`「………私に、よくもそのようなことが言えたものだと、……驚いただけです」`[\]
+msgwnd_bea
+*d58856
+d [lv 0*"27"*"80700242"]`「……………………。`[@][lv 0*"27"*"80700243"]`……気にするな、妾のことは」`[\]
+msgwnd_nat
+*d58857
+d [lv 0*"03"*"80900056"]`「私が、あなたを拒絶してしまったから、……あなたはいくつもの世界で、辛い目に…。`[@][lv 0*"03"*"80900057"]`……それは全て、私の責任です…」`[\]
+msgwnd_bea
+*d58858
+d [lv 0*"27"*"80700244"]`「そなたの気持ちもわかる。`[@][lv 0*"27"*"80700245"]`……身篭れず、何年も肩身の狭い思いをしてきたのだ。`[@][lv 0*"27"*"80700246"]`そこに突然、素性の知れぬ赤ん坊を渡され、養子にしろと言われたら、ショックを受けぬ女などおらぬ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_nat
+*d58859
+d [lv 0*"03"*"80900058"]`「……だからといって、`[@][lv 0*"03"*"80900059"]`……あなたを崖より突き落としても良いという理由にはなりません…」`[\]
+msgwnd_bea
+*d58860
+d [lv 0*"27"*"80700247"]`「そうであるな。`[@][lv 0*"27"*"80700248"]`それは、そなたが生涯、背負うべき十字架であろう」`[\]
+msgwnd_nat
+*d58861
+d [lv 0*"03"*"80900060"]`「……はい。`[@][lv 0*"03"*"80900061"]`その覚悟です…」`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_h1c"
+lss s0_9,"bea","a13_futeki2" ;1
+flush 24
+msgwnd_bea
+*d58862
+d [lv 0*"27"*"80700249"]`「ならば、そなたを苛む役は、その十字架だ。`[@][lv 0*"27"*"80700250"]`妾ではない」`[\]
+lss s0_8,"nat","a12_tukare1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+wait 500
+lss s0_8,"nat","a12_nayamu3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_nat
+*d58863
+d [lv 0*"03"*"80900062"]`「私を、……恨まないというのですか…」`[\]
+csp_slot s0_9
+lss s0_10,"bea","a13_1_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_bea
+*d58864
+d [lv 0*"27"*"80700251"]`「そう、しょげた顔をするなって。`[@][lv 0*"27"*"80700252"]`……いやいや、むしろ逆だなぁ。`[@][lv 0*"27"*"80700253"]`お前がそのしょげた顔を見せる限り、妾はそなたを咎めようとは思わぬ。`[@][lv 0*"27"*"80700254"]`そなたがその十字架を背負い続ける限り。`[@][lv 0*"27"*"80700255"]`妾はそなたを恨もうとは思わぬ」`[\]
+lss s0_8,"nat","a12_naku3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_nat
+*d58865
+d [lv 0*"03"*"80900063"]`「この私を、……恨まないというのですか……」`[\]
+csp_slot s0_10
+lss s0_9,"bea","a33_akuwarai5" ;1
+flush 24
+msgwnd_bea
+*d58866
+d [lv 0*"27"*"80700256"]`「本当は恨んでたぜェ？`[@][lv 0*"27"*"80700257"]`　チョオ恨んでたっ。`[@][lv 0*"27"*"80700258"]`お前の抱き枕吊るしてサンドバッグにするくらい恨んださァ！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+*d58867
+d [lv 0*"27"*"80700259"]`「でも、お前を見ている内に、その気もなくなった。`[@][lv 0*"27"*"80700260"]`……お前は悔やみ、後悔している。`[@][lv 0*"27"*"80700261"]`そしてその気持ちをきっと、お前は生涯忘れない」`[\]
+msgwnd_nat
+*d58868
+d [lv 0*"03"*"80900064"]`「忘れるものですか……。`[@][lv 0*"03"*"80900065"]`……私は、人殺しなのですから………」`[\]
+msgwnd_bea
+*d58869
+d [lv 0*"27"*"80700262"]`「重い十字架、背負っちまったなァ。`[@][lv 0*"27"*"80700263"]`今じゃあんたに同情してる。`[@][lv 0*"27"*"80700264"]`ホントだぜ？`[@][lv 0*"27"*"80700265"]`　だって、全部、金蔵が悪いんじゃねぇか」`[\]
+*d58870
+d [lv 0*"27"*"80700266"]`「あいつが、隠し子なんか作るから悪いんだし！`[@][lv 0*"27"*"80700267"]`　何しろ、お前への預け方が特に悪い！`[@][lv 0*"27"*"80700268"]`　子供が生まれないから養子にしろっ、何てのじゃなく、`[@][lv 0*"27"*"80700269"]`可哀想な子だから育ててくれぬかとか、そなたを傷つけぬ言い方はあったはずだ。`[@][lv 0*"27"*"80700270"]`これだから男は、金蔵は…！」`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_nat
+*d58871
+d [lv 0*"03"*"80900066"]`「…………………………」`[\]
+msgwnd_bea
+*d58872
+d [lv 0*"27"*"80700271"]`「もはや、恨みはない。`[@][lv 0*"27"*"80700272"]`それでも、そなたの十字架は軽くはならぬか」`[\]
+msgwnd_nat
+*d58873
+d [lv 0*"03"*"80900067"]`「はい。`[@][lv 0*"03"*"80900068"]`……あなたにどうすれば償えるか、未だにわからないのですから」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_h1a_bg"
+lbg s0_3,"mhal_h1a"
+lss s0_8,"nat","a12_naku3" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"bea","a11_fukigen3" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d58874
+d [lv 0*"27"*"80700273"]`「んじゃ、こうしよう。`[@][lv 0*"27"*"80700274"]`両腕を広げよ」`[\]
+lss s0_8,"nat","a12_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_nat
+*d58875
+d [lv 0*"03"*"80900069"]`「え、……え？`[@][lv 0*"03"*"80900070"]`　こ、……こうですか……？」`[\]
+msgwnd_non
+*d58876
+d2 `おずおずと夏妃が両手を広げると、`[@][#][*]`そこへベアトが飛び込み、夏妃をぎゅっと、抱き締める。`[\]
+wait_on_d 0
+csp_slot s0_10
+lss s0_9,"bea","a14_1_warai1" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+d_continue
+wait_on_d -1
+msgwnd_nat
+*d58877
+d [lv 0*"03"*"80900071"]`「……あ、あの、`[@][lv 0*"03"*"80900072"]`……こ、これは………」`[\]
+msgwnd_bea
+*d58878
+d [lv 0*"27"*"80700275"]`「二度と言わねぇから、一度くらい言わせろよ。`[@][lv 0*"27"*"80700276"]`……妾はよ、自分の母親に会ったことさえねぇんだからよ」`[\]
+msgwnd_non
+*d58879
+d `ベアトは夏妃を抱き締めながら、小さな声で言う。`[@]`{n}もう二度と、絶対に口にしないその言葉を、夏妃に言う…。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_2d"
+flush 22
+msgwnd_bea
+*d58880
+d [lv 0*"27"*"80700277"]`「妾のことで悔やんでくれてありがとよ。`[@][lv 0*"27"*"80700278"]`……でもよ、妾はもう恨んでねぇからな？`[@][lv 0*"27"*"80700279"]`　それだけは信じてくれよ。`[@][lv 0*"27"*"80700280"]`…………カアサン」`[\]
+msgwnd_nat
+*d58881
+d [lv 0*"03"*"80900073"]`「……ベ、………ベアトリーチェ……………」`[\]
+*uu_uu_0x5c1c58
+textoff
+waits 167
+wait 2000
+break_glass3
+lbg s0_29,"black"
+csp_slot s0_29
+flush 10,2000
+wait 83
+ch_done flag_scenario_8_6

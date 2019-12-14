@@ -1,0 +1,180 @@
+*o2_0
+lbg s0_3,"black"
+flush 25
+msgwnd_non
+*o2_1
+d ` ...There's no way I'll ever come to a place like this again.`[@]` Kanon sighed for about the zillionth time that day.`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"schf_c2ar"
+flush 22
+bgmplay 3,20,0
+seplay 3,54,71
+*o2_2
+d `As he did, the lighting changed, and the standing audience started cheering.`[\]
+*o2_3
+d `Looking around, I realized that there were suddenly a large number of people here.`[@]`{n}And unlike earlier, they were all guys.`[\]
+*o2_4
+d `With this huge crowd, I couldn't even see the stage.`[@]` Fortunately, there was a fallen beer case nearby, so I tried using that as a footstool.`[\]
+*o2_5
+d `And I noticed that there was now a new group on the stage.`[\]
+textoff
+waits 167
+lbg s0_3,"schf_c2br"
+;lss s0_9,"kan","c11_majime1" ;1
+flush 24
+*o2_6
+d `The leader was Milady.`[@]` She had changed into stage clothes, and was even holding a guitar.`[@]` ......I didn't know she could play.`[\]
+*o2_7
+d `No, maybe she could.`[@]`{n}I have seen her practicing air guitar before.`[\]
+*o2_8
+d `Natsuhi‐sama wouldn't approve of any hobbies outside of study.`[\]
+*o2_9
+d `Maybe she was always practicing in secret.`[\]
+*o2_10
+d `...Come to think of it, she's been returning really late from school recently, hasn't she?`[\]
+*o2_11
+d `...Maybe she's been practicing at school, far away from Natsuhi‐sama's prying eyes.`[\]
+*o2_12
+d `It really is for the best that Natsuhi‐sama didn't come.`[@]` ...If Milady were to get scolded by Natsuhi‐sama after putting so many hours of practice in, she would probably be very dejected...`[\]
+*o2_13
+d2 [lv 0*"99"*"awase0010"]`"""Jessie‐samaaaaaaaaaaaaaaa!!"""`[#][*][\]
+wait_on_d 0
+seplay 1,2,100
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+;csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+vol_bgm 90
+wait 33
+seplay 2,2,100
+msgwnd_jes
+*o2_14
+d [lv 0*"04"*"20200204"]`"Everyone, thanks for gathering here todaaaayyyyyyyy!!"`[\]
+msgwnd_non
+*o2_15
+d `I could hear Jessica‐sama's forceful voice through the speakers.`[\]
+textoff
+waits 167
+lbg s0_3,"schf_c2br"
+lss s0_9,"kan","c11_majime1" ;1
+flush 23
+*o2_16
+d `...Jessie‐sama?`[@]` Maybe that's her nickname at school.`[\]
+*o2_17
+d `The students in the audience kept calling out that name.`[@]`{n}...I was a little aggravated by that inferior name, which was inappropriate for Milady.`[\]
+*o2_18
+d `Jessica‐sama was in great spirits as they kept calling her Jessie‐sama.`[\]
+*o2_19
+d `...They were all probably her fans.`[@]`{n}With her mike performance, she was responding to that and firing the place up.`[@]`{n}...It was almost like a song program on TV.`[\]
+*o2_20
+d `............At first, I had thought all this was frivolous, but that feeling now changed into appreciation—this was pretty incredible in its own way.`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+*o2_21
+d `Kanon had never listened to music of his own free will, but he had often heard the kind of music that the people of the Ushiromiya family liked.`[\]
+*o2_22
+d `...Since that was almost all classical music, Kanon had naturally started liking classical music too.`[\]
+*o2_23
+d `...So to Kanon, the songs Jessica and the others were singing were...how should you say it...`[@]`.........very modern.`[\]
+*o2_24
+d `In any case, I thought that if Natsuhi‐sama heard it, she would probably faint.`[\]
+textoff
+waits 167
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+csp -10
+gosub *turu_pettann
+waits 167
+lbg s0_3,"schf_c2br"
+flush 28
+vol_bgm 50
+*o2_25
+d `But everyone looked like they were having a really good time.`[\]
+*o2_26
+d `The die‐hard fans, who had even brought pen‐lights, sang along,`[@]` dancing crazily with the exact same movements, almost as though it had been planned ahead.`[\]
+*o2_27
+d `On the stage, Jessica‐sama also sang enthusiastically, dripping with sweat.`[\]
+*o2_28
+d `.........He couldn't find a single element that was appropriate for a daughter of the Ushiromiya family,`[!w417]` ...but it looked like she was having a lot of fun.`[\]
+seplay 1,2,71
+*o2_29
+d2 [lv 0*"99"*"awase0011"]`"""Jessie‐samaaaaaaaa!!`[#][*][@][lv 0*"99"*"awase0012"]` Jessiiiiie, Jessiiiiiiiiiiie!!!"""`[#][*][\]
+wait_on_d 0
+seplay 2,2,71
+d_continue
+wait_on_d 1
+seplay 3,2,71
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+seplay 1,54,70
+vol_bgm -1,333
+textoff
+waits 167
+;lbg s0_3,"c0202_b"
+;flush 2
+msgwnd_jes
+*o2_30
+d `"Again, today, behind me, the sound of footsteps!`[!w800]` Oyashiro-sama is stalking!`[!w800]` Curses, disappearances,`[!w500]` sacrifices, torture,`[!w500]` Onikakushi, do you eat it?!`[!w500]` Don't say Marisaaaaaaaaaaaaa!!!"`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+wait 1000
+bgmplay 8,71,0
+msgwnd_non
+*o2_31
+d `...I couldn't keep up with the atmosphere, but...`[@]`......anyway, Milady was full of life and looked like she was having a great time.`[\]
+textoff
+waits 167
+lbg s0_3,"schf_c2br"
+;lss s0_9,"jes","c11_defo1" ;1
+lsp s0_9,":a;graphics\omake\touhou_2.png",811,-10
+flush 2
+*o2_32
+d `As I looked at Milady having a great time, I thought...`[\]
+*o2_33
+d `Isn't this what Ushiromiya Jessica is really like?`[\]
+*o2_34
+d `...Don't I know better than anyone just how badly life on Rokkenjima kills your own sense of self?`[\]
+*o2_35
+d `Then the time she spends, ...not as Milady, the successor to the Ushiromiya family,`[@]` but as a single girl called Jessica, living life to the fullest, must be very important to her.`[\]
+*o2_36
+d `...I worked close to Milady, saw her in all seasons, and I thought I knew everything about her.`[\]
+*o2_37
+d `...But that was only a single limited side of her, Milady of Rokkenjima.`[\]
+textoff
+waits 167
+csp_slot s0_9
+vol_mix_fade 1000
+wait 1000
+lbg s0_3,"black"
+flush 5
+goto *o2_end

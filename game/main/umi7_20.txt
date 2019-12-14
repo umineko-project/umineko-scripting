@@ -1,0 +1,617 @@
+*ura_teatime_7
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_7_ura
+mov $name_chapter_save, "7_ura"
+~
+new_ura 7
+gstc 183
+flush 10,167
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+bgmplay 139,71,0
+textoff
+waits 167
+lbg s0_3,"different_spiral_1b"
+flush 42
+wait 2000
+textoff
+waits 167
+lbg s0_3,"fea_r1ep"
+flush 42
+wait 2000
+textoff
+waits 167
+lbg s0_3,"chess2"
+flush 42
+wait 2000
+*d68659
+d `チェス盤の上に置かれた白い駒が２つ。`[\]
+*d68660
+d `……それを取り囲む無数の黒い駒は、もはやマスの上にさえ収まらずに、ぎっしりと取り囲んでいる。`[\]
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+*d68661
+d `そしてその白い駒２つを、ベルンカステルは指で突いてパタリと倒し、`[@]`……盤の外へ取り除く。`[\]
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d68662
+d [lv 0*"28"*"72100543"]`「こんなところで、おしまいでいいかしら」`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"fea_r1cp"
+flush 24
+lss s0_9,"fea","b11_defo2" ;1
+flush 10,1667
+msgwnd_fea
+*d68663
+d [lv 0*"50"*"75000001"]`「………うむ。`[@][lv 0*"50"*"75000002"]`やはりそなたの朗読は耳に馴染むぞ、我が巫女よ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"fea_r1ap"
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+lss s0_8,"ber","a21_shian1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d68664
+d [lv 0*"28"*"72100544"]`「あんたのお望み通り、ハラワタの内側まで掻き出してやった。`[@][lv 0*"28"*"72100545"]`答え合わせには、これで充分でしょう？」`[\]
+lss s0_10,"fea","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_fea
+*d68665
+d [lv 0*"50"*"75000003"]`「うむ。`[@][lv 0*"50"*"75000004"]`……実に満足しているぞ。`[@][lv 0*"50"*"75000005"]`そなたが明かした答えを鍵に、これまでの物語を遡り、`[@][lv 0*"50"*"75000006"]`まるで宝石箱のような密室の数々を、一つずつ開いていこう」`[\]
+lss s0_10,"fea","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+*d68666
+d [lv 0*"50"*"75000007"]`「………鍵を得ることは楽しい。`[@][lv 0*"50"*"75000008"]`そして、その鍵で個々を開いていくことは、もっと楽しい。`[@][lv 0*"50"*"75000009"]`ご苦労であった、我が巫女よ。`[@][lv 0*"50"*"75000010"]`これより先は、私ひとりでゆっくりと思考を楽しみたい。`[@][lv 0*"50"*"75000011"]`もう充分であるぞ……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1ep"
+flush 2
+msgwnd_non
+*d68667
+d `観劇の魔女は、余韻を楽しむかのような満足な笑みを浮かべ、揺り椅子に深々と身を預ける。`[\]
+*d68668
+d `もはや、ゲーム盤は必要ない。`[\]
+*d68669
+d `これまでの物語を、自分の頭の中で遡り、自分の推理が正しかったかどうか、検証するだけだ。`[\]
+*d68670
+d `それは上等な酒にも負けぬ、心地良き酩酊を与えてくれているようだった……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+lss s0_9,"ber","a21_defo1" ;1
+flush 22
+lss s0_9,"ber","a21_defo2" ;1
+flush 80
+msgwnd_ber
+*d68671
+d [lv 0*"28"*"72100546"]`「………私はこれで用済みかしら？」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"fea_p1ap"
+lss s0_8,"fea","b12_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_fea
+*d68672
+d [lv 0*"50"*"75000012"]`「ご苦労であった、我が巫女よ。`[@][lv 0*"50"*"75000013"]`その任を解く。`[@][lv 0*"50"*"75000014"]`……私は再び眠りに就く。`[@][lv 0*"50"*"75000015"]`この心地良きまどろみを、数百年にわたって楽しみたい」`[\]
+lss s0_8,"fea","b12_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+*d68673
+d [lv 0*"50"*"75000016"]`「そして私が再び飽きる時。`[@][lv 0*"50"*"75000017"]`……そなたは私を楽しませるために、また新しい物語を見つけてくるのだ。`[@][lv 0*"50"*"75000018"]`……それまでの数百年のひと時。`[@][lv 0*"50"*"75000019"]`そなたの自由を許す」`[\]
+textoff
+waits 167
+csp_slot s0_8
+flush 4
+*d68674
+d [lv 0*"50"*"75000020"]`「ふっふふふふ………。`[@][lv 0*"50"*"75000021"]`天晴れであったぞ、ベルンカステル、可愛い可愛い、我が巫女よ……」`[\]
+lss s0_10,"ber","a21_odoroki2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d68675
+d [lv 0*"28"*"72100547"]`「………知ったことじゃないわ。`[@][lv 0*"28"*"72100548"]`勝手に干からびて死になさいよ。`[@][lv 0*"28"*"72100549"]`じゃあね、未来永劫さようなら」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"fea_r1ap"
+lss s0_9,"fea","b12_defo1" ;1
+flush 22
+msgwnd_fea
+*d68676
+d2 [lv 0*"50"*"75000022"]`「数百年如きを、そなたは未来永劫と呼ぶというのか？`[@][#][*][lv 0*"50"*"75000023"]`　くっくくくくく……………。`[@][lv 0*"50"*"75000024"]`…………………………………」`[\]
+wait_on_d 0
+lss s0_9,"fea","b12_defo2" ;1
+flush 22
+d_continue
+wait_on_d -1
+msgwnd_non
+*d68677
+d `フェザリーヌの意識は、ゆっくりと薄れていく。`[\]
+textoff
+waits 167
+csp_slot s0_9
+flush 42
+textoff
+waits 167
+lbg s0_3,"black"
+flush 45
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+meplay 1,16,50
+*d68678
+d `主がゆっくりと眠りを深めていくのに応えるように、`[@]`……彼女の書斎の灯りたちも、ゆっくりと暗くなっていく。`[\]
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 2
+lss s0_8,"ber","a21_odoroki2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d68679
+d2 [lv 0*"28"*"72100550"]`「永遠にお休み、アウアウローラ。`[@][#][*][lv 0*"28"*"72100551"]`…………このゲーム盤はあんたにはもう不要よね。`[@][lv 0*"28"*"72100552"]`私がもらっていくわ」`[\]
+wait_on_d 0
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"fea_r1ep"
+flush 25
+msgwnd_non
+*d68680
+d `ベルンカステルは、フェザリーヌの揺り椅子の前の、テーブルに置かれたベアトのゲーム盤を、こつこつと二度叩く。`[\]
+*d68681
+d `すると、ゲーム盤と駒は宙に浮き上がり、ぱたぱたと、一人で仕舞われて畳み、突き出したベルンカステルの右手に、そっと乗った。`[\]
+seplay 2,22,71
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+seplay 1,13,71
+wait 2000
+textoff
+waits 167
+lbg s0_3,"fea_p1ap"
+lss s0_9,"ber","a21_warai3" ;1
+flush 22
+msgwnd_ber
+*d68682
+d [lv 0*"28"*"72100553"]`「……私、まだ全然ゲームマスターをやっていないのよ？`[@][lv 0*"28"*"72100554"]`　……私はベアトの葬儀をやっただけ。`[@][lv 0*"28"*"72100555"]`そしてハラワタを引き摺り出しただけ。`[@][lv 0*"28"*"72100556"]`…………まだ、何にもやっちゃいない」`[\]
+bgmplay 157,71,0
+msgwnd_non
+*d68683
+d `ベルンカステルの笑みが、一際邪悪に歪む。`[\]
+*d68684
+d `そしてゲーム盤は再びふわりと浮き上がり、………ベルンカステルの手の平の上に、世界を広げ出す……。`[\]
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"white"
+lss s0_24,"ber","a21_warai3" ;1
+flush 10
+seplay 2,52,71
+csp_slot s0_24
+flush 22
+textoff
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_1,"white"
+lbg s1_3,"white"
+csp_slot s1_1
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+wait 2000
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"ber","a21_warai1" ;1
+flush 22
+lss s0_9,"ber","a21_warai4" ;1
+flush 80
+msgwnd_ber
+*d68685
+d [lv 0*"28"*"72100557"]`「さぁ、ベアトのゲーム盤の駒たち……？`[@][lv 0*"28"*"72100558"]`　私を最高に楽しませる、最高に残虐な物語を紡がせてあげるわ。`[@][lv 0*"28"*"72100559"]`慄きなさい、約束された絶対の運命を。`[@][lv 0*"28"*"72100560"]`……奇跡の魔女、ベルンカステルの名において。`[@][lv 0*"28"*"72100561"]`……そして、ベアトのゲームの、最後のゲームマスターとして宣言するわ」`[\]
+lss s0_9,"ber","a21_akuwarai2" ;1
+flush 80
+*d68686
+d [lv 0*"28"*"72100562"]`「……ただ宣言するだけじゃつまらないわね。`[@][lv 0*"28"*"72100563"]`……ベアトのゲームに則って、赤き真実で宣言してやった方がいいかしら？」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1a"
+flush 23
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_10,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d68687
+d [lv 0*"29"*"72200006"]`「それがいいんじゃない？`[@][lv 0*"29"*"72200007"]`　まだ甘い夢を見てる魔女どもも、いるみたいだし」`[\]
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_ber
+*d68688
+d2 [lv 0*"28"*"72100564"]`「あら、ラムダ。いたの？`[@][#][*][lv 0*"28"*"72100565"]`　いるわよね、私のいるところなら、どこへでも」`[\]
+wait_on_d 0
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"lam","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_lam
+*d68689
+d [lv 0*"29"*"72200008"]`「言ってやりなさいよ。`[@][lv 0*"29"*"72200009"]`甘い夢みてる魔女どもに」`[\]
+lss s0_8,"ber","a21_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d68690
+d [lv 0*"28"*"72100566"]`「えぇ、そうするわ。`[@][lv 0*"28"*"72100567"]`……奇跡の魔女として、そして、最後のゲームマスターとして、最後のゲームを宣言するわ。`[@][lv 0*"28"*"72100568"]`そして約束する」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+flush 5
+seplay 1,2,100
+seplay 2,74,71
+seplay 3,59,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+set_window_simple 80
+msgwnd_non
+*d68691
+d `{a:c:`[lv 0*"00"*"awase7016_o"]`{p:1:このゲームに、ハッピーエンドは与えない。}}`[\]
+set_name_window_non
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 1,1006,100
+seplay 2,37,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"red"
+show_glass 0
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+wait 3000
+meplay 1,5,50
+wait 2000
+textoff
+waits 167
+lbg s0_3,"cha_i1l"
+flush 42
+wait 2000
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+flush 2
+wait 2000
+*d68692
+d [lv 0*"11"*"72000164"]`シクシク。`[@][lv 0*"11"*"72000165"]`……シクシク、シクシク……。`[\]
+*d68693
+d `少女が一人、……無人の、静寂の礼拝堂で、泣いていた。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1l"
+flush 2
+*d68694
+d `それは小さな少女。`[@]`……６歳の少女。`[\]
+*d68695
+d `１９８６年の１０月４日に、５日に、`[@]`……島にいられなかったことを、これから１２年にもわたって嘆く、悲しみの少女……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 5
+seplay 1,14,85
+wait 5000
+*d68696
+d `そこへ、`[!w833]`………一人の男がやって来る……。`[\]
+vol_se 1,-1
+textoff
+waits 167
+lbg s0_3,"cha_i1l"
+flush 22
+*d68697
+d `男は少女の姿を見つけ、`[!w583]`……怖がらせないように、静かに歩み寄り、`[!w500]`……そっと、その肩を抱いた……。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+flush 22
+*d68698
+d [lv 0*"11"*"72000166"]`「………お兄ちゃん……………」`[\]
+lss s0_9,"but","d11_majime1" ;1
+flush 22
+msgwnd_but
+*d68699
+d [lv 0*"10"*"70100184"]`「探したぞ、縁寿……」`[\]
+msgwnd_non
+*d68700
+d `少女は、兄の胸に飛び込み、再び泣いた…。`[\]
+lss s0_9,"but","d11_futeki5" ;1
+flush 80
+msgwnd_but
+*d68701
+d [lv 0*"10"*"70100185"]`「どうした。`[@][lv 0*"10"*"70100186"]`……何をそんなに悲しんでいるんだ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"cha_i1l"
+flush 25
+msgwnd_enj
+*d68702
+d [lv 0*"11"*"72000167"]`「今日、クラスの子にいじめられたの……。`[@][lv 0*"11"*"72000168"]`テレビで、お母さんは悪い人たちと繋がりがあったって。`[@][lv 0*"11"*"72000169"]`………だから、うちのお父さんとお母さんが犯人で、みんなを殺したんだろうって……。`[@][lv 0*"11"*"72000170"]`……絵羽伯母さんに、そんなことないよねって聞いたのに、答えてくれないの……。`[@][lv 0*"11"*"72000171"]`……お父さんとお母さんは悪くなんかないよね？`[@][lv 0*"11"*"72000172"]`　ね…？」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+lss s0_10,"but","d11_majime5" ;1
+aspt2 xpos,s0_10,370
+flush 6
+lss s0_10,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d68703
+d2 [lv 0*"10"*"70100187"]`「可哀想に……。`[@][lv 0*"10"*"70100188"]`……みんなが、あの島で、あの日なにがあったのかを、好き勝手なことを言ってるんだな…。`[@][#][*][lv 0*"10"*"70100189"]`……そこにお座り」`[\]
+wait_on_d 0
+lss s0_10,"but","d11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_enj
+*d68704
+d [lv 0*"11"*"72000173"]`「……………うん…」`[\]
+textoff
+waits 167
+seplay 1,22,71
+anim2 s0_5,"no83",1
+flush 1
+waitvideo
+lbg s0_5,"no83_0051"
+flush 1
+csp_slot s0_5
+seplay 2,52,71
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"cha_i1l"
+show_whirl
+msgwnd_non
+*d68705
+d `男が床を指差すと、そこに黄金の蝶たちが集まり、椅子を作る。`[\]
+*d68706
+d `少女は素直に、それに腰掛けた……。`[\]
+msgwnd_enj
+*d68707
+d [lv 0*"11"*"72000174"]`「……お兄ちゃんは知ってるよね？`[@][lv 0*"11"*"72000175"]`　お父さんとお母さんは悪い人じゃないって、知ってるよね？」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+lss s0_10,"but","d11_futeki4" ;1
+aspt2 xpos,s0_10,370
+flush 4
+msgwnd_but
+*d68708
+d [lv 0*"10"*"70100190"]`「あぁ。もちろんだとも。`[@][lv 0*"10"*"70100191"]`……誰も悪い人なんかいないって、知ってるさ」`[\]
+msgwnd_enj
+*d68709
+d [lv 0*"11"*"72000176"]`「じゃあ、教えて。`[@][lv 0*"11"*"72000177"]`あの日、何があったの？`[@][lv 0*"11"*"72000178"]`　六軒島で何があったの？」`[\]
+csp_slot s0_10
+lss s0_9,"but","d11_futeki5" ;1
+flush 24
+msgwnd_but
+*d68710
+d [lv 0*"10"*"70100192"]`「いいとも。`[@][lv 0*"10"*"70100193"]`………話してあげるよ。`[@][lv 0*"10"*"70100194"]`あの日、あの島で何があったのか」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"cha_i1l"
+flush 5
+msgwnd_enj
+*d68711
+d [lv 0*"11"*"72000179"]`「それは、……怖い話……？」`[\]
+msgwnd_but
+*d68712
+d [lv 0*"10"*"70100195"]`「まさか」`[\]
+msgwnd_enj
+*d68713
+d [lv 0*"11"*"72000180"]`「それは、悲しい話……？」`[\]
+msgwnd_but
+*d68714
+d [lv 0*"10"*"70100196"]`「とんでもない」`[\]
+msgwnd_enj
+*d68715
+d [lv 0*"11"*"72000181"]`「それは、……どんな話……？」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_9,"but","d11_defo3" ;1
+flush 6
+msgwnd_but
+*d68716
+d [lv 0*"10"*"70100197"]`「聞いた縁寿が、自分で決めるといい。`[@][lv 0*"10"*"70100198"]`決して辛い話じゃないんだよ。`[@][lv 0*"10"*"70100199"]`だからお聞き」`[\]
+msgwnd_enj
+*d68717
+d [lv 0*"11"*"72000182"]`「うん。`[@][lv 0*"11"*"72000183"]`戦人お兄ちゃん……」`[\]
+textoff
+waits 167
+skip_off
+lbg2 s0_28,"end_7c"
+drop_cache "end_7c"
+aspt2 scaley,s0_28,200
+aspt2 ypos,s0_28,20000
+flush 1
+bgmplay2 186,100,1
+lsp s0_29,"*8"
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"cha_i1i"
+flush 5
+msgwnd_but
+*d68718
+d2 [lv 0*"10"*"70100200"][ak][text_speed_t 5]`「あの日、お兄ちゃんたちは六軒島へ行ったんだよ。`[#][*][|][lv 0*"10"*"70100201"]`とても大勢でね。`[#][*][|][lv 0*"10"*"70100202"]`大事な親族会議があることになってたんだ」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d 2
+waitvoice
+wait 333
+d_continue
+wait_on_d -1
+*d68719
+d2 [lv 0*"10"*"70100203"][ak][text_speed_t 5]`「………まずは、どこから話したものかな」`[#][*][\]
+wait_on_d 0
+waitvoice
+wait 333
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+textoff
+waits 167
+lbg s0_3,"sea_4a"
+flush 22
+set_window_simple 80
+msgwnd_non
+*d68720
+d2 `{a:c:`[lv 0*"10"*"70100204"][ak][text_speed_t 5]`これが。`[#][*][|][lv 0*"10"*"70100205"]`縁寿に捧げる、最後のゲーム。`[#][*]`}`[\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+wait 333
+d_continue
+wait_on_d -1
+msgwnd_but
+*d68721
+d2 `{a:c:`[lv 0*"10"*"70100206"][ak][text_speed_t 5]`お聞き、縁寿。`[#][*]`{n}`[|][lv 0*"10"*"70100207"]`あの日、六軒島で、何があったのか。`[#][*]`{n}`[|][lv 0*"10"*"70100208"]`これは、辛い話でも、悲しい話でもないんだよ………。`[#][*]`}`[\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d 2
+waitvoice
+wait 333
+d_continue
+wait_on_d -1
+set_name_window_non
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 10,500
+wait 500
+aspt2 ypos,s0_28,-11860,126469
+aspt2 ypos,s0_28,-12400,3531,1
+sptwait2 ypos,s0_28
+wait 6667
+skip_on
+vol_mix_fade 1000
+vol_bgm -1,1000
+csp_slot s0_29
+wait 1000
+csp_slot s0_28
+textoff
+waits 167
+lbg s0_3,"black"
+flush 18,4000,msk_1
+wait 3000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+ch_done flag_scenario_7_ura
+*ura_7_end
+goto *end_game
+

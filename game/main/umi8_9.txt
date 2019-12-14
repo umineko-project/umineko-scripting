@@ -1,0 +1,4475 @@
+*umi8_9
+;ベルンの出題
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_8_9
+mov $name_chapter_save, "8_09"
+mov %bern_game_mode,0
+~
+new_chapter date_scenario_8_9,scenario_8_9
+gstc 129
+seplay 1,61,71
+textoff
+waits 167
+lbg s0_3,"dai_1"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*bern_session_start
+bgmplay 144,71,0
+textoff
+waits 167
+meplay 1,13,71
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"m_cy1a"
+flush 22
+wait 2000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_bgm 70,1000
+vol_me 1,50,1000
+vol_me 2,0,1000
+vol_me 3,0,1000
+wait 1000
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_3,"mdin_1er"
+flush 22
+*d60179
+d `第一の晩の惨劇は、翌朝の午前６時に発覚した。`[\]
+*d60180
+d `朝食の準備のため、起き出して来た郷田は、親族会議で前夜からずっと食堂に篭っている親族兄弟たちの様子を見に行ったのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_9,"but","b11_majime2" ;1
+flush 24
+msgwnd_but
+*d60181
+d [lv 0*"10"*"80100579"]`「死体発見時のことを話してくれ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_8,"goh","a11_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_goh
+*d60182
+d [lv 0*"17"*"81700082"]`「{p:42:食堂は施錠されていました。}`[@][lv 0*"17"*"81700083"]`確かに食堂に鍵は付いていますが、普段、施錠することなどありません。`[@][lv 0*"17"*"81700084"]`ノックしたのですが返事はなく…」`[\]
+lss s0_9,"kum","a11_komaru1" ;1
+flush 24
+msgwnd_kum
+*d60183
+d [lv 0*"18"*"81800073"]`「{p:42:そこに私が来たのです。}`[@][lv 0*"18"*"81800074"]`万一のこともあるから、鍵を開けてみたらと勧めたのです」`[\]
+lss s0_8,"goh","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_goh
+*d60184
+d [lv 0*"17"*"81700085"]`「{p:42:マスターキーで扉を開ける}と、中は恐ろしいことに……」`[\]
+lss s0_9,"kum","a11_odoroki1" ;1
+flush 80
+msgwnd_kum
+*d60185
+d [lv 0*"18"*"81800075"]`「{p:42:絵羽さま、秀吉さま、留弗夫さま、霧江さま、楼座さま、そして源次さんの、`[@][lv 0*"18"*"81800076"]`計６人が血塗れになって倒れていたのでございます……}」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"m1f_s1c"
+lss s0_24,"cla","a11_majime1" ;1
+flush 24
+msgwnd_cla
+*d60186
+d [lv 0*"02"*"80800092"]`「それで後は大騒ぎだ。`[@][lv 0*"02"*"80800093"]`{p:42:全員が食堂に集まった}」`[\]
+lss s0_10,"nat","a12_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nat
+*d60187
+d [lv 0*"03"*"80900079"]`「思い出したくもありません…。`[@][lv 0*"03"*"80900080"]`それぞれの親の亡骸にすがり、泣き叫ぶ子供たち…」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_8,"jes","a11_naku2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_jes
+*d60188
+d [lv 0*"04"*"80200096"]`「ひょっとしたら生きているかもと。`[@][lv 0*"04"*"80200097"]`……みんな懸命に揺さぶってたぜ」`[\]
+lss s0_10,"sha","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_sha
+*d60189
+d [lv 0*"15"*"80500141"]`「しかし、駄目でした…。`[@][lv 0*"15"*"80500142"]`{p:42:お子様方はそれぞれ、自分の親が間違いなく死んでいることを確認なさいました…}」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"m1f_s1c"
+lss s0_8,"kan","a11_odoroki2" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_kan
+*d60190
+d [lv 0*"16"*"80600084"]`「{p:42:僕と南條先生は、源次さまが死んでいることを確認しました}」`[\]
+lss s0_10,"nan","a1_komaru3" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_nan
+*d60191
+d [lv 0*"19"*"81900049"]`「惨たらしい殺され方でした……。`[@][lv 0*"19"*"81900050"]`{p:42:私でなくとも、誰も検死は誤りません}」`[\]
+lss s0_24,"mar","a11_akuwarai1" ;1
+flush 23
+msgwnd_mar
+*d60192
+d [lv 0*"13"*"80400176"]`「{p:42:犠牲者はみんな、即死}だったろうね。`[@][lv 0*"13"*"80400177"]`……きひひひひひ」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_9,"cla","a11_majime1" ;1
+flush 23
+msgwnd_cla
+*d60193
+d [lv 0*"02"*"80800094"]`「{p:42:食堂内を調べた結果、扉も窓も、全て施錠され、密室であったことがわかった}」`[\]
+lss s0_10,"but","b24_komaru2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_but
+*d60194
+d [lv 0*"10"*"80100580"]`「そして、{p:42:食堂内から、不審なものは何も見つからなかった}」`[\]
+lss s0_8,"geo","a11_majime2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_geo
+*d60195
+d [lv 0*"07"*"80300117"]`「もちろん、{p:42:食堂内に何者かが隠れているということもなかったよ}」`[\]
+lss s0_9,"cla","a11_nayamu1" ;1
+flush 80
+msgwnd_cla
+*d60196
+d [lv 0*"02"*"80800095"]`「隠れるも何も。`[@][lv 0*"02"*"80800096"]`私たちは今ここに全員がいるではないかね。`[@][lv 0*"02"*"80800097"]`{p:42:誰も隠れていないことは明白だ}」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_8,"jes","a11_komaru3" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+lss s0_8,"jes","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_jes
+*d60197
+d [lv 0*"04"*"80200098"]`「でも父さん、となると、おかしいよ…。`[@][lv 0*"04"*"80200099"]`殺された６人、食堂は密室！`[@][lv 0*"04"*"80200100"]`　どうやって殺して逃げたんだ？！」`[\]
+lss s0_9,"nat","a12_nayamu3" ;1
+flush 24
+msgwnd_nat
+*d60198
+d [lv 0*"03"*"80900081"]`「……考えたくはありませんが、`[@][lv 0*"03"*"80900082"]`マスターキーを持つ、使用人が怪しいでしょう」`[\]
+lss s0_10,"cla","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_cla
+*d60199
+d [lv 0*"02"*"80800098"]`「６人を殺し、マスターキーで施錠して食堂を出た。`[@][lv 0*"02"*"80800099"]`……妥当な推理だ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_9,"goh","a12_komaru2" ;1
+flush 23
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,267,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_goh
+*d60200
+d [lv 0*"17"*"81700086"]`「ひ、ひぃ！`[@][lv 0*"17"*"81700087"]`　と、とんでもありませんっ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mdin_1fr"
+color_mod2 s0_3,#ffffff
+flush 22
+msgwnd_non
+*d60201
+d `食堂内に犯人が隠れている可能性がない以上、`[@]`犯人は殺害後に食堂を出て、施錠したと考えるのが妥当だ。`[\]
+*d60202
+d `マスターキーを持つ使用人たちが疑われるのは当然のこと。`[\]
+*d60203
+d `そして気の毒なことに、使用人たちの誰にもアリバイは存在しなかった。`[\]
+*d60204
+d `もっとも、使用人に限らず、誰にもアリバイは存在しなかったのだが。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+vol_me 3,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60205
+d [lv 0*"10"*"80100581"]`「マスターキー以外の方法で、外から施錠する手段は？」`[\]
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d60206
+d [lv 0*"28"*"82100111"]`「存在しないわ。`[@][lv 0*"28"*"82100112"]`………うぅん、これじゃ駄目ね。`[@][lv 0*"28"*"82100113"]`赤き真実で語るわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+set_window_simple 80
+*d60207
+d2 [lv 0*"28"*"82100114"][#][*]`{p:1:全ての扉の施錠、開錠は、マスターキーでしか行えない。`[@][lv 0*"28"*"82100115"]`もちろん、部屋の内側からはマスターキーがなくとも、施錠、開錠が可能。}`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"lam","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_lam
+*d60208
+d [lv 0*"29"*"82200107"]`「だそうよ。`[@][lv 0*"29"*"82200108"]`他に質問は？」`[\]
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60209
+d [lv 0*"27"*"80700401"]`「マスターキーの他にも、各部屋固有の鍵があるはずでは？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d60210
+d2 [lv 0*"28"*"82100116"]`「……本来なら存在するわね。`[@][lv 0*"28"*"82100117"]`でも、ゲームが複雑になるので排除させてもらったわ。`[@][lv 0*"28"*"82100118"]`赤き真実。`[@][lv 0*"28"*"82100119"][#][*]`{p:1:マスターキー以外の鍵は存在しないこととする}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_8,"but","d24_niramu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60211
+d [lv 0*"10"*"80100582"]`「つまり。`[@][lv 0*"10"*"80100583"]`このゲームに登場する全ての施錠は、マスターキーでしか開け閉めが出来ないってわけか」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_10,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_lam
+*d60212
+d [lv 0*"29"*"82200109"]`「そうなるわね。`[@][lv 0*"29"*"82200110"]`実にシンプルなゲームだわ」`[\]
+lss s0_8,"bea","a13_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60213
+d [lv 0*"27"*"80700402"]`「となれば、次はマスターキーの本数と所持者を確定せねばな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"ber","a21_defo2" ;1
+flush 22
+msgwnd_ber
+*d60214
+d2 [lv 0*"28"*"82100120"][#][*]`「{p:1:マスターキーは合計５本。`[@][lv 0*"28"*"82100121"]`５人の使用人が１本ずつを持ってる。}`[@][lv 0*"28"*"82100122"]`特別な方法で管理されていて、`[@][lv 0*"28"*"82100123"][#][*]`{p:1:マスターキーは常に身に付けられており、奪うことも譲渡することも、自分以外の人間が使用することも出来ない}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 1,59,71
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1a"
+lss s0_10,"but","d11_odoroki3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60215
+d [lv 0*"10"*"80100584"]`「何だそりゃ。`[@][lv 0*"10"*"80100585"]`それはもはや、鍵ってより、指紋認証システムみたいなもんだな」`[\]
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60216
+d [lv 0*"27"*"80700403"]`「面白い例えよ。`[@][lv 0*"27"*"80700404"]`……つまり、このゲームの世界では、マスターキー云々ではなく、使用人５人にしか、開閉は出来ぬというわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+wait 1000
+meplay 1,13,50
+textoff
+waits 167
+lbg s0_3,"mdin_1a"
+lss s0_10,"cla","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_cla
+*d60217
+d [lv 0*"02"*"80800100"]`「源次さんのマスターキーを回収しようとしたんだが、どうにもならなくてね」`[\]
+lss s0_8,"nat","a12_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_nat
+*d60218
+d [lv 0*"03"*"80900083"]`「後のトラブルを予防するため、{p:42:源次のマスターキーを破壊しておきました}」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mdin_1a"
+color_mod2 s0_3,#ffffff
+lss s0_10,"cla","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+lss s0_8,"nat","a12_majime1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 2
+msgwnd_non
+*d60219
+d `これが、第一の晩の事件。`[@]`{n}犯行現場は、施錠された密室の食堂。`[\]
+*d60220
+d `マスターキーを持つ使用人たちは全員、アリバイがない。`[@]`{n}しかし、使用人以外の誰にも、アリバイはない……。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+if %bern_game_mode != 0 jumpf
+gstc 130
+seplay 1,61,71
+textoff
+waits 167
+lbg s0_3,"dai_2"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+~
+if %bern_game_mode != 1 jumpf
+goto *uu_uu_0x61551d
+*uu_uu_0x6183b3
+vol_mix_fade 1000
+wait 1000
+gstc 136
+~
+bgmplay 112,71,0
+csp_slot s0_11
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_8,"nat","a12_odoroki2" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"cla","a11_majime1" ;1
+lss s0_10,"geo","a11_majime3" ;1
+aspt2 xpos,s0_10,550
+flush 22
+*d60221
+d `一同は客間に戻り、今後をどうするか議論した。`[\]
+*d60222
+d `電話は不通で警察に連絡は出来ない。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"m1f_s1d"
+flush 22
+*d60223
+d `謎の犯人は、今もどこかに隠れて、次の犠牲者を狙っているのだろうか。`[\]
+*d60224
+d `あるいは、この中に犯人がいて、心の中で舌を出しながら、次の獲物を吟味しているのだろうか。`[\]
+*d60225
+d `全員にアリバイがなく、誰にも犯人の可能性がある…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+meplay 1,13,71
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"m_o1a"
+flush 22
+wait 2000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_bgm 70,1000
+vol_me 1,50,1000
+wait 1000
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+flush 22
+*d60226
+d `しかし、そんな緊張感も、長くは続かない。`[\]
+*d60227
+d `お昼頃には皆、腹の探り合いに疲れ果て、小休止のような状態になった。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"mhal_2b_bg"
+lbg s0_3,"mhal_2b"
+lss s0_9,"nat","a12_majime1" ;1
+lss s0_10,"cla","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 22
+wait 500
+csp_slot s0_9
+csp_slot s0_10
+flush 2
+*d60228
+d `蔵臼夫妻は、二人で相談をすると告げ、２階へ上がる。`[\]
+*d60229
+d `それを皮切りに、一同もトイレに行ったり、止まない雨を眺めに行ったりと、皆、それぞれに散っていった。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d60230
+d `しかし、いつまで経っても、蔵臼夫妻だけが戻ってこない。`[\]
+*d60231
+d `内線電話を蔵臼と夏妃の部屋にそれぞれ掛けるが、返事はない。`[\]
+*d60232
+d `何かあったのかもしれない。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+flush 22
+wait 667
+textoff
+waits 167
+lbg s0_1,"m2f_p1a_bg"
+lbg s0_3,"m2f_p1a"
+flush 22
+wait 667
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+seplay 1,33,71
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 1
+*d60233
+d `一同は全員で蔵臼と夏妃の部屋に向かい、……夏妃の部屋で、蔵臼と夏妃が倒れているのを発見する。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+wait 667
+vol_se 1,-1
+textoff
+waits 167
+lbg s0_1,"mnat_1a_bg"
+lbg s0_3,"mnat_1a"
+lss s0_9,"goh","a11_majime1" ;1
+flush 22
+msgwnd_goh
+*d60234
+d [lv 0*"17"*"81700088"]`「{p:42:奥様の部屋は施錠されておりました！}`[@][lv 0*"17"*"81700089"]`　食堂の時と同じです！」`[\]
+csp_slot s0_9
+flush 24
+lss s0_10,"sha","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_sha
+*d60235
+d [lv 0*"15"*"80500143"]`「皆さんの許可を得て、{p:42:私が鍵を開けました…}」`[\]
+lss s0_8,"kan","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_kan
+*d60236
+d [lv 0*"16"*"80600085"]`「{p:42:部屋の中には、蔵臼さまと夏妃さまが倒れていました}」`[\]
+csp_slot s0_8
+csp_slot s0_10
+flush 23
+lss s0_8,"but","b11_nayamu1_chiru" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60237
+d [lv 0*"10"*"80100586"]`「{p:42:南條先生がすぐに脈を取ったぜ。`[@][lv 0*"10"*"80100587"]`そして、二人とも即死だったと宣言した}」`[\]
+lss s0_10,"nan","a1_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nan
+*d60238
+d [lv 0*"19"*"81900051"]`「はい。`[@][lv 0*"19"*"81900052"]`{p:42:私が二人の死亡を確認しました。`[@][lv 0*"19"*"81900053"]`あれは間違いなく即死でした}」`[\]
+lss s0_24,"jes","a11_ikari1" ;1
+flush 23
+msgwnd_jes
+*d60239
+d [lv 0*"04"*"80200101"]`「私は何かの手掛りがないか部屋中を探し回ったよ…！`[@][lv 0*"04"*"80200102"]`　その結果、{p:42:窓も扉も完全に施錠されていて、密室だったことがわかった}」`[\]
+csp_slot s0_24
+csp_slot s0_8
+csp_slot s0_10
+flush 24
+lss s0_9,"kum","a11_odoroki1" ;1
+flush 24
+msgwnd_kum
+*d60240
+d [lv 0*"18"*"81800077"]`「またしても密室！`[@][lv 0*"18"*"81800078"]`　またしてもマスターキーを持つ私たちが疑われることに…！」`[\]
+lss s0_8,"goh","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_goh
+*d60241
+d [lv 0*"17"*"81700090"]`「し、しかしご安心を…！`[@][lv 0*"17"*"81700091"]`　奥様に疑われていた私たちは、互いを見張り合っていたのです！」`[\]
+lss s0_10,"sha","a11_majime3" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_sha
+*d60242
+d [lv 0*"15"*"80500144"]`「{p:42:私たち使用人全員は、常に一緒におりました}」`[\]
+csp_slot s0_9
+flush 23
+lss s0_9,"kan","a11_komaru1" ;1
+flush 24
+msgwnd_kan
+*d60243
+d [lv 0*"16"*"80600086"]`「{p:42:僕たち使用人全員は、それぞれが使用人全員のアリバイを証明できます}」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"but","d11_futeki3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_but
+*d60244
+d [lv 0*"10"*"80100588"]`「こりゃ面白ぇ。`[@][lv 0*"10"*"80100589"]`今度はさらに完璧な密室だって言いたいのか」`[\]
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_ber
+*d60245
+d [lv 0*"28"*"82100124"]`「………最初の密室には全員にアリバイがなかった。`[@][lv 0*"28"*"82100125"]`そして今度の密室には、全員にアリバイがあることになっている」`[\]
+lss s0_24,"bea","a12_fukigen1" ;1
+flush 24
+msgwnd_bea
+*d60246
+d [lv 0*"27"*"80700405"]`「この世界では、使用人たちそのものが、生きたマスターキーとなっている。`[@][lv 0*"27"*"80700406"]`その使用人たちのアリバイが完璧である以上、夏妃の部屋の施錠は不可能だぞ…」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+seplay 1,15,71
+seplay 2,31,71
+textoff
+waits 167
+lbg s0_3,"m_door1"
+lss s0_10,"geo","a11_majime5" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_geo
+*d60247
+d [lv 0*"07"*"80300118"]`「僕たちは現場を保全することにした」`[\]
+lss s0_8,"mar","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_mar
+*d60248
+d [lv 0*"13"*"80400178"]`「{p:42:外からガムテープでベタベタと、窓や扉を封印したよ！}」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"m2f_p1a_bg"
+lbg s0_3,"m2f_p1a"
+lss s0_10,"jes","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_jes
+*d60249
+d [lv 0*"04"*"80200103"]`「きっとこの部屋に、犯人の何かの手掛りが残ってるはず！`[@][lv 0*"04"*"80200104"]`　{p:42:警察が来るまで絶対、誰の出入りも出来ないようにした！}」`[\]
+textoff
+waits 167
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"mdin_1fr"
+lss s0_9,"but","b11_majime1" ;1
+flush 23
+msgwnd_but
+*d60250
+d [lv 0*"10"*"80100590"]`「となりゃ、食堂も同じだ。`[@][lv 0*"10"*"80100591"]`{p:42:俺たちはさらに食堂も同様に封印した}」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 23
+vol_me 1,70
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"g_o1a"
+lss s0_8,"jes","a11_naki1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"but","b11_nayamu1_chiru" ;1
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+wait 500
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_nan
+*d60251
+d [lv 0*"19"*"81900054"]`「そもそも、屋敷自体を保全するべきではということになりましてな。`[@][lv 0*"19"*"81900055"]`{p:42:屋敷自体にも封印をし、私たちは全員、ゲストハウスへ避難しました}」`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+vol_me 1,-1,667
+wait 667
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"but","d11_niramu3" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_but
+*d60252
+d [lv 0*"10"*"80100592"]`「屋敷全体に封印？`[@][lv 0*"10"*"80100593"]`　窓全部をベタベタとか？`[@][lv 0*"10"*"80100594"]`　梯子を掛けて３階の窓までか？」`[\]
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d60253
+d2 [lv 0*"28"*"82100126"]`「……ゲームが複雑になるので単純化するわ。`[@][lv 0*"28"*"82100127"][#][*]`{p:1:全ての窓には鉄格子が入っており、窓からの出入りは不可能である。}`[@][lv 0*"28"*"82100128"]`よって、`[|][lv 0*"28"*"82100129"][#][*]`{p:1:玄関と裏口の２つの扉を封印するだけで屋敷は封印できることにする}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d 1
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_8,"but","d11_aseru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60254
+d [lv 0*"10"*"80100595"]`「なるほどな、そりゃ簡単だ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60255
+d [lv 0*"27"*"80700407"]`「どう考える？」`[\]
+lss s0_10,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60256
+d [lv 0*"10"*"80100596"]`「夏妃伯母さんの部屋にいた二人を殺すこと自体は容易い。`[@][lv 0*"10"*"80100597"]`ノックをして開けてもらえばいいだけの話だ。`[@][lv 0*"10"*"80100598"]`しかし、その後に施錠が出来ない」`[\]
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60257
+d [lv 0*"27"*"80700408"]`「施錠は使用人にしか出来ないが、`[@][lv 0*"27"*"80700409"]`使用人全員にはアリバイがあるぞ」`[\]
+lss s0_10,"but","d11_nayamu2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60258
+d [lv 0*"10"*"80100599"]`「使用人全員がグルって可能性さえなけりゃぁな。`[@][lv 0*"10"*"80100600"]`俺はそれより、第一の晩をまだ疑ってるぜ」`[\]
+lss s0_8,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60259
+d [lv 0*"27"*"80700410"]`「食堂で死んでいた６人の誰かが生きていて犯行を、ということか？」`[\]
+textoff
+waits 167
+csp_slot s0_10
+flush 23
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"but","d11_futeki1" ;1
+flush 23
+msgwnd_but
+*d60260
+d [lv 0*"10"*"80100601"]`「ヱリカの影響でな。`[@][lv 0*"10"*"80100602"]`どうにも検死ってヤツを疑わずにはいられねぇ」`[\]
+lss s0_10,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60261
+d [lv 0*"27"*"80700411"]`「つまり、最初の食堂の６人の犠牲者の誰かが生きていたと？」`[\]
+lss s0_9,"but","d11_niramu4" ;1
+flush 80
+msgwnd_but
+*d60262
+d [lv 0*"10"*"80100603"]`「あぁ。`[@][lv 0*"10"*"80100604"]`そしてその後、蔵臼夫妻を殺した。`[@][lv 0*"10"*"80100605"]`そして内側から施錠し、室内に隠れていて、機を見て逃げ出したんだ」`[\]
+lss s0_10,"bea","a11_1_majime5star" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60263
+d [lv 0*"27"*"80700412"]`「ふむ、筋の通った推理であるぞ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+wait 500
+lss s0_10,"ber","a21_shian1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d60264
+d2 [lv 0*"28"*"82100130"]`「……赤で語るわ。`[@][lv 0*"28"*"82100131"][#][*]`{p:1:第一の晩の犯人は確実に６人を殺している}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_8,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60265
+d2 [lv 0*"27"*"80700413"]`「ならば、妾も青き真実で追及しようぞ。`[@][lv 0*"27"*"80700414"]`密室の正体はこうだ。`[@][lv 0*"27"*"80700415"][#][*]`{p:2:犯人は内側から施錠し、夏妃の部屋内に隠れていたのだ。`[@][lv 0*"27"*"80700416"]`そして一同が退出した後、機を見て脱出した}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d60266
+d2 [lv 0*"28"*"82100132"]`「………いいわ、赤で否定する。`[@][lv 0*"28"*"82100133"][#][*]`{p:1:一同は退出と同時に部屋を封印した。`[@][lv 0*"28"*"82100134"]`その退出に犯人は加われない。`[@][lv 0*"28"*"82100135"]`そして、夏妃の部屋、食堂、屋敷の全ての封印は、決して破られることはない}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+lss s0_8,"lam","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_lam
+*d60267
+d [lv 0*"29"*"82200111"]`「うっふふふふ。`[@][lv 0*"29"*"82200112"]`ってことはつまり、ベッドの下に隠れて、あとでこっそり抜け出すというトリックは使えないってことなのね」`[\]
+lss s0_10,"but","d11_futeki3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60268
+d [lv 0*"10"*"80100606"]`「……面白ぇ。`[@][lv 0*"10"*"80100607"]`なかなかだぜ、ベルンカステル」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_9,"ber","a21_shian1" ;1
+flush 23
+msgwnd_ber
+*d60269
+d [lv 0*"28"*"82100136"]`「どうも」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+meplay 1,13,71
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_g1a"
+flush 22
+msgwnd_non
+*d60270
+d `これが、第二の晩の事件。`[@]`{n}犯行現場は、施錠された密室の夏妃の部屋。`[\]
+*d60271
+d `今度は、マスターキーを持つ使用人たちは全員、アリバイがある。`[\]
+*d60272
+d `屋敷内に危険を察した一同は、ゲストハウスへ避難する……。`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+if %bern_game_mode != 0 jumpf
+seplay 1,61,71
+textoff
+waits 167
+lbg s0_3,"dai_4"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+~
+if %bern_game_mode != 1 jumpf
+goto *uu_uu_0x61551d
+*uu_uu_0x61c14b
+vol_mix_fade 1000
+wait 1000
+~
+bgmplay 96,71,0
+textoff
+waits 167
+meplay 1,12,71
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"g_o1d_bg"
+lbg s0_3,"g_o1d"
+flush 22
+*d60273
+d `ゲストハウスへ避難した一同は、ここに篭城することで台風が過ぎ去るのを待とうとする。`[\]
+*d60274
+d `そこで全員が、互いが互いを監視しあっていれば、内部犯行も外部犯行も防げるだろう。`[\]
+*d60275
+d `しかし、台風が過ぎ去るまでを、ずっと間断なくそうしていることは出来ない。`[\]
+*d60276
+d `再び、彼らの行動には隙が生じ、新しい惨劇を迎えることになる。`[\]
+textoff
+waits 167
+csp_slot s0_11
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"garden_1c"
+flush 22
+wait 1000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"garden_r1a_bg"
+lbg s0_3,"garden_r1a"
+lss s0_8,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60277
+d [lv 0*"10"*"80100608"]`「用事で表へ出た紗音ちゃんと嘉音くんが、いつまでも戻らないんだ…！」`[\]
+lss s0_10,"jes","a11_naku2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_jes
+*d60278
+d [lv 0*"04"*"80200105"]`「譲治兄さんが騒ぎ出し、{p:42:全員で外に出て紗音たちを探すことになったんだ}」`[\]
+csp_slot s0_8
+csp_slot s0_10
+flush 23
+lss s0_8,"kum","a11_komaru1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_kum
+*d60279
+d [lv 0*"18"*"81800079"]`「紗音さんは薔薇庭園に倒れておりました。`[@][lv 0*"18"*"81800080"]`おぉ、おいたわしや……」`[\]
+lss s0_10,"geo","a21k_naki2k" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_geo
+*d60280
+d [lv 0*"07"*"80300119"]`「生きててくれと願ったさ。`[@][lv 0*"07"*"80300120"]`でも、{p:42:僕は彼女が死んでいることを認めなければならなかった…}」`[\]
+lss s0_24,"nan","a1_majime1" ;1
+flush 24
+msgwnd_nan
+*d60281
+d [lv 0*"19"*"81900056"]`「無論、{p:42:私も検死し、彼女の死亡を確認しました}」`[\]
+csp_slot s0_24
+csp_slot s0_8
+csp_slot s0_10
+flush 23
+lss s0_8,"goh","a11_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_goh
+*d60282
+d [lv 0*"17"*"81700092"]`「二人が出掛けた時、私たちはゲストハウスの戸締りを確認するために色々とやっていました。`[@][lv 0*"17"*"81700093"]`だから、{p:42:私たちにはみんな、アリバイがないのです…！}」`[\]
+lss s0_9,"geo","b21_naku1" ;1
+flush 24
+seplay 1,8,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,267,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_geo
+*d60283
+d [lv 0*"07"*"80300121"]`「僕が殺すものか！`[@][lv 0*"07"*"80300122"]`　僕に殺せるものか！！」`[\]
+lss s0_10,"mar","a22_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_mar
+*d60284
+d [lv 0*"13"*"80400179"]`「うん。`[@][lv 0*"13"*"80400180"]`譲治お兄ちゃんには殺せないね、うー」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"garden_r1a_bg"
+lbg s0_3,"garden_r1a"
+lss s0_24,"jes","a11_nayamu1" ;1
+flush 24
+msgwnd_jes
+*d60285
+d [lv 0*"04"*"80200106"]`「その後、譲治兄さんにだけはアリバイがあることがわかったんだ。`[@][lv 0*"04"*"80200107"]`{p:42:紗音殺しに限っては、譲治兄さんには不可能なんだ}」`[\]
+lss s0_8,"but","b11_nayamu4" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60286
+d [lv 0*"10"*"80100609_b"]`「逆に言えば。`[@][lv 0*"10"*"80100610"]`{p:42:……譲治の兄貴以外なら誰にでも殺せたわけだ}」`[\]
+lss s0_10,"goh","a11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_goh
+*d60287
+d [lv 0*"17"*"81700094"]`「犯人に悪用されるのを防ぐため、`[@][lv 0*"17"*"81700095"]`{p:42:紗音さんの持ってたマスターキーは、その場で破壊しました}」`[\]
+csp_slot s0_11
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_ber
+*d60288
+d2 [lv 0*"28"*"82100137"]`「……紗音が殺されると同時に、嘉音は永遠に行方不明となるわ。`[@][lv 0*"28"*"82100138"][#][*]`………{p:1:以後、嘉音は殺されたものとして扱う。`[@][lv 0*"28"*"82100139"]`嘉音のマスターキーも破壊されたものとして扱うわ}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_9,"lam","a11_akuwarai1" ;1
+flush 23
+msgwnd_lam
+*d60289
+d [lv 0*"29"*"82200113"]`「まぁ、無粋だから割愛するけど、`[@][lv 0*"29"*"82200114"]`紗音が死んだんだから、そういうことになるわよねぇ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_majime2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_bea
+*d60290
+d [lv 0*"27"*"80700417"]`「つまり。`[@][lv 0*"27"*"80700418"]`死体はなくとも、紗音と嘉音は同時に殺された、という解釈で良いのか？」`[\]
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_ber
+*d60291
+d [lv 0*"28"*"82100140"]`「そうなるわ」`[\]
+lss s0_24,"but","d11_nayamu4" ;1
+flush 23
+msgwnd_but
+*d60292
+d [lv 0*"10"*"80100611"]`「……ふむ。`[@][lv 0*"10"*"80100612"]`順調に事件が進んでいくな」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+meplay 1,12,71
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_1a"
+flush 22
+msgwnd_non
+*d60293
+d `これが、第四の晩の事件。`[\]
+*d60294
+d `犯行現場は、薔薇庭園。`[\]
+*d60295
+d `鍵も扉も存在しない。`[@]`密室ではないのだ。`[@]`{n}よって、もはやマスターキーは何の関係もない。`[\]
+*d60296
+d `そして、事件は加速していく……。`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+if %bern_game_mode != 0 jumpf
+gstc 131
+seplay 1,61,71
+textoff
+waits 167
+lbg s0_3,"dai_56"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+~
+if %bern_game_mode != 1 jumpf
+goto *uu_uu_0x61551d
+*uu_uu_0x61da35
+vol_mix_fade 1000
+wait 1000
+gstc 137
+~
+textoff
+waits 167
+bgmplay 55,71,0
+meplay 1,13,71
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,100
+rain_params s0_7,400,500,100
+textoff
+waits 167
+lbg s0_3,"g_o1cr"
+flush 22
+*d60297
+d `ゲストハウスへ篭城する一同。`[\]
+*d60298
+d `窓も扉も全てを厳重に閉ざし、自らを密室に閉ざす。`[\]
+*d60299
+d `しかし、すでにいくつもの密室殺人が起きている。`[\]
+*d60300
+d `自らを密室へ閉ざす行為は、新しい惨劇を自ら招く行為に他ならないのか。`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+vol_bgm 70,1000
+vol_me 1,50,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"g1f_p1e"
+flush 22
+*d60301
+d `いとこ部屋で犯人探しの議論を過熱させていた彼らは、南條や熊沢たちの証言を再確認するべく、使用人室に彼らを訪ねた。`[\]
+textoff
+waits 167
+lbg s0_3,"g1f_r1ar"
+flush 22
+seplay 1,33,71
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 1
+*d60302
+d `そして、……そこで再び惨劇が起こっていることを知る。`[\]
+textoff
+waits 167
+lbg s0_3,"g1f_r1ar"
+lss s0_10,"nan","a1_komaru3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nan
+*d60303
+d [lv 0*"19"*"81900057"]`「{p:42:郷田さんも熊沢さんも、この傷では即死}だったでしょう。`[@][lv 0*"19"*"81900058"]`惨たらしい死に方です…」`[\]
+lss s0_9,"jes","a11_ikari3" ;1
+flush 24
+seplay 1,8,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,267,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_jes
+*d60304
+d [lv 0*"04"*"80200108"]`「この傷で生きてるわけあるもんか…！`[@][lv 0*"04"*"80200109"]`　{p:42:死んでるよ、郷田さんも熊沢さんも！}」`[\]
+csp_slot s0_9
+csp_slot s0_10
+flush 23
+lss s0_8,"but","b11_aseru2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60305
+d [lv 0*"10"*"80100613"]`「戸締り確認とか見回りとか、色々やってたからな。`[@][lv 0*"10"*"80100614"]`今回もまた、{p:42:俺たちには全員、アリバイがない}」`[\]
+lss s0_9,"geo","a11_majime3" ;1
+flush 24
+msgwnd_geo
+*d60306
+d [lv 0*"07"*"80300123"]`「そんなことはないよ。`[@][lv 0*"07"*"80300124"]`見てごらん。`[@][lv 0*"07"*"80300125"]`……あんな殺し方をしたら、絶対に犯人は返り血を浴びるはずなんだ」`[\]
+lss s0_10,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_mar
+*d60307
+d [lv 0*"13"*"80400181"]`「でも、いとこ全員も、そして南條先生も返り血は浴びてないね」`[\]
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+flush 24
+lss s0_10,"jes","a11_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_jes
+*d60308
+d [lv 0*"04"*"80200110"]`「私たち全員は、……つまり、{p:42:いとこ４人と南條先生には、郷田さんと熊沢さんは殺せない}」`[\]
+lss s0_8,"but","b11_majime3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60309
+d [lv 0*"10"*"80100615"]`「となれば、犯人は俺たち以外の誰かであることは明白だ」`[\]
+csp_slot s0_8
+csp_slot s0_10
+flush 24
+lss s0_9,"geo","a11_majime3" ;1
+flush 24
+msgwnd_geo
+*d60310
+d [lv 0*"07"*"80300126"]`「何者かの侵入を疑って調べたけれど、{p:42:ゲストハウスの戸締りは完璧だったよ}」`[\]
+lss s0_10,"nan","a1_komaru3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nan
+*d60311
+d [lv 0*"19"*"81900059"]`「犯人はやはり、マスターキーを持っているのかもしれません…」`[\]
+csp_slot s0_9
+csp_slot s0_10
+flush 23
+lss s0_8,"but","b11_aseru3" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60312
+d [lv 0*"10"*"80100616"]`「それはありえねぇぜ。`[@][lv 0*"10"*"80100617"]`{p:42:マスターキーはもう、ここで死んでる２人の２本以外、存在しない}」`[\]
+lss s0_10,"jes","a11_ikari1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_jes
+*d60313
+d [lv 0*"04"*"80200111"]`「現存する２本のマスターキーが、こうしてゲストハウス内に残っている以上、`[@][lv 0*"04"*"80200112"]`……ゲストハウスは完璧な密室なんだ…！」`[\]
+lss s0_9,"mar","a11_akuwarai2" ;1
+flush 24
+msgwnd_mar
+*d60314
+d2 [lv 0*"13"*"80400182"]`「完璧でないから、人が死んだんだけどね。`[@][#][*][lv 0*"13"*"80400183"]`きっひひひひひひひひ……」`[\]
+wait_on_d 0
+seplay 1,37,71
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d60315
+d `これが、第五、第六の晩の事件。`[@]`{n}犯行現場は、ゲストハウスという名の密室。`[\]
+*d60316
+d `郷田と熊沢のマスターキーも破壊され、これで全てのマスターキーが失われた。`[\]
+textoff
+waits 167
+lbg s0_3,"different_spiral_1b"
+flush 22
+*d60317
+d `もう誰にも、ゲストハウスの密室を破ることは出来ない。`[\]
+*d60318
+d `そのはずだった……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+if %bern_game_mode != 0 jumpf
+gstc 132
+seplay 1,61,71
+textoff
+waits 167
+lbg s0_3,"dai_7"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+~
+if %bern_game_mode != 1 jumpf
+goto *uu_uu_0x61551d
+*uu_uu_0x61ee2b
+vol_mix_fade 1000
+wait 1000
+gstc 138
+~
+bgmplay 142,71,0
+seplay 1,33,71
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 1
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_3,"g1f_p1e"
+flush 22
+*d60319
+d `そして、今度は南條先生が殺された。`[\]
+*d60320
+d `殺されたのはゲストハウス内の玄関。`[\]
+*d60321
+d `戸締りの確認に、一人でここに訪れたのは、あまりに無用心が過ぎた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"g1f_p1c"
+lss s0_8,"jes","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_jes
+*d60322
+d [lv 0*"04"*"80200113"]`「{p:42:し、死んでる…。`[@][lv 0*"04"*"80200114"]`殺されてる……！}」`[\]
+lss s0_9,"geo","a11k_komaru1k" ;1
+flush 24
+msgwnd_geo
+*d60323
+d [lv 0*"07"*"80300127"]`「僕でさえ、{p:42:これは即死だったに違いない}と一目でわかるよ…」`[\]
+csp_slot s0_8
+csp_slot s0_9
+flush 24
+lss s0_10,"mar","a22_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d60324
+d [lv 0*"13"*"80400184"]`「{p:42:戸締りは完璧だよ。}`[@][lv 0*"13"*"80400185"]`密室なのにどうして？」`[\]
+lss s0_8,"but","b11_aseru3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60325
+d [lv 0*"10"*"80100618"]`「じゃあ、俺たちの中に犯人がいるってことになるぞ…！」`[\]
+csp_slot s0_8
+csp_slot s0_10
+flush 24
+lss s0_10,"jes","a11_ikari3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_jes
+*d60326
+d [lv 0*"04"*"80200115"]`「それはありえない！`[@][lv 0*"04"*"80200116"]`　状況から判断して、{p:42:私にも真里亞にも、戦人にも譲治兄さんにも、南條先生は殺せない！}」`[\]
+lss s0_8,"geo","a11_ikari2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_geo
+*d60327
+d [lv 0*"07"*"80300128"]`「そもそも、{p:42:ゲストハウス内で南條先生を殺すことは不可能}なんだ！」`[\]
+lss s0_24,"but","b11_aseru2" ;1
+flush 24
+msgwnd_but
+*d60328
+d [lv 0*"10"*"80100619"]`「しかも、これを見ろよ。`[@][lv 0*"10"*"80100620"]`つまりこいつは、{p:42:南條先生がゲストハウスを出ていない証拠だ…！}」`[\]
+csp_slot s0_24
+csp_slot s0_8
+csp_slot s0_10
+flush 24
+lss s0_9,"mar","a11_odoroki1" ;1
+flush 24
+msgwnd_mar
+*d60329
+d [lv 0*"13"*"80400186"]`「じゃあ南條先生は殺せないってことになるね？`[@][lv 0*"13"*"80400187"]`　なのに、なんで殺されてるの？」`[\]
+msgwnd_non
+*d60330
+d `誰にも、その無垢な問い掛けに答えることは出来ない。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+*d60331
+d `これが、第七の晩。`[\]
+*d60332
+d `犯行現場は、またしてもゲストハウスという密室。`[\]
+*d60333
+d `数々の状況から、またしても不可能犯罪の様相を深める。`[\]
+*d60334
+d `そして、惨劇は最後の第八の晩を迎える。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+if %bern_game_mode != 0 jumpf
+gstc 133
+seplay 1,61,71
+textoff
+waits 167
+lbg s0_3,"dai_8"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+~
+if %bern_game_mode != 1 jumpf
+goto *uu_uu_0x61551d
+*uu_uu_0x61fa6f
+vol_mix_fade 1000
+wait 1000
+gstc 139
+~
+bgmplay 147,71,0
+textoff
+waits 167
+meplay 1,13,71
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"g_o1ar"
+flush 22
+*d60335
+d `もう、篭城が自分たちの身を守ってくれないことは明白だった。`[\]
+*d60336
+d `恐怖を忘れるための麻酔として、朱志香は怒りを選んだのかもしれない。`[\]
+*d60337
+d `彼女は、屋外に潜むに違いない殺人犯を求め、激高しながらゲストハウスを飛び出していく。`[\]
+*d60338
+d `慌てて朱志香を追う、譲治、戦人、真里亞の３人。`[\]
+textoff
+waits 167
+lbg s0_3,"garden_1cn"
+flush 22
+*d60339
+d `そして３人は屋外にて、倒れている朱志香を見つける。`[\]
+*d60340
+d `それは誰が見ても一目でわかる、無残な死体だった……。`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_1ar"
+lss s0_9,"geo","b21k_naku1k" ;1
+aspt2 darken_r,s0_9,156
+aspt2 darken_g,s0_9,156
+aspt2 darken_b,s0_9,160
+flush 22
+msgwnd_geo
+*d60341
+d [lv 0*"07"*"80300129"]`「朱志香ちゃん、……可哀想に。`[@][lv 0*"07"*"80300130"]`{p:42:即死だったろう}」`[\]
+lss s0_8,"mar","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-550
+aspt2 darken_r,s0_8,156
+aspt2 darken_g,s0_8,156
+aspt2 darken_b,s0_8,160
+flush 23
+msgwnd_mar
+*d60342
+d [lv 0*"13"*"80400188"]`「{p:42:これで生きているわけがない}もんね。`[@][lv 0*"13"*"80400189"]`きひひひひ」`[\]
+lss s0_10,"but","b11_sakebu1a" ;1
+aspt2 xpos,s0_10,550
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 24
+msgwnd_but
+*d60343
+d [lv 0*"10"*"80100621"]`「俺たちは３人でずっと一緒だった！`[@][lv 0*"10"*"80100622"]`　{p:42:俺も譲治の兄貴も真里亞も、朱志香は殺せねぇぞ！}」`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"garden_1cn"
+lss s0_10,"mar","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 24
+msgwnd_mar
+*d60344
+d [lv 0*"13"*"80400190"]`「うん。`[@][lv 0*"13"*"80400191"]`{p:42:私たち３人に朱志香は殺せない}」`[\]
+lss s0_8,"geo","a11_ikari2" ;1
+aspt2 xpos,s0_8,-550
+aspt2 darken_r,s0_8,156
+aspt2 darken_g,s0_8,156
+aspt2 darken_b,s0_8,160
+flush 23
+msgwnd_geo
+*d60345
+d [lv 0*"07"*"80300131"]`「真里亞ちゃんが人なんか殺すもんか。`[@][lv 0*"07"*"80300132"]`{p:42:真里亞ちゃんには誰も殺せないよ}」`[\]
+lss s0_10,"mar","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,550
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 80
+msgwnd_mar
+*d60346
+d [lv 0*"13"*"80400192"]`「きひひ、ありがとう。`[@][lv 0*"13"*"80400193"]`{p:42:譲治お兄ちゃんだって、大人は殺せないよ。`[@][lv 0*"13"*"80400194"]`子供は殺せるけれど。}`[@][lv 0*"13"*"80400195"]`きひひひひひひ」`[\]
+lss s0_9,"but","b11_naku2" ;1
+aspt2 darken_r,s0_9,156
+aspt2 darken_g,s0_9,156
+aspt2 darken_b,s0_9,160
+flush 24
+msgwnd_but
+*d60347
+d [lv 0*"10"*"80100623"]`「あぁ、何が何だかさっぱりわからねぇぜ…！！`[@][lv 0*"10"*"80100624"]`　一体、何がどうなってやがるんだ…！！」`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_1ar"
+flush 22
+msgwnd_non
+*d60348
+d `これが、第八の晩。`[@]`犯行現場は、屋外。`[\]
+*d60349
+d `しかし、朱志香の後を追った３人にはアリバイがある。`[@]`{n}譲治、戦人、真里亞には、朱志香は殺せない。`[\]
+*d60350
+d `やはり、この島には、右代宮家以外の何者かが潜んでいるのだろうか……。`[\]
+*d60351
+d `物語の幕は、ここで一度下りる……。`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+if %bern_game_mode = 1 goto *bern_session_end
+gstc 134
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"ber","a21_shian1" ;1
+aspt2 xpos,s0_8,-370
+flush 2
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+bgmplay 97,71,0
+mov %bern_game_mode,1
+msgwnd_ber
+*d60352
+d [lv 0*"28"*"82100141"]`「……これで、私の物語はおしまいよ」`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_10,"lam","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60353
+d [lv 0*"29"*"82200115"]`「なかなかよく出来てるじゃない。`[@][lv 0*"29"*"82200116"]`ちゃんと朗読したなら、ベアトのゲームに混じってても不思議じゃない物語だったわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60354
+d [lv 0*"10"*"80100625"]`「それは認めるぜ。`[@][lv 0*"10"*"80100626"]`よく出来てた」`[\]
+lss s0_8,"bea","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60355
+d [lv 0*"27"*"80700419"]`「まぁ、ここから朗読して観劇に耐えるものにするのが骨なのであるが」`[\]
+lss s0_10,"but","d11_niramu3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60356
+d [lv 0*"10"*"80100627"]`「しかし、何が何だかさっぱりだぜ。`[@][lv 0*"10"*"80100628"]`まともに考えたら、犯人は右代宮家以外の、謎の人物ってことになっちまう」`[\]
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60357
+d [lv 0*"27"*"80700420"]`「それは魔女を認めるも同じだ。`[@][lv 0*"27"*"80700421"]`……他にも、犯人に協力する共犯者の存在などが疑えるだろうな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"but","d11_oya1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60358
+d [lv 0*"10"*"80100629"]`「そもそも、あの紫の文字は何なんだ。`[@][lv 0*"10"*"80100630"]`新しいルールか？」`[\]
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d60359
+d [lv 0*"28"*"82100142"]`「……“紫の発言”と呼ぶわ。`[@][lv 0*"28"*"82100143"]`話をわかりやすくするために作ったルールよ。`[@][lv 0*"28"*"82100144"]`……紫の発言は、重要な発言であると認識してくれれば結構よ。`[@][lv 0*"28"*"82100145"]`……逆に言えば、紫でない発言は無視することも可能かもしれない」`[\]
+lss s0_8,"but","d11_futeki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60360
+d [lv 0*"10"*"80100631"]`「ほう……。`[@][lv 0*"10"*"80100632"]`そりゃ親切な話だな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_majime2" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_bea
+*d60361
+d [lv 0*"27"*"80700422"]`「では、紫の発言は、赤き真実に準ずるのか」`[\]
+lss s0_24,"ber","a21_warai1" ;1
+flush 23
+msgwnd_ber
+*d60362
+d [lv 0*"28"*"82100146"]`「えぇ。`[@][lv 0*"28"*"82100147"]`紫の発言は、赤き真実と同じ力があると考えて良いわ。`[@][lv 0*"28"*"82100148"]`………ただし、一つだけ例外がある。`[@][lv 0*"28"*"82100149"]`それは、犯人は紫の発言でウソをつくことが出来るということよ」`[\]
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_but
+*d60363
+d [lv 0*"10"*"80100633"]`「……なるほど。`[@][lv 0*"10"*"80100634"]`逆に言えば、犯人以外はウソをつけないってわけか」`[\]
+lss s0_8,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_bea
+*d60364
+d [lv 0*"27"*"80700423"]`「紫の発言。`[@][lv 0*"27"*"80700424"]`……これがどうやら、ベルンカステル卿のゲームの鍵であるわけだな」`[\]
+lss s0_24,"ber","a21_warai4" ;1
+flush 80
+msgwnd_ber
+*d60365
+d [lv 0*"28"*"82100150"]`「えぇ、そうよ。`[@][lv 0*"28"*"82100151"]`………私のゲームの、ルールの前提を説明するわ」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+set_window_simple 80
+msgwnd_non
+*d60366
+d2 `{e:080:`[#][*]`●犯人の定義とは、殺人者のことである。`[@]`{n}`[#][*]`●犯人はウソをつく可能性がある。`[@]`{n}`[#][*]`●犯人は殺人以前にもウソをつく可能性がある。`[@]`{n}`[#][*]`●犯人でない人物は、真実のみを語る。`[@]`{n}`[#][*]`●犯人でない人物は、犯人に協力しない。`[@]`{n}`[#][*]`●犯人は全ての殺人を、自らの手で直接行なう。`[@]`{n}`[#][*]`●犯人が死ぬことはない。`[@]`{n}`[#][*]`●犯人は登場人物の中にいる。`[@]`{n}`[#][*]`●紫の発言は、赤き真実と同じ価値がある。`[@]`ただし、犯人のみ、紫の発言でウソがつける。}`[\]
+wait_on_d 0
+seplay 1,61,71
+d_continue
+wait_on_d 1
+seplay 1,61,71
+d_continue
+wait_on_d 2
+seplay 1,61,71
+d_continue
+wait_on_d 3
+seplay 1,61,71
+d_continue
+wait_on_d 4
+seplay 1,61,71
+d_continue
+wait_on_d 5
+seplay 1,61,71
+d_continue
+wait_on_d 6
+seplay 1,61,71
+d_continue
+wait_on_d 7
+seplay 1,61,71
+d_continue
+wait_on_d 8
+seplay 1,61,71
+d_continue
+wait_on_d -1
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"ber","a21_defo2" ;1
+flush 22
+msgwnd_ber
+*d60367
+d [lv 0*"28"*"82100152"]`「以上よ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1c"
+lss s0_8,"but","d24_futeki1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60368
+d [lv 0*"10"*"80100635"]`「“犯人の定義は殺人者である”、か。`[@][lv 0*"10"*"80100636"]`もっともな話だぜ」`[\]
+lss s0_10,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_bea
+*d60369
+d [lv 0*"27"*"80700425"]`「“犯人はウソをつく可能性がある”。`[@][lv 0*"27"*"80700426"]`これももっともな話であるぞ」`[\]
+lss s0_8,"but","d11_futeki3" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60370
+d [lv 0*"10"*"80100637"]`「“犯人は殺人以前にもウソをつける”。`[@][lv 0*"10"*"80100638"]`そりゃそうだろうな」`[\]
+lss s0_10,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60371
+d [lv 0*"27"*"80700427"]`「“犯人でない人物は、真実のみを語る”。`[@][lv 0*"27"*"80700428"]`ありがたい話であるな！」`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_24,"lam","a11_futeki3" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60372
+d [lv 0*"29"*"82200117"]`「“犯人でない人物は、犯人に協力しない”、ですって」`[\]
+lss s0_10,"bea","a11_1_majime5star" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60373
+d [lv 0*"27"*"80700429"]`「これはつまり、口裏を合わせる共犯者がいないということか」`[\]
+lss s0_8,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60374
+d [lv 0*"10"*"80100639"]`「やられたな。`[@][lv 0*"10"*"80100640"]`犯人を庇って、アリバイを捏造しているヤツがいると疑ってたんだが…」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_ber
+*d60375
+d [lv 0*"28"*"82100153"]`「……お生憎ね」`[\]
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60376
+d [lv 0*"27"*"80700430"]`「“犯人は全ての殺人を、自らの手で直接行なう”。`[@][lv 0*"27"*"80700431"]`……つまり、トラップなどの遠距離殺人、間接殺人はないというわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+lss s0_9,"but","d11_komaru3" ;1
+flush 23
+msgwnd_but
+*d60377
+d [lv 0*"10"*"80100641"]`「“犯人が死ぬことはない”。`[@][lv 0*"10"*"80100642"]`つまり、殺害後、密室を構築して自殺ってことはないってわけか」`[\]
+lss s0_10,"lam","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_lam
+*d60378
+d [lv 0*"29"*"82200118"]`「それはつまり、死者は犯人ではないってことにもなるわね？」`[\]
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_bea
+*d60379
+d [lv 0*"27"*"80700432"]`「……ふむ。`[@][lv 0*"27"*"80700433"]`それは地味に重要な情報であるぞ」`[\]
+lss s0_9,"but","d11_futeki3" ;1
+flush 80
+msgwnd_but
+*d60380
+d [lv 0*"10"*"80100643"]`「“犯人は登場人物の中にいる”。`[@][lv 0*"10"*"80100644"]`……未知の人物が島に紛れ込んで、ってのはなしってわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"ber","a21_defo1" ;1
+flush 22
+wait 500
+lss s0_9,"ber","a21_defo2" ;1
+flush 80
+msgwnd_ber
+*d60381
+d [lv 0*"28"*"82100154"]`「登場人物は、金蔵を除いた、いつものお約束の１７人よ。`[@][lv 0*"28"*"82100155"]`それ以外は登場しないし、関係もない」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_1c"
+lss s0_10,"bea","a11_fukigen1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_bea
+*d60382
+d [lv 0*"27"*"80700434"]`「“紫の発言は、赤き真実と同じ価値がある。`[@][lv 0*"27"*"80700435"]`ただし、犯人のみ、紫の発言でウソがつける”。`[@][lv 0*"27"*"80700436"]`……これが厄介であるな」`[\]
+lss s0_8,"but","d11_komaru3" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60383
+d [lv 0*"10"*"80100645"]`「ゲームの肝ってところだろうぜ。`[@][lv 0*"10"*"80100646"]`それでゲームの前提とやらは終わりか？」`[\]
+lss s0_24,"ber","a21_defo2" ;1
+flush 22
+msgwnd_ber
+*d60384
+d2 [lv 0*"28"*"82100156"]`「………最後に付け加えるとしたら、“朗読者はウソをつかない”、というくらいかしら。`[@][lv 0*"28"*"82100157"][#][*]`つまり、{p:1:セリフでないト書き部分に、ウソは存在しないということよ。}`[@][lv 0*"28"*"82100158"]`……やっても良かったけれど、ゲームが複雑になって面倒臭いし」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60385
+d [lv 0*"27"*"80700437"]`「魔女の特権を自ら手放すとは。`[@][lv 0*"27"*"80700438"]`大した余裕であるな」`[\]
+lss s0_8,"but","d11_futeki1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60386
+d [lv 0*"10"*"80100647"]`「それでも勝てるつもりなんだろうぜ」`[\]
+lss s0_24,"ber","a21_shian1" ;1
+flush 80
+msgwnd_ber
+*d60387
+d [lv 0*"28"*"82100159"]`「私からは以上で全てよ。`[@][lv 0*"28"*"82100160"]`……これ以上は、何の質問もヒントも出すつもりはないわ」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1c"
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_9,"lam","a11_warai1" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60388
+d2 [lv 0*"29"*"82200119"]`「立会い人として、最後に改めて宣言するわ。`[@][lv 0*"29"*"82200120"][#][*]`{p:1:以上の情報で、犯人が特定できることを保証する}」`[\]
+wait_on_d 0
+seplay 1,59,71
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"but","d11_futeki3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60389
+d [lv 0*"10"*"80100648"]`「よし。`[@][lv 0*"10"*"80100649"]`………了解した」`[\]
+lss s0_8,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60390
+d [lv 0*"27"*"80700439"]`「腕が鳴るぞ。`[@][lv 0*"27"*"80700440"]`そなたと共にまた、同じミステリーに挑めるとはな…！」`[\]
+lss s0_10,"but","d11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60391
+d [lv 0*"10"*"80100650"]`「あぁ。`[@][lv 0*"10"*"80100651"]`楽しませてもらおうぜ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"different_space_2a"
+flush 22
+set_window_simple 80
+msgwnd_non
+*d60392
+d `……これは、私とあなたの、本当のゲーム。`[@]`{n}紙と筆記用具を用意することをお奨めするわ。`[@]`{n}私と、本当に戦う気があるのならね。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_2b"
+flush 22
+*d60393
+d `もしどうしても行き詰まるなら、戦人とベアトの推理に耳を傾けるのもいいかもね。`[@]`{n}それが、あなたがどうしても困った時の、“ヒント”。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_2c"
+flush 22
+*d60394
+d `でも、私はあなたと一騎打ちが楽しみたいの。`[@]`{n}あなたも、私との一騎打ちを楽しんでくれるなら。`[@]`{n}ヒントなんて頼らずに、あなたの力だけで私に打ち勝ってみて。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_2d"
+flush 22
+*d60395
+d `さぁ、……楽しみましょう？`[@]`{n}あなたのためだけに、生み出した私のゲームを……。`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+seplay 3,27,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+wait 1500
+seplay 2,56,71
+textoff
+waits 167
+lbg s0_3,"different_spiral_1b"
+flush 8
+wait 667
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 2
+wait 1000
+seplay 3,80,71
+seplay 2,22,71
+textoff
+waits 167
+lbg s0_3,"red_b"
+flush 1
+seplay 1,55,71
+textoff
+seplay 3,80,71
+textoff
+waits 167
+lbg s0_3,"white"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"red_b"
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+textoff
+seplay 2,80,71
+textoff
+waits 167
+lbg s0_3,"different_space_2d"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_1,"white"
+lbg s1_3,"white"
+csp_slot s1_1
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+aspritesetpt flip,1,1
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+seplay 1,52,71
+*uu_uu_0x61551d
+textoff
+waits 167
+csp -10
+textoff
+waits 167
+lbg s0_3,"different_space_2d"
+vol_mix_fade 1000
+wait 1000
+bgmplay 128,71,0
+murder_story
+flush 10,500
+*get_response_0x6155d3
+get_response_murder_story
+mov %branch_tmp,%get_response_value
+if %branch_tmp < 6 msgwnd_non
+if %branch_tmp = 0 goto *uu_uu_0x61564d
+if %branch_tmp = 1 goto *uu_uu_0x6183b3
+if %branch_tmp = 2 goto *uu_uu_0x61c14b
+if %branch_tmp = 3 goto *uu_uu_0x61da35
+if %branch_tmp = 4 goto *uu_uu_0x61ee2b
+if %branch_tmp = 5 goto *uu_uu_0x61fa6f
+if %branch_tmp = 6 goto *uu_uu_0x620d86
+if %branch_tmp = 7 goto *uu_uu_0x621d2c
+if %branch_tmp = 8 goto *uu_uu_0x6226c0
+if %branch_tmp = 9 goto *uu_uu_0x623179
+if %branch_tmp = 10 goto *uu_uu_0x624406
+if %branch_tmp = 11 goto *uu_uu_0x625351
+if %branch_tmp = 12 goto *uu_uu_0x6268bc
+if %branch_tmp = 13 goto *uu_uu_0x627403
+if %branch_tmp = 14 goto *uu_uu_0x62852f
+if %branch_tmp = 15 goto *uu_uu_0x6292e3
+if %branch_tmp = 16 goto *uu_uu_0x62a1c6
+if %branch_tmp = 17 goto *uu_uu_0x62af80
+if %branch_tmp = 18 goto *uu_uu_0x62b8a8
+if %branch_tmp = 19 goto *uu_uu_0x62c61e
+if %branch_tmp = 20 goto *uu_uu_0x62d2fb
+if %branch_tmp = 21 goto *uu_uu_0x62e0c7
+if %branch_tmp = 22 goto *uu_uu_0x62efd9
+if %branch_tmp = 23 goto *uu_uu_0x62f8bc
+if %branch_tmp = 24 goto *uu_uu_0x62ff77
+if %branch_tmp = 25 goto *uu_uu_0x63079d
+if %branch_tmp = 26 goto *uu_uu_0x630d78
+if %branch_tmp = 27 goto *uu_uu_0x63163b
+*uu_uu_0x61564d
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+gstc 135
+goto *bern_session_start
+*bern_session_end
+goto *uu_uu_0x61551d
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+;Set switch from 6 to reg0, default ハニャーン
+;Set switch from 6 to reg0, default ハニャーン
+;Set switch from 6 to reg0, default ハニャーン
+;Set switch from 6 to reg0, default ハニャーン
+;Set switch from 6 to reg0, default ハニャーン
+*uu_uu_0x620d86
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 140
+bgmplay 27,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_bea
+*d60569
+d [lv 0*"27"*"80700441"]`「紫の発言とやらが厄介であるな…」`[\]
+lss s0_8,"but","d11_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60570
+d [lv 0*"10"*"80100652"]`「赤き真実並に重要な発言だってことはわかってるんだ。`[@][lv 0*"10"*"80100653"]`だが、犯人のウソが混じってる」`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_24,"lam","a11_majime1" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60571
+d [lv 0*"29"*"82200121"]`「針が混じってるかもしれないパンを、そのまま丸呑みにして食べる馬鹿はいないわ」`[\]
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60572
+d [lv 0*"27"*"80700442"]`「うむ。`[@][lv 0*"27"*"80700443"]`全ての紫を鵜呑みにしていると、まったく真相が見えてこない」`[\]
+lss s0_8,"but","d11_futeki1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60573
+d [lv 0*"10"*"80100654"]`「針の混じったパンか、いい例えだな。`[@][lv 0*"10"*"80100655"]`せっかくの貴重な情報も、一粒のウソのせいで台無しってわけだ」`[\]
+lss s0_10,"bea","a11_iiwake1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60574
+d [lv 0*"27"*"80700444"]`「この大量の紫の中の、どれが一体ウソなのか。`[@][lv 0*"27"*"80700445"]`……考えるだけで頭が痛くなるというものよ」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_10,"but","d24_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60575
+d [lv 0*"10"*"80100656"]`「なら、ここでチェス盤を引っ繰り返してみようじゃねぇか」`[\]
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60576
+d [lv 0*"27"*"80700446"]`「ほう？`[@][lv 0*"27"*"80700447"]`　というと？」`[\]
+lss s0_10,"but","d11_futeki3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60577
+d [lv 0*"10"*"80100657"]`「簡単な話さ。`[@][lv 0*"10"*"80100658"]`どれがウソか、じゃない。`[@][lv 0*"10"*"80100659"]`どれは確実に真実かってことに注目するんだ」`[\]
+lss s0_8,"bea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60578
+d [lv 0*"27"*"80700448"]`「確実に真実とわかる紫など存在するのか」`[\]
+lss s0_10,"but","d22_komaru2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60579
+d [lv 0*"10"*"80100660"]`「それを探すんだ。`[@][lv 0*"10"*"80100661"]`絶対に犯人じゃないと確定できるヤツを探す。`[@][lv 0*"10"*"80100662"]`それを見つけることが出来れば、そいつの紫の発言は、全て赤き真実と同じってことになるんだ」`[\]
+lss s0_8,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60580
+d [lv 0*"27"*"80700449"]`「なるほど。`[@][lv 0*"27"*"80700450"]`犯人を捜すのではなく、まずは絶対に犯人でない人物を探すというわけか！`[@][lv 0*"27"*"80700451"]`　ふむ、基本であるな！」`[\]
+lss s0_10,"but","d11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60581
+d [lv 0*"10"*"80100663"]`「そういうことさ。`[@][lv 0*"10"*"80100664"]`必ずいるはずだ。丹念に探してみよう」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"lam","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+lss s0_8,"lam","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_lam
+*d60582
+d [lv 0*"29"*"82200122"]`「まずは第一歩というところね？」`[\]
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d60583
+d [lv 0*"28"*"82100161"]`「………お手並み拝見と行くわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x621d2c
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 141
+bgmplay 32,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a11_1_majime3star" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60584
+d [lv 0*"27"*"80700452"]`「絶対に犯人でない人物とはどういうことだろう？」`[\]
+lss s0_8,"but","d11_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60585
+d [lv 0*"10"*"80100665"]`「ルールに、犯人は死なないってのがある。`[@][lv 0*"10"*"80100666"]`つまり、酷ぇ話だが、死んだヤツは信用できるってことになる」`[\]
+lss s0_10,"bea","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60586
+d [lv 0*"27"*"80700453"]`「ほう、それはわかりやすい！`[@][lv 0*"27"*"80700454"]`　ほとんどの人物は殺された。`[@][lv 0*"27"*"80700455"]`それらの人物の紫は全て信用できるというわけか！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"but","d11_majime6" ;1
+flush 24
+msgwnd_but
+*d60587
+d [lv 0*"10"*"80100667"]`「ところが、そう簡単な話じゃない。`[@][lv 0*"10"*"80100668"]`俺とお前のゲームでも度々問題になった、死んだフリ問題ってのがあるんだ」`[\]
+lss s0_8,"bea","a13_futeki2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_bea
+*d60588
+d [lv 0*"27"*"80700456"]`「どの犠牲者も、皆、検死をしているではないか。`[@][lv 0*"27"*"80700457"]`南條も紫で、誰も検死を誤らないと断言している」`[\]
+lss s0_9,"but","d11_nayamu4" ;1
+flush 80
+msgwnd_but
+*d60589
+d [lv 0*"10"*"80100669"]`「南條先生が犯人だったら、それもアテにはならねぇぜ。`[@][lv 0*"10"*"80100670"]`一見、どの犠牲者も検死されているように見えるが、どの死亡確認も紫発言だ。`[@][lv 0*"10"*"80100671"]`１００％じゃない」`[\]
+lss s0_8,"bea","a13_majime2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_bea
+*d60590
+d [lv 0*"27"*"80700458"]`「……では、誰の死ならば信用できるというのか」`[\]
+csp_slot s0_9
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_but
+*d60591
+d [lv 0*"10"*"80100672"]`「とにかく、犠牲者全員の検死を、もう一度見直すんだ。`[@][lv 0*"10"*"80100673"]`紫発言なんてあやふやなものじゃなくて、絶対確実に死んだ人間を探すんだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x6226c0
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 142
+bgmplay 29,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a13_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_bea
+*d60592
+d [lv 0*"27"*"80700459"]`「そうか、わかったぞ！`[@][lv 0*"27"*"80700460"]`　戦人、ト書きだ！`[@][lv 0*"27"*"80700461"]`　セリフ以外のト書き部分にウソはないことになっていたぞ！」`[\]
+lss s0_8,"but","d11_futeki3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60593
+d [lv 0*"10"*"80100674"]`「おう、俺も今、気付いたとこだ。`[@][lv 0*"10"*"80100675"]`ベルンカステルは赤き真実で、ト書き部分にはウソがないことを宣言している」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"lam","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_lam
+*d60594
+d [lv 0*"29"*"82200123"]`「あら、気付かれちゃったみたいよ…？」`[\]
+lss s0_10,"ber","a21_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d60595
+d [lv 0*"28"*"82100162"]`「……気付かなくちゃ始まらないわよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a13_1_majime5star" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60596
+d [lv 0*"27"*"80700462"]`「ト書きで、死亡を宣告されているヤツはおらぬか？！`[@][lv 0*"27"*"80700463"]`　そいつは、本当に死んでいると断言できることになる！」`[\]
+lss s0_10,"but","d11_nayamu2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60597
+d [lv 0*"10"*"80100676"]`「そしてそいつは、自動的に犯人でないということになる」`[\]
+lss s0_8,"bea","a13_futeki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60598
+d [lv 0*"27"*"80700464"]`「のみならず、そやつの紫は信頼できるということになる！」`[\]
+lss s0_10,"but","d11_futeki3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60599
+d [lv 0*"10"*"80100677"]`「ト書きで死亡を語られている人物を探してみよう。`[@][lv 0*"10"*"80100678"]`“横たわっていた”、みたいな、生きてるようにも死んでるようにも見える曖昧な表現でないヤツをだ」`[\]
+csp_slot s0_8
+flush 23
+lss s0_24,"bea","a11_1_majime6" ;1
+flush 23
+msgwnd_bea
+*d60600
+d [lv 0*"27"*"80700465"]`「うむッ、頭からもう一度探すぞ！」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x623179
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 143
+bgmplay 27,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+*d60601
+d [lv 0*"27"*"80700466"]`「戦人、見よ！`[@][lv 0*"27"*"80700467"]`　第七の晩の南條については、ト書きではっきりと、殺されたと記されているぞ…！」`[\]
+lss s0_10,"but","d11_defo1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_but
+*d60602
+d [lv 0*"10"*"80100679"]`「俺も見つけたぜ！`[@][lv 0*"10"*"80100680"]`　第八の晩の朱志香について、ト書きではっきりと、無残な死体だったと記している」`[\]
+csp_slot s0_8
+lss s0_9,"bea","a11_akuwarai1" ;1
+flush 23
+msgwnd_bea
+*d60603
+d [lv 0*"27"*"80700468"]`「ということは、つまり……」`[\]
+lss s0_10,"but","d11_futeki3" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_but
+*d60604
+d [lv 0*"10"*"80100681"]`「南條先生と朱志香。`[@][lv 0*"10"*"80100682"]`この二人は確実に死んでいるということ。`[@][lv 0*"10"*"80100683"]`そしてそれは、」`[\]
+csp_slot s0_9
+lss s0_24,"bea","a11_1_majime5star" ;1
+flush 23
+seplay 1,2,50
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,100,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_bea
+*d60605
+d [lv 0*"27"*"80700469"]`「南條と朱志香が、犯人ではないことを示しているというわけだ…！`[@][lv 0*"27"*"80700470"]`　そしてそれは、」`[\]
+lss s0_10,"but","d11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60606
+d [lv 0*"10"*"80100684"]`「この二人の紫発言は、赤き真実も同然、というわけだ！」`[\]
+lss s0_24,"bea","a11_1_warai1" ;1
+flush 80
+msgwnd_bea
+*d60607
+d [lv 0*"27"*"80700471"]`「うむ！！　そういうことだ！」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_non
+*d60608
+d `二人はパンと手を打ち合わせる。`[\]
+*d60609
+d `ようやく、最初の大きな手掛りが見つかった。`[@]`{n}針の混じったパンの、安全な一切れ。`[@]`{n}信頼できる紫の発言の一部を見つける。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_bea
+*d60610
+d [lv 0*"27"*"80700472"]`「南條と朱志香の紫発言を書き出してみよう！`[@][lv 0*"27"*"80700473"]`　これは赤き真実も同然だ。`[@][lv 0*"27"*"80700474"]`ようやく見えてきたぞ…！」`[\]
+lss s0_9,"but","d11_majime2" ;1
+flush 24
+msgwnd_but
+*d60611
+d [lv 0*"10"*"80100685"]`「南條先生が犯人でないことが確定なら、第一の晩の彼の紫発言である、`[@][lv 0*"10"*"80100686"]`“私でなくとも、誰も検死を誤らない”が大きな意味を持ってくる」`[\]
+lss s0_10,"bea","a11_1_odoroki3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60612
+d [lv 0*"27"*"80700475"]`「つまり、誰であっても検死は誤らないということ…！」`[\]
+lss s0_9,"but","d11_futeki1" ;1
+flush 80
+msgwnd_but
+*d60613
+d [lv 0*"10"*"80100687"]`「犯人でないことが確定したこの二人、南條先生と朱志香によって行なわれた検死は、絶対に信用できるってことだ」`[\]
+lss s0_10,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60614
+d [lv 0*"27"*"80700476"]`「つまり、南條と朱志香が死亡を確認した人物もまた、犯人ではないことが確実になるというわけだ…！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"lam","a11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_lam
+*d60615
+d [lv 0*"29"*"82200124"]`「………あちゃー。`[@][lv 0*"29"*"82200125"]`順調ねぇ？」`[\]
+lss s0_10,"ber","a24_shian1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d60616
+d [lv 0*"28"*"82100163"]`「……不思議なものね。`[@][lv 0*"28"*"82100164"]`順調だと悔しいけれど、……行き詰られても、それはそれで退屈だわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_defo1" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_but
+*d60617
+d [lv 0*"10"*"80100688"]`「よし、この二人の検死をチェックして、犯人ではありえない人物を探してみよう！」`[\]
+lss s0_8,"bea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60618
+d [lv 0*"27"*"80700477"]`「うむ！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x624406
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 144
+bgmplay 71,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+lss s0_10,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 1
+seplay 1,8,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,267,1
+rumble 63,500
+gptwait quakeyamp
+*d60619
+d [lv 0*"27"*"80700478"]`「戦人ッ、南條と朱志香の紫発言のチェックを終えたぞ…！」`[\]
+lss s0_9,"but","d11_majime2" ;1
+flush 24
+msgwnd_but
+*d60620
+d [lv 0*"10"*"80100689"]`「この二人が死亡を確認した人物は、間違いなく死んでいる。`[@][lv 0*"10"*"80100690"]`そして、それは間違いなく犯人でないことを示す」`[\]
+lss s0_10,"bea","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60621
+d [lv 0*"27"*"80700479"]`「そうなれば、信頼できる紫発言がさらに増えるということだな！」`[\]
+csp_slot s0_9
+lss s0_8,"but","d11_oya1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_but
+*d60622
+d [lv 0*"10"*"80100691"]`「まず南條先生だ。`[@][lv 0*"10"*"80100692"]`第二の晩の犠牲者の、蔵臼伯父さん、夏妃伯母さんの死亡を確認している」`[\]
+lss s0_10,"bea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60623
+d [lv 0*"27"*"80700480"]`「さらに第四の晩に、紗音の死亡も確認しているな」`[\]
+lss s0_8,"but","d11_futeki3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60624
+d [lv 0*"10"*"80100693"]`「第五、第六の晩の、郷田さんと熊沢さんの死亡も確認している」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_9,"bea","a11_akuwarai1" ;1
+flush 23
+msgwnd_bea
+*d60625
+d [lv 0*"27"*"80700481"]`「一気にシロが増えたぞ！`[@][lv 0*"27"*"80700482"]`　南條、朱志香に加え、蔵臼、夏妃、紗音、郷田、熊沢は犯人ではないということだ…！」`[\]
+lss s0_10,"but","d11_futeki2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_but
+*d60626
+d [lv 0*"10"*"80100694"]`「それだけじゃない。`[@][lv 0*"10"*"80100695"]`第四の晩にベルンカステルの赤き真実で、嘉音くんの死亡も宣言されてる。`[@][lv 0*"10"*"80100696"]`犯人は死なないんだから、嘉音くんも犯人じゃない！」`[\]
+lss s0_9,"bea","a11_futeki1" ;1
+flush 80
+msgwnd_bea
+*d60627
+d [lv 0*"27"*"80700483"]`「南條、朱志香、蔵臼、`[@][lv 0*"27"*"80700484"]`夏妃、紗音、嘉音、`[@][lv 0*"27"*"80700485"]`郷田、熊沢。`[@][lv 0*"27"*"80700486"]`この８人は犯人ではない！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_10,"lam","a11_odoroki3" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_lam
+*d60628
+d [lv 0*"29"*"82200126"]`「あらら……。`[@][lv 0*"29"*"82200127"]`いきなり、容疑者が８人も減らされちゃったわよ？」`[\]
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_ber
+*d60629
+d [lv 0*"28"*"82100165"]`「……ここまでは順当でしょ。`[@][lv 0*"28"*"82100166"]`ここからよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60630
+d [lv 0*"27"*"80700487"]`「これで信用できる紫発言がどっと増えたぞ。`[@][lv 0*"27"*"80700488"]`ここからが本番だ…！」`[\]
+lss s0_8,"but","d11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60631
+d [lv 0*"10"*"80100697"]`「あぁ！`[@][lv 0*"10"*"80100698"]`　新しく犯人でないことがわかった人物の紫発言も確認するぞ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x625351
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 145
+bgmplay 78,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"bea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_bea
+*d60632
+d [lv 0*"27"*"80700489"]`「蔵臼、夏妃、紗音、`[@][lv 0*"27"*"80700490"]`嘉音、郷田、熊沢。`[@][lv 0*"27"*"80700491"]`この新しく無実が証明された人物の紫発言を吟味したぞ！」`[\]
+lss s0_10,"but","d24_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60633
+d [lv 0*"10"*"80100699"]`「あぁ。`[@][lv 0*"10"*"80100700"]`その結果、源次さんが犯人でないことも新たに証明された」`[\]
+lss s0_8,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60634
+d [lv 0*"27"*"80700492"]`「嘉音が第一の晩に、紫発言で源次の死を確認したと宣言している。`[@][lv 0*"27"*"80700493"]`これで源次もシロというわけだ…！」`[\]
+lss s0_10,"but","d11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60635
+d [lv 0*"10"*"80100701"]`「これで、合計９人の無実が証明されたな。`[@][lv 0*"10"*"80100702"]`いい感じだぜ」`[\]
+lss s0_8,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60636
+d [lv 0*"27"*"80700494"]`「そうそう、紗音と熊沢の紫発言で、第一の晩の６人の死亡も確認しているようだぞ」`[\]
+lss s0_10,"but","d22_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"but","d22_niramu1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_but
+*d60637
+d [lv 0*"10"*"80100703"]`「………それは、鵜呑みに出来ねぇな」`[\]
+lss s0_10,"bea","a13_fukigen2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_bea
+*d60638
+d [lv 0*"27"*"80700495"]`「なぜか？`[@][lv 0*"27"*"80700496"]`　紗音と熊沢の発言は信用できるのではないか？」`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_24,"lam","a11_akuwarai3" ;1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60639
+d [lv 0*"29"*"82200128"]`「そうよねぇ？`[@][lv 0*"29"*"82200129"]`　紗音と熊沢が犯人でないことが確定したのに、どうしてその発言が信用できないの？」`[\]
+lss s0_8,"but","d23_nayamu4" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60640
+d [lv 0*"10"*"80100704"]`「例えば熊沢さんだが、第一の晩の犠牲者の６人が食堂で、“血塗れになって倒れていた”としか言ってない。`[@][lv 0*"10"*"80100705"]`つまり、生死は不明ってわけだ。`[@][lv 0*"10"*"80100706"]`食堂の６人の犠牲者の検死は、絶対とは言えないわけだ」`[\]
+lss s0_10,"bea","a13_1_majime6" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_bea
+*d60641
+d [lv 0*"27"*"80700497"]`「食堂の６人について、紗音は別の言い方もしているぞ。`[@][lv 0*"27"*"80700498"]`“お子様方はそれぞれ、自分の親がまちがいなく死んでいることを確認”したとな」`[\]
+lss s0_8,"but","d23_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60642
+d [lv 0*"10"*"80100707"]`「食堂でそれぞれの親を検死したのは、俺と譲治の兄貴、そして真里亞の３人ってことだ。`[@][lv 0*"10"*"80100708"]`しかし、この３人がシロであることはまだ証明されていない」`[\]
+lss s0_24,"lam","a11_futeki3" ;1
+flush 80
+msgwnd_lam
+*d60643
+d [lv 0*"29"*"82200130"]`「あぁ、なるほど、そういうことね。`[@][lv 0*"29"*"82200131"]`………紗音は、食堂の６人の死亡を、それぞれの親の子供が確認したことは証明したけれど、`[@][lv 0*"29"*"82200132"]`それぞれの子供が真実の検死をしたかまでは、証明していないわ」`[\]
+lss s0_8,"but","d11_nayamu2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60644
+d [lv 0*"10"*"80100709"]`「そういうことだ。`[@][lv 0*"10"*"80100710"]`子供が嘘をついている可能性が、否定できない以上、まだ食堂の連中全員を疑いから外すわけにはいかない」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"bea","a11_fukigen1" ;1
+flush 24
+msgwnd_bea
+*d60645
+d [lv 0*"27"*"80700499"]`「これは厄介であるな……。`[@][lv 0*"27"*"80700500"]`その３人は最後まで生き残った生存者。`[@][lv 0*"27"*"80700501"]`生きているということは即ち、犯人でないと証明不能というわけだ…」`[\]
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_but
+*d60646
+d [lv 0*"10"*"80100711"]`「戦人、譲治、真里亞。`[@][lv 0*"10"*"80100712"]`……生き残ったこの３人は犯人である可能性が高いと同時に、シロであることの証明がもっとも難しいと言えるだろう」`[\]
+csp_slot s0_9
+lss s0_8,"bea","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_bea
+*d60647
+d [lv 0*"27"*"80700502"]`「とりあえず。`[@][lv 0*"27"*"80700503"]`確実な死亡によってシロであると断言できるのは、この９人までのようであるな」`[\]
+lss s0_10,"but","d24_komaru2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60648
+d [lv 0*"10"*"80100713"]`「ここからは、信頼できる９人の紫発言で、純粋に推理していくしかない」`[\]
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60649
+d [lv 0*"27"*"80700504"]`「南條、朱志香、蔵臼、`[@][lv 0*"27"*"80700505"]`夏妃、紗音、嘉音、`[@][lv 0*"27"*"80700506"]`郷田、熊沢、源次。`[@][lv 0*"27"*"80700507"]`この９人の紫発言を読み直すしかないな…」`[\]
+csp_slot s0_10
+lss s0_9,"but","d11_futeki3" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_but
+*d60650
+d [lv 0*"10"*"80100714"]`「ここからは難度が上がるぞ。`[@][lv 0*"10"*"80100715"]`覚悟して掛かろうぜ…！」`[\]
+lss s0_8,"bea","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60651
+d [lv 0*"27"*"80700508"]`「うむ。`[@][lv 0*"27"*"80700509"]`ようやくミステリーらしくなってきたというところよ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x6268bc
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 146
+bgmplay 52,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"but","d11_majime4" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_but
+*d60652
+d [lv 0*"10"*"80100716"]`「おい、ベアト。`[@][lv 0*"10"*"80100717"]`興味深いことがわかったぞ。`[@][lv 0*"10"*"80100718"]`この一連の事件、マスターキーは一切使えない」`[\]
+lss s0_10,"bea","a13_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60653
+d [lv 0*"27"*"80700510"]`「そう言えば、シロである９人の中に、使用人５人が含まれるのであったな？」`[\]
+lss s0_8,"but","d11_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60654
+d [lv 0*"10"*"80100719"]`「マスターキーは使用人にしか使えない。`[@][lv 0*"10"*"80100720"]`渡せもしない。`[@][lv 0*"10"*"80100721"]`そして犯人でない人物は犯人に協力しないのだから、犯行にマスターキーを用いることは出来ないんだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"key2"
+flush 22
+msgwnd_non
+*d60655
+d `使用人５人全員がシロであることが保証されている以上、`[@]`マスターキーは、事件には絡まないということになる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_1_odoroki3" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_bea
+*d60656
+d [lv 0*"27"*"80700511"]`「確かに、そうなる…！`[@][lv 0*"27"*"80700512"]`　となるとますますに厄介ではないか？`[@][lv 0*"27"*"80700513"]`　何度も起こった密室殺人！`[@][lv 0*"27"*"80700514"]`　それらをマスターキー抜きで構築せねばならんことになる…！」`[\]
+lss s0_10,"but","d11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60657
+d [lv 0*"10"*"80100722"]`「違うな。`[@][lv 0*"10"*"80100723"]`チェス盤を引っ繰り返すぜ。`[@][lv 0*"10"*"80100724"]`ってことはつまり、マスターキーがなくても、構築可能なトリックってワケさ」`[\]
+lss s0_8,"bea","a11_1_majime3star" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60658
+d [lv 0*"27"*"80700515"]`「なるほど…！`[@][lv 0*"27"*"80700516"]`　第一の晩、食堂の密室。`[@][lv 0*"27"*"80700517"]`第二の晩、夏妃の部屋の密室。`[@][lv 0*"27"*"80700518"]`第五の晩以降のゲストハウスの密室。`[@][lv 0*"27"*"80700519"]`じっくり考え直す必要がありそうだな…」`[\]
+csp_slot s0_10
+lss s0_9,"but","d11_majime4" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_but
+*d60659
+d [lv 0*"10"*"80100725"]`「もう一度、じっくりと読み直してみよう。`[@][lv 0*"10"*"80100726"]`……使用人は全員シロなんだ。`[@][lv 0*"10"*"80100727"]`マスターキーは使えない。`[@][lv 0*"10"*"80100728"]`そこを念頭に、もう一度考えるんだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x627403
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 147
+bgmplay 6,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"bea","a11_majime1" ;1
+flush 22
+msgwnd_bea
+*d60660
+d [lv 0*"27"*"80700520"]`「第一の晩の、食堂の密室についてだが、このような推理はどうだろうか」`[\]
+lss s0_8,"but","d11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60661
+d [lv 0*"10"*"80100729"]`「拝聴しよう」`[\]
+csp_slot s0_9
+lss s0_10,"bea","a11_1_majime5star" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_bea
+*d60662
+d [lv 0*"27"*"80700521"]`「第一の晩の犠牲者の検死は、未だ定かではない。`[@][lv 0*"27"*"80700522"]`つまり、その中の誰かが実は犯人で！`[@][lv 0*"27"*"80700523"]`　他の５人を殺した後に死んだフリをして、内側から食堂を施錠したのだ…！」`[\]
+lss s0_8,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60663
+d [lv 0*"10"*"80100730"]`「確かに、それならマスターキーを使わずに密室を生み出せるな。`[@][lv 0*"10"*"80100731"]`とすると１つ疑問が出てくる」`[\]
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60664
+d [lv 0*"27"*"80700524"]`「疑問とは何か」`[\]
+lss s0_8,"but","d11_oya1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60665
+d [lv 0*"10"*"80100732"]`「覚えてるか？`[@][lv 0*"10"*"80100733"]`　第二の晩のやり取りの時、ベルンカステルに赤き真実でこう宣言された。`[@][lv 0*"10"*"80100734"]`“第一の晩の犯人は確実に６人を殺している”とな」`[\]
+lss s0_10,"bea","a11_fukigen2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60666
+d [lv 0*"27"*"80700525"]`「そういえばそうであったな…。`[@][lv 0*"27"*"80700526"]`………むぅ……」`[\]
+lss s0_8,"but","d11_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60667
+d [lv 0*"10"*"80100735"]`「この赤き真実がある以上、やはり食堂の６人は死んでいたってことになる。`[@][lv 0*"10"*"80100736"]`なら、外部の人間がどうやって食堂に施錠を。`[@][lv 0*"10"*"80100737"]`マスターキーを使わずに……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"bea","a11_futeki2" ;1
+flush 23
+msgwnd_bea
+*d60668
+d [lv 0*"27"*"80700527"]`「なぁ、戦人。`[@][lv 0*"27"*"80700528"]`その赤き真実は食堂の６人の死亡を確実なものにしているのではないか？」`[\]
+lss s0_10,"but","d11_niramu3" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_but
+*d60669
+d [lv 0*"10"*"80100738"]`「……うむ、……まぁ、……そういうことになるんだろうな…」`[\]
+csp_slot s0_9
+lss s0_8,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_bea
+*d60670
+d [lv 0*"27"*"80700529"]`「となれば、食堂の６人もシロということで、すでにシロとわかっている源次を除き、新しく５人がシロと判明したことになるのではないか？`[@][lv 0*"27"*"80700530"]`　つまり、９＋５で１４人の無実が証明できたというわけだ…！`[@][lv 0*"27"*"80700531"]`　残るは３人！`[@][lv 0*"27"*"80700532"]`　戦人、譲治、真里亞の３人の中に犯人がいるに違いないのだ…！」`[\]
+lss s0_10,"but","d11_aseru4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60671
+d [lv 0*"10"*"80100739"]`「ちょっと待ってくれ！`[@][lv 0*"10"*"80100740"]`　……どうもそいつは引っ掛かるんだ。`[@][lv 0*"10"*"80100741"]`赤き真実で、犯人は６人を殺したと宣言はされてる。`[@][lv 0*"10"*"80100742"]`でも、それを第一の晩の時に言われたわけじゃない」`[\]
+lss s0_8,"bea","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60672
+d [lv 0*"27"*"80700533"]`「確か、第二の晩のやり取りの時に、言われたのであったな…？」`[\]
+lss s0_10,"but","d11_odoroki3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60673
+d [lv 0*"10"*"80100743"]`「もう一度その部分を読み直したい。`[@][lv 0*"10"*"80100744"]`探してみよう。`[@][lv 0*"10"*"80100745"]`不自然なタイミングで言われたような、そんな違和感を覚えるんだ…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_10,"ber","a21_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d60674
+d [lv 0*"28"*"82100167"]`「…………やるじゃない」`[\]
+lss s0_8,"lam","a11_akuwarai4" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_lam
+*d60675
+d [lv 0*"29"*"82200133"]`「この二人、さすがね。`[@][lv 0*"29"*"82200134"]`勘も実に冴えてるわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62852f
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 148
+bgmplay 17,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_bea
+*d60676
+d [lv 0*"27"*"80700534"]`「第二の晩の密室について考えているのだが、同じ推理しか浮かばぬ…」`[\]
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60677
+d [lv 0*"10"*"80100746"]`「蔵臼伯父さんたちを殺した後、内側より施錠して隠れたって推理か？」`[\]
+lss s0_8,"bea","a11_1_majime3star" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60678
+d [lv 0*"27"*"80700535"]`「うむ。`[@][lv 0*"27"*"80700536"]`……マスターキーが使えぬ以上、施錠は内側より行なう他ない。`[@][lv 0*"27"*"80700537"]`となれば、犯人は夏妃の部屋のどこかに隠れていたとしか考えられぬ」`[\]
+csp_slot s0_10
+lss s0_9,"but","d11_majime4" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_but
+*d60679
+d [lv 0*"10"*"80100747"]`「そう。`[@][lv 0*"10"*"80100748"]`そこがおかしいんだ。`[@][lv 0*"10"*"80100749"]`ト書きにこうある。`[@][lv 0*"10"*"80100750"]`“いつまで経っても、蔵臼夫妻だけが戻ってこない”。`[@][lv 0*"10"*"80100751"]`そして、こう続く。`[@][lv 0*"10"*"80100752"]`“一同は全員で蔵臼と夏妃の部屋に向かい、”」`[\]
+lss s0_8,"bea","a11_fukigen3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60680
+d [lv 0*"27"*"80700538"]`「“蔵臼夫妻だけが戻ってこない”ということはつまり、………それ以外の人間は全員、客間に戻ってきたということか」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_nayamu4" ;1
+flush 24
+msgwnd_but
+*d60681
+d [lv 0*"10"*"80100753"]`「そういうことだ。`[@][lv 0*"10"*"80100754"]`犯行後、密室に閉じ篭って隠れていたなら、そいつも戻ってこないことになるはず。`[@][lv 0*"10"*"80100755"]`なのに、犠牲者を除く全員が戻ってきている」`[\]
+lss s0_10,"bea","a13_1_majime6" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60682
+d [lv 0*"27"*"80700539"]`「生存者の誰にも、犯行は不可能ということになってしまうな……。`[@][lv 0*"27"*"80700540"]`……やはり、戦人の推理通り、食堂の誰かが生きていて犯行に及んだと考えるべきではないのか…」`[\]
+csp_slot s0_9
+lss s0_8,"but","d11_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_but
+*d60683
+d [lv 0*"10"*"80100756"]`「……そういえば。`[@][lv 0*"10"*"80100757"]`……その推理を口にしたら、俺は赤き真実を食らったんだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d60684
+d `食堂の誰かが生きていて、蔵臼夫妻を殺した、という俺の推理。`[\]
+*d60685
+d `それに対し、赤き真実で、“第一の晩の犯人は確実に６人を殺してる”と反論されたんだ……。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60686
+d [lv 0*"27"*"80700541"]`「まぁ、当然であろうな。`[@][lv 0*"27"*"80700542"]`蔵臼、夏妃まで殺しているのだから、６人どころか、８人は殺していることになるのだから」`[\]
+lss s0_9,"but","d11_niramu3" ;1
+flush 24
+msgwnd_but
+*d60687
+d2 [lv 0*"10"*"80100758"]`「……………………。`[@][#][*][lv 0*"10"*"80100759"]`……うん……？`[@][lv 0*"10"*"80100760"]`　何か引っ掛かるぞ……？`[@][#][*][lv 0*"10"*"80100761"]`　…………蔵臼、夏妃まで殺しているのだから……。`[@][lv 0*"10"*"80100762"]`………犯人は確実に、……６人を………」`[\]
+wait_on_d 0
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+d_continue
+wait_on_d 1
+meplay 1,17,71
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x6292e3
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 149
+bgmplay 29,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_majime4" ;1
+flush 26
+*d60688
+d [lv 0*"10"*"80100763"]`「わかった！！`[@][lv 0*"10"*"80100764"]`　やられたぜ。`[@][lv 0*"10"*"80100765"]`犯人が確実に６人を殺したの意味がわかった…！！」`[\]
+lss s0_10,"bea","a11_1_odoroki3" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60689
+d [lv 0*"27"*"80700543"]`「意味がわかったとはどういうことか。`[@][lv 0*"27"*"80700544"]`説明せよ…！」`[\]
+csp_slot s0_9
+lss s0_8,"but","d11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_but
+*d60690
+d [lv 0*"10"*"80100766"]`「“第一の晩の犯人は確実に６人を殺している”。`[@][lv 0*"10"*"80100767"]`もしこいつを、第一の晩の時点で言われていたなら、俺は素直に受け取っていたかもしれない。`[@][lv 0*"10"*"80100768"]`しかし、第二の晩の時点で言われたことを加味すると、別の意味も見えてくる…！」`[\]
+lss s0_10,"bea","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60691
+d [lv 0*"27"*"80700545"]`「まさか、………第二の晩の殺人までを含めて、`[@][lv 0*"27"*"80700546"]`“確実に６人を殺している”という意味なのか…？！」`[\]
+lss s0_8,"but","d11_majime7" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60692
+d [lv 0*"10"*"80100769"]`「そういうことだ！`[@][lv 0*"10"*"80100770"]`　やはり、食堂の６人の中に犯人が混じって死んだフリをしていたんだ！`[@][lv 0*"10"*"80100771"]`　そしてそいつは食堂を抜け出し、夏妃伯母さんの部屋で２人を殺して、内側から施錠して室内に隠れたんだ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d60693
+d `犯人は食堂では５人しか殺せなかったろう。`[\]
+*d60694
+d `しかし、第二の晩の犠牲者を足せば、確実に６人は殺していることになると言い切れる…！`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"bea","a11_iiwake3" ;1
+flush 22
+msgwnd_bea
+*d60695
+d [lv 0*"27"*"80700547"]`「なるほど、それで辻褄は合うぞ…！`[@][lv 0*"27"*"80700548"]`　第一の晩も第二の晩も、どちらの密室もマスターキーなしで構築できる…！！」`[\]
+lss s0_10,"but","d11_odoroki3" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_but
+*d60696
+d [lv 0*"10"*"80100772"]`「と、……思ったところで、おかしなことも思い出しちまったぜ。`[@][lv 0*"10"*"80100773"]`……夏妃伯母さんの部屋は、すぐに封印しちまったんだったな…」`[\]
+lss s0_9,"bea","a11_iiwake1" ;1
+flush 80
+msgwnd_bea
+*d60697
+d [lv 0*"27"*"80700549"]`「そういえばそうだったな…。`[@][lv 0*"27"*"80700550"]`ベルンカステル卿に赤き真実で、“一同は退出と同時に部屋を封印した。`[@][lv 0*"27"*"80700551"]`その退出に犯人は加われない”と言われている」`[\]
+lss s0_10,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_but
+*d60698
+d [lv 0*"10"*"80100774"]`「さらにこうも言った。`[@][lv 0*"10"*"80100775"]`“全ての封印は、決して破られることはない”ともな」`[\]
+csp_slot s0_9
+lss s0_8,"bea","a11_odoroki2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_bea
+*d60699
+d [lv 0*"27"*"80700552"]`「つまり、……再び密室に閉じ込められた、ということなのか」`[\]
+lss s0_10,"but","d11_aseru4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60700
+d [lv 0*"10"*"80100776"]`「今の推理で、確かに第一の晩と第二の晩は説明できる。`[@][lv 0*"10"*"80100777"]`……しかし、その犯人は夏妃伯母さんの部屋に閉じ込められ、二度と出られなくなっちまうんだ」`[\]
+lss s0_8,"bea","a11_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60701
+d [lv 0*"27"*"80700553"]`「それでは、第四の晩以降の事件を起こせなくなってしまうではないか！`[@][lv 0*"27"*"80700554"]`　……うぅむ、良い推理だと思ったのだが……、やはり、違うのか……」`[\]
+lss s0_10,"but","d11_aseru2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60702
+d [lv 0*"10"*"80100778"]`「この推理で間違っていないはずなんだが……。`[@][lv 0*"10"*"80100779"]`……もう一捻り………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62a1c6
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 150
+bgmplay 68,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_futeki2" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+*d60703
+d [lv 0*"10"*"80100780"]`「いや、いいんだ。`[@][lv 0*"10"*"80100781"]`犯人が閉じ込められても。`[@][lv 0*"10"*"80100782"]`……犯人がもう１人いればいい！」`[\]
+lss s0_8,"bea","a11_1_majime5star" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60704
+d [lv 0*"27"*"80700555"]`「複数犯人説…！`[@][lv 0*"27"*"80700556"]`　やはりそう来るしかないな。`[@][lv 0*"27"*"80700557"]`それならば、犯人の片方が閉じ込められても、続く殺人を継続できる…」`[\]
+csp_slot s0_9
+lss s0_10,"but","d11_nayamu3" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_but
+*d60705
+d [lv 0*"10"*"80100783"]`「考えてみりゃ、そもそも。`[@][lv 0*"10"*"80100784"]`俺たちの推理に共犯は必須だったんだ。`[@][lv 0*"10"*"80100785"]`第一の晩の６人のうち、シロが確定している源次さんを除く５人、絵羽伯母さん、秀吉伯父さん、クソ親父、霧江さん、そして楼座叔母さん。`[@][lv 0*"10"*"80100786"]`この５人は全員、それぞれシロが確定しない人物によって検死されている。`[@][lv 0*"10"*"80100787"]`その検死者が共犯でない限り、死んだフリなんか出来ないんだ」`[\]
+lss s0_8,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60706
+d [lv 0*"27"*"80700558"]`「確かに…！`[@][lv 0*"27"*"80700559"]`　犯人でない者は犯人に協力しないことになっているからな…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"but","d11_futeki3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60707
+d [lv 0*"10"*"80100788"]`「犯人は、殺人以前にもウソをつくことが出来る。`[@][lv 0*"10"*"80100789"]`……つまりこういうことだ」`[\]
+lss s0_10,"bea","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60708
+d [lv 0*"27"*"80700560"]`「第一の晩の殺人を行なった犯人は、第二の晩までを実行し、夏妃の部屋に閉じ込められる」`[\]
+lss s0_8,"but","d11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60709
+d [lv 0*"10"*"80100790"]`「そして、その犯人の検死を偽ったもう１人の犯人が、第四の晩以降の殺人を引き継ぐんだ…！」`[\]
+lss s0_10,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60710
+d [lv 0*"27"*"80700561"]`「なるほど、それならば筋が通るぞ…！！`[@][lv 0*"27"*"80700562"]`　そしてそれは誰だと言うのか？！」`[\]
+lss s0_8,"but","d22_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60711
+d [lv 0*"10"*"80100791"]`「残念ながら、現時点では誰が犯人でもありえる。`[@][lv 0*"10"*"80100792"]`しかし、単独犯はありえないと断言できる。`[@][lv 0*"10"*"80100793"]`そして、閉じ込められたのは、食堂犠牲者５人の誰か。`[@][lv 0*"10"*"80100794"]`そして、殺人を引き継いだのは、その５人を検死した人間ということになる…！」`[\]
+lss s0_10,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60712
+d [lv 0*"27"*"80700563"]`「食堂の５人を検死した人間とな…？`[@][lv 0*"27"*"80700564"]`　それはつまり……」`[\]
+seplay 1,2,71
+lss s0_8,"but","d11_majime4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60713
+d [lv 0*"10"*"80100795"]`「戦人、譲治、真里亞。`[@][lv 0*"10"*"80100796"]`この３人の誰かが確実に、以後の殺人を引き継いでいる！」`[\]
+csp_slot s0_10
+lss s0_9,"bea","a11_1_majime6" ;1
+flush 24
+msgwnd_bea
+*d60714
+d [lv 0*"27"*"80700565"]`「よし……。`[@][lv 0*"27"*"80700566"]`その３人に注目して、以後の事件を追ってみようではないか…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62af80
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 151
+bgmplay 95,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"but","d24_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_but
+*d60715
+d [lv 0*"10"*"80100797"]`「続く事件は第四の晩だ。`[@][lv 0*"10"*"80100798"]`殺されたのは紗音ちゃん。`[@][lv 0*"10"*"80100799"]`全員にアリバイがないが、１人だけ例外がいる」`[\]
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60716
+d [lv 0*"27"*"80700567"]`「譲治であるな。`[@][lv 0*"27"*"80700568"]`シロが確定している朱志香が紫発言にて、譲治には紗音殺しは不可能であると断言している。`[@][lv 0*"27"*"80700569"]`となれば、殺したのは戦人か真里亞のどちらかということか？」`[\]
+lss s0_8,"but","d11_majime6" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60717
+d [lv 0*"10"*"80100800"]`「そう思いたいところだが早計だ。`[@][lv 0*"10"*"80100801"]`戦人と真里亞、そして譲治以外の人物にだって、アリバイはない。`[@][lv 0*"10"*"80100802"]`俺は単独犯説を否定したが、犯人が二人であることを断言したつもりもない。`[@][lv 0*"10"*"80100803"]`現時点では、それを断言するにはまだ早過ぎるからな」`[\]
+lss s0_10,"bea","a11_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60718
+d [lv 0*"27"*"80700570"]`「なるほどな。`[@][lv 0*"27"*"80700571"]`第一の晩と第二の晩の犯人と、その死んだフリを虚偽の検死で助けたもう１人の犯人と。`[@][lv 0*"27"*"80700572"]`……さらに、それとは無関係の犯人が存在する可能性があるというわけか。`[@][lv 0*"27"*"80700573"]`……なるほど、これは盲点であった…」`[\]
+lss s0_8,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60719
+d [lv 0*"10"*"80100804"]`「紗音ちゃんの事件は、譲治の兄貴ただ一人の例外を除いて、誰にでも犯行可能だ。`[@][lv 0*"10"*"80100805"]`そして、その事実だけを以って、譲治の兄貴がシロであることを証明するわけでもない」`[\]
+lss s0_10,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60720
+d [lv 0*"27"*"80700574"]`「……密室殺人ではないから気楽だなどと思っていたが。`[@][lv 0*"27"*"80700575"]`むしろ、おかしな条件がない分、犯人の絞り込みに使える情報もない、というわけであるな…」`[\]
+lss s0_8,"but","d11_oya1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60721
+d [lv 0*"10"*"80100806"]`「ここからは事件のペースが早い。`[@][lv 0*"10"*"80100807"]`これだけに固執せず、次の第五の晩の事件も見てみようぜ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62b8a8
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 152
+bgmplay 71,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_10,"bea","a11_1_majime5star" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_bea
+*d60722
+d [lv 0*"27"*"80700576"]`「第五、第六の晩であるが、厄介であるぞ…！`[@][lv 0*"27"*"80700577"]`　信頼できる朱志香の紫発言がこう言っている！`[@][lv 0*"27"*"80700578"]`　“いとこ４人と南條には、郷田と熊沢は殺せない”とな…！」`[\]
+lss s0_8,"but","d11_futeki1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60723
+d [lv 0*"10"*"80100808"]`「いとこ４人と南條先生。`[@][lv 0*"10"*"80100809"]`これはつまり、この時点での生存者全員を指す。`[@][lv 0*"10"*"80100810"]`普通に考えたら不可能犯罪だ」`[\]
+lss s0_10,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60724
+d [lv 0*"27"*"80700579"]`「しかし、そこでチェス盤を引っ繰り返すわけであるな？」`[\]
+csp_slot s0_8
+lss s0_9,"but","d11_futeki3" ;1
+flush 23
+msgwnd_but
+*d60725
+d [lv 0*"10"*"80100811"]`「あぁ。`[@][lv 0*"10"*"80100812"]`ってことはあるシンプルな答えが現れる。`[@][lv 0*"10"*"80100813"]`いとこ４人と南條先生以外の何者かが犯人だってことを、この事件は証明しているってわけだ」`[\]
+lss s0_10,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60726
+d [lv 0*"27"*"80700580"]`「生存者以外は、全員が死亡していることになっている。`[@][lv 0*"27"*"80700581"]`にもかかわらず、生存者には犯行不能ということは……」`[\]
+lss s0_9,"but","d11_futeki1" ;1
+flush 80
+msgwnd_but
+*d60727
+d [lv 0*"10"*"80100814"]`「死んだフリをした犯人が、１００％存在することの証明ってわけだ」`[\]
+lss s0_10,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60728
+d [lv 0*"27"*"80700582"]`「そして、死んだフリをした犯人の存在は、犯人が複数であることも１００％証明する。`[@][lv 0*"27"*"80700583"]`検死を偽りウソをつくこともまた、犯人にしか出来ないからな…！」`[\]
+lss s0_9,"but","d11_futeki2" ;1
+flush 23
+msgwnd_but
+*d60729
+d [lv 0*"10"*"80100815"]`「この一見、完全な不可能犯罪に見える第五、第六の晩は、`[@][lv 0*"10"*"80100816"]`ただそれだけで雄弁にこれだけのことを語っちまうわけだ」`[\]
+lss s0_10,"bea","a31_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60730
+d [lv 0*"27"*"80700584"]`「不可能犯罪は、相手を屈服させる力も持つが、逆に一気に推理を切り込まれる危険性も持つ諸刃の刃よ。`[@][lv 0*"27"*"80700585"]`……昔のそなたなら、きっと屈服していただろうに。`[@][lv 0*"27"*"80700586"]`本当に逞しくなったものよ」`[\]
+lss s0_9,"but","d23_futeki1" ;1
+flush 80
+msgwnd_but
+*d60731
+d [lv 0*"10"*"80100817"]`「へへ。`[@][lv 0*"10"*"80100818"]`お前にはだいぶ鍛えられたからな」`[\]
+msgwnd_non
+*d60732
+d `戦人たちはニヤリと笑い合う。`[\]
+*d60733
+d `数々の知的ゲームにて死線を潜った。`[@]`{n}これくらいの謎で、へこたれるわけにはいかない。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"but","d11_oya1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60734
+d [lv 0*"10"*"80100819"]`「さらに続けて、第七、第八の晩の事件も見てみよう。`[@][lv 0*"10"*"80100820"]`もう、かなり核心に踏み込んでるはずだ」`[\]
+lss s0_10,"bea","a11_1_majime3star" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60735
+d [lv 0*"27"*"80700587"]`「そうだな、気を引き締めて行こう！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62c61e
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 153
+bgmplay 39,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_8,"but","d24_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_but
+*d60736
+d [lv 0*"10"*"80100821"]`「第七の晩も、状況はまったく同じだ。`[@][lv 0*"10"*"80100822"]`信頼できる朱志香の紫発言が、いとこ４人、即ち、生存者の誰にも殺せないと断言している」`[\]
+lss s0_10,"bea","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60737
+d [lv 0*"27"*"80700588"]`「しかし、……少しわからぬのだ。`[@][lv 0*"27"*"80700589"]`第一の晩、第二の晩の犯人は、第一の晩の犠牲者５人の中の誰かだ。`[@][lv 0*"27"*"80700590"]`そやつは夏妃の部屋に閉じ込められたが、検死を偽った、そやつの子供もまた犯人であることがわかっている。`[@][lv 0*"27"*"80700591"]`……しかし、犯人である可能性のある子供は、戦人、譲治、真里亞の３人のみだ」`[\]
+lss s0_8,"but","d11_oya1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60738
+d [lv 0*"10"*"80100823"]`「そうだな。`[@][lv 0*"10"*"80100824"]`その３人は、第五、第六、第七の３つの事件において、殺人不能であると断言されている」`[\]
+lss s0_10,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60739
+d [lv 0*"27"*"80700592"]`「つまりこれは、`[@][lv 0*"27"*"80700593"]`………さらにもう１人犯人がいることを指し示すのではないか」`[\]
+lss s0_8,"but","d11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_futeki2" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_but
+*d60740
+d [lv 0*"10"*"80100825"]`「面白い。`[@][lv 0*"10"*"80100826"]`しかも妥当な推理だな。`[@][lv 0*"10"*"80100827"]`そして、その３人目の犯人もまた、死んだフリをした何者かってことになるな。`[@][lv 0*"10"*"80100828"]`……これはひょっとすると、犯人が４人、５人ということもありえるかもしれねぇぜ」`[\]
+lss s0_8,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60741
+d [lv 0*"27"*"80700594"]`「くっくっく、それはどうだかわからぬが。`[@][lv 0*"27"*"80700595"]`とにかく、いずれにせよ、犯人が２人だけでは、郷田、熊沢、南條を殺すことは出来ぬのだ。`[@][lv 0*"27"*"80700596"]`それだけは間違いない…！」`[\]
+lss s0_9,"but","d11_futeki1" ;1
+z_order_override2 s0_9,s0_7
+flush 80
+msgwnd_but
+*d60742
+d [lv 0*"10"*"80100829"]`「こりゃ、ややこしいことになって来たぜ。`[@][lv 0*"10"*"80100830"]`３人組が犯人なのか。`[@][lv 0*"10"*"80100831"]`それとも２人組と単独犯なのか。`[@][lv 0*"10"*"80100832"]`……いやいや、３人以上犯人がいる可能性だって否定しちゃいけねぇな？」`[\]
+lss s0_8,"bea","a11_1_majime3star" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60743
+d [lv 0*"27"*"80700597"]`「１７人の登場人物の内、シロは９人。`[@][lv 0*"27"*"80700598"]`残る８人の内、戦人、譲治、真里亞の３人は生存しているから除く。`[@][lv 0*"27"*"80700599"]`シロが確定せず、死んだことになっているのは、５人。`[@][lv 0*"27"*"80700600"]`絵羽、秀吉、留弗夫、霧江、楼座。`[@][lv 0*"27"*"80700601"]`全て、第一の晩の犠牲者だ」`[\]
+lss s0_9,"but","d11_futeki3" ;1
+z_order_override2 s0_9,s0_7
+flush 80
+msgwnd_but
+*d60744
+d [lv 0*"10"*"80100833"]`「この、食堂の犠牲者５人の中の、何人が死んだフリをしていたかって問題なわけか。`[@][lv 0*"10"*"80100834"]`……いよいよだな。`[@][lv 0*"10"*"80100835"]`面白くなってきたぜ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62d2fb
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 154
+bgmplay 32,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+*d60745
+d [lv 0*"10"*"80100836"]`「最後の、第八の晩についても、`[@][lv 0*"10"*"80100837"]`状況はまったく変わらないな」`[\]
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60746
+d [lv 0*"27"*"80700602"]`「うむ。`[@][lv 0*"27"*"80700603"]`ト書きにて、譲治、戦人、真里亞には、朱志香は殺せないと断言されている。`[@][lv 0*"27"*"80700604"]`朱志香は、生存者の３人には殺せないのだ」`[\]
+lss s0_10,"but","d11_nayamu3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60747
+d [lv 0*"10"*"80100838"]`「ここの紫発言は、結構、ヒントになりそうなことを色々と喋ってるんだよな」`[\]
+lss s0_8,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60748
+d [lv 0*"27"*"80700605"]`「譲治と真里亞の紫発言が興味深いな。`[@][lv 0*"27"*"80700606"]`信頼できるなら、強力な手掛りになりそうなのだが……」`[\]
+lss s0_10,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60749
+d [lv 0*"10"*"80100839"]`「譲治の兄貴がシロなら、“真里亞には誰も殺せない”って紫発言が有効になって、真里亞のシロも確定できる。`[@][lv 0*"10"*"80100840"]`同様に真里亞がシロなら、“譲治に大人は殺せない”が有効になって、結果的に譲治の兄貴のシロも確定できる」`[\]
+lss s0_8,"bea","a11_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60750
+d [lv 0*"27"*"80700607"]`「ではあるが、どちらもシロであると確定できぬ…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_nayamu2" ;1
+flush 24
+msgwnd_but
+*d60751
+d [lv 0*"10"*"80100841"]`「譲治の兄貴と真里亞は、互いに相手が先にシロであることを証明できれば、自分もシロになるという、`[@][lv 0*"10"*"80100842"]`まるでニワトリとタマゴのようなジレンマに陥ってる。`[@][lv 0*"10"*"80100843"]`ヒントになりそうでならない。`[@][lv 0*"10"*"80100844"]`何とももどかしい話だ」`[\]
+lss s0_10,"bea","a11_1_majime3star" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60752
+d [lv 0*"27"*"80700608"]`「その二人の潔白は、容易には証明できないだろう。`[@][lv 0*"27"*"80700609"]`それにもはや、容疑者は少数に絞り込まれている。`[@][lv 0*"27"*"80700610"]`ここからは、もしも誰々が犯人だったならと、個別に検証していくしかないだろうな」`[\]
+csp_slot s0_9
+lss s0_8,"but","d11_futeki3" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_but
+*d60753
+d [lv 0*"10"*"80100845"]`「そうだな。`[@][lv 0*"10"*"80100846"]`いよいよ最後の詰めに入ってきたようだぜ！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_10,"lam","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60754
+d [lv 0*"29"*"82200135"]`「いよいよ、推理も大詰めへ、って感じ……？」`[\]
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_ber
+*d60755
+d [lv 0*"28"*"82100168"]`「…………まな板の上の何とやらの心境よ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62e0c7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 155
+bgmplay 19,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_majime1" ;1
+flush 22
+msgwnd_but
+*d60756
+d [lv 0*"10"*"80100847"]`「まず、真里亞犯人説から検証してみよう。`[@][lv 0*"10"*"80100848"]`真里亞が犯人なら、楼座を死んだフリに出来る。`[@][lv 0*"10"*"80100849"]`楼座には第一、第二の晩の殺人が実行可能。`[@][lv 0*"10"*"80100850"]`そして、夏妃伯母さんの部屋に閉じ込められ、真里亞が第四の晩以降の殺人を引き継ぐことになる」`[\]
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60757
+d [lv 0*"27"*"80700611"]`「真里亞には、ゲストハウスでの全ての殺人が不可能だ。`[@][lv 0*"27"*"80700612"]`よって、真里亞は紗音を殺すのが精一杯ということになるな」`[\]
+lss s0_9,"but","d11_komaru2" ;1
+flush 80
+msgwnd_but
+*d60758
+d [lv 0*"10"*"80100851"]`「となると、ゲストハウスでの殺人のために３人目の犯人が必要になる」`[\]
+csp_slot s0_10
+lss s0_8,"bea","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_bea
+*d60759
+d [lv 0*"27"*"80700613"]`「３人目は、絵羽、秀吉、留弗夫、霧江の中の誰かということになるな。`[@][lv 0*"27"*"80700614"]`そしてそれは、さらに４人目の犯人を必要としてしまうぞ？」`[\]
+lss s0_9,"but","d11_nayamu4" ;1
+flush 80
+msgwnd_but
+*d60760
+d [lv 0*"10"*"80100852"]`「……そうだな。`[@][lv 0*"10"*"80100853"]`絵羽伯母さんたち４人の誰かが死んだフリをするためには、それを検死する子供も犯人でなくてはならない。`[@][lv 0*"10"*"80100854"]`つまり、真里亞が犯人である時点で、犯人は４人にまで膨れ上がるわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+lss s0_9,"bea","a11_majime2" ;1
+flush 24
+msgwnd_bea
+*d60761
+d [lv 0*"27"*"80700615"]`「４人が犯人であるためには、４人全員がそれぞれ、最低１人は殺していなくてはならない」`[\]
+msgwnd_non
+*d60762
+d `犯人の定義とは、殺人犯であること。`[\]
+lss s0_10,"but","d11_nayamu2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_but
+*d60763
+d [lv 0*"10"*"80100855"]`「……だとするとだ。`[@][lv 0*"10"*"80100856"]`……ちょいとおかしくなってくるんだよな」`[\]
+lss s0_9,"bea","a11_1_majime6" ;1
+flush 80
+msgwnd_bea
+*d60764
+d [lv 0*"27"*"80700616"]`「犯人４人の内訳は、大人２人、子供２人となる。`[@][lv 0*"27"*"80700617"]`大人１人は第一、第二の晩の殺人を担当。`[@][lv 0*"27"*"80700618"]`もう１人の大人は、ゲストハウスの殺人を担当する。`[@][lv 0*"27"*"80700619"]`そう、ここで矛盾が生じるのだ」`[\]
+lss s0_10,"but","d11_majime2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_but
+*d60765
+d [lv 0*"10"*"80100857"]`「犯人は殺人者であるという定義。`[@][lv 0*"10"*"80100858"]`……これは即ち、犯人は絶対に、殺人をしなくてはならないという義務も意味する」`[\]
+csp_slot s0_9
+lss s0_8,"bea","a11_fukigen1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_bea
+*d60766
+d [lv 0*"27"*"80700620"]`「実は、子供の犯人は、殺人可能な相手がほとんど存在しないのだ。`[@][lv 0*"27"*"80700621"]`第一、第二の晩は、子供には犯行不能。`[@][lv 0*"27"*"80700622"]`そしてゲストハウス以降も犯行不能。`[@][lv 0*"27"*"80700623"]`唯一可能なのは、紗音殺しの第四の晩だけ」`[\]
+lss s0_10,"but","d11_komaru3" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_but
+*d60767
+d [lv 0*"10"*"80100859"]`「……子供の犯人は紗音１人しか殺せない。`[@][lv 0*"10"*"80100860"]`つまり、２人目の子供の犯人は、誰も殺せないから、犯人にはなれないんだ。`[@][lv 0*"10"*"80100861"]`……子供の犯人は、２人以上存在できないってことになる」`[\]
+lss s0_8,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_bea
+*d60768
+d [lv 0*"27"*"80700624"]`「真里亞が犯人である時点で、楼座以外にもう１人大人が必要になる。`[@][lv 0*"27"*"80700625"]`だが、その検死を偽れるもう１人の子供の犯人は、存在できないのだ。`[@][lv 0*"27"*"80700626"]`……つまり、真里亞が犯人であることはありえない…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62efd9
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 156
+bgmplay 112,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+msgwnd_but
+*d60769
+d [lv 0*"10"*"80100862"]`「次に、譲治犯人説を検証してみよう。`[@][lv 0*"10"*"80100863"]`子供の犯人は１人しか存在できない。`[@][lv 0*"10"*"80100864"]`よって、譲治の兄貴が犯人である時点で、絵羽伯母さんと秀吉伯父さん以外に、死んだフリが出来る人物は存在しない」`[\]
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_10,"lam","a11_akuwarai4" ;1
+aspt2 xpos,s0_10,550
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60770
+d [lv 0*"29"*"82200136"]`「大人２人に子供１人で、犯人は３人組？`[@][lv 0*"29"*"82200137"]`　なるほど、それならこれまでの全ての事件に、説明がつけられそうね？」`[\]
+lss s0_8,"but","d11_futeki1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60771
+d [lv 0*"10"*"80100865"]`「ところがどっこい！`[@][lv 0*"10"*"80100866"]`　実はこれもありえねぇんだ」`[\]
+lss s0_9,"bea","a13_1_majime5star" ;1
+flush 24
+msgwnd_bea
+*d60772
+d [lv 0*"27"*"80700627"]`「うむ。`[@][lv 0*"27"*"80700628"]`譲治が犯人であることは、明白に否定されている」`[\]
+lss s0_10,"lam","a11_futeki2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_lam
+*d60773
+d [lv 0*"29"*"82200138"]`「くす。`[@][lv 0*"29"*"82200139"]`……そうなのよねぇ？`[@][lv 0*"29"*"82200140"]`　子供に殺人可能なのは第四の晩の紗音のみ」`[\]
+lss s0_9,"bea","a13_1_majime6" ;1
+flush 80
+msgwnd_bea
+*d60774
+d [lv 0*"27"*"80700629"]`「紗音殺しについては、信頼できる紫発言で譲治には殺せないと、すでに断言されている…！」`[\]
+lss s0_8,"but","d11_futeki3" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_but
+*d60775
+d [lv 0*"10"*"80100867"]`「そういうことだ。`[@][lv 0*"10"*"80100868"]`紗音ちゃんの殺しについてのみ持つ、たった一つのアリバイ。`[@][lv 0*"10"*"80100869"]`それが譲治の兄貴に、全ての事件において潔白であることを証明しているんだ…！」`[\]
+csp_slot s0_9
+lss s0_24,"bea","a13_akuwarai1" ;1
+flush 23
+msgwnd_bea
+*d60776
+d [lv 0*"27"*"80700630"]`「つまり、譲治はシロということだ…！`[@][lv 0*"27"*"80700631"]`　となれば、譲治の紫発言は全て信頼できるものになるということだな…！」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62f8bc
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 157
+bgmplay 124,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+*d60777
+d [lv 0*"27"*"80700632"]`「譲治がシロであることが確定すると、`[@][lv 0*"27"*"80700633"]`自動的に真里亞もシロということになる」`[\]
+lss s0_10,"but","d11_oya1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60778
+d [lv 0*"10"*"80100870"]`「あぁ。`[@][lv 0*"10"*"80100871"]`譲治の兄貴の紫発言“真里亞には誰も殺せない”が有効になるからな。`[@][lv 0*"10"*"80100872"]`誰も殺せない以上、犯人にはなれない。`[@][lv 0*"10"*"80100873"]`よって、真里亞のシロも確定する」`[\]
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60779
+d [lv 0*"27"*"80700634"]`「譲治と真里亞がシロである事実は、`[@][lv 0*"27"*"80700635"]`自動的にその親の検死も間違いないことを示す」`[\]
+lss s0_10,"but","d11_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60780
+d [lv 0*"10"*"80100874"]`「そういうことだ。`[@][lv 0*"10"*"80100875"]`検死は誰も誤らない。`[@][lv 0*"10"*"80100876"]`そして犯人でない人間はウソをつけない。`[@][lv 0*"10"*"80100877"]`よって、二人が検死した大人の死亡は確定し、彼らもまたシロとなる」`[\]
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60781
+d [lv 0*"27"*"80700636"]`「もう、ほとんど絞り込まれたな……。`[@][lv 0*"27"*"80700637"]`……答えは、もはや明白ではないか…？」`[\]
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x62ff77
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 158
+bgmplay 125,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_9,"but","d11_majime2" ;1
+flush 22
+msgwnd_but
+*d60782
+d [lv 0*"10"*"80100878"]`「まず、犯人は複数犯である。`[@][lv 0*"10"*"80100879"]`これは確定してる。`[@][lv 0*"10"*"80100880"]`単独犯では不可能な事件なんだ」`[\]
+lss s0_10,"bea","a11_1_majime3star" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60783
+d [lv 0*"27"*"80700638"]`「まず大人の犯人が１人。`[@][lv 0*"27"*"80700639"]`第一の晩を実行し、犠牲者のフリをしてやり過ごした」`[\]
+csp_slot s0_9
+lss s0_8,"but","d11_majime4" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_but
+*d60784
+d [lv 0*"10"*"80100881"]`「マスターキーを持つ使用人全員がシロであることが確定しているため、`[@][lv 0*"10"*"80100882"]`犯人に、食堂の扉を外から施錠する方法は存在しない。`[@][lv 0*"10"*"80100883"]`よって、施錠者は室内にいると断言できるからだ」`[\]
+lss s0_10,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60785
+d [lv 0*"27"*"80700640"]`「そして、死んだフリをするためには、`[@][lv 0*"27"*"80700641"]`検死を偽ってくれるもう１人の犯人が必要になる」`[\]
+lss s0_8,"but","d11_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60786
+d [lv 0*"10"*"80100884"]`「源次さんがシロである以上、残る５人の大人の検死者は各々の子供。`[@][lv 0*"10"*"80100885"]`つまり、犯人の子供が、２人目の犯人となる」`[\]
+lss s0_10,"bea","a11_1_majime6" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60787
+d [lv 0*"27"*"80700642"]`「そして、子供の犯人にはゲストハウス以降の事件を実行できない。`[@][lv 0*"27"*"80700643"]`しかし、大人の犯人は夏妃の部屋に閉じ込められている。`[@][lv 0*"27"*"80700644"]`その為、２人目の大人の犯人が必要になる」`[\]
+lss s0_8,"but","d11_nayamu2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60788
+d [lv 0*"10"*"80100886"]`「大人２人、子供１人。`[@][lv 0*"10"*"80100887"]`これが犯人グループの構成ってわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x63079d
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 159
+bgmplay 126,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"bea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_bea
+*d60789
+d [lv 0*"27"*"80700645"]`「もはや言うには及ぶまい。`[@][lv 0*"27"*"80700646"]`犯人グループの、子供の犯人が誰かは、すでに明白であろう」`[\]
+lss s0_10,"but","d11_majime6" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d60790
+d [lv 0*"10"*"80100888"]`「だな。`[@][lv 0*"10"*"80100889"]`子供は、たった１人の例外を除いて全員、シロが確定している」`[\]
+lss s0_8,"bea","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60791
+d [lv 0*"27"*"80700647"]`「そして、その子供の犯人が誤魔化せる検死は、自分の担当した親２人だけ。`[@][lv 0*"27"*"80700648"]`つまり、犯人グループは大人２人、子供１人で、全員が家族であるということだ」`[\]
+lss s0_10,"but","d11_nayamu3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d60792
+d [lv 0*"10"*"80100890"]`「家族で殺人か。`[@][lv 0*"10"*"80100891"]`仲のいいことだぜ」`[\]
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d60793
+d [lv 0*"27"*"80700649"]`「犯人は誰と誰と誰か。`[@][lv 0*"27"*"80700650"]`これ以上、もったいぶることもあるまい？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x630d78
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+gstc 160
+bgmplay 127,71,0
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+lss s0_8,"but","d11_futeki5" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_but
+*d60794
+d [lv 0*"10"*"80100892"]`「やれやれ。`[@][lv 0*"10"*"80100893"]`ふざけた答えだぜ。`[@][lv 0*"10"*"80100894"]`子供の犯人が、俺だとはな」`[\]
+lss s0_10,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_bea
+*d60795
+d [lv 0*"27"*"80700651"]`「ふっ。`[@][lv 0*"27"*"80700652"]`妾のゲームでも、戦人犯人説はもっとも多かった推理の一つではないか」`[\]
+lss s0_8,"but","d23_futeki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d60796
+d [lv 0*"10"*"80100895"]`「らしいな。`[@][lv 0*"10"*"80100896"]`ったく、世の中、俺を疑う推理が多過ぎるぜ…！」`[\]
+lss s0_10,"bea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d60797
+d [lv 0*"27"*"80700653"]`「戦人が犯人ならば、自動的に大人の犯人も確定する。`[@][lv 0*"27"*"80700654"]`もはや、何も悩むことなどない。`[@][lv 0*"27"*"80700655"]`これで妾たちの勝ちであるな」`[\]
+lss s0_8,"but","d11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_but
+*d60798
+d [lv 0*"10"*"80100897"]`「もう、これ以上の議論もヒントも必要ないな。`[@][lv 0*"10"*"80100898"]`ズバリ、解答と行こう…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+lss s0_10,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+msgwnd_lam
+*d60799
+d [lv 0*"29"*"82200141"]`「これは勝負アリかしら？」`[\]
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_ber
+*d60800
+d [lv 0*"28"*"82100169"]`「……見事だわ。`[@][lv 0*"28"*"82100170"]`……やっぱり、この程度のミステリーじゃ、この二人には通用しなかったわね」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+goto *uu_uu_0x61551d
+*uu_uu_0x63163b
+wait 1000
+break_glass4
+lbg s0_29,"black"
+csp_slot s0_29
+flush 10,2000
+wait 83
+ch_done flag_scenario_8_9

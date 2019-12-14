@@ -1,0 +1,1025 @@
+*umi5_15
+;10/5（日）--:-- １９年越しの復讐
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_5_15
+mov $name_chapter_save, "5_15"
+~
+new_chapter date_scenario_5_15,scenario_5_15
+gstc 27
+gstt 2
+bgmplay 116,71,0
+wait 2000
+lss s0_9,"nat","a12_warai2" ;1
+color_mod2 s0_9,#ffffff
+flush 8
+seplay 1,1010,50
+set_window_simple 80
+*d42147
+d `{e:070:望まぬ結婚を強いられた夏妃は、`[@]`右代宮家に対し恨みを抱き、復讐心を膨らませていきました。`[@]`{n}（※裁判概要書：３ページより）}`[\]
+seplay 2,1010,50
+csp_slot s0_9
+flush 63
+*d42148
+d `{e:070:夏妃は、右代宮家がかつて、実家を経済的に屈服させたことへも復讐するため、`[@]`右代宮家の財産の乗っ取りを画策しました。`[@]`{n}（※裁判概要書：４ページより）}`[\]
+seplay 3,1010,50
+textoff
+waits 167
+lbg s0_1,"mlib_1c_bg"
+lbg s0_3,"mlib_1c"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+lss s0_8,"kin","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+lss s0_10,"nat","a12_tukare2" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+flush 24
+*d42149
+d `{e:070:右代宮家の財産が、金蔵個人によって事実上、掌握されていることを知った夏妃は、`[@]`金蔵に取り入るため、情交によってこれを篭絡しました。`[@]`{n}（※裁判概要書：７ページより）`[@]`{n}（※ベルンカステル文書：６８２ページより）}`[\]
+seplay 1,1010,50
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"portrait2"
+color_mod2 s0_3,#ffffff
+flush 22
+*d42150
+d `{e:070:夏妃は金蔵に取り入るために、`[@]`金蔵の妄想の魔女である、ベアトリーチェの姿に扮して情交を重ねていました。`[@]`{n}金蔵は、その夏妃に、在りし日の愛人の姿を見て、容易に篭絡されたのでした。`[@]`{n}また、この姿が偶然、使用人に目撃され、一部の魔女伝説の根拠となりました。`[@]`{n}（※裁判概要書：８ページより）`[@]`{n}（※提出証拠品：第１７号より）`[@]`{n}（※ベルンカステル文書：８０２ページより）}`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+seplay 2,1010,50
+textoff
+waits 167
+lbg s0_3,"gold2"
+color_mod2 s0_3,#ffffff
+flush 8
+*d42151
+d `{e:070:しかし、１９８６年１０月４日深夜に、右代宮戦人が隠し黄金を発見。`[@]`{n}親族たちが、彼が当主を継承するべきだと騒ぎ出したため、事件を画策。`[@]`{n}通称、いとこ部屋の子どもたちを殺害し、戦人に罪を被せようとしました。}`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+seplay 3,1010,50
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 22
+*d42152
+d `{e:070:なお、源次は、この計画に反対したため、殺害されました。`[@]`{n}その後、秀吉も殺害されました。`[@]`{n}以後は無差別で、関係者全員を殺害する強い意志を示すものでした。`[@]`{n}（※裁判概要書：２７ページより）`[@]`{n}（※補足資料Ｂ：６１ページより）`[@]`{n}（※ベルンカステル文書：１１０３ページより）}`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+seplay 1,1010,50
+*d42153
+d `{e:070:なお、具体的な犯行は以下の通りです。}`[\]
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+rain_pause s0_11
+seplay 3,1010,50
+textoff
+waits 167
+lbg s0_1,"m2f_p1br_bg"
+lbg s0_3,"m2f_p1br"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+lss s0_9,"nat","a12_nayamu2" ;1
+color_mod2 s0_9,#ffffff
+flush 28
+*d42154
+d `{e:070:１９８６年１０月４日２４時。`[@]`{n}夏妃は犯行を決意。}`[\]
+textoff
+waits 167
+csp_slot s0_9
+lss s0_8,"nat","a12_nayamu2" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+lss s0_10,"gen","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+flush 24
+*d42155
+d `{e:070:源次に協力を求めるも拒否されたため、これを殺害。}`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 22
+*d42156
+d `{e:070:続いて、夫の蔵臼を彼の自室で殺害しました。`[@]`{n}（※裁判概要書：４０ページより）`[@]`{n}（※補足資料Ｓ：８ページより）`[@]`{n}（※ベルンカステル文書：１１０５ページより）`[@]`{n}（※大法院内務文書：法総書Ａ０９第９９７４号より）}`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+rain_pause s0_11
+rain_pause s0_7
+textoff
+waits 167
+lbg s0_3,"g_o1an"
+color_mod2 s0_3,#ffffff
+flush 22
+wait 1000
+csp_slot s0_11
+rain_load s0_11
+csp_slot s0_7
+rain_load s0_7
+rain_params s0_11,400,800,100
+rain_params s0_7,400,500,100
+rain_pause s0_11
+rain_pause s0_7
+textoff
+waits 167
+lbg s0_3,"g_o1cn"
+color_mod2 s0_3,#ffffff
+flush 22
+wait 1000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 24
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+rain_pause s0_11
+textoff
+waits 167
+lbg s0_1,"g2f_r1an_bg"
+lbg s0_3,"g2f_r1an"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+flush 24
+*d42157
+d `{e:070:その後、ゲストハウス２階、通称いとこ部屋へ向かい、`[@]`楼座の合流を待ち、譲治、朱志香、真里亞、楼座の４名を殺害。}`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"blood_1b"
+flush 22
+*d42158
+d `{e:070:その遺体の首を損壊しました。}`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+seplay 3,1010,50
+textoff
+waits 167
+lbg s0_1,"g1f_r2an_bg"
+lbg s0_3,"g1f_r2an"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+flush 24
+*d42159
+d `{e:070:その後、夏妃は１階ラウンジに人がいた為、２階空室に待機。}`[\]
+*d42160
+d `{e:070:ラウンジの人間たちが解散し、就寝するまで空室に隠れていました。`[@]`{n}（※裁判概要書：４１ページより）`[@]`{n}（※補足資料Ｓ：１０ページより）`[@]`{n}（※ベルンカステル文書：１１３１ページより）`[@]`{n}（※大法院内務文書：法総書Ａ０９第９９７４号より）}`[\]
+seplay 1,1010,50
+*d42161
+d `{e:070:ラウンジの人間が解散した午前３時過ぎ。}`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"g_o1dr_bg"
+lbg s0_3,"g_o1dr"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+flush 24
+*d42162
+d `{e:070:夏妃は空室を出て、ゲストハウスを脱出。}`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+seplay 2,1010,50
+textoff
+waits 167
+lbg s0_1,"mnat_1ar_bg"
+lbg s0_3,"mnat_1ar"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+lss s0_10,"kin","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+lss s0_8,"nat","a12_tukare2" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 24
+*d42163
+d `{e:070:自室に戻り、そこに隠れていた金蔵と合流。`[@]`{n}朝までを過ごしました。}`[\]
+;csp_slot s0_11
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"g_o1a"
+z_order_override s0_11,s0_11
+color_mod2 s0_3,#ffffff
+lss s0_8,"kin","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 22
+csp_slot s0_8
+flush 2
+*d42164
+d `{e:070:金蔵は早朝に部屋を出て、ゲストハウス周辺に潜伏しました。`[@]`{n}（※裁判概要書：４１ページより）`[@]`{n}（※補足資料Ｓ：２９ページより）`[@]`{n}（※ベルンカステル文書：１２００ページより）`[@]`{n}（※大法院内務文書：法総書Ａ０９第９９７４号より）}`[\]
+textoff
+waits 167
+csp_slot s0_11
+lbg s0_3,"black"
+flush 22
+seplay 3,1010,50
+*d42165
+d `{e:070:その後、金蔵は隙を見て順次、６名の犠牲者の遺体を運び去り、これを隠蔽しました。`[@]`残念ながら、隠蔽した遺体は発見されていません。`[@]`{n}（※裁判概要書：４２ページより）`[@]`{n}（※補足資料Ｓ：３７ページより）`[@]`{n}（※大法院内務文書：法総書Ａ０９第９９７４号より）}`[\]
+seplay 1,1010,50
+*d42166
+d `{e:070:戦人を犯人と疑わせる目論見が失敗した夏妃は、計画を、全員殺害に変更しました。`[@]`{n}（※裁判概要書：５８ページより）`[@]`{n}（※補足資料Ｔ：１９ページより）`[@]`{n}（※ベルンカステル文書：１３４８ページより）`[@]`{n}（※大法院内務文書：法総書Ａ０９第９９７４号より）}`[\]
+seplay 2,1010,50
+textoff
+waits 167
+lbg s0_1,"m2f_r4ans_bg"
+lbg s0_3,"m2f_r4an"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+lbg s0_26,"view_efes"
+color_mod2 s0_26,#ffffff
+flush 26
+*d42167
+d `{e:070:いずれ関係者が、休憩のために個室を欲しがることを予測した夏妃は、`[@]`客室の一室のクローゼット内に潜伏。}`[\]
+textoff
+waits 167
+csp_slot s0_26
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"blood_1a"
+flush 22
+*d42168
+d `{e:070:午後１時頃、この部屋に訪れた秀吉を殺害しました。`[@]`{n}（※裁判概要書：６１ページより）`[@]`{n}（※補足資料Ｔ：２６ページより）`[@]`{n}（※大法院内務文書：法総書Ａ０９第９９７４号より）}`[\]
+seplay 3,1010,50
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42169
+d `{e:070:事件に気付いた関係者が、秀吉の遺体を運び出すまでの間、再び夏妃はクローゼット内に潜伏。`[@]`{n}なお、その証拠として、クローゼット内に、夏妃の着衣のボタンを発見しました。}`[\]
+seplay 1,1010,50
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+rain_pause s0_11
+textoff
+waits 167
+lbg s0_1,"mhal_2b_bg"
+lbg s0_3,"mhal_2b"
+color_mod2 s0_1,#ffffff
+color_mod2 s0_3,#ffffff
+lss s0_8,"nat","a12_majime1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 24
+*d42170
+d `{e:070:その後、クローゼットを脱出して自室に戻ろうとしました。}`[\]
+lss s0_10,"eri","a11_warai3" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+flush 24
+lss s0_8,"nat","a12_odoroki2" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 10,167
+*d42171
+d `{e:070:しかしその途上で、古戸ヱリカに発見されて追及を受け、事件を自白しました。`[@]`{n}（※裁判概要書：６３ページより）`[@]`{n}（※補足資料Ｔ：３２ページより）`[@]`{n}（※証拠品提出：第２６号より）`[@]`{n}（※ベルンカステル文書：１３４８ページより）`[@]`{n}（※ラムダデルタ文書：７行目より）`[@]`{n}（※大法院内務文書：法総書Ａ０９第９９７４号より）`[@]`{n}（※大法院内務文書：法管一Ｕ９９第０１０７号より）`[@]`{n}（※大法院公示文書：第０１７２４４３４号より）}`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+wait 2000
+seplay 1,2,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+flush 42
+set_window_simple 80
+*d42172
+d `{e:070:大法院公示第０１７２４４３４号`[@]`{n}幻想裁判第０１４７－００７９８２号（１９８６年１０月５日２４時）により、以下が確定したことを公示する。`[@]`{n}右代宮夏妃が、犯行を認めたこと。`[@]`{n}関係書類は本公示行為から１３ヶ月間、大法院法務部文書管理課第一係にて、縦覧に供する。`[@]`{n}　　　　　　　　　　　　　　　　　　　　　大法院長官職務代理者`[@]`{n}　　　　　　　　　　　　　　　　　　　　　主席異端審問官`[@]`{n}　　　　　　　　　　　　　　　　　　　　　　　　ドラノール・Ａ・ノックス}`[\]
+set_name_window_non
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 1,2,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+wait 3000
+meplay 1,12,50
+csp_slot s0_11
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_3,"m1f_s1dr"
+flush 2
+bgmplay 38,71,0
+msgwnd_nat
+*d42173
+d [lv 0*"03"*"50901083"]`「私がやったことにすればいいんでしょう？！`[@][lv 0*"03"*"50901084"]`　そう言わせたいんでしょう？！`[@][lv 0*"03"*"50901085"]`　わぁああああああああああああぁあああぁあぁぁぁ…！！！」`[\]
+msgwnd_non
+*d42174
+d `もうこれ以上、何を言い逃れをしても無駄と諦めたのか、`[@]`夏妃伯母さんは、とうとう泣き叫びながらそう言った。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42175
+d `……悲しい事件だった。`[\]
+*d42176
+d `俺は夏妃伯母さんは、気の毒な理由から右代宮家に嫁いできたにせよ、`[@]`……蔵臼伯父さんや朱志香と、……小さな幸せを手に入れることが出来たのではないかと信じたかった。`[\]
+textoff
+waits 167
+lbg s0_3,"blood_2e"
+flush 22
+*d42177
+d `……しかし夏妃伯母さんは、蔵臼伯父さんも、`[!w583]`……そして、愛娘の朱志香さえも、`[!w500]`……無情に殺してみせた…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42178
+d `祖父さままでが、遺体を隠すという片棒を担いだのは、なおも信じ難い…。`[\]
+*d42179
+d `しかし、関係者の証言から、ここ数年の祖父さまの精神状態は、`[@]`とてもまともとは言えなかったことが、次々と明らかにされた。`[\]
+textoff
+waits 167
+lbg s0_3,"portrait3"
+flush 22
+*d42180
+d `過去に亡くした、ベアトリーチェという名の愛人への妄執に取り憑かれ、`[@]`……祖父さまは本気で、夏妃伯母さんをベアトリーチェの生まれ変わりと信じたのかもしれない。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42181
+d `祖父さまは今頃、どこにいるんだろう。`[\]
+*d42182
+d `ヱリカが推理するように、`[@]`この碑文の見立て殺人で、本当にベアトリーチェが蘇ると信じて、`[@]`夏妃伯母さんの口車に乗り。`[\]
+*d42183
+d `……今頃どこかで、運び去った遺体で、不気味な儀式でもしているというのだろうか……？`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1cr"
+flush 2
+lss s0_9,"nat","a12_naku2" ;1
+flush 6
+msgwnd_nat
+*d42184
+d [lv 0*"03"*"50901086"]`「これで…………、`[|][lv 0*"03"*"50901087"]`……満足ですか………？`[@][lv 0*"03"*"50901088"]`　……私に、`[|][lv 0*"03"*"50901089"]`……こう言わせたかったんでしょう……？」`[\]
+msgwnd_non
+*d42185
+d `夏妃伯母さんが嗚咽交じりに、そう口にする。`[\]
+lss s0_9,"nat","a12_naku1" ;1
+flush 10,167
+msgwnd_nat
+*d42186
+d2 [lv 0*"03"*"50901090"]`「……これが、`[|][lv 0*"03"*"50901091"]`………あなたの復讐なんでしょう……？`[@][#][*][lv 0*"03"*"50901092"]`　１９年前の男…ッ！！」`[\]
+wait_on_d 0
+lss s0_9,"nat","a12_naku4" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d42187
+d `１９年前の男とは、夏妃伯母さんが何度も繰り返す、自分を罠にはめた男、とやらだ。`[\]
+*d42188
+d `しかし、１９年前の男と一方的に言うだけで、`[@]`１９年前に何があったのか、それを決して語ろうとはしなかった…。`[\]
+meplay 2,5,50
+textoff
+waits 167
+lbg s0_1,"m1f_s1ar_bg"
+lbg s0_3,"m1f_s1ar"
+lss s0_9,"nat","a12_naku3" ;1
+flush 26
+msgwnd_nat
+*d42189
+d [lv 0*"03"*"50901093"]`「きっと、……この中に、あの男の手先が混じっているはずです。`[@][lv 0*"03"*"50901094"]`……あの男は、あなたたちの誰かを通じて、今のこの私を嘲笑っているでしょう…」`[\]
+lss s0_9,"nat","a12_naku1" ;1
+flush 80
+*d42190
+d2 [lv 0*"03"*"50901095"]`「………なら伝えなさい…！`[@][lv 0*"03"*"50901096"]`　これで気は晴れましたか？`[@][lv 0*"03"*"50901097"]`　１９年間、あなたを苛んだ痛みと苦しみは、少しは癒えましたか…？！`[@][#][*][lv 0*"03"*"50901098"]`　………ようやく私はわかりました。`[@][lv 0*"03"*"50901099"]`…私をここまで追い詰めたのは、……それを、……認めさせたかったからですね……？」`[\]
+wait_on_d 0
+lss s0_9,"nat","a12_naku2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"eri","a11_akire2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_eri
+*d42191
+d [lv 0*"46"*"54501264"]`「……夏妃さん。`[@][lv 0*"46"*"54501265"]`私たち以外に、部外者は一切存在しません。`[@][lv 0*"46"*"54501266"]`居もしない人物が、さも存在するように振舞うなんて、往生際の悪い芝居は止めて下さい」`[\]
+msgwnd_non
+*d42192
+d `ヱリカは馬鹿にするように笑うが、夏妃伯母さんは、俺たちを見ながら。`[\]
+*d42193
+d `……いや、俺たちの向こうに、何者かの存在を見ながら、……俯き、震える。`[\]
+*d42194
+d `そして、………自らの罪を、告白した。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+vol_bgm -1,1000
+wait 1000
+wait 1000
+msgwnd_nat
+*d42195
+d [lv 0*"03"*"50901100"]`「私は、………殺人を犯しました……」`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1cr"
+flush 26
+lss s0_8,"eri","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eri
+*d42196
+d [lv 0*"46"*"54501267"]`「やっと、直接的な言葉で罪を認めましたね」`[\]
+lss s0_10,"nat","a12_naku1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_nat
+*d42197
+d [lv 0*"03"*"50901101"]`「いいえ。`[@][lv 0*"03"*"50901102"]`昨日今日の事件のことではありません。`[@][lv 0*"03"*"50901103"]`………１９年前の殺人について、告白します」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+bgmplay 127,0,0
+vol_bgm 70,3000
+vol_me 1,0,3000
+vol_me 2,0,3000
+wait 3000
+textoff
+waits 167
+lbg s0_3,"m1f_s1dr"
+flush 2
+msgwnd_non
+*d42198
+d `何の話だと、大人たちが囁き合う。`[@]`{n}……１９年前の殺人事件など、初耳だからだ。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_1,"m1f_s1ar_bg"
+lbg s0_3,"m1f_s1ar"
+lss s0_10,"nat","a12_naku2" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_nat
+*d42199
+d [lv 0*"03"*"50901104"]`「い、……今から１９年前。`[@][lv 0*"03"*"50901105"]`……私は、………罪を犯しました。`[@][lv 0*"03"*"50901106"]`………許せなかったのです。`[@][lv 0*"03"*"50901107"]`……その、………赤ん坊が…！！」`[\]
+lss s0_8,"eri","a11_akire1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eri
+*d42200
+d [lv 0*"46"*"54501268"]`「赤ん坊？`[@][lv 0*"46"*"54501269"]`　今さら何の話ですか」`[\]
+lss s0_10,"nat","a12_naku3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_nat
+*d42201
+d [lv 0*"03"*"50901108"]`「……１９年前のあの日。`[@][lv 0*"03"*"50901109"]`…私は、お父様より、ひとりの赤ん坊を託されました。`[@][lv 0*"03"*"50901110"]`………いつまでも跡継ぎを身篭ることの出来ない私に、ならば養子を迎えよとお父様が仰り、`[@][lv 0*"03"*"50901111"]`………施設から連れてきたという、ひとりの赤ん坊を……、私に抱かせたのです…」`[\]
+lss s0_10,"nat","a12_naku1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d42202
+d [lv 0*"03"*"50901112"]`「それが私に、……どれほど、女としての屈辱を与えたか、想像がつきますか…？！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 25
+msgwnd_non
+*d42203
+d `夏妃伯母さんは、怒りと悲しみ、後悔と、あるいは開き直りの、`[@]`相反する感情を入り混じらせながら、それを告白した。`[\]
+*d42204
+d `女として、子を宿すことをもはや期待されない屈辱。`[@]`{n}そして、見知らぬ赤ん坊を抱かせられた、例えようもない嫌悪感。`[\]
+*d42205
+d `それが深い悲しみと怒りを与え、`[@]`彼女の心を蝕むのに、いくつも夜を必要としなかったことを……。`[\]
+textoff
+waits 167
+lbg s0_3,"forest_p1af"
+color_mod2 s0_3,#ffffff
+flush 2
+set_window_simple 80
+msgwnd_nat
+*d42206
+d [lv 0*"03"*"50901113"]`そして私は、……心を、………悪魔に売り渡したのです…。`[\]
+*d42207
+d [lv 0*"03"*"50901114"]`………あれは、赤ん坊を抱かせた使用人と共に、薔薇庭園から船着場の方へ散歩に行った時でした…。`[\]
+*d42208
+d [lv 0*"03"*"50901115"]`……私はひとりになりたかったのですが、`[@][lv 0*"03"*"50901116"]`……赤ん坊を連れたその使用人の女は、律儀に私の後について回りました。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42209
+d [lv 0*"03"*"50901117"]`ひとりにしてくれとさえ言い出せず、……だから赤ん坊の泣き声から逃れられず……。`[\]
+*d42210
+d [lv 0*"03"*"50901118"]`………その日より１９年間、`[@][lv 0*"03"*"50901119"]`私を苛む、長き頭痛の日々の始まりに呻いていました……。`[\]
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+meplay 1,3,80
+textoff
+waits 167
+lbg s0_3,"hill_1a"
+color_mod2 s0_3,#ffffff
+flush 22
+*d42211
+d [lv 0*"03"*"50901120"]`………そして、柵より、崖を臨む。`[\]
+*d42212
+d [lv 0*"03"*"50901121"]`はるか眼下の岩浜に、`[|][lv 0*"03"*"50901122"]`……この赤ん坊を放り捨てることで、`[|][lv 0*"03"*"50901123"]`……全てなかったことに出来れば。`[\]
+*d42213
+d [lv 0*"03"*"50901124"]`……そんな悪魔の誘惑を、私は確かに聞きました。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42214
+d [lv 0*"03"*"50901125"]`「そして、………それが本当に出来たら、どれほど素晴らしいかと、`[@][lv 0*"03"*"50901126"]`……その誘惑に、ほんの一瞬、耳を傾けてしまったのです。`[@][lv 0*"03"*"50901127"]`……その時、」`[\]
+*d42215
+d [lv 0*"03"*"50901128"]`赤ん坊を抱いた使用人が、大きな石を踏んで、足を挫き、よろめいた……。`[\]
+*d42216
+d [lv 0*"03"*"50901129"]`そして粗末な柵に寄りかかり、……その時、柵が大きく軋んだ気がした。`[\]
+*d42217
+d [lv 0*"03"*"50901130"]`私は、危ないと言いながら肩を掴もうとしました。`[\]
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+color_mod2 s0_3,#ffffff
+flush 22
+*d42218
+d [lv 0*"03"*"50901131"]`「……いえ、`[|][lv 0*"03"*"50901132"]`……そんな曖昧な言い方はしません…。`[@][lv 0*"03"*"50901133"]`懺悔します。`[@][lv 0*"03"*"50901134"]`告白します。`[@][lv 0*"03"*"50901135"]`………私はあの時、確かに、……危ないと言いながら、`[@][lv 0*"03"*"50901136"]`…………その使用人の肩を、`[|][lv 0*"03"*"50901137"]`両手で、`[|][lv 0*"03"*"50901138"]`……どんと、`[|][lv 0*"03"*"50901139"]`……強く押し飛ばしたのです……」`[\]
+*d42219
+d [lv 0*"03"*"50901140"]`粗末な柵は根元から折れ、`[@][lv 0*"03"*"50901141"]`………使用人と、`[|][lv 0*"03"*"50901142"]`……その手に抱かれた赤ん坊と一緒に、`[@][lv 0*"03"*"50901143"]`………眼下の岩浜へ転落していきました……。`[\]
+*d42220
+d [lv 0*"03"*"50901144"]`その瞬間のことは、`[|][lv 0*"03"*"50901145"]`……鮮明に覚えているのに、`[@][lv 0*"03"*"50901146"]`…なのになぜか曖昧で、`[|][lv 0*"03"*"50901147"]`……とても不思議な気持ちだったのを覚えています。`[\]
+*d42221
+d [lv 0*"03"*"50901148"]`転落したというより、`[@][lv 0*"03"*"50901149"]`……まるで、何もない宙に、二人が音も無く飲み込まれて消えたようにさえ感じたのです。`[\]
+*d42222
+d [lv 0*"03"*"50901150"]`だから私は、二人が岩浜に落下した音さえ聞いていません。`[\]
+*d42223
+d [lv 0*"03"*"50901151"]`いえ、きっと聞いているのです。`[\]
+*d42224
+d [lv 0*"03"*"50901152"]`でも、消えたと思い込みたかったから、`[@][lv 0*"03"*"50901153"]`………その聞いた音を、きっと記憶から消し去ってしまったのです…。`[\]
+set_name_window_non
+textoff
+waits 167
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+csp_slot s0_11
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_3,"m1f_s1cr"
+lss s0_8,"goh","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"nan","a1_komaru2" ;1
+lss s0_10,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 2
+lss s0_10,"but","b11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_but
+*d42225
+d [lv 0*"10"*"50101246"]`「………そ、………それから………？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"m1f_s1ar_bg"
+lbg s0_3,"m1f_s1ar"
+lss s0_9,"nat","a12_naku3" ;1
+flush 24
+msgwnd_nat
+*d42226
+d [lv 0*"03"*"50901154"]`「私は一瞬、…これが夢だと信じました。`[@][lv 0*"03"*"50901155"]`……あの高さですから、ちょっと身を乗り出したくらいでは、眼下の二人は見えません。`[@][lv 0*"03"*"50901156"]`だから、二人が落ちたことさえ、……ほんの数秒前のことさえ、現実のことなのかわからなくて…」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+set_window_simple 80
+*d42227
+d [lv 0*"03"*"50901157"]`きっと私は、ここから赤ん坊が落ちればいいのにと願いすぎて、`[@][lv 0*"03"*"50901158"]`白昼夢を見てしまったに違いない…。`[\]
+*d42228
+d [lv 0*"03"*"50901159"]`そう自らに思い込ませ、足早に薔薇庭園に戻り、`[@][lv 0*"03"*"50901160"]`……赤ん坊は使用人に任せ、私はひとり、ここで休んでいたことにしました…。`[\]
+*d42229
+d [lv 0*"03"*"50901161"]`……そして、`[|][lv 0*"03"*"50901162"]`………お父様に、赤ん坊はどうしたのかと問われ、`[|][lv 0*"03"*"50901163"]`…………。`[@][lv 0*"03"*"50901164"]`………任せた使用人の姿が見えないと、`[|][lv 0*"03"*"50901165"]`………騒ぎになって……………。`[\]
+meplay 1,3,50
+msgwnd_non
+*d42230
+d `やがて、壊れている柵が見つかって、`[@]`………その崖下に、二人の死体が発見された…。`[\]
+textoff
+waits 167
+lbg s0_3,"blood_1b"
+flush 22
+*d42231
+d `……明かせぬ筋からの赤ん坊だったらしく、その存在は伏せられ、`[@]`……使用人が単独で事故を起こして死んだこととなった。`[\]
+msgwnd_nat
+*d42232
+d [lv 0*"03"*"50901166"]`そう。`[\]
+*d42233
+d [lv 0*"03"*"50901167"]`私は、……一度に二人もの、罪なき命を奪ったのです………。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d42234
+d [lv 0*"03"*"50901168"]`気の毒な使用人については、……遺族に充分なねぎらいをしました。`[\]
+*d42235
+d [lv 0*"03"*"50901169"]`真相を知らない老いた夫は、不幸な事故を嘆きつつも、それに納得してくれました。`[\]
+*d42236
+d [lv 0*"03"*"50901170"]`そして、ほんの数年前、老衰で亡くなり、………私は墓前で真相を告白し、謝罪しました。`[\]
+set_name_window_non
+vol_me 1,-1,1000
+textoff
+waits 167
+lbg s0_1,"m1f_s1ar_bg"
+lbg s0_3,"m1f_s1ar"
+lss s0_9,"nat","a12_naku2" ;1
+flush 26
+lss s0_9,"nat","a12_naku1" ;1
+flush 10,167
+msgwnd_nat
+*d42237
+d [lv 0*"03"*"50901171"]`「………しかし私は今日まで…。`[@][lv 0*"03"*"50901172"]`……あの赤ん坊に謝罪したことはありません。`[@][lv 0*"03"*"50901173"]`……そう、`[|][lv 0*"03"*"50901174"]`………それがあなたの目的でしょう……？」`[\]
+lss s0_9,"nat","a12_naku4" ;1
+flush 80
+*d42238
+d [lv 0*"03"*"50901175"]`「だから、私は今、ここで罪を告白します！`[@][lv 0*"03"*"50901176"]`　……右代宮夏妃は、`[|][lv 0*"03"*"50901177"]`………１９年前にあなたを、`[@][lv 0*"03"*"50901178"]`………崖から突き落として、`[|][lv 0*"03"*"50901179"]`…殺そうとしました……」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+set_window_simple 80
+*d42239
+d [lv 0*"03"*"50901180"]`……でも、`[|][lv 0*"03"*"50901181"]`……あなたは死んでいなかったのですね……。`[\]
+*d42240
+d [lv 0*"03"*"50901182"]`………こうして生きていて、`[|][lv 0*"03"*"50901183"]`……それでも私をカアサンと呼び…。`[\]
+*d42241
+d [lv 0*"03"*"50901184"]`………この島へ帰って来て、`[|][lv 0*"03"*"50901185"]`………こうして復讐をされたのですね……。`[\]
+*d42242
+d [lv 0*"03"*"50901186"]`あなたはこの１９年間。`[\]
+*d42243
+d [lv 0*"03"*"50901187"]`……母と呼ぶはずだった私に突き落とされたことを知って、`[@][lv 0*"03"*"50901188"]`……どれほどの憎悪の人生を送ったのでしょうね…。`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_1,"m1f_s1ar_bg"
+lbg s0_3,"m1f_s1ar"
+lss s0_10,"nat","a12_naku2" ;1
+aspt2 xpos,s0_10,370
+flush 3
+msgwnd_nat
+*d42244
+d [lv 0*"03"*"50901189"]`「……そしてあなたは、……私があなたを突き落としてから得た、`[@][lv 0*"03"*"50901190"]`１８年間の人生を、……こうして全て、打ち壊しました…。`[@][lv 0*"03"*"50901191"]`……もう私には、愛した夫も娘もいません。`[@][lv 0*"03"*"50901192"]`……そして私には名誉もなく、`[|][lv 0*"03"*"50901193"]`……こうして人殺し呼ばわりされて、`[|][lv 0*"03"*"50901194"]`………いえ、……本当に人殺しですものね……」`[\]
+lss s0_10,"nat","a12_naku1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d42245
+d [lv 0*"03"*"50901195"]`「えぇ、そうです。`[@][lv 0*"03"*"50901196"]`……あなたの目論見どおり。`[@][lv 0*"03"*"50901197"]`……私は今や、人殺しと見なされています…」`[\]
+*d42246
+d [lv 0*"03"*"50901198"]`「……………どうですか…？`[@][lv 0*"03"*"50901199"]`　復讐には、`[|][lv 0*"03"*"50901200"]`……これで充分ですか……？」`[\]
+*d42247
+d [lv 0*"03"*"50901201"]`「夫と娘を殺され、`[|][lv 0*"03"*"50901202"]`……人殺しの汚名を着せられ、……不貞の汚名まで……。`[@][lv 0*"03"*"50901203"]`こうして生き恥をかかされる私を見て、`[@][lv 0*"03"*"50901204"]`…………あなたは満足ですか……？！」`[\]
+*d42248
+d [lv 0*"03"*"50901205"]`「えぇ、さぞや満足でしょうね…。`[@][lv 0*"03"*"50901206"]`……私の……家族も、`[|][lv 0*"03"*"50901207"]`……名誉も、`[|][lv 0*"03"*"50901208"]`……全て………奪い去ったのですから……。`[@][lv 0*"03"*"50901209"]`……ううぅ、`[|][lv 0*"03"*"50901210"]`……ひっく……、`[|][lv 0*"03"*"50901211"]`ううううぅうううぅうッ！！」`[\]
+textoff
+waits 167
+lss s0_10,"nat","a12_naku2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+wait 1000
+csp_slot s0_10
+flush 5
+seplay 1,13,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+wait 1000
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"m1f_s1cr"
+lss s0_8,"eri","a11_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_eri
+*d42249
+d2 [lv 0*"46"*"54501270"]`「………この期に及んで、まだ濡れ衣だと言い張るんですか？`[@][#][*][lv 0*"46"*"54501271"]`　まったく、あなたは本当に往生際の悪い」`[\]
+wait_on_d 0
+lss s0_8,"eri","a11_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"nat","a12_naku4" ;1
+aspt2 xpos,s0_10,370
+flush 64
+msgwnd_nat
+*d42250
+d [lv 0*"03"*"50901212"]`「聞こえていますか？！　１９年前の呪われた赤ん坊…！！`[@][lv 0*"03"*"50901213"]`　これで満足ですかッ？！`[@][lv 0*"03"*"50901214"]`　あなたは私から全てを奪いましたッ！！`[@][lv 0*"03"*"50901215"]`　まだ何か足りないというのですか？！`[@][lv 0*"03"*"50901216"]`　……もう、`[|][lv 0*"03"*"50901217"]`……私を、`[|][lv 0*"03"*"50901218"]`………許して…………」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+meplay 5,5,0
+vol_bgm 0,3000
+vol_me 5,50,3000
+wait 3000
+vol_bgm -1,1000
+wait 2000
+textoff
+waits 167
+lbg s0_22,"black"
+flush 1
+set_window_simple 80
+msgwnd_but
+*d42251
+d `{a:c:`[lv 0*"10"*"50101247"][text_fade_t 1667]`「……駄目だな」}`[\]
+set_name_window_non
+textoff
+waits 167
+lbg s0_1,"m1f_s1ar_bg"
+lbg s0_3,"m1f_s1ar"
+lss s0_8,"eri","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"nat","a12_naku2" ;1
+aspt2 xpos,s0_10,370
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+lss s0_10,"nat","a12_naku3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_nat
+*d42252
+d [lv 0*"03"*"50901219"]`「ぇ………」`[\]
+lss s0_8,"eri","a11_akire2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eri
+*d42253
+d [lv 0*"46"*"54501272"]`「………戦人さん。`[@][lv 0*"46"*"54501273"]`何か言いました？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"m1f_s1cr"
+flush 2
+vol_mix_fade 1000
+wait 1000
+set_window_simple 80
+msgwnd_but
+*d42254
+d `{a:c:`[lv 0*"10"*"50101248"]`「全然駄目だぜ」}`[\]
+set_name_window_non
+textoff
+waits 167
+lss s0_8,"nat","a12_naku1" ;1
+aspt2 xpos,s0_8,-370
+flush 3
+msgwnd_nat
+*d42255
+d [lv 0*"03"*"50901220"]`「…………ば、`[|][lv 0*"03"*"50901221"]`………戦人……く……ん……？」`[\]
+skip_off
+bgmplay 124,100,1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+set_window_simple 80
+msgwnd_but
+*d42256
+d2 [lv 0*"10"*"50101249"][ak][text_speed_t 5]`「………あぁ。`[#][*][|][lv 0*"10"*"50101250"]`……駄目だな。`[#][*][|][lv 0*"10"*"50101251"]`全然駄目だぜ……」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d 2
+waitvoice
+d_continue
+wait_on_d -1
+msgwnd_nat
+*d42257
+d2 [lv 0*"03"*"50901222"][ak][text_speed_t 5]`「ぁ……、`[#][*][|][lv 0*"03"*"50901223"]`………ぁぁぁ………………ッッ！！」`[#][*][\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d -1
+set_name_window_non
+textoff
+waits 167
+wait 3000
+seplay 2,2,100
+seplay 3,1006,70
+textoff
+waits 167
+lbg s0_3,"cas_ep5_1"
+show_glass 0
+wait 1000
+seplay 1,1006,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"cas_ep5_2"
+show_glass 0
+wait 667
+seplay 1,1006,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"cas_ep5_3"
+show_glass 0
+wait 500
+seplay 1,1006,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"cas_ep5_4"
+show_glass 0
+wait 333
+seplay 1,1006,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"cas_ep5_5"
+show_glass 0
+waits 167
+seplay 1,1006,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"cas_ep5_6"
+show_glass 0
+wait 83
+seplay 1,1006,100
+seplay 3,1006,100
+textoff
+waits 167
+lbg s0_3,"cas_ep5_7"
+show_glass 0
+wait 500
+seplay 1,1006,100
+seplay 2,1006,100
+seplay 3,27,100
+textoff
+waits 167
+lbg s0_3,"black"
+show_glass 0
+lbg2 s0_3,"end_5a"
+drop_cache "end_5a"
+aspt2 ypos,s0_3,21420
+flush 1
+aspt2 ypos,s0_3,540,48014
+aspt2 ypos,s0_3,0,1986,1
+sptwait2 ypos,s0_3
+wait 2000
+vol_bgm 87,1000
+wait 1000
+vol_bgm 75,1000
+wait 1000
+vol_bgm 63,1000
+wait 1000
+vol_bgm 50,1000
+wait 1000
+seplay 1,57,100
+seplay 2,1006,100
+seplay 3,27,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_bgm -1,167
+wait 5000
+vol_mix_fade 1000
+wait 1000
+skip_on
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+ch_done flag_scenario_5_15
+csp_slot s0_11
+flush 1
+*umi5_end
+goto *end_game

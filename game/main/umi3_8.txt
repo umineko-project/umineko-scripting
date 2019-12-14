@@ -1,0 +1,2468 @@
+*umi3_8
+;10/5（日）6:00 ワルギリア
+log_reset
+mov $name_chapter_r_click,r_click_chapters_3_8
+mov $name_chapter_save, "3_08"
+new_chapter date_scenario_3_8,scenario_3_8
+gstc 142
+meplay 1,12,70
+meplay 2,5,70
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"white"
+flush 9
+wait 2000
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"m_o1a"
+flush 6
+wait 3000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+flush 1
+vol_me 1,50
+vol_me 2,50
+textoff
+waits 167
+lbg s0_3,"mdin_1f"
+flush 22
+wait 1000
+textoff
+waits 167
+lbg s0_3,"mdin_1a"
+flush 22
+*d16979
+d `朝の訪れを知るには、カーテンを開けてわずかに明るくなった曇天を見上げるほかなかった。`[\]
+*d16980
+d `清々しい朝ではない。`[@]`昨夜からずっと降り続く雨と、唸る風の音が聞こえるだけだった…。`[\]
+lss s0_10,"kir","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_kir
+*d16981
+d [lv 0*"09"*"31300142"]`「……とても朝とは思えないわね。`[@][lv 0*"09"*"31300143"]`私たちの心をそのまま示した、ひどい天気よ」`[\]
+lss s0_8,"rud","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_rud
+*d16982
+d [lv 0*"08"*"31200181"]`「ならずいぶん穏やかじゃねぇか。`[@][lv 0*"08"*"31200182"]`雨は降れど、槍が降らねぇだけマシだぜ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"mdin_1c_bg"
+lbg s0_3,"mdin_1c"
+flush 23
+lss s0_10,"hid","a11_odayaka1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_hid
+*d16983
+d [lv 0*"06"*"31100173"]`「わっはっは。`[@][lv 0*"06"*"31100174"]`雨が降ろうと、槍が降ろうと、どんと来いっちゅうとこやな」`[\]
+lss s0_10,"hid","a11_fumu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d16984
+d [lv 0*"06"*"31100175"]`「………もう６時かいな。`[@][lv 0*"06"*"31100176"]`ふぁぁあぁ…。`[@][lv 0*"06"*"31100177"]`これで充分とちゃうか。`[@][lv 0*"06"*"31100178_b"]`あとは、謎の１９人目、ベアトリーチェが動いて来んことには、手の打ちようもないわ」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"mdin_1e"
+lss s0_8,"cla","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_cla
+*d16985
+d [lv 0*"02"*"30800169"]`「そういうことだ。`[@][lv 0*"02"*"30800170"]`……だが、向こうが打って来るだろうほとんどの手は想定できたはずだ」`[\]
+lss s0_10,"eva","a11_akire1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_eva
+*d16986
+d [lv 0*"05"*"31000288"]`「そうね。`[@][lv 0*"05"*"31000289"]`兄弟の中に裏切り者さえ現れなければ、私たちは大抵の事態に対応できるはずよ」`[\]
+lss s0_9,"ros","a11_komaru3" ;1
+flush 10,167
+msgwnd_ros
+*d16987
+d [lv 0*"12"*"31400178"]`「……もうこの話は終わりにしましょ？`[@][lv 0*"12"*"31400179"]`　結局、徹夜しちゃったわね。`[@][lv 0*"12"*"31400180"]`…眠いわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mdin_1a"
+lss s0_10,"nat","a11_tukare2" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_nat
+*d16988
+d [lv 0*"03"*"30900060"]`「そうですね。`[@][lv 0*"03"*"30900061"]`朝食を取ったら、一度お休みになられてはいかがですか？」`[\]
+lss s0_8,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_cla
+*d16989
+d [lv 0*"02"*"30800171"]`「…良い提案だ。`[@][lv 0*"02"*"30800172"]`この歳に徹夜は堪えるよ」`[\]
+msgwnd_non
+*d16990
+d `彼らはめいめいに伸びをすると、清々しくない朝を満喫するのだった。`[\]
+csp_slot s0_10
+flush 10,167
+lss s0_10,"rud","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_rud
+*d16991
+d [lv 0*"08"*"31200183"]`「顔でも洗ってこようぜ。`[@][lv 0*"08"*"31200184"]`きっとひでぇツラさ」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+seplay 1,17,71
+wait 2000
+textoff
+waits 167
+lbg s0_1,"m1f_p1b_bg"
+lbg s0_3,"m1f_p1b"
+flush 24
+lss s0_9,"kir","a11_nayamu1" ;1
+flush 10,167
+msgwnd_kir
+*d16992
+d [lv 0*"09"*"31300144"]`「………………？`[@][lv 0*"09"*"31300145"]`　何、このひどい臭い」`[\]
+bgmplay 6,71,0
+msgwnd_non
+*d16993
+d `廊下へ出た途端、霧江が露骨に嫌な顔をした。`[\]
+lss s0_10,"nat","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_nat
+*d16994
+d [lv 0*"03"*"30900062"]`「…どうしましたか？」`[\]
+lss s0_9,"kir","a11_majime1" ;1
+flush 10,167
+msgwnd_kir
+*d16995
+d [lv 0*"09"*"31300146"]`「ねぇ、何かひどい臭いがしない…？」`[\]
+lss s0_8,"hid","a11_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_hid
+*d16996
+d [lv 0*"06"*"31100179"]`「………ん。`[@][lv 0*"06"*"31100180"]`…何やこの臭いは。`[@][lv 0*"06"*"31100181"]`こら堪らんで…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"m1f_p1c_bg"
+lbg s0_3,"m1f_p1c"
+flush 24
+msgwnd_non
+*d16997
+d `そう騒ぐので、何事かとみんなが廊下に顔を出した。`[@]`{n}…それは薄っすらとした臭いだったが、臭う臭うと騒がれれば、はっきりとわかるものだった。`[\]
+*d16998
+d `彼らはその奇怪な臭いがどこから漂ってくるのか、それぞれの嗅覚を頼りに廊下に出る…。`[\]
+textoff
+waits 167
+lbg s0_1,"m1f_p1b_bg"
+lbg s0_3,"m1f_p1b"
+lss s0_10,"nat","a21_odoroki2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_nat
+*d16999
+d [lv 0*"03"*"30900063"]`「一体、何事でしょう。`[@][lv 0*"03"*"30900064"]`源次に対応させましょう。`[@][lv 0*"03"*"30900065"]`きっと、もう使用人室に来ていて朝の準備をしているはずです」`[\]
+lss s0_8,"cla","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_cla
+*d17000
+d [lv 0*"02"*"30800173"]`「うむ、頼む。`[@][lv 0*"02"*"30800174"]`まさかあの郷田に限って、`[@][lv 0*"02"*"30800175"]`こんな臭いをさせる朝食を作っているとは思い難いのだがね…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mboi_1c"
+flush 25
+meplay 1,13,50
+msgwnd_non
+*d17001
+d `留弗夫たちは臭いの元がどこかを探り、それが地下から、`[@]`ボイラー室からすることを突き止めた。`[\]
+seplay 1,32,71
+wait 1000
+*d17002
+d `しかし鍵が掛かっていて、中を確かめることはできなかった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_1,"m1f_p2b_bg"
+lbg s0_3,"m1f_p2b"
+flush 22
+*d17003
+d `一方、夏妃たちは使用人室へ誰かを探しに行く途中、客間の異変に気付く。`[\]
+lss s0_8,"nat","a35_odoroki2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+vol_bgm -1,1000
+msgwnd_nat
+*d17004
+d [lv 0*"03"*"30900066"]`「……何ですか、これは…！」`[\]
+lss s0_10,"ros","a11_aseru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ros
+*d17005
+d [lv 0*"12"*"31400181"]`「ひ、ひどい悪戯だわ…。`[@][lv 0*"12"*"31400182"]`誰がこんなことを…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+wait 1000
+seplay 1,24,71
+textoff
+waits 167
+lbg s0_3,"magicsquare_sun7"
+flush 22
+msgwnd_non
+*d17006
+d `客間の扉には、血を想起させる不気味な赤い塗料で、奇怪な…、`[@]`魔法陣のようなものが描かれていた。`[\]
+meplay 1,13,50
+textoff
+waits 167
+lbg s0_1,"m1f_p2b_bg"
+lbg s0_3,"m1f_p2b"
+lss s0_9,"eva","a11_majime1" ;1
+flush 26
+msgwnd_eva
+*d17007
+d2 [lv 0*"05"*"31000290"]`「厨房にはまだ誰も来てないわ。`[@][#][*][lv 0*"05"*"31000291"]`……な、何よ、それ」`[\]
+wait_on_d 0
+lss s0_9,"eva","a11_ikari2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+msgwnd_non
+*d17008
+d `臭いの元が厨房だと思った絵羽たちは、`[@]`誰もおらず、朝食の準備も始まっていないことを確認した上で、戻ってきた。`[\]
+*d17009
+d `……そして客間の異変に気付く。`[\]
+csp_slot s0_9
+flush 10,167
+lss s0_10,"rud","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_rud
+*d17010
+d [lv 0*"08"*"31200185"]`「駄目だな、ボイラー室は鍵が掛かってる。`[@][lv 0*"08"*"31200186"]`ボイラーの故障とかそういうのだとまずいんじゃないのか？`[@][lv 0*"08"*"31200187"]`　使用人は誰かいたかぁ？」`[\]
+lss s0_8,"kir","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_kir
+*d17011
+d [lv 0*"09"*"31300147"]`「………！`[@][lv 0*"09"*"31300148"]`　その悪趣味な落書き、ここにもあるの？`[@][lv 0*"09"*"31300149"]`　ボイラー室の扉にもあったのよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"m1f_p1b_bg"
+lbg s0_3,"m1f_p1b"
+lss s0_10,"hid","a11_komaru2" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_hid
+*d17012
+d2 [lv 0*"06"*"31100182"]`「何やて？！`[@][lv 0*"06"*"31100183"]`　この薄気味悪い落書きが、ここだけじゃなく、他にもあるっちゅうんか？！`[@][#][*][lv 0*"06"*"31100184"]`　はは、まさか、森の魔女ベアトリーチェの宣戦布告っちゅうわけやないやろな」`[\]
+wait_on_d 0
+lss s0_10,"hid","a11_aseri1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"magicsquare_sun7"
+flush 22
+msgwnd_non
+*d17013
+d `秀吉はそう茶化すが、風雨の音を聞きながら眺める不気味な魔法陣は、まさに魔女からのメッセージを思わせる。`[\]
+*d17014
+d `…滴る真っ赤な塗料は容易に血を連想させ、ますますにその不気味さを引き立たせた。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"m_door1"
+flush 22
+seplay 1,32,71
+*d17015
+d `秀吉が試しに扉を開けようとするが、施錠されていた。`[\]
+*d17016
+d `…客間は、原則、施錠することはない。`[@]`{n}わざわざ誰かが閉めたのだ。`[\]
+lss s0_10,"ros","a11_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ros
+*d17017
+d [lv 0*"12"*"31400183"]`「……これはどういうこと…？`[@][lv 0*"12"*"31400184"]`　私たちが食堂で話し合いをしている最中に、誰かがこっそりとこの落書きを残したというの？`[@][lv 0*"12"*"31400185"]`　客間とボイラー室の扉に？」`[\]
+lss s0_8,"eva","a11_akire1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eva
+*d17018
+d [lv 0*"05"*"31000292"]`「…どうせ使用人の仕業よ。`[@][lv 0*"05"*"31000293"]`私たちはずっと一緒だったのよ。`[@][lv 0*"05"*"31000294"]`全員にアリバイがある。`[@][lv 0*"05"*"31000295"]`……恐らく、お父様に何かおかしな指示を受けて、こんな悪戯をしたのよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"m1f_p1b_bg"
+lbg s0_3,"m1f_p1b"
+lss s0_10,"rud","a22_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+meplay 2,5,50
+msgwnd_rud
+*d17019
+d2 [lv 0*"08"*"31200188"]`「………昨日の真里亞ちゃんの手紙の件も含めて。`[@][lv 0*"08"*"31200189"]`使用人連中が親父の手先になって何かを企んでる可能性は充分、疑えるからな。`[@][#][*][lv 0*"08"*"31200190"]`……とにかく、みんなどこに居やがるんだ？`[@][lv 0*"08"*"31200191"]`　まさか隠れん坊ってわけでもねぇだろうに。`[@][lv 0*"08"*"31200192"]`探そうぜ」`[\]
+wait_on_d 0
+lss s0_10,"rud","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"ros","a11_aseru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_ros
+*d17020
+d [lv 0*"12"*"31400186"]`「…それより私は子どもたちが気になるわ。`[@][lv 0*"12"*"31400187"]`無事よね？`[@][lv 0*"12"*"31400188"]`　私、確かめてくるついでに、ゲストハウスに使用人の人がいないか見てくるわ」`[\]
+lss s0_10,"rud","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_rud
+*d17021
+d2 [lv 0*"08"*"31200193"]`「なら手分けだな。`[@][lv 0*"08"*"31200194"]`ゲストハウスにガキどもの様子を見に行く間、俺たちは屋敷の中を調べてみよう。`[@][#][*][lv 0*"08"*"31200195"]`………考えたくはねぇが、`[@][lv 0*"08"*"31200196"]`こんな薄気味悪ぃ落書きが、ここだけってことはねぇかもしれねぇ」`[\]
+wait_on_d 0
+lss s0_10,"rud","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_8
+flush 10,167
+lss s0_8,"cla","a12_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_cla
+*d17022
+d2 [lv 0*"02"*"30800176"]`「……親父殿の、おかしなゲームに巻き込まれているのかもしれんな。`[@][lv 0*"02"*"30800177"]`…私は親父殿のところへ行って、事情を聞いてみよう。`[@][#][*][lv 0*"02"*"30800178"]`……まぁ、素直に話を聞いてくれるとは思えんがね」`[\]
+wait_on_d 0
+lss s0_8,"cla","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 2000
+wait 2000
+bgmplay 27,71,0
+msgwnd_non
+*d17023
+d `大人たちは手分けする。`[\]
+*d17024
+d `その結果、ゲストハウスの２階の、通称、いとこ部屋に子どもたち４人が無事なのが確認された。`[\]
+textoff
+waits 167
+lbg s0_1,"g2f_r1am_bg"
+lbg s0_3,"g2f_r1am"
+flush 24
+*d17025
+d `どうも昨夜、かなり夜更かしして遊んでいたらしい。`[@]`{n}４人とも高いびきだったので、楼座は起こさないようにする。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"g2f_p1a_bg"
+lbg s0_3,"g2f_p1a"
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+*d17026
+d `また、昨晩は早々に戻って休んでいた南條も無事だった。`[@]`{n}早寝早起きが信条らしく、爽やかな朝を迎えていたようだった。`[\]
+textoff
+waits 167
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d17027
+d `その間に、霧江と秀吉が使用人の姿を探す。`[@]`{n}だが見付からない。`[\]
+textoff
+waits 167
+lbg s0_3,"g1f_r1a"
+flush 26
+*d17028
+d `…ゲストハウスの使用人室も空っぽだった。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+wait 1000
+textoff
+waits 167
+lbg s0_3,"g1f_p1c"
+flush 22
+lss s0_10,"ros","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+meplay 1,12,50
+msgwnd_ros
+*d17029
+d [lv 0*"12"*"31400189"]`「……子どもたちは無事よ。`[@][lv 0*"12"*"31400190"]`みんな夜更かしのし過ぎね」`[\]
+lss s0_8,"hid","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_hid
+*d17030
+d [lv 0*"06"*"31100185"]`「使用人室は空っぽや。`[@][lv 0*"06"*"31100186"]`…勤務表を見ても、早番は６時からってことになっとる。`[@][lv 0*"06"*"31100187"]`もうお勤めをしてなきゃならん頃や…」`[\]
+lss s0_10,"kir","a13_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_kir
+*d17031
+d [lv 0*"09"*"31300150"]`「仮眠室も空っぽよ。`[@][lv 0*"09"*"31300151"]`布団を抜け出した跡はあるけど、温かくはなかったわ」`[\]
+lss s0_8,"hid","a11_komaru2" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_hid
+*d17032
+d [lv 0*"06"*"31100188"]`「こらぁ、…蔵臼兄さんたちの想像が当たったんとちゃうか。`[@][lv 0*"06"*"31100189"]`……多分、お父さんの指示で仕組んだゲームなんや。`[@][lv 0*"06"*"31100190"]`あの不気味な落書きを残して、どこかに姿を隠して、`[@][lv 0*"06"*"31100191"]`わしらに何かをさせたいに違いないんや」`[\]
+lss s0_10,"kir","a11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_kir
+*d17033
+d [lv 0*"09"*"31300152"]`「……遺産や家督を誰が引き継ぐに相応しいか、確かめようって言うことですか？`[@][lv 0*"09"*"31300153"]`　…いくら何でも、それは…」`[\]
+lss s0_9,"ros","a11_komaru3" ;1
+flush 10,167
+msgwnd_ros
+*d17034
+d [lv 0*"12"*"31400191"]`「いいえ…。`[@][lv 0*"12"*"31400192"]`…お父様だったら、そういうことをしてもおかしくないかもしれない」`[\]
+lss s0_8,"hid","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_hid
+*d17035
+d [lv 0*"06"*"31100192"]`「何しろ、お父さんは大仕掛けが大好きや。`[@][lv 0*"06"*"31100193"]`……例の碑文を大広間に掲げた時から、練りに練った計画だったのかも知れへんで」`[\]
+lss s0_10,"kir","a11_nayamu1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_kir
+*d17036
+d [lv 0*"09"*"31300154"]`「…なら、ゲームの開始宣言、もしくはゲームの説明などがあったりはしないのかしら。`[@][lv 0*"09"*"31300155"]`……真里亞ちゃんに渡したような、紋章入りの封筒が出てきても良さそうだけど」`[\]
+lss s0_9,"ros","a11_komaru4" ;1
+flush 10,167
+msgwnd_ros
+*d17037
+d [lv 0*"12"*"31400193"]`「…………そうね。`[@][lv 0*"12"*"31400194"]`ひょっとすると、屋敷で兄さんたちがそれを見つけたかもしれないわね」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"g1f_p1c"
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+lss s0_10,"hid","a11_fumu1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_hid
+*d17038
+d [lv 0*"06"*"31100194"]`「南條先生。`[@][lv 0*"06"*"31100195"]`あんた、何か聞いてませんか」`[\]
+lss s0_8,"nan","a1_komaru3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_nan
+*d17039
+d2 [lv 0*"19"*"31900004"]`「……も、申し訳ありませんが、私にも何が何だかさっぱりです。`[@][#][*][lv 0*"19"*"31900005"]`ただ、……なるほど、`[@][lv 0*"19"*"31900006"]`金蔵さんが何かを企んで大仕掛けを打つことは、私にも容易に想像できます」`[\]
+wait_on_d 0
+lss s0_8,"nan","a1_fumu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"hid","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_hid
+*d17040
+d [lv 0*"06"*"31100196"]`「…一度、屋敷に戻らんか。`[@][lv 0*"06"*"31100197"]`何か向こうで見つけたかも知れんで」`[\]
+lss s0_8,"nan","a1_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_nan
+*d17041
+d [lv 0*"19"*"31900007"]`「お邪魔でなければ私もご一緒いたしましょう」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"g1f_p1c"
+lss s0_10,"ros","a11_komaru4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ros
+*d17042
+d [lv 0*"12"*"31400195"]`「わ、私はここに残るわ。`[@][lv 0*"12"*"31400196"]`…上に真里亞たちが寝てる。`[@][lv 0*"12"*"31400197"]`何が起こってるかわからないんだもの。`[@][lv 0*"12"*"31400198"]`子どもたちを放っては行けないわ」`[\]
+lss s0_8,"kir","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_kir
+*d17043
+d [lv 0*"09"*"31300156"]`「……そうね。`[@][lv 0*"09"*"31300157"]`私も楼座さんとここで留守番してるわ。`[@][lv 0*"09"*"31300158"]`うちの人に、そう伝えていただけませんか」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+seplay 1,16,71
+vol_me 1,70
+meplay 2,5,70
+textoff
+waits 167
+lbg s0_3,"g1f_p1e"
+flush 22
+msgwnd_non
+*d17044
+d `楼座と霧江はゲストハウスに残る。`[@]`{n}秀吉は南條を連れ、再び屋敷に戻るのだった。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+wait 1000
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"m_o1a"
+flush 22
+wait 2000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d17045
+d `一方、屋敷では…。`[\]
+*d17046
+d `信じ難いことに、…あるいは嫌な想像は当たると言うべきなのか…。`[\]
+*d17047
+d `留弗夫の予感は的中していた。`[\]
+*d17048
+d `…客間の扉とボイラー室の扉に書かれていたのと同じ魔法陣の落書きが、屋敷内から他にも複数、見付かったからだ。`[\]
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+flush 26
+vol_me 1,50
+vol_me 2,50
+seplay 1,15,71
+lss s0_10,"rud","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_rud
+*d17049
+d [lv 0*"08"*"31200197"]`「兄貴…！`[@][lv 0*"08"*"31200198"]`　親父の方はどうだ？」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_1,"mhal_2b_bg"
+lbg s0_3,"mhal_2b"
+lss s0_8,"cla","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_cla
+*d17050
+d [lv 0*"02"*"30800179"]`「いや、駄目だ。`[@][lv 0*"02"*"30800180"]`何の反応もない。`[@][lv 0*"02"*"30800181"]`一応、扉に耳も当ててみたのだが、何の気配も感じなかった」`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"mhal_2c"
+lss s0_10,"nat","a11_tukare1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_nat
+*d17051
+d [lv 0*"03"*"30900067"]`「…使用人の姿はどこにもありません。`[@][lv 0*"03"*"30900068"]`…一体、どこへ姿を消したのやら…」`[\]
+lss s0_8,"eva","a11_ikari2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eva
+*d17052
+d [lv 0*"05"*"31000296"]`「冗談じゃないわ。`[@][lv 0*"05"*"31000297"]`お父様も使用人も姿を消し、屋敷中のあちこちにおかしな魔法陣だらけ。`[@][lv 0*"05"*"31000298"]`……一体、何が起こってるっていうのよ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+meplay 3,17,71
+textoff
+waits 167
+lbg s0_3,"magicsquare_sun7"
+flush 22
+msgwnd_non
+*d17053
+d `魔法陣はボイラー室の扉と客間の扉だけではなかった。`[@]`{n}２階の扉に２つ。`[@]`３階の扉に１つで合計５つ。`[\]
+*d17054
+d `何れも同じ魔法陣で、皆、施錠されていて中を確かめることができなかった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_me 3,-1,1000
+textoff
+waits 167
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+lss s0_9,"rud","a22_majime2" ;1
+flush 26
+msgwnd_rud
+*d17055
+d [lv 0*"08"*"31200199"]`「…とにかく、まずはボイラー室を何とかしよう。`[@][lv 0*"08"*"31200200"]`何かの故障で、火事になったりとか爆発したりとかしたら大変だ。`[@][lv 0*"08"*"31200201"]`…となりゃ鍵だな」`[\]
+lss s0_10,"nat","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_nat
+*d17056
+d [lv 0*"03"*"30900069"]`「使用人室にキーボックスがあったはずです」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+vol_bgm 0,2000
+wait 2000
+vol_bgm -1,1000
+textoff
+waits 167
+lbg s0_1,"m1f_r1a_bg"
+lbg s0_3,"m1f_r1a"
+flush 22
+seplay 1,31,50
+msgwnd_non
+*d17057
+d `彼らは使用人室でキーボックスを漁る。`[\]
+*d17058
+d `マスターキーは使用人たちが個々に持っているため、収められてはいない。`[\]
+*d17059
+d `しかし、個別の鍵なら全て収められているはず。`[\]
+lss s0_9,"cla","a11_defo1" ;1
+flush 10,167
+msgwnd_cla
+*d17060
+d [lv 0*"02"*"30800182"]`「…………よくもこれだけぎっしりと鍵があるものだよ」`[\]
+lss s0_8,"eva","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_eva
+*d17061
+d [lv 0*"05"*"31000299"]`「…ないわ。`[@][lv 0*"05"*"31000300"]`何度探してもボイラー室の鍵が見付からないわ」`[\]
+csp_slot s0_8
+csp_slot s0_9
+flush 10,167
+lss s0_10,"rud","a11_majime2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_rud
+*d17062
+d2 [lv 0*"08"*"31200202"]`「見ろよ、姉貴。`[@][lv 0*"08"*"31200203"]`……例の、魔法陣の書かれた部屋の鍵だけが、`[#][*][|][lv 0*"08"*"31200204"]`綺麗にぽっかりと抜けてるぜ」`[\]
+wait_on_d 0
+seplay 2,26,71
+d_continue
+wait_on_d -1
+lss s0_8,"nat","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_nat
+*d17063
+d [lv 0*"03"*"30900070"]`「……本当ですね。`[@][lv 0*"03"*"30900071"]`…これは困りました……」`[\]
+lss s0_9,"eva","a11_majime1" ;1
+flush 10,167
+msgwnd_eva
+*d17064
+d2 [lv 0*"05"*"31000301"]`「まるで、魔法陣の部屋に入ってほしくないかのようね。`[@][#][*][lv 0*"05"*"31000302"]`……いいえ、わざわざ魔法陣でアピールしてるんだから、入ってほしいのかしら…？」`[\]
+wait_on_d 0
+lss s0_9,"eva","a11_akire1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"rud","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_rud
+*d17065
+d [lv 0*"08"*"31200205"]`「俺は後者だと思うぜ。`[@][lv 0*"08"*"31200206"]`…扉をブチ破るのは、映画じゃあるまいし無理だろう。`[@][lv 0*"08"*"31200207"]`窓を破れば何とかなるかもな」`[\]
+msgwnd_non
+*d17066
+d `窓を破るほどの事態なのかどうか、蔵臼はしばらく判断に困った。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+lss s0_10,"hid","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"nan","a1_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+*d17067
+d `そこへ秀吉と南條が戻ってくる。`[@]`{n}ゲストハウスに異常はなく、子どもたちは無事。`[@]`{n}楼座と霧江は留守番に残ったことを伝えた。`[\]
+lss s0_8,"nan","a1_fumu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_nan
+*d17068
+d [lv 0*"19"*"31900008"]`「おはようございます。`[@][lv 0*"19"*"31900009"]`…何やらおかしなことになったそうですな」`[\]
+csp_slot s0_10
+flush 10,167
+lss s0_10,"cla","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_cla
+*d17069
+d [lv 0*"02"*"30800183"]`「おはようございます、南條先生。`[@][lv 0*"02"*"30800184"]`…早朝から起こしてしまったようで申し訳ありませんな」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"mhal_2c"
+lss s0_10,"hid","a11_fumu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_hid
+*d17070
+d [lv 0*"06"*"31100198"]`「何や。`[@][lv 0*"06"*"31100199"]`手紙の類は見付からんのか？`[@][lv 0*"06"*"31100200"]`　わしはてっきり、そういうのが見付かったとばかり思っとったんや…」`[\]
+lss s0_8,"eva","b23_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eva
+*d17071
+d2 [lv 0*"05"*"31000303"]`「……そうね。`[@][lv 0*"05"*"31000304"]`私もこれは、お父様の壮大な冗談か、何かのゲームだと信じてる…。`[@][#][*][lv 0*"05"*"31000305"]`でもそうなら、必ずそれを伝える手紙があるはずよね。`[@][lv 0*"05"*"31000306"]`真里亞ちゃんに手紙を与えたように」`[\]
+wait_on_d 0
+lss s0_8,"eva","b21_akire2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"letter1"
+flush 22
+msgwnd_rud
+*d17072
+d [lv 0*"08"*"31200208"]`「ゲーム開始宣言は、まさにあの真里亞ちゃんの手紙だったのかもしれねぇぜ？`[@][lv 0*"08"*"31200209"]`　碑文の謎を解いてみろと、すでにゲームの内容は示されてるさ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"magicsquare_sun7"
+flush 22
+msgwnd_cla
+*d17073
+d [lv 0*"02"*"30800185"]`「なら、屋敷から５つも見付かった魔法陣にはどんな意味があるというのかね。`[@][lv 0*"02"*"30800186"]`…姿の見えない使用人もだ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mhal_2c"
+lss s0_10,"eva","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_eva
+*d17074
+d [lv 0*"05"*"31000307"]`「……夏妃姉さん。`[@][lv 0*"05"*"31000308"]`使用人って、今日は全部で何人いたかしら…？」`[\]
+lss s0_8,"nat","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_nat
+*d17075
+d2 [lv 0*"03"*"30900072"]`「え？`[@][#][*][lv 0*"03"*"30900073"]`　………源次に郷田に、`[|][lv 0*"03"*"30900074"]`……５人ですが何か？」`[\]
+wait_on_d 0
+lss s0_8,"nat","a11_zutuu1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+lss s0_10,"rud","a11_nayamu1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+vol_mix_fade 1000
+wait 1000
+bgmplay 34,71,0
+msgwnd_rud
+*d17076
+d [lv 0*"08"*"31200210"]`「……使用人が５人。`[@][lv 0*"08"*"31200211"]`魔法陣も５つか。`[@][lv 0*"08"*"31200212"]`……偶然だろうが、気になるな」`[\]
+lss s0_8,"eva","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_eva
+*d17077
+d [lv 0*"05"*"31000309"]`「…兄さん。`[@][lv 0*"05"*"31000310"]`窓を破りましょう。`[@][lv 0*"05"*"31000311"]`中を確認するべきだわ」`[\]
+lss s0_9,"cla","a11_nayamu1" ;1
+flush 10,167
+msgwnd_cla
+*d17078
+d [lv 0*"02"*"30800187"]`「…………仕方ないな。`[@][lv 0*"02"*"30800188"]`綺麗に頼むよ」`[\]
+msgwnd_non
+*d17079
+d `蔵臼は決断し、窓を破る許可を与える。`[\]
+*d17080
+d `そして最初に破る部屋は、容易に窓に回れる１階の客間に決まった。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+wait 2000
+meplay 1,13,70
+meplay 2,5,70
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_g1c"
+flush 26
+*d17081
+d `窓から中が覗けるかと期待したが、`[@]`カーテンが掛かっているため、うかがい知ることはできなかった。`[\]
+*d17082
+d `留弗夫は、庭をうろつき、ガラスを破れる適当な何かがないかを探した。`[\]
+lss s0_8,"rud","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d17083
+d `やがて、握り拳よりも大きい石を見つけ、戻ってきた。`[\]
+lss s0_10,"eva","a11_hohoemi1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_eva
+*d17084
+d [lv 0*"05"*"31000312"]`「全部割ることはないわよ。`[@][lv 0*"05"*"31000313"]`鍵が回せる程度に開けてくれれば充分」`[\]
+lss s0_8,"rud","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_rud
+*d17085
+d [lv 0*"08"*"31200213"]`「あまり期待には添えないかもしれないぜ？」`[\]
+msgwnd_non
+*d17086
+d `留弗夫は石を振り上げ、ガラスに何度も叩き付けた。`[\]
+textoff
+waits 167
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+seplay 1,20,71
+waits 167
+seplay 2,6,71
+wait 500
+seplay 3,6,71
+wait 500
+seplay 1,6,71
+wait 500
+vol_bgm -1,1000
+seplay 2,1006,100
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_g1c"
+flush 22
+*d17087
+d `やがて、外から鍵を開けることのできる程度に、上手に穴を開けるのに成功した。`[\]
+*d17088
+d `…留弗夫はハンカチで手を庇いながら、その穴に手を突っ込み、慎重に鍵を開ける。`[\]
+lss s0_10,"rud","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_rud
+*d17089
+d [lv 0*"08"*"31200214"]`「あとでガムテープで塞いだ方がいいだろうな。`[@][lv 0*"08"*"31200215"]`雨が吹き込んじまうぜ」`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 64
+vol_me 1,40
+vol_me 2,40
+meplay 3,16,71
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+flush 22
+msgwnd_non
+*d17090
+d `窓をがらりと開けると、風雨でカーテンが乱暴に舞い踊った。`[@]`カーテンを横へ薙ぐ。`[\]
+*d17091
+d `…そこには彼らのよく知る客間があった。`[\]
+*d17092
+d `少しだけほっとする。`[@]`……ひょっとしたら、室内も怪しげな魔法陣や、`[@]`もしくは不気味な儀式の痕跡でいっぱいではないかと思ったからだ。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_s1d"
+flush 23
+*d17093
+d `とりあえず、雨の中にいつまでもいたくないので、`[@]`蔵臼、夏妃、絵羽、秀吉、留弗夫、南條の６人はぞろぞろと客間の中に入る。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"m1f_s1c"
+lss s0_9,"nan","a1_defo1" ;1
+flush 22
+msgwnd_nan
+*d17094
+d [lv 0*"19"*"31900010"]`「……特に、…変わったところはないようですな…」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
+lss s0_10,"cla","a11_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 23
+vol_mix_fade 1000
+wait 1000
+msgwnd_cla
+*d17095
+d [lv 0*"02"*"30800189"]`「………むっ、」`[\]
+lss s0_9,"nat","a35_odoroki2" ;1
+flush 10,167
+seplay 1,45,71
+msgwnd_nat
+*d17096
+d [lv 0*"03"*"30900075"]`「ど、どうしましたか、紗音…？！」`[\]
+lss s0_8,"eva","a11_ikari2" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_eva
+*d17097
+d [lv 0*"05"*"31000314"]`「ちょっとちょっと、大丈夫なの？！`[@][lv 0*"05"*"31000315"]`　どうしたのよ、あんた？！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"blood_2e"
+flush 22
+bgmplay 24,71,0
+msgwnd_hid
+*d17098
+d [lv 0*"06"*"31100201"]`「血や、血や！！`[@][lv 0*"06"*"31100202"]`　なな、南條先生、見たってや！！」`[\]
+msgwnd_rud
+*d17099
+d [lv 0*"08"*"31200216"]`「おい、紗音ちゃん！`[@][lv 0*"08"*"31200217"]`　大丈夫か？！`[@][lv 0*"08"*"31200218"]`　返事をしろぃ！」`[\]
+msgwnd_nan
+*d17100
+d [lv 0*"19"*"31900011"]`「ゆ、揺さぶってはいけません…。`[@][lv 0*"19"*"31900012"]`今、容態を診ます…」`[\]
+msgwnd_non
+*d17101
+d `ソファーの影だったので、部屋に入るまで気付かなかったのだ。`[\]
+*d17102
+d `そこには、胸元を血で真っ赤に染めた紗音が横たわっていた……。`[\]
+gstc 143
+textoff
+waits 167
+seplay 1,56,71
+textoff
+waits 167
+rain_pause s0_11
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+flush 10,367
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 28
+lss s0_24,"bea","a11_futeki1" ;1
+flush 10,167
+msgwnd_bea
+*d17103
+d2 [lv 0*"27"*"30701111"]`「お〜〜いぃ。`[@][lv 0*"27"*"30701112"]`戦人ぁ、どーこだぁあぁ？`[@][#][*][lv 0*"27"*"30701113"]`　ほらほら、紗音の死体が出てきたぞ〜〜〜？`[@][lv 0*"27"*"30701114"]`　もうイジメねぇから出て来いよぉ」`[\]
+wait_on_d 0
+lss s0_24,"bea","a11_akuwarai3" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_24,"bea","a11_warai2" ;1
+flush 10,167
+*d17104
+d [lv 0*"27"*"30701115"]`「……んん？`[@][lv 0*"27"*"30701116"]`　おぉ、いたいた。`[@][lv 0*"27"*"30701117"]`そんなところで頭抱えて、なぁにしてんだよォ」`[\]
+csp_slot s0_24
+csp_slot s0_21
+csp_slot s0_22
+rain_resume s0_11
+textoff
+waits 167
+lbg s0_3,"g1f_s1ap"
+flush 22
+lss s0_8,"but","b22_kuyasigaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_but
+*d17105
+d `「…………………………」`[\]
+msgwnd_non
+*d17106
+d `戦人は頭を抱えてテーブルに伏していた…。`[@]`何も見たくない、何も聞きたくないという意思が露骨に伝わる痛々しい姿だった…。`[\]
+*d17107
+d `ベアトリーチェの嘲るような声は聞こえているのだろうか。`[\]
+*d17108
+d `…聞こえないのか、あるいは聞こえないフリをしているのかは、わからない。`[@]`しかし、心を貝のように閉ざしてしまっているのは間違いなかった…。`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"g1f_s1ap"
+flush 24
+seplay 1,52,71
+lss s0_10,"ron","a13_warai2" ;1
+aspt2 xpos,s0_10,370
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_ron
+*d17109
+d [lv 0*"31"*"33100343"]`「ぷっくっくっく…。`[@][lv 0*"31"*"33100344"]`……少しお嬢様が苛めすぎたのではないでしょうか。`[@][lv 0*"31"*"33100345"]`あれだけのものを見せ付けて反論を迫っては、`[@][lv 0*"31"*"33100346"]`塞ぎこみたくなる気持ちもわかろうというものですよ」`[\]
+lss s0_8,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d17110
+d2 [lv 0*"27"*"30701118"]`「なぁ、戦人ぁ。`[@][lv 0*"27"*"30701119"]`反論がないんならリザインを頼むぜェ？`[@][#][*][lv 0*"27"*"30701120"]`　お前の手番なんだ。`[@][lv 0*"27"*"30701121"]`何か指すとかパスするとか、`[@][lv 0*"27"*"30701122"]`さもなきゃ降参するとかしてくれねぇと話が前に進まねぇよォ」`[\]
+wait_on_d 0
+lss s0_8,"bea","a21_akuwarai5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"g1f_s1ap"
+flush 1
+msgwnd_but
+*d17111
+d [lv 0*"10"*"30100658"]`「…………………………れ」`[\]
+lss s0_10,"bea","a31_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d17112
+d [lv 0*"27"*"30701123"]`「……え？`[@][lv 0*"27"*"30701124"]`　何々ぃ？`[@][lv 0*"27"*"30701125"]`　聞こえないぞォ？」`[\]
+lss s0_8,"but","b22_kuyasigaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_but
+*d17113
+d2 [lv 0*"10"*"30100659"]`「黙れッっつってんだッ！！`[#][*][@][lv 0*"10"*"30100660"]`　あああぁうるせぇうるせえうるせぇええぇええ！！`[@][lv 0*"10"*"30100661"]`　何が魔女だ何が魔法だ！`[@][lv 0*"10"*"30100662"]`　好き勝手にやればいいじゃねぇかよ、俺は信じねぇ何も信じねぇ、`[@][lv 0*"10"*"30100663"]`くそくそくそくそッ！！」`[\]
+wait_on_d 0
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_8,"but","b22_naku1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d17114
+d2 [lv 0*"10"*"30100664"]`「俺に話し掛けるな、何も見せるな、消えろ消えろ消えちまえッ！！`[@][lv 0*"10"*"30100665"]`　俺にそのムカつく顔を近付けるなあああああぁああああぁッ！！！」`[#][*][\]
+wait_on_d 0
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_10,"bea","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d17115
+d [lv 0*"27"*"30701126"]`「……………………ッッッ！」`[\]
+msgwnd_non
+*d17116
+d `戦人の突然の激昂に、ベアトリーチェは思わずたじろぐ。`[\]
+lss s0_10,"bea","a11_fukigen2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_bea
+*d17117
+d [lv 0*"27"*"30701127"]`「……そ、そうは言うがな？`[@][lv 0*"27"*"30701128"]`　お前の手番が終わらんと妾の手番も来ぬ。`[@][lv 0*"27"*"30701129"]`あまり妾を退屈させるなと言いたいのだが…、」`[\]
+csp_slot s0_8
+csp_slot s0_10
+flush 10,167
+lss s0_9,"but","b22_naku1" ;1
+flush 10,167
+msgwnd_but
+*d17118
+d2 [lv 0*"10"*"30100666"]`「知るかよ黙れよッうるせええんだよッ！！`[#][*][@][lv 0*"10"*"30100667"]`　お前のゲームなんか知るかよ、`[@][lv 0*"10"*"30100668"]`付き合ってらんねぇえんだよぉおおぉ！！`[@][lv 0*"10"*"30100669"]`　俺の番が終わらねぇと手前ェの番が来ねぇってんなら、永遠に待ってやがりゃあいいだろうがッ！！」`[\]
+wait_on_d 0
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_9,"but","b26_naku1" ;1
+flush 10,167
+*d17119
+d2 [lv 0*"10"*"30100670"]`「あぁ知らねぇ知らねぇわからねぇええ！！`[@][lv 0*"10"*"30100671"]`　魔女も魔法も認めねぇ、あんな滅茶苦茶も認めねぇ！！`[@][lv 0*"10"*"30100672"]`　うおおおおおおおおおお、俺に話し掛けるなっつってんだぁああああああああああぁああぁッ！！！」`[#][*][\]
+wait_on_d 0
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 1
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 1,57,100
+seplay 2,57,100
+lbg s0_17,"barrier"
+z_order_override2 s0_17,s0_6
+flush 1
+wait 1000
+csp_slot s0_17
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+wait 3000
+meplay 1,12,0
+vol_me 1,40,4000
+wait 4000
+csp_slot s0_11
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_g1a"
+textoff
+waits 167
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 22
+msgwnd_non
+*d17120
+d `……もう、何が何だかわからねぇ。`[@]`{n}あんな滅茶苦茶を見せられて、なおどう抗えってんだ…。`[\]
+textoff
+waits 167
+lbg s0_26,"black"
+flush 4
+wait 1000
+textoff
+waits 167
+csp_slot s0_26
+csp_slot s0_21
+csp_slot s0_22
+textoff
+waits 167
+lbg s0_3,"rose_1a"
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 4
+bgmplay 38,71,0
+*d17121
+d `俺はぼんやりと薔薇庭園を歩く。`[\]
+*d17122
+d `……雨は降っていて風は苛むのだが、俺の体が濡れるわけじゃない。`[@]`…でも、傘も差さず風雨の真っ只中にいるという、荒涼感だけはあった。`[\]
+lss s0_23,"but","b11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17123
+d [lv 0*"10"*"30100673"]`「………………俺はひょっとすると、`[@][lv 0*"10"*"30100674"]`…あいつのゲームにとっくの昔に負けているのかもしれねぇな」`[\]
+msgwnd_non
+*d17124
+d `…実は前回のゲームで、もうはっきり決着はついてしまっていたのではないだろうか。`[\]
+*d17125
+d `何しろ俺は、一度は屈服したのだから。`[@]`{n}だから世界は魔女と魔法で染まったのだ。`[\]
+*d17126
+d `……今や六軒島では、魔女が堂々と闊歩し、おかしな魔法をバンバンぶっ放す異世界だ。`[\]
+*d17127
+d `…認めるとか否定するとかそういう域ですらない。`[\]
+*d17128
+d `俺はベアトと互角なゲームをしていると誤解していたのかもしれない。`[\]
+*d17129
+d `すでに前回敗北して、…これはその、降伏の調印式なだけなのかもしれない。`[\]
+csp_slot s0_23
+flush 10,167
+*d17130
+d `さっき、この薔薇庭園で凄まじい戦いが繰り広げられた。`[@]`{n}俺はそれを目の当たりにした。`[\]
+textoff
+waits 167
+lbg s0_26,"black"
+flush 22
+*d17131
+d `地面を蹴る。`[@]`……当然だが硬い。`[@]`{n}そして水溜りがばしゃりと跳ねる。`[\]
+*d17132
+d `この地面を割って、高層ビルのような塔が何本もにょきにょきと生えだしたのだ。`[\]
+textoff
+waits 167
+csp_slot s0_26
+csp_slot s0_21
+csp_slot s0_22
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"no54_00059"
+color_mod2 s0_3,#ffffff
+flush 22
+*d17133
+d `……こうして地面を蹴れば蹴るほどに、`[!w500]`………そんなことがありえるわけがないと実感できる。`[\]
+*d17134
+d `だが、だからこそ、もう魔法だとしか説明できないのだ……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+textoff
+waits 167
+lbg s0_3,"rose_1a"
+lss s0_24,"but","b11_nayamu1" ;1
+flush 26
+msgwnd_but
+*d17135
+d2 [lv 0*"10"*"30100675"]`「……密室に鍵が閉じ込められて、とかってヤツなら、`[@][lv 0*"10"*"30100676"]`よくある推理小説の延長だろってことはわかるさ。`[@][#][*][lv 0*"10"*"30100677"]`……でも、……あれはなぁ…。`[@][lv 0*"10"*"30100678"]`あのどっかんどっかんってのはなぁ……。`[@][lv 0*"10"*"30100679"]`くそぉおぉぉ………」`[\]
+wait_on_d 0
+lss s0_24,"but","b22_kuyasigaru1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_26,"black"
+flush 2
+msgwnd_non
+*d17136
+d [lv 0*"30"*"33200147"]`「……………私の弟子が、ずいぶんと迷惑をかけているようですね」`[\]
+msgwnd_but
+*d17137
+d [lv 0*"10"*"30100680"]`「…え？`[@][lv 0*"10"*"30100681"]`　………あんたは…」`[\]
+msgwnd_non
+*d17138
+d `不意に話しかけられたので、振り返ると、`[@]`…薔薇庭園の東屋に、`[!w500]`……ついさっき、ベアトリーチェに倒されたはずの、先代ベアトリーチェの姿があった。`[\]
+textoff
+waits 167
+vol_bgm -1,2000
+wait 2000
+textoff
+waits 167
+csp_slot s0_26
+csp_slot s0_21
+csp_slot s0_22
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+textoff
+waits 167
+csp_slot s0_24
+lbg s0_3,"garden_1c"
+lss s0_23,"wal","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 4
+vol_mix_fade 2000
+wait 2000
+lss s0_25,"but","b11_majime1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17139
+d [lv 0*"10"*"30100682"]`「………てっきり死んだと思ったぜ。`[@][lv 0*"10"*"30100683"]`生きてたのか」`[\]
+lss s0_23,"wal","a11_warai1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+bgmplay 66,71,0
+msgwnd_non
+*d17140
+d [lv 0*"30"*"33200148"]`「いいえ、死にましたよ。`[@][lv 0*"30"*"33200149"]`…今の私は、取られた駒がチェス盤の外でくつろいでいるだけに過ぎません」`[\]
+lss s0_25,"but","b11_nayamu2" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17141
+d [lv 0*"10"*"30100684"]`「あんたはベアトの師匠なんだろ。`[@][lv 0*"10"*"30100685"]`ってことはつまり、あんたも魔女ってわけか」`[\]
+lss s0_23,"wal","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17142
+d [lv 0*"30"*"33200150"]`「……えぇ、そうですよ」`[\]
+lss s0_25,"but","b23_niramu1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17143
+d [lv 0*"10"*"30100686"]`「ちぇ。`[@][lv 0*"10"*"30100687"]`ってことはつまり。`[@][lv 0*"10"*"30100688"]`……やっぱり魔女はいるってことで決まりなわけだろ？`[@][lv 0*"10"*"30100689"]`　そしてあいつを倒せるのは俺じゃない。`[@][lv 0*"10"*"30100690"]`スゲエ魔法を使えるあんたの方じゃねぇか。`[@][lv 0*"10"*"30100691"]`…俺はもうお役御免さ。`[@][lv 0*"10"*"30100692"]`俺に出来ることなんてもう何もねぇ…」`[\]
+lss s0_23,"wal","a12_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17144
+d [lv 0*"30"*"33200151"]`「…………おやおや。`[@][lv 0*"30"*"33200152"]`すっかり屈服してしまいましたか？」`[\]
+lss s0_25,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17145
+d [lv 0*"10"*"30100693"]`「屈服も何も！`[@][lv 0*"10"*"30100694"]`　あれをどう説明すりゃいいんだよッ？！`[@][lv 0*"10"*"30100695"]`　塔が生えたり落ちてきたり！！`[@][lv 0*"10"*"30100696"]`　でっけえ巨人が楯を構えたり槍を投げたり！」`[\]
+lss s0_25,"but","b11_kuyasigaru1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*d17146
+d2 [lv 0*"10"*"30100697"]`「ああぁ思い出すだけでも気が変になりそうだぜッ、もう推理もヘチマもあったもんじゃねぇ！！`[#][*][@][lv 0*"10"*"30100698"]`　トリックとか人間犯人説とか、そんな領域をとっくに超えてるだろ！！`[@][lv 0*"10"*"30100699"]`　ああああぁあぁ、畜生畜生畜生畜生！！」`[\]
+wait_on_d 0
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_23,"wal","a11_warai1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17147
+d [lv 0*"30"*"33200153"]`「落ち着いて。`[@][lv 0*"30"*"33200154"]`……私はあの子のゲーム盤の駒に過ぎない。`[@][lv 0*"30"*"33200155"]`こうして盤外へ取り除かれてしまえば、もはや何もできない存在」`[\]
+lss s0_23,"wal","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+*d17148
+d [lv 0*"30"*"33200156"]`「しかしあなたはあの子の対戦相手。`[@][lv 0*"30"*"33200157"]`あなたが自ら投げ出さない限り、あなたには常にあの子に一矢報いる力があるのだから」`[\]
+lss s0_25,"but","b22_odoroki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17149
+d [lv 0*"10"*"30100700"]`「うるせえ！`[@][lv 0*"10"*"30100701"]`　あんただっておかしな呪文を唱えて、塔だの槍だのを呼び出してたじゃねぇかよ！！」`[\]
+lss s0_25,"but","b11_kuyasigaru1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*d17150
+d [lv 0*"10"*"30100702"]`「何を一矢報いるってんだよ！`[@][lv 0*"10"*"30100703"]`　俺にも魔法を教えてくれて、あいつとあの大魔法バトルを繰り広げろって言うのかよッ！！」`[\]
+lss s0_23,"wal","a11_warai1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17151
+d [lv 0*"30"*"33200158"]`「……あなたが望むなら。`[@][lv 0*"30"*"33200159"]`あなたに魔法の一端を教えてあげてもいいですよ」`[\]
+lss s0_25,"but","b24_odoroki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17152
+d [lv 0*"10"*"30100704"]`「そりゃあ願ったり叶ったりだぜ！`[@][lv 0*"10"*"30100705"]`　あいつの胸板にズドンと打ち込んでやれるような、すっげぇ魔法を一発頼むぜ…！！`[@][lv 0*"10"*"30100706"]`　はッ、舐めんなってんだ！」`[\]
+textoff
+waits 167
+lbg s0_26,"black"
+flush 25
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+msgwnd_non
+*d17153
+d [lv 0*"30"*"33200160"]`「日本の魔法に、雨乞いの儀式というものがあるそうですね。`[@][lv 0*"30"*"33200161"]`ご存知ですか？」`[\]
+textoff
+waits 167
+csp_slot s0_26
+csp_slot s0_21
+csp_slot s0_22
+textoff
+waits 167
+csp_slot s0_25
+csp_slot s0_23
+lbg s0_3,"rose_1a"
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+lss s0_25,"but","b11_komaru2" ;1
+aspt2 xpos,s0_25,-370
+flush 26
+bgmplay 63,71,0
+msgwnd_but
+*d17154
+d [lv 0*"10"*"30100707"]`「雨乞いぃ？`[@][lv 0*"10"*"30100708"]`　バンバン火をくべて、演舞を奉納して雨を祈るっていうあれか？`[@][lv 0*"10"*"30100709"]`　……あれは魔法じゃねぇだろ。`[@][lv 0*"10"*"30100710"]`火で上昇気流が出来て、その結果、雨雲が集まるって言う、`[@][lv 0*"10"*"30100711"]`れっきとした科学現象のはずだぜ」`[\]
+lss s0_23,"wal","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17155
+d [lv 0*"30"*"33200162"]`「おや。`[@][lv 0*"30"*"33200163"]`…私は東洋魔法のひとつだと信じていましたが。`[@][lv 0*"30"*"33200164"]`魔法ではないのですか。`[@][lv 0*"30"*"33200165"]`天に聖なる火を捧げ、敬いの演舞を捧げることで、`[@][lv 0*"30"*"33200166"]`神々の心に雨乞いの嘆願が届くものと信じておりましたよ」`[\]
+lss s0_25,"but","a21_futeki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17156
+d [lv 0*"10"*"30100712"]`「大昔の連中はそうだったろうよ。`[@][lv 0*"10"*"30100713"]`でも、その手のオカルトは大抵科学的に説明がつくもんだ」`[\]
+lss s0_23,"wal","a12_majime1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17157
+d [lv 0*"30"*"33200167"]`「物が燃えるのはどうしてですか？`[@][lv 0*"30"*"33200168"]`　物質にフロギストンが含まれているからでは？」`[\]
+lss s0_25,"but","b22_oyaa1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17158
+d [lv 0*"10"*"30100714"]`「……いいや、物が燃えるのは酸化反応だ。`[@][lv 0*"10"*"30100715"]`フロギストン説はラヴォアジェが否定したはずだぜ」`[\]
+lss s0_23,"wal","a12_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17159
+d [lv 0*"30"*"33200169"]`「物に熱が伝わるのはどうしてですか？`[@][lv 0*"30"*"33200170"]`　物質にカロリックが含まれているからでは？」`[\]
+lss s0_25,"but","b11_komaru2" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17160
+d [lv 0*"10"*"30100716"]`「……そいつは確か、ジュールが否定したはずだ。`[@][lv 0*"10"*"30100717"]`熱はエネルギーであって物質じゃない」`[\]
+lss s0_23,"wal","a11_warai1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17161
+d [lv 0*"30"*"33200171"]`「よくお勉強していますね。`[@][lv 0*"30"*"33200172"]`正しい知識ですよ」`[\]
+lss s0_25,"but","b11_futeki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17162
+d [lv 0*"10"*"30100718"]`「…ちょいとした雑学レベルだがな」`[\]
+csp_slot s0_25
+csp_slot s0_23
+flush 10,167
+lss s0_24,"wal","a11_defo1" ;1
+flush 10,167
+msgwnd_non
+*d17163
+d2 [lv 0*"30"*"33200173"]`「フロギストンもカロリックも、果てはエーテルも神の愛さえも。`[@][lv 0*"30"*"33200174"]`……科学的な説明の前には無力ですね。`[@][#][*][lv 0*"30"*"33200175"]`私はかつて、木からリンゴが落ちるのは、`[@][lv 0*"30"*"33200176"]`人に食を与える為の、神の愛のお陰だ、と聞かされましたよ」`[\]
+wait_on_d 0
+lss s0_24,"wal","a11_warai2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_24
+flush 10,167
+lss s0_23,"but","b11_nayamu2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17164
+d [lv 0*"10"*"30100719"]`「重力すらも神の愛なのか？`[@][lv 0*"10"*"30100720"]`　…まぁ、科学より宗教が万物を説明した時代の名残だろうぜ」`[\]
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17165
+d [lv 0*"30"*"33200177"]`「その通りです。`[@][lv 0*"30"*"33200178"]`人類はかつて、自らの知識の限界を、`[|][lv 0*"30"*"33200179"]`……いいえ、無知そのものを“魔法”と呼んだのです。`[@][lv 0*"30"*"33200180"]`…先ほどの雨乞いの話はまさにそれでしょう」`[\]
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*d17166
+d [lv 0*"30"*"33200181"]`「太古の人々が、`[@][lv 0*"30"*"33200182"]`火が熱を生み上昇気流を生み出して雲を呼ぶことを科学的に理解していたでしょうか？`[@][lv 0*"30"*"33200183"]`　理解せずとも、そういう結果になることだけは知っていた」`[\]
+lss s0_23,"but","b11_defo2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17167
+d [lv 0*"10"*"30100721"]`「……そういうのは結構あるかもな。`[@][lv 0*"10"*"30100722"]`先人たちの知恵ってヤツさ。`[@][lv 0*"10"*"30100723"]`理由はわからずとも、長い経験で、そういう結果が得られることを知っていた。`[@][lv 0*"10"*"30100724"]`…原理を理解できない現象は、多分、彼らにとっては魔法も同然だったろうなぁ」`[\]
+msgwnd_non
+*d17168
+d `さっきこいつが言ったように、原理が理解できない太古の人々は、`[@]`雨乞いによって、天に願いが届き雨を降らせたと信じていただろう。`[\]
+*d17169
+d `それは彼らにとって紛れもなく魔法なのだ。`[@]`{n}上昇気流というものを理解しない限り…。`[\]
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_25
+csp_slot s0_23
+lbg s0_1,"mdin_1gn_bg"
+lbg s0_3,"mdin_1gn"
+csp_slot s0_21
+csp_slot s0_22
+flush 22
+textoff
+waits 167
+lbg s0_1,"mdin_1gr_bg"
+lbg s0_3,"mdin_1gr"
+flush 22
+*d17170
+d [lv 0*"30"*"33200184"]`「電気のスイッチを押せば灯りがつく。`[@][lv 0*"30"*"33200185"]`……子どもは電球がなぜ発光するのか、その科学的原理を知らず、`[@][lv 0*"30"*"33200186"]`結果だけを知っていてスイッチを押す。`[@][lv 0*"30"*"33200187"]`原理を知らずとも結果を得られるならば、それは彼らにとって“魔法”なのではありませんか？」`[\]
+msgwnd_but
+*d17171
+d [lv 0*"10"*"30100725"]`「……………面白ぇ話だな。`[@][lv 0*"10"*"30100726"]`…まぁ、理屈から言やぁそうだ。`[@][lv 0*"10"*"30100727"]`…例えば俺たちはテレビのブラウン管にどうして画像が映るのか、理屈はさっぱりわかってない」`[\]
+*d17172
+d [lv 0*"10"*"30100728"]`「でも、テレビに物が映るのは当り前だと思ってる。`[@][lv 0*"10"*"30100729"]`ブラウン管の原理を知らなくても、“スイッチを押せばテレビが見られる”ことだけは知っている」`[\]
+*d17173
+d [lv 0*"10"*"30100730"]`「…上昇気流を理解せずに雨乞いをするのとまったく同じだ。`[@][lv 0*"10"*"30100731"]`……つまり、原理を知らないならば、テレビだって“魔法”も同然、`[@][lv 0*"10"*"30100732"]`いや、魔法そのものだろうってわけか」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+meplay 1,12,50
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"garden_1c"
+lss s0_23,"wal","a11_majime1" ;1
+aspt2 xpos,s0_23,370
+textoff
+waits 167
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 26
+lss s0_23,"wal","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17174
+d [lv 0*"30"*"33200188"]`「あなたは、ブラウン管の構造がどうなっているか知っていますか？`[@][lv 0*"30"*"33200189"]`　分解してその中身を見たことは？」`[\]
+lss s0_25,"but","a11_futeki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17175
+d [lv 0*"10"*"30100733"]`「……ねぇよ。`[@][lv 0*"10"*"30100734"]`本か何かで構造を読んだ気もするが、難しくてさっぱりだったな。`[@][lv 0*"10"*"30100735"]`確か、電子が蛍光物質にぶつかる時、発光してどうたらこうたら…」`[\]
+lss s0_23,"wal","a11_warai1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17176
+d [lv 0*"30"*"33200190_b"]`「それは偽書です。`[@][lv 0*"30"*"33200191"]`真実は、ブラウン管の中に、グレムリンという妖精が閉じ込められていて、`[@][lv 0*"30"*"33200192"]`魔法で仕事をしてくれているからなのですよ」`[\]
+lss s0_25,"but","b23_odoroki2" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17177
+d [lv 0*"10"*"30100736"]`「はぁッ？！`[@][lv 0*"10"*"30100737"]`　馬鹿なこと言うなよ、そんなわけねぇだろ…！」`[\]
+lss s0_23,"wal","a11_warai2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17178
+d [lv 0*"30"*"33200193"]`「ブラウン管の中を覗いたこともないのにどうして否定を？」`[\]
+lss s0_25,"but","b11_aseru1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17179
+d [lv 0*"10"*"30100738"]`「……覗いたことはねぇが、絶対にそんな妖精はいないと断言できるさ！」`[\]
+lss s0_23,"wal","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17180
+d [lv 0*"30"*"33200194"]`「ここにブラウン管がない以上、実証は不能ですよ」`[\]
+lss s0_25,"but","b11_komaru1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17181
+d [lv 0*"10"*"30100739"]`「た、確かに今この瞬間は実証不能だが、`[@][lv 0*"10"*"30100740"]`…後でどこかのテレビをバラして見せればすぐに論破できるさ！」`[\]
+csp_slot s0_25
+csp_slot s0_23
+flush 10,167
+lss s0_24,"wal","a11_warai1" ;1
+flush 10,167
+vol_me 1,-1,1000
+msgwnd_non
+*d17182
+d [lv 0*"30"*"33200195"]`「ということは。`[@][lv 0*"30"*"33200196"]`ブラウン管の中にグレムリンが閉じ込められていて、その魔法で映像を映し出しているという私の“魔法説”は、`[@][lv 0*"30"*"33200197"]`ブラウン管の中身を検証するまで否定不能ということになりますね？」`[\]
+csp_slot s0_24
+textoff
+waits 167
+lbg s0_3,"rose_g1a"
+lss s0_23,"but","b11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 23
+meplay 1,12,50
+msgwnd_but
+*d17183
+d [lv 0*"10"*"30100741"]`「………む、`[|][lv 0*"10"*"30100742"]`………何だよ、アレか？`[@][lv 0*"10"*"30100743"]`　“悪魔の証明”だって言いてぇのか？`[@][lv 0*"10"*"30100744"]`　お前たち魔女の十八番だぜ」`[\]
+lss s0_25,"wal","a11_fuman1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17184
+d [lv 0*"30"*"33200198"]`「“悪魔の証明”は消極的事実の証明が不可能であることを逆手に取った詭弁です。`[@][lv 0*"30"*"33200199"]`しかし、今のブラウン管の話は違う。`[@][lv 0*"30"*"33200200"]`テレビをたった１台分解すれば済むだけの話ですよ」`[\]
+lss s0_23,"but","b11_majime1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17185
+d [lv 0*"10"*"30100745"]`「……そうだな。`[@][lv 0*"10"*"30100746"]`確かに“悪魔の証明”とは異なるな」`[\]
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17186
+d [lv 0*"30"*"33200201"]`「あなたの提唱する科学的説明と、私の提唱する魔法的説明。`[@][lv 0*"30"*"33200202"]`…そのどちらかが真実です。`[@][lv 0*"30"*"33200203"]`そしてそれはブラウン管の中を覗いた時に確定する。`[@][lv 0*"30"*"33200204"]`しかし、それを確かめる瞬間の直前まで、私たちは互いの説を否定できないのです」`[\]
+lss s0_25,"wal","a11_majime1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*d17187
+d [lv 0*"30"*"33200205"]`「つまり、真実は１つであるにもかかわらず、`[@][lv 0*"30"*"33200206"]`ブラウン管の中を覗く直前までは、相反する真実が同時に２つ存在することができる。`[@][lv 0*"30"*"33200207"]`……１つしか存在してはいけない真実が、２つ同時に存在できる異空間」`[\]
+textoff
+waits 167
+lbg s0_26,"black"
+flush 25
+csp_slot s0_25
+csp_slot s0_23
+csp_slot s0_21
+csp_slot s0_22
+rain_resume s0_11
+rain_resume s0_7
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+vol_bgm 90,2000
+vol_me 1,0,2000
+wait 2000
+*d17188
+d `箱の中の猫は、生きているのか死んでいるのか。`[@]`{n}箱を開ければ答えがわかる。`[@]`真実がわかる。`[\]
+*d17189
+d `しかし、箱を開けるまでは、猫は生きているとも死んでいるとも主張できる。`[\]
+*d17190
+d `そのどちらもが主張する彼らによるならば、それぞれ“正しい”真実であり、`[@]`双方は相反するにもかかわらず、箱を開けない限り相手を論破できない。`[\]
+seplay 1,2,70
+*d17191
+d `つまり、真実が２つ同時に存在できるのだ。`[\]
+*d17192
+d `猫が１匹しか入れない箱なのに、`[@]`生きた猫と死んだ猫の２匹を詰め込めてしまう、奇妙な異世界。`[\]
+textoff
+waits 167
+meplay 1,5,0
+vol_me 1,60,3000
+wait 3000
+textoff
+waits 167
+csp_slot s0_26
+textoff
+waits 167
+lbg s0_3,"sea_3a"
+flush 26
+*d17193
+d `これこそが、今の六軒島。`[\]
+*d17194
+d `……今のこの島は、科学説と魔法説が同時に存在できる異世界なのです。`[\]
+*d17195
+d `…科学の世界の住人であるあなたには、`[@]`一見、この島は魔法の世界に飲み込まれてしまったように感じるでしょう。`[\]
+textoff
+waits 167
+seplay 1,22,40
+lbg s0_5,"butterfly_4sp1r"
+flush 11
+vol_me 1,-1,1000
+*d17196
+d `それは正しくもありますが正確ではない。`[\]
+*d17197
+d `厳密には、科学の世界から、科学と魔法の世界の中間に移ったのです。`[\]
+*d17198
+d `だから、あなたには一見、世界が魔法側に傾いたように見える。`[\]
+*d17199
+d `……しかし実は、２つの相反する世界にとって限りなく公平な位置に、今のこの島はあるのです。`[\]
+csp_slot s0_5
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"garden_1c"
+lss s0_23,"but","b22_oyaa1" ;1
+aspt2 xpos,s0_23,370
+textoff
+waits 167
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 26
+bgmplay 62,71,0
+msgwnd_but
+*d17200
+d2 [lv 0*"10"*"30100747"]`「……よくわからねぇ…。`[@][lv 0*"10"*"30100748"]`現実と魔法の中間？`[@][lv 0*"10"*"30100749"]`　限りなく公平な世界？`[@][#][*][lv 0*"10"*"30100750"]`　どこがだよ。`[@][lv 0*"10"*"30100751"]`俺に圧倒的に不利な展開ばっかりじゃねぇかよ…！」`[\]
+wait_on_d 0
+lss s0_23,"but","b11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_23
+flush 10,167
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17201
+d [lv 0*"30"*"33200208"]`「ならばこう考えるといいでしょう。`[@][lv 0*"30"*"33200209"]`これは裁判です。`[@][lv 0*"30"*"33200210"]`あなたとベアトリーチェが、相反する主張を繰り広げている法廷だと考えるのです。`[@][lv 0*"30"*"33200211"]`ブラウン管裁判でもいいでしょう」`[\]
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*d17202
+d [lv 0*"30"*"33200212"]`「あの子は、ブラウン管の中には妖精が入っていると主張している。`[@][lv 0*"30"*"33200213"]`そして、中に入っている妖精がどのような生態で、どのような姿なのか、`[@][lv 0*"30"*"33200214"]`どのような魔力を持っているのかを次々に説明する。`[@][lv 0*"30"*"33200215"]`……そしてあなたは？」`[\]
+lss s0_23,"but","b22_niramu1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17203
+d [lv 0*"10"*"30100752"]`「……まぁ、図書館で勉強して、ブラウン管の構造を説明して反論するだろうよ」`[\]
+lss s0_25,"wal","a11_ikari1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17204
+d2 [lv 0*"30"*"33200216"]`「この瞬間、法廷には、あなたの主張とあの子の主張が同時に存在する。`[@][lv 0*"30"*"33200217"]`……もしも、あの子の主張に耳を傾けたならば、`[@][lv 0*"30"*"33200218"]`それはあたかも真実に聞こえてしまうかもしれない。見えてしまうかもしれない。`[@][#][*][lv 0*"30"*"33200219"]`{i:あなたはまさにそれを見せつけられた}」`[\]
+wait_on_d 0
+seplay 1,2,71
+d_continue
+wait_on_d -1
+lss s0_23,"but","b11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17205
+d [lv 0*"10"*"30100753"]`「………………………」`[\]
+csp_slot s0_25
+csp_slot s0_23
+csp_slot s0_21
+csp_slot s0_22
+rain_resume s0_11
+rain_resume s0_7
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"sea_3a"
+flush 22
+msgwnd_non
+*d17206
+d [lv 0*"30"*"33200220"]`「今この瞬間の六軒島には、確かに魔女も魔法も真実として存在するかもしれない。`[@][lv 0*"30"*"33200221"]`…しかしそれは、猫の箱が開かれる瞬間までの不確定な波動関数の世界。`[@][lv 0*"30"*"33200222"]`全ての状態が同時に説明できる。`[@][lv 0*"30"*"33200223"]`しかし、真実はひとつです」`[\]
+meplay 1,17,60
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 8
+*d17207
+d [lv 0*"30"*"33200224"]`「それは観測されることによって収縮し、`[@][lv 0*"30"*"33200225"]`無数の真実が淘汰されてたったひとつの真実になる。`[@][lv 0*"30"*"33200226"]`法廷で例えるならば、`[@][lv 0*"30"*"33200227"]`これは裁判長による判決行為にも似ているでしょう。`[@][lv 0*"30"*"33200228"]`検察側、弁護側がそれぞれに主張する２つの真実は、`[@][lv 0*"30"*"33200229"]`判決によって収縮し、１つとなるのです」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"garden_1a"
+lss s0_23,"but","b11_komaru2" ;1
+aspt2 xpos,s0_23,370
+textoff
+waits 167
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 22
+vol_me 1,-1,1000
+msgwnd_but
+*d17208
+d [lv 0*"10"*"30100754"]`「………あんたの言葉を借りるとつまり、`[@][lv 0*"10"*"30100755"]`……今のこの島は、ブラウン管の中を覗く直前の世界ってわけなんだな…？`[@][lv 0*"10"*"30100756"]`　だからこそ、科学説も魔法説もどちらも否定できない。`[@][lv 0*"10"*"30100757"]`…否定できないってことはつまり、」`[\]
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+seplay 1,2,100
+msgwnd_non
+*d17209
+d [lv 0*"30"*"33200230"]`「どちらも真実として存在できる。`[@][lv 0*"30"*"33200231"]`だから魔女も魔法も存在し得る。`[@][lv 0*"30"*"33200232"]`…しかし同時に、それを否定するあなたの意見もまた真実として同時に存在できる」`[\]
+lss s0_25,"wal","a11_ikari1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*d17210
+d [lv 0*"30"*"33200233"]`「………相反する２つが同時に存在できる世界。`[@][lv 0*"30"*"33200234"]`そして相反する真実が、互いを否定する理由にできない世界。`[@][lv 0*"30"*"33200235"]`………理解できてきましたか…？」`[\]
+lss s0_23,"but","b11_majime1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17211
+d [lv 0*"10"*"30100758"]`「………………つまり。`[@][lv 0*"10"*"30100759"]`……ベアトがどんなすげぇ魔法を俺に見せようとも。`[@][lv 0*"10"*"30100760"]`…それは“魔法説”の主張でしかなく、俺を否定することには当たらない」`[\]
+lss s0_23,"but","b11_komaru2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+*d17212
+d [lv 0*"10"*"30100761"]`「“ベアトがどんな魔法を俺に見せようとも、`[@][lv 0*"10"*"30100762"]`この世界ではそれを以って魔法が存在する証拠にはなり得ない”ってことか」`[\]
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17213
+d [lv 0*"30"*"33200236"]`「そうです。`[@][lv 0*"30"*"33200237"]`あの子は木からリンゴが落ちることすらも、魔法で説明しようとするでしょう。`[@][lv 0*"30"*"33200238"]`あの子は一見、杖を振るって魔法にてリンゴをもぎ取り、`[@][lv 0*"30"*"33200239"]`大地に落としたかのように“主張”するかもしれない」`[\]
+lss s0_25,"wal","a11_ikari1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+*d17214
+d [lv 0*"30"*"33200240"]`「しかしそれは、あの子の主張のひとつに過ぎないのです。`[@][lv 0*"30"*"33200241"]`あの子の如何なる主張も、あなたの主張する機会を拒むことはできない。`[@][lv 0*"30"*"33200242"]`……その意味において、この世界は双方にあまりに“公平”なのです」`[\]
+lss s0_23,"but","b22_oyaa1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17215
+d [lv 0*"10"*"30100763"]`「………なるほど、な…。`[@][lv 0*"10"*"30100764"]`……だがよ。`[@][lv 0*"10"*"30100765"]`その論法で言ったなら、たとえ俺が“科学説”で正論を示したところで、`[@][lv 0*"10"*"30100766"]`ヤツの“魔法説”と正面衝突を起こすだけで、俺もまたヤツを論破出来ない。`[@][lv 0*"10"*"30100767"]`しかも、そのファイナルジャッジは、ブラウン管を覗かない限りつかない」`[\]
+lss s0_23,"but","b11_nayamu1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+*d17216
+d [lv 0*"10"*"30100768"]`「………この世界のブラウン管はどこにあるんだ。`[@][lv 0*"10"*"30100769"]`…俺たちに議論なんて必要ないってことになる。`[@][lv 0*"10"*"30100770"]`……俺たちは仲良くブラウン管の中身を覗けばいいだけの話じゃねぇのか？」`[\]
+lss s0_23,"but","b11_majime1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+*d17217
+d [lv 0*"10"*"30100771"]`「中に妖精が本当にいたら俺の全面敗北だ。`[@][lv 0*"10"*"30100772"]`いなかったら逆に俺の勝ち。`[@][lv 0*"10"*"30100773"]`……俺たちはブラウン管を覗かずに、どうして論争を繰り広げなくちゃならないんだ？」`[\]
+lss s0_25,"wal","a11_fuman1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17218
+d [lv 0*"30"*"33200243"]`「それこそが、あの子があなたに挑んだ“ゲーム”なのです。`[@][lv 0*"30"*"33200244"]`裁判ではなく、チェスと例えるべきでしょう。`[@][lv 0*"30"*"33200245"]`勝敗は裁判官が決めるのではない。`[@][lv 0*"30"*"33200246"]`戦っているあなたたち自身が決めるのです」`[\]
+lss s0_23,"but","b22_oyaa1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17219
+d [lv 0*"10"*"30100774"]`「……真実が同時に存在できる滅茶苦茶な世界で、相手を論破なんてできるのかよ？」`[\]
+lss s0_25,"wal","a11_warai1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_non
+*d17220
+d [lv 0*"30"*"33200247"]`「現に、あなたは論破されて、今こうして屈服していますよ…？」`[\]
+lss s0_23,"but","b11_nayamu2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17221
+d [lv 0*"10"*"30100775"]`「……………へ。`[@][lv 0*"10"*"30100776"]`…へっへっへ」`[\]
+csp_slot s0_11
+csp_slot s0_7
+csp_slot s0_21
+csp_slot s0_22
+csp_slot s0_25
+csp_slot s0_23
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_g1a"
+lss s0_23,"wal","a11_defo1" ;1
+aspt2 xpos,s0_23,370
+textoff
+waits 167
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 26
+bgmplay 67,71,0
+msgwnd_non
+*d17222
+d [lv 0*"30"*"33200248"]`「今、私に助言できるのはここまでです。`[@][lv 0*"30"*"33200249"]`もしもあなたが望むなら、時折助言を与えましょう」`[\]
+lss s0_25,"but","b11_defo2" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17223
+d [lv 0*"10"*"30100777"]`「……あぁ。`[@][lv 0*"10"*"30100778"]`ありがとう、助かるぜ。`[@][lv 0*"10"*"30100779"]`……あんたの仇も、俺が取ってやる」`[\]
+lss s0_23,"wal","a11_warai1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_non
+*d17224
+d [lv 0*"30"*"33200250"]`「ほっほっほ、ありがとう。`[@][lv 0*"30"*"33200251"]`期待していますよ」`[\]
+lss s0_25,"but","b11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_but
+*d17225
+d [lv 0*"10"*"30100780"]`「あんた、名前は？」`[\]
+csp_slot s0_25
+csp_slot s0_23
+textoff
+waits 167
+lbg s0_3,"rose_1a"
+lss s0_24,"wal","a11_majime1" ;1
+flush 24
+msgwnd_non
+*d17226
+d [lv 0*"30"*"33200252"]`「…ベアトリーチェはかつて私の名でしたが、譲ってしまった今、私は名前を持ちません」`[\]
+lss s0_24,"wal","a11_defo1" ;1
+flush 10,167
+*d17227
+d2 [lv 0*"30"*"33200253"]`「………ならば仮の名でも名乗りましょう。`[@][lv 0*"30"*"33200254"]`……ワルギリアス。`[@][lv 0*"30"*"33200255"]`…いえ、`[|][lv 0*"30"*"33200256"][#][*]`ワルギリアではいかがです？」`[\]
+wait_on_d 0
+gstc 144
+seplay 9,1060,71
+d_continue
+wait_on_d -1
+csp_slot s0_24
+flush 10,167
+textoff
+waits 167
+lbg s0_3,"rose_1a"
+lss s0_23,"but","b11_defo2" ;1
+aspt2 xpos,s0_23,370
+flush 24
+lss s0_23,"but","b11_futeki1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17228
+d [lv 0*"10"*"30100781"]`「ワルギリア。`[@][lv 0*"10"*"30100782"]`ワルキュリア？`[@][lv 0*"10"*"30100783"]`　神話の女神の名前だっけか」`[\]
+lss s0_25,"wal","a11_warai1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_wal
+*d17229
+d [lv 0*"30"*"33200257"]`「いいえ。`[@][lv 0*"30"*"33200258"]`ベアトリーチェの元へ導く者、という意味です。`[@][lv 0*"30"*"33200259"]`……煉獄山の頂上にて待つあの子の元へあなたを導く。`[@][lv 0*"30"*"33200260"]`その案内人に相応しい名前でしょう」`[\]
+lss s0_23,"but","b11_nayamu2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17230
+d2 [lv 0*"10"*"30100784"]`「魔女を否定する俺が、魔女の助けを借りるとはな。`[@][lv 0*"10"*"30100785"]`……なるほど。`[@][#][*][lv 0*"10"*"30100786"]`異なる主張が同時に存在できるこの矛盾した世界なら、それもアリってわけだ。`[@][lv 0*"10"*"30100787"]`…いっひっひっひ、笑える話だぜ」`[\]
+wait_on_d 0
+lss s0_23,"but","b11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_25,"wal","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_wal
+*d17231
+d [lv 0*"30"*"33200261"]`「あの子の言葉を借りるけど、本当にあなたは不死鳥のような人ね。`[@][lv 0*"30"*"33200262"]`……戦う気力がもう蘇ってきた」`[\]
+*d17232
+d [lv 0*"30"*"33200263"]`「…さぁ、心の準備がいいなら、あの子の元へ、`[@][lv 0*"30"*"33200264"]`……あの子の座するチェス盤の正面へお戻りなさい。`[@][lv 0*"30"*"33200265"]`……私の弟子とどこまで戦えるか、楽しみにしていますよ」`[\]
+lss s0_23,"but","b11_niramu2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17233
+d [lv 0*"10"*"30100788"]`「あぁ、見てろよ。`[@][lv 0*"10"*"30100789"]`…………もうあいつの寝言には耳を貸さねぇ。`[@][lv 0*"10"*"30100790"]`とことん冷静に俺の戦いを貫いてやる。`[@][lv 0*"10"*"30100791"]`もうあいつの挑発には絶対に乗らねぇ」`[\]
+lss s0_25,"wal","a11_warai1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_wal
+*d17234
+d [lv 0*"30"*"33200266"]`「では戻りましょう。`[@][lv 0*"30"*"33200267"]`戦いの席へ」`[\]
+textoff
+waits 167
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+csp_slot s0_25
+csp_slot s0_23
+lbg s0_3,"white"
+csp_slot s0_21
+csp_slot s0_22
+flush 2
+wait 1000
+seplay 1,52,71
+textoff
+waits 167
+lbg s0_3,"g1f_s1ap"
+flush 10,2000
+lss s0_8,"bea","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+lss s0_8,"bea","a11_akuwarai3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d17235
+d [lv 0*"27"*"30701130"]`「…お、……おお、戦人…！`[@][lv 0*"27"*"30701131"]`　そなた、どこへ姿を消しておったのか。`[@][lv 0*"27"*"30701132"]`くっくっく！`[@][lv 0*"27"*"30701133"]`　負け犬は二度と姿を現さないかと思ったぞ？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"g1f_s1ap"
+lss s0_10,"but","b11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_but
+*d17236
+d [lv 0*"10"*"30100792"]`「……待たせたな。`[@][lv 0*"10"*"30100793"]`頭を冷やしてきたぜ」`[\]
+lss s0_8,"bea","a21_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d17237
+d2 [lv 0*"27"*"30701134"]`「それでェ？`[@][lv 0*"27"*"30701135"]`　妾とお師匠様の愉快痛快爽快大喝采のステキファンタジーバトルへの回答は出たのかぃいいぃ？`[@][lv 0*"27"*"30701136"]`　あんなの、ファンタジー以外じゃ説明不能だろぉ？`[@][#][*][lv 0*"27"*"30701137"]`　ひっひゃっはははははははははははぁ？！」`[\]
+wait_on_d 0
+seplay 1,37,71
+lss s0_8,"bea","a31_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_10
+flush 10,167
+lss s0_10,"ron","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ron
+*d17238
+d [lv 0*"31"*"33100347"]`「…お嬢様。`[@][lv 0*"31"*"33100348"]`さっき親切で上品にするとお誓いになられたばかりですよ？」`[\]
+lss s0_8,"bea","a21_akuwarai5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d17239
+d [lv 0*"27"*"30701138"]`「あっひゃははははは、いけねぇいけねェ。`[@][lv 0*"27"*"30701139"]`戦人の顔を見てるとついつい上機嫌になってしまうものでなぁ？`[@][lv 0*"27"*"30701140"]`　ほれほれほれ、それで戦人、さっきの戦いだが、どういう反応を示して見せるよ？`[@][lv 0*"27"*"30701141"]`　んんん？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"g1f_s1bp"
+lss s0_10,"but","b11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_but
+*d17240
+d2 [lv 0*"10"*"30100794"]`「……………………………………。`[@][#][*][lv 0*"10"*"30100795"]`…バトルぅ？`[@][lv 0*"10"*"30100796"]`　何があったって？」`[\]
+wait_on_d 0
+lss s0_10,"but","b11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"bea","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_bea
+*d17241
+d [lv 0*"27"*"30701142"]`「……何ぃ？」`[\]
+seplay 1,56,71
+csp_slot s0_8
+csp_slot s0_10
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"rose_1a"
+lss s0_23,"but","b11_defo2" ;1
+aspt2 xpos,s0_23,370
+lss s0_25,"bea","a11_odoroki1" ;1
+aspt2 xpos,s0_25,-370
+textoff
+waits 167
+rain_pause s0_11
+rain_pause s0_7
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+flush 22
+lss s0_23,"but","b11_futeki1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17242
+d2 [lv 0*"10"*"30100797"]`「この薔薇庭園のどこに。`[@][lv 0*"10"*"30100798"]`お前らがにょきにょき生やした塔が、槍が。`[@][lv 0*"10"*"30100799"]`どこに転がってんだ。`[@][#][*][lv 0*"10"*"30100800"]`…………ねぇじゃないか。`[@][lv 0*"10"*"30100801"]`……つまり、こいつがブラウン管の中身ってわけさ」`[\]
+wait_on_d 0
+lss s0_23,"but","b11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_25,"bea","a11_futeki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_bea
+*d17243
+d [lv 0*"27"*"30701143"]`「……ブラウン管の中身、とな？？`[@][lv 0*"27"*"30701144"]`　くっくっく、一体、何の話を始めるやら…」`[\]
+csp_slot s0_25
+csp_slot s0_23
+textoff
+waits 167
+lbg s0_26,"black"
+flush 22
+textoff
+waits 167
+csp_slot s0_26
+csp_slot s0_21
+csp_slot s0_22
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+lbg s0_22,"hana1"
+aspt2 alpha,s0_22,150
+textoff
+waits 167
+lbg s0_3,"rose_g1a"
+lss s0_23,"but","b11_komaru2" ;1
+aspt2 xpos,s0_23,370
+flush 22
+msgwnd_but
+*d17244
+d [lv 0*"10"*"30100802"]`「今この瞬間。`[@][lv 0*"10"*"30100803"]`薔薇庭園には何もない。`[@][lv 0*"10"*"30100804"]`…さっきまでは魔法で塔が生えていたかもしれねぇさ。`[@][lv 0*"10"*"30100805"]`だが、それはブラウン管の中を知るまでだ。`[@][lv 0*"10"*"30100806"]`……魔法バトルはお前の解釈、主張に過ぎない。`[@][lv 0*"10"*"30100807"]`今この場に何もないのがその証拠だ」`[\]
+lss s0_23,"but","b22_niramu1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+*d17245
+d2 [lv 0*"10"*"30100808"]`「俺はさっきの魔女の戦いにこう反論する。`[@][lv 0*"10"*"30100809"]`今、この場に何もないのは、何事もなかったことの証明だとな…！」`[#][*][\]
+wait_on_d 0
+seplay 1,2,70
+d_continue
+wait_on_d -1
+lss s0_25,"bea","a11_odoroki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_bea
+*d17246
+d2 [lv 0*"27"*"30701145"]`「………………。`[@][#][*][lv 0*"27"*"30701146"]`……ははは、はっはっはっはっは！`[@][lv 0*"27"*"30701147"]`　あのなぁ、さすがに第一の晩から大暴れは出来ぬし、妾もこの薔薇庭園は気に入っているのでな？`[@][lv 0*"27"*"30701148"]`　被害を及ぼさないため、結界の中で戦っておったのだ。`[@][lv 0*"27"*"30701149"]`だから現実には何の影響も与えていないのは当然のことよ」`[\]
+wait_on_d 0
+lss s0_25,"bea","a11_iiwake1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_23,"but","b11_futeki1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17247
+d [lv 0*"10"*"30100810"]`「……それがお前の“主張”だな？`[@][lv 0*"10"*"30100811"]`　あぁ、それもありだろうな」`[\]
+csp_slot s0_25
+csp_slot s0_23
+lss s0_23,"but","b25_odoroki1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+seplay 1,2,100
+*d17248
+d [lv 0*"10"*"30100812"]`「だがッ！`[@][lv 0*"10"*"30100813"]`　今この瞬間の薔薇庭園に何もない。`[@][lv 0*"10"*"30100814"]`だから魔法などなかったという俺の主張を何ら妨げるものではないんだ！！」`[\]
+csp_slot s0_23
+flush 10,167
+lss s0_25,"bea","a11_fukigen1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_bea
+*d17249
+d [lv 0*"27"*"30701150"]`「お、おいおい、そんな滅茶苦茶で妾の魔法を否定できるのかァ？！`[@][lv 0*"27"*"30701151"]`　魔法が“ない”は証明不能！`[@][lv 0*"27"*"30701152"]`　“悪魔の証明”であるぞ！！」`[\]
+lss s0_23,"but","b11_komaru2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_but
+*d17250
+d [lv 0*"10"*"30100815"]`「今この瞬間の、この薔薇庭園が真実だ！`[@][lv 0*"10"*"30100816"]`　覗いた瞬間にブラウン管の中の妖精は蒸発する。`[@][lv 0*"10"*"30100817"]`そしてここには何の魔法の痕跡もない！`[@][lv 0*"10"*"30100818"]`　だからお前らの魔女の戦いは“行なわれなかった”ッ！！」`[\]
+lss s0_25,"bea","a11_aseru1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_bea
+*d17251
+d [lv 0*"27"*"30701153"]`「な、`[|][lv 0*"27"*"30701154"]`……何だ、`[|][lv 0*"27"*"30701155"]`そ、その返し手は……？！`[@][lv 0*"27"*"30701156"]`　その力は、`[|][lv 0*"27"*"30701157"]`…も、もしや…？！」`[\]
+csp_slot s0_23
+flush 10,167
+lss s0_23,"ron","a11_odoroki1" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_ron
+*d17252
+d [lv 0*"31"*"33100349"]`「…お忘れですか、お嬢様。`[@][lv 0*"31"*"33100350"]`多層世界収縮術です。`[@][lv 0*"31"*"33100351"]`無限の魔女の力と対になる、有限の魔女の力。`[@][lv 0*"31"*"33100352"]`無限の魔女にしか悟ることができず、そして無限の魔女にとってもっとも強力な効果を発揮します」`[\]
+lss s0_25,"bea","a21_odoroki1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+seplay 1,2,71
+msgwnd_bea
+*d17253
+d2 [lv 0*"27"*"30701158"]`「シュ、“シュレディンガーの猫箱”かッ？！`[#][*][@][#][*][lv 0*"27"*"30701159"]`　………あ、……あの老いぼれ魔女め…、余計な入れ知恵をッ！！」`[\]
+wait_on_d 0
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 1
+lss s0_25,"bea","a11_aseru1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_25
+csp_slot s0_23
+flush 10,167
+lss s0_24,"but","b11_komaru2" ;1
+flush 10,167
+msgwnd_but
+*d17254
+d2 [lv 0*"10"*"30100819"]`「時間をロスった。`[@][lv 0*"10"*"30100820"]`使用人５人と祖父さまで６人の死体！`[@][#][*][lv 0*"10"*"30100821"]`　状況を確認させてもらうぜ。`[@][lv 0*"10"*"30100822"]`俺がモタモタしてて時間を無駄にしちまった。`[@][lv 0*"10"*"30100823"]`ここからはサクサク行くぜ？」`[\]
+wait_on_d 0
+lss s0_24,"but","b25_odoroki1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_26,"c_e0103_wall"
+lbg s0_27,"c_e0103_b"
+aspt2 xpos,s0_27,1920
+flush 10,167
+agpt onionalpha,192
+gptwait onionalpha
+seplay 1,2,100
+aspt2 xpos,s0_27,0,250
+sptwait2 xpos,s0_27
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+agpt onionalpha,0
+gptwait onionalpha
+*d17255
+d2 [lv 0*"10"*"30100824"]`「席に着け、ベアトリーチェ！！`[@][lv 0*"10"*"30100825"]`　ようやく第一の晩じゃねぇか、本番スタートだぜ。`[@][#][*][lv 0*"10"*"30100826"]`ドンと来やがれッ！！！」`[\]
+wait_on_d 0
+lbg s0_27,"c_e0103_a"
+seplay 1,2,100
+flush 10,17
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,1000,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+wait 500
+break_glass
+wait 500
+display_clock 1470,740,60,386,420,0,0
+wait 1667
+flush 10,500
+wait 83
+ch_done flag_scenario_3_8

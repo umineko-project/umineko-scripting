@@ -1,0 +1,2400 @@
+*umi7_6
+;ベアトリーチェの誕生
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_7_6
+mov $name_chapter_save, "7_06"
+~
+new_chapter date_scenario_7_6,scenario_7_6
+gstc 66
+textoff
+waits 167
+meplay 1,12,70
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o1a"
+flush 6
+wait 2000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"black"
+flush 80
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+bgmplay 162,71,0
+rain_load s0_11
+z_order_override s0_11,s0_1
+rain_params s0_11,500,300,0
+textoff
+waits 167
+lbg s0_1,"cha_r1a_bg"
+lbg s0_3,"cha_r1a"
+flush 22
+lss s0_10,"rio","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d52194
+d [lv 0*"53"*"75300266"]`「……お祖父さまにとって、`[@][lv 0*"53"*"75300267"]`……ベアトリーチェという女性が、どれほど人生の大部分を占めてきたか、わかった気がします」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d52195
+d [lv 0*"54"*"75400526"]`「何もわかってなんかいねェ。`[@][lv 0*"54"*"75400527"]`“ベアトリーチェを誰が殺したか”。`[@][lv 0*"54"*"75400528"]`それがわからなきゃ、俺たちはいつまでもここから出られねェ」`[\]
+lss s0_10,"rio","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d52196
+d [lv 0*"53"*"75300268"]`「……そうでしたね。`[@][lv 0*"53"*"75300269"]`早く、終わらせなければ。`[@][lv 0*"53"*"75300270"]`葬儀はもう終わっているのですからね」`[\]
+lss s0_8,"wil","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52197
+d [lv 0*"54"*"75400529"]`「………………………。`[@][lv 0*"54"*"75400530"]`違ぇな。`[@][lv 0*"54"*"75400531"]`葬儀なんだ。`[@][lv 0*"54"*"75400532"]`……これがな」`[\]
+lss s0_10,"rio","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d52198
+d [lv 0*"53"*"75300271"]`「私たちのさせられていることが、ですか…？」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52199
+d [lv 0*"54"*"75400533"]`「これまでに聞いたどのベアトリーチェも、殺されてなどいない。`[@][lv 0*"54"*"75400534"]`……それを、俺たちが“殺された”ことにしようとしている。`[@][lv 0*"54"*"75400535"]`ベルンカステルにとっては、これこそが本当の葬儀なんだ」`[\]
+lss s0_10,"rio","a11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d52200
+d [lv 0*"53"*"75300272"]`「…………誰も“殺された”ことを知らない。`[@][lv 0*"53"*"75300273"]`それを、私たちが暴こうとしている？」`[\]
+csp_slot s0_8
+lss s0_25,"wil","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+msgwnd_wil
+*d52201
+d2 [lv 0*"54"*"75400536"]`「お前、……つくづく察しがいいな。`[@][lv 0*"54"*"75400537"]`下層の駒と話してるとは思えん。`[@][lv 0*"54"*"75400538"]`俺のワトソン役として与えられた“駒”だから、か。`[@][#][*][lv 0*"54"*"75400539"]`…………痛ェ！」`[\]
+wait_on_d 0
+seplay 1,47,71
+csp_slot s0_10
+lss s0_9,"rio","a11_defo2" ;1
+lss s0_25,"wil","a11_itai1" ;1
+aspt2 xpos,s0_25,-370
+flush 1
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_9,"rio","a11_akire1" ;1
+flush 80
+msgwnd_rio
+*d52202
+d [lv 0*"53"*"75300274"]`「相棒を駒呼ばわりとは失礼な方です。`[@][lv 0*"53"*"75300275"]`……さ、次は何を？`[@][lv 0*"53"*"75300276"]`　ウィラード・ホームズ？」`[\]
+lss s0_25,"wil","a11_fuman1" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+msgwnd_wil
+*d52203
+d [lv 0*"54"*"75400540"]`「捜査の基本は聞き込みだろ。`[@][lv 0*"54"*"75400541"]`まだ、聞くべきベアトリーチェは残っている」`[\]
+textoff
+waits 167
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"cha_r1d"
+flush 24
+wait 2000
+textoff
+waits 167
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_10,"geo","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"jes","a11_warai2" ;1
+aspt2 xpos,s0_8,-550
+lss s0_24,"mar","a22_warai1" ;1
+flush 24
+msgwnd_non
+*d52204
+d `ウィルが、次は彼らに話を聞こうと、顎で示す先には、譲治、朱志香、真里亞たちのいとこグループがいた。`[\]
+*d52205
+d `真里亞が元気に何かを講釈していて、それに譲治たちが耳を傾けているようだった。`[\]
+lss s0_10,"geo","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_geo
+*d52206
+d [lv 0*"07"*"70300001"]`「へぇ。`[@][lv 0*"07"*"70300002"]`すごいんだねぇ、ベアトリーチェは」`[\]
+lss s0_24,"mar","a22_warai2" ;1
+flush 80
+msgwnd_mar
+*d52207
+d [lv 0*"13"*"70400001"]`「うん！`[@][lv 0*"13"*"70400002"]`　伏せたカップの中にね？！`[@][lv 0*"13"*"70400003"]`　魔法で、キャンディをいっぱい生み出してくれたの！」`[\]
+lss s0_8,"jes","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_jes
+*d52208
+d [lv 0*"04"*"70200001"]`「伏せたカップの中に？`[@][lv 0*"04"*"70200002"]`　そりゃすげぇぜ。`[@][lv 0*"04"*"70200003"]`確かに魔法だ」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"cha_r1b_bg"
+lbg s0_3,"cha_r1b"
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+lss s0_10,"rio","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d52209
+d [lv 0*"53"*"75300277"]`「……真里亞ちゃんは、魔女とか魔法とか、そういうものが大好きですから」`[\]
+lss s0_8,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52210
+d [lv 0*"54"*"75400542"]`「魔女の権威に、話を聞かないわけには、いかねぇな」`[\]
+msgwnd_non
+*d52211
+d `ベアトリーチェを語れと言えば、真っ先に挙手するのが彼女だろう。`[\]
+*d52212
+d `彼女の語るベアトリーチェは、金蔵たちの語る、本当のベアトリーチェのことではない。`[\]
+*d52213
+d `しかし、１９８６年の六軒島にて、ベアトリーチェの名が指す存在は、むしろ真里亞が語るベアトリーチェの方だろう。`[\]
+lss s0_8,"wil","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52214
+d [lv 0*"54"*"75400543"]`「………戦人の姿が見えないな」`[\]
+textoff
+waits 167
+lbg s0_22,"black"
+flush 22
+msgwnd_non
+*d52215
+d `右代宮戦人。`[@]`……ベアトリーチェの対戦相手として、数多のゲームを戦わされた、このゲームの、物語の、最も重要な人物だ。`[\]
+*d52216
+d `この世界にいる戦人は、恐らく駒の方だろうが、それでも、何か重要な情報が聞き出せるはず。`[\]
+*d52217
+d `……戦人にも話を聞こうと思っていたのだが、その姿はいとこグループになかった。`[\]
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+lss s0_10,"rio","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d52218
+d [lv 0*"53"*"75300278"]`「戦人くんは、今回の葬儀には欠席しています。`[@][lv 0*"53"*"75300279"]`もっとも歳の近いいとことして、残念です」`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52219
+d [lv 0*"54"*"75400544"]`「仲はいいのか」`[\]
+lss s0_10,"rio","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d52220
+d [lv 0*"53"*"75300280"]`「えぇ、もちろん」`[\]
+lss s0_8,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52221
+d [lv 0*"54"*"75400545"]`「………戦人が何かスケベな失言をする度に、しりをつねってるんだろう」`[\]
+lss s0_10,"rio","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d52222
+d [lv 0*"53"*"75300281"]`「おや、よくご存知で。`[@][lv 0*"53"*"75300282"]`推理は可能でしたか？」`[\]
+lss s0_8,"wil","a11_fuman1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52223
+d [lv 0*"54"*"75400546"]`「戦人に同情すらァ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d52224
+d `……ベルンカステルは、全てここに揃っていると言った。`[\]
+*d52225
+d `戦人がここにいないということは、戦人に話を聞かずとも、全てを知ることは出来る、という意味だろうか。`[\]
+*d52226
+d `あるいは、わざと核心だけを伏せて、遠回りをさせるだけの、魔女の気紛れ遊びか。`[\]
+textoff
+waits 167
+lbg s0_1,"cha_r1b_bg"
+lbg s0_3,"cha_r1b"
+lss s0_9,"wil","a11_defo1" ;1
+flush 22
+lss s0_9,"wil","a11_nayamu1" ;1
+flush 80
+msgwnd_wil
+*d52227
+d [lv 0*"54"*"75400547"]`「いねぇってことは、……とりあえず今は、ヤツの話を聞く必要はねぇってことだろう。`[@][lv 0*"54"*"75400548"]`……真里亞たちに話を聞こう。`[@][lv 0*"54"*"75400549"]`……スケベな話はしねぇからな、しりをつねるんじゃねぇぞ」`[\]
+lss s0_8,"rio","a11_defo2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_rio
+*d52228
+d [lv 0*"53"*"75300283"]`「なら、ほんの少し、言葉を選ぶだけでいいのに」`[\]
+msgwnd_non
+*d52229
+d `理御は小悪魔的に笑いながら、人差し指と中指で、宙をつねるような仕草をして見せる。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_24,"jes","a11_warai1" ;1
+flush 24
+msgwnd_jes
+*d52230
+d2 [lv 0*"04"*"70200004"]`「おや、次期当主サマだぜ。`[@][lv 0*"04"*"70200005"]`クソジジイの介護はもういいのかよ？`[@][#][*][lv 0*"04"*"70200006"]`　………ふぎゃッ！」`[\]
+wait_on_d 0
+lss s0_10,"rio","a11_akire1" ;1
+aspt2 xpos,s0_10,370
+lss s0_24,"jes","a11_naku3" ;1
+flush 64
+seplay 1,47,71
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,167,1
+rumble 63,500
+gptwait quakexamp
+csp_slot s0_24
+flush 65
+seplay 2,13,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+msgwnd_non
+*d52231
+d `実に公平だ。`[@]`朱志香の失言にも容赦ない。`[@]`ウィルはちょっぴりだけ溜飲を下げる。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_wil
+*d52232
+d [lv 0*"54"*"75400550"]`「……そうか。`[@][lv 0*"54"*"75400551"]`蔵臼の子で次期当主ということは、……朱志香は妹に当たるんだな」`[\]
+msgwnd_non
+*d52233
+d `朱志香は一人っ子ということに慣れていると、`[@]`理御と朱志香の絡み合いは、とても自然なものに見えるはずなのに、わずかの違和感を拭えないものだ。`[\]
+lss s0_23,"rio","b11_akire1" ;1
+aspt2 xpos,s0_23,370
+flush 24
+msgwnd_rio
+*d52234
+d [lv 0*"53"*"75300284"]`「朱志香。`[@][lv 0*"53"*"75300285"]`もう少し妹らしい言葉遣いは出来ないのかい？`[@][lv 0*"53"*"75300286"]`　ついでに言うと、もう少し年頃の女性らしい言葉遣いにも気を付けてみるべきだね。`[@][lv 0*"53"*"75300287"]`あと、次期当主サマなんて呼び方は嫌いだって、いつも言ってるよ」`[\]
+csp_slot s0_8
+flush 24
+lss s0_25,"jes","a12_atya2" ;1
+aspt2 xpos,s0_25,-370
+flush 23
+msgwnd_jes
+*d52235
+d [lv 0*"04"*"70200007"]`「う、うぜーぜ！`[@][lv 0*"04"*"70200008"]`　私は私らしく生きてらぁ！`[@][lv 0*"04"*"70200009"]`　次期当主サマみてぇに、お上品に生きてたら、息が詰まっちまわぁ…！」`[\]
+csp_slot s0_23
+lss s0_24,"rio","a11_akire1" ;1
+lss s0_25,"jes","a11_odoroki1" ;1
+aspt2 xpos,s0_25,-370
+flush 80
+*d52236
+d2 [lv 0*"04"*"70200010"]`「ひィ？！`[@][lv 0*"04"*"70200011"]`　痛い！`[#][*][@][lv 0*"04"*"70200012"]`　痛ててたたた！！`[#][*][@][lv 0*"04"*"70200013"]`　やめてッ、つねんないでッ！`[#][*][@][lv 0*"04"*"70200014"]`　妹イジメッ、`[|][lv 0*"04"*"70200015"]`変態ッ、`[|][lv 0*"04"*"70200016"]`反対ッ、`[|][lv 0*"04"*"70200017"]`痛い痛い！」`[#][*][\]
+wait_on_d 0
+seplay 1,47,71
+lss s0_25,"jes","a11_naku3" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d 1
+seplay 1,6,71
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,167,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d 2
+seplay 2,7,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 3
+seplay 3,8,71
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+csp_slot s0_25
+flush 65
+seplay 1,13,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+lss s0_24,"rio","a11_akire1a" ;1
+flush 80
+msgwnd_rio
+*d52237
+d [lv 0*"53"*"75300288"]`「朱志香ッ！`[@][lv 0*"53"*"75300289"]`　お客様もいらしてるというのに、どうして君はそういう言葉遣いなんだ…！`[@][lv 0*"53"*"75300290"]`　また、母さんに言いつけられたいかな？！」`[\]
+textoff
+waits 167
+lss s0_25,"jes","a11_naki1" ;1
+aspt2 xpos,s0_25,-370
+flush 66
+seplay 1,3,71
+aspt2 xpos,s0_25,-1000,667,1
+sptwait2 xpos,s0_25
+seplay 2,3,71
+aspt2 xpos,s0_24,-700,167,1
+sptwait2 xpos,s0_24
+csp_slot s0_25
+csp_slot s0_24
+flush 1
+seplay 2,6,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,1000,1
+rumble 63,500
+gptwait quakexamp
+seplay 1,4,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+waits 167
+seplay 1,48,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+seplay 1,48,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+seplay 1,48,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+seplay 2,7,100
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d52238
+d [lv 0*"54"*"75400552"]`「………あれはあれで、仲睦まじいな」`[\]
+lss s0_8,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_geo
+*d52239
+d2 [lv 0*"07"*"70300003"]`「理御は次期当主として、非の打ち所のない素晴らしい人だからね。`[@][#][*][lv 0*"07"*"70300004"]`……まぁ、素晴らし過ぎて、朱志香ちゃんの気持ちもちょっぴりわかるかな」`[\]
+wait_on_d 0
+lss s0_8,"geo","a11_komaru2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52240
+d [lv 0*"54"*"75400553"]`「何をしても比較される。`[@][lv 0*"54"*"75400554"]`だからグレると？」`[\]
+lss s0_8,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_geo
+*d52241
+d [lv 0*"07"*"70300005"]`「もし、朱志香ちゃんが一人っ子として生まれてたら、きっと落ち着きのある、深窓の令嬢になってたと思う。`[@][lv 0*"07"*"70300006"]`……あはは、それは面白い想像だね」`[\]
+lss s0_10,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52242
+d [lv 0*"54"*"75400555"]`「安心しろ。`[@][lv 0*"54"*"75400556"]`あの性格は一人っ子でも変わらねェ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_1,"cha_r1b_bg"
+lbg s0_3,"cha_r1b"
+lss s0_9,"mar","a11_fukigen2" ;1
+flush 23
+lss s0_9,"mar","a22_komaru1" ;1
+flush 80
+msgwnd_mar
+*d52243
+d [lv 0*"13"*"70400004"]`「譲治お兄ちゃん、`[|][lv 0*"13"*"70400005"]`……この人、だぁれ？」`[\]
+lss s0_10,"geo","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_geo
+*d52244
+d [lv 0*"07"*"70300007"]`「あなたとは初対面ですよね？`[@][lv 0*"07"*"70300008"]`　でも、右代宮家にはお詳しそうだ。`[@][lv 0*"07"*"70300009"]`僕は譲治。`[@][lv 0*"07"*"70300010"]`彼女は真里亞。`[@][lv 0*"07"*"70300011"]`よろしく」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_wil
+*d52245
+d [lv 0*"54"*"75400557"]`「ウィルだ。`[@][lv 0*"54"*"75400558"]`ベアトリーチェについて、調べている。`[@][lv 0*"54"*"75400559"]`知っていることを聞かせて欲しい」`[\]
+textoff
+waits 167
+lss s0_10,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+vol_mix_fade 500
+vol_bgm -1,500
+wait 500
+vol_mix_fade 1000
+wait 1000
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_mar
+*d52246
+d [lv 0*"13"*"70400006"]`「ベアトリーチェ？！　うー！！`[@][lv 0*"13"*"70400007"]`　ほらね？！`[@][lv 0*"13"*"70400008"]`　ベアトリーチェはいるの！`[@][lv 0*"13"*"70400009"]`　うーうーうー！！」`[\]
+bgmplay 60,71,0
+msgwnd_non
+*d52247
+d `初対面の男に怪訝な表情を浮かべていた真里亞も、`[@]`その口から大好きな魔女の名が出て、すぐに瞳を輝かせ出す。`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"geo","a11_hohoemi1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_geo
+*d52248
+d [lv 0*"07"*"70300012"]`「ほら、真里亞ちゃん。`[@][lv 0*"07"*"70300013"]`お客様にちゃんとご挨拶をしないと」`[\]
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_mar
+*d52249
+d [lv 0*"13"*"70400010"]`「こんにちは！`[@][lv 0*"13"*"70400011"]`　右代宮真里亞と申しますっ、うー！`[@][lv 0*"13"*"70400012"]`　ベアトリーチェを知ってる人がいて嬉しい。`[@][lv 0*"13"*"70400013"]`握手ー、うー！」`[\]
+lss s0_9,"wil","a11_defo1" ;1
+flush 23
+msgwnd_wil
+*d52250
+d [lv 0*"54"*"75400560"]`「ん」`[\]
+msgwnd_non
+*d52251
+d `真里亞の小さな手に、不意に握手を求められ、ウィルも咄嗟にそれに応じてしまう。`[\]
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"efe1b"
+lss s0_9,"wil","a11_defo1" ;1
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 2
+wait 1000
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_9,"wil","a11_defo1" ;1
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 2
+*d52252
+d `すると、……二人の握り合う手の隙間から、眩い光が漏れ出すのを感じた。`[\]
+*d52253
+d `ベルンカステルの与えた、観劇者の力が真里亞に働いているのだ。`[\]
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_mar
+*d52254
+d [lv 0*"13"*"70400014"]`「ベアトリーチェはね、六軒島の魔女なの…！`[@][lv 0*"13"*"70400015"]`　いつもね、真里亞が六軒島に来る度に、一緒に遊んでくれるの！`[@][lv 0*"13"*"70400016"]`　真里亞のね、一番のお友達で、マリアージュ・ソルシエールの仲間なの！　うー！！」`[\]
+seplay 1,22,71
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"efe1b"
+flush 8
+msgwnd_non
+*d52255
+d `光がどんどん強くなっていく……。`[\]
+*d52256
+d `今度は、真里亞の世界に引き込まれていくのを感じていた…。`[\]
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 42
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"different_space_2c"
+flush 2
+bgmplay 163,71,0
+lss s0_9,"mar","b11_defo1" ;1
+flush 2
+*d52257
+d `私は右代宮真里亞。`[@]`ママは楼座。`[@]`パパは、………ない。`[\]
+*d52258
+d `ずいぶん昔に、これが真里亞のパパよ、とママに男性の写真を見せられた気はする。`[\]
+*d52259
+d `それは海辺の写真で、よく日焼けした水着姿の男性が写ってたような気がする。`[\]
+*d52260
+d `……パパという意味がわかるようになって、`[@]`その写真をもう一度見たいとママにいったら、そんな写真はないと言われた。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+*d52261
+d `いいや、あったはず。`[@]`こんな写真だったと絵を描いてみせたら、`[@]`ママはとても怒り出して、そんな写真はない、あっても捨ててしまったと酷く怒られた。`[\]
+*d52262
+d `それ以来、真里亞のパパは、知らない、いない、じゃなくて、`[!w250]`……ない、になった。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_2c"
+flush 22
+seplay 1,22,71
+lss s0_10,"mar","b11_warai1" ;1
+aspt2 xpos,s0_10,370
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_mar
+*d52263
+d [lv 0*"13"*"70400017"]`「……知ってる？`[@][lv 0*"13"*"70400018"]`　パパとママがいないと赤ちゃんが出来ないって言われてるけど、それは嘘なんだよ」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d52264
+d [lv 0*"54"*"75400561"]`「処女懐胎か」`[\]
+lss s0_10,"mar","b11_niyari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52265
+d [lv 0*"13"*"70400019"]`「“見よ、乙女が身篭って男の子を産むであろう。`[@][lv 0*"13"*"70400020"]`その名はインマヌエルなり”。`[@][lv 0*"13"*"70400021"]`……真里亞はもし男の子に生まれていたなら、それが名前だったかもしれない」`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52266
+d [lv 0*"54"*"75400562"]`「マタイ伝１章２０節」`[\]
+lss s0_10,"mar","b11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52267
+d [lv 0*"13"*"70400022"]`「違うよ、２３節。`[@][lv 0*"13"*"70400023"]`２０節は“かくて、これらを思い巡らす時、御使いが夢に現れて言った。`[@][lv 0*"13"*"70400024"]`ダビデの子、ヨセフよ。`[@][lv 0*"13"*"70400025"]`妻マリアを迎えることを恐れるな。`[@][lv 0*"13"*"70400026"]`その胎に宿る者は聖霊によるものなり”」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52268
+d [lv 0*"54"*"75400563"]`「……お前の父親は聖霊だというわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"different_spiral_1a"
+flush 28
+meplay 1,5,50
+msgwnd_mar
+*d52269
+d [lv 0*"13"*"70400027"]`「パパがいるのが当り前だとみんなに言われた。`[@][lv 0*"13"*"70400028"]`パパがいないなんて、おかしい、変な子だ、可哀想な子だと言われた」`[\]
+*d52270
+d [lv 0*"13"*"70400029"]`「でも、ママに聞いても、パパなんかいない、知らない、存在しないと言われた。`[@][lv 0*"13"*"70400030"]`聞くだけで怒られて叩かれた。`[@][lv 0*"13"*"70400031"]`だから真里亞は、……自分が誰から生まれたか、よくわからなくなった」`[\]
+*d52271
+d [lv 0*"13"*"70400032"]`「……真里亞はニンゲンとして正しくない、未熟で不正な存在。`[@][lv 0*"13"*"70400033"]`みんなとは違う、おかしな、可哀想な子だと気が付いた」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_2d"
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"wil","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52272
+d [lv 0*"54"*"75400564"]`「親も他人も関係ねェ。`[@][lv 0*"54"*"75400565"]`お前はお前だ」`[\]
+lss s0_8,"mar","b11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_mar
+*d52273
+d [lv 0*"13"*"70400034"]`「それを、未熟な幼児に教えるのは、きっと難しかったろうね。`[@][lv 0*"13"*"70400035"]`ひょっとしたら、幼稚園の先生は、いじめられて泣く私にそう諭してくれたのかもしれない。`[@][lv 0*"13"*"70400036"]`……でも、そんな慰めでは、私の心の空白、`[|][lv 0*"13"*"70400037"]`……うぅん、疑問。`[@][lv 0*"13"*"70400038"]`どんな言葉も、私の疑問に答えてはくれなかった」`[\]
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52274
+d [lv 0*"54"*"75400566"]`「その疑問に答えたのが、ザ・ブックだというのか」`[\]
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52275
+d [lv 0*"13"*"70400039"]`「神父様がね、来たの」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"book1"
+flush 8
+bgmplay 170,71,0
+msgwnd_non
+*d52276
+d `子供にありがたいお話を聞かせて、心を豊かにする授業の一環だったと思う。`[\]
+*d52277
+d `多くの子供たちにとって、それは先生が聞かせてくれるおとぎ話と違いはない。`[@]`……うぅん、小難しい分だけ、私たちは退屈していたと思う。`[\]
+*d52278
+d `最後に、神父様が言ったの。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_2a"
+flush 22
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d52279
+d [lv 0*"54"*"75400567"]`「神は、何でも知っている、か」`[\]
+lss s0_10,"mar","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d52280
+d [lv 0*"13"*"70400040"]`「うん。`[@][lv 0*"13"*"70400041"]`だから真里亞は聞いた。`[@][lv 0*"13"*"70400042"]`……真里亞にはママしかいない。`[@][lv 0*"13"*"70400043"]`パパは、ない。`[@][lv 0*"13"*"70400044"]`パパがなくても、真里亞はママから生まれてきた。`[@][lv 0*"13"*"70400045"]`それは、おかしくて悲しいことなの？、って」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"book1"
+flush 22
+msgwnd_non
+*d52281
+d `神父様は教えてくれた。`[@]`{n}パパがいなくても、おかしくはないんだよと。`[\]
+*d52282
+d `だって、イエス・キリストは処女懐胎で産まれた。`[\]
+*d52283
+d `産んだのは、`[!w500]`……聖母、マリア…？`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d52284
+d `びっくりした！`[\]
+*d52285
+d `私に与えられた真里亞という名は、始めから答えを示していたからだ。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_2c"
+lss s0_9,"mar","b11_niyari1" ;1
+flush 22
+lss s0_9,"mar","b11_odoroki1" ;1
+flush 80
+msgwnd_mar
+*d52286
+d2 [lv 0*"13"*"70400046"]`「だから真里亞はびっくりして神父様に聞き直したの。`[@][lv 0*"13"*"70400047"]`……聖母マリアは、ひとりで赤ちゃんが産めたんだ！　って。`[@][#][*][lv 0*"13"*"70400048"]`じゃあ真里亞もひとりで、赤ちゃんが産めるの？　って」`[\]
+wait_on_d 0
+lss s0_9,"mar","b11_warai1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_9
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_wil
+*d52287
+d [lv 0*"54"*"75400568"]`「神父は何と答えた」`[\]
+lss s0_8,"mar","b11_niyari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52288
+d2 [lv 0*"13"*"70400049"]`「聖母マリアが赤ちゃんを身篭れたのは、聖霊のおかげだからって。`[@][lv 0*"13"*"70400050"]`マタイ伝１節２０章、後段。`[@][lv 0*"13"*"70400051"]`“その胎に宿る者は聖霊によるものなり”。`[@][#][*][lv 0*"13"*"70400052"]`……またまた、真里亞はびっくりした！`[@][lv 0*"13"*"70400053"]`　これはどういうことだと思う？！」`[\]
+wait_on_d 0
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52289
+d [lv 0*"54"*"75400569"]`「……お前はこう解釈した。`[@][lv 0*"54"*"75400570"]`右代宮真里亞にはニンゲンの父はいない。`[@][lv 0*"54"*"75400571"]`……本当の父は、聖霊だと」`[\]
+textoff
+waits 167
+lbg s0_22,"black"
+flush 22
+msgwnd_non
+*d52290
+d `本来の聖書の意味はともかく。`[@]`……父親がいないことでアイデンティティを保てない、幼き悲しい少女は、`[@]`そこに初めて、自己の理解を見出したのだ。`[\]
+textoff
+waits 167
+csp_slot s0_22
+csp_slot s0_8
+csp_slot s0_10
+lss s0_9,"mar","b11_warai1" ;1
+flush 23
+msgwnd_mar
+*d52291
+d [lv 0*"13"*"70400054"]`「それを知った時、私はなぜ、他の子たちと自分だけが違うのかを理解したの！`[@][lv 0*"13"*"70400055"]`　私を馬鹿にするみんなはヨセフの子。`[@][lv 0*"13"*"70400056"]`でも私だけは違った！`[@][lv 0*"13"*"70400057"]`　私はみんなより劣ってなんかいない…！`[@][lv 0*"13"*"70400058"]`　私は神の子、聖霊の子だった！！`[@][lv 0*"13"*"70400059"]`　帰ってママに話したよ。`[@][lv 0*"13"*"70400060"]`真里亞にはパパなんていない。`[@][lv 0*"13"*"70400061"]`ママはママで、真里亞は神様の力で生まれてきたんだよって」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d52292
+d `楼座にとって、真里亞に父親を尋ねられることは、辛いことだったろう。`[\]
+*d52293
+d `みんなにはパパとママがいるのに、どうして真里亞にはいないの？`[\]
+*d52294
+d `それを聞かれる度に、楼座は感情的な怒りでそれを誤魔化してきた。`[\]
+*d52295
+d `……それが、どういうわけか、真里亞が勝手に納得してくれたのだ。`[\]
+*d52296
+d `自分にはパパなどいない。`[@]`ママと神様の子だと。`[\]
+*d52297
+d `幼い少女が、聖書より見出した自己の解釈を、楼座が抱擁して受け入れたことは、想像に難くない……。`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_2b"
+lss s0_9,"mar","b11_defo1" ;1
+flush 22
+msgwnd_mar
+*d52298
+d2 [lv 0*"13"*"70400062"]`「ベアトは宇宙を生み出す最小の人数を、２人だと言った。`[@][lv 0*"13"*"70400063"]`私はこれを、両親がいないと子は成せないという意味だと感じた。`[@][#][*][lv 0*"13"*"70400064"]`……その時、私は思ったの。`[@][lv 0*"13"*"70400065"]`ベアトは魔女だけれど、ニンゲンから生まれた魔女なんだ、って。`[@][lv 0*"13"*"70400066"]`ベアトは聖霊の子じゃない」`[\]
+wait_on_d 0
+lss s0_9,"mar","b11_fukigen2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_9,"mar","b11_warai1" ;1
+flush 80
+*d52299
+d [lv 0*"13"*"70400067"]`「でも、私は違う。`[@][lv 0*"13"*"70400068"]`ママだけから生まれた。`[@][lv 0*"13"*"70400069"]`聖霊から生まれた！`[@][lv 0*"13"*"70400070"]`　………ベアトは、私と一緒じゃなきゃ宇宙を作れない。`[@][lv 0*"13"*"70400071"]`でも私は、`[@][lv 0*"13"*"70400072"]`“{i:神は我らと共にある}”。`[@][lv 0*"13"*"70400073"]`私１人でも、聖霊とともに宇宙が作れる！」`[\]
+lss s0_9,"mar","b22_warai2" ;1
+flush 80
+*d52300
+d [lv 0*"13"*"70400074_b"]`「ベアトは私を原初の魔女と呼んだ。`[@][lv 0*"13"*"70400075"]`そしてやがては、１人で全てを生み出せる造物主になれるよと言ってくれた。`[@][lv 0*"13"*"70400076"]`私が１人で、無から有を創造する！`[@][lv 0*"13"*"70400077"]`　それをベアトが無限に膨らませる！`[@][lv 0*"13"*"70400078"]`　縁寿はそれを受け継ぎ、語り広げる魔女の使徒だった！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_space_2c"
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d52301
+d [lv 0*"54"*"75400572"]`「マリアージュ・ソルシエールか」`[\]
+lss s0_8,"mar","b11_niyari1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_mar
+*d52302
+d [lv 0*"13"*"70400079"]`「一と無限は大きく違う。`[@][lv 0*"13"*"70400080"]`だからベアトは偉い。`[@][lv 0*"13"*"70400081"]`でも、無と有の前には、一も無限も同じ有でしかない。`[@][lv 0*"13"*"70400082"]`私は世界で一番の魔女、うぅん！`[@][lv 0*"13"*"70400083"]`　世界で一番偉い、造物主になることを約束されていた子…！」`[\]
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+*d52303
+d [lv 0*"13"*"70400084"]`「マリアージュ・ソルシエールは、そんな私を温める卵の巣！`[@][lv 0*"13"*"70400085"]`　私は、右代宮真里亞！！`[@][lv 0*"13"*"70400086"]`　神と共にある真里亞！！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 2
+meplay 1,5,50
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+msgwnd_non
+*d52304
+d `……真里亞が止め処なく語り出すそれは、真里亞のアイデンティティを宇宙と捉えるなら、`[@]`……まさにビッグバンなのかもしれない。`[\]
+*d52305
+d `父親が存在しないことで、自分の解釈に苦しんだ少女は。`[@]`……偶然、聖書の中で、そんな自分に正当性を暗示するような行を見つけ、初めて自己を理解した。`[\]
+textoff
+waits 167
+lbg s0_3,"different_spiral_1b"
+flush 8
+*d52306
+d `クラスで自分だけがおかしいと自らを蔑んだ悲しみの少女は、ようやく自分の意味を知ったのだ。`[\]
+*d52307
+d `その時、無だった真里亞の宇宙は、高温高圧のエネルギー体として生まれた。`[\]
+*d52308
+d `………それがやがて六軒島で、ベアトリーチェを名乗る、無限の魔女と出会い、`[@]`……そのエネルギー体をビッグバンさせて、彼女らの魔法大系が誕生した。`[\]
+*d52309
+d `……それが、マリアージュ・ソルシエールという、宇宙なのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"white"
+flush 8
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_space_2c"
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 6
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52310
+d [lv 0*"54"*"75400573"]`「………………………。`[@][lv 0*"54"*"75400574"]`……話が少し飛躍し過ぎだ。`[@][lv 0*"54"*"75400575"]`順を追おう」`[\]
+lss s0_8,"mar","b22_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52311
+d [lv 0*"13"*"70400087"]`「うん、いいよ。`[@][lv 0*"13"*"70400088"]`どこから？」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52312
+d2 [lv 0*"54"*"75400576"]`「自分は聖霊の子だと解釈したお前が、そこから次第にオカルトに傾倒していくことは容易に理解できる。`[@][#][*][lv 0*"54"*"75400577"]`………そこからだ。`[@][lv 0*"54"*"75400578"]`そんなお前が、ベアトリーチェとどこで出会い、どのように交流していったか」`[\]
+wait_on_d 0
+lss s0_10,"wil","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"mar","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52313
+d [lv 0*"13"*"70400089"]`「それは本当にある日、突然の、唐突なこと。`[@][lv 0*"13"*"70400090"]`………六軒島に住まう、ベアトリーチェという魔女に、私は会ってみたかったの。`[@][lv 0*"13"*"70400091"]`同じ魔女として」`[\]
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52314
+d [lv 0*"54"*"75400579"]`「その頃にはもう、自分が魔女という自覚があったのか」`[\]
+lss s0_8,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52315
+d2 [lv 0*"13"*"70400092"]`「あった。`[@][lv 0*"13"*"70400093"]`その頃には、聖書とオカルトでは、大人にも負けないくらいの知識があったから。`[@][lv 0*"13"*"70400094"]`だから私は、魔法は使えずとも、自分を魔女だと信じてた。`[@][#][*][lv 0*"13"*"70400095"]`……きひひひ、ちょっと滑稽だね。`[@][lv 0*"13"*"70400096"]`だから、私は魔女見習いなの」`[\]
+wait_on_d 0
+lss s0_8,"mar","b11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52316
+d [lv 0*"54"*"75400580"]`「いつ、ベアトリーチェと出会った」`[\]
+lss s0_8,"mar","b11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52317
+d2 [lv 0*"13"*"70400097"]`「よくは覚えてない。`[@][#][*][lv 0*"13"*"70400098"]`でも、その出会いはよく覚えてる。`[@][lv 0*"13"*"70400099"]`それは、とてもとても唐突だった」`[\]
+wait_on_d 0
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"garden_r1af"
+color_mod2 s0_3,#ffffff
+lss s0_8,"mar","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 2
+wait 500
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"garden_r1af"
+lss s0_8,"mar","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 2
+bgmplay 169,71,0
+lss s0_8,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+*d52318
+d [lv 0*"13"*"70400100"]`「…………え？」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"rose_1af"
+flush 24
+lss s0_9,"bea","a11_1_warai1" ;1
+flush 2
+wait 500
+lss s0_9,"bea","a11_defo2" ;1
+flush 80
+msgwnd_bea
+*d52319
+d [lv 0*"27"*"70700231"]`「そなたが、………右代宮真里亞か」`[\]
+msgwnd_non
+*d52320
+d `それは、あまりにあまりに、とてもとても。`[@]`……唐突な出会い。`[\]
+*d52321
+d `だって、私は、蔵臼伯父さんと大切な話があるから、お庭で遊んでいなさいとママに言われて。`[@]`ひとりぽつんと屋敷を追い出されて。`[@]`……こうして薔薇庭園の東屋でミルクティーを飲んでいただけなのだから。`[\]
+*d52322
+d `いつの間にか、……彼女はそこに座っていたのだ。`[@]`{n}私のことを、そなたなどと呼ぶ人を、私は知らない。`[\]
+*d52323
+d `すぐに、彼女は、私の知らない誰かだと直感する……。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"garden_r1af"
+lss s0_8,"mar","a22_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_mar
+*d52324
+d [lv 0*"13"*"70400101"]`「……あなたは、だぁれ？」`[\]
+lss s0_10,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d52325
+d [lv 0*"27"*"70700232"]`「会いたいと言ったのはそなただ。`[@][lv 0*"27"*"70700233"]`妾の島に、魔女が訪ねてくるから出迎えてやったというのに、そなたは妾の名を問うというのか。`[@][lv 0*"27"*"70700234"]`くっくっくっく」`[\]
+lss s0_8,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52326
+d [lv 0*"13"*"70400102"]`「………………`[|][lv 0*"13"*"70400103"]`ベアト`[|][lv 0*"13"*"70400104"]`……リーチェ`[|][lv 0*"13"*"70400105"]`……？」`[\]
+lss s0_10,"bea","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_bea
+*d52327
+d [lv 0*"27"*"70700235"]`「如何にも。`[@][lv 0*"27"*"70700236"]`妾が、ベアトリーチェである」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_2c"
+lss s0_8,"mar","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52328
+d [lv 0*"54"*"75400581"]`「確かに、唐突だな」`[\]
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52329
+d [lv 0*"13"*"70400106"]`「うん。とっても。`[@][lv 0*"13"*"70400107"]`………魔女や精霊は、いつだって私たちの側にいる。`[@][lv 0*"13"*"70400108"]`彼らが姿を見せようとしないだけで。`[@][lv 0*"13"*"70400109"]`そして、彼らが姿を見せたなら、……それはあまりに唐突に、そして当り前に、そこにいる。`[@][lv 0*"13"*"70400110"]`……私はそれをまさに知ったの」`[\]
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52330
+d [lv 0*"54"*"75400582"]`「そして、ベアトリーチェと友達に？」`[\]
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52331
+d [lv 0*"13"*"70400111"]`「うん。`[@][lv 0*"13"*"70400112"]`彼女は、ママの用事が終わるまで、ずっと私とお喋りをしてくれた。`[@][lv 0*"13"*"70400113"]`魔法の話や、魔女の話。`[@][lv 0*"13"*"70400114"]`真里亞が聖霊の子であることも」`[\]
+lss s0_10,"wil","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52332
+d [lv 0*"54"*"75400583"]`「……その時のベアトリーチェの印象は？」`[\]
+lss s0_8,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52333
+d [lv 0*"13"*"70400115"]`「こういっては悪いけど。`[@][lv 0*"13"*"70400116"]`知識だけなら私が上だった。`[@][lv 0*"13"*"70400117"]`最初は彼女のことを、大した魔女じゃないと見下しかけた」`[\]
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d52334
+d [lv 0*"13"*"70400118"]`「……まぁ、それは私の自惚れ。`[@][lv 0*"13"*"70400119"]`魔法大系には色んなものがある。`[@][lv 0*"13"*"70400120"]`ましてや私のそれは独学。`[@][lv 0*"13"*"70400121"]`ベアトの魔法大系とは異なったから、私が一方的にそういう印象を持ってしまったんだろうね。`[@][lv 0*"13"*"70400122"]`すぐにそれを後悔して謝ることになるの」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52335
+d2 [lv 0*"54"*"75400584"]`「謝る？`[@][lv 0*"54"*"75400585"]`　………ベアトリーチェが何か、お前の尊敬を勝ち取ることをしてみせたのか。`[@][#][*][lv 0*"54"*"75400586"]`…………なるほど。`[@][lv 0*"54"*"75400587"]`魔法を、見せたというわけか」`[\]
+wait_on_d 0
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"sky_1a"
+color_mod2 s0_3,#ffffff
+flush 2
+wait 500
+textoff
+waits 167
+lbg s0_3,"sky_1a"
+flush 2
+wait 1500
+textoff
+waits 167
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"beach_1af"
+flush 24
+meplay 1,2,50
+msgwnd_non
+*d52336
+d `私たちは浜辺へ移り、パラソル付きテーブルでたくさんを語り合った。`[\]
+lss s0_9,"bea","a11_nayamu1" ;1
+flush 23
+msgwnd_bea
+*d52337
+d2 [lv 0*"27"*"70700237"]`「なるほど。`[@][lv 0*"27"*"70700238"]`……真里亞。`[@][lv 0*"27"*"70700239"]`そなたは実に勤勉だ。`[@][lv 0*"27"*"70700240"]`その歳で、千年の魔女の妾にそれだけの講釈を出来るとは、実に尊敬に値する。`[@][#][*][lv 0*"27"*"70700241"]`………して、そなたは何の魔法を使えるのか？」`[\]
+wait_on_d 0
+lss s0_9,"bea","a11_futeki2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_mar
+*d52338
+d [lv 0*"13"*"70400123"]`「……魔法？」`[\]
+lss s0_9,"bea","a11_akuwarai1" ;1
+flush 80
+msgwnd_bea
+*d52339
+d [lv 0*"27"*"70700242"]`「そなたが魔女を語るならば、魔法のひとつも見せられるであろうが」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"sky_1a"
+flush 25
+msgwnd_non
+*d52340
+d `私は、きょとんとしてしまった。`[@]`{n}それは、何て当り前の話だろう。`[\]
+*d52341
+d `私は聖霊の子で、オカルトを勉強したからニンゲンではない、魔女だと。`[@]`その日まで当り前のように強く確信していた。`[\]
+*d52342
+d `だから、どんな魔法が使えるのかと聞かれ、私は呆然としてしまった…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"beach_2af"
+lss s0_10,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 22
+lss s0_10,"bea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_bea
+*d52343
+d [lv 0*"27"*"70700243"]`「魔法を知り、語るに至ってようやく見習いよ。`[@][lv 0*"27"*"70700244"]`……そして、それを魔法という形で実践できてこそ、魔女というものではないか？」`[\]
+lss s0_8,"mar","a22_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_mar
+*d52344
+d [lv 0*"13"*"70400124"]`「……真里亞は、………まだ、魔女じゃないの……？」`[\]
+lss s0_10,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_bea
+*d52345
+d [lv 0*"27"*"70700245"]`「よく学んでいる。`[@][lv 0*"27"*"70700246"]`そして、類稀な才能も感じる。`[@][lv 0*"27"*"70700247"]`そなたはやがて、妾など足元にも及ばぬ偉大な魔女、`[@][lv 0*"27"*"70700248"]`……あるいはそなたが言うように、造物主の座にさえ上りつめるだろう。`[@][lv 0*"27"*"70700249"]`しかし、まだ幼く、若い。`[@][lv 0*"27"*"70700250"]`………そなたは、そう。`[@][lv 0*"27"*"70700251"]`見習いだ。`[@][lv 0*"27"*"70700252"]`魔女の見習いというところよ」`[\]
+csp_slot s0_8
+lss s0_9,"mar","a22_warai1" ;1
+flush 23
+msgwnd_mar
+*d52346
+d [lv 0*"13"*"70400125"]`「じゃあ、ベアトは魔法を使うことが出来るの？」`[\]
+lss s0_10,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_bea
+*d52347
+d [lv 0*"27"*"70700253"]`「無論であるとも。`[@][lv 0*"27"*"70700254"]`魔法を使えずして、魔女を名乗ることなど出来ぬわ」`[\]
+lss s0_9,"mar","a11_odoroki1" ;1
+flush 80
+msgwnd_mar
+*d52348
+d [lv 0*"13"*"70400126"]`「すごい……。`[@][lv 0*"13"*"70400127"]`……見せてっ！`[@][lv 0*"13"*"70400128"]`　ベアトの魔法、見せて！！」`[\]
+textoff
+waits 167
+lbg s0_22,"black"
+flush 22
+msgwnd_non
+*d52349
+d `真里亞は、自分が聖霊の子という、魔法的な概念を、今日まで疑ったことはない。`[\]
+*d52350
+d `……しかし、オカルト的事象が実在することを、他人によって示されたことはない。`[\]
+*d52351
+d `真里亞は宇宙を１人でも生み出せる。`[@]`……しかし、より強く信じるために、もう１人を欲した。`[\]
+textoff
+waits 167
+csp_slot s0_22
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"beach_2af"
+flush 23
+lss s0_9,"bea","a11_majime1" ;1
+flush 26
+msgwnd_bea
+*d52352
+d [lv 0*"27"*"70700255"]`「かつての妾ならば、空に虹をかけ、`[@][lv 0*"27"*"70700256"]`それを七色のキャンディに変えて自由にかじらせることも出来た。`[@][lv 0*"27"*"70700257"]`しかし今の妾は姿を保つことさえ満足に出来ぬほどに衰えている」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"beach_1af"
+lss s0_10,"mar","a11_fukigen2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d52353
+d [lv 0*"13"*"70400129"]`「さっき聞いた。`[@][lv 0*"13"*"70400130"]`あの鎮守の社のせいで、力が出せないって」`[\]
+lss s0_8,"bea","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d52354
+d2 [lv 0*"27"*"70700258"]`「力を取り戻すにはかなりの時間をかける。`[@][lv 0*"27"*"70700259"]`虹をキャンディにしてやることは今は出来ぬ。`[@][#][*][lv 0*"27"*"70700260"]`……しかし、ささやかな魔法にて、その一端を見せることは出来ようぞ」`[\]
+wait_on_d 0
+lss s0_8,"bea","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52355
+d [lv 0*"13"*"70400131"]`「見たい…！`[@][lv 0*"13"*"70400132"]`　ベアトの魔法、見たい…！！」`[\]
+lss s0_8,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d52356
+d [lv 0*"27"*"70700261"]`「良かろう。`[@][lv 0*"27"*"70700262"]`しかし、そなたにも協力を求めねばならぬぞ。`[@][lv 0*"27"*"70700263"]`先ほども言った。`[@][lv 0*"27"*"70700264"]`如何にそなたが穢れなき魂を持とうとも、ニンゲンはもはや穢れ、魔法を拒む毒素に満ちていると」`[\]
+lss s0_10,"mar","a22_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52357
+d [lv 0*"13"*"70400133"]`「うん、聞いた。`[@][lv 0*"13"*"70400134"]`反魔法の毒素があるって聞いた。`[@][lv 0*"13"*"70400135"]`真里亞の読んだ本には載ってなかった。`[@][lv 0*"13"*"70400136"]`だからそれを知ってるベアトはすごい」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"beach_2af"
+flush 25
+msgwnd_non
+*d52358
+d `ベアトリーチェは空のティーカップを取ると、`[@]`種も仕掛けもございませんとでも言うように、それを真里亞の前でくるくると回す。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_space_2a"
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52359
+d [lv 0*"54"*"75400588"]`「伏せたカップに、キャンディが現れる魔法か」`[\]
+lss s0_8,"mar","b22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52360
+d [lv 0*"13"*"70400137"]`「どうしてわかるの？！`[@][lv 0*"13"*"70400138"]`　ウィルはすごいね、魔女の使う魔法もわかるんだね！」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52361
+d [lv 0*"54"*"75400589"]`「…………魔女の魔法の、基本だからな」`[\]
+lss s0_8,"mar","b22_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52362
+d [lv 0*"13"*"70400139"]`「カップは何の仕掛けもない、普通のカップだったよ。`[@][lv 0*"13"*"70400140"]`私は見たかった。本当の魔法を見たかった」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+meplay 1,2,50
+textoff
+waits 167
+lbg s0_3,"sky_1a"
+color_mod2 s0_3,#ffffff
+flush 22
+wait 500
+textoff
+waits 167
+lbg s0_3,"sky_1a"
+flush 2
+msgwnd_non
+*d52363
+d `真里亞は欲した。`[\]
+*d52364
+d `自分がオカルト的存在であることを信じるために、自分以外のオカルトを欲したのだ。`[\]
+*d52365
+d `だから、ベアトリーチェの魔法に、協力した。`[\]
+*d52366
+d `自分の毒素で、魔法の奇跡を知ることの出来る機会を、失わないために。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_bea
+*d52367
+d [lv 0*"27"*"70700265"]`「良いぞ。`[@][lv 0*"27"*"70700266"]`……さぁ、そのカップを開けてみるがいい」`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"beach_2af"
+lss s0_8,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 6
+wait 500
+lss s0_10,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_mar
+*d52368
+d [lv 0*"13"*"70400141"]`「…………あ。`[@][lv 0*"13"*"70400142"]`……キャンディだっ。`[@][lv 0*"13"*"70400143"]`……キャンディだ…！！」`[\]
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_bea
+*d52369
+d [lv 0*"27"*"70700267"]`「妾からそなたへの挨拶代わりと、新しき魔女との出会いと友情に、それを贈ろう」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"beach_2af"
+color_mod2 s0_3,#ffffff
+lss s0_10,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+lss s0_8,"bea","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 2
+msgwnd_non
+*d52370
+d `これが、本当の魔法の奇跡。`[@]`{n}私は初めて、自分の自惚れを悔いて、恥じた。`[\]
+*d52371
+d `自分だけが聖霊の子で、世界でもっとも偉くて特別でといった、`[@]`自分だけの万能感が一気に晴れていくのを感じた。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d52372
+d `……何も出来ない聖霊の子なんかより。`[@]`私は魔法が使える魔女の方がいい…！`[\]
+*d52373
+d `右代宮真里亞は、魔女になりたい…！！`[@]`{n}まずは魔女の見習いから始めたい！！`[\]
+*d52374
+d `もう私はベアトに夢中だった。`[\]
+textoff
+waits 167
+lbg s0_3,"beach_2af"
+flush 22
+lss s0_8,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 26
+msgwnd_mar
+*d52375
+d [lv 0*"13"*"70400144"]`「真里亞も本当の魔女になりたい！`[@][lv 0*"13"*"70400145"]`　ベアトの弟子になりたい！！」`[\]
+lss s0_10,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_bea
+*d52376
+d [lv 0*"27"*"70700268"]`「謙遜を。`[@][lv 0*"27"*"70700269"]`そなたには充分な才能と日々の精進があるぞ。`[@][lv 0*"27"*"70700270"]`それに、かつての力のある妾ならともかく、この程度の魔法しか使えぬ衰えた妾では、弟子を持つことなど出来ぬわ」`[\]
+lss s0_8,"mar","a22_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52377
+d [lv 0*"13"*"70400146"]`「……真里亞は魔女の弟子にはなれない……？」`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_bea
+*d52378
+d2 [lv 0*"27"*"70700271"]`「うむ。`[@][lv 0*"27"*"70700272"]`妾の弟子には出来ぬ。`[@][#][*][lv 0*"27"*"70700273"]`……しかし、友人にはできる」`[\]
+wait_on_d 0
+lss s0_10,"bea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 10,167
+d_continue
+wait_on_d -1
+bgmplay 64,71,0
+csp_slot s0_8
+lss s0_9,"mar","a22_warai1" ;1
+flush 23
+msgwnd_mar
+*d52379
+d [lv 0*"13"*"70400147"]`「本当…？！」`[\]
+lss s0_10,"bea","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_bea
+*d52380
+d [lv 0*"27"*"70700274"]`「うむ。`[@][lv 0*"27"*"70700275"]`妾とそなたは、これより友人だ。`[@][lv 0*"27"*"70700276"]`これからも共に、深き魔女の世界を語り合おうではないか」`[\]
+lss s0_9,"mar","a22_warai2" ;1
+flush 80
+msgwnd_mar
+*d52381
+d [lv 0*"13"*"70400148"]`「うー！！！`[@][lv 0*"13"*"70400149"]`　ベアト、ありがとう！！`[@][lv 0*"13"*"70400150"]`　このベアトのキャンディ、食べてもいい？！」`[\]
+lss s0_10,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_bea
+*d52382
+d [lv 0*"27"*"70700277"]`「いいや、それは土産にせよ。`[@][lv 0*"27"*"70700278"]`食べずに、そなたの可愛らしい鞄に納めよ」`[\]
+csp_slot s0_9
+lss s0_8,"mar","a22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 64
+msgwnd_mar
+*d52383
+d [lv 0*"13"*"70400151"]`「うん。`[@][lv 0*"13"*"70400152"]`おうちで食べる…！！`[@][lv 0*"13"*"70400153"]`　うー、うーうーうーうー！！」`[\]
+lss s0_10,"bea","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 80
+msgwnd_bea
+*d52384
+d [lv 0*"27"*"70700279"]`「真里亞。`[@][lv 0*"27"*"70700280"]`そのキャンディは、魔法で生み出されたものだ。`[@][lv 0*"27"*"70700281"]`ゆえに、脆い。`[@][lv 0*"27"*"70700282"]`そなたが妾の存在をその毒素で否定したなら、溶けて消えてしまうだろう」`[\]
+lss s0_8,"mar","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52385
+d [lv 0*"13"*"70400154"]`「うー……。`[@][lv 0*"13"*"70400155"]`嫌だ。`[@][lv 0*"13"*"70400156"]`ベアトからもらった大切な魔法、消えるの嫌だ」`[\]
+csp_slot s0_8
+csp_slot s0_10
+lss s0_9,"bea","a11_futeki2" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_bea
+*d52386
+d2 [lv 0*"27"*"70700283"]`「ならば、妾という魔女に出会ったことを、決して忘れてはならぬぞ。`[@][#][*][lv 0*"27"*"70700284"]`……そなたが妾とのささやかな約束を守る限り、`[@][lv 0*"27"*"70700285"]`そなたがまたこの島へ来る時は、再び妾がそなたを迎えようぞ」`[\]
+wait_on_d 0
+lss s0_9,"bea","a11_warai2" ;1
+z_order_override2 s0_9,s0_7
+flush 10,167
+d_continue
+wait_on_d -1
+meplay 1,2,50
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"beach_1af"
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d52387
+d [lv 0*"13"*"70400157"]`「うー！　守るっ。`[@][lv 0*"13"*"70400158"]`約束って何？！」`[\]
+lss s0_8,"bea","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+z_order_override2 s0_8,s0_7
+flush 23
+msgwnd_bea
+*d52388
+d [lv 0*"27"*"70700286"]`「まずはそうだな。`[@][lv 0*"27"*"70700287"]`家へ帰ったら手を洗う。`[@][lv 0*"27"*"70700288"]`うがいをする。`[@][lv 0*"27"*"70700289"]`面倒臭がってはならぬぞ、魔女見習いの立派な修行のひとつであるぞ」`[\]
+csp_slot s0_10
+lss s0_9,"mar","a11_ikari1" ;1
+flush 1
+seplay 1,6,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_mar
+*d52389
+d [lv 0*"13"*"70400159"]`「守る！`[@][lv 0*"13"*"70400160"]`　毎日、お家に帰ってきたら、手を洗う！`[@][lv 0*"13"*"70400161"]`　うがいをする！`[@][lv 0*"13"*"70400162"]`　そうしたら、また会ってくれる？！」`[\]
+lss s0_8,"bea","a11_futeki2" ;1
+aspt2 xpos,s0_8,-370
+z_order_override2 s0_8,s0_7
+flush 80
+msgwnd_bea
+*d52390
+d [lv 0*"27"*"70700290"]`「約束しようぞ。`[@][lv 0*"27"*"70700291"]`そなたが妾との約束をきっちり守れたなら、`[@][lv 0*"27"*"70700292"]`そなたの体は清められ、妾もさらに魔力を取り戻す。`[@][lv 0*"27"*"70700293"]`……さすれば、次に来る時は、より素晴らしい魔法を見せようぞ」`[\]
+lss s0_9,"mar","a22_warai2" ;1
+flush 80
+msgwnd_mar
+*d52391
+d [lv 0*"13"*"70400163"]`「うー！`[@][lv 0*"13"*"70400164"]`　約束守る！　絶対！！`[@][lv 0*"13"*"70400165"]`　真里亞はなる！`[@][lv 0*"13"*"70400166"]`　ベアトの友達になって、魔女見習いになる！」`[\]
+lss s0_8,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_8,-370
+z_order_override2 s0_8,s0_7
+flush 80
+msgwnd_bea
+*d52392
+d [lv 0*"27"*"70700294"]`「良き心掛けであるぞ、右代宮真里亞よ。`[@][lv 0*"27"*"70700295"]`そなたが早く一人前の魔女になって、妾の良き友人に成長してくれることを、心より願っている」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"beach_1af"
+color_mod2 s0_3,#ffffff
+lss s0_9,"mar","a22_warai2" ;1
+color_mod2 s0_9,#ffffff
+lss s0_8,"bea","a11_1_warai1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 2
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 42
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"different_space_2a"
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 2
+wait 500
+lss s0_8,"mar","b11_niyari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+bgmplay 60,71,0
+msgwnd_mar
+*d52393
+d [lv 0*"13"*"70400167"]`「これが、私の初めての、ベアトリーチェとの出会いだったと思う」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52394
+d [lv 0*"54"*"75400590"]`「そのもらった飴は、家に帰っても、ちゃんとあったか…？」`[\]
+lss s0_8,"mar","b11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52395
+d [lv 0*"13"*"70400168"]`「うん。`[@][lv 0*"13"*"70400169"]`……でも、その存在を少しだけ疑ったから、飴は溶け掛かっていた。`[@][lv 0*"13"*"70400170"]`私は彼女を疑いかけたことを後悔したよ」`[\]
+lss s0_8,"mar","b11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d52396
+d [lv 0*"13"*"70400171"]`「もし、もっと疑っていたら、飴は消えてなくなっていたに違いない。`[@][lv 0*"13"*"70400172"]`そしたら私は、目の当たりにした魔法の奇跡の証拠を、失うところだった」`[\]
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52397
+d [lv 0*"54"*"75400591"]`「飴が、溶けていたのか？」`[\]
+lss s0_8,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52398
+d [lv 0*"13"*"70400173"]`「飴、というよりはキャラメルだったと思う。`[@][lv 0*"13"*"70400174"]`溶け掛かって、ぐにゃぐにゃだった」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52399
+d [lv 0*"54"*"75400592"]`「それは何月頃の話だ」`[\]
+lss s0_8,"mar","b11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52400
+d [lv 0*"13"*"70400175"]`「詳しく覚えてない。`[@][lv 0*"13"*"70400176"]`でも、ミルクティーがアイスだったことは覚えてる。`[@][lv 0*"13"*"70400177"]`……それが何？」`[\]
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52401
+d [lv 0*"54"*"75400593"]`「何でもない。`[@][lv 0*"54"*"75400594"]`……ベアトリーチェに出会ったことは、楼座には話したのか？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"mdin_1f"
+color_mod2 s0_3,#ffffff
+flush 22
+msgwnd_mar
+*d52402
+d2 [lv 0*"13"*"70400178"]`「うん。`[@][lv 0*"13"*"70400179"]`その日のお夕飯の時にみんなに話した。`[@][#][*][lv 0*"13"*"70400180"]`蔵臼伯父さんに笑われた。`[@][#][*][lv 0*"13"*"70400181"]`そしたら隣の席のママに、その話は終わりにしなさいって怒られた。`[@][lv 0*"13"*"70400182"]`…うー」`[\]
+wait_on_d 0
+lss s0_8,"cla","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 10,167
+d_continue
+wait_on_d 1
+lss s0_10,"ros","a32_komaru4" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_2d"
+flush 22
+lss s0_8,"wil","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d52403
+d [lv 0*"54"*"75400595"]`「隣の席…？`[@][lv 0*"54"*"75400596"]`　序列上、お前の席は楼座と隣り合わないはずだ」`[\]
+lss s0_10,"mar","b11_niyari1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_mar
+*d52404
+d [lv 0*"13"*"70400183"]`「親族会議じゃないもん。`[@][lv 0*"13"*"70400184"]`ママと真里亞だけが訪ねた時の話。`[@][lv 0*"13"*"70400185"]`だから、蔵臼伯父さん一家全員と、ママと真里亞しかいない。`[@][lv 0*"13"*"70400186"]`席は詰めるから、親族会議の時とはお席がちょっと違うの」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52405
+d [lv 0*"54"*"75400597"]`「………………………。`[@][lv 0*"54"*"75400598"]`………お前の隣の席に、楼座だったんだな？」`[\]
+lss s0_10,"mar","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52406
+d [lv 0*"13"*"70400187"]`「うん。`[@][lv 0*"13"*"70400188"]`……それが何？」`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52407
+d [lv 0*"54"*"75400599"]`「………何でもない。`[@][lv 0*"54"*"75400600"]`……ベアトリーチェと、六軒島以外で会ったことは？」`[\]
+lss s0_10,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52408
+d2 [lv 0*"13"*"70400189"]`「ないよ。`[@][lv 0*"13"*"70400190"]`だってベアトは体が希薄で、自由には動けないんだもの。`[@][#][*][lv 0*"13"*"70400191"]`真里亞の体に乗り移ってもいいよって言ったけど、`[@][lv 0*"13"*"70400192"]`島からは離れられないから出来ないって言ってた」`[\]
+wait_on_d 0
+lss s0_10,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"wil","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52409
+d [lv 0*"54"*"75400601"]`「その後は、六軒島へ行く度に会っていたということか」`[\]
+lss s0_10,"mar","b11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52410
+d [lv 0*"13"*"70400193"]`「うん。`[@][lv 0*"13"*"70400194"]`私たちは大の仲良しになった。`[@][lv 0*"13"*"70400195"]`ベアトと話せば話すほどに、彼女は本当にすごい魔女だと思い知ったよ。`[@][lv 0*"13"*"70400196"]`彼女は会う度にいつも素敵な魔法を見せてくれた。`[@][lv 0*"13"*"70400197"]`そして、私とは異なる魔法大系を聞かせてくれて、二人で魔法の深遠を語り合ったよ」`[\]
+*d52411
+d [lv 0*"13"*"70400198"]`「私は、早く彼女の高みに上りたいと思った。`[@][lv 0*"13"*"70400199"]`ベアトのような魔女の域に達したいと願った」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52412
+d [lv 0*"54"*"75400602"]`「ベアトリーチェを、母親に紹介したことは？」`[\]
+lss s0_10,"mar","b11_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52413
+d [lv 0*"13"*"70400200"]`「ないよ。`[@][lv 0*"13"*"70400201"]`ママは毒素が強過ぎるからまだ会えないって言ってた。`[@][lv 0*"13"*"70400202"]`……大人はほとんどダメだって。`[@][lv 0*"13"*"70400203"]`みんな汚れてるから。`[@][lv 0*"13"*"70400204"]`きひひひひ」`[\]
+lss s0_8,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52414
+d [lv 0*"54"*"75400603"]`「お前以外に、ベアトリーチェの姿を見ることが出来た者はいるのか」`[\]
+lss s0_10,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52415
+d2 [lv 0*"13"*"70400205"]`「最初は無理だった。`[@][lv 0*"13"*"70400206"]`魔力が弱いからね、毒素に少しでも近づくと体が壊れてしまう、って。`[@][#][*][lv 0*"13"*"70400207"]`……でも、次第に魔力を蓄えて、真里亞以外の毒素の少ない人の前にも現れられるようになったよ」`[\]
+wait_on_d 0
+lss s0_10,"mar","b11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"wil","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52416
+d [lv 0*"54"*"75400604"]`「それは誰だ」`[\]
+lss s0_10,"mar","b11_fukigen2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52417
+d [lv 0*"13"*"70400208"]`「うーーー……ん。`[@][lv 0*"13"*"70400209"]`……あんまり多くない。`[@][lv 0*"13"*"70400210"]`使用人の一部の人だけだった」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52418
+d [lv 0*"54"*"75400605"]`「具体的には？」`[\]
+lss s0_10,"mar","b11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52419
+d2 [lv 0*"13"*"70400211"]`「今日いる使用人全員。`[@][#][*][lv 0*"13"*"70400212"]`……うー？`[@][lv 0*"13"*"70400213"]`　郷田さんは違うと思う」`[\]
+wait_on_d 0
+lss s0_10,"mar","b11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52420
+d [lv 0*"54"*"75400606"]`「つまり、源次、紗音、嘉音、熊沢、の４人ということか」`[\]
+lss s0_10,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52421
+d [lv 0*"13"*"70400214"]`「あと、南條先生も」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"garden_r1af"
+color_mod2 s0_3,#ffffff
+lss s0_10,"bea","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+lss s0_8,"mar","a22_warai2" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+flush 6
+msgwnd_non
+*d52422
+d `真里亞とベアトリーチェの魔女のお茶会には、時折、彼らが訪れたことがあるという。`[\]
+*d52423
+d `もちろんそれは、お茶のお代わりを持ってきたという程度の、ささやかなものだ。`[\]
+*d52424
+d `しかし、彼らは確かにベアトリーチェを認識し、言葉を交わした。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_2a"
+flush 6
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d52425
+d [lv 0*"54"*"75400607"]`「……使用人たちは、ベアトリーチェとはどう接していた。`[@][lv 0*"54"*"75400608"]`存在しないはずの客人だ。`[@][lv 0*"54"*"75400609"]`驚いたりはしないのか」`[\]
+lss s0_8,"mar","b11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_mar
+*d52426
+d [lv 0*"13"*"70400215"]`「しないよ？`[@][lv 0*"13"*"70400216"]`　だって、ベアトリーチェはお屋敷のもう１人の主だもの」`[\]
+textoff
+waits 167
+lbg s0_22,"black"
+flush 22
+msgwnd_non
+*d52427
+d `使用人たちはベアトリーチェに対し、賓客であるかのように持て成したという。`[\]
+*d52428
+d `そして時に、新しい魔法の奇跡に真里亞と共に立ち会うことを許されていたという。`[\]
+textoff
+waits 167
+csp_slot s0_22
+flush 22
+lss s0_10,"wil","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52429
+d [lv 0*"54"*"75400610"]`「つまり、１９８６年の六軒島で、ベアトリーチェに実際に会えたのは、`[@][lv 0*"54"*"75400611"]`郷田を除く使用人４人とお前と南條の、合計６人だけだったということか」`[\]
+lss s0_8,"mar","b11_niyari1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52430
+d [lv 0*"13"*"70400217"]`「うん。`[@][lv 0*"13"*"70400218"]`ベアトも、それ以外の人の前に現れるには、もっともっと魔力を蓄える必要があると言ってた」`[\]
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52431
+d [lv 0*"54"*"75400612"]`「つまり、それ以外の人間の前にも、やがては姿を現すつもりだったわけか」`[\]
+lss s0_8,"mar","b11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52432
+d [lv 0*"13"*"70400219"]`「うん。`[@][lv 0*"13"*"70400220"]`全てのニンゲンたちに自分を認めさせる日こそが、自分の復活の日だって言ってた」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52433
+d [lv 0*"54"*"75400613"]`「………………………………」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+wait 1000
+bgmplay 171,71,0
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 8
+msgwnd_non
+*d52434
+d `真里亞と使用人たちと南條の６人は、認めた。`[\]
+*d52435
+d `反魔法の毒素の薄いニンゲンから順番に、姿を現したということだろう。`[\]
+*d52436
+d `自分を認識出来るニンゲンを少しずつ増やし、`[@]`島の全員に自分を認めさせるのが、ベアトリーチェのゲーム、ということに違いない…。`[\]
+*d52437
+d `だとすると、ベアトリーチェに、もっとも魔法抵抗力が高いと言わしめた戦人の前には、`[@]`一番最後に現れることになったわけだ。`[\]
+*d52438
+d `……戦人に自分を認めさせるのが一番難しいと、ベアトリーチェは思っていたということか……？`[\]
+*d52439
+d `やはり、ベアトリーチェにとって、戦人が一つのゴールだったことは事実のようだ。`[\]
+textoff
+waits 167
+lbg s0_3,"chess1"
+flush 22
+*d52440
+d `……しかし、戦人の好むチェス盤理論によるならば。`[\]
+*d52441
+d `己が存在を認めさせたいベアトリーチェとは即ち、認めさせねば、存在を持たない人物だと言える。`[\]
+*d52442
+d `その推理は、第１のゲームの時点で、戦人も至っている。`[\]
+*d52443
+d `やはり、１９８６年のベアトリーチェは何かが違う。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d52444
+d `紛れもなく存在した、イタリア人のベアトリーチェや、九羽鳥庵のベアトリーチェとは違う。`[\]
+*d52445
+d `これほどまでにミステリアスな知名度を持ちながら、存在を持たない、１９８６年のベアトリーチェ。`[\]
+*d52446
+d `存在を持たないベアトリーチェを、“殺す”とは、どういう意味か。`[\]
+textoff
+waits 167
+lbg s0_3,"different_spiral_1b"
+flush 22
+*d52447
+d `………宇宙を生み出す最少人数は２人。`[\]
+*d52448
+d `しかし、産むだけなら１人でも出来ると、真里亞は言った。`[\]
+*d52449
+d `しかし、真里亞は２人目を欲した。`[@]`１人で産んだ世界を育む２人目を欲したのだ。`[\]
+*d52450
+d `産んでも育まねば、死んで消えるから？`[\]
+textoff
+waits 167
+lss s0_9,"bea","a15_1_hoshin1star" ;1
+flush 2
+*d52451
+d `………宇宙を、ベアトリーチェに置き換えてみよう。`[\]
+*d52452
+d `ベアトリーチェを生み出す最少人数は２人。`[\]
+*d52453
+d `しかし、産むだけなら１人でも出来る。`[\]
+*d52454
+d `しかし、その１人は２人目を欲した。`[@]`自分が産んだベアトリーチェを認める２人目を欲したのだ。`[\]
+*d52455
+d `その２人目との出会いが、今の真里亞の話なのだ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+*d52456
+d `ベアトリーチェを生み出した１人は、２人目に認めさせようとして、`[@]`真里亞をその２人目に選んだのだ。`[\]
+*d52457
+d `古戸ヱリカの心ない推理を待たずとも、ティーカップの魔法は手品だとわかる。`[\]
+*d52458
+d `反魔法の毒素の話を鵜呑みにした真里亞は、魔法に対し、目を閉じたのだ。`[\]
+*d52459
+d `相手が目を閉じてくれれば、どんな手品だって魔法に出来る。`[\]
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+*d52460
+d `……魔女との出会いの証といって与えられたキャラメルは、真里亞が少し疑ったため、少し溶けていた。`[\]
+*d52461
+d `ミルクティーをアイスで飲む季節に、鞄の中にキャラメルを入れっぱなしにすれば溶けるのは当り前だ。`[\]
+textoff
+waits 167
+lss s0_8,"mar","b11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 9
+*d52462
+d `純粋過ぎて話を鵜呑みにしやすい少女、右代宮真里亞。`[\]
+textoff
+waits 167
+lss s0_10,"bea","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 9
+*d52463
+d `魔女の言うところの、反魔法の毒素の極めて薄い彼女の前に、`[@]`まずベアトリーチェは現れ、己が存在を認めさせた……。`[\]
+*d52464
+d `１人でベアトリーチェを産み出すことが、卵を産むことと考えるなら、`[@]`１人で産んだだけでは、妄想と同じ。`[@]`卵の中も同然だ。`[\]
+*d52465
+d `２人目に認められて初めて、殻を割り、現れる。`[@]`{n}２人目に卵を温めてもらって、初めて、現れる。`[\]
+*d52466
+d `真里亞に認めさせることで初めて、ベアトリーチェは孵化し、雛が誕生したのだ。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d52467
+d `なら、ベアトリーチェとその魔法大系とやらを育むマリアージュ・ソルシエールは、まるで巣だ。`[\]
+textoff
+waits 167
+lss s0_9,"be2","b11_defo2" ;1
+flush 9
+*d52468
+d `六軒島の魔女を自称し、千年を生きたと自称する貫禄を持つ、ベアトリーチェ。`[\]
+*d52469
+d `………それは前回のゲームに登場した、雛のベアトよりは、姉のベアトに印象が近い。`[\]
+*d52470
+d `つまり真里亞の話すこの出会いは、姉ベアトの誕生の瞬間ということなのか…？`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"different_spiral_1b"
+flush 22
+*d52471
+d `卵自体は、すでに“最初の１人”に産み出されていた。`[\]
+*d52472
+d `そして、真里亞と出会うまでの間に、殻の中で千年の貫禄を持つ“キャラクター”を充分に熟成させた。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"white"
+flush 8
+wait 1000
+seplay 1,1006,71
+textoff
+waits 167
+lbg s0_3,"black"
+show_glass 0
+*d52473
+d `そして真里亞に認めさせることで孵化し、`[!w583]`………六軒島の魔女は、初めて姿を持った。`[\]
+*d52474
+d `恐らく、この瞬間こそが、……１９８６年のベアトリーチェの誕生した瞬間なのではないか。`[\]
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+*d52475
+d `……妹の雛ベアトとやらは、戦人への恋心から生まれる。`[\]
+*d52476
+d `それがまだ生まれていない以上、この姉ベアトの誕生にも、`[@]`そしてこの時点でのベアトリーチェの存在にも、戦人は何の関係もないことになる。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d52477
+d `…………………………。`[\]
+*d52478
+d `こんな推理で、お楽しみいただけてるのか？`[@]`　ベルンカステル……。`[\]
+*d52479
+d `楽しめてんなら、拍手くらいしろィ、観劇者ども。`[\]
+textoff
+waits 167
+seplay 1,54,71
+wait 2000
+*d52480
+d `…………こりゃ、どーも。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+seplay 2,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 42
+bgmplay 163,71,0
+meplay 1,12,50
+textoff
+waits 167
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 2
+wait 500
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52481
+d [lv 0*"13"*"70400221"]`「真里亞は、ベアトに魔法で叶えてほしい願いがたくさんあるの。`[@][lv 0*"13"*"70400222"]`だから、ベアトが復活するのに協力してるの」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52482
+d [lv 0*"54"*"75400614"]`「……願いとは何だ」`[\]
+lss s0_10,"mar","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52483
+d [lv 0*"13"*"70400223"]`「いっぱいある。`[@][lv 0*"13"*"70400224"]`きひひひひひ、内緒」`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d52484
+d [lv 0*"54"*"75400615"]`「黒き魔女からママを守ってほしい、か」`[\]
+lss s0_10,"mar","a11_odoroki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_mar
+*d52485
+d2 [lv 0*"13"*"70400225"]`「どうしてウィルは何でもわかるの？`[@][#][*][lv 0*"13"*"70400226"]`　すごいよ。うー！」`[\]
+wait_on_d 0
+lss s0_10,"mar","a22_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+msgwnd_wil
+*d52486
+d [lv 0*"54"*"75400616"]`「……魔女に願わねば、取り戻せない世界だと。`[@][lv 0*"54"*"75400617"]`お前はもう、思っているのか」`[\]
+msgwnd_mar
+*d52487
+d [lv 0*"13"*"70400227"]`「うん。`[@][lv 0*"13"*"70400228"]`ママは大好き。`[@][lv 0*"13"*"70400229"]`やさしい。`[@][lv 0*"13"*"70400230"]`いつまでも一緒にいたい。`[@][lv 0*"13"*"70400231"]`永遠に」`[\]
+textoff
+waits 167
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_8,"mar","a22_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 6
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d52488
+d [lv 0*"54"*"75400618"]`「………………………。`[@][lv 0*"54"*"75400619"]`………今度はマリアージュ・ソルシエールについて聞きたい」`[\]
+lss s0_8,"mar","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52489
+d [lv 0*"13"*"70400232"]`「……………………………」`[\]
+textoff
+waits 167
+vol_bgm -1,1000
+wait 1000
+lss s0_10,"wil","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52490
+d [lv 0*"54"*"75400620"]`「……………。`[@][lv 0*"54"*"75400621"]`……どうした」`[\]
+lss s0_8,"mar","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52491
+d [lv 0*"13"*"70400233"]`「やだ」`[\]
+lss s0_10,"wil","a11_niramu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d52492
+d [lv 0*"54"*"75400622"]`「…………何？」`[\]
+lss s0_8,"mar","a22_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_mar
+*d52493
+d [lv 0*"13"*"70400234"]`「私、喉が渇いちゃったからジュース飲んでくる。`[@][lv 0*"13"*"70400235"]`またね」`[\]
+textoff
+waits 167
+lss s0_8,"mar","a11_fukigen2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+csp_slot s0_8
+flush 4
+msgwnd_non
+*d52494
+d `真里亞は急によそよそしくなり、ぺこりと頭を下げてから、一方的に立ち去る。`[\]
+*d52495
+d `……真里亞らしくない仕草だった。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"cha_r1d"
+flush 25
+msgwnd_wil
+*d52496
+d [lv 0*"54"*"75400623"]`「……………………………」`[\]
+msgwnd_non
+*d52497
+d `なるほど。`[@]`ゲームマスターが、駒を動かしたということか。`[\]
+*d52498
+d `……今は別の話を聞け、ということらしい。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_1,"cha_r1e_bg"
+lbg s0_3,"cha_r1e"
+lss s0_10,"rio","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"jes","a11_tohoho2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+*d52499
+d `理御は、いつの間にか親族たちに混じって談笑している。`[\]
+lss s0_9,"geo","a11k_komaru2k" ;1
+flush 24
+lss s0_10,"rio","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"jes","a11_atya2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+*d52500
+d `朱志香は、さんざんしりをつねられたらしく、悪態をつき、それを譲治になだめられている。`[\]
+*d52501
+d `……朱志香と譲治。`[@]`次はこの二人に話を聞くか。`[\]
+*d52502
+d `真里亞に比べれば、はるかに反魔法の毒素の強い二人だ。`[\]
+*d52503
+d `少なくとも、全てのゲームの開始時には、ベアトリーチェを認めてはいない。`[\]
+*d52504
+d `真里亞からは、認めた者の話を。`[@]`{n}では次は、認めてない者の話だ。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+flush 23
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+wait 2000
+break_glass3
+lbg s0_29,"black"
+csp_slot s0_29
+flush 10,2000
+wait 83
+ch_done flag_scenario_7_6

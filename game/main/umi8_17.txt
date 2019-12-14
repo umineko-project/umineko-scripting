@@ -1,0 +1,1167 @@
+*teatime_8
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_8_tea
+mov $name_chapter_save, "8_tea"
+~
+new_tea 8
+flush 10,167
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+gstc 179
+bgmplay 138,71,0
+textoff
+waits 167
+lbg s0_3,"fea_l4"
+flush 2
+wait 3000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 8
+textoff
+waits 167
+lbg s0_3,"fea_l5"
+flush 2
+wait 3000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+seplay 1,17,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 10
+textoff
+waits 167
+lbg s0_3,"fea_r1ep"
+flush 2
+wait 1000
+*d67672
+d `尊厳なる観劇と戯曲と傍観の魔女は、筆を置き、天井を見上げながら深く息を吐き出すのだった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1cp"
+flush 22
+*d67673
+d `机の上は、書き散らされた膨大な量の原稿用紙が乱雑に積まれている。`[\]
+*d67674
+d `細やかな、そして尊厳ある者にしか読めぬ情報密度の極めて高い言語が、ぎっしりと書き込まれている。`[\]
+*d67675
+d `その言語の一文字は、ニンゲンの世界での書籍数冊に匹敵する情報量を持つ。`[\]
+*d67676
+d `それによって、ぎっしりと書き上げられた原稿用紙が、これほどに積み上げられているのだから。`[\]
+*d67677
+d `……彼女はきっと、何か一つの世界を、書き切ったに違いなかった。`[\]
+textoff
+waits 167
+lss s0_9,"fea","b11_defo2" ;1
+flush 2
+msgwnd_fea
+*d67678
+d [lv 0*"50"*"85000182"]`「…………書き切ったには、書き切った。`[@][lv 0*"50"*"85000183"]`いや、正確には書き切っておらぬのだが」`[\]
+msgwnd_non
+*d67679
+d `彼女は立ち上がり、お気に入りの揺り椅子に腰を下ろすと、しばらくの間、その緩やかな揺れを楽しんだ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+flush 22
+textoff
+waits 167
+lbg s0_3,"fea_r1ep"
+flush 1
+seplay 1,13,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+wait 2000
+msgwnd_fea
+*d67680
+d [lv 0*"50"*"85000184"]`「どこまでを描けば、果たして物語を書き切ったと言えるのか。`[@][lv 0*"50"*"85000185"]`……私の、物書きとしての長年の悩みだ。`[@][lv 0*"50"*"85000186"]`……ニンゲンの冒険は物語としてとても面白い。`[@][lv 0*"50"*"85000187"]`しかし、どこまでが冒険で、どこからがそうではないのかが、私をしても、未だによくわからぬのだ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d67681
+d [lv 0*"50"*"85000188"]`「……すでに没した私の旧友は、`[@][lv 0*"50"*"85000189"]`ニンゲンの人生は、初めから終わりまでが全て冒険であり、筆を置くところなど存在しないと言ったが。`[@][lv 0*"50"*"85000190"]`……私はそうは思わぬ。`[@][lv 0*"50"*"85000191"]`筆の置き所というものがあると思う。`[@][lv 0*"50"*"85000192"]`物語は、適当なところまでを記し、その後の余韻や感想は、観劇者に委ねるべきだと思う」`[\]
+textoff
+waits 167
+lbg s0_3,"fea_r1ap"
+flush 22
+*d67682
+d [lv 0*"50"*"85000193"]`「……つまり、物語は適当なところで猫箱にしまうべきなのだ。`[@][lv 0*"50"*"85000194"]`……猫箱を巡っての長き物語なのだから、その終焉も最後までを記さず、猫箱にしまってしまうのが良いのではあるまいか…？」`[\]
+lss s0_23,"fea","b11_defo2" ;1
+aspt2 xpos,s0_23,370
+flush 22
+msgwnd_non
+*d67683
+d `フェザリーヌは、自分以外に誰もいない書斎で、……誰にともなく、そう語る。`[\]
+*d67684
+d `もちろん、誰かが相槌を打つわけもない。`[\]
+*d67685
+d `しかしフェザリーヌには、それが聞こえたらしい。`[@]`{n}ウンウンと頷くと、にんまり笑う。`[\]
+lss s0_23,"fea","b11_defo1" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_fea
+*d67686
+d [lv 0*"50"*"85000195"]`「わかっている。`[@][lv 0*"50"*"85000196"]`もう少しだけを書き足し、そこで筆を置こう。`[@][lv 0*"50"*"85000197"]`……それで、そなたとはお別れだ」`[\]
+msgwnd_non
+*d67687
+d `フェザリーヌが、少し暗くせよと指を掲げてくるくる回す。`[\]
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_21,"black"
+aspt2 alpha,s0_21,150
+flush 5
+*d67688
+d `すると、書斎の明かりが、ゆっくりと消えていく……。`[\]
+lss s0_23,"fea","b11_defo2" ;1
+aspt2 xpos,s0_23,370
+flush 80
+msgwnd_fea
+*d67689
+d [lv 0*"50"*"85000198"]`「ほんの少しだけ休ませてはくれぬか。`[@][lv 0*"50"*"85000199"]`……その間は、我が猫、……もとい、我が巫女にお相手をさせよう……」`[\]
+textoff
+waits 167
+csp_slot s0_23
+csp_slot s0_21
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 2000
+seplay 1,47,71
+textoff
+waits 167
+lbg s0_3,"sub_r1ap"
+flush 1
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+bgmplay 110,71,0
+msgwnd_lam
+*d67690
+d2 [lv 0*"29"*"82200511"]`「あ痛たたたたたたたたたたッ、`[#][*][@][lv 0*"29"*"82200512"]`ヘタクソッ、もっと上手に縫ってー！」`[#][*][\]
+wait_on_d 0
+seplay 1,48,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d 1
+seplay 1,48,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_ber
+*d67691
+d [lv 0*"28"*"82100700"]`「……うっさいわね。`[@][lv 0*"28"*"82100701"]`手縫いが嫌なら、ミシンでやるわよ。`[@][lv 0*"28"*"82100702"]`だだだだって」`[\]
+msgwnd_lam
+*d67692
+d2 [lv 0*"29"*"82200513"]`「ミシンは嫌よー！`[#][*][@][lv 0*"29"*"82200514"]`　手縫いがいいー！`[@][lv 0*"29"*"82200515"]`　だからせめてもうちょっとやさしく……、痛い痛い！」`[#][*][\]
+wait_on_d 0
+seplay 2,48,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 1
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+csp_slot s0_10
+lss s0_9,"ber","a21_shian1" ;1
+flush 24
+msgwnd_ber
+*d67693
+d [lv 0*"28"*"82100703"]`「唾つけときゃ治るわよ」`[\]
+msgwnd_lam
+*d67694
+d2 [lv 0*"29"*"82200516"]`「キャン！！`[#][*][@][lv 0*"29"*"82200517"]`　予告なく舐めないでー！」`[\]
+wait_on_d 0
+seplay 1,47,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+csp_slot s0_9
+lss s0_24,"ber","a21_akuwarai2" ;1
+flush 80
+msgwnd_ber
+*d67695
+d2 [lv 0*"28"*"82100704"]`「今から畳針でぶっすり縫うわよ。`[@][#][*][lv 0*"28"*"82100705"]`マジで痛いから覚悟して。`[@][lv 0*"28"*"82100706"]`５、４、３、２、」`[\]
+wait_on_d 0
+seplay 1,4,71
+d_continue
+wait_on_d -1
+msgwnd_lam
+*d67696
+d2 [lv 0*"29"*"82200518"]`「そ、そういう予告は嫌ぁああぁーーー！！`[#][*][@][lv 0*"29"*"82200519"]`　あ、べ、ベルン、や、やめて、やめてったら、あぁー！！」`[#][*][\]
+wait_on_d 0
+seplay 1,48,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 1
+seplay 1,3,71
+seplay 1,47,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+seplay 2,13,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+seplay 3,48,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+csp_slot s0_24
+flush 22
+msgwnd_non
+*d67697
+d `と騒ぐ割には、仲睦まじい二人だった。`[\]
+textoff
+waits 167
+lbg s0_3,"sub_r1bp"
+flush 22
+*d67698
+d `最後の戦いで、ばらばらにされたラムダデルタは、ちゃんと生きていた。`[\]
+*d67699
+d `ただ困ったことに、ばらばらの状態でだ。`[\]
+*d67700
+d `だから、その腕や頭などを、ベルンカステルがちくちくと、針と糸で縫い合わせているのだ。`[\]
+*d67701
+d `まだ縫い合わせてもらえない左腕が自分はまだかまだかと、せわしなくベッドの上を、人差し指と中指でヨチヨチと歩き回っている。`[\]
+*d67702
+d `残すところはあと腕だけで、もうほとんど体は出来上がっているようだった。`[\]
+*d67703
+d `そこへバターンと威勢良くドアを開いて、ヱリカが帰ってくる。`[\]
+seplay 1,15,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"sub_r1bp"
+flush 24
+lss s0_10,"eri","a12_warai5" ;1
+aspt2 xpos,s0_10,550
+flush 24
+seplay 1,13,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_eri
+*d67704
+d [lv 0*"46"*"84500503"]`「ただいま帰りました、我が主ー！！`[@][lv 0*"46"*"84500504"]`　ごま塩、買って来ましたー！！」`[\]
+msgwnd_lam
+*d67705
+d [lv 0*"29"*"82200520"]`「……ごま塩って何？`[@][lv 0*"29"*"82200521"]`　まさか紅茶に入れる気…？」`[\]
+lss s0_9,"ber","a21_defo2" ;1
+flush 26
+msgwnd_ber
+*d67706
+d [lv 0*"28"*"82100707"]`「ヱリカの玩具よ。`[@][lv 0*"28"*"82100708"]`……ヱリカ、お箸は持ってきた？」`[\]
+seplay 1,4,71
+lss s0_10,"eri","a11_akuwarai5" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eri
+*d67707
+d2 [lv 0*"46"*"84500505"]`「はい、我が主！！`[@][lv 0*"46"*"84500506"]`　名探偵に虫眼鏡！`[@][#][*][lv 0*"46"*"84500507"]`　古戸ヱリカにお箸ですっ」`[\]
+wait_on_d 0
+seplay 1,20,71
+d_continue
+wait_on_d -1
+lss s0_9,"ber","a21_warai4" ;1
+flush 80
+msgwnd_ber
+*d67708
+d [lv 0*"28"*"82100709"]`「じゃあいい？`[@][lv 0*"28"*"82100710"]`　そのごま塩の中身をざらっと出して、お箸で、ごまと塩に分けなさい」`[\]
+lss s0_10,"eri","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_eri
+*d67709
+d [lv 0*"46"*"84500508"]`「はい、我が主！！`[@][lv 0*"46"*"84500509"]`　私の華麗なるお箸さばきを、どうかご覧下さいっ！！」`[\]
+textoff
+waits 167
+lss s0_10,"eri","a11_hanbeso1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+seplay 1,3,71
+csp_slot s0_10
+flush 23
+lss s0_9,"ber","a21_warai3" ;1
+flush 80
+msgwnd_ber
+*d67710
+d [lv 0*"28"*"82100711"]`「えぇ、がんばってね。`[@][lv 0*"28"*"82100712"]`……終わったら、ちゃんと袋に戻しておくのよ」`[\]
+msgwnd_lam
+*d67711
+d [lv 0*"29"*"82200522"]`「………あんた、またそーゆーことしてイジメてんの？」`[\]
+lss s0_9,"ber","a21_warai4" ;1
+flush 80
+msgwnd_ber
+*d67712
+d2 [lv 0*"28"*"82100713"]`「遊んでるのよ。失礼ね。`[@][#][*][lv 0*"28"*"82100714"]`………そうそう、ヱリカ。`[@][lv 0*"28"*"82100715"]`さっき郵便配達が来て、あんた宛の手紙を置いていったわ」`[\]
+wait_on_d 0
+lss s0_9,"ber","a21_defo2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"sub_r1bp"
+flush 24
+wait 500
+seplay 1,4,71
+lss s0_8,"eri","a12_warai5" ;1
+aspt2 xpos,s0_8,-370
+flush 1
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_eri
+*d67713
+d [lv 0*"46"*"84500510"]`「手紙？！`[@][lv 0*"46"*"84500511"]`　事件の予感がしますッ。`[@][lv 0*"46"*"84500512"]`言わないでっ、私が差出人を当てます！」`[\]
+seplay 1,1010,50
+lss s0_10,"ber","a21_shian1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_ber
+*d67714
+d2 [lv 0*"28"*"82100716"]`「………消印は天界ね。`[@][lv 0*"28"*"82100717"]`ドラノール辺りじゃない？`[@][lv 0*"28"*"82100718"]`　あんたたち、まだ親交があったのね、驚きだわ。`[@][#][*][lv 0*"28"*"82100719"]`……ただ消印があるだけで。`[@][lv 0*"28"*"82100720"]`ベルンカステルにはこの程度の推理が可能です」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_8
+lss s0_9,"eri","a11_gaman2" ;1
+flush 23
+seplay 1,47,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+msgwnd_eri
+*d67715
+d2 [lv 0*"46"*"84500513"]`「ピピピー！！`[@][lv 0*"46"*"84500514"]`　駄目です、我が主ぃ！`[@][#][*][lv 0*"46"*"84500515"]`　ヴァンダイン第９則！`[@][lv 0*"46"*"84500516"]`　探偵が複数あることを禁ズ！」`[\]
+wait_on_d 0
+csp_slot s0_9
+lss s0_24,"eri","b13_futeki1" ;1
+flush 10,167
+flush 1
+seplay 1,59,71
+seplay 2,2,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+csp_slot s0_24
+lss s0_9,"eri","a11_futeki1" ;1
+lss s0_10,"ber","a21_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d67716
+d [lv 0*"28"*"82100721"]`「……じゃあ、あんたが出てけばいいわけだわ。`[@][lv 0*"28"*"82100722"]`またね、名探偵ヱリカ」`[\]
+textoff
+waits 167
+csp_slot s0_10
+flush 23
+lss s0_9,"eri","a11_odoroki2" ;1
+flush 80
+msgwnd_eri
+*d67717
+d [lv 0*"46"*"84500517"]`「そんなぁああぁ、我が主ぃいいぃ、真実の魔女ヱリカ、ここにぃ！」`[\]
+textoff
+waits 167
+seplay 3,3,71
+csp_slot s0_9
+flush 23
+textoff
+waits 167
+lbg s0_3,"sub_r1bp"
+flush 2
+spriteset_enable 1
+lss s1_23,"lam","a11_odoroki4" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,150
+mask_set msk1,msk_test2,1
+seplay 1,48,71
+flush 2
+msgwnd_lam
+*d67718
+d [lv 0*"29"*"82200523"]`「…………あんたらって、仲いいのか悪いのか、未だによくわかんないわ」`[\]
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_ber
+*d67719
+d [lv 0*"28"*"82100723"]`「悪いに決まってるでしょ。`[@][lv 0*"28"*"82100724"]`私が愛してるのはあんただけよ」`[\]
+lss s0_9,"eri","a11_hanbeso2" ;1
+flush 1
+seplay 1,13,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+msgwnd_eri
+*d67720
+d2 [lv 0*"46"*"84500518"]`「そ、そんなぁああぁあ、我が主ぃいいいぃい！！`[@][#][*][lv 0*"46"*"84500519"]`　ラムダデルタ卿！`[@][lv 0*"46"*"84500520"]`　やはり私とあなたは相容れないようですね！」`[\]
+wait_on_d 0
+seplay 1,20,71
+lss s0_9,"eri","b13_ikari1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s1_23,"lam","a11_fuman1" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,150
+flush 80
+msgwnd_lam
+*d67721
+d [lv 0*"29"*"82200524"]`「何よ、あんた。`[@][lv 0*"29"*"82200525"]`……この大ラムダデルタを相手に、勝負する気ぃ？」`[\]
+csp -11
+csp msk1
+csp -10
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+seplay 1,20,71
+msgwnd_non
+*d67722
+d `ヱリカは、にかっと笑い、ベッドの上を歩き回っていたラムダデルタの左腕を捕まえる。`[\]
+textoff
+waits 167
+lbg s0_3,"sub_r1bp"
+lss s0_10,"eri","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 26
+seplay 1,47,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,100,1
+rumble 63,500
+gptwait quakexamp
+waits 167
+seplay 1,48,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,100,1
+rumble 63,500
+gptwait quakeyamp
+lss s0_10,"eri","a11_akuwarai5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eri
+*d67723
+d [lv 0*"46"*"84500521"]`「ここにラムダデルタ卿の腕があります。`[@][lv 0*"46"*"84500522"]`そしてここは、断面です」`[\]
+lss s0_10,"eri","a11_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_non
+*d67724
+d `ヱリカはにやにや笑いながら、指をわきわきさせる。`[\]
+msgwnd_lam
+*d67725
+d [lv 0*"29"*"82200526"]`「ちょ、……まさか、あんた………、」`[\]
+lss s0_10,"eri","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_eri
+*d67726
+d [lv 0*"46"*"84500523"]`「私のライバルには、こぉんなことが出来ます」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"sub_r1ap"
+flush 25
+msgwnd_lam
+*d67727
+d2 [lv 0*"29"*"82200527"]`「ぎゃッ、`[#][*][|][lv 0*"29"*"82200528"]`ぎゃわっはははっはっははははは、`[#][*][|][lv 0*"29"*"82200529"]`あひゃーひゃっひゃっひゃ、`[#][*][|][lv 0*"29"*"82200530"]`やぁめてぇえええぇくすぐったいいぃいいいぃ！！」`[#][*][\]
+wait_on_d 0
+seplay 1,13,71
+seplay 2,47,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 1
+seplay 1,12,71
+seplay 3,4,71
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,167,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d 2
+seplay 1,48,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+seplay 2,48,71
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,167,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d 3
+seplay 1,3,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,333,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+msgwnd_non
+*d67728
+d `……ラムダデルタの左腕の断面をこちょこちょとくすぐる。`[@]`どうやらそれは、ものすごいくすぐったいことらしかった。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d67729
+d `ちなみに、ラムダデルタのその断面は、綿飴の白いふわふわがはみ出した可愛いものだ。`[\]
+*d67730
+d `何しろ彼女の体は、甘いお菓子とちょっぴりのスパイスで出来ているのだから。`[\]
+*d67731
+d `断面は、決して怖いものではないのでご安心を。`[\]
+textoff
+waits 167
+lbg s0_3,"sub_r1ap"
+flush 22
+seplay 1,3,71
+*d67732
+d `我が主に続き、私もラムダデルタ卿に単機で勝ちました！`[@]`　そう叫びながら飛び回るヱリカに、がるるるるると吼えて威嚇するラムダデルタ。`[@]`呆れながらも、ちくちくと親友を縫うベルンカステル。`[\]
+*d67733
+d `それはとても和やかな風景だった…。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"sub_r1bp"
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d67734
+d [lv 0*"28"*"82100725"]`「それで？`[@][lv 0*"28"*"82100726"]`　手紙には何て？」`[\]
+spriteset_enable 1
+lss s1_23,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,-200
+mask_set msk1,msk_test2,1
+flush 80
+msgwnd_lam
+*d67735
+d [lv 0*"29"*"82200531"]`「ドラノールたちの近況でも書いてあんの？」`[\]
+csp -11
+csp msk1
+csp -10
+seplay 1,1010,71
+textoff
+waits 167
+lbg s0_3,"black"
+flush 64
+textoff
+waits 167
+lbg s0_3,"wsan_1c"
+lss s0_10,"ger","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 2
+msgwnd_eri
+*d67736
+d [lv 0*"46"*"84500524"]`「ガートルードさんは異端審問官に昇進したとか。`[@][lv 0*"46"*"84500525"]`そりゃーオメデトウゴザイマス、ぱちぱち。`[@][lv 0*"46"*"84500526"]`……へー、最近、猫に続いて、わにゃんを飼い始めたとか」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"sub_r1bp"
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_ber
+*d67737
+d [lv 0*"28"*"82100727"]`「…………わにゃんって何…？」`[\]
+spriteset_enable 1
+lss s1_23,"lam","a11_odoroki3" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,-200
+mask_set msk1,msk_test2,1
+flush 80
+msgwnd_lam
+*d67738
+d [lv 0*"29"*"82200532"]`「えー、ベルン知らないの？！　遅れてるぅ〜！`[@][lv 0*"29"*"82200533"]`　最近、ブームじゃないっ！`[@][lv 0*"29"*"82200534"]`　最近、私もメスのわにゃんを飼い出したのよ。`[@][lv 0*"29"*"82200535"]`金平糖も美味しく作れて最高よ？！」`[\]
+lss s0_8,"ber","a21_warai3ase" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d67739
+d [lv 0*"28"*"82100728"]`「……よくわかんないけど、今度からあんたの手作り菓子を食べるのは遠慮するようにするわ…」`[\]
+csp -11
+csp msk1
+csp -10
+seplay 1,1010,71
+textoff
+waits 167
+lbg s0_3,"black"
+flush 64
+textoff
+waits 167
+lbg s0_3,"wclo_1a"
+lss s0_10,"cor","a12_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 2
+msgwnd_eri
+*d67740
+d [lv 0*"46"*"84500527"]`「コーネリアさんは、………へー。`[@][lv 0*"46"*"84500528"]`審問官選考に格闘技段位が有利と知って、最近は格闘技を始めたとかっ。`[@][lv 0*"46"*"84500529"]`全然、想像がつきませんねー」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"sub_r1bp"
+spriteset_enable 1
+lss s1_23,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,-450
+mask_set msk1,msk_test2,1
+flush 22
+msgwnd_lam
+*d67741
+d [lv 0*"29"*"82200536"]`「格闘技ったって色々あるわよ。`[@][lv 0*"29"*"82200537"]`何、始めたの？」`[\]
+lss s0_10,"eri","a11_warai4" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_eri
+*d67742
+d [lv 0*"46"*"84500530"]`「キックボクシングに中国拳法だとか。`[@][lv 0*"46"*"84500531"]`絵羽の影響ですかね？」`[\]
+lss s0_8,"ber","a21_warai3" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_ber
+*d67743
+d [lv 0*"28"*"82100729"]`「………片足で立って戦いそうなイメージない？」`[\]
+lss s1_23,"lam","b21_warai2" ;1
+aspt2 xpos,s1_23,550
+aspt2 ypos,s1_23,-260
+aspritesetpt xpos,1,-450
+mask_set msk1,msk_test2,1
+flush 80
+msgwnd_lam
+*d67744
+d [lv 0*"29"*"82200538"]`「そうよねぇ。`[@][lv 0*"29"*"82200539"]`誰かさんが、片足立ちをずいぶん鍛えたもんねぇ」`[\]
+textoff
+waits 167
+lss s0_10,"eri","a11_odoroki1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+wait 500
+csp -11
+csp msk1
+csp -10
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+seplay 1,1010,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_3,"cit_5c"
+lss s0_9,"wil","a21_defo1" ;1
+flush 64
+msgwnd_eri
+*d67745
+d2 [lv 0*"46"*"84500532"]`「ウィルさんの近況も書いてありますよ。`[@][lv 0*"46"*"84500533"]`えー、意外ー！`[@][#][*][lv 0*"46"*"84500534"]`　ウィルさん、ＦＸで一山当てたらしくて、それで不動産買って、今は不動産収入で悠々自適だとか…！`[@][#][*][lv 0*"46"*"84500535"]`　最近はバドミントンやってるんですってー」`[\]
+wait_on_d 0
+seplay 1,5,71
+lbg s0_22,"white"
+flush 1
+lss s0_9,"wil","a11_niyari1" ;1
+csp_slot s0_22
+flush 22
+d_continue
+wait_on_d 1
+lss s0_8,"rio","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+lss s0_8,"rio","a11_akire1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+seplay 1,48,71
+lss s0_9,"wil","a11_itai1" ;1
+flush 1
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"sub_r1bp"
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-550
+lss s0_10,"eri","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,550
+spriteset_enable 1
+lss s1_23,"lam","a11_odoroki3" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,-450
+mask_set msk1,msk_test2,1
+flush 22
+wait 1000
+lss s0_8,"ber","a21_warai3ase" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_ber
+*d67746
+d [lv 0*"28"*"82100730"]`「……コーチが厳しそうね」`[\]
+lss s1_23,"lam","a11_futeki3" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,-450
+mask_set msk1,msk_test2,1
+flush 80
+msgwnd_lam
+*d67747
+d [lv 0*"29"*"82200540"]`「きっとおしりが腫れ上がってるわよ」`[\]
+lss s0_8,"ber","a21_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_ber
+*d67748
+d [lv 0*"28"*"82100731"]`「で、ドラノールは？」`[\]
+csp -11
+csp msk1
+csp -10
+seplay 1,1010,71
+textoff
+waits 167
+lbg s0_3,"black"
+flush 64
+textoff
+waits 167
+lbg s0_3,"mhal_3a"
+lss s0_10,"ger","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+lss s0_24,"dla","a11_komaru1" ;1
+flush 2
+msgwnd_eri
+*d67749
+d2 [lv 0*"46"*"84500536"]`「相変わらず、ハンコと`[#][*][|][lv 0*"46"*"84500537"]`ハンコと`[#][*][|][lv 0*"46"*"84500538"]`決済印と`[#][*][|][lv 0*"46"*"84500539"]`認印と、`[#][*][|][lv 0*"46"*"84500540"]`たまーにサインの日々だそうで`[#][*]`」`[\]
+wait_on_d 0
+seplay 1,48,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 1
+seplay 2,48,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d 2
+seplay 3,4,71
+agpt quakexcycle,17
+agpt quakexamp,30
+agpt quakexamp,0,167,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d 3
+seplay 1,13,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+seplay 2,20,71
+d_continue
+wait_on_d 4
+seplay 1,12,71
+agpt quakeycycle,17
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+seplay 1,57,71
+textoff
+waits 167
+lbg s0_26,"white"
+flush 1
+lss s0_24,"dla","a11b_warai2" ;1
+textoff
+waits 167
+csp_slot s0_26
+flush 22
+lss s0_10,"ger","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+seplay 2,3,71
+aspt2 xpos,s0_24,-1400,333,3
+sptwait2 xpos,s0_24
+seplay 1,20,71
+wait 500
+seplay 2,1006,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_22
+show_glass 0
+*d67750
+d [lv 0*"46"*"84500541"]`「自分がじきじきに出動するから、自分の管区でぜひ事件を起こしてほしいデスって書いてあります」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"sub_r1a"
+flush 22
+msgwnd_ber
+*d67751
+d [lv 0*"28"*"82100732"]`「起こしてやったら？`[@][lv 0*"28"*"82100733"]`　事件」`[\]
+msgwnd_lam
+*d67752
+d [lv 0*"29"*"82200541"]`「探偵が行くとこ事件ありって言うもんね」`[\]
+msgwnd_eri
+*d67753
+d [lv 0*"46"*"84500542"]`「まぁ、その内。`[@][lv 0*"46"*"84500543"]`気が向いたらイジメに行ってあげてもいいかもです。`[@][lv 0*"46"*"84500544"]`あぁ、あとシエスタ姉妹兵たちのことも書いてあります」`[\]
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 26
+msgwnd_ber
+*d67754
+d2 [lv 0*"28"*"82100734"]`「………待って。`[@][lv 0*"28"*"82100735"]`一度に聞きたくないわ。`[@][lv 0*"28"*"82100736"]`少しはもったいぶらなきゃ。`[@][#][*][lv 0*"28"*"82100737"]`……さぁ、出来た」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d -1
+spriteset_enable 1
+lss s1_23,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s1_23,460
+aspt2 ypos,s1_23,-120
+aspritesetpt xpos,1,-450
+mask_set msk1,msk_test2,1
+flush 22
+msgwnd_lam
+*d67755
+d [lv 0*"29"*"82200542"]`「あぁ、やっと右腕が生えたわ！`[@][lv 0*"29"*"82200543"]`　次っ、左腕をお願いね！」`[\]
+lss s0_10,"ber","a24_warai4" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_ber
+*d67756
+d [lv 0*"28"*"82100738"]`「その前にお茶にしましょ。`[@][lv 0*"28"*"82100739"]`……ヱリカ、紅茶の缶と、梅干の壷を用意してちょうだい」`[\]
+lss s0_8,"eri","a12_warai5" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_eri
+*d67757
+d [lv 0*"46"*"84500545"]`「はいっ、我が主！」`[\]
+csp -11
+csp msk1
+csp -10
+textoff
+waits 167
+lbg s0_3,"sub_r1bp"
+flush 2
+msgwnd_non
+*d67758
+d `航海者の魔女たちは、一つの旅を終えて、その翼を休める。`[\]
+*d67759
+d `また次なるカケラを探しに、新しい旅に出るために。`[\]
+*d67760
+d `今だけは紅茶の香りを楽しみながら、ひと時の休憩……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 2
+wait 1000
+lss s0_10,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_lam
+*d67761
+d [lv 0*"29"*"82200544"]`「今度はどこへ行く？」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"different_space_1a"
+lss s0_8,"ber","a21_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d67762
+d [lv 0*"28"*"82100740"]`「……あんたが北へ行くなら私は南へ」`[\]
+lss s0_10,"lam","a11_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_lam
+*d67763
+d [lv 0*"29"*"82200545"]`「じゃあ、ベルンが東へ行くなら、私は西へ行くわ」`[\]
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d67764
+d [lv 0*"28"*"82100741"]`「……また、こんな愉快な物語を見つけられるといいわね」`[\]
+lss s0_10,"lam","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_lam
+*d67765
+d [lv 0*"29"*"82200546"]`「今度は、ベルンが憎まれ役じゃないといいわねー」`[\]
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_ber
+*d67766
+d [lv 0*"28"*"82100742"]`「あら。`[@][lv 0*"28"*"82100743"]`悪役も楽しかったわよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_space_1c"
+flush 22
+msgwnd_lam
+*d67767
+d [lv 0*"29"*"82200547"]`「……次は、どんな物語を見つけられるかしらね」`[\]
+msgwnd_ber
+*d67768
+d [lv 0*"28"*"82100744"]`「そして、どんな物語で再会できるのかしら」`[\]
+msgwnd_lam
+*d67769
+d [lv 0*"29"*"82200548"]`「愛し合う二人に、カケラの海は狭いわ」`[\]
+msgwnd_ber
+*d67770
+d [lv 0*"28"*"82100745"]`「天井桟敷」`[\]
+msgwnd_lam
+*d67771
+d [lv 0*"29"*"82200549"]`「カケラの海は広大だわ」`[\]
+msgwnd_ber
+*d67772
+d [lv 0*"28"*"82100746"]`「殻の中の幽霊」`[\]
+textoff
+waits 167
+lbg s0_3,"different_space_1a"
+flush 2
+lss s0_10,"lam","a11_akuwarai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_lam
+*d67773
+d [lv 0*"29"*"82200550"]`「いつか会えるわよ。`[@][lv 0*"29"*"82200551"]`また何かのなく頃に」`[\]
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d67774
+d [lv 0*"28"*"82100747"]`「………いいじゃない。`[@][lv 0*"28"*"82100748"]`それにしましょ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+wait 1000
+skip_off
+set_window_simple 80
+msgwnd_non
+*d67775
+d2 `{a:c:`[lv 0*"00"*"awase8028_o"][ak][text_speed_t 5]`「「いつか会えるわ。また何かのなく頃に」」`[#][*]`}`[\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"different_space_2c"
+flush 2
+wait 1000
+*d67776
+d2 `{a:c:`[lv 1*"28"*"82100750"][lv 0*"29"*"82200553"][ak][text_speed_t 5]`あっははははははははははは……。`[#][*]`}`[\]
+wait_on_d 0
+seplay 1,37,71
+seplay 2,37,71
+waitvoice
+d_continue
+wait_on_d -1
+*d67777
+d2 `{a:c:`[ak][text_speed_t 5]`魔女たちの楽しそうな声が遠退いていく。`[#][*]`。}`[\]
+wait_on_d 0
+wait 1667
+d_continue
+wait_on_d -1
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"black"
+show_whirl
+*d67778
+d2 `{a:c:`[lv 0*"00"*"awase8029_o"][ak][text_speed_t 5]`さよなら、みんな。`[#][*]`{n}`[|][lv 0*"00"*"awase8030_o"]`また何かの、なく頃に。`[#][*]`}`[\]
+wait_on_d 0
+waitvoice
+d_continue
+wait_on_d 1
+waitvoice
+d_continue
+wait_on_d -1
+wait 1000
+set_name_window_non
+textoff
+waits 167
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 8
+textoff
+seplay 3,52,71
+seplay 2,52,71
+textoff
+waits 167
+lbg s0_3,"black"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_1,"white"
+lbg s1_3,"white"
+csp_slot s1_1
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+textoff
+waits 167
+lbg s0_3,"black"
+flush 18,3000,msk_1
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+wait 3000
+skip_on
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+ch_done flag_scenario_8_tea
+*teatime_8_end
+goto *end_game

@@ -1,0 +1,2133 @@
+*umi7_9
+;新しき生活
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_7_9
+mov $name_chapter_save, "7_09"
+~
+new_chapter date_scenario_7_9,scenario_7_9
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"the_3a"
+flush 2
+wait 1000
+seplay 2,77,50
+textoff
+waits 167
+lbg s0_3,"the_3b"
+flush 2
+wait 1000
+seplay 3,77,71
+textoff
+waits 167
+lbg s0_3,"the_3c"
+flush 2
+wait 1000
+seplay 1,77,71
+textoff
+waits 167
+lbg s0_3,"the_3d"
+flush 2
+wait 1000
+seplay 2,77,100
+textoff
+waits 167
+lbg s0_3,"the_3e"
+flush 2
+textoff
+waits 167
+lbg s0_3,"white"
+flush 42
+textoff
+seplay 1,52,71
+textoff
+waits 167
+lbg s0_3,"the_1a"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_1,"white"
+lbg s1_3,"white"
+csp_slot s1_1
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+bgmplay 172,71,0
+seplay 1,76,100
+wait 1500
+textoff
+waits 167
+lbg s0_3,"the_1b"
+flush 18,1000,msk_right
+wait 2000
+textoff
+waits 167
+lbg s0_3,"the_2a"
+flush 18,1000,msk_right
+wait 3000
+lss s0_9,"cur","a11_nayamu1" ;1
+flush 4
+wait 3500
+gstc 69
+*d53255
+d [lv 0*"55"*"75500002"]`「………聞け。`[@][lv 0*"55"*"75500003"]`我こそは我にして我等なり。`[@][lv 0*"55"*"75500004"]`我が語るは我等の物語。`[@][lv 0*"55"*"75500005"]`されど此処は聞く者なき硝子とコルクに封ぜられし小さな世界。`[@][lv 0*"55"*"75500006"]`それは誰の目にも触れることなく、我が物語の全てを封じて、`[@][lv 0*"55"*"75500007"]`我が心の海を揺蕩いて海の藻屑と消えていく……」`[\]
+textoff
+waits 167
+csp_slot s0_9
+flush 2
+wait 500
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+wait 500
+seplay 3,47,71
+lss s0_10,"fur","a11_warai3" ;1
+aspt2 xpos,s0_10,550
+flush 66
+msgwnd_fur
+*d53256
+d [lv 0*"52"*"75200001"]`「あぁ、ここは何処なの？！`[@][lv 0*"52"*"75200002"]`　そして私は誰なの？！」`[\]
+seplay 2,48,71
+lss s0_8,"zep","a11_warai6" ;1
+aspt2 xpos,s0_8,-550
+flush 66
+msgwnd_zep
+*d53257
+d [lv 0*"51"*"75100001"]`「ならば聞こう！`[@][lv 0*"51"*"75100002"]`　どこがいい？　誰がいい？！」`[\]
+lss s0_10,"fur","a11_warai7" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_fur
+*d53258
+d [lv 0*"52"*"75200003"]`「私をやさしく包んでくれる場所ならば何処だっていいわ！`[@][lv 0*"52"*"75200004"]`　やさしくしてくれるなら、自分が誰だっていいわ！」`[\]
+lss s0_8,"zep","a11_warai5" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_zep
+*d53259
+d [lv 0*"51"*"75100003"]`「そうさ、僕たちには！」`[\]
+lss s0_10,"fur","a11_warai5" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_fur
+*d53260
+d [lv 0*"52"*"75200005"]`「私たちには！」`[\]
+textoff
+waits 167
+lbg s0_22,"black"
+flush 1
+textoff
+waits 167
+seplay 1,20,71
+waits 167
+seplay 2,20,71
+waits 167
+seplay 3,20,71
+wait 333
+seplay 1,2,100
+seplay 2,37,100
+seplay 3,54,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+lss s0_10,"zep","a13_warai3" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"fur","a13_warai3" ;1
+aspt2 xpos,s0_8,-550
+flush 22
+msgwnd_non
+*d53261
+d [lv 0*"00"*"awase7003_o"]`「「何処で誰かなんて、些細なことなのだから！！」」`[\]
+seplay 1,76,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_10,"cur","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_cur
+*d53262
+d [lv 0*"55"*"75500008"]`「そう。`[@][lv 0*"55"*"75500009"]`我等にとってそれは、とてもとても些細なこと。`[@][lv 0*"55"*"75500010"]`少なくとも、その日を迎えるまでは。`[@][lv 0*"55"*"75500011"]`なぜに我等は新しき運命に投ぜられねばならぬのか？`[@][lv 0*"55"*"75500012"]`　それは突然にして唐突なる運命の宣告」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"the_1e"
+flush 26
+seplay 1,48,71
+lss s0_8,"zep","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 66
+msgwnd_zep
+*d53263
+d [lv 0*"51"*"75100005"]`「それは僕が望んだ運命じゃない」`[\]
+seplay 2,47,71
+lss s0_9,"fur","a11_warai1" ;1
+flush 66
+msgwnd_fur
+*d53264
+d [lv 0*"52"*"75200007"]`「でも躍らせたわ、自分の胸を…！」`[\]
+csp_slot s0_8
+lss s0_10,"zep","a11_majime2" ;1
+aspt2 xpos,s0_10,550
+flush 63
+msgwnd_zep
+*d53265
+d [lv 0*"51"*"75100006"]`「新しい運命は僕を何処へ誘うのか？！」`[\]
+csp_slot s0_9
+lss s0_8,"fur","a11_warai4" ;1
+aspt2 xpos,s0_8,-550
+flush 64
+msgwnd_fur
+*d53266
+d [lv 0*"52"*"75200008"]`「何処へだって構わないわ！」`[\]
+textoff
+waits 167
+seplay 1,20,71
+waits 167
+seplay 2,20,71
+waits 167
+seplay 3,20,71
+wait 500
+seplay 1,2,100
+seplay 2,37,100
+seplay 3,54,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+lss s0_10,"fur","a12_warai7" ;1
+aspt2 xpos,s0_10,550
+lss s0_8,"zep","a12_warai7" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_non
+*d53267
+d [lv 0*"00"*"awase7004_o"]`「「其処が、僕たちに、私たちにとって、やさしい場所でさえあるならば…！！」」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2a"
+lss s0_9,"cur","a11_nayamu1" ;1
+flush 22
+msgwnd_cur
+*d53268
+d [lv 0*"55"*"75500013"]`「親を持たぬ悲しき子供たちが集いし仮の住処にもたらされるは、`[@][lv 0*"55"*"75500014"]`神の救いの報せか、新しき運命にて弄ぶ悪魔のゲームへの誘いなのか。`[@][lv 0*"55"*"75500015"]`我等にはそれを知る由もなし」`[\]
+lss s0_9,"cur","a11_hoshin1star" ;1
+flush 80
+*d53269
+d [lv 0*"55"*"75500016"]`「されど我等は信じたい。`[@][lv 0*"55"*"75500017"]`それが、神の救いが差し伸べられたという、福音の報せであると、信じたい」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"the_2b"
+lss s0_10,"fur","a11_majime3" ;1
+aspt2 xpos,s0_10,550
+flush 64
+msgwnd_fur
+*d53270
+d [lv 0*"52"*"75200010"]`「でも、どうしてそれが私に？`[@][lv 0*"52"*"75200011"]`　私には信仰も何もない！」`[\]
+lss s0_8,"zep","a11_majime2" ;1
+aspt2 xpos,s0_8,-550
+flush 63
+msgwnd_zep
+*d53271
+d [lv 0*"51"*"75100008"]`「ならこれは福音じゃない、悪魔の誘いさ！」`[\]
+lss s0_24,"cur","a11_nayamu1" ;1
+flush 22
+msgwnd_cur
+*d53272
+d [lv 0*"55"*"75500018"]`「されど我等、運命に逆らえる由もなし。`[@][lv 0*"55"*"75500019"]`あぁ、我は我にして我等なり。`[@][lv 0*"55"*"75500020"]`願わくば、新しき運命が我等を祝福せんことを。`[@][lv 0*"55"*"75500021"]`時は西暦１９７６年４月。`[@][lv 0*"55"*"75500022"]`春を語るにはあまりに寒き頃のこと。`[@][lv 0*"55"*"75500023"]`新しき異郷は何ら変わることなく、朽ちた空気と隙間風で我等を苛むのである……」`[\]
+textoff
+waits 167
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_1e"
+flush 22
+wait 1000
+textoff
+waits 167
+lbg s0_3,"the_1a"
+flush 22
+wait 1000
+seplay 1,77,90
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+wait 1000
+seplay 1,76,71
+wait 2000
+textoff
+waits 167
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"story_list1"
+flush 22
+lv 0,"55","75500024"
+waitvoice
+lv 0,"55","75500025"
+waitvoice
+wait 5000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+seplay 2,17,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 10
+wait 2000
+seplay 3,22,71
+textoff
+waits 167
+lbg s0_3,"m_o1af"
+color_mod2 s0_3,#ffffff
+show_whirl
+wait 1000
+bgmplay 173,71,0
+textoff
+waits 167
+lbg s0_3,"m_o1af"
+flush 2
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+seplay 1,17,71
+textoff
+waits 167
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+flush 10
+wait 2000
+textoff
+waits 167
+lbg s0_3,"mhal_2co"
+flush 4
+wait 3000
+lss s0_10,"nat","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_nat
+*d53273
+d [lv 0*"03"*"70900015"]`「以上が、当家のルールです。`[@][lv 0*"03"*"70900016"]`厳しいですが、当家で躾けられたことが、皆さんの将来にきっと役立つものと信じています」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_1,"mhal_1a_bg"
+lbg s0_3,"mhal_1a"
+flush 25
+msgwnd_non
+*d53274
+d [lv 0*"00"*"awase7005_o"]`「「「はい、奥様」」」`[\]
+*d53275
+d `この４月より、新しく迎えられた使用人たちが、声を揃える。`[\]
+*d53276
+d `規則が窮屈なのは、福音の家も右代宮家も変わらない。`[\]
+*d53277
+d `しかしここでは、とても大きな給金がもらえる。`[@]`{n}そして、再就職に当たっては強力なバックアップをしてくれた。`[\]
+*d53278
+d `右代宮家で働き、お金を貯めて、良い会社に就職を斡旋してもらい、新しい幸せな人生を切り拓く。`[\]
+*d53279
+d `……それが福音の家のみんなが描く、もっとも現実的な夢だった。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d53280
+d `しかし、誰もが右代宮家の使用人になれるわけではない。`[@]`{n}品行方正で成績優秀な子しか、推薦はされない。`[\]
+*d53281
+d `なので、絶対に福音の家を出て行って幸せになってやると願う子たちは、皆、熱心に勉強に励んでいた……。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_2co"
+lss s0_9,"nat","a11_majime1" ;1
+flush 2
+lss s0_9,"nat","a11_zutuu1" ;1
+flush 80
+msgwnd_nat
+*d53282
+d [lv 0*"03"*"70900017"]`「では、これで今日はおしまいです。`[@][lv 0*"03"*"70900018"]`明日からは早いですよ。`[@][lv 0*"03"*"70900019"]`消灯時間を守るように。`[@][lv 0*"03"*"70900020"]`解散」`[\]
+msgwnd_non
+*d53283
+d [lv 0*"00"*"awase7006"]`「「「はい、奥様。`[@][lv 0*"00"*"awase7007"]`ありがとうございます」」」`[\]
+textoff
+waits 167
+csp_slot s0_9
+flush 4
+*d53284
+d `夏妃の姿が見えなくなるまで頭を下げ続けていた新しい使用人たちは、`[@]`先輩使用人が頭を上げたのに倣い、頭を上げる。`[\]
+textoff
+waits 167
+lbg s0_3,"mhal_1co"
+lss s0_8,"rg1","e21_fuman2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+*d53285
+d [lv 0*"38"*"72300004"]`「じゃあ、今日はこれでおしまいよ。`[@][lv 0*"38"*"72300005"]`明日からはシフト通り。`[@][lv 0*"38"*"72300006"]`奥様は時間に厳しい方よ。`[@][lv 0*"38"*"72300007"]`あんたらが寝坊したら私の責任にされるわ。`[@][lv 0*"38"*"72300008"]`寝坊したら蹴り起こしてやる。`[@][lv 0*"38"*"72300009"]`いいわね！」`[\]
+*d53286
+d `先輩使用人ももちろん、福音の家出身の先輩だ。`[@]`{n}彼女は２年前にここへ来たらしい。`[\]
+*d53287
+d `だから、私以外の年上の新入りたちは、彼女と面識があるようだった。`[\]
+*d53288
+d `奥様厳しそうっすねー、マジ疲れましたー、きゃっきゃと騒いでいる。`[\]
+csp_slot s0_8
+lss s0_9,"rg1","e11_fuman1" ;1
+flush 23
+*d53289
+d [lv 0*"38"*"72300010"]`「……ところでこの子、何者？`[@][lv 0*"38"*"72300011"]`　どうして使用人に選ばれたわけ？」`[\]
+*d53290
+d `先輩が私を指差し、怪訝そうな目で周りに尋ねる。`[\]
+*d53291
+d `確かに怪訝にも思うだろう。`[@]`普通、使用人たちは中卒か高卒を機に、使用人になる。`[\]
+*d53292
+d `でも私は、これから小学校だった。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+*d53293
+d `他の使用人たちはこれから毎日、通常のシフトに従い、使用人をすることになる。`[\]
+*d53294
+d `しかし私は、平日はお嬢様と一緒に新島の小学校に通い、`[@]`空いた時間と、土日だけお勤めをするのだ。`[\]
+textoff
+waits 167
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+flush 6
+*d53295
+d `それは、これまでに例のない、異例中の異例だった。`[\]
+*d53296
+d `……厳しい選抜を潜り抜けて推薦を得た彼らにとって、`[@]`私が納得いかない存在であるのは、一目瞭然だった。`[\]
+lss s0_10,"rg1","e11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+*d53297
+d [lv 0*"38"*"72300012"]`「……あんたについては、学業最優先でと奥様からも源次さまからも言われてるわ。`[@][lv 0*"38"*"72300013"]`でもお給金は出るんですってよ。`[@][lv 0*"38"*"72300014"]`意味わかんない」`[\]
+*d53298
+d `陰口なら、陰で言ってくれればいいのに。`[@]`……先輩ははばかることなく、堂々と言う。`[\]
+lss s0_10,"rg1","e21_komaru1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+*d53299
+d [lv 0*"38"*"72300015"]`「こいつ、そんなに勉強できるの？`[@][lv 0*"38"*"72300016"]`　天才児？」`[\]
+lss s0_8,"rg2","e11_fuman1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+*d53300
+d [lv 0*"39"*"72400004"]`「全然知んないです」`[\]
+lss s0_9,"rg3","e11_fuman1" ;1
+flush 10,167
+*d53301
+d [lv 0*"40"*"72500004"]`「なんか病弱とかって、隔離されてたらしくて、家でも全然知りませんでしたし」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"mhal_2co"
+lss s0_8,"rg1","e11_fuman1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+*d53302
+d [lv 0*"38"*"72300017"]`「……ここに来た以上、連帯責任なんだからね。`[@][lv 0*"38"*"72300018"]`あんたがドジれば、福音の家の全員のドジだと思われるのよ。`[@][lv 0*"38"*"72300019"]`せいぜい気合入れなさいよね」`[\]
+textoff
+waits 167
+agpt centrey,540
+agpt ypos,30,667
+gptwait ypos
+agpt ypos,0,667
+gptwait ypos
+*d53303
+d `私は弱々しく頷く。`[@]`……こんなにも年上の人に凄まれることなんて、経験がなかったので、とても怖かった。`[\]
+lss s0_10,"sha","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_sha
+*d53304
+d [lv 0*"15"*"70500092"]`「大丈夫よ。`[@][lv 0*"15"*"70500093"]`私も一緒だから。`[@][lv 0*"15"*"70500094"]`二人でがんばろ。`[@][lv 0*"15"*"70500095"]`ね」`[\]
+msgwnd_non
+*d53305
+d `紗音はそう言って、そっと微笑んでくれた…。`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 2,77,100
+textoff
+waits 167
+lbg s0_3,"the_3e"
+flush 1
+wait 3000
+bgmplay 174,71,0
+textoff
+waits 167
+lbg s0_3,"the_2a"
+flush 26
+seplay 1,48,71
+lss s0_10,"zep","a11_warai5" ;1
+aspt2 xpos,s0_10,370
+flush 66
+msgwnd_zep
+*d53306
+d [lv 0*"51"*"75100009"]`「紗音は怖くないのかい？`[@][lv 0*"51"*"75100010"]`　この家は何だか厳しそう…！」`[\]
+seplay 1,47,71
+lss s0_8,"fur","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 66
+msgwnd_fur
+*d53307
+d [lv 0*"52"*"75200012"]`「うぅん、全然怖くなんかないよ。`[@][lv 0*"52"*"75200013"]`あなたが怖いと思うから、怖くなってしまうだけ」`[\]
+lss s0_10,"zep","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_zep
+*d53308
+d [lv 0*"51"*"75100011"]`「じゃあ、楽しいと思ったら、楽しくなるのかな？！」`[\]
+lss s0_8,"fur","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fur
+*d53309
+d [lv 0*"52"*"75200014"]`「うん、楽しくなるよ。`[@][lv 0*"52"*"75200015"]`だからここでも、笑顔でがんばろう」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_9,"cur","a11_nayamu1" ;1
+flush 22
+msgwnd_cur
+*d53310
+d [lv 0*"55"*"75500026"]`「……紗音は、福音の家からの唯一の友人だった。`[@][lv 0*"55"*"75500027"]`彼女はしっかり者で人気者。`[@][lv 0*"55"*"75500028"]`我とは大違い。`[@][lv 0*"55"*"75500029"]`我は呆れるくらいにのろまで要領が悪くて、誰も友人になどなってはくれなかった」`[\]
+lss s0_9,"cur","a11_hoshin1star" ;1
+flush 80
+*d53311
+d [lv 0*"55"*"75500032"]`「そんな我が、福音の家でがんばってこれたのは、彼女がいつも励ましてくれたからだ。`[@][lv 0*"55"*"75500033"]`……なら、ここでも彼女と一緒に頑張れるだろう」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"the_2b"
+lss s0_8,"zep","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_zep
+*d53312
+d [lv 0*"51"*"75100012"]`「さぁ、早く寝支度をして休もう？`[@][lv 0*"51"*"75100013"]`　私は明日からすぐにお仕事だけれど、あなたは別のお仕事があるわ」`[\]
+lss s0_10,"fur","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 66
+msgwnd_fur
+*d53313
+d [lv 0*"52"*"75200016"]`「そう、私はみんなと違って、学校に通わなければならない。`[@][lv 0*"52"*"75200017"]`六軒島で泊まる時は、学校の支度をして、船着場でお嬢様をお迎えしなくちゃいけない」`[\]
+lss s0_8,"zep","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_zep
+*d53314
+d [lv 0*"51"*"75100014"]`「お嬢様、元気そうな人だったね。`[@][lv 0*"51"*"75100015"]`仲良くなれるといいね！」`[\]
+lss s0_10,"fur","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_fur
+*d53315
+d [lv 0*"52"*"75200018"]`「な、仲良くなれるかな…。`[@][lv 0*"52"*"75200019"]`私、学校は怖いよ、緊張するよ…！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_9,"cur","a11_nayamu1" ;1
+flush 24
+wait 500
+lss s0_9,"cur","a11_majime1" ;1
+flush 80
+msgwnd_cur
+*d53316
+d [lv 0*"55"*"75500034"]`「……福音の家での生活に慣れていた我にとっては、規則緩き学校など気楽なもの。`[@][lv 0*"55"*"75500035"]`しかし、慣れるまでは、全てが新しく、そして不安なのだった」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 2
+wait 2000
+meplay 1,2,50
+textoff
+waits 167
+lbg s0_3,"beach_2af"
+flush 22
+vol_me 1,-1,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"forest_s1af"
+flush 22
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_1,"mhal_2a_bg"
+lbg s0_3,"mhal_2a"
+flush 24
+wait 2000
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"m_o1af"
+flush 24
+msgwnd_non
+*d53317
+d `六軒島の新しい生活について、説明が要るだろう。`[\]
+*d53318
+d `ここでの日々は、福音の家での、温かいながらも澱んで滞った日々とはまったく違う。`[\]
+*d53319
+d `私には六軒島の右代宮家に仕える使用人としての日々と、新島の小学校に通う日々が同時に与えられた。`[\]
+*d53320
+d `慌しくて忙しくて、気の緩む間もない新しき日々の幕開けである。`[\]
+textoff
+waits 167
+lbg s0_3,"m1f_p1df"
+flush 22
+*d53321
+d `福音の家と違い、ここでは毎日を同じベッドでは寝られない。`[\]
+*d53322
+d `週の半分は六軒島のお屋敷の、使用人控え室のベッドで休む。`[\]
+*d53323
+d `放課後にお嬢様と一緒に下校してお屋敷へ行き、そこで使用人としてのお勤めをして、`[@]`そのまま泊まって翌朝、またお嬢様と一緒に登校するのだ。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"dor_p1b"
+flush 22
+wait 2000
+seplay 1,15,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+textoff
+waits 167
+lbg s0_1,"dor_r1b_bg"
+lbg s0_3,"dor_r1b"
+flush 22
+*d53324
+d `お勤めのない日は新島の寮に帰り、自分に与えられた部屋で自由に過ごすことが出来る。`[\]
+*d53325
+d `一応、大人の寮母がいて食事や消灯の時間を厳しく管理していたが、`[@]`福音の家でそういう生活には慣れているので、苦にはならなかった。`[\]
+*d53326
+d `部屋は、少し大きめのものでそれぞれが３人部屋になっていた。`[\]
+*d53327
+d `しかし、人数の関係か幸運なのか、我は３人部屋にはならなかった。`[\]
+lss s0_8,"sha","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_sha
+*d53328
+d [lv 0*"15"*"70500096"]`「寮でのお部屋も一緒だね」`[\]
+msgwnd_non
+*d53329
+d `紗音との２人での生活なら、やっていけそうだった…。`[\]
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+seplay 1,77,71
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_1
+lbg s0_3,"white"
+flush 29
+textoff
+waits 167
+lbg s0_3,"the_1e"
+flush 2
+wait 3000
+bgmplay 165,71,0
+textoff
+waits 167
+lbg s0_3,"the_2a"
+lss s0_10,"nat","a11_zutuu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_nat
+*d53330
+d [lv 0*"03"*"70900021"]`「えぇ。`[@][lv 0*"03"*"70900022"]`福音の家から毎年、何人かの使用人が入れ替わりでやって来ていました」`[\]
+lss s0_8,"cla","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_cla
+*d53331
+d [lv 0*"02"*"70800017"]`「あれに関しては、親父殿が先方と決めて勝手にやっていたことだからね。`[@][lv 0*"02"*"70800018"]`私たちには、何も口出し出来なかったよ」`[\]
+lss s0_10,"nat","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_nat
+*d53332
+d [lv 0*"03"*"70900023"]`「身寄りのない子供たちを当家が厳しく躾け、そして社会へ羽ばたいて行くのを応援するのが、`[@][lv 0*"03"*"70900024"]`富める右代宮家の社会への義務と思っていましたから」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2b"
+flush 24
+lss s0_8,"fur","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 66
+msgwnd_fur
+*d53333
+d [lv 0*"52"*"75200020"]`「どんな子たちが右代宮家へ来ていたのかしら？」`[\]
+lss s0_10,"zep","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 66
+msgwnd_zep
+*d53334
+d [lv 0*"51"*"75100016"]`「きっと品行方正！`[@][lv 0*"51"*"75100017"]`　真面目で良い子で可愛い子たちさ！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2a"
+lss s0_8,"nat","a11_zutuu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_nat
+*d53335
+d [lv 0*"03"*"70900025"]`「ぎらぎらとした、ハイエナみたいな子が多かった印象です」`[\]
+lss s0_9,"cla","a14_komaru1" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_cla
+*d53336
+d2 [lv 0*"02"*"70800019"]`「上昇志向が強かった、と言いたまえ。`[@][lv 0*"02"*"70800020"]`身寄りのない気の毒な子たちだ。`[@][#][*][lv 0*"02"*"70800021"]`貴重な機会を踏み台に、自分の人生を必ず掴み取ってやろうという気概に溢れていたよ」`[\]
+wait_on_d 0
+lss s0_9,"cla","a14_defo1" ;1
+z_order_override2 s0_9,s0_7
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"the_1d"
+lss s0_10,"fur","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_fur
+*d53337
+d [lv 0*"52"*"75200021"]`「みんな、学校生活と使用人生活を両立してたの？」`[\]
+lss s0_9,"zep","a11_warai2" ;1
+flush 24
+msgwnd_zep
+*d53338
+d [lv 0*"51"*"75100018"]`「それは大変だね！`[@][lv 0*"51"*"75100019"]`　ほとんど働けやしない！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_8,"nat","a11_zutuu1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_nat
+*d53339
+d [lv 0*"03"*"70900026"]`「学校に通いながら働く子など、あの子以前には前例もありませんでした」`[\]
+lss s0_10,"cla","a11_nayamu2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_cla
+*d53340
+d [lv 0*"02"*"70800022"]`「正直、最初の挨拶の時に驚いたよ。`[@][lv 0*"02"*"70800023"]`明らかに幼かった。`[@][lv 0*"02"*"70800024"]`他の子たちは１６歳から１８歳くらいなのだが、その子だけはさらに１０歳は幼く見えた」`[\]
+lss s0_8,"nat","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_nat
+*d53341
+d [lv 0*"03"*"70900027"]`「福音の家から来る若過ぎる使用人は、あくまでも社会勉強として当家に訪れているのであって、`[@][lv 0*"03"*"70900028"]`そもそも、使用人としての腕前はあまり期待していません」`[\]
+lss s0_10,"cla","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_cla
+*d53342
+d [lv 0*"02"*"70800025"]`「そうだな。`[@][lv 0*"02"*"70800026"]`やはり大人の、年季の入った使用人たちに比べると、どうしても頼りないものだ」`[\]
+lss s0_8,"nat","a11_zutuu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_nat
+*d53343
+d [lv 0*"03"*"70900029"]`「それが、未就学の子を受け入れるなんて。`[@][lv 0*"03"*"70900030"]`家事はおろか、社会勉強どころか義務教育もまだではありませんか。`[@][lv 0*"03"*"70900031"]`お父様にどんなお考えがあったのか存じませんが、明らかにおかしいと思いました」`[\]
+lss s0_10,"cla","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_cla
+*d53344
+d [lv 0*"02"*"70800027"]`「親父殿には申し上げたさ。`[@][lv 0*"02"*"70800028"]`せめて中学を出るまでは福音の家で学ばせるべきではないかとね」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"the_2b"
+lss s0_10,"fur","a11_warai4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_fur
+*d53345
+d [lv 0*"52"*"75200022"]`「そうしたら、金蔵は何て？」`[\]
+seplay 2,48,71
+lss s0_8,"zep","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_zep
+*d53346
+d [lv 0*"51"*"75100020"]`「決まってるさ、こう答える」`[\]
+textoff
+waits 167
+seplay 1,20,71
+waits 167
+seplay 2,20,71
+waits 167
+seplay 3,20,71
+wait 500
+seplay 1,2,100
+seplay 2,37,100
+seplay 3,54,100
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+textoff
+waits 167
+csp_slot s0_22
+lss s0_10,"zep","a12_warai3" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"fur","a12_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 2
+msgwnd_non
+*d53347
+d [lv 0*"00"*"awase7008"]`「「おお、ベアトリーチェ〜〜！！」」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_10,"cla","a14_akuwarai2" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_cla
+*d53348
+d [lv 0*"02"*"70800029"]`「はっはっは…。`[@][lv 0*"02"*"70800030"]`当時はもうすっかりオカルトかぶれの書斎篭りさ。`[@][lv 0*"02"*"70800031"]`余計なことを言えば、我が思考の旅の邪魔をするなと怒鳴られる」`[\]
+lss s0_9,"nat","a11_tukare1" ;1
+flush 24
+msgwnd_nat
+*d53349
+d [lv 0*"03"*"70900032"]`「お父様のお決めになることは絶対ですから。`[@][lv 0*"03"*"70900033"]`……しかし、あの子についてだけは、腑に落ちませんでした」`[\]
+lss s0_10,"cla","a11_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_cla
+*d53350
+d [lv 0*"02"*"70800032"]`「福音の家にも問い合わせたさ。`[@][lv 0*"02"*"70800033"]`そしたら源次さんに聞いてくれという。`[@][lv 0*"02"*"70800034"]`源次さんに聞いたら、お館様に聞いてくれという」`[\]
+lss s0_25,"zep","a11_warai5" ;1
+aspt2 xpos,s0_25,-550
+flush 23
+msgwnd_zep
+*d53351
+d [lv 0*"51"*"75100022"]`「お館様に聞いたら、ベアトリーチェ〜と言う！」`[\]
+csp_slot s0_9
+lss s0_9,"fur","a11_warai1" ;1
+flush 23
+msgwnd_fur
+*d53352
+d [lv 0*"52"*"75200024"]`「あはははは！`[@][lv 0*"52"*"75200025"]`　真実は誰にもわからないのね！」`[\]
+lss s0_10,"cla","a11_nayamu1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_cla
+*d53353
+d [lv 0*"02"*"70800035"]`「島に子供は朱志香しかいない。`[@][lv 0*"02"*"70800036"]`使用人たちはよく娘と遊んでくれたようだが、やはり娘は歳の近い友人を望んでいたよ。`[@][lv 0*"02"*"70800037"]`学校だけでなく、家でも遊べる友人をね」`[\]
+csp_slot s0_25
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"the_2a"
+lss s0_8,"nat","a11_tukare1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_nat
+*d53354
+d2 [lv 0*"03"*"70900034"]`「……朱志香を不憫に思い、お父様が気を利かせたに違いないと、私も思うには思いました。`[@][#][*][lv 0*"03"*"70900035"]`……しかし、それなら私たちにも相談していただきたいとは思いませんか？`[@][lv 0*"03"*"70900036"]`　娘の友人には誰が相応しいかは、私たちが決めるべきです」`[\]
+wait_on_d 0
+lss s0_8,"nat","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"the_2b"
+lss s0_10,"fur","a11_warai4" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_fur
+*d53355
+d [lv 0*"52"*"75200026"]`「おっかなぁい！　あっははははは！」`[\]
+lss s0_9,"zep","a11_warai2" ;1
+flush 24
+msgwnd_zep
+*d53356
+d [lv 0*"51"*"75100023"]`「夏妃は公園デビューが苦手そうだ！」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"cha_i1ap"
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 2
+lss s0_8,"wil","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+bgmplay 171,71,0
+msgwnd_wil
+*d53357
+d [lv 0*"54"*"75400946"]`「源次の配慮、と見るべきだろうな」`[\]
+lss s0_10,"rio","a11_akire1a" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d53358
+d [lv 0*"53"*"75300450"]`「………でしょうね。`[@][lv 0*"53"*"75300451"]`……源次さんは、その世界の私がお祖父さまの血を引くと知っていて、`[@][lv 0*"53"*"75300452"]`特別な配慮をして、六軒島に呼び寄せたのでしょう」`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d53359
+d [lv 0*"54"*"75400947"]`「体調は、もう大丈夫なのか」`[\]
+lss s0_10,"rio","a11_fuman1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d53360
+d [lv 0*"53"*"75300453"]`「……色々とショックが大き過ぎただけです。`[@][lv 0*"53"*"75300454"]`……もう、眩暈くらいしか」`[\]
+lss s0_8,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d53361
+d [lv 0*"54"*"75400948"]`「この世界では次期当主。`[@][lv 0*"54"*"75400949"]`しかし、世界が違えば、使用人、……いや、魔女だったかもしれない。`[@][lv 0*"54"*"75400950"]`……お前も、難儀な運命だ」`[\]
+lss s0_10,"rio","a11_akire1a" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_rio
+*d53362
+d [lv 0*"53"*"75300455"]`「まったくです……。`[@][lv 0*"53"*"75300456"]`知ったことを後悔はしませんが、今からでも忘れられるなら、それを選びたいです」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1np"
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d53363
+d [lv 0*"28"*"72100153"]`「くすくす、面白いじゃない。`[@][lv 0*"28"*"72100154"]`使用人なのに、実は当主の血を引く隠し子なんて……。`[@][lv 0*"28"*"72100155"]`まるで、童話のようにロマンティックな話よ？」`[\]
+lss s0_8,"rio","a11_akire1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_rio
+*d53364
+d [lv 0*"53"*"75300457"]`「……ロマンティック？`[@][lv 0*"53"*"75300458"]`　……母さんの気持ちを考えると、複雑です」`[\]
+lss s0_10,"ber","a21_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_ber
+*d53365
+d [lv 0*"28"*"72100156"]`「うふふ、そうね。`[@][lv 0*"28"*"72100157"]`夏妃にとってこの世界の理御は、育てろと押し付けられた気に入らない赤ん坊に過ぎない。`[@][lv 0*"28"*"72100158"]`そしてそれを拒絶した世界でもある」`[\]
+lss s0_10,"ber","a21_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+*d53366
+d [lv 0*"28"*"72100159"]`「……夏妃にとっては自分の腹を痛めた朱志香の方が何百倍も可愛いわ。`[@][lv 0*"28"*"72100160"]`自分の血の入らぬ赤ん坊なんて、汚らわしくて生暖かい汚物の皮袋と同じよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1dp"
+lss s0_8,"wil","a11_ikari1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_wil
+*d53367
+d [lv 0*"54"*"75400951"]`「言葉を選べ。`[@][lv 0*"54"*"75400952"]`俺でもケツを抓るぞ」`[\]
+lss s0_10,"rio","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d53368
+d [lv 0*"53"*"75300459"]`「……ありがとう、ウィル。`[@][lv 0*"53"*"75300460"]`……大体、話は見えます。`[@][lv 0*"53"*"75300461"]`だからこそ、私は母さんに一層感謝しなくてはならない。`[@][lv 0*"53"*"75300462"]`この歳になるまで、こんなにも公平に育ててくれたことを」`[\]
+csp_slot s0_8
+flush 24
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d53369
+d [lv 0*"28"*"72100161"]`「奇跡的な確率でだけれどね。`[@][lv 0*"28"*"72100162"]`……動物というのはね、自分の血が入らない子供にはいつも残酷なのよ。`[@][lv 0*"28"*"72100163"]`ライオンとかもそうでしょう？　……くすくすくす」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1ip"
+lss s0_9,"wil","a11_nayamu1" ;1
+flush 24
+msgwnd_wil
+*d53370
+d [lv 0*"54"*"75400953"]`「源次は恐らくこう考えた。`[@][lv 0*"54"*"75400954"]`……この世界の理御は、正しい血統を持つ右代宮家の人間だ。`[@][lv 0*"54"*"75400955"]`何とか六軒島で生活させてやりたかった。`[@][lv 0*"54"*"75400956"]`しかし、いきなり連れてきて、この子がそうですというわけにはいかなかったわけだ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"cha_i1np"
+lss s0_8,"rio","a11_fuman1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_rio
+*d53371
+d [lv 0*"53"*"75300463"]`「……でしょうね。`[@][lv 0*"53"*"75300464"]`島で生活させて馴染ませ、機を見て打ち明けるつもりだったのでしょうか」`[\]
+lss s0_10,"wil","a11_majime2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d53372
+d [lv 0*"54"*"75400957"]`「しかし、この世界の理御は特別扱いを受けていたわけではないな。`[@][lv 0*"54"*"75400958"]`現に、銀の指輪は存在しない」`[\]
+lss s0_8,"rio","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_rio
+*d53373
+d [lv 0*"53"*"75300465"]`「お祖父さまのお耳には入れなかった、ということでしょうか」`[\]
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_wil
+*d53374
+d [lv 0*"54"*"75400959"]`「源次にとっての打ち明けるべきタイミングが、`[@][lv 0*"54"*"75400960"]`とうとう訪れなかったということかも知れねぇ…」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"the_2a"
+flush 2
+wait 2000
+bgmplay 174,71,0
+lss s0_10,"cur","a11_nayamu1" ;1
+aspt2 xpos,s0_10,550
+flush 4
+lss s0_10,"cur","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_cur
+*d53375
+d [lv 0*"55"*"75500036"]`「いつの日にか、`[@][lv 0*"55"*"75500037"]`愛しきベアトリーチェの血を引きし忘れ形見が生きていることを、源次は伝えたかったのであろう。`[@][lv 0*"55"*"75500038"]`しかしそれを伝えるのは、容易なことではなかった」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_8,"zep","a11_akire1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_zep
+*d53376
+d [lv 0*"51"*"75100024"]`「どうして容易じゃないんだろう？！」`[\]
+seplay 2,48,71
+lss s0_10,"fur","a11_warai5" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_fur
+*d53377
+d [lv 0*"52"*"75200027"]`「馬鹿ね、夏妃が知ったら大変よ？！」`[\]
+lss s0_8,"zep","a11_warai3" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_zep
+*d53378
+d [lv 0*"51"*"75100025"]`「あぁ、そうか、理御が突然現れたら、朱志香が次期当主じゃなくなっちゃう！」`[\]
+msgwnd_non
+*d53379
+d `厳密には違うけれど、朱志香が未来の次期当主を選ぶ権利を持つのだから、同じ意味だ。`[\]
+lss s0_24,"cur","a11_hoshin1star" ;1
+flush 22
+msgwnd_cur
+*d53380
+d [lv 0*"55"*"75500039"]`「それは知れば知るほどに容易ならざる物語。`[@][lv 0*"55"*"75500040"]`我の生まれを、祝福する者もいれば、祝福せざる者もいる。`[@][lv 0*"55"*"75500041"]`……源次はそれを明かす日を静かに待つしかないのである」`[\]
+lss s0_8,"zep","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_zep
+*d53381
+d [lv 0*"51"*"75100026"]`「それは源次の胸だけに秘められた物語？」`[\]
+lss s0_10,"fur","a11_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_fur
+*d53382
+d [lv 0*"52"*"75200028"]`「理御も金蔵も夏妃も蔵臼も朱志香も誰も！`[@][lv 0*"52"*"75200029"]`　みぃんな知らない物語！」`[\]
+textoff
+waits 167
+lss s0_24,"cur","a11_majime1" ;1
+flush 80
+wait 1000
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_1e"
+flush 25
+msgwnd_cur
+*d53383
+d [lv 0*"55"*"75500042"]`「かくして、この奇妙な物語は１９７６年より、ゆっくりと幕を開けるのである。`[@][lv 0*"55"*"75500043"]`あぁ、我こそは我にして我等なり。`[@][lv 0*"55"*"75500044"]`なぜに運命はかくにも、我等を捨て置いて自由気まま身勝手に進むのか……」`[\]
+msgwnd_non
+*d53384
+d `幼き使用人を不思議に思ったのは、最初のひと月だけ。`[\]
+*d53385
+d `夏妃たちが抗議したところで、何も変わらない。`[\]
+*d53386
+d `何か実害があるわけでもない。`[\]
+*d53387
+d `ならば、金蔵の好きにさせておけばいい…。`[\]
+*d53388
+d `やがて誰もがそれに慣れ、歪な日常を受け入れ始めた。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 5
+msgwnd_cur
+*d53389
+d [lv 0*"55"*"75500045"]`「しかし、いつも側にいて、同じ待遇であるべきと思っている福音の家の使用人たちは違う。`[@][lv 0*"55"*"75500046"]`彼らは、明らかに自分たちとは違う我の扱いに、日々の小さな不満を蓄積させていったのだった……」`[\]
+textoff
+waits 167
+wait 2000
+textoff
+waits 167
+lbg s0_3,"moon_1b"
+flush 2
+wait 2000
+seplay 1,15,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 64
+textoff
+waits 167
+lbg s0_1,"dor_p1ar_bg"
+lbg s0_3,"dor_p1ar"
+flush 22
+msgwnd_non
+*d53390
+d [lv 0*"39"*"72400005"]`「サワチー、お疲れー。`[@][lv 0*"39"*"72400006"]`今日はどーだったぁ？」`[\]
+*d53391
+d [lv 0*"40"*"72500005"]`「今日、奥様の機嫌サイアク。`[@][lv 0*"40"*"72500006"]`マジで窓枠なぞられたー」`[\]
+*d53392
+d [lv 0*"39"*"72400007"]`「タダッチ、掃除遅いって絞られてた。`[@][lv 0*"39"*"72400008"]`マジどーしろとー！」`[\]
+*d53393
+d `福音の家では、子供たちみんなを家族として扱います。`[\]
+*d53394
+d `その為、本来の名前はそこでは伏せ、新しく与えられた、“祝福された名前”で名乗ることになっているのです。`[\]
+*d53395
+d `福音の家だからそうなのか、大抵の場合、`[@]`“音”の一字と、名前の一字を組み合わせて新しい名前を与えられるのがほとんど。`[\]
+*d53396
+d `……しかし、人間は新しい名前を与えられたから、はいそうですかとは、なかなかなりません。`[\]
+*d53397
+d `様々な事情で孤独に生きている少年少女たちにとって、`[@]`自分の本当の名前や苗字とは、それでも手放したくない絆のようなもの。`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d53398
+d `だから、“音”の名前を嫌い、自分たち本来の名前のあだ名で呼び合うことが多かったです。`[\]
+*d53399
+d `もちろん、陰での話。`[@]`院長先生などの前では、きちんと祝福された名前でやりとりをしてました。`[\]
+*d53400
+d `仕事中は祝福された名前で。`[@]`そしてオフになったら、馴染みのあだ名で。`[\]
+*d53401
+d `そんな、２つの名前での生活が当り前だったので、皆、使い分けは自然に出来ていました。`[\]
+textoff
+waits 167
+lbg s0_3,"dor_p1br"
+flush 22
+*d53402
+d [lv 0*"39"*"72400009"]`「うわー、汗臭ぇー。`[@][lv 0*"39"*"72400010"]`シャワー浴びてきなよー」`[\]
+*d53403
+d [lv 0*"40"*"72500007"]`「つか、部屋狭いよね。`[@][lv 0*"40"*"72500008"]`お屋敷広すぎんのに、寮はケチりすぎー」`[\]
+*d53404
+d [lv 0*"39"*"72400011"]`「ねぇ、ガラシさん〜。`[@][lv 0*"39"*"72400012"]`何でヤスだけは３人部屋じゃないわけですかー」`[\]
+*d53405
+d `ヤスというのは、きっと私のこと。`[\]
+*d53406
+d `私は物心ついた時から親がいないので、まったく覚えがないが、……一応、安田という苗字が与えられていました。`[\]
+*d53407
+d `その安田で、私のあだ名はヤス、らしい。`[\]
+textoff
+waits 167
+lbg s0_1,"dor_p1ar_bg"
+lbg s0_3,"dor_p1ar"
+lss s0_9,"rg1","e11_fuman1" ;1
+flush 23
+*d53408
+d [lv 0*"38"*"72300020"]`「知らないわよ、部屋の割り振りは源次さまが決めてんだもの。`[@][lv 0*"38"*"72300021"]`私だって納得行かないわよ」`[\]
+*d53409
+d [lv 0*"39"*"72400013"]`「ですよねー！`[@][lv 0*"39"*"72400014"]`　普通、２ぃ２ぃにしますよねぇ？！」`[\]
+*d53410
+d [lv 0*"40"*"72500009"]`「つーかさ、ヤスって何者なの？」`[\]
+lss s0_9,"rg1","e21_komaru1" ;1
+flush 80
+*d53411
+d [lv 0*"38"*"72300022"]`「お嬢様と学校通うのが仕事みたいなもんだし。`[@][lv 0*"38"*"72300023"]`……ご学友ってヤツ？`[@][lv 0*"38"*"72300024"]`　さっぱりだわ」`[\]
+*d53412
+d `……もちろん、私も仕事が与えられてる日は、学校が終わるとそのままお屋敷へ行き、`[@]`みんなに加わってお仕事をします。`[\]
+*d53413
+d `庭園の手入れを手伝ったり、お屋敷の掃除を手伝ったり。`[@]`{n}一人前な仕事は出来ませんので、お手伝いばかりです。`[\]
+*d53414
+d `……幼いということもあってか、大人の使用人の人たちにはやさしくされます。`[\]
+*d53415
+d `どうも、福音の家の仲間たちは、それが気に入らないようでした。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"dor_p1br"
+flush 24
+lss s0_8,"rg2","e21_fuman2" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+*d53416
+d [lv 0*"39"*"72400015"]`「熊沢さんって、明らかにヤスにだけ甘いよねぇ？`[@][lv 0*"39"*"72400016"]`　というか孫か何かと勘違いしてるよ、あれ絶対！」`[\]
+lss s0_10,"rg3","e11_fuman1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+*d53417
+d [lv 0*"40"*"72500010"]`「これで同じ給料もらってるとか、マジありえないわ。`[@][lv 0*"40"*"72500011"]`意味わかんない！」`[\]
+lss s0_24,"rg1","e11_defo1" ;1
+flush 24
+*d53418
+d [lv 0*"38"*"72300025"]`「………あんたに学校あるのはわかってるけど。`[@][lv 0*"38"*"72300026"]`一応は使用人なんだからね？`[@][lv 0*"38"*"72300027"]`　いつまでもお手伝い感覚じゃなくて、早く一人前になって私たちと同じ仕事しなさいよね。`[@][lv 0*"38"*"72300028"]`私たち、いつまでもあんたにだけ甘くないからね？」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+csp_slot s0_1
+lbg s0_3,"black"
+flush 25
+*d53419
+d `…………………………。`[\]
+*d53420
+d `私は私の精一杯をしてるつもりです。`[\]
+*d53421
+d `でも、力がまだなくて、重いものは運べません。`[@]`たくさんは運べません。`[\]
+*d53422
+d `洗濯物もぴっしり畳めませんし、上手にゴミをちりとりで取れません。`[\]
+*d53423
+d `みんなみたいに、上手には、どうしても出来ません……。`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"dor_p1br"
+lss s0_10,"sha","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+*d53424
+d `私が俯いていると、`[@]`……みんなには加わらずに、じっと見守ってくれている紗音の姿に気付きました。`[\]
+*d53425
+d `……紗音だけは、私の味方です。`[@]`{n}紗音は私と違い、本当によく仕事が出来ます。`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+*d53426
+d `でも、決して私を甘やかしはしません。`[\]
+*d53427
+d `お手本を見せてはくれますけれど、決して私の仕事を奪ったりはしないのです。`[\]
+*d53428
+d `紗音は、立派なのです。`[\]
+*d53429
+d `私は、早く紗音のようになりたいのです。`[\]
+*d53430
+d `……誰の悪口も言わず、言われず。`[@]`誰とも仲良くできて、やさしくて。`[\]
+*d53431
+d `そんな彼女のようになりたい。`[@]`そして彼女も、私がそうなろうとする努力を、いつも温かく見守ってくれるのです。`[\]
+textoff
+waits 167
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 1000
+textoff
+waits 167
+lbg s0_1,"dor_r1dn_bg"
+lbg s0_3,"dor_r1dn"
+flush 6
+bgmplay 167,71,0
+wait 2000
+*d53432
+d `「……どうして自分は、……ここへ来ることになったんだろう」`[\]
+textoff
+waits 167
+lbg s0_1,"dor_r1bn_bg"
+lbg s0_3,"dor_r1bn"
+flush 24
+lss s0_8,"sha","a11_fuman1" ;1
+aspt2 xpos,s0_8,-370
+aspt2 darken_r,s0_8,156
+aspt2 darken_g,s0_8,156
+aspt2 darken_b,s0_8,160
+flush 22
+msgwnd_sha
+*d53433
+d [lv 0*"15"*"70500097"]`「わからない」`[\]
+msgwnd_non
+*d53434
+d `誰に呟くともなく、……天井に向かって言っただけなのに、`[@]`それでも紗音は律儀に答えてくれました。`[\]
+lss s0_8,"sha","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+aspt2 darken_r,s0_8,156
+aspt2 darken_g,s0_8,156
+aspt2 darken_b,s0_8,160
+flush 80
+msgwnd_sha
+*d53435
+d [lv 0*"15"*"70500098"]`「神様の思し召しだとしか、言えないよね」`[\]
+msgwnd_non
+*d53436
+d `「これも神様の試練だと…？」`[\]
+csp_slot s0_8
+lss s0_9,"sha","a11_tokui1" ;1
+aspt2 darken_r,s0_9,156
+aspt2 darken_g,s0_9,156
+aspt2 darken_b,s0_9,160
+flush 23
+msgwnd_sha
+*d53437
+d [lv 0*"15"*"70500099"]`「うん。`[@][lv 0*"15"*"70500100"]`あなたを立派な人間に育てるための、試練だと思うの。`[@][lv 0*"15"*"70500101"]`だってあなたは選ばれた、特別な人だもの」`[\]
+msgwnd_non
+*d53438
+d `「……私は、`[!w500]`……特別なのかな」`[\]
+lss s0_9,"sha","a11_warai2" ;1
+aspt2 darken_r,s0_9,156
+aspt2 darken_g,s0_9,156
+aspt2 darken_b,s0_9,160
+flush 80
+msgwnd_sha
+*d53439
+d [lv 0*"15"*"70500102"]`「特別だよ。`[@][lv 0*"15"*"70500103"]`だって、他はみんな大きい人ばかりなのに、幼い中からあなただけが特別に選ばれた」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_1,"dor_r1dn_bg"
+lbg s0_3,"dor_r1dn"
+flush 25
+msgwnd_non
+*d53440
+d `「どうして私だけ幼いのに？`[@]`　私では一人前の仕事なんて、何も出来ないのに」`[\]
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 22
+*d53441
+d `みんなは、私はお嬢様の遊び相手だけが仕事だと言って、ずるいと言ってる。`[\]
+*d53442
+d `でも、奥様からは、お嬢様のことを決して友人などと思って、気安く話し掛けないようにと念を押されてる。`[\]
+textoff
+waits 167
+lbg s0_1,"dor_r1bn_bg"
+lbg s0_3,"dor_r1bn"
+lss s0_10,"sha","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 26
+lss s0_10,"sha","a11_tokui1" ;1
+aspt2 xpos,s0_10,370
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 80
+msgwnd_sha
+*d53443
+d [lv 0*"15"*"70500104"]`「あなたはみんなより１０も幼いけれど。`[@][lv 0*"15"*"70500105"]`ということは、みんなと同じ歳になるまでここで頑張ったなら、`[@][lv 0*"15"*"70500106"]`新しく来る人たちより、ずっと仕事の出来る人になっているということだよ。`[@][lv 0*"15"*"70500107"]`源次さまにも認められて、あなたは新しく福音の家から来る人たちに仕事を教えてあげる、リーダーの役になるの」`[\]
+lss s0_10,"sha","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 80
+*d53444
+d [lv 0*"15"*"70500108"]`「そしてきっと、みんなに尊敬されるわ。`[@][lv 0*"15"*"70500109"]`その頃にはきっと奥様にも認められて、お館様や旦那様にも認められるようになってるよ。`[@][lv 0*"15"*"70500110"]`それが、あなたの未来」`[\]
+msgwnd_non
+*d53445
+d `「……醜いアヒルの子みたいな、白鳥になれる未来？」`[\]
+lss s0_10,"sha","a11_tokui1" ;1
+aspt2 xpos,s0_10,370
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 80
+msgwnd_sha
+*d53446
+d2 [lv 0*"15"*"70500111"]`「そうかもしれないね。`[@][lv 0*"15"*"70500112"]`だって、あなたが右代宮家の使用人に選ばれたのは、本当に不思議だもの。`[@][#][*][lv 0*"15"*"70500113"]`……ひょっとすると、本当にあなたは誰かが噂していたように、`[@][lv 0*"15"*"70500114"]`右代宮家の血筋を引く、誰かの隠し子かもしれないね。`[@][lv 0*"15"*"70500115"]`くす」`[\]
+wait_on_d 0
+lss s0_10,"sha","a11_warai2" ;1
+aspt2 xpos,s0_10,370
+aspt2 darken_r,s0_10,156
+aspt2 darken_g,s0_10,156
+aspt2 darken_b,s0_10,160
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_1,"dor_r1dn_bg"
+lbg s0_3,"dor_r1dn"
+flush 25
+msgwnd_non
+*d53447
+d `だったらすごいね、大金持ちの仲間入りだねと、紗音は笑います。`[\]
+*d53448
+d `でも、私はほんの少しだけ、微妙な気持ち。`[\]
+*d53449
+d `だって、……ならどうして私は、福音の家でひとりぼっちで暮らしていたの？`[\]
+*d53450
+d `遊んでくれるのは、園長先生たちと、紗音だけでした。`[\]
+*d53451
+d `他のお友達とは遊ばせてもらえなくて、……ずっと自分だけ、隔離されたお部屋で過ごしてた。`[\]
+*d53452
+d `私が病弱で、いつも寝てばかりいたからだろうけど、………寂しかったな。`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_1
+lbg s0_3,"black"
+flush 5
+wait 2000
+seplay 1,77,71
+textoff
+waits 167
+lbg s0_3,"the_1e"
+flush 1
+wait 2000
+textoff
+waits 167
+lbg s0_3,"the_2a"
+lss s0_9,"gen","a11_defo1" ;1
+flush 6
+wait 500
+lss s0_10,"fur","a11_warai4" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_fur
+*d53453
+d [lv 0*"52"*"75200030"]`「ねぇ、源次！`[@][lv 0*"52"*"75200031"]`　あなたは何を、どこまで知っていたの？」`[\]
+lss s0_8,"zep","a11_akire1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_zep
+*d53454
+d [lv 0*"51"*"75100027"]`「君は黙して何も語らないけれど、いつも全てを、最初から知っていたんじゃないのかい？」`[\]
+lss s0_9,"gen","a21_kashikomari1" ;1
+flush 80
+msgwnd_gen
+*d53455
+d `「………………………………」`[\]
+lss s0_8,"zep","a11_majime2" ;1
+aspt2 xpos,s0_8,-550
+flush 80
+msgwnd_zep
+*d53456
+d [lv 0*"51"*"75100028"]`「１９年前。`[@][lv 0*"51"*"75100029"]`赤ん坊を抱いた使用人が転落し、君は夏妃から報告を受けたね」`[\]
+lss s0_10,"fur","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_fur
+*d53457
+d [lv 0*"52"*"75200032"]`「そして崖下へ行き、まだ赤ん坊が生きていることに気付いたんじゃないの？」`[\]
+lss s0_9,"gen","a11_komaru1" ;1
+flush 80
+msgwnd_gen
+*d53458
+d [lv 0*"14"*"71600024"]`「………生きているか死んでいるか。`[@][lv 0*"14"*"71600025"]`そのような判断は私には出来かねました」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_10,"zep","a11_warai5" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_zep
+*d53459
+d [lv 0*"51"*"75100030"]`「それを判断したのは誰？」`[\]
+seplay 2,48,71
+lss s0_8,"fur","a11_warai6" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_fur
+*d53460
+d [lv 0*"52"*"75200033"]`「決まってるわ、お医者様よ！」`[\]
+lss s0_10,"zep","a11_warai3" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"fur","a11_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_non
+*d53461
+d [lv 0*"00"*"awase7009_o"]`「「どうなの、南條先生！！」」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"the_1d"
+flush 24
+wait 1000
+lss s0_10,"nan","a1_fumu1" ;1
+aspt2 xpos,s0_10,370
+flush 6
+msgwnd_nan
+*d53462
+d2 [lv 0*"19"*"71900069"]`「………………。`[@][#][*][lv 0*"19"*"71900070"]`……よろしいのですかな。`[@][lv 0*"19"*"71900071"]`…私が語っても」`[\]
+wait_on_d 0
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_8,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_8,-370
+flush 3
+lss s0_8,"gen","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_gen
+*d53463
+d [lv 0*"14"*"71600026"]`「……先生の口からお願いできるのであれば、`[|][lv 0*"14"*"71600027"]`……お願いします」`[\]
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"the_1e"
+flush 25
+msgwnd_nan
+*d53464
+d [lv 0*"19"*"71900072"]`「………………。`[@][lv 0*"19"*"71900073"]`わかりました」`[\]
+textoff
+waits 167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+wait 1000
+meplay 1,23,71
+textoff
+waits 167
+lbg s0_3,"nan_r1a"
+color_mod2 s0_3,#ffffff
+lss s0_9,"nan","a1_fumu1" ;1
+color_mod2 s0_9,#ffffff
+flush 2
+wait 2000
+vol_me 1,-1
+seplay 1,53,71
+lss s0_9,"nan","a1_majime1" ;1
+color_mod2 s0_9,#ffffff
+flush 80
+set_window_simple 80
+lips_sprite s0_9_b
+*d53465
+d [lv 0*"19"*"71900074"]`……事故の時、すぐに源次さんから連絡が入り、秘密裏に診察するように念を押されました。`[\]
+set_name_window_non
+csp_slot s0_9
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"the_2b"
+lss s0_10,"zep","a11_warai4" ;1
+aspt2 xpos,s0_10,550
+flush 22
+msgwnd_zep
+*d53466
+d [lv 0*"51"*"75100032"]`「秘密裏に？」`[\]
+lss s0_8,"fur","a11_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_fur
+*d53467
+d [lv 0*"52"*"75200035"]`「どうして？」`[\]
+lss s0_24,"nan","a1_fumu1" ;1
+flush 22
+msgwnd_nan
+*d53468
+d [lv 0*"19"*"71900075"]`「……九羽鳥庵のベアトリーチェさんも、そしてその子供である赤ん坊も、戸籍のない、存在しないはずの人間でした。`[@][lv 0*"19"*"71900076"]`公になれば、色々とまずいこともあるでしょうな…」`[\]
+csp_slot s0_24
+csp_slot s0_8
+csp_slot s0_10
+lss s0_10,"nan","a1_fumu1" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"gen","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_gen
+*d53469
+d2 [lv 0*"14"*"71600028"]`「赤ん坊に戸籍を与える準備は進めておりましたが、その時点ではまだ、至っておりませんでした。`[@][#][*][lv 0*"14"*"71600029"]`……死なれては、どうにも困る時期だったのです」`[\]
+wait_on_d 0
+lss s0_8,"gen","a11_komaru1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2a"
+lss s0_8,"fur","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_fur
+*d53470
+d [lv 0*"52"*"75200036"]`「では、落ちた使用人は単独事故の扱いに？」`[\]
+lss s0_10,"zep","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_zep
+*d53471
+d [lv 0*"51"*"75100033"]`「夏妃は黙して語らない。`[@][lv 0*"51"*"75100034"]`簡単な工作さ！」`[\]
+lss s0_8,"fur","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fur
+*d53472
+d [lv 0*"52"*"75200037"]`「でも、その赤ん坊は生きてたのね？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+wait 500
+lss s0_10,"nan","a1_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 80
+msgwnd_nan
+*d53473
+d [lv 0*"19"*"71900077"]`「左様です。`[@][lv 0*"19"*"71900078"]`……無論、大怪我でしたとも。`[@][lv 0*"19"*"71900079"]`あれだけの怪我をして、生き永らえたのは奇跡でした。`[@][lv 0*"19"*"71900080"]`もう少し何かの角度が違えば。`[@][lv 0*"19"*"71900081"]`あるいは、もう少し源次さんが運び込んでくるのが遅かったら。`[@][lv 0*"19"*"71900082"]`……あらゆる奇跡が集まって、その赤ん坊は生き永らえていたのです」`[\]
+lss s0_9,"gen","a11_majime1" ;1
+flush 24
+msgwnd_gen
+*d53474
+d [lv 0*"14"*"71600030"]`「………私は諦めていました。`[@][lv 0*"14"*"71600031"]`まさか、生きているはずがないと思ったのです」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"the_2a"
+lss s0_8,"fur","a11_warai8" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_fur
+*d53475
+d [lv 0*"52"*"75200038"]`「でも、生きていた」`[\]
+flush 22
+lss s0_10,"zep","a11_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_zep
+*d53476
+d [lv 0*"51"*"75100035"]`「生命の何と力強きこと！」`[\]
+lss s0_8,"fur","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_fur
+*d53477
+d [lv 0*"52"*"75200039"]`「うぅん、これは運命だわ」`[\]
+lss s0_10,"zep","a11_warai7" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_zep
+*d53478
+d [lv 0*"51"*"75100036"]`「運命！`[@][lv 0*"51"*"75100037"]`　生き延びて、やがては何かを成せという運命？！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_gen
+*d53479
+d `「………………。`[@][lv 0*"14"*"71600033"]`……はい。`[@][lv 0*"14"*"71600034"]`私は、これを何かの運命だと思いました。`[@][lv 0*"14"*"71600035"]`六軒島で生涯を終えられた九羽鳥庵のベアトリーチェさまの血が、この子に何かを託し、`[@][lv 0*"14"*"71600036"]`生き延びさせたに違いないと、そう思ったのです」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"the_2a"
+flush 2
+lss s0_9,"cur","a11_hoshin3star" ;1
+flush 4
+msgwnd_cur
+*d53480
+d [lv 0*"55"*"75500054"]`「しかし源次は、赤ん坊が生き永らえたことを主人の金蔵には伝えなかった。`[@][lv 0*"55"*"75500055"]`不幸な事故で転落し死亡したと、短く伝えた。`[@][lv 0*"55"*"75500056"]`金蔵は嘆き悲しんだが、その嘆きは悲しみよりも狂気に彩られたものだった……」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"the_2b"
+lss s0_8,"zep","a12_akire1" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_zep
+*d53481
+d [lv 0*"51"*"75100038"]`「おぉ、ベアトリーチェよ、なぜに再び我が下より逃げ去るのかッ！」`[\]
+lss s0_10,"fur","a12_majime2" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_fur
+*d53482
+d [lv 0*"52"*"75200040"]`「今度こそ過ちを繰り返すまいと誓ったのに、なぜに、なぜにッ！！」`[\]
+lss s0_24,"cur","a11_hoshin3star" ;1
+flush 22
+msgwnd_cur
+*d53483
+d [lv 0*"55"*"75500057"]`「源次は尊敬する主人のことを、ただ一つだけ信じていないことがあった。`[@][lv 0*"55"*"75500058"]`それは、ベアトリーチェの孫を、果たして本当に家族として迎え入れられるのか、である」`[\]
+lss s0_24,"cur","a11_hoshin1star" ;1
+flush 80
+*d53484
+d [lv 0*"55"*"75500059"]`「源次は九羽鳥庵のベアトリーチェにもずっと仕えていた。`[@][lv 0*"55"*"75500060"]`その胸中についても詳しかった。`[@][lv 0*"55"*"75500061_UP_MODIFIED"]`彼女が金蔵の寵愛を一身に受け、父として敬愛していたことも」`[\]
+meplay 1,16,50
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"the_1c"
+flush 22
+*d53485
+d [lv 0*"55"*"75500062"]`「しかしそれは金蔵のそれとは異なった。`[@][lv 0*"55"*"75500063"]`金蔵は彼女を、ベアトリーチェの生まれ変わりと思い、`[@][lv 0*"55"*"75500064"]`亡きベアトリーチェへの万感の思いの慰み者にしようとした。`[@][lv 0*"55"*"75500065"]`その思いを、九羽鳥庵のベアトリーチェが受け入れきれるわけもない。`[@][lv 0*"55"*"75500066_UP_MODIFIED"]`彼女は父と思い、尊敬してきた金蔵自らに、`[@][lv 0*"55"*"75500067_UP_MODIFIED"]`純潔を奪われることになるのである……」`[\]
+textoff
+waits 167
+lbg s0_3,"the_2a"
+lss s0_10,"zep","a11_warai4" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_zep
+*d53486
+d [lv 0*"51"*"75100039_UP_MODIFIED"]`「自分は父と思ってたのに、向こうは妻と思ってた！」`[\]
+lss s0_8,"fur","a11_warai7" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_fur
+*d53487
+d [lv 0*"52"*"75200041"]`「あぁ、それは両立出来ぬ禁じられた恋！」`[\]
+lss s0_9,"gen","a11_majime1" ;1
+flush 80
+msgwnd_gen
+*d53488
+d [lv 0*"14"*"71600037"]`「………金蔵さまのお気持ちも、わからぬわけではありません。`[@][lv 0*"14"*"71600038"]`金蔵さまとて、彼女が生まれた時から、亡きベアトリーチェさまの面影を映して慰み者にしようなどと、`[@][lv 0*"14"*"71600039"]`思っていたわけではありません。」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"nan","a1_defo1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_nan
+*d53490
+d [lv 0*"19"*"71900083"]`「私も、……お酒を飲みながら聞かされたことはあります。`[@][lv 0*"19"*"71900084"]`私は、笑い話と思って聞いておりましたが」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_8,"zep","a11_akire1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_zep
+*d53491
+d [lv 0*"51"*"75100040"]`「育つほどに、母に生き写しになる驚きを？」`[\]
+lss s0_9,"fur","a11_majime1" ;1
+flush 23
+msgwnd_fur
+*d53492
+d [lv 0*"52"*"75200042"]`「歳を重ねる毎に、抑えられぬ禁じられた感情を？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"the_2a"
+lss s0_8,"nan","a1_komaru3" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"gen","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+wait 500
+lss s0_10,"gen","a21_kashikomari1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_gen
+*d53493
+d [lv 0*"14"*"71600040"]`「……悲劇が、`[|][lv 0*"14"*"71600041"]`……繰り返されるのではないか。`[@][lv 0*"14"*"71600042"]`……私はそう、思いました」`[\]
+lss s0_8,"nan","a1_fumu1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_nan
+*d53494
+d [lv 0*"19"*"71900085"]`「……………………………」`[\]
+csp_slot s0_8
+csp_slot s0_10
+lss s0_9,"gen","a21_kashikomari1" ;1
+flush 24
+lss s0_9,"gen","a11_komaru1" ;1
+flush 80
+msgwnd_gen
+*d53495
+d [lv 0*"14"*"71600043"]`「ベアトリーチェさまは、苦しんでおられました。`[@][lv 0*"14"*"71600044"]`しかしついに、ご自身の気持ちと、金蔵さまの気持ちが違うことに、理解が及ばなかったのです。`[@][lv 0*"14"*"71600045"]`………私はベアトリーチェさまより何度も、胸の内を打ち明けられ、相談を受けました。`[@][lv 0*"14"*"71600046"]`しかし私には申し上げられませんでした」`[\]
+lss s0_10,"zep","a11_warai3" ;1
+aspt2 xpos,s0_10,550
+flush 23
+msgwnd_zep
+*d53496
+d [lv 0*"51"*"75100041"]`「それは確かに言えないね！」`[\]
+lss s0_8,"fur","a11_warai5" ;1
+aspt2 xpos,s0_8,-550
+flush 24
+msgwnd_fur
+*d53497
+d [lv 0*"52"*"75200043_UP_MODIFIED"]`「父と敬愛する人が、あなたを死んだ母の代用品にしようと思ってるなんて！」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"the_2b"
+lss s0_9,"nan","a1_defo1" ;1
+flush 24
+msgwnd_nan
+*d53498
+d2 [lv 0*"19"*"71900086"]`「……一応、金蔵さんの名誉のために申し上げる。`[@][lv 0*"19"*"71900087"]`金蔵さんも苦しんでおられた。`[@][lv 0*"19"*"71900088_UP_MODIFIED"]`生き写しになる娘が、娘と思えなくなると苦しんでおられた。`[@][#][*][lv 0*"19"*"71900089"]`……私は、父として愛しなさいと助言した。`[@][lv 0*"19"*"71900090"]`金蔵さんも、理性と良心に従い、抗われたと思う…」`[\]
+wait_on_d 0
+lss s0_9,"nan","a1_komaru3" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"the_1a"
+flush 2
+lss s0_10,"cur","a11_hoshin1star" ;1
+aspt2 xpos,s0_10,370
+flush 4
+msgwnd_cur
+*d53499
+d [lv 0*"55"*"75500068"]`「金蔵は愛した。`[@][lv 0*"55"*"75500069"]`亡きベアトリーチェの忘れ形見である娘に、愛情を注いだ。`[@][lv 0*"55"*"75500070"]`父として注いだ。`[@][lv 0*"55"*"75500071"]`しかし、ならばなぜに娘に、母と同じ名を与えたのか」`[\]
+lss s0_10,"cur","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+*d53500
+d [lv 0*"55"*"75500072"]`「あぁ、金蔵の罪は彼女が生を受けた時より始まっているのだ。`[@][lv 0*"55"*"75500073"]`彼女を出産し、その引き換えのように死んだベアトリーチェ。`[@][lv 0*"55"*"75500074"]`……その名を、そのまま娘に与えた。`[@][lv 0*"55"*"75500075"]`金蔵は、彼女が生まれたその瞬間から、彼女をベアトリーチェの生まれ変わりだと決めていたのである…」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"cha_i1np"
+lss s0_9,"wil","a11_nayamu1" ;1
+flush 6
+lss s0_9,"wil","a11_majime2" ;1
+flush 80
+bgmplay 163,71,0
+msgwnd_wil
+*d53501
+d [lv 0*"54"*"75400961"]`「つまり理御とは。`[@][lv 0*"54"*"75400962"]`……悲劇を犯した金蔵が、その罪を悔い、`[@][lv 0*"54"*"75400963"]`右代宮家に正しい形で迎え入れた存在、ということだ」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"cha_i1ep"
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d53502
+d [lv 0*"28"*"72100164"]`「……そういうことよ。`[@][lv 0*"28"*"72100165"]`他のカケラの話をするとおしりを抓られそうだけれど。`[@][lv 0*"28"*"72100166"]`……理御が迎え入れられながら、`[|][lv 0*"28"*"72100167_UP_MODIFIED"]`……再び金蔵が過ちを犯すカケラ、`[|][lv 0*"28"*"72100168"]`なんてのもあったりして。`[@][lv 0*"28"*"72100169"]`……そのカケラも探してみる？`[@][lv 0*"28"*"72100170"]`　くすくすくすくす………」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"cha_i1ip"
+lss s0_8,"rio","a11_ikari1" ;1
+aspt2 xpos,s0_8,-550
+flush 23
+msgwnd_rio
+*d53503
+d [lv 0*"53"*"75300466"]`「見たくありません、そんなものっ。`[@][lv 0*"53"*"75300467"]`………人の人生のあらゆる場所に、最悪の可能性や妄想を勝手に混ぜ込んで、その運命を嘲笑うのが、あなたの仕事なんですか？！」`[\]
+lss s0_9,"wil","a11_nayamu1" ;1
+flush 23
+msgwnd_wil
+*d53504
+d [lv 0*"54"*"75400964"]`「残念なことに、こいつはそういう悪魔だ」`[\]
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_ber
+*d53505
+d [lv 0*"28"*"72100171"]`「魔女よ、失礼ね。`[@][lv 0*"28"*"72100172"]`くすくす……」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"cha_i1lp"
+flush 25
+msgwnd_wil
+*d53506
+d [lv 0*"54"*"75400965"]`「……源次は、そういう最悪の未来を予見し、より良い未来になるよう、わざと赤ん坊は死んだと、虚偽を伝えたというわけだ」`[\]
+msgwnd_ber
+*d53507
+d [lv 0*"28"*"72100173"]`「そうよ。`[@][lv 0*"28"*"72100174_UP_MODIFIED"]`実の娘に手をかけて、ほとぼりも冷めない男よ。`[@][lv 0*"28"*"72100175"]`ベアトリーチェの気持ちを知り同情していた源次は、金蔵のことを容易く信じることが出来なかったの」`[\]
+msgwnd_wil
+*d53508
+d [lv 0*"54"*"75400966"]`「金蔵の忠実な僕である源次がか」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1ap"
+lss s0_10,"ber","a21_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_ber
+*d53509
+d [lv 0*"28"*"72100176"]`「源次は公私をしっかりと使い分けられる男よ。`[@][lv 0*"28"*"72100177_UP_MODIFIED"]`金蔵に忠誠を尽くす一方で、娘に対して犯した過ちは、容易に許されるべきではないと思っていたわ」`[\]
+lss s0_8,"wil","a11_defo1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_wil
+*d53510
+d [lv 0*"54"*"75400967"]`「……かもな。`[@][lv 0*"54"*"75400968"]`源次は、理御の存在が容易に知れることがないよう、３つも年齢を詐称させてる」`[\]
+csp_slot s0_10
+flush 23
+lss s0_10,"rio","a11_komaru1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_rio
+*d53511
+d [lv 0*"53"*"75300468"]`「確かに。`[@][lv 0*"53"*"75300469"]`この世界の私は、１９７６年に小学校入学になってる。`[@][lv 0*"53"*"75300470"]`その年には、自分はもう４年生になってるはずです」`[\]
+lss s0_8,"wil","a11_majime1" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_wil
+*d53512
+d [lv 0*"54"*"75400969"]`「病弱だったことが理由にならないなら、………源次は恐らく入念に、生まれ年も誤魔化そうとしたんだろう。`[@][lv 0*"54"*"75400970"]`１９年前の赤ん坊のことを、金蔵だけでなく、夏妃だって簡単には忘れないはず。`[@][lv 0*"54"*"75400971"]`そこに、その年に生まれた不審な幼い使用人が入ってきたら、夏妃の女の勘は、ピンと来たはずだ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d53513
+d `病弱だったから、３年も学校へ行けなかった？`[@]`　あるいは夏妃に気取られることを恐れ、３年、歳をずらした？`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1ip"
+flush 26
+lss s0_10,"wil","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_wil
+*d53514
+d [lv 0*"54"*"75400972"]`「何れにせよ、この世界のお前は、歳を３つ、少なく教えられているはずだ」`[\]
+lss s0_8,"ber","a21_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_ber
+*d53515
+d [lv 0*"28"*"72100178"]`「………ご名答。`[@][lv 0*"28"*"72100179"]`この世界の理御は生まれつき、歳を３つ、誤魔化されてる。`[@][lv 0*"28"*"72100180"]`……虚弱で小柄。`[@][lv 0*"28"*"72100181"]`発育不良だったしね。`[@][lv 0*"28"*"72100182"]`案外誤魔化せたみたいだわ」`[\]
+textoff
+waits 167
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 5
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"the_1a"
+flush 2
+meplay 1,16,50
+wait 2000
+textoff
+waits 167
+lbg s0_3,"the_2a"
+lss s0_10,"cur","a11_hoshin2star" ;1
+aspt2 xpos,s0_10,370
+flush 2
+lss s0_10,"cur","a11_hoshin1star" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_cur
+*d53516
+d [lv 0*"55"*"75500076"]`「源次は見届けねばと思った。`[@][lv 0*"55"*"75500077"]`金蔵が果たして、ベアトリーチェの子を、子として受け容れられるや、否や。`[@][lv 0*"55"*"75500078"]`適齢になるまでを福音の家で過ごさせ、幼き使用人として呼び寄せる。`[@][lv 0*"55"*"75500079"]`父も子も、互いに互いを知らない。`[@][lv 0*"55"*"75500080"]`源次は思った。`[@][lv 0*"55"*"75500081"]`もしも、真に親子の愛情があるならば。`[@][lv 0*"55"*"75500082"]`金蔵はこの子に亡き母と娘の面影を見るだろう」`[\]
+lss s0_10,"cur","a11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+*d53517
+d [lv 0*"55"*"75500083"]`「そして誰に明かされずとも、親子の絆を取り戻せるに違いない。`[@][lv 0*"55"*"75500084"]`そう思った。`[@][lv 0*"55"*"75500085"]`……あるいは、その時はやがて自然に訪れるだろう。`[@][lv 0*"55"*"75500086"]`その時に、父と子に、真実を話せば良い。`[@][lv 0*"55"*"75500087"]`その日がやがて訪れることを信じて、源次は何も知らせず、教えず。`[@][lv 0*"55"*"75500088"]`……運命の日を待ちながら、ベアトリーチェの子を見守るのである…」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"the_1e"
+flush 5
+msgwnd_non
+*d53518
+d `そして月日は重ねていく。`[\]
+*d53519
+d `ベアトリーチェの子を静かに見守りながら、月日は静かに重ねていく……。`[\]
+textoff
+waits 167
+wait 2000
+break_glass3
+lbg s0_29,"black"
+csp_slot s0_29
+flush 10,2000
+wait 83
+ch_done flag_scenario_7_9

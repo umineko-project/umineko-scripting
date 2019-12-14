@@ -1,0 +1,969 @@
+*teatime_5
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_5_tea
+mov $name_chapter_save, "5_tea"
+~
+new_tea 5
+flush 10,167
+textoff
+waits 167
+vol_mix_fade 1000
+wait 1000
+gstc 176
+textoff
+waits 167
+lbg s0_3,"white"
+flush 8
+seplay 2,17,71
+textoff
+waits 167
+lbg s0_3,"wsan_1a"
+flush 10
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 23
+bgmplay 131,71,0
+textoff
+waits 167
+lbg s0_3,"wclo_1c"
+flush 23
+seplay 1,52,71
+lss s0_9,"ber","a21_defo1" ;1
+textoff
+aspt2 breakup,s0_9,1000
+aspt2 alpha,s0_9,0
+flush 1
+aspt2 breakup,s0_9,0,2000
+aspt2 alpha,s0_9,255,2000
+sptwait2 breakup,s0_9
+msgwnd_ber
+*d65707
+d [lv 0*"28"*"52100771"]`「……ヱリカ、ドラノール」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"wclo_1a"
+flush 23
+lss s0_10,"eri","a12_warai5" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_eri
+*d65708
+d [lv 0*"46"*"54501274"]`「はい、我が主」`[\]
+seplay 1,52,71
+lss s0_8,"dla","a11_defo3" ;1
+aspt2 xpos,s0_8,-370
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+msgwnd_dla
+*d65709
+d [lv 0*"47"*"54600344"]`「お呼びデスカ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wclo_1b"
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d65710
+d2 [lv 0*"28"*"52100772"]`「……あなたたちは、引き続きこのカケラに留まり、`[@][lv 0*"28"*"52100773"]`残る第１から第４のゲーム全てを解明しなさい。`[@][#][*][lv 0*"28"*"52100774"]`もはや、魔女幻想を主張する哀れな仮初魔女は存在しない。`[@][lv 0*"28"*"52100775"]`……剥き出しの真実を、徹底的に暴いてやりなさい」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"eri","a11_warai5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eri
+*d65711
+d [lv 0*"46"*"54501275"]`「くすくす！　お任せを、我が主ッ。`[@][lv 0*"46"*"54501276"]`この古戸ヱリカに、解けぬ謎はありません」`[\]
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ber
+*d65712
+d [lv 0*"28"*"52100776"]`「……当然よ。`[@][lv 0*"28"*"52100777"]`それでこそ、私の駒、私の分身だわ。`[@][lv 0*"28"*"52100778"]`くすくすくすくすくすくす！」`[\]
+msgwnd_non
+*d65713
+d `ベルンカステルは、最上級の、…そして最低の笑みを浮かべ、それをヱリカと共有する。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"portrait2"
+flush 6
+*d65714
+d `……ベアトリーチェの魔女幻想は消え去り、`[@]`これまでのゲームの結果が、塗り替えられる。`[\]
+seplay 1,22,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+textoff
+seplay 2,52,71
+seplay 3,55,71
+textoff
+waits 167
+lbg s0_3,"black"
+spriteset_enable 1
+lbg s1_1,"white"
+lbg s1_3,"white"
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+*d65715
+d `完膚なきまでに破壊され、……剥き出しの真実だけが残った。`[\]
+*d65716
+d `そのようなか弱い真実など、ヱリカにとっては俎上の鯉に等しい…。`[\]
+textoff
+waits 167
+lbg s0_3,"wclo_1a"
+lss s0_8,"dla","a11_defo3" ;1
+aspt2 xpos,s0_8,-550
+lss s0_9,"eri","a11_warai3" ;1
+flush 22
+lss s0_9,"eri","a11_warai4" ;1
+flush 10,167
+msgwnd_eri
+*d65717
+d [lv 0*"46"*"54501277"]`「過去の４つのゲームはすべて、`[@][lv 0*"46"*"54501278"]`夏妃の犯行と、そのイレギュラーで説明可能です。`[@][lv 0*"46"*"54501279"]`もはや、ベアトリーチェなる魔女の犯行とは、二度と語らせません。`[@][lv 0*"46"*"54501280"]`直ちに編纂に入り、極上の物語を献上してご覧に入れます」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"wclo_1b"
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d65718
+d2 [lv 0*"28"*"52100779"]`「くすくすくす……。`[@][lv 0*"28"*"52100780"]`ベアトの魔女伝説はひとカケラも残しては駄目よ。`[@][#][*][lv 0*"28"*"52100781"]`使用人たちの間の噂、不可解な出来事をそうであるかのように語る空気、`[@][lv 0*"28"*"52100782"]`金蔵の幻想と連動した魔女幻想。`[@][lv 0*"28"*"52100783"]`……全て完全に処分しなさい」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"eri","a11_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eri
+*d65719
+d [lv 0*"46"*"54501281"]`「無論です。`[@][lv 0*"46"*"54501282"]`直ちに着手いたします。`[@][lv 0*"46"*"54501283"]`……現在、家具たちの身柄を拘束。`[@][lv 0*"46"*"54501284"]`依り代の特定を急いでいます」`[\]
+meplay 1,16,50
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+msgwnd_non
+*d65720
+d `煉獄の七姉妹はすでに拘束されている。`[\]
+*d65721
+d `ベアトに仕えた賑やかなる姉妹たちは、もはや否定されるべき存在。`[\]
+*d65722
+d `彼女らが、どのような幻想に基づいて“顕現”したのか。`[\]
+*d65723
+d `……その全てを暴き、`[!w500]`……否定する。`[\]
+textoff
+waits 167
+vol_me 1,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"wclo_1c"
+lss s0_8,"dla","a11_defo3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_dla
+*d65724
+d2 [lv 0*"47"*"54600345"]`「アイゼルネ・ユングフラウはすでに調査を開始しておりマス。`[@][#][*][lv 0*"47"*"54600346"]`最新の調査結果では、１９６０年代にニューヨーク近隣で製造された可能性が濃厚デス。`[@][lv 0*"47"*"54600347"]`すでに補佐官が現地入りしておりマス」`[\]
+wait_on_d 0
+lss s0_8,"dla","a11_majime2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"ber","a21_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ber
+*d65725
+d2 [lv 0*"28"*"52100784"]`「１９６０年代？　煉獄の七姉妹は、メイドインＵＳＡ？`[@][#][*][lv 0*"28"*"52100785"]`　ぷっ、くすくすくすくすくす……。`[@][lv 0*"28"*"52100786"]`ソロモン王に連なる、千年の魔女に仕える家具とか威張っておきながら、とんだ紛い物じゃない。`[@][lv 0*"28"*"52100787"]`何者なの…？」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"wclo_1a"
+lss s0_8,"eri","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eri
+*d65726
+d [lv 0*"46"*"54501285"]`「報告によれば、……オカルトマニアの富豪たちに、`[@][lv 0*"46"*"54501286"]`イミテーションを売りつけて高額詐欺を働く集団があるとか」`[\]
+lss s0_10,"dla","a11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_dla
+*d65727
+d [lv 0*"47"*"54600348"]`「騙された富豪が、同様に曰くつきを騙って転売するタメ、`[@][lv 0*"47"*"54600349"]`マニア間で偽られ、神格化された可能性があるとのことデス。`[@][lv 0*"47"*"54600350"]`裏付けと詳細特定を急がせていマス」`[\]
+lss s0_8,"eri","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eri
+*d65728
+d [lv 0*"46"*"54501287"]`「その界隈では、右代宮金蔵はどんなパチモノにも大金を払う、上客だったとか」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wclo_1b"
+flush 23
+seplay 1,37,100
+msgwnd_ber
+*d65729
+d2 [lv 0*"28"*"52100788"]`「……くすくすくす。…あっはっはっはっはっは…！！`[@][lv 0*"28"*"52100789"]`　それが煉獄の七姉妹の正体…？`[@][lv 0*"28"*"52100790"]`　おっかしいわ、`[|][lv 0*"28"*"52100791"][#][*]`あっははははははっはっはっはっはッ！！`[@][lv 0*"28"*"52100792"]`　ベアトの魔女幻想らしい、とんだ紛い物だわ」`[\]
+wait_on_d 0
+seplay 2,37,100
+seplay 3,37,100
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"wclo_1a"
+lss s0_10,"eri","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_eri
+*d65730
+d2 [lv 0*"46"*"54501288"]`「七つの大罪を語る分際で、イミテーションの土産物風情だったわけです。`[@][#][*][lv 0*"46"*"54501289"]`……まぁ、私も。`[@][lv 0*"46"*"54501290"]`初めて見た時から、如何わしい土産物屋で売ってる文鎮に過ぎないとは思ってたわけですが」`[\]
+wait_on_d 0
+lss s0_10,"eri","a11_akuwarai5" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"ber","a21_akuwarai3" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+seplay 1,37,100
+msgwnd_ber
+*d65731
+d2 [lv 0*"28"*"52100793"]`「くすくすくすくす！！　文鎮…！`[@][#][*][lv 0*"28"*"52100794"]`　あっはっはははははははははははは！！`[@][lv 0*"28"*"52100795"]`　その真実は、もう七姉妹には突きつけた？」`[\]
+wait_on_d 0
+seplay 2,37,100
+seplay 3,37,100
+d_continue
+wait_on_d -1
+csp_slot s0_10
+flush 23
+lss s0_10,"dla","a11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_dla
+*d65732
+d [lv 0*"47"*"54600351"]`「いいえ、まだデス」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wclo_1c"
+lss s0_9,"eri","a11_warai1" ;1
+flush 24
+msgwnd_eri
+*d65733
+d2 [lv 0*"46"*"54501291"]`「あいつらまだ、自分たちは千年以上前に、`[@][lv 0*"46"*"54501292"]`偉大なる魔術師によって生み出されたとか、本気で信じてやがります。`[@][#][*][lv 0*"46"*"54501293"]`……早く、完璧な証拠と真実を突きつけ、`[@][lv 0*"46"*"54501294"]`自分たちが原価３０＄にも満たない文鎮風情であることを思い知らせてやりたいです」`[\]
+wait_on_d 0
+lss s0_9,"eri","a11_warai4" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+csp_slot s0_9
+lss s0_10,"ber","a21_akuwarai4" ;1
+aspt2 xpos,s0_10,370
+lss s0_8,"eri","a11_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_ber
+*d65734
+d [lv 0*"28"*"52100796"]`「その時、どんな顔を見せて絶望するのかしら。`[@][lv 0*"28"*"52100797"]`……くすくす、楽しみだわ。`[@][lv 0*"28"*"52100798"]`その際には私を呼びなさい。`[@][lv 0*"28"*"52100799"]`最高の紅茶と梅干を持って観賞に来るわ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+msgwnd_non
+*d65735
+d `ベアトの魔女幻想はすでに看破され、`[@]`その全てがニンゲンによる妄想の産物と証明されている。`[\]
+*d65736
+d `何を根拠にしたどのような妄想から誕生したのか。`[@]`{n}それを完全に証明し、突きつけた時。`[\]
+*d65737
+d `……幻想は霧散して完全に消滅する。`[\]
+*d65738
+d `これを、……処刑と呼ぶ。`[\]
+textoff
+waits 167
+lbg s0_3,"wclo_1b"
+flush 26
+lss s0_10,"dla","a11_majime1" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_dla
+*d65739
+d [lv 0*"47"*"54600352"]`「……処刑は見世物ではありマセン。`[@][lv 0*"47"*"54600353"]`原則、非公開デス」`[\]
+lss s0_8,"eri","a11_majime1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_eri
+*d65740
+d [lv 0*"46"*"54501295"]`「元老院議員であらせられる、大ベルンカステル卿による、`[@][lv 0*"46"*"54501296"]`大法院が職務を適正に執行しているかの視察です。`[@][lv 0*"46"*"54501297"]`異端審問官風情が拒否する気ですか…？」`[\]
+textoff
+waits 167
+lss s0_10,"dla","a11_defo3" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+wait 1000
+lss s0_10,"dla","a11_majime3" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+csp_slot s0_10
+flush 23
+lss s0_9,"ber","a21_warai1" ;1
+flush 10,167
+msgwnd_ber
+*d65741
+d2 [lv 0*"28"*"52100800"]`「えぇ、そうよ。`[@][lv 0*"28"*"52100801"]`ドラノールたちが職務を正規の手順で遂行するかどうか、私は元老院を代表して視察するだけよ。`[@][lv 0*"28"*"52100802"]`……くすくすくすくすくすくす」`[#][*][\]
+wait_on_d 0
+seplay 2,37,100
+d_continue
+wait_on_d -1
+lss s0_8,"eri","a11_warai3" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_eri
+*d65742
+d [lv 0*"46"*"54501298"]`「ワルギリア、ロノウェ、ガァプたちも現在、拘束へ向けて準備中です。`[@][lv 0*"46"*"54501299"]`シエスタ姉妹近衛隊が捜索に当たっています」`[\]
+lss s0_8,"eri","a11_akuwarai4" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+*d65743
+d [lv 0*"46"*"54501300"]`「………無論、その後に、ベアトリーチェにかかわった３人についても、拘束、処刑します」`[\]
+lss s0_9,"ber","a21_warai4" ;1
+flush 10,167
+msgwnd_ber
+*d65744
+d [lv 0*"28"*"52100803"]`「ドラノール。シエスタ姉妹の正体は？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"wclo_1c"
+lss s0_9,"dla","a11_majime1" ;1
+flush 24
+msgwnd_dla
+*d65745
+d2 [lv 0*"47"*"54600354"]`「……高い確率で、犯行に用いた凶器が依り代ではないかと推定されマス。`[@][#][*][lv 0*"47"*"54600355"]`ガートルード上級補佐官が専従チームを結成。`[@][lv 0*"47"*"54600356"]`全件を調査中デス」`[\]
+wait_on_d 0
+lss s0_9,"dla","a11_majime3" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"wclo_1a"
+lss s0_10,"eri","a11_warai3" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_eri
+*d65746
+d [lv 0*"46"*"54501301"]`「シエスタ姉妹の処刑も楽しみです…！`[@][lv 0*"46"*"54501302"]`　ひとりずつ？`[@][lv 0*"46"*"54501303"]`　まとめて一度に？」`[\]
+lss s0_8,"ber","a21_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_ber
+*d65747
+d [lv 0*"28"*"52100804"]`「茶葉の缶を、中身全部、ポットに入れる馬鹿はいないわ。`[@][lv 0*"28"*"52100805"]`ひとさじずつ、ゆっくり味わわなくちゃ」`[\]
+lss s0_10,"eri","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+seplay 1,37,100
+msgwnd_eri
+*d65748
+d [lv 0*"46"*"54501304"]`「くすくすくすくす！　まったくです。`[@][lv 0*"46"*"54501305"]`処刑は連日行ないましょう。`[@][lv 0*"46"*"54501306"]`家具たちに魔女たちに。`[@][lv 0*"46"*"54501307"]`ひとりずつ、連日の処刑ショーを必ずやお届けします」`[\]
+lss s0_8,"ber","a21_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_ber
+*d65749
+d [lv 0*"28"*"52100806"]`「素敵じゃない。`[@][lv 0*"28"*"52100807"]`………何しろ、ずいぶんの人数がいるからね。`[@][lv 0*"28"*"52100808"]`２週間くらいはたっぷり楽しめそうじゃない」`[\]
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+*d65750
+d2 [lv 0*"28"*"52100809"]`「……誰から処刑するか、その順序を彼らに決めさせるとか。`[@][#][*][lv 0*"28"*"52100810"]`うっふふふふふふふふふ！`[@][lv 0*"28"*"52100811"]`　処刑概念についても最高の提案をするように。`[@][lv 0*"28"*"52100812"]`……古今東西のあらゆる処刑を毎日楽しみたいわ」`[\]
+wait_on_d 0
+seplay 1,37,100
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wclo_1b"
+lss s0_9,"dla","a11_majime2" ;1
+flush 24
+msgwnd_dla
+*d65751
+d [lv 0*"47"*"54600357"]`「……処刑は、大法院規定の方法でと規則がありマス」`[\]
+lss s0_10,"eri","a11_warai5" ;1
+aspt2 xpos,s0_10,550
+flush 26
+msgwnd_eri
+*d65752
+d [lv 0*"46"*"54501308"]`「お任せを我が主ッ。`[@][lv 0*"46"*"54501309"]`必ずや、魅力的な処刑ショーを準備いたします！」`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"wclo_1c"
+flush 23
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_ber
+*d65753
+d [lv 0*"28"*"52100813"]`「最低でも、四つ裂き刑くらいにはなさいよ」`[\]
+lss s0_8,"eri","a11_akuwarai5" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eri
+*d65754
+d [lv 0*"46"*"54501310"]`「無論です。`[@][lv 0*"46"*"54501311"]`ヨーロッパ各国からアジア各国まで！`[@][lv 0*"46"*"54501312"]`　東西のあらゆる王国が採用した、国王への反逆罪にのみ適用される、各国最高の処刑を列挙してご覧に入れます！」`[\]
+lss s0_10,"ber","a21_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ber
+*d65755
+d [lv 0*"28"*"52100814"]`「……私からも処刑方法を提案したいわ。`[@][lv 0*"28"*"52100815"]`…それに悩むことは、寝苦しい夜の最高の清涼剤だから。`[@][lv 0*"28"*"52100816"]`……くすくす。アイデアを練って、今度、手紙で送るわ」`[\]
+lss s0_8,"eri","a11_warai3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_eri
+*d65756
+d2 [lv 0*"46"*"54501313"]`「畏まりました、我が主。`[@][lv 0*"46"*"54501314"]`では、ベルンカステル式はその最後のフィナーレに。`[@][#][*][lv 0*"46"*"54501315"]`……全ての幻想を打ち破り、ベアトの魔法大系を完全に打破した最後の最後にて。`[@][lv 0*"46"*"54501316"]`……ベアトリーチェの処刑にて、我が主の望まれる最高の処刑を…！」`[\]
+wait_on_d 0
+lss s0_8,"eri","a11_warai4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 25
+textoff
+waits 167
+lbg s0_3,"wsan_2a"
+flush 5
+msgwnd_ber
+*d65757
+d2 [lv 0*"28"*"52100817"]`「ありがとう、ヱリカ。`[@][lv 0*"28"*"52100818"]`……あなたのお陰で私は、病の辛さを当分の間、忘れることができそうだわ……。`[@][#][*][lv 0*"28"*"52100819"]`くすくすくす、うっふふふふふふはっはははははははははは！`[@][lv 0*"28"*"52100820"]`　あなたは最高だわ。`[@][lv 0*"28"*"52100821"]`私の駒、私の分身、`[|][lv 0*"28"*"52100822"]`……そして私の可愛い娘」`[\]
+wait_on_d 0
+seplay 1,37,71
+seplay 2,37,71
+d_continue
+wait_on_d -1
+msgwnd_eri
+*d65758
+d [lv 0*"46"*"54501317"]`「も、……もったいないお言葉です…！　我が主…！！」`[\]
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+vol_bgm -1,2000
+wait 2000
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"portrait2"
+flush 6
+msgwnd_ber
+*d65759
+d2 [lv 0*"28"*"52100823"]`「ヱリカ、あなたに栄誉と褒美を与えるわ。`[@][#][*][lv 0*"28"*"52100824"]`……ベアトの最大の象徴である、あの大広間の肖像画。`[@][lv 0*"28"*"52100825"]`あれを外して叩き割り、その薪にてケーキを焼いて食べなさい。`[@][lv 0*"28"*"52100826"]`そして、残った額縁に、あなたの肖像画を掲げることを許すわ」`[\]
+wait_on_d 0
+bgmplay 72,71,0
+d_continue
+wait_on_d -1
+textoff
+waits 167
+textoff
+vol_me 1,-1,1000
+seplay 1,55,71
+textoff
+waits 167
+lbg s1_3,"portrait2"
+anim2 s1_17,"no0011",0
+flush 18,1000,":c;graphics\system\fade\c.png"
+wait 1667
+textoff
+seplay 2,55,85
+textoff
+waits 167
+lbg s0_3,"black"
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+wait 500
+textoff
+waits 167
+lbg s0_3,"portrait5"
+flush 42
+seplay 3,27,71
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+wait 500
+textoff
+waits 167
+csp_slot s0_22
+flush 2
+wait 1000
+lss s0_10,"eri","a11_odoroki2" ;1
+aspt2 xpos,s0_10,550
+flush 26
+msgwnd_eri
+*d65760
+d [lv 0*"46"*"54501318"]`「…あ、……ありがとうございます…！`[@][lv 0*"46"*"54501319"]`　最高の栄誉です…！」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"wclo_1b"
+lss s0_9,"ber","a21_warai1" ;1
+flush 22
+msgwnd_ber
+*d65761
+d [lv 0*"28"*"52100827"]`「………ベアトリーチェの名前と痕跡のすべての抹殺、抹消。`[@][lv 0*"28"*"52100828"]`それが全て終わるまでの間、あなたにこの、閉じられた六軒島の主となることを命じるわ」`[\]
+lss s0_9,"ber","a21_warai2" ;1
+flush 10,167
+*d65762
+d [lv 0*"28"*"52100829"]`「……奇跡の魔女、ベルンカステルの名において、`[@][lv 0*"28"*"52100830"]`その日まであなたに魔女の位を与えることを宣言するわ。`[@][lv 0*"28"*"52100831"]`……これよりあなたは、真実の魔女、ヱリカを名乗りなさい」`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"wclo_1c"
+lss s0_8,"eri","a11_odoroki1" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_eri
+*d65763
+d2 [lv 0*"46"*"54501320"]`「し、`[|][lv 0*"46"*"54501321"]`……真実の、魔女……！`[@][lv 0*"46"*"54501322"]`　……あ、`[@][#][*][lv 0*"46"*"54501323"]`……ありがとうございますッ、我が主…！！`[@][lv 0*"46"*"54501324"]`　この栄誉に恥じぬ一層の働きを誓います…！」`[\]
+wait_on_d 0
+lss s0_8,"eri","a11_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_22,"black"
+flush 22
+msgwnd_non
+*d65764
+d `駒に過ぎぬ身でありながら、`[@]`………仮とはいえ一時、主と同じ魔女を名乗ることを許される名誉……。`[\]
+*d65765
+d `ヱリカは、自分の活躍が最高の形で認められた感動に、打ち震えていた……。`[\]
+textoff
+waits 167
+csp_slot s0_22
+textoff
+waits 167
+csp_slot s0_8
+lbg s0_3,"black"
+flush 23
+textoff
+waits 167
+lbg s0_3,"wclo_1a"
+lss s0_9,"ber","a21_warai1" ;1
+flush 24
+msgwnd_ber
+*d65766
+d [lv 0*"28"*"52100832"]`「ドラノールは、引き続きヱリカを補佐し、`[@][lv 0*"28"*"52100833"]`その進捗を私に報告しなさい」`[\]
+seplay 2,30,71
+lss s0_10,"dla","a11_defo3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_dla
+*d65767
+d [lv 0*"47"*"54600358"]`「……御意デス」`[\]
+lss s0_9,"ber","a21_shian1" ;1
+flush 10,167
+msgwnd_ber
+*d65768
+d [lv 0*"28"*"52100834"]`「…………ところで、ラムダはどこ？」`[\]
+lss s0_10,"dla","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_dla
+*d65769
+d [lv 0*"47"*"54600359"]`「あちらにおられマス」`[\]
+msgwnd_non
+*d65770
+d `２階客席より、眼下を指差す。`[\]
+*d65771
+d `ラムダデルタの姿は、………赤き太刀に貫かれて絶命した戦人の下にあった。`[\]
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 2000
+vol_bgm -1,2000
+wait 2000
+bgmplay 110,71,0
+textoff
+waits 167
+lbg s0_3,"wsan_1c"
+lss s0_24,"lam","a11_futeki2" ;1
+flush 26
+msgwnd_lam
+*d65772
+d [lv 0*"29"*"52200684"]`「………右代宮戦人か…。`[@][lv 0*"29"*"52200685"]`面白い男だったわ。`[@][lv 0*"29"*"52200686"]`…そして、もっと面白くなれたかもしれないのに、……残念ね」`[\]
+seplay 1,52,71
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,550
+textoff
+aspt2 breakup,s0_10,1000
+aspt2 alpha,s0_10,0
+flush 1
+aspt2 breakup,s0_10,0,2000
+aspt2 alpha,s0_10,255,2000
+sptwait2 breakup,s0_10
+msgwnd_ber
+*d65773
+d2 [lv 0*"28"*"52100835"]`「見事な死に様じゃない。`[@][#][*][lv 0*"28"*"52100836"]`………ヱリカ！`[@][lv 0*"28"*"52100837"]`　この戦人の亡骸は、屋敷の大広間に飾るといいわ。`[@][lv 0*"28"*"52100838"]`……次に私がこのカケラに訪れる時は、私をその前で迎えなさい」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"eri","a11_warai5" ;1
+aspt2 xpos,s0_8,-550
+flush 66
+msgwnd_eri
+*d65774
+d [lv 0*"46"*"54501325"]`「畏まりました、我が主っ。`[@][lv 0*"46"*"54501326"]`愚かなる男の姿を、永遠に主の勝利の記念碑と致します！」`[\]
+lss s0_24,"lam","a11_akuwarai3" ;1
+flush 10,167
+msgwnd_lam
+*d65775
+d2 [lv 0*"29"*"52200687"]`「くすくす、それは素敵ね。洒落てるわ。`[@][lv 0*"29"*"52200688"]`漆喰で塗り固めて、美しい純白の石像にするといい。`[@][#][*][lv 0*"29"*"52200689"]`……可愛らしく、デコなんかもしてくれちゃったら最高ね！」`[\]
+wait_on_d 0
+lss s0_24,"lam","a11_akuwarai1" ;1
+seplay 1,37,71
+d_continue
+wait_on_d -1
+lss s0_8,"eri","a11_akuwarai5" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_eri
+*d65776
+d [lv 0*"46"*"54501327"]`「はい、ラムダデルタ卿。`[@][lv 0*"46"*"54501328"]`ご期待に添えるよう、努力します…！」`[\]
+lss s0_24,"lam","a11_majime1" ;1
+flush 10,167
+msgwnd_lam
+*d65777
+d [lv 0*"29"*"52200690"]`「おめでと、魔女就任。`[@][lv 0*"29"*"52200691"]`一時的なものであれ、私はあなたを友人として迎えるわ」`[\]
+csp_slot s0_24
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d65778
+d `ヱリカは感極まり、涙さえ浮かべるのだった。`[\]
+*d65779
+d `………駒にとって、その活躍を主に認められる以上の喜びは存在しないのだから。`[\]
+textoff
+waits 167
+lbg s0_3,"wsan_1b"
+flush 25
+seplay 1,52,71
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+msgwnd_ber
+*d65780
+d [lv 0*"28"*"52100839"]`「最後には、ベアトも剥製にしてやりたいわ。`[@][lv 0*"28"*"52100840"]`そして大広間に高々と飾ってやるの」`[\]
+lss s0_10,"lam","a11_akuwarai2" ;1
+aspt2 xpos,s0_10,370
+flush 26
+msgwnd_lam
+*d65781
+d [lv 0*"29"*"52200691b"]`「白樺湖畔？」`[\]
+lss s0_8,"ber","a21_akuwarai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_ber
+*d65782
+d [lv 0*"28"*"52100840_b"]`「ニンゲン狩りの伯爵よ」`[gstg 4][\]
+lss s0_10,"lam","a11_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_lam
+*d65783
+d2 [lv 0*"29"*"52200692"]`「……私。`[@][lv 0*"29"*"52200692b"]`魔女じゃなかった頃にあれを読んで。`[@][lv 0*"29"*"52200693"]`…永遠の命を得た人間って、どうしてここまで残忍になれるんだろうって、`[@][lv 0*"29"*"52200694"]`不思議に思ったことがあるわ。`[@][#][*][lv 0*"29"*"52200695"]`……あの時の私は、正直、共感できなかった」`[\]
+wait_on_d 0
+lss s0_10,"lam","a11_majime1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_ber
+*d65784
+d2 [lv 0*"28"*"52100841"]`「………魔女になって千年を生きてよくわかるわ。`[@][lv 0*"28"*"52100842"]`……あれの筆者は、本当の意味で、私たちの残酷さをよく理解していたのよ。`[@][lv 0*"28"*"52100843"]`くすくすくす！」`[#][*][\]
+wait_on_d 0
+seplay 1,37,71
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wsan_2a"
+flush 5
+msgwnd_lam
+*d65785
+d [lv 0*"29"*"52200696"]`「……次はどこへ行く？`[@][lv 0*"29"*"52200697"]`　どうせ旅立ちは、お互い背中を向けて、でしょ？」`[\]
+msgwnd_ber
+*d65786
+d [lv 0*"28"*"52100844"]`「あなたに退屈をしたくないからよ」`[\]
+msgwnd_lam
+*d65787
+d [lv 0*"29"*"52200698"]`「ありがとう、ベルン。`[@][lv 0*"29"*"52200699"]`でも私はきっと、百を数えたらまたあなたを探し始めるわよ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 26
+textoff
+waits 167
+lbg s0_3,"wsan_2c"
+flush 26
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_ber
+*d65788
+d2 [lv 0*"28"*"52100845"]`「退屈させない子ね。`[@][lv 0*"28"*"52100846"]`だから好きよ、愛してるわ。`[@][#][*][lv 0*"28"*"52100847"]`…………またどこかで会いましょう。`[@][lv 0*"28"*"52100848"]`もっとも、百年先か千年先か、未来永劫、再会しないかもわからないけれど」`[\]
+wait_on_d 0
+lss s0_10,"ber","a21_warai4" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"lam","a11_futeki3" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_lam
+*d65789
+d [lv 0*"29"*"52200700"]`「大丈夫よ。`[@][lv 0*"29"*"52200701"]`愛し合う二人に、カケラの海は狭いわ」`[\]
+lss s0_10,"ber","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ber
+*d65790
+d [lv 0*"28"*"52100849"]`「第三の男？」`[\]
+lss s0_8,"lam","a11_akuwarai4" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_lam
+*d65791
+d [lv 0*"29"*"52200702"]`「天井桟敷だってば」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"wsan_2a"
+flush 25
+msgwnd_ber
+*d65792
+d [lv 0*"28"*"52100850"]`「………あの星空のように輝く無数のカケラを、`[@][lv 0*"28"*"52100851"]`１つ砕く度に一晩は退屈の毒から解放されるとわかったら。`[@][lv 0*"28"*"52100852"]`お前だって、星の数を数えてみたくなる」`[\]
+msgwnd_lam
+*d65793
+d [lv 0*"29"*"52200703"]`「うまいうまい、ぷーくすくすくすくす…！」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d65794
+d `航海者の魔女たちは、無数に輝く、可能性の未来を渡り歩いては、`[@]`……それを食い潰して、退屈の病から一時逃れる。`[\]
+*d65795
+d `ベアトリーチェという名のニンゲンが生み出した小さな小さなカケラは、`[@]`……こうして二人の魔女に食い潰されて、`[@]`……その輝きを失う。`[\]
+*d65796
+d `ベアトの前でライバル同士を名乗ったはずの二人は、`[@]`今やそのふりも止め、馴れ合いながら笑い合うのだった。`[\]
+textoff
+waits 167
+lbg s0_3,"wsan_1c"
+lss s0_9,"eri","a11_warai2" ;1
+flush 22
+seplay 1,52,71
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-550
+textoff
+aspt2 breakup,s0_8,1000
+aspt2 alpha,s0_8,0
+flush 1
+aspt2 breakup,s0_8,0,2000
+aspt2 alpha,s0_8,255,2000
+sptwait2 breakup,s0_8
+msgwnd_ber
+*d65797
+d2 [lv 0*"28"*"52100853"]`「ヱリカ。`[@][lv 0*"28"*"52100854"]`新しき、このカケラの支配者。`[@][lv 0*"28"*"52100855"]`………あなたが真実を紡ぎ、……この世界の終焉までの物語を描きなさい。`[@][#][*][lv 0*"28"*"52100856"]`…えっと、次は第６のゲームだっけ？」`[\]
+wait_on_d 0
+lss s0_8,"ber","a21_warai2" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_9,"eri","a11_warai4" ;1
+flush 10,167
+msgwnd_eri
+*d65798
+d [lv 0*"46"*"54501329"]`「はい、第６のゲームです」`[\]
+lss s0_8,"ber","a21_warai1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_ber
+*d65799
+d [lv 0*"28"*"52100857"]`「エピソード６は何てタイトルにするか、あなたが決めなさい。`[@][lv 0*"28"*"52100858"]`もはや、この物語の紡ぎ手でありマスターであるのは、あなたなのだから」`[\]
+csp_slot s0_9
+lss s0_24,"eri","a11_warai3" ;1
+flush 80
+msgwnd_eri
+*d65800
+d [lv 0*"46"*"54501330"]`「ありがとうございます。`[@][lv 0*"46"*"54501331"]`……実は、もう決めてあります」`[\]
+lss s0_8,"ber","a21_warai3" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_ber
+*d65801
+d [lv 0*"28"*"52100859"]`「……あら、もうなの？`[@][lv 0*"28"*"52100860"]`　……なら聞かせてちょうだい。`[@][lv 0*"28"*"52100861"]`何てタイトルなの？」`[\]
+lss s0_24,"eri","a11_akuwarai1" ;1
+flush 80
+msgwnd_eri
+*d65802
+d2 [lv 0*"46"*"54501332"]`「はい。`[@][lv 0*"46"*"54501333"]`エピソード６、…………。`[@][#][*][lv 0*"46"*"54501334"]`うふふふふ、本当は焦らしたいんですが、お教えします」`[\]
+wait_on_d 0
+lss s0_24,"eri","a11_akuwarai5" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_10,"lam","a11_akuwarai3" ;1
+aspt2 xpos,s0_10,550
+flush 24
+msgwnd_lam
+*d65803
+d2 [lv 0*"29"*"52200704"]`「くすくす！`[@][lv 0*"29"*"52200705"]`　何よぅ、もったいぶらずに教えなさいよ。`[#][*][@][lv 0*"29"*"52200706"]`新米魔女のくせに、先輩焦らすとかって、ありえないわ〜！」`[\]
+wait_on_d 0
+seplay 1,48,71
+agpt quakexcycle,33
+agpt quakexamp,30
+agpt quakexamp,0,333,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lss s0_24,"eri","a11_akuwarai3" ;1
+flush 10,167
+meplay 1,16,50
+vol_bgm -1,3000
+wait 3000
+wait 1000
+lss s0_24,"eri","a11_akuwarai2" ;1
+flush 10,167
+seplay 1,59,100
+set_window_simple 80
+msgwnd_eri
+*d65804
+d [lv 0*"46"*"54501335"]`{e:090:「エピソード６、Checkmate of the golden witch！」}`[\]
+set_name_window_non
+textoff
+waits 167
+csp_slot s0_24
+textoff
+waits 167
+lbg s0_22,"white"
+flush 1
+seplay 1,74,90
+seplay 2,37,100
+seplay 3,1006,100
+textoff
+waits 167
+csp_slot s0_22
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"end_3d"
+show_glass 0
+wait 8000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+ch_done flag_scenario_5_tea
+*teatime_5_end
+goto *end_game

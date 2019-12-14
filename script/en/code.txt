@@ -1,0 +1,57 @@
+*set_window_options
+	smart_quotes "‘","’","“","”","’"
+return
+
+*sub_get_translation
+	if %track_id == 58 mov $track_id,"video\sub\58_eng.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_eng.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_eng.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_eng.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_eng.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_eng.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_eng.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_eng.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_eng.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_eng.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_eng.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\eng.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\eng.ass" : return
+return
+
+*sub_get_romaji
+	if %track_id == 58 mov $track_id,"video\sub\58_rom.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_rom.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_rom.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_rom.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_rom.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_rom.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_rom.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_rom.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_rom.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_rom.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_rom.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\rom.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\rom.ass" : return
+return
+
+*sub_get_both
+	if %track_id == 58 mov $track_id,"video\sub\58_both_eng.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_both_eng.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_both_eng.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_both_eng.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_both_eng.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_both_eng.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_both_eng.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_both_eng.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_both_eng.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_both_eng.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_both_eng.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\both_eng.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\both_eng.ass" : return
+return
+
+*redefine_text_presets
+return
+
+*backup_disable_lang
+return

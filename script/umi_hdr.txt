@@ -1,0 +1,3038 @@
+;mode1920@2172,1222,value2500
+;gameid builder_id
+
+*define
+
+humanz 998	;999 before ld (scene)
+hudz 749	;750 after ld (scene)
+windowz 748	;749 before textwindow (hud)
+textz 747	;748 after textwindow (hud)
+
+automode
+automode_time -20
+mode_wave_demo
+enable_custom_cursors
+textatlas
+
+bgmdownmode 0
+underline 1250
+
+nsa
+
+if %CHIRU_MODE == 0 versionstr "Umineko no Naku Koro ni EP4, ver1.005","created by 07th Expansion"
+if %CHIRU_MODE == 1 versionstr "Umineko no Naku Koro ni Chiru EP8, ver1.001","created by 07th Expansion"
+
+stralias localisation,"builder_localisation"
+numalias releasedate,builder_date
+numalias CHIRU_MODE,8084
+
+mov $CHIRU_MODE,"v8.1a"
+
+#locale_import "header.txt"
+
+savenumber 40
+
+globalon
+
+stralias msk_1,":c;graphics\system\fade\1.png"
+stralias msk_1920x1080,":c;graphics\system\fade\1920x1080.png"
+stralias msk_2,":c;graphics\system\fade\2.png"
+stralias msk_blood,":c;graphics\system\fade\blood.png"
+stralias msk_c,":c;graphics\system\fade\c.png"
+stralias msk_cut,":c;graphics\system\fade\cut.png"
+stralias msk_cuta,":c;graphics\system\fade\cuta.png"
+stralias msk_cuta2,":c;graphics\system\fade\cuta2.png"
+stralias msk_cutb,":c;graphics\system\fade\cutb.png"
+stralias msk_cutc,":c;graphics\system\fade\cutc.png"
+stralias msk_cutd,":c;graphics\system\fade\cutd.png"
+stralias msk_cutdl,":c;graphics\system\fade\cutdl.png"
+stralias msk_cutdr,":c;graphics\system\fade\cutdr.png"
+stralias msk_cutul,":c;graphics\system\fade\cutul.png"
+stralias msk_cutur,":c;graphics\system\fade\cutur.png"
+stralias msk_cutyl,":c;graphics\system\fade\cutyl.png"
+stralias msk_cutyr,":c;graphics\system\fade\cutyr.png"
+stralias msk_cutz,":c;graphics\system\fade\cutz.png"
+stralias msk_default,":c;graphics\system\fade\default.png"
+stralias msk_down,":c;graphics\system\fade\down.png"
+stralias msk_kanon_r,":c;graphics\system\fade\kanon_r.png"
+stralias msk_left,":c;graphics\system\fade\left.png"
+stralias msk_m1,":c;graphics\system\fade\m1.png"
+stralias msk_right,":c;graphics\system\fade\right.png"
+stralias msk_test,":c;graphics\system\fade\test.png"
+stralias msk_up,":c;graphics\system\fade\up.png"
+stralias msk_x,":c;graphics\system\fade\x.png"
+stralias msk_cut_down,":c;graphics\system\fade\cut_down.png"
+stralias msk_cut_up,":c;graphics\system\fade\cut_up.png"
+stralias msk_cut_down_flip,":c;graphics\system\fade\cut_down_flip.png"
+stralias msk_cut_up_flip,":c;graphics\system\fade\cut_up_flip.png"
+stralias msk_test2,":c;graphics\system\fade\test2.png"
+
+
+;Effects
+;Default speed
+;Effect Quick
+;Effect Slow
+;Quick for the club (school festival)
+
+;Cross-fade
+effect 2,10,1000
+effect 22,10,400
+effect 42,10,3000
+effect 62,10,200
+;For the change in facial expression
+effect 80,10,200
+
+;Left fade
+effect 3,18,1300,msk_left
+effect 23,18,300,msk_left
+effect 43,18,3000,msk_left
+effect 63,18,300,msk_left
+effect 83,18,5,msk_left
+
+;Right fade
+effect 4,18,1300,msk_right
+effect 24,18,300,msk_right
+effect 44,18,3000,msk_right
+effect 64,18,300,msk_right
+effect 84,18,5,msk_right
+
+;Fade down
+effect 5,18,1300,msk_down
+effect 25,18,300,msk_down
+effect 45,18,3000,msk_down
+effect 65,18,300,msk_down
+effect 85,18,5,msk_down
+
+;Fade up
+effect 6,18,1300,msk_up
+effect 26,18,300,msk_up
+effect 46,18,3000,msk_up
+effect 66,18,300,msk_up
+effect 86,18,5,msk_up
+
+;Fade x
+effect 7,18,1300,msk_x
+effect 27,18,300,msk_x
+effect 47,18,3000,msk_x
+effect 67,18,300,msk_x
+
+;Fade centre
+effect 8,18,1300,msk_c
+effect 28,18,300,msk_c
+effect 48,18,3000,msk_c
+effect 68,18,300,msk_c
+effect 88,18,1,msk_c
+
+effect 9,18,1300,msk_m1
+effect 29,18,300,msk_m1
+effect 49,18,3000,msk_m1
+effect 69,18,300,msk_m1
+
+;Double doors
+
+effect 10,18,3000,msk_1
+effect 30,18,300,msk_1
+effect 50,18,3000,msk_1
+
+effect 11,18,3000,msk_2
+effect 31,18,300,msk_2
+
+;Textbox fading effect
+windoweffect 10,166
+
+;-----------------------------------------------
+;Debugging is one of the most important things
+defsub debug_str	;params: $STRING
+defsub debug_str2	;params: $STRING,$STRING
+defsub debug_var	;params: %NUMBER,$STRING
+;-----------------------------------------------
+
+;-----------------------------------------------
+;Save/gameplay related (globals)
+numalias UMINEKOEND,2901				;Ending var
+
+if %CHIRU_MODE != 0 jumpf
+	numalias savemodePage,3001				;Bookmark page
+	numalias savedataTime,3100				;Character variable for saving time data
+	numalias savedataComment,3200			;Character variable for saving comment data
+	numalias savedataflg,3300				;Numeric variable for save data
+	numalias savecountClick,8730			;Click count
+	numalias savecountSess,8731				;Creation timestamp
+	numalias savecountTime,8732				;Play time
+	numalias savecountTrophy,20				;30000 clicks trophy
+~
+
+if %CHIRU_MODE != 1 jumpf
+	numalias savemodePage,6001				;Bookmark page
+	numalias savedataTime,6100				;Character variable for saving time data
+	numalias savedataComment,6200			;Character variable for saving comment data
+	numalias savedataflg,6300				;Numeric variable for save data
+	numalias savecountClick,8797			;Click count
+	numalias savecountSess,8798				;Creation timestamp
+	numalias savecountTime,8799				;Play time
+	numalias savecountTrophy,39				;30000 clicks trophy
+~
+
+numalias bm_pt,3700						;Used as a temp variable now
+numalias UMINEKOEND_MUSIC_FLG,3701 		;Enables Music Box
+numalias UMINEKOEND_CG_FLG,3702 		;Enables CG
+numalias music_box_tmp,3704 			;Plus all the tracks afterwards (37xx-38xx)
+numalias music_box_count,3705			;Amount of unlocked (tracks go next)
+
+numalias UMINEKOEND_FLG,3925 			;Main menu flag (elements)
+numalias UMINEKOEND_TIPS_FLG,3926 		;Tips menu flag (new)
+numalias UMINEKOEND_TIPS_CHA_FLG,3927	;Chars menu flag (new)
+
+;-----------------------------------------------------------
+;Temporary variables, used to control the actions
+mov %0,5200
+
+;Simple temporaries (variable)
+numalias tmp,%0   : inc %0
+numalias tmp1,%0  : inc %0
+numalias tmp2,%0  : inc %0
+numalias tmp3,%0  : inc %0
+numalias tmp4,%0  : inc %0
+numalias tmp5,%0  : inc %0
+numalias tmp6,%0  : inc %0
+numalias tmp7,%0  : inc %0
+numalias tmp8,%0  : inc %0
+numalias tmp9,%0  : inc %0
+numalias tmp10,%0 : inc %0
+numalias tmp11,%0 : inc %0
+numalias tmp12,%0 : inc %0
+numalias tmp13,%0 : inc %0
+numalias tmp14,%0 : inc %0
+numalias tmp15,%0 : inc %0
+
+;Random temporaries (variable)
+numalias ran,%0   : inc %0
+numalias ran1,%0  : inc %0
+numalias ran2,%0  : inc %0
+numalias ran3,%0  : inc %0
+numalias ran4,%0  : inc %0
+numalias ran5,%0  : inc %0
+
+;-----------------------------------------------------------
+;Port configuration variables
+numalias chapter_rmode,8009
+numalias init_done,8010
+numalias chapter_bak,8011
+numalias chapter_rsave,8012
+numalias dlg_vol,8013 			;dialogue volume
+numalias sfx_vol,8014 			;sfx volume
+numalias bgm_vol,8015 			;bgm volume
+numalias log_is_generated_to_cvs,8016
+numalias textspeed,8017			;text speed
+numalias textspeed2,8018		;text speed temp
+numalias autom_no_cur,8019
+numalias log_build_start_location,8020
+numalias video_res,8056
+numalias old_wording,8057		;Difference ru/en!!!
+numalias msgwnd_type,8058		;Textbox flag
+numalias no_log_gen,8059		;Disable log generation
+numalias animated_lips,8060
+numalias legacy_op,8061
+numalias enable_cache,8062
+numalias game_language,8063
+numalias interface_kb_dual,8064
+numalias op_ed_song_subtitles,8065
+numalias bgm_title_language,8066
+numalias rumble_strength,8067
+numalias bgm_chapter_display,8068
+numalias window_size,8069
+numalias full_window_auto,8070
+numalias firstsetting,8071
+numalias automodespeed,8072
+numalias last_gamehash,8073
+numalias last_locale_gamehash,8074
+numalias did_unlock,8082
+numalias did_loghint,8083
+;numalias CHIRU_MODE,8084		;Defined above
+numalias skip_unread,8085
+numalias hide_textbox,8086
+numalias no_cache_atm,8087
+numalias font_preference,8088
+numalias current_renderer,8089
+numalias title_skip,8090	;Skips main menu
+numalias current_op,8091
+numalias omake_level,8092
+numalias omake3_skip,8093
+numalias omake_portrait,8094
+numalias omake_return,8095
+numalias sskip_turbo,8096
+
+;2500 — global variable start
+
+;00xx-01xx - api variables including saved info
+;04xx - sound variables including channels
+;23xx - rmenu variables
+;31xx - save date/time
+;32xx - save description
+;33xx - save state
+;37xx - rondo bgm (numeric only)
+;38xx - rondo/chiru bgm (numeric only)
+;39xx - chiru bgm
+;WARNING: 3925-3927 are used by game state flags and by mere luck do not overlap with BGM ids
+;45xx - chapter state (string only)
+;47xx - rondo/chiru bgm with 10xx ids
+;52xx - temporary variables
+;61xx - save date/time
+;62xx - save description
+;63xx - save state
+;80xx - port config
+;81xx - character voice state
+;86xx — rondo cg
+;87xx — trophies
+;88xx — chiru cg
+
+numalias me_current_vol_1,425
+numalias me_current_vol_2,426
+numalias me_current_vol_3,427
+numalias me_current_vol_4,428
+numalias me_current_vol_5,429
+numalias me_current_vol_6,430
+numalias me_current_vol_7,431
+
+numalias me_enable_1,432
+numalias me_enable_2,433
+numalias me_enable_3,434
+numalias me_enable_4,435
+numalias me_enable_5,436
+numalias me_enable_6,437
+numalias me_enable_7,438
+
+numalias me_num_1,439
+numalias me_num_2,440
+numalias me_num_3,441
+numalias me_num_4,442
+numalias me_num_5,443
+numalias me_num_6,444
+numalias me_num_7,445
+
+numalias bgm_current_id,451
+numalias bgm_current_vol,452
+
+mov %0,8100
+numalias vv_0,%0   : inc %0 ;00
+numalias vv_kin,%0 : inc %0 ;01
+numalias vv_cla,%0 : inc %0 ;02
+numalias vv_nat,%0 : inc %0 ;03
+numalias vv_jes,%0 : inc %0 ;04
+numalias vv_eva,%0 : inc %0 ;05
+numalias vv_hid,%0 : inc %0 ;06
+numalias vv_geo,%0 : inc %0 ;07
+numalias vv_rud,%0 : inc %0 ;08
+numalias vv_kir,%0 : inc %0 ;09
+numalias vv_but,%0 : inc %0 ;10
+numalias vv_enj,%0 : inc %0 ;11
+numalias vv_ros,%0 : inc %0 ;12
+numalias vv_mar,%0 : inc %0 ;13
+numalias vv_gen,%0 : inc %0 ;14
+numalias vv_sha,%0 : inc %0 ;15
+numalias vv_kan,%0 : inc %0 ;16
+numalias vv_goh,%0 : inc %0 ;17
+numalias vv_kum,%0 : inc %0 ;18
+numalias vv_nan,%0 : inc %0 ;19
+numalias vv_ama,%0 : inc %0 ;20
+numalias vv_oko,%0 : inc %0 ;21
+numalias vv_kas,%0 : inc %0 ;22
+numalias vv_pro,%0 : inc %0 ;23
+numalias vv_kaw,%0 : inc %0 ;24
+numalias vv_na2,%0 : inc %0 ;25
+numalias vv_ku2,%0 : inc %0 ;26
+numalias vv_bea,%0 : inc %0 ;27 bea (sounds different in chiru)
+numalias vv_ber,%0 : inc %0 ;28
+numalias vv_lam,%0 : inc %0 ;29
+numalias vv_wal,%0 : inc %0 ;30
+numalias vv_ron,%0 : inc %0 ;31
+numalias vv_gap,%0 : inc %0 ;32
+numalias vv_sak,%0 : inc %0 ;33
+numalias vv_ev2,%0 : inc %0 ;34
+numalias vv_s45,%0 : inc %0 ;35
+numalias vv_s41,%0 : inc %0 ;36
+numalias vv_s00,%0 : inc %0 ;37
+numalias vv_rg1,%0 : inc %0 ;38
+numalias vv_rg2,%0 : inc %0 ;39
+numalias vv_rg3,%0 : inc %0 ;40
+numalias vv_rg4,%0 : inc %0 ;41
+numalias vv_rg5,%0 : inc %0 ;42
+numalias vv_rg6,%0 : inc %0 ;43
+numalias vv_rg7,%0 : inc %0 ;44
+numalias vv_goa,%0 : inc %0 ;45
+numalias vv_eri,%0 : inc %0 ;46
+numalias vv_dla,%0 : inc %0 ;47
+numalias vv_ger,%0 : inc %0 ;48
+numalias vv_cor,%0 : inc %0 ;49
+numalias vv_fea,%0 : inc %0 ;50
+numalias vv_zep,%0 : inc %0 ;51
+numalias vv_fur,%0 : inc %0 ;52
+numalias vv_rio,%0 : inc %0 ;53
+numalias vv_wil,%0 : inc %0 ;54
+numalias vv_cur,%0 : inc %0 ;55
+numalias vv_fe2,%0 : inc %0 ;56 fe2 (shares fea)
+numalias vv_bu3,%0 : inc %0 ;57
+numalias vv_ki2,%0 : inc %0 ;58 young kinzo (shares kin)
+numalias vv_be2,%0 : inc %0 ;59 normal beatrice (shares bea)s
+numalias vv_be3,%0 : inc %0 ;60 nee beatrice
+numalias vv_99,8199 ;99
+numalias vv_inc,8190
+
+;Chapter flags
+mov %0,4500
+;scenario ep1
+numalias flag_scenario_1_op,%0 : inc %0
+numalias flag_scenario_1_1,%0 : inc %0
+numalias flag_scenario_1_2,%0 : inc %0
+numalias flag_scenario_1_3,%0 : inc %0
+numalias flag_scenario_1_4,%0 : inc %0
+numalias flag_scenario_1_5,%0 : inc %0
+numalias flag_scenario_1_6,%0 : inc %0
+numalias flag_scenario_1_7,%0 : inc %0
+numalias flag_scenario_1_8,%0 : inc %0
+numalias flag_scenario_1_9,%0 : inc %0
+numalias flag_scenario_1_10,%0 : inc %0
+numalias flag_scenario_1_11,%0 : inc %0
+numalias flag_scenario_1_12,%0 : inc %0
+numalias flag_scenario_1_13,%0 : inc %0
+numalias flag_scenario_1_14,%0 : inc %0
+numalias flag_scenario_1_15,%0 : inc %0
+numalias flag_scenario_1_16,%0 : inc %0
+numalias flag_scenario_1_17,%0 : inc %0
+numalias flag_scenario_1_tea,%0 : inc %0
+numalias flag_scenario_1_ura,%0 : inc %0
+;scenario ep2
+numalias flag_scenario_2_op,%0 : inc %0
+numalias flag_scenario_2_1,%0 : inc %0
+numalias flag_scenario_2_2,%0 : inc %0
+numalias flag_scenario_2_3,%0 : inc %0
+numalias flag_scenario_2_4,%0 : inc %0
+numalias flag_scenario_2_5,%0 : inc %0
+numalias flag_scenario_2_6,%0 : inc %0
+numalias flag_scenario_2_7,%0 : inc %0
+numalias flag_scenario_2_8,%0 : inc %0
+numalias flag_scenario_2_9,%0 : inc %0
+numalias flag_scenario_2_10,%0 : inc %0
+numalias flag_scenario_2_11,%0 : inc %0
+numalias flag_scenario_2_12,%0 : inc %0
+numalias flag_scenario_2_13,%0 : inc %0
+numalias flag_scenario_2_14,%0 : inc %0
+numalias flag_scenario_2_15,%0 : inc %0
+numalias flag_scenario_2_16,%0 : inc %0
+numalias flag_scenario_2_17,%0 : inc %0
+numalias flag_scenario_2_18,%0 : inc %0
+numalias flag_scenario_2_tea,%0 : inc %0
+numalias flag_scenario_2_ura,%0 : inc %0
+;scenario ep3
+numalias flag_scenario_3_op,%0 : inc %0
+numalias flag_scenario_3_1,%0 : inc %0
+numalias flag_scenario_3_2,%0 : inc %0
+numalias flag_scenario_3_3,%0 : inc %0
+numalias flag_scenario_3_4,%0 : inc %0
+numalias flag_scenario_3_5,%0 : inc %0
+numalias flag_scenario_3_6,%0 : inc %0
+numalias flag_scenario_3_7,%0 : inc %0
+numalias flag_scenario_3_8,%0 : inc %0
+numalias flag_scenario_3_9,%0 : inc %0
+numalias flag_scenario_3_10,%0 : inc %0
+numalias flag_scenario_3_11,%0 : inc %0
+numalias flag_scenario_3_12,%0 : inc %0
+numalias flag_scenario_3_13,%0 : inc %0
+numalias flag_scenario_3_14,%0 : inc %0
+numalias flag_scenario_3_15,%0 : inc %0
+numalias flag_scenario_3_16,%0 : inc %0
+numalias flag_scenario_3_17,%0 : inc %0
+numalias flag_scenario_3_18,%0 : inc %0
+numalias flag_scenario_3_tea,%0 : inc %0
+numalias flag_scenario_3_ura,%0 : inc %0
+;scenario ep4
+numalias flag_scenario_4_op,%0 : inc %0
+numalias flag_scenario_4_1,%0 : inc %0
+numalias flag_scenario_4_2,%0 : inc %0
+numalias flag_scenario_4_3,%0 : inc %0
+numalias flag_scenario_4_4,%0 : inc %0
+numalias flag_scenario_4_5,%0 : inc %0
+numalias flag_scenario_4_6,%0 : inc %0
+numalias flag_scenario_4_7,%0 : inc %0
+numalias flag_scenario_4_8,%0 : inc %0
+numalias flag_scenario_4_9,%0 : inc %0
+numalias flag_scenario_4_10,%0 : inc %0
+numalias flag_scenario_4_11,%0 : inc %0
+numalias flag_scenario_4_12,%0 : inc %0
+numalias flag_scenario_4_13,%0 : inc %0
+numalias flag_scenario_4_14,%0 : inc %0
+numalias flag_scenario_4_15,%0 : inc %0
+numalias flag_scenario_4_16,%0 : inc %0
+numalias flag_scenario_4_17,%0 : inc %0
+numalias flag_scenario_4_18,%0 : inc %0
+numalias flag_scenario_4_19,%0 : inc %0
+numalias flag_scenario_4_tea,%0 : inc %0
+numalias flag_scenario_4_ura,%0 : inc %0
+;scenario ep5
+numalias flag_scenario_5_op,%0 : inc %0
+numalias flag_scenario_5_1,%0 : inc %0
+numalias flag_scenario_5_2,%0 : inc %0
+numalias flag_scenario_5_3,%0 : inc %0
+numalias flag_scenario_5_4,%0 : inc %0
+numalias flag_scenario_5_5,%0 : inc %0
+numalias flag_scenario_5_6,%0 : inc %0
+numalias flag_scenario_5_7,%0 : inc %0
+numalias flag_scenario_5_8,%0 : inc %0
+numalias flag_scenario_5_9,%0 : inc %0
+numalias flag_scenario_5_10,%0 : inc %0
+numalias flag_scenario_5_11,%0 : inc %0
+numalias flag_scenario_5_12,%0 : inc %0
+numalias flag_scenario_5_13,%0 : inc %0
+numalias flag_scenario_5_14,%0 : inc %0
+numalias flag_scenario_5_15,%0 : inc %0
+numalias flag_scenario_5_tea,%0 : inc %0
+numalias flag_scenario_5_ura,%0 : inc %0
+;scenario ep6
+numalias flag_scenario_6_op,%0 : inc %0
+numalias flag_scenario_6_1,%0 : inc %0
+numalias flag_scenario_6_2,%0 : inc %0
+numalias flag_scenario_6_3,%0 : inc %0
+numalias flag_scenario_6_4,%0 : inc %0
+numalias flag_scenario_6_5,%0 : inc %0
+numalias flag_scenario_6_6,%0 : inc %0
+numalias flag_scenario_6_7,%0 : inc %0
+numalias flag_scenario_6_8,%0 : inc %0
+numalias flag_scenario_6_9,%0 : inc %0
+numalias flag_scenario_6_10,%0 : inc %0
+numalias flag_scenario_6_11,%0 : inc %0
+numalias flag_scenario_6_12,%0 : inc %0
+numalias flag_scenario_6_13,%0 : inc %0
+numalias flag_scenario_6_14,%0 : inc %0
+numalias flag_scenario_6_15,%0 : inc %0
+numalias flag_scenario_6_16,%0 : inc %0
+numalias flag_scenario_6_17,%0 : inc %0
+numalias flag_scenario_6_18,%0 : inc %0
+numalias flag_scenario_6_tea,%0 : inc %0
+numalias flag_scenario_6_ura,%0 : inc %0
+;scenario ep7
+numalias flag_scenario_7_op,%0 : inc %0
+numalias flag_scenario_7_1,%0 : inc %0
+numalias flag_scenario_7_2,%0 : inc %0
+numalias flag_scenario_7_3,%0 : inc %0
+numalias flag_scenario_7_4,%0 : inc %0
+numalias flag_scenario_7_5,%0 : inc %0
+numalias flag_scenario_7_6,%0 : inc %0
+numalias flag_scenario_7_7,%0 : inc %0
+numalias flag_scenario_7_8,%0 : inc %0
+numalias flag_scenario_7_9,%0 : inc %0
+numalias flag_scenario_7_10,%0 : inc %0
+numalias flag_scenario_7_11,%0 : inc %0
+numalias flag_scenario_7_12,%0 : inc %0
+numalias flag_scenario_7_13,%0 : inc %0
+numalias flag_scenario_7_14,%0 : inc %0
+numalias flag_scenario_7_15,%0 : inc %0
+numalias flag_scenario_7_16,%0 : inc %0
+numalias flag_scenario_7_17,%0 : inc %0
+numalias flag_scenario_7_18,%0 : inc %0
+numalias flag_scenario_7_tea,%0 : inc %0
+numalias flag_scenario_7_ura,%0 : inc %0
+;scenario ep8
+numalias flag_scenario_8_op,%0 : inc %0
+numalias flag_scenario_8_1,%0 : inc %0
+numalias flag_scenario_8_2,%0 : inc %0
+numalias flag_scenario_8_3,%0 : inc %0
+numalias flag_scenario_8_4,%0 : inc %0
+numalias flag_scenario_8_5,%0 : inc %0
+numalias flag_scenario_8_6,%0 : inc %0
+numalias flag_scenario_8_7,%0 : inc %0
+numalias flag_scenario_8_8,%0 : inc %0
+numalias flag_scenario_8_9,%0 : inc %0
+numalias flag_scenario_8_10,%0 : inc %0
+numalias flag_scenario_8_11,%0 : inc %0
+numalias flag_scenario_8_12,%0 : inc %0
+numalias flag_scenario_8_13,%0 : inc %0
+numalias flag_scenario_8_14,%0 : inc %0
+numalias flag_scenario_8_15,%0 : inc %0
+numalias flag_scenario_8_16,%0 : inc %0
+numalias flag_scenario_8_tea,%0 : inc %0
+numalias flag_scenario_8_ura,%0 : inc %0
+; Choice vectors for ep8 (= flag_scenario + 15 if flag_scenario >= flag_scenario_8_4 and flag_scenario <= flag_scenario_8_15)
+numalias choice_vector_8_4,%0 : inc %0
+numalias choice_vector_8_5,%0 : inc %0
+numalias choice_vector_8_6,%0 : inc %0
+numalias choice_vector_8_7,%0 : inc %0
+numalias choice_vector_8_8,%0 : inc %0
+numalias choice_vector_8_9,%0 : inc %0
+numalias choice_vector_8_10,%0 : inc %0
+numalias choice_vector_8_11,%0 : inc %0
+numalias choice_vector_8_12,%0 : inc %0
+numalias choice_vector_8_13,%0 : inc %0
+numalias choice_vector_8_14,%0 : inc %0
+numalias choice_vector_8_15,%0 : inc %0
+; Presents discarded
+numalias presents_discarded_0,%0 : inc %0
+numalias presents_discarded_1,%0 : inc %0
+numalias presents_discarded_2,%0 : inc %0
+numalias presents_discarded_3,%0 : inc %0
+numalias presents_discarded_4,%0 : inc %0
+numalias presents_discarded_5,%0 : inc %0
+numalias presents_discarded_6,%0 : inc %0
+numalias presents_discarded_7,%0 : inc %0
+numalias presents_discarded_8,%0 : inc %0
+numalias presents_discarded_9,%0 : inc %0
+numalias presents_discarded_10,%0 : inc %0
+numalias presents_discarded_11,%0 : inc %0
+numalias presents_discarded_12,%0 : inc %0
+numalias presents_discarded_13,%0 : inc %0
+numalias presents_discarded_14,%0 : inc %0
+numalias presents_discarded_15,%0 : inc %0
+numalias presents_discarded_16,%0 : inc %0
+numalias presents_discarded_17,%0 : inc %0
+
+;-----------------------------------------------
+
+mov %0,1
+
+;-----------------------------------------------
+;rmenu flags
+numalias scenario_Number,%0 : inc %0  ;Right click menu scenario number
+numalias r_menu_data,%0 		: inc %0  ;Enable/disable right click menu data
+numalias data_pagemax,%0	: inc %0  ;Right click menu data maximum number
+numalias r_mode_flg,%0 		: inc %0  ;Disable right click menu
+;Game proccess
+numalias monoflg,%0 		: inc %0  ;Monochrome surface flag
+numalias save_on_flg,%0 	: inc %0  ;Unused, left for padding reasons
+numalias skip_flg,%0 		: inc %0  ;signals in load_system to disable skip or not
+numalias skip_flg_bak,%0 	: inc %0  ;signals in load_system to disable skip or not
+numalias cspParam,%0 		: inc %0  ;csp command parameter
+numalias cspParam2,%0 		: inc %0  ;csp command parameter
+numalias BtnRes,%0 			: inc %0  ;Button state reader
+numalias TextCC12Flag,%0 	: inc %0  ;Message state indicator
+;Bools
+numalias on,1
+numalias off,0
+;Sound system
+numalias BGM_Play,%0    : inc %0 ;Stores the path to the musical composition
+numalias BGM_Title,%0   : inc %0 ;Stores the name of the musical composition
+numalias BGM_Id,%0      : inc %0 ;Temporary musical composition number
+numalias BGM_Once,%0      : inc %0 ;Temporary musical composition number
+numalias Me_Play,%0     : inc %0 ;Stores the path to the musical effect (looped)
+numalias Me_Channel,%0  : inc %0 ;Temporary musical effect (looped) channel
+numalias Me_Number,%0   : inc %0 ;Temporary musical effect (looped) number
+numalias Se_Play,%0     : inc %0 ;Stores the path to the musical effect (sfx)
+numalias Se_Channel,%0  : inc %0 ;Temporary musical effect (sfx) channel
+numalias Se_Number,%0   : inc %0 ;Temporary musical effect (sfx) number
+numalias crosstimer,%0  : inc %0 ;Temporary cross command timer
+numalias Rel_vol_bgm,%0 : inc %0 ;Relative musical composition volume
+numalias Rel_vol_se,%0  : inc %0 ;Relative musical effect (sfx) volume
+numalias Rel_vol_me,%0  : inc %0 ;Relative musical effect (looped) volume
+numalias Vol_dur,%0		: inc %0 ;Music volume change duration
+;Temporary Fede parameters (v)
+numalias Fede_bgmv,%0 : inc %0	
+numalias Fede_Me1v,%0 : inc %0
+numalias Fede_Me2v,%0 : inc %0
+numalias Fede_Me3v,%0 : inc %0
+numalias Fede_Me4v,%0 : inc %0
+numalias Fede_Me5v,%0 : inc %0
+numalias Fede_wait,%0 : inc %0
+;Temporary Fede parameters (flg)
+numalias Fede_bgmvflg,%0 : inc %0
+numalias Fede_Me1vflg,%0 : inc %0
+numalias Fede_Me2vflg,%0 : inc %0
+numalias Fede_Me3vflg,%0 : inc %0
+numalias Fede_Me4vflg,%0 : inc %0
+numalias Fede_Me5vflg,%0 : inc %0
+;Temporary Fede parameters (v2)
+numalias Fede_bgmv2,%0 : inc %0
+numalias Fede_Me1v2,%0 : inc %0
+numalias Fede_Me2v2,%0 : inc %0
+numalias Fede_Me3v2,%0 : inc %0
+numalias Fede_Me4v2,%0 : inc %0
+numalias Fede_Me5v2,%0 : inc %0
+;Temporary Fede parameters (flg2)
+numalias Fede_bgmvflg2,%0 : inc %0
+numalias Fede_Me1vflg2,%0 : inc %0
+numalias Fede_Me2vflg2,%0 : inc %0
+numalias Fede_Me3vflg2,%0 : inc %0
+numalias Fede_Me4vflg2,%0 : inc %0
+numalias Fede_Me5vflg2,%0 : inc %0
+;Temporary Fede parameters (v3)
+numalias Fede_bgmv3,%0 : inc %0
+numalias Fede_Me1v3,%0 : inc %0
+numalias Fede_Me2v3,%0 : inc %0
+numalias Fede_Me3v3,%0 : inc %0
+numalias Fede_Me4v3,%0 : inc %0
+numalias Fede_Me5v3,%0 : inc %0
+;Temporary Fede parameters (v4)
+numalias Fede_bgmv4,%0 : inc %0
+numalias Fede_Me1v4,%0 : inc %0
+numalias Fede_Me2v4,%0 : inc %0
+numalias Fede_Me3v4,%0 : inc %0
+numalias Fede_Me4v4,%0 : inc %0
+numalias Fede_Me5v4,%0 : inc %0
+;Message browser
+numalias log_mode_flg,%0 	 : inc %0  ;Logview mode (0 - on, 1 - off)
+numalias backlogTotalNum,%0  : inc %0  ;Current number of messages
+numalias backloglook,%0 	 : inc %0  ;Current text log number
+numalias BacklogNum,%0		 : inc %0  ;Last message
+numalias textlognow,%0 		 : inc %0  ;Current log message
+;Bookmark data
+numalias savemodePageNow,%0  : inc %0 ;Current bookmark page
+numalias savescreenshotsp,%0 : inc %0 ;Screenshot sprite number
+numalias saveTimesp,%0 		 : inc %0 ;Timestamp sprite number
+numalias saveTextsp,%0		 : inc %0 ;Text sprite number
+numalias saveTimesp2,%0		 : inc %0 ;Timestamp data
+numalias saveTextsp2,%0		 : inc %0 ;Text data
+numalias savedataNowNum,%0	 : inc %0 ;Save data number
+;Bookmark temporaries
+numalias SaveTime,%0 : inc %0 ;Save data text
+numalias Year,%0 	 : inc %0 ;Year
+numalias Month,%0	 : inc %0 ;Month
+numalias Day,%0		 : inc %0 ;Day
+numalias Hour,%0	 : inc %0 ;Hours
+numalias Minute,%0	 : inc %0 ;Minutes
+;Sprite positioning temporaries
+numalias x,%0  : inc %0
+numalias y,%0  : inc %0
+numalias x1,%0 : inc %0
+numalias y1,%0 : inc %0
+numalias x2,%0 : inc %0
+numalias y2,%0 : inc %0
+numalias x3,%0 : inc %0
+numalias y3,%0 : inc %0
+;Free temporaries (1-9)
+numalias Free1,%0 : inc %0
+numalias Free2,%0 : inc %0
+numalias Free3,%0 : inc %0
+numalias Free4,%0 : inc %0
+numalias Free5,%0 : inc %0
+numalias Free6,%0 : inc %0
+numalias Free7,%0 : inc %0
+numalias Free8,%0 : inc %0
+numalias Free9,%0 : inc %0
+;Free temporaries (11-19)
+numalias Free11,%0 : inc %0
+numalias Free12,%0 : inc %0
+numalias Free13,%0 : inc %0
+numalias Free14,%0 : inc %0
+numalias Free15,%0 : inc %0
+numalias Free16,%0 : inc %0
+numalias Free17,%0 : inc %0
+numalias Free18,%0 : inc %0
+numalias Free19,%0 : inc %0
+;Free temporaries (21-29)
+numalias Free21,%0 : inc %0
+numalias Free22,%0 : inc %0
+numalias Free23,%0 : inc %0
+numalias Free24,%0 : inc %0
+numalias Free25,%0 : inc %0
+numalias Free26,%0 : inc %0
+numalias Free27,%0 : inc %0
+numalias Free28,%0 : inc %0
+numalias Free29,%0 : inc %0
+;ryuu temporaries (1-9)
+numalias ryuu1,%0 : inc %0
+numalias ryuu2,%0 : inc %0
+numalias ryuu3,%0 : inc %0
+numalias ryuu4,%0 : inc %0
+numalias ryuu5,%0 : inc %0
+numalias ryuu6,%0 : inc %0
+numalias ryuu7,%0 : inc %0
+numalias ryuu8,%0 : inc %0
+numalias ryuu9,%0 : inc %0
+;main menu
+inc %0
+numalias title_y,%0  : inc %0 ;Y coordinate of the title logo
+;flags
+numalias flg_sp_x,%0 	  : inc %0	;X coordinate of the flag title
+numalias flg_sp_y,%0 	  : inc %0	;Y coordinate of the flag title
+numalias flg_number_tx,%0 : inc %0  ;X coordinate of the flag dozens
+numalias flg_number_ty,%0 : inc %0	;Y coordinate of the flag dozens
+numalias flg_number_ox,%0 : inc %0  ;X coordinate of the flag units
+numalias flg_number_oy,%0 : inc %0	;Y coordinate of the flag units
+numalias flg_number_t,%0  : inc %0	;Flag number dozens
+numalias flg_number_o,%0  : inc %0	;Flag number units
+numalias flg_passT,%0	  : inc %0	;Flag title sprite string
+numalias flg_pass1,%0	  : inc %0	;Flag dozens sprite string
+numalias flg_pass10,%0	  : inc %0	;Flag units sprite string
+;150 max
+;PS3Fication numaliases start
+;lss func
+numalias lss_slot,%0 	: inc %0
+numalias lss_key,%0 	: inc %0
+numalias lss_sec,%0 	: inc %0
+numalias lss_lips,%0 	: inc %0
+numalias lss_lips_x,%0 	: inc %0
+numalias lss_lips_y,%0 	: inc %0
+numalias lss_temp,%0 	: inc %0
+;lv func
+numalias lv_ch,%0 		: inc %0
+numalias lv_f,%0 		: inc %0
+numalias lv_v,%0 		: inc %0
+numalias lv_t,%0 		: inc %0
+numalias lv_p,%0 		: inc %0
+;lbg func
+numalias lbg_slot,%0 	: inc %0
+numalias lbg_path,%0 	: inc %0
+numalias lbg_name,%0 	: inc %0
+numalias lbg_left,%0 	: inc %0
+numalias lbg_top,%0 	: inc %0
+;text window params
+numalias setwindow_x,%0 	: inc %0
+numalias setwindow_y,%0 	: inc %0
+;anim func
+numalias anim_sprite,%0 : inc %0
+numalias anim_file,%0 	: inc %0
+numalias anim_mode,%0 	: inc %0
+numalias anim_alpha,%0	: inc %0
+numalias anim_skip,%0	: inc %0
+;rain funcs
+numalias rain_slot,%0	: inc %0
+numalias rain_layer,%0	: inc %0
+numalias rain_amount,%0 : inc %0
+numalias rain_speed,%0  : inc %0
+numalias rain_wind,%0   : inc %0
+;mask funcs
+numalias mask_spr,%0    : inc %0
+numalias mask_set,%0    : inc %0
+numalias mask_file,%0   : inc %0
+;clocks
+numalias clock_xpos,%0   : inc %0
+numalias clock_ypos,%0   : inc %0
+numalias clock_scale,%0  : inc %0
+numalias start_min,%0    : inc %0
+numalias end_min,%0      : inc %0
+numalias clock_sfx,%0    : inc %0
+numalias clock_sfx2,%0   : inc %0
+numalias start_min_hand,%0  : inc %0
+numalias start_hour_hand,%0 : inc %0
+numalias end_min_hand,%0    : inc %0
+numalias end_hour_hand,%0   : inc %0
+;chapter titles
+numalias chapter_time,%0    : inc %0
+numalias chapter_title,%0   : inc %0
+;print command
+numalias print_efe,%0   	: inc %0
+numalias print_delay,%0   	: inc %0
+numalias print_dll,%0   	: inc %0
+numalias vid_play,%0		: inc %0
+;msgwnd command
+numalias cur_character,%0	: inc %0
+numalias cur_wndmode,%0		: inc %0
+;border_padding stack
+numalias b_pad_counter,%0	: inc %0
+numalias b_pad_temp,%0		: inc %0
+;autoclick command
+numalias skip_clicks,%0		: inc %0
+;state info
+numalias name_chapter_r_click,%0 : inc %0
+numalias name_chapter_save,%0 	 : inc %0
+;lv cache
+numalias lv_tmp1a,%0		: inc %0
+numalias lv_tmp2a,%0		: inc %0
+numalias lv_tmp3a,%0		: inc %0
+numalias lv_tmp4a,%0		: inc %0
+numalias lv_tmp5a,%0		: inc %0
+numalias lv_tmp1b,%0		: inc %0
+numalias lv_tmp2b,%0		: inc %0
+numalias lv_tmp3b,%0		: inc %0
+numalias lv_tmp4b,%0		: inc %0
+numalias lv_tmp5b,%0		: inc %0
+;se cache
+numalias se_tmp1,%0			: inc %0
+numalias se_tmp2,%0			: inc %0
+numalias se_tmp3,%0			: inc %0
+numalias se_tmp4,%0			: inc %0
+numalias se_tmp5,%0			: inc %0
+;game state (chars/tips)
+numalias gstc_id,%0			: inc %0
+numalias gstt_id,%0			: inc %0
+numalias gstg_id,%0			: inc %0
+;misc
+numalias skip_icon,%0       : inc %0
+;rumble
+numalias rumble_s,%0		: inc %0
+numalias rumble_t,%0		: inc %0
+;new_episode
+numalias ep_id,%0			: inc %0
+;omake
+numalias omake,%0			: inc %0
+;log
+numalias log_ch_current,%0	: inc %0
+numalias log_ch_prev,%0		: inc %0
+numalias log_ch_next,%0		: inc %0
+numalias log_sw_x,%0		: inc %0
+numalias log_sw_y,%0		: inc %0
+;text
+numalias disallow_saving,%0	: inc %0
+;misc #2
+numalias autom_icon,%0		: inc %0
+;show_glass
+numalias glass_speed,%0		: inc %0
+;subtitles
+numalias track_id,%0		: inc %0
+;jmp
+numalias unjumpable,%0		: inc %0
+;rain_style
+numalias rain_style,%0		: inc %0
+;snow
+numalias snow_sprite,%0     : inc %0
+;message alignment
+numalias msg_text,%0		: inc %0
+numalias msg_b1,%0			: inc %0
+numalias msg_b2,%0			: inc %0
+numalias msg_b3,%0			: inc %0
+numalias msg_b4,%0			: inc %0
+numalias msg_b5,%0			: inc %0
+numalias msg_b6,%0			: inc %0
+numalias msg_x,%0			: inc %0
+numalias msg_y,%0			: inc %0
+numalias msg_tmp_w,%0		: inc %0
+numalias msg_tmp_h,%0		: inc %0
+numalias msg_tmp_w2,%0		: inc %0
+numalias msg_tmp_h2,%0		: inc %0
+;session
+numalias ts_session,%0		: inc %0
+;bgm title delay
+numalias bgm_title_delay,%0	: inc %0
+;ep8 variables
+numalias log_src_cvs,%0		: inc %0
+numalias log_dst_cvs,%0		: inc %0
+numalias loggen_var_backup,%0	: inc %0
+dim ?loggen_var_backup[10] ;holds loggen backups for the following 10 variables
+numalias branch_tmp,%0		: inc %0
+numalias bern_game_mode,%0	: inc %0
+numalias get_response_value,%0	: inc %0
+numalias total_coin_count,%0	: inc %0
+numalias pair_answers_counter,%0: inc %0
+numalias eva_hint_counter,%0	: inc %0
+numalias chosen_ending,%0	: inc %0
+numalias eva_button_enabled,%0	: inc %0
+numalias quiz_answer_count,%0	: inc %0
+numalias bern_hints_taken,%0	: inc %0
+;menu variables
+numalias mchar_state,%0       : inc %0 ; formerly 139
+numalias mcurrent_page,%0     : inc %0 ; formerly 905
+numalias meffect_right,%0     : inc %0 ; formerly 988
+numalias meffect_left,%0      : inc %0 ; formerly 987
+numalias mmove_right,%0       : inc %0 ; formerly 916 ???
+numalias mmove_left,%0        : inc %0 ; formerly 917 ???
+numalias mcoord_add,%0        : inc %0 ; formerly 918
+;trophy variables
+numalias trophy_id,%0         : inc %0 ; formerly 250
+;choicepoint variables
+numalias log_choices,%0       : inc %0 ; for ep8 choices
+;debug_var %0,"ps3 total"
+;PS3Fication numaliases end (no more than 300)
+;-----------------------------------------------
+
+mov %0,70
+;-----------------------------------------------
+;Sprites
+;Eye section
+numalias Cinema_logo,%0 	: inc %0	;Logo Sprite at the time of the eye catch
+numalias Cinema_up,%0 		: inc %0	;Black belt holder sprite at the time of the eye catch (top)
+numalias Cinema_down,%0 	: inc %0	;Black belt holder sprite at the time of the eye catch (bottom)
+;Rmord section
+numalias left,%0 			: inc %0
+numalias right,%0 			: inc %0
+numalias introduction_sp,%0 : inc %0
+numalias comment_sp1,%0 	: inc %0
+numalias introduction_back,%0 : inc %0
+;Bookmark section
+numalias Page1,%0 	: inc %0
+numalias Page2,%0 	: inc %0
+numalias Page3,%0 	: inc %0
+numalias Page4,%0 	: inc %0
+numalias Page5,%0 	: inc %0
+numalias Page6,%0 	: inc %0
+numalias Page7,%0 	: inc %0
+numalias Page8,%0 	: inc %0
+numalias Page9,%0 	: inc %0
+numalias Page10,%0 	: inc %0
+numalias Save,%0 	: inc %0
+numalias saveload_Load_button,%0 : inc %0
+numalias saveload_Exit_button,%0 : inc %0
+numalias Page_line_down,%0 : inc %0
+numalias Page_line_up,%0   : inc %0
+numalias saveload_caption,70
+;Curcors
+numalias TextCC1SpNum,0
+numalias TextCC2SpNum,1
+numalias TextCC3SpNum,745 ;skip
+numalias TextCC4SpNum,747 ;automode
+;Masks
+numalias msk1,699
+numalias msk2,698
+numalias msk3,697
+;Slots
+numalias s3_0,811 : numalias s2_0,873 : numalias s1_0,935 : numalias s0_0,997
+numalias s3_0_b,810 : numalias s2_0_b,872 : numalias s1_0_b,934 : numalias s0_0_b,996
+numalias s3_1,809 : numalias s2_1,871 : numalias s1_1,933 : numalias s0_1,995
+numalias s3_1_b,808 : numalias s2_1_b,870 : numalias s1_1_b,932 : numalias s0_1_b,994
+numalias s3_2,807 : numalias s2_2,869 : numalias s1_2,931 : numalias s0_2,993
+numalias s3_2_b,806 : numalias s2_2_b,868 : numalias s1_2_b,930 : numalias s0_2_b,992
+numalias s3_3,805 : numalias s2_3,867 : numalias s1_3,929 : numalias s0_3,991
+numalias s3_3_b,804 : numalias s2_3_b,866 : numalias s1_3_b,928 : numalias s0_3_b,990
+numalias s3_4,803 : numalias s2_4,865 : numalias s1_4,927 : numalias s0_4,989
+numalias s3_4_b,802 : numalias s2_4_b,864 : numalias s1_4_b,926 : numalias s0_4_b,988
+numalias s3_5,801 : numalias s2_5,863 : numalias s1_5,925 : numalias s0_5,987
+numalias s3_5_b,800 : numalias s2_5_b,862 : numalias s1_5_b,924 : numalias s0_5_b,986
+numalias s3_6,799 : numalias s2_6,861 : numalias s1_6,923 : numalias s0_6,985
+numalias s3_6_b,798 : numalias s2_6_b,860 : numalias s1_6_b,922 : numalias s0_6_b,984
+numalias s3_7,797 : numalias s2_7,859 : numalias s1_7,921 : numalias s0_7,983
+numalias s3_7_b,796 : numalias s2_7_b,858 : numalias s1_7_b,920 : numalias s0_7_b,982
+numalias s3_8,795 : numalias s2_8,857 : numalias s1_8,919 : numalias s0_8,981
+numalias s3_8_b,794 : numalias s2_8_b,856 : numalias s1_8_b,918 : numalias s0_8_b,980
+numalias s3_9,793 : numalias s2_9,855 : numalias s1_9,917 : numalias s0_9,979
+numalias s3_9_b,792 : numalias s2_9_b,854 : numalias s1_9_b,916 : numalias s0_9_b,978
+numalias s3_10,791 : numalias s2_10,853 : numalias s1_10,915 : numalias s0_10,977
+numalias s3_10_b,790 : numalias s2_10_b,852 : numalias s1_10_b,914 : numalias s0_10_b,976
+numalias s3_11,789 : numalias s2_11,851 : numalias s1_11,913 : numalias s0_11,975
+numalias s3_11_b,788 : numalias s2_11_b,850 : numalias s1_11_b,912 : numalias s0_11_b,974
+numalias s3_12,787 : numalias s2_12,849 : numalias s1_12,911 : numalias s0_12,973
+numalias s3_12_b,786 : numalias s2_12_b,848 : numalias s1_12_b,910 : numalias s0_12_b,972
+numalias s3_13,785 : numalias s2_13,847 : numalias s1_13,909 : numalias s0_13,971
+numalias s3_13_b,784 : numalias s2_13_b,846 : numalias s1_13_b,908 : numalias s0_13_b,970
+numalias s3_14,783 : numalias s2_14,845 : numalias s1_14,907 : numalias s0_14,969
+numalias s3_14_b,782 : numalias s2_14_b,844 : numalias s1_14_b,906 : numalias s0_14_b,968
+numalias s3_15,781 : numalias s2_15,843 : numalias s1_15,905 : numalias s0_15,967
+numalias s3_15_b,780 : numalias s2_15_b,842 : numalias s1_15_b,904 : numalias s0_15_b,966
+numalias s3_16,779 : numalias s2_16,841 : numalias s1_16,903 : numalias s0_16,965
+numalias s3_16_b,778 : numalias s2_16_b,840 : numalias s1_16_b,902 : numalias s0_16_b,964
+numalias s3_17,777 : numalias s2_17,839 : numalias s1_17,901 : numalias s0_17,963
+numalias s3_17_b,776 : numalias s2_17_b,838 : numalias s1_17_b,900 : numalias s0_17_b,962
+numalias s3_18,775 : numalias s2_18,837 : numalias s1_18,899 : numalias s0_18,961
+numalias s3_18_b,774 : numalias s2_18_b,836 : numalias s1_18_b,898 : numalias s0_18_b,960
+numalias s3_19,773 : numalias s2_19,835 : numalias s1_19,897 : numalias s0_19,959
+numalias s3_19_b,772 : numalias s2_19_b,834 : numalias s1_19_b,896 : numalias s0_19_b,958
+numalias s3_20,771 : numalias s2_20,833 : numalias s1_20,895 : numalias s0_20,957
+numalias s3_20_b,770 : numalias s2_20_b,832 : numalias s1_20_b,894 : numalias s0_20_b,956
+numalias s3_21,769 : numalias s2_21,831 : numalias s1_21,893 : numalias s0_21,955
+numalias s3_21_b,768 : numalias s2_21_b,830 : numalias s1_21_b,892 : numalias s0_21_b,954
+numalias s3_22,767 : numalias s2_22,829 : numalias s1_22,891 : numalias s0_22,953
+numalias s3_22_b,766 : numalias s2_22_b,828 : numalias s1_22_b,890 : numalias s0_22_b,952
+numalias s3_23,765 : numalias s2_23,827 : numalias s1_23,889 : numalias s0_23,951
+numalias s3_23_b,764 : numalias s2_23_b,826 : numalias s1_23_b,888 : numalias s0_23_b,950
+numalias s3_24,763 : numalias s2_24,825 : numalias s1_24,887 : numalias s0_24,949
+numalias s3_24_b,762 : numalias s2_24_b,824 : numalias s1_24_b,886 : numalias s0_24_b,948
+numalias s3_25,761 : numalias s2_25,823 : numalias s1_25,885 : numalias s0_25,947
+numalias s3_25_b,760 : numalias s2_25_b,822 : numalias s1_25_b,884 : numalias s0_25_b,946
+numalias s3_26,759 : numalias s2_26,821 : numalias s1_26,883 : numalias s0_26,945
+numalias s3_26_b,758 : numalias s2_26_b,820 : numalias s1_26_b,882 : numalias s0_26_b,944
+numalias s3_27,757 : numalias s2_27,819 : numalias s1_27,881 : numalias s0_27,943
+numalias s3_27_b,756 : numalias s2_27_b,818 : numalias s1_27_b,880 : numalias s0_27_b,942
+numalias s3_28,755 : numalias s2_28,817 : numalias s1_28,879 : numalias s0_28,941
+numalias s3_28_b,754 : numalias s2_28_b,816 : numalias s1_28_b,878 : numalias s0_28_b,940
+numalias s3_29,753 : numalias s2_29,815 : numalias s1_29,877 : numalias s0_29,939
+numalias s3_29_b,752 : numalias s2_29_b,814 : numalias s1_29_b,876 : numalias s0_29_b,938
+numalias s3_30,751 : numalias s2_30,813 : numalias s1_30,875 : numalias s0_30,937
+numalias s3_30_b,750 : numalias s2_30_b,812 : numalias s1_30_b,874 : numalias s0_30_b,936
+;Flags
+numalias flg_sp1,464 ;Flag title
+numalias flg_sp2,465 ;Flag dozens
+numalias flg_sp3,466 ;Flag units
+;Message browser
+numalias rmenu_btn_Exit,395
+numalias backscreen,393
+numalias backlogdownbtn,392
+numalias backlogupbtn,391
+numalias backlogtext,390
+;-----------------------------------------------
+
+;-----------------------------------------------
+;Aliases for characters menu [ADD MORE]
+numalias non,0
+numalias kin,1
+numalias kla,2
+numalias nat,3
+numalias jes,4
+numalias eva,5
+numalias hid,6
+numalias geo,7
+numalias rud,8
+numalias kir,9
+numalias but,10
+numalias ros,11
+numalias mar,12
+numalias nan,13
+numalias gen,14
+numalias kum,15
+numalias goh,16
+numalias sha,17
+numalias kan,18
+numalias bea,19
+numalias ber,20
+numalias lam,21
+numalias enj,22
+numalias wal,23
+numalias ev2,24
+numalias ron,25
+;chiru
+numalias eri,26
+numalias gap,27
+numalias s,28
+numalias rg,29
+numalias dla,31
+numalias ger,32
+numalias cor,33
+numalias be2,34
+numalias fea,35
+numalias zep,36
+numalias fur,37
+numalias zf,38
+numalias goa,39
+numalias wil,40
+numalias rio,41
+numalias cur,42
+numalias pro,43
+numalias si,44
+numalias en2,45
+numalias bu2,46
+
+;-----------------------------------------------
+
+;--Backgrounds--
+
+;Airport
+stralias air_in1a,":c;backgrounds\air_in1a.png"
+stralias air_in1e,":c;backgrounds\air_in1e.png"
+stralias air_in1ec,":a;backgrounds\air_in1ec.png"
+stralias air_in1ec_bg,":c;backgrounds\air_in1ec_bg.png"
+stralias air_out1a,":c;backgrounds\air_out1a.png"
+stralias air_out2a,":c;backgrounds\air_out2a.png"
+stralias air_out2b,":c;backgrounds\air_out2b.png"
+stralias air_t1a,":c;backgrounds\air_t1a.png"
+stralias airp_in1a,":c;backgrounds\airp_in1a.png"
+stralias airp_out1a,":c;backgrounds\airp_out1a.png"
+stralias airp_out2a,":c;backgrounds\airp_out2a.png"
+stralias airp_out2b,":c;backgrounds\airp_out2b.png"
+stralias airp_w1bc,":a;backgrounds\airp_w1bc.png"
+stralias airp_w1bc_bg,":c;backgrounds\airp_w1bc_bg.png"
+stralias airp_w1cc,":a;backgrounds\airp_w1cc.png"
+stralias airp_w1cc_bg,":c;backgrounds\airp_w1cc_bg.png"
+stralias airp_w1d,":c;backgrounds\airp_w1d.png"
+stralias airp_w1j,":c;backgrounds\airp_w1j.png"
+
+;Amusement park
+stralias amu_i1a,":c;backgrounds\amu_i1a.png"
+
+;Aquarium
+stralias aqu_i1a,":c;backgrounds\aqu_i1a.png"
+stralias aqu_i2a,":c;backgrounds\aqu_i2a.png"
+stralias aqu_i2b,":c;backgrounds\aqu_i2b.png"
+stralias aqu_i2bg,":c;backgrounds\aqu_i2bg.png"
+
+;From the sandy beach to the forest
+stralias beach_1a,":c;backgrounds\beach_1a.png"
+stralias beach_1af,":c;backgrounds\beach_1af.png"
+stralias beach_2a,":c;backgrounds\beach_2a.png"
+stralias beach_2af,":c;backgrounds\beach_2af.png"
+stralias beach_l1a,":c;backgrounds\beach_l1a.png"
+stralias beach_l1ac2,":c;backgrounds\beach_l1ac2.png"
+stralias beach_l1an,":c;backgrounds\beach_l1an.png"
+stralias beach_l2a,":c;backgrounds\beach_l2a.png"
+stralias beach_s1a,":c;backgrounds\beach_s1a.png"
+stralias beach_s1af,":c;backgrounds\beach_s1af.png"
+stralias beach_s1an,":c;backgrounds\beach_s1an.png"
+stralias beach_s2a,":c;backgrounds\beach_s2a.png"
+stralias beach_s2af,":c;backgrounds\beach_s2af.png"
+stralias beach_s2an,":c;backgrounds\beach_s2an.png"
+
+;office
+stralias bui_inf1a,":c;backgrounds\bui_inf1a.png"
+stralias bui_o1a,":c;backgrounds\bui_o1a.png"
+stralias bui_o2a,":c;backgrounds\bui_o2a.png"
+stralias bui_o2b,":c;backgrounds\bui_o2b.png"
+stralias bui_r1a,":c;backgrounds\bui_r1a.png"
+stralias bui_r1d,":c;backgrounds\bui_r1d.png"
+stralias bui_r1e,":c;backgrounds\bui_r1e.png"
+stralias bui_h1b,":c;backgrounds\bui_h1b.png"
+stralias bui_h1c,":c;backgrounds\bui_h1c.png"
+stralias bui_h1d,":c;backgrounds\bui_h1d.png"
+stralias bui_h1e,":c;backgrounds\bui_h1e.png"
+stralias bui_h1e2,":c;backgrounds\bui_h1e2.png"
+stralias bui_h1f,":c;backgrounds\bui_h1f.png"
+stralias bui_h1f2,":c;backgrounds\bui_h1f2.png"
+
+;Car
+stralias car_i1a,":c;backgrounds\car_i1a.png"
+stralias car_i1ac,":a;backgrounds\car_i1ac.png"
+stralias car_i1ac_bg,":c;backgrounds\car_i1ac_bg.png"
+stralias car_i3b,":c;backgrounds\car_i3b.png"
+stralias car_i3b2,":c;backgrounds\car_i3b2.png"
+stralias car_i3c,":c;backgrounds\car_i3c.png"
+stralias car_o2a,":c;backgrounds\car_o2a.png"
+stralias car_o2c,":c;backgrounds\car_o2c.png"
+
+;Bus
+stralias bus_i1a,":c;backgrounds\bus_i1a.png"
+
+;Chapel
+stralias cha_i1a,":a;backgrounds\cha_i1a.png"
+stralias cha_i1a_bg,":c;backgrounds\cha_i1a_bg.png"
+stralias cha_i1an,":a;backgrounds\cha_i1an.png"
+stralias cha_i1an_bg,":c;backgrounds\cha_i1an_bg.png"
+stralias cha_i1ar,":a;backgrounds\cha_i1ar.png"
+stralias cha_i1ar_bg,":c;backgrounds\cha_i1ar_bg.png"
+stralias cha_i1d,":a;backgrounds\cha_i1d.png"
+stralias cha_i1d_bg,":c;backgrounds\cha_i1d_bg.png"
+stralias cha_i1dr,":a;backgrounds\cha_i1dr.png"
+stralias cha_i1dr_bg,":c;backgrounds\cha_i1dr_bg.png"
+stralias cha_i1e,":c;backgrounds\cha_i1e.png"
+stralias cha_i1er,":c;backgrounds\cha_i1er.png"
+stralias cha_o1a,":c;backgrounds\cha_o1a.png"
+stralias cha_o1af,":c;backgrounds\cha_o1af.png"
+stralias cha_o1an,":c;backgrounds\cha_o1an.png"
+stralias cha_o2a,":c;backgrounds\cha_o2a.png"
+stralias cha_o2af,":c;backgrounds\cha_o2af.png"
+stralias cha_o2an,":c;backgrounds\cha_o2an.png"
+stralias cha_his,":c;backgrounds\cha_his.png"
+stralias cha_hisp,":c;backgrounds\cha_hisp.png"
+stralias cha_i1ad,":c;backgrounds\cha_i1ad.png"
+stralias cha_i1ap,":c;backgrounds\cha_i1ap.png"
+stralias cha_i1dd,":a;backgrounds\cha_i1dd.png"
+stralias cha_i1dp,":c;backgrounds\cha_i1dp.png"
+stralias cha_i1dy,":c;backgrounds\cha_i1dy.png"
+stralias cha_i1ed,":c;backgrounds\cha_i1ed.png"
+stralias cha_i1ed2,":c;backgrounds\cha_i1ed2.png"
+stralias cha_i1ep,":c;backgrounds\cha_i1ep.png"
+stralias cha_i1ey,":c;backgrounds\cha_i1ey.png"
+stralias cha_i1i,":c;backgrounds\cha_i1i.png"
+stralias cha_i1ip,":c;backgrounds\cha_i1ip.png"
+stralias cha_i1iy,":c;backgrounds\cha_i1iy.png"
+stralias cha_i1l,":c;backgrounds\cha_i1l.png"
+stralias cha_i1lp,":c;backgrounds\cha_i1lp.png"
+stralias cha_i1ly,":c;backgrounds\cha_i1ly.png"
+stralias cha_i1n,":c;backgrounds\cha_i1n.png"
+stralias cha_i1np,":c;backgrounds\cha_i1np.png"
+stralias cha_i1ny,":c;backgrounds\cha_i1ny.png"
+stralias cha_i2a,":c;backgrounds\cha_i2a.png"
+stralias cha_i3a,":c;backgrounds\cha_i3a.png"
+stralias cha_o1ah,":c;backgrounds\cha_o1ah.png"
+stralias cha_o1ap,":c;backgrounds\cha_o1ap.png"
+stralias cha_o2ay,":c;backgrounds\cha_o2ay.png"
+stralias cha_o2b,":c;backgrounds\cha_o2b.png"
+stralias cha_o2bn,":c;backgrounds\cha_o2bn.png"
+stralias cha_o3a,":a;backgrounds\cha_o3a.png"
+stralias cha_o3a_bg,":c;backgrounds\cha_o3a_bg.png"
+stralias cha_o4a,":a;backgrounds\cha_o4a.png"
+stralias cha_o4a_bg,":c;backgrounds\cha_o4a_bg.png"
+stralias cha_o4an,":a;backgrounds\cha_o4an.png"
+stralias cha_o4an_bg,":c;backgrounds\cha_o4an_bg.png"
+stralias cha_p1ay,":c;backgrounds\cha_p1ay.png"
+stralias cha_p1b,":c;backgrounds\cha_p1b.png"
+stralias cha_p1bp,":c;backgrounds\cha_p1bp.png"
+stralias cha_p1by,":c;backgrounds\cha_p1by.png"
+stralias cha_r1a,":a;backgrounds\cha_r1a.png"
+stralias cha_r1a_bg,":c;backgrounds\cha_r1a_bg.png"
+stralias cha_r1b,":a;backgrounds\cha_r1b.png"
+stralias cha_r1b_bg,":c;backgrounds\cha_r1b_bg.png"
+stralias cha_r1d,":c;backgrounds\cha_r1d.png"
+stralias cha_r1e,":a;backgrounds\cha_r1e.png"
+stralias cha_r1e_bg,":c;backgrounds\cha_r1e_bg.png"
+stralias cha_r2a,":c;backgrounds\cha_r2a.png"
+stralias cha_r2b,":c;backgrounds\cha_r2b.png"
+stralias cha_r2d,":c;backgrounds\cha_r2d.png"
+
+;City sky
+stralias cit_1a,":c;backgrounds\cit_1a.png"
+stralias cit_1ar,":c;backgrounds\cit_1ar.png"
+stralias cit_2a,":c;backgrounds\cit_2a.png"
+stralias cit_3a,":c;backgrounds\cit_3a.png"
+stralias cit_4a,":c;backgrounds\cit_4a.png"
+stralias cit_5ay,":c;backgrounds\cit_5ay.png"
+stralias cit_5by,":c;backgrounds\cit_5by.png"
+stralias cit_5c,":c;backgrounds\cit_5c.png"
+
+;Cliff
+stralias cliff_1a,":c;backgrounds\cliff_1a.png"
+stralias cliff_1b,":c;backgrounds\cliff_1b.png"
+
+;Coffee Shop
+stralias cof_1a,":c;backgrounds\cof_1a.png"
+stralias cof_2a,":c;backgrounds\cof_2a.png"
+stralias cof_2b,":c;backgrounds\cof_2b.png"
+stralias cof_2c,":c;backgrounds\cof_2c.png"
+
+;Store
+stralias con_i1a,":c;backgrounds\con_i1a.png"
+
+;Mysterious forest
+stralias different_garden1a,":c;backgrounds\different_garden1a.png"
+stralias different_garden1b,":c;backgrounds\different_garden1b.png"
+
+;Fragments space
+stralias different_space_1a,":c;backgrounds\different_space_1a.png"
+stralias different_space_1c,":c;backgrounds\different_space_1c.png"
+stralias different_space_p1a,":c;backgrounds\different_space_p1a.png"
+stralias different_space_p1b,":c;backgrounds\different_space_p1b.png"
+stralias different_space_2a,":c;backgrounds\different_space_2a.png"
+stralias different_space_2b,":c;backgrounds\different_space_2b.png"
+stralias different_space_2c,":c;backgrounds\different_space_2c.png"
+stralias different_space_2d,":c;backgrounds\different_space_2d.png"
+stralias different_space_p1c,":c;backgrounds\different_space_p1c.png"
+stralias different_space_p1d,":c;backgrounds\different_space_p1d.png"
+stralias different_spiral_1a,":c;backgrounds\different_spiral_1a.png"
+stralias different_spiral_1b,":c;backgrounds\different_spiral_1b.png"
+
+;Dormitory
+stralias dor_p1a,":a;backgrounds\dor_p1a.png"
+stralias dor_p1a_bg,":c;backgrounds\dor_p1a_bg.png"
+stralias dor_p1ar,":a;backgrounds\dor_p1ar.png"
+stralias dor_p1ar_bg,":a;backgrounds\dor_p1ar_bg.png"
+stralias dor_p1b,":c;backgrounds\dor_p1b.png"
+stralias dor_p1br,":c;backgrounds\dor_p1br.png"
+stralias dor_r1b,":a;backgrounds\dor_r1b.png"
+stralias dor_r1b_bg,":c;backgrounds\dor_r1b_bg.png"
+stralias dor_r1bn,":a;backgrounds\dor_r1bn.png"
+stralias dor_r1bn_bg,":c;backgrounds\dor_r1bn_bg.png"
+stralias dor_r1br,":a;backgrounds\dor_r1br.png"
+stralias dor_r1br_bg,":c;backgrounds\dor_r1br_bg.png"
+stralias dor_r1d,":a;backgrounds\dor_r1d.png"
+stralias dor_r1d_bg,":c;backgrounds\dor_r1d_bg.png"
+stralias dor_r1dn,":a;backgrounds\dor_r1dn.png"
+stralias dor_r1dn_bg,":c;backgrounds\dor_r1dn_bg.png"
+stralias dor_r1dr,":a;backgrounds\dor_r1dr.png"
+stralias dor_r1dr_bg,":c;backgrounds\dor_r1dr_bg.png"
+
+;Hideout
+stralias fence_1a,":c;backgrounds\fence_1a.png"
+
+;From the forest road to the garden
+stralias forest_p1a,":c;backgrounds\forest_p1a.png"
+stralias forest_p1af,":c;backgrounds\forest_p1af.png"
+stralias forest_p1an,":c;backgrounds\forest_p1an.png"
+stralias forest_p1ar,":c;backgrounds\forest_p1ar.png"
+stralias forest_p1b,":c;backgrounds\forest_p1b.png"
+stralias forest_p1bf,":c;backgrounds\forest_p1bf.png"
+stralias forest_p1bn,":c;backgrounds\forest_p1bn.png"
+stralias forest_p1br,":c;backgrounds\forest_p1br.png"
+stralias forest_p2a,":c;backgrounds\forest_p2a.png"
+stralias forest_p2af,":c;backgrounds\forest_p2af.png"
+stralias forest_p2an,":c;backgrounds\forest_p2an.png"
+stralias forest_p2ar,":c;backgrounds\forest_p2ar.png"
+stralias forest_s1a,":c;backgrounds\forest_s1a.png"
+stralias forest_s1ac,":c;backgrounds\forest_s1ac.png"
+stralias forest_s1af,":c;backgrounds\forest_s1af.png"
+stralias forest_p3b,":c;backgrounds\forest_p3b.png"
+stralias forest_p3bf,":c;backgrounds\forest_p3bf.png"
+stralias forest_p3bn,":c;backgrounds\forest_p3bn.png"
+
+;fea's glitches
+stralias fea_f1n,":c;backgrounds\fea_f1n.png"
+stralias fea_f2n,":c;backgrounds\fea_f2n.png"
+stralias fea_k1,":c;backgrounds\fea_k1.png"
+stralias fea_k3,":c;backgrounds\fea_k3.png"
+stralias fea_l1,":c;backgrounds\fea_l1.png"
+stralias fea_l3,":c;backgrounds\fea_l3.png"
+stralias fea_l4,":c;backgrounds\fea_l4.png"
+stralias fea_l5,":c;backgrounds\fea_l5.png"
+stralias fea_l7,":c;backgrounds\fea_l7.png"
+stralias fea_p1a,":a;backgrounds\fea_p1a.png"
+stralias fea_p1a_bg,":c;backgrounds\fea_p1a_bg.png"
+stralias fea_p1ap,":c;backgrounds\fea_p1ap.png"
+stralias fea_r1a,":a;backgrounds\fea_r1a.png"
+stralias fea_r1a_bg,":c;backgrounds\fea_r1a_bg.png"
+stralias fea_r1ap,":c;backgrounds\fea_r1ap.png"
+stralias fea_r1c,":c;backgrounds\fea_r1c.png"
+stralias fea_r1cp,":c;backgrounds\fea_r1cp.png"
+stralias fea_r1e,":c;backgrounds\fea_r1e.png"
+stralias fea_r1ep,":c;backgrounds\fea_r1ep.png"
+stralias fea_r1f,":a;backgrounds\fea_r1f.png"
+stralias fea_r1f_bg,":c;backgrounds\fea_r1f_bg.png"
+stralias fea_r1fn,":a;backgrounds\fea_r1fn.png"
+stralias fea_r1fn_bg,":c;backgrounds\fea_r1fn_bg.png"
+stralias fea_r1fr,":a;backgrounds\fea_r1fr.png"
+stralias fea_r1fr_bg,":c;backgrounds\fea_r1fr_bg.png"
+stralias fea_r1g,":a;backgrounds\fea_r1g.png"
+stralias fea_r1g_bg,":c;backgrounds\fea_r1g_bg.png"
+stralias fea_r1gn,":a;backgrounds\fea_r1gn.png"
+stralias fea_r1gn_bg,":c;backgrounds\fea_r1gn_bg.png"
+stralias fea_r1gr,":a;backgrounds\fea_r1gr.png"
+stralias fea_r1gr_bg,":c;backgrounds\fea_r1gr_bg.png"
+stralias fea_r1h,":c;backgrounds\fea_r1h.png"
+stralias fea_r1hj,":c;backgrounds\fea_r1hj.png"
+stralias fea_r1i,":c;backgrounds\fea_r1i.png"
+stralias fea_r1ij,":c;backgrounds\fea_r1ij.png"
+stralias fea_r1ijr,":c;backgrounds\fea_r1ijr.png"
+stralias fea_r1in,":c;backgrounds\fea_r1in.png"
+stralias fea_r2,":c;backgrounds\fea_r2.png"
+
+;Guesthouse
+stralias g1f_p1c,":c;backgrounds\g1f_p1c.png"
+stralias g1f_p1e,":c;backgrounds\g1f_p1e.png"
+stralias g1f_p1er,":c;backgrounds\g1f_p1er.png"
+stralias g1f_r1a,":c;backgrounds\g1f_r1a.png"
+stralias g1f_r1ar,":c;backgrounds\g1f_r1ar.png"
+stralias g1f_r2a,":a;backgrounds\g1f_r2a.png"
+stralias g1f_r2a_bg,":c;backgrounds\g1f_r2a_bg.png"
+stralias g1f_r2am,":a;backgrounds\g1f_r2am.png"
+stralias g1f_r2am_bg,":c;backgrounds\g1f_r2am_bg.png"
+stralias g1f_r2an,":a;backgrounds\g1f_r2an.png"
+stralias g1f_r2an_bg,":c;backgrounds\g1f_r2an_bg.png"
+stralias g1f_r2ar,":a;backgrounds\g1f_r2ar.png"
+stralias g1f_r2ar_bg,":c;backgrounds\g1f_r2ar_bg.png"
+stralias g1f_s1a,":c;backgrounds\g1f_s1a.png"
+stralias g1f_s1ap,":c;backgrounds\g1f_s1ap.png"
+stralias g1f_s1bp,":c;backgrounds\g1f_s1bp.png"
+stralias g2f_p1a,":a;backgrounds\g2f_p1a.png"
+stralias g2f_p1a_bg,":c;backgrounds\g2f_p1a_bg.png"
+stralias g2f_p1ar,":a;backgrounds\g2f_p1ar.png"
+stralias g2f_p1ar_bg,":c;backgrounds\g2f_p1ar_bg.png"
+stralias g2f_r1a,":a;backgrounds\g2f_r1a.png"
+stralias g2f_r1a_bg,":c;backgrounds\g2f_r1a_bg.png"
+stralias g2f_r1am,":a;backgrounds\g2f_r1am.png"
+stralias g2f_r1am_bg,":c;backgrounds\g2f_r1am_bg.png"
+stralias g2f_r1an,":a;backgrounds\g2f_r1an.png"
+stralias g2f_r1an_bg,":c;backgrounds\g2f_r1an_bg.png"
+stralias g2f_r1ar,":a;backgrounds\g2f_r1ar.png"
+stralias g2f_r1ar_bg,":c;backgrounds\g2f_r1ar_bg.png"
+stralias g2f_r1c,":c;backgrounds\g2f_r1c.png"
+stralias g2f_r1cm,":c;backgrounds\g2f_r1cm.png"
+stralias g2f_r1cr,":c;backgrounds\g2f_r1cr.png"
+stralias g1f_r2b,":c;backgrounds\g1f_r2b.png"
+stralias g1f_r3a,":c;backgrounds\g1f_r3a.png"
+stralias g2f_r1b,":a;backgrounds\g2f_r1b.png"
+stralias g2f_r1b_bg,":c;backgrounds\g2f_r1b_bg.png"
+stralias g2f_r1bm,":c;backgrounds\g2f_r1bm.png"
+stralias g2f_r1bn,":a;backgrounds\g2f_r1bn.png"
+stralias g2f_r1bn_bg,":c;backgrounds\g2f_r1bn_bg.png"
+stralias g2f_r1br,":a;backgrounds\g2f_r1br.png"
+stralias g2f_r1br_bg,":c;backgrounds\g2f_r1br_bg.png"
+stralias g2f_r3ar,":a;backgrounds\g2f_r3ar.png"
+stralias g2f_r3ar_bg,":a;backgrounds\g2f_r3ar_bg.png"
+
+;Appearance guesthouse
+stralias g_o1a,":c;backgrounds\g_o1a.png"
+stralias g_o1ac,":c;backgrounds\g_o1ac.png"
+stralias g_o1an,":c;backgrounds\g_o1an.png"
+stralias g_o1ar,":c;backgrounds\g_o1ar.png"
+stralias g_o1c,":c;backgrounds\g_o1c.png"
+stralias g_o1cc,":c;backgrounds\g_o1cc.png"
+stralias g_o1cf,":c;backgrounds\g_o1cf.png"
+stralias g_o1cn,":c;backgrounds\g_o1cn.png"
+stralias g_o1cr,":c;backgrounds\g_o1cr.png"
+stralias g_o1d,":a;backgrounds\g_o1d.png"
+stralias g_o1d_bg,":a;backgrounds\g_o1d_bg.png"
+stralias g_o1dn,":a;backgrounds\g_o1dn.png"
+stralias g_o1dn_bg,":a;backgrounds\g_o1dn_bg.png"
+stralias g_o1dr,":a;backgrounds\g_o1dr.png"
+stralias g_o1dr_bg,":a;backgrounds\g_o1dr_bg.png"
+
+;Garden
+stralias garden_1a,":c;backgrounds\garden_1a.png"
+stralias garden_1ac,":c;backgrounds\garden_1ac.png"
+stralias garden_1af,":c;backgrounds\garden_1af.png"
+stralias garden_1an,":c;backgrounds\garden_1an.png"
+stralias garden_1ar,":c;backgrounds\garden_1ar.png"
+stralias garden_1c,":c;backgrounds\garden_1c.png"
+stralias garden_1cc,":c;backgrounds\garden_1cc.png"
+stralias garden_1cf,":c;backgrounds\garden_1cf.png"
+stralias garden_1cn,":c;backgrounds\garden_1cn.png"
+stralias garden_1cr,":c;backgrounds\garden_1cr.png"
+stralias garden_r1a,":a;backgrounds\garden_r1a.png"
+stralias garden_r1a_bg,":c;backgrounds\garden_r1a_bg.png"
+stralias garden_r1ac,":a;backgrounds\garden_r1ac.png"
+stralias garden_r1ac_bg,":c;backgrounds\garden_r1ac_bg.png"
+stralias garden_r1af,":c;backgrounds\garden_r1af.png"
+stralias garden_r1an,":a;backgrounds\garden_r1an.png"
+stralias garden_r1an_bg,":c;backgrounds\garden_r1an_bg.png"
+stralias garden_r1ar,":a;backgrounds\garden_r1ar.png"
+stralias garden_r1ar_bg,":c;backgrounds\garden_r1ar_bg.png"
+stralias garden_r1df,":a;backgrounds\garden_r1df.png"
+stralias garden_r1df_bg,":c;backgrounds\garden_r1df_bg.png"
+stralias garden_r1dn,":a;backgrounds\garden_r1dn.png"
+stralias garden_r1dn_bg,":c;backgrounds\garden_r1dn_bg.png"
+stralias garden_se1b,":c;backgrounds\garden_se1b.png"
+stralias garden_se2b,":c;backgrounds\garden_se2b.png"
+stralias garden_seaia,":c;backgrounds\garden_seaia.png"
+stralias garden_1cp,":c;backgrounds\garden_1cp.png"
+stralias garden_se1ap,":c;backgrounds\garden_se1ap.png"
+stralias garden_se2bp,":c;backgrounds\garden_se2bp.png"
+
+;Cafeteria
+stralias gdin_1ad2,":c;backgrounds\gdin_1ad2.png"
+
+;Guesthouse lobby
+stralias glib_1a,":c;backgrounds\glib_1a.png"
+stralias glob_1a,":a;backgrounds\glob_1a.png"
+stralias glob_1a_bg,":c;backgrounds\glob_1a_bg.png"
+stralias glob_1ar,":a;backgrounds\glob_1ar.png"
+stralias glob_1ar_bg,":c;backgrounds\glob_1ar_bg.png"
+stralias glob_1d,":a;backgrounds\glob_1d.png"
+stralias glob_1d_bg,":c;backgrounds\glob_1d_bg.png"
+stralias glob_1dr,":a;backgrounds\glob_1dr.png"
+stralias glob_1dr_bg,":c;backgrounds\glob_1dr_bg.png"
+stralias glob_1er,":c;backgrounds\glob_1er.png"
+
+;Hill
+stralias hill_1a,":c;backgrounds\hill_1a.png"
+stralias hill_1af,":c;backgrounds\hill_1af.png"
+stralias hill_1b,":c;backgrounds\hill_1b.png"
+stralias hill_1bf,":c;backgrounds\hill_1bf.png"
+
+;Hospital
+stralias hos_p1b,":c;backgrounds\hos_p1b.png"
+stralias hos_r1a,":c;backgrounds\hos_r1a.png"
+stralias hos_r1am,":c;backgrounds\hos_r1am.png"
+stralias hos_r1c,":c;backgrounds\hos_r1c.png"
+stralias hos_r1cm,":c;backgrounds\hos_r1cm.png"
+
+;Hotel room
+stralias hot_r1a,":c;backgrounds\hot_r1a.png"
+stralias hot_r1c,":c;backgrounds\hot_r1c.png"
+
+;Kawabata house
+stralias kaw_r1an,":c;backgrounds\kaw_r1an.png"
+stralias kaw_r1cn,":c;backgrounds\kaw_r1cn.png"
+stralias kaw_r2a,":c;backgrounds\kaw_r2a.png"
+stralias kaw_r3bn,":c;backgrounds\kaw_r3bn.png"
+
+;Kumazawa house
+stralias kum_r1a,":c;backgrounds\kum_r1a.png"
+
+;Main house
+stralias m1f_p1b,":a;backgrounds\m1f_p1b.png"
+stralias m1f_p1b_bg,":c;backgrounds\m1f_p1b_bg.png"
+stralias m1f_p1br,":a;backgrounds\m1f_p1br.png"
+stralias m1f_p1br_bg,":c;backgrounds\m1f_p1br_bg.png"
+stralias m1f_p1c,":a;backgrounds\m1f_p1c.png"
+stralias m1f_p1c_bg,":c;backgrounds\m1f_p1c_bg.png"
+stralias m1f_p1cr,":a;backgrounds\m1f_p1cr.png"
+stralias m1f_p1cr_bg,":c;backgrounds\m1f_p1cr_bg.png"
+stralias m1f_p1d,":a;backgrounds\m1f_p1d.png"
+stralias m1f_p1d_bg,":c;backgrounds\m1f_p1d_bg.png"
+stralias m1f_p1dn,":a;backgrounds\m1f_p1dn.png"
+stralias m1f_p1dn_bg,":c;backgrounds\m1f_p1dn_bg.png"
+stralias m1f_p1dr,":a;backgrounds\m1f_p1dr.png"
+stralias m1f_p1dr_bg,":c;backgrounds\m1f_p1dr_bg.png"
+stralias m1f_p2b,":a;backgrounds\m1f_p2b.png"
+stralias m1f_p2b_bg,":c;backgrounds\m1f_p2b_bg.png"
+stralias m1f_p2br,":a;backgrounds\m1f_p2br.png"
+stralias m1f_p2br_bg,":c;backgrounds\m1f_p2br_bg.png"
+stralias m1f_r1a,":a;backgrounds\m1f_r1a.png"
+stralias m1f_r1a_bg,":c;backgrounds\m1f_r1a_bg.png"
+stralias m1f_r1ar,":a;backgrounds\m1f_r1ar.png"
+stralias m1f_r1ar_bg,":c;backgrounds\m1f_r1ar_bg.png"
+stralias m1f_s1a,":a;backgrounds\m1f_s1a.png"
+stralias m1f_s1a_bg,":c;backgrounds\m1f_s1a_bg.png"
+stralias m1f_s1af,":c;backgrounds\m1f_s1af.png"
+stralias m1f_s1ar,":a;backgrounds\m1f_s1ar.png"
+stralias m1f_s1ar_bg,":c;backgrounds\m1f_s1ar_bg.png"
+stralias m1f_s1c,":c;backgrounds\m1f_s1c.png"
+stralias m1f_s1cr,":c;backgrounds\m1f_s1cr.png"
+stralias m1f_s1d,":c;backgrounds\m1f_s1d.png"
+stralias m1f_s1d_2,":c;backgrounds\m1f_s1d_2.png"
+stralias m1f_s1df,":c;backgrounds\m1f_s1df.png"
+stralias m1f_s1dr,":c;backgrounds\m1f_s1dr.png"
+stralias m1f_p1bf,":c;backgrounds\m1f_p1bf.png"
+stralias m1f_p1bnz,":a;backgrounds\m1f_p1bnz.png"
+stralias m1f_p1bnz_bg,":a;backgrounds\m1f_p1bnz_bg.png"
+stralias m1f_p1cnz,":a;backgrounds\m1f_p1cnz.png"
+stralias m1f_p1cnz_bg,":a;backgrounds\m1f_p1cnz_bg.png"
+stralias m1f_p1d_r,":a;backgrounds\m1f_p1d_r.png"
+stralias m1f_p1df,":c;backgrounds\m1f_p1df.png"
+stralias m1f_p2bnz,":a;backgrounds\m1f_p2bnz.png"
+stralias m1f_p2bnz_bg,":a;backgrounds\m1f_p2bnz_bg.png"
+stralias m1f_r1af,":c;backgrounds\m1f_r1af.png"
+stralias m1f_r1am,":a;backgrounds\m1f_r1am.png"
+stralias m1f_r1am_bg,":c;backgrounds\m1f_r1am_bg.png"
+stralias m2f_p1a,":a;backgrounds\m2f_p1a.png"
+stralias m2f_p1a_bg,":c;backgrounds\m2f_p1a_bg.png"
+stralias m2f_p1af,":c;backgrounds\m2f_p1af.png"
+stralias m2f_p1an,":a;backgrounds\m2f_p1an.png"
+stralias m2f_p1an_bg,":c;backgrounds\m2f_p1an_bg.png"
+stralias m2f_p1ar,":a;backgrounds\m2f_p1ar.png"
+stralias m2f_p1ar_bg,":c;backgrounds\m2f_p1ar_bg.png"
+stralias m2f_p1b,":a;backgrounds\m2f_p1b.png"
+stralias m2f_p1b_bg,":c;backgrounds\m2f_p1b_bg.png"
+stralias m2f_p1bf,":c;backgrounds\m2f_p1bf.png"
+stralias m2f_p1br,":a;backgrounds\m2f_p1br.png"
+stralias m2f_p1br_bg,":c;backgrounds\m2f_p1br_bg.png"
+stralias m2f_p1c,":a;backgrounds\m2f_p1c.png"
+stralias m2f_p1c_bg,":c;backgrounds\m2f_p1c_bg.png"
+stralias m2f_p1cf,":c;backgrounds\m2f_p1cf.png"
+stralias m2f_p1cr,":a;backgrounds\m2f_p1cr.png"
+stralias m2f_p1cr_bg,":c;backgrounds\m2f_p1cr_bg.png"
+stralias m2f_r4a,":a;backgrounds\m2f_r4a.png"
+stralias m2f_r4a_bg,":c;backgrounds\m2f_r4a_bg.png"
+stralias m2f_r4an,":a;backgrounds\m2f_r4an.png"
+stralias m2f_r4an_bg,":c;backgrounds\m2f_r4an_bg.png"
+stralias m2f_r4ans_bg,":c;backgrounds\m2f_r4ans_bg.png"
+stralias m2f_r4ars_bg,":c;backgrounds\m2f_r4ars_bg.png"
+stralias m2f_r4ar,":a;backgrounds\m2f_r4ar.png"
+stralias m2f_r4ar_bg,":c;backgrounds\m2f_r4ar_bg.png"
+stralias m2f_p1anz,":a;backgrounds\m2f_p1anz.png"
+stralias m2f_p1anz_bg,":c;backgrounds\m2f_p1anz_bg.png"
+stralias m2f_p1bnz,":a;backgrounds\m2f_p1bnz.png"
+stralias m2f_p1bnz_bg,":c;backgrounds\m2f_p1bnz_bg.png"
+stralias m2f_r10ap,":a;backgrounds\m2f_r10ap.png"
+stralias m2f_r4ao,":a;backgrounds\m2f_r4ao.png"
+stralias m2f_r4ao_bg,":c;backgrounds\m2f_r4ao_bg.png"
+stralias m2f_r4ap,":c;backgrounds\m2f_r4ap.png"
+stralias m2f_r7ar,":c;backgrounds\m2f_r7ar.png"
+stralias m2f_r9ap,":a;backgrounds\m2f_r9ap.png"
+
+;Door
+stralias m_door1,":c;backgrounds\m_door1.png"
+stralias m_door1h,":c;backgrounds\m_door1h.png"
+stralias m_door1k,":c;backgrounds\m_door1k.png"
+stralias m_door1x_2,":a;backgrounds\m_door1x_2.png"
+stralias m_door2,":c;backgrounds\m_door2.png"
+stralias m_door2h,":c;backgrounds\m_door2h.png"
+stralias m_door2k,":c;backgrounds\m_door2k.png"
+stralias m_door1n,":c;backgrounds\m_door1n.png"
+stralias m_door2hp,":c;backgrounds\m_door2hp.png"
+stralias m_door2n,":c;backgrounds\m_door2n.png"
+stralias m_door3,":c;backgrounds\m_door3.png"
+stralias m_door3k,":c;backgrounds\m_door3k.png"
+stralias m_door4,":c;backgrounds\m_door4.png"
+stralias m_door4c,":c;backgrounds\m_door4c.png"
+stralias m_door4l,":c;backgrounds\m_door4l.png"
+
+;Main building
+stralias m_o1a,":c;backgrounds\m_o1a.png"
+stralias m_o1a2,":c;backgrounds\m_o1a2.png"
+stralias m_o1ac,":c;backgrounds\m_o1ac.png"
+stralias m_o1af,":c;backgrounds\m_o1af.png"
+stralias m_o1an,":c;backgrounds\m_o1an.png"
+stralias m_o1anc,":a;backgrounds\m_o1anc.png"
+stralias m_o1anc_sak,":a;backgrounds\m_o1anc_sak.png"
+stralias m_o1ar,":c;backgrounds\m_o1ar.png"
+stralias m_o2an,":c;backgrounds\m_o2an.png"
+stralias m_o2ar,":c;backgrounds\m_o2ar.png"
+
+;Main building, Kinzo's side
+stralias m_cy1a,":c;backgrounds\m_cy1a.png"
+stralias m_cy1ac,":c;backgrounds\m_cy1ac.png"
+stralias m_cy1af,":c;backgrounds\m_cy1af.png"
+stralias m_cy1an,":c;backgrounds\m_cy1an.png"
+stralias m_cy1an2,":c;backgrounds\m_cy1an2.png"
+stralias m_cy1ar,":c;backgrounds\m_cy1ar.png"
+
+;Bathroom
+stralias mbat_1a,":c;backgrounds\mbat_1a.png"
+stralias mbat_1ap,":c;backgrounds\mbat_1ap.png"
+stralias mbat_2a,":c;backgrounds\mbat_2a.png"
+stralias mbat_2as,":c;backgrounds\mbat_2as.png"
+stralias mbat_3a,":c;backgrounds\mbat_3a.png"
+stralias mbat_3as,":c;backgrounds\mbat_3as.png"
+
+;Boiler room
+stralias mboi_1a,":c;backgrounds\mboi_1a.png"
+stralias mboi_1c,":c;backgrounds\mboi_1c.png"
+
+;Cour
+stralias mcou_1a,":c;backgrounds\mcou_1a.png"
+stralias mcou_1an,":c;backgrounds\mcou_1an.png"
+stralias mcou_1ar,":c;backgrounds\mcou_1ar.png"
+
+;Dining
+stralias mdin_1a,":c;backgrounds\mdin_1a.png"
+stralias mdin_1ar,":c;backgrounds\mdin_1ar.png"
+stralias mdin_1c,":a;backgrounds\mdin_1c.png"
+stralias mdin_1c_bg,":c;backgrounds\mdin_1c_bg.png"
+stralias mdin_1cr,":a;backgrounds\mdin_1cr.png"
+stralias mdin_1cr_bg,":c;backgrounds\mdin_1cr_bg.png"
+stralias mdin_1e,":c;backgrounds\mdin_1e.png"
+stralias mdin_1er,":c;backgrounds\mdin_1er.png"
+stralias mdin_1f,":c;backgrounds\mdin_1f.png"
+stralias mdin_1fr,":c;backgrounds\mdin_1fr.png"
+stralias mdin_1g,":a;backgrounds\mdin_1g.png"
+stralias mdin_1g_bg,":c;backgrounds\mdin_1g_bg.png"
+stralias mdin_1gn,":a;backgrounds\mdin_1gn.png"
+stralias mdin_1gn_bg,":c;backgrounds\mdin_1gn_bg.png"
+stralias mdin_1gr,":a;backgrounds\mdin_1gr.png"
+stralias mdin_1gr_bg,":c;backgrounds\mdin_1gr_bg.png"
+
+;Main Building
+stralias ment_1b,":a;backgrounds\ment_1b.png"
+stralias ment_1b_bg,":c;backgrounds\ment_1b_bg.png"
+stralias ment_1br,":a;backgrounds\ment_1br.png"
+stralias ment_1br_bg,":c;backgrounds\ment_1br_bg.png"
+
+;Main building Hall
+stralias mhal_1a,":a;backgrounds\mhal_1a.png"
+stralias mhal_1a_bg,":c;backgrounds\mhal_1a_bg.png"
+stralias mhal_1ar,":a;backgrounds\mhal_1ar.png"
+stralias mhal_1ar_bg,":c;backgrounds\mhal_1ar_bg.png"
+stralias mhal_1c,":c;backgrounds\mhal_1c.png"
+stralias mhal_1cr,":c;backgrounds\mhal_1cr.png"
+stralias mhal_2a,":a;backgrounds\mhal_2a.png"
+stralias mhal_2a_bg,":c;backgrounds\mhal_2a_bg.png"
+stralias mhal_2am,":c;backgrounds\mhal_2am.png"
+stralias mhal_2ar,":a;backgrounds\mhal_2ar.png"
+stralias mhal_2ar_bg,":c;backgrounds\mhal_2ar_bg.png"
+stralias mhal_2b,":a;backgrounds\mhal_2b.png"
+stralias mhal_2b_bg,":c;backgrounds\mhal_2b_bg.png"
+stralias mhal_2br,":a;backgrounds\mhal_2br.png"
+stralias mhal_2br_bg,":c;backgrounds\mhal_2br_bg.png"
+stralias mhal_2c,":c;backgrounds\mhal_2c.png"
+stralias mhal_2cr,":c;backgrounds\mhal_2cr.png"
+stralias mhal_2cr2,":c;backgrounds\mhal_2cr2.png"
+stralias mhal_2cr3,":c;backgrounds\mhal_2cr3.png"
+stralias mhal_2d,":c;backgrounds\mhal_2d.png"
+stralias mhal_2dn,":c;backgrounds\mhal_2dn.png"
+stralias mhal_2dr,":c;backgrounds\mhal_2dr.png"
+stralias mhal_ta1a,":c;backgrounds\mhal_ta1a.png"
+stralias mhal_1anz,":c;backgrounds\mhal_1anz.png"
+stralias mhal_1co,":c;backgrounds\mhal_1co.png"
+stralias mhal_2af,":c;backgrounds\mhal_2af.png"
+stralias mhal_2anz,":c;backgrounds\mhal_2anz.png"
+stralias mhal_2cnz,":c;backgrounds\mhal_2cnz.png"
+stralias mhal_2co,":c;backgrounds\mhal_2co.png"
+stralias mhal_2dp,":c;backgrounds\mhal_2dp.png"
+stralias mhal_3a,":c;backgrounds\mhal_3a.png"
+stralias mhal_3c,":c;backgrounds\mhal_3c.png"
+stralias mhal_3d,":c;backgrounds\mhal_3d.png"
+stralias mhal_h1a,":a;backgrounds\mhal_h1a.png"
+stralias mhal_h1a_bg,":c;backgrounds\mhal_h1a_bg.png"
+stralias mhal_h1c,":c;backgrounds\mhal_h1c.png"
+stralias mhal_h2a,":a;backgrounds\mhal_h2a.png"
+stralias mhal_h2a_bg,":c;backgrounds\mhal_h2a_bg.png"
+stralias mhal_h2c,":c;backgrounds\mhal_h2c.png"
+
+;Main room of Jessica
+stralias mjes_1a,":a;backgrounds\mjes_1a.png"
+stralias mjes_1a_bg,":c;backgrounds\mjes_1a_bg.png"
+stralias mjes_1af,":c;backgrounds\mjes_1af.png"
+stralias mjes_1an,":a;backgrounds\mjes_1an.png"
+stralias mjes_1an_bg,":c;backgrounds\mjes_1an_bg.png"
+stralias mjes_1ar,":a;backgrounds\mjes_1ar.png"
+stralias mjes_1ar_bg,":c;backgrounds\mjes_1ar_bg.png"
+stralias mjes_1c,":a;backgrounds\mjes_1c.png"
+stralias mjes_1c_bg,":c;backgrounds\mjes_1c_bg.png"
+stralias mjes_1cr,":a;backgrounds\mjes_1cr.png"
+stralias mjes_1cr_bg,":c;backgrounds\mjes_1cr_bg.png"
+stralias mjes_1e,":c;backgrounds\mjes_1e.png"
+stralias mjes_1cf,":c;backgrounds\mjes_1cf.png"
+
+;Kitchen
+stralias mkit_1a,":a;backgrounds\mkit_1a.png"
+stralias mkit_1a_bg,":c;backgrounds\mkit_1a_bg.png"
+stralias mkit_1ar,":a;backgrounds\mkit_1ar.png"
+stralias mkit_1ar_bg,":c;backgrounds\mkit_1ar_bg.png"
+stralias mkit_1c,":c;backgrounds\mkit_1c.png"
+stralias mkit_1cn,":c;backgrounds\mkit_1cn.png"
+stralias mkit_1cr,":c;backgrounds\mkit_1cr.png"
+stralias mkit_1af,":c;backgrounds\mkit_1af.png"
+
+;Krauss's room
+stralias mkur_1a,":a;backgrounds\mkur_1a.png"
+stralias mkur_1a_bg,":c;backgrounds\mkur_1a_bg.png"
+stralias mkur_1an,":a;backgrounds\mkur_1an.png"
+stralias mkur_1an_bg,":c;backgrounds\mkur_1an_bg.png"
+stralias mkur_1ar,":a;backgrounds\mkur_1ar.png"
+stralias mkur_1ar_bg,":c;backgrounds\mkur_1ar_bg.png"
+stralias mkur_2a,":c;backgrounds\mkur_2a.png"
+stralias mkur_3an,":a;backgrounds\mkur_3an.png"
+stralias mkur_3an_bg,":c;backgrounds\mkur_3an_bg.png"
+stralias mkur_3ar,":a;backgrounds\mkur_3ar.png"
+stralias mkur_3ar_bg,":c;backgrounds\mkur_3ar_bg.png"
+
+;Main study Kinzo Room
+stralias mlib_1a,":a;backgrounds\mlib_1a.png"
+stralias mlib_1a_bg,":c;backgrounds\mlib_1a_bg.png"
+stralias mlib_1ar,":a;backgrounds\mlib_1ar.png"
+stralias mlib_1ar_bg,":c;backgrounds\mlib_1ar_bg.png"
+stralias mlib_1b,":a;backgrounds\mlib_1b.png"
+stralias mlib_1b_bg,":c;backgrounds\mlib_1b_bg.png"
+stralias mlib_1br,":a;backgrounds\mlib_1br.png"
+stralias mlib_1br_bg,":c;backgrounds\mlib_1br_bg.png"
+stralias mlib_1c,":a;backgrounds\mlib_1c.png"
+stralias mlib_1c_bg,":c;backgrounds\mlib_1c_bg.png"
+stralias mlib_1cr,":a;backgrounds\mlib_1cr.png"
+stralias mlib_1cr_bg,":c;backgrounds\mlib_1cr_bg.png"
+stralias mlib_1e,":c;backgrounds\mlib_1e.png"
+stralias mlib_1ao,":a;backgrounds\mlib_1ao.png"
+stralias mlib_1ao_bg,":c;backgrounds\mlib_1ao_bg.png"
+stralias mlib_1ap,":c;backgrounds\mlib_1ap.png"
+stralias mlib_1bp,":c;backgrounds\mlib_1bp.png"
+stralias mlib_1co,":a;backgrounds\mlib_1co.png"
+stralias mlib_1co_bg,":c;backgrounds\mlib_1co_bg.png"
+stralias mlib_1cp,":c;backgrounds\mlib_1cp.png"
+stralias mlib_1ep,":c;backgrounds\mlib_1ep.png"
+stralias mlib_1f,":a;backgrounds\mlib_1f.png"
+stralias mlib_1f_bg,":c;backgrounds\mlib_1f_bg.png"
+stralias mlib_1f_r,":a;backgrounds\mlib_1f_r.png"
+stralias mlib_1fr,":a;backgrounds\mlib_1fr.png"
+stralias mlib_1fr_bg,":c;backgrounds\mlib_1fr_bg.png"
+stralias mlib_1g,":c;backgrounds\mlib_1g.png"
+
+;Backyard
+stralias mnaka_1a,":c;backgrounds\mnaka_1a.png"
+stralias mnaka_1an,":c;backgrounds\mnaka_1an.png"
+
+;Main room of Natsuhi
+stralias mnat_1a,":a;backgrounds\mnat_1a.png"
+stralias mnat_1a_bg,":c;backgrounds\mnat_1a_bg.png"
+stralias mnat_1am,":c;backgrounds\mnat_1am.png"
+stralias mnat_1ar,":a;backgrounds\mnat_1ar.png"
+stralias mnat_1ar_bg,":c;backgrounds\mnat_1ar_bg.png"
+stralias mnat_2b,":c;backgrounds\mnat_2b.png"
+stralias mnat_2br,":c;backgrounds\mnat_2br.png"
+stralias mnat_2g,":c;backgrounds\mnat_2g.png"
+stralias mnat_2gm,":c;backgrounds\mnat_2gm.png"
+stralias mnat_2gr,":c;backgrounds\mnat_2gr.png"
+stralias mnat_3cn,":c;backgrounds\mnat_3cn.png"
+
+;Moon
+stralias moon_1a,":c;backgrounds\moon_1a.png"
+stralias moon_1b,":c;backgrounds\moon_1b.png"
+stralias moon_1bn,":c;backgrounds\moon_1bn.png"
+stralias moon_2a,":c;backgrounds\moon_2a.png"
+stralias moon_1p,":c;backgrounds\moon_1p.png"
+
+;Stairs
+stralias msta_1b,":a;backgrounds\msta_1b.png"
+stralias msta_1b_bg,":c;backgrounds\msta_1b_bg.png"
+
+;VIP room main building
+stralias mvip_1a,":a;backgrounds\mvip_1a.png"
+stralias mvip_1a_bg,":c;backgrounds\mvip_1a_bg.png"
+stralias mvip_1an,":c;backgrounds\mvip_1an.png"
+stralias mvip_1ar,":c;backgrounds\mvip_1ar.png"
+stralias mvip_1c,":a;backgrounds\mvip_1c.png"
+stralias mvip_1c_bg,":c;backgrounds\mvip_1c_bg.png"
+stralias mvip_1cn,":c;backgrounds\mvip_1cn.png"
+stralias mvip_1cr,":c;backgrounds\mvip_1cr.png"
+
+;Nanjo Room
+stralias nan_r1a,":c;backgrounds\nan_r1a.png"
+stralias nan_r1c,":c;backgrounds\nan_r1c.png"
+
+;Coast of Okinawa (beach)
+stralias o_beach_1a,":c;backgrounds\o_beach_1a.png"
+stralias o_beach_1ac,":c;backgrounds\o_beach_1ac.png"
+stralias o_sky_1a,":c;backgrounds\o_sky_1a.png"
+stralias o_sky_1ac,":c;backgrounds\o_sky_1ac.png"
+
+;Office phone
+stralias off_1a,":c;backgrounds\off_1a.png"
+
+;City Park
+stralias par_1a,":c;backgrounds\par_1a.png"
+stralias par_1c,":c;backgrounds\par_1c.png"
+
+;Inside dungeon
+stralias pri_i1a,":c;backgrounds\pri_i1a.png"
+stralias pri_i1a_2_sak,":a;backgrounds\pri_i1a_2_sak.png"
+stralias pri_i1a_sak,":a;backgrounds\pri_i1a_sak.png"
+stralias pri_i1b,":c;backgrounds\pri_i1b.png"
+stralias pri_i1c,":c;backgrounds\pri_i1c.png"
+stralias pri_i1c_2_sak,":a;backgrounds\pri_i1c_2_sak.png"
+stralias pri_i1c_sak,":a;backgrounds\pri_i1c_sak.png"
+
+;Professor house
+stralias pro_o1a,":c;backgrounds\pro_o1a.png"
+
+;Restaurant
+stralias res_i1a,":c;backgrounds\res_i1a.png"
+stralias res_i1c,":c;backgrounds\res_i1c.png"
+stralias res_i2c,":c;backgrounds\res_i2c.png"
+stralias res_i3ar,":c;backgrounds\res_i3ar.png"
+stralias res_i3dr,":c;backgrounds\res_i3dr.png"
+stralias res_i4a,":c;backgrounds\res_i4a.png"
+
+;Maria and Rosa house
+stralias ros_m1a,":c;backgrounds\ros_m1a.png"
+stralias ros_m1ar,":c;backgrounds\ros_m1ar.png"
+stralias ros_o1an,":c;backgrounds\ros_o1an.png"
+stralias ros_p1ar,":c;backgrounds\ros_p1ar.png"
+stralias ros_r1a,":c;backgrounds\ros_r1a.png"
+stralias ros_r1ar,":c;backgrounds\ros_r1ar.png"
+stralias ros_ro1ar,":c;backgrounds\ros_ro1ar.png"
+
+;Rose garden
+stralias rose_1a,":c;backgrounds\rose_1a.png"
+stralias rose_1ac,":c;backgrounds\rose_1ac.png"
+stralias rose_1af,":c;backgrounds\rose_1af.png"
+stralias rose_1an,":c;backgrounds\rose_1an.png"
+stralias rose_1ar,":c;backgrounds\rose_1ar.png"
+stralias rose_1c,":c;backgrounds\rose_1c.png"
+stralias rose_1cc,":c;backgrounds\rose_1cc.png"
+stralias rose_1cn,":c;backgrounds\rose_1cn.png"
+stralias rose_1cp,":c;backgrounds\rose_1cp.png"
+stralias rose_1cpr,":c;backgrounds\rose_1cpr.png"
+stralias rose_1e,":c;backgrounds\rose_1e.png"
+stralias rose_1ec,":c;backgrounds\rose_1ec.png"
+stralias rose_1ef,":c;backgrounds\rose_1ef.png"
+stralias rose_1en,":c;backgrounds\rose_1en.png"
+stralias rose_1ep,":c;backgrounds\rose_1ep.png"
+stralias rose_2an,":c;backgrounds\rose_2an.png"
+stralias rose_2ap,":c;backgrounds\rose_2ap.png"
+stralias rose_2bn,":c;backgrounds\rose_2bn.png"
+stralias rose_2bp,":c;backgrounds\rose_2bp.png"
+stralias rose_2bpr,":c;backgrounds\rose_2bpr.png"
+stralias rose_3an,":c;backgrounds\rose_3an.png"
+stralias rose_3ap,":c;backgrounds\rose_3ap.png"
+stralias rose_3apr,":c;backgrounds\rose_3apr.png"
+stralias rose_g1a,":c;backgrounds\rose_g1a.png"
+stralias rose_g1ac,":c;backgrounds\rose_g1ac.png"
+stralias rose_g1af,":c;backgrounds\rose_g1af.png"
+stralias rose_g1an,":c;backgrounds\rose_g1an.png"
+stralias rose_g1ar,":c;backgrounds\rose_g1ar.png"
+stralias rose_g1b,":c;backgrounds\rose_g1b.png"
+stralias rose_g1bc,":c;backgrounds\rose_g1bc.png"
+stralias rose_g1bf,":c;backgrounds\rose_g1bf.png"
+stralias rose_g1br,":c;backgrounds\rose_g1br.png"
+stralias rose_g1c,":c;backgrounds\rose_g1c.png"
+stralias rose_3aph,":c;backgrounds\rose_3aph.png"
+stralias rose_p1ap2,":a;backgrounds\rose_p1ap2.png"
+stralias rose_p1ap2_bg,":a;backgrounds\rose_p1ap2_bg.png"
+stralias rose_t1a,":c;backgrounds\rose_t1a.png"
+
+;School
+stralias schd_p1ar,":c;backgrounds\schd_p1ar.png"
+stralias schf_c2a,":c;backgrounds\schf_c2a.png"
+stralias schf_c2ar,":c;backgrounds\schf_c2ar.png"
+stralias schf_c2b,":c;backgrounds\schf_c2b.png"
+stralias schf_c2br,":c;backgrounds\schf_c2br.png"
+stralias schf_p1a,":c;backgrounds\schf_p1a.png"
+stralias schf_r1a,":c;backgrounds\schf_r1a.png"
+stralias schf_s1a,":c;backgrounds\schf_s1a.png"
+stralias schr_o1a,":c;backgrounds\schr_o1a.png"
+stralias schr_o2a,":c;backgrounds\schr_o2a.png"
+stralias schr_p1b,":c;backgrounds\schr_p1b.png"
+stralias schr_r1a,":c;backgrounds\schr_r1a.png"
+stralias schr_r1an,":c;backgrounds\schr_r1an.png"
+stralias schr_r1ar,":c;backgrounds\schr_r1ar.png"
+stralias schr_r1d,":c;backgrounds\schr_r1d.png"
+
+;Appearance secret house Kuwadorian
+stralias se1f_s1an,":c;backgrounds\se1f_s1an.png"
+stralias se1f_s1ap,":c;backgrounds\se1f_s1ap.png"
+stralias se1f_s1cp,":c;backgrounds\se1f_s1cp.png"
+
+;Appearance secret house
+stralias se_o1a,":c;backgrounds\se_o1a.png"
+stralias se_o1ap,":c;backgrounds\se_o1ap.png"
+
+;Sea
+stralias sea_1a,":c;backgrounds\sea_1a.png"
+stralias sea_1af,":c;backgrounds\sea_1af.png"
+stralias sea_1b,":c;backgrounds\sea_1b.png"
+stralias sea_1bf,":c;backgrounds\sea_1bf.png"
+stralias sea_1bn,":c;backgrounds\sea_1bn.png"
+stralias sea_1c,":c;backgrounds\sea_1c.png"
+stralias sea_1cf,":c;backgrounds\sea_1cf.png"
+stralias sea_3a,":c;backgrounds\sea_3a.png"
+stralias sea_3af,":c;backgrounds\sea_3af.png"
+stralias sea_3b,":c;backgrounds\sea_3b.png"
+stralias sea_3bc,":c;backgrounds\sea_3bc.png"
+stralias sea_3bf,":c;backgrounds\sea_3bf.png"
+stralias sea_3bi,":c;backgrounds\sea_3bi.png"
+stralias sea_3bm,":c;backgrounds\sea_3bm.png"
+stralias sea_3bp,":c;backgrounds\sea_3bp.png"
+stralias sea_3br,":c;backgrounds\sea_3br.png"
+stralias sea_4a,":c;backgrounds\sea_4a.png"
+stralias sea2a,":c;backgrounds\sea2a.png"
+stralias sea2an,":c;backgrounds\sea2an.png"
+stralias sea2bn,":c;backgrounds\sea2bn.png"
+
+;Hall secret house
+stralias sehal_1a,":c;backgrounds\sehal_1a.png"
+stralias sehal_1bp,":c;backgrounds\sehal_1bp.png"
+
+;Ship
+stralias ship_p1a,":c;backgrounds\ship_p1a.png"
+stralias ship_p1c,":c;backgrounds\ship_p1c.png"
+stralias ship_s1a,":c;backgrounds\ship_s1a.png"
+stralias ship_s1af,":c;backgrounds\ship_s1af.png"
+stralias ship_s1b,":c;backgrounds\ship_s1b.png"
+stralias ship_s1bf,":c;backgrounds\ship_s1bf.png"
+stralias ship_s2a,":c;backgrounds\ship_s2a.png"
+stralias ship_s2af,":c;backgrounds\ship_s2af.png"
+stralias ship_s2b,":c;backgrounds\ship_s2b.png"
+stralias ship_s2bf,":c;backgrounds\ship_s2bf.png"
+stralias ship_s3a,":c;backgrounds\ship_s3a.png"
+stralias ship_s4,":c;backgrounds\ship_s4.png"
+stralias ship_s5,":c;backgrounds\ship_s5.png"
+stralias ship_s6,":c;backgrounds\ship_s6.png"
+
+;Sky
+stralias sky_1a,":c;backgrounds\sky_1a.png"
+stralias sky_1b,":c;backgrounds\sky_1b.png"
+stralias sky_1c,":c;backgrounds\sky_1c.png"
+stralias sky_2b,":c;backgrounds\sky_2b.png"
+stralias sky_3a,":c;backgrounds\sky_3a.png"
+stralias sky_4b,":c;backgrounds\sky_4b.png"
+stralias sky_4bp,":c;backgrounds\sky_4bp.png"
+stralias sky_5,":c;backgrounds\sky_5.png"
+stralias sky_6,":c;backgrounds\sky_6.png"
+
+;Station
+stralias sta_1a,":c;backgrounds\sta_1a.png"
+
+;Underpass
+stralias sub_d1a,":c;backgrounds\sub_d1a.png"
+stralias sub_p1a,":c;backgrounds\sub_p1a.png"
+stralias sub_p1b,":c;backgrounds\sub_p1b.png"
+stralias sub_r1a,":c;backgrounds\sub_r1a.png"
+stralias sub_r1ap,":c;backgrounds\sub_r1ap.png"
+stralias sub_r1b,":c;backgrounds\sub_r1b.png"
+stralias sub_r1bp,":c;backgrounds\sub_r1bp.png"
+stralias sub_sta1a,":c;backgrounds\sub_sta1a.png"
+stralias sub_clock1a,":c;backgrounds\sub_clock1a.png"
+stralias sub_clock1b,":c;backgrounds\sub_clock1b.png"
+stralias sub_clock1c,":c;backgrounds\sub_clock1c.png"
+stralias sub_clock1c_r,":c;backgrounds\sub_clock1c_r.png"
+stralias sub_clock2a,":c;backgrounds\sub_clock2a.png"
+stralias sub_p2a,":c;backgrounds\sub_p2a.png"
+stralias sub_p2b,":c;backgrounds\sub_p2b.png"
+stralias sub_p2c,":c;backgrounds\sub_p2c.png"
+stralias sub_p3b,":c;backgrounds\sub_p3b.png"
+stralias sub_p3c,":c;backgrounds\sub_p3c.png"
+stralias sub_r2a,":c;backgrounds\sub_r2a.png"
+stralias sub_r2d,":c;backgrounds\sub_r2d.png"
+stralias sub_r3b,":c;backgrounds\sub_r3b.png"
+
+;Submarine
+stralias submarine_i1a,":c;backgrounds\submarine_i1a.png"
+stralias submarine_o1a,":c;backgrounds\submarine_o1a.png"
+
+;Toilet in a private room
+stralias toi_1a,":c;backgrounds\toi_1a.png"
+
+;Train
+stralias tra_1a,":c;backgrounds\tra_1a.png"
+stralias tra_1b,":c;backgrounds\tra_1b.png"
+
+;Garden warehouse
+stralias warehous_i1a,":a;backgrounds\warehous_i1a.png"
+stralias warehous_i1a_bg,":c;backgrounds\warehous_i1a_bg.png"
+stralias warehous_i1ar2,":a;backgrounds\warehous_i1ar2.png"
+stralias warehous_i1ar2_bg,":c;backgrounds\warehous_i1ar2_bg.png"
+stralias warehous_i1c,":a;backgrounds\warehous_i1c.png"
+stralias warehous_i1c_bg,":c;backgrounds\warehous_i1c_bg.png"
+stralias warehous_i1cr,":a;backgrounds\warehous_i1cr.png"
+stralias warehous_i1cr_bg,":c;backgrounds\warehous_i1cr_bg.png"
+stralias warehous_i1e,":c;backgrounds\warehous_i1e.png"
+stralias warehous_i1er,":c;backgrounds\warehous_i1er.png"
+stralias warehous_o1a,":c;backgrounds\warehous_o1a.png"
+stralias warehous_o1an,":c;backgrounds\warehous_o1an.png"
+stralias warehous_o2a,":c;backgrounds\warehous_o2a.png"
+stralias warehous_o2ar,":c;backgrounds\warehous_o2ar.png"
+
+;Well in the woods
+stralias well_1an,":c;backgrounds\well_1an.png"
+stralias well_1ar,":c;backgrounds\well_1ar.png"
+stralias well_1bn,":c;backgrounds\well_1bn.png"
+stralias well_1br,":c;backgrounds\well_1br.png"
+
+;Diary of Maria
+stralias book1,":c;backgrounds\book1.png"
+
+;Chess
+stralias chess1,":c;backgrounds\chess1.png"
+stralias chess2,":c;backgrounds\chess2.png"
+
+;Ingot of gold
+stralias gold1,":c;backgrounds\gold1.png"
+stralias gold2,":c;backgrounds\gold2.png"
+stralias gold3,":c;backgrounds\gold3.png"
+
+;Gun
+stralias gun_1a,":c;backgrounds\gun_1a.png"
+stralias gun_2a,":c;backgrounds\gun_2a.png"
+stralias gun_2b,":c;backgrounds\gun_2b.png"
+
+;Key
+stralias key1,":c;backgrounds\key1.png"
+stralias key2,":c;backgrounds\key2.png"
+stralias key3,":c;backgrounds\key3.png"
+
+;Letter
+stralias letter1,":c;backgrounds\letter1.png"
+
+;Notes of bottle message
+stralias note1,":c;backgrounds\note1.png"
+
+;Number of mystery
+stralias number,":c;backgrounds\number.png"
+
+;portrait of Beatrice
+stralias portrait1,":c;backgrounds\portrait1.png"
+stralias portrait2,":c;backgrounds\portrait2.png"
+stralias portrait3,":c;backgrounds\portrait3.png"
+stralias portrait4,":c;backgrounds\portrait4.png"
+stralias portrait5,":c;backgrounds\portrait5.png"
+stralias portrait6,":c;backgrounds\portrait6.png"
+
+;Halloween decoration
+stralias pumpkin2,":c;backgrounds\pumpkin2.png"
+
+;Shrine
+stralias shr_1a,":c;backgrounds\shr_1a.png"
+stralias shr_1an,":c;backgrounds\shr_1an.png"
+stralias shr_1b,":c;backgrounds\shr_1b.png"
+
+;Pumpkin sweets
+stralias sweet1,":c;backgrounds\sweet1.png"
+stralias sweet2,":c;backgrounds\sweet2.png"
+
+;Prises
+stralias sbg_01,":c;backgrounds\sbg_01.png"
+stralias sbg_02,":c;backgrounds\sbg_02.png"
+stralias sbg_03,":c;backgrounds\sbg_03.png"
+stralias sbg_04,":c;backgrounds\sbg_04.png"
+stralias sbg_05,":c;backgrounds\sbg_05.png"
+stralias sbg_06,":c;backgrounds\sbg_06.png"
+stralias sbg_07,":c;backgrounds\sbg_07.png"
+stralias sbg_08,":c;backgrounds\sbg_08.png"
+stralias sbg_09,":c;backgrounds\sbg_09.png"
+stralias sbg_10,":c;backgrounds\sbg_10.png"
+stralias sbg_11,":c;backgrounds\sbg_11.png"
+stralias sbg_12,":c;backgrounds\sbg_12.png"
+stralias sbg_13,":c;backgrounds\sbg_13.png"
+stralias sbg_14,":c;backgrounds\sbg_14.png"
+stralias sbg_15,":c;backgrounds\sbg_15.png"
+stralias sbg_16,":c;backgrounds\sbg_16.png"
+stralias sbg_17,":c;backgrounds\sbg_17.png"
+stralias sbg_18,":c;backgrounds\sbg_18.png"
+
+;Book
+stralias tai_book1a,":c;backgrounds\tai_book1a.png"
+
+;Telephone
+stralias tel1a,":c;backgrounds\tel1a.png"
+stralias tel2a,":c;backgrounds\tel2a.png"
+stralias telbox_1b,":c;backgrounds\telbox_1b.png"
+
+;Theatre
+stralias the_1a,":c;backgrounds\the_1a.png"
+stralias the_1b,":c;backgrounds\the_1b.png"
+stralias the_1c,":c;backgrounds\the_1c.png"
+stralias the_1d,":c;backgrounds\the_1d.png"
+stralias the_1e,":c;backgrounds\the_1e.png"
+stralias the_1f,":c;backgrounds\the_1f.png"
+stralias the_2a,":c;backgrounds\the_2a.png"
+stralias the_2ao,":c;backgrounds\the_2ao.png"
+stralias the_2b,":c;backgrounds\the_2b.png"
+stralias the_3a,":c;backgrounds\the_3a.png"
+stralias the_3b,":c;backgrounds\the_3b.png"
+stralias the_3c,":c;backgrounds\the_3c.png"
+stralias the_3d,":c;backgrounds\the_3d.png"
+stralias the_3e,":c;backgrounds\the_3e.png"
+
+;Cloisters
+stralias wclo_1a,":c;backgrounds\wclo_1a.png"
+stralias wclo_1b,":c;backgrounds\wclo_1b.png"
+stralias wclo_1c,":c;backgrounds\wclo_1c.png"
+stralias wclo_1l,":c;backgrounds\wclo_1l.png"
+
+;Sanctuary
+stralias wsan_1a,":c;backgrounds\wsan_1a.png"
+stralias wsan_1aw,":c;backgrounds\wsan_1aw.png"
+stralias wsan_1b,":c;backgrounds\wsan_1b.png"
+stralias wsan_1bw,":c;backgrounds\wsan_1bw.png"
+stralias wsan_1c,":c;backgrounds\wsan_1c.png"
+stralias wsan_1cw,":c;backgrounds\wsan_1cw.png"
+stralias wsan_1l,":c;backgrounds\wsan_1l.png"
+stralias wsan_2a,":c;backgrounds\wsan_2a.png"
+stralias wsan_2an,":c;backgrounds\wsan_2an.png"
+stralias wsan_2aw,":c;backgrounds\wsan_2aw.png"
+stralias wsan_2b,":c;backgrounds\wsan_2b.png"
+stralias wsan_2bw,":c;backgrounds\wsan_2bw.png"
+stralias wsan_2c,":c;backgrounds\wsan_2c.png"
+stralias wsan_2cw,":c;backgrounds\wsan_2cw.png"
+stralias wsan_2l,":c;backgrounds\wsan_2l.png"
+
+;Different world of fea
+stralias zf_r1ap,":c;backgrounds\zf_r1ap.png"
+stralias zf_r1cp,":c;backgrounds\zf_r1cp.png"
+stralias zf_r1dp,":c;backgrounds\zf_r1dp.png"
+stralias zf_r1ep,":c;backgrounds\zf_r1ep.png"
+
+;Chiru
+stralias cake_a,":c;backgrounds\cake_a.png"
+stralias candle_1,":c;backgrounds\candle_1.png"
+stralias candle_2,":c;backgrounds\candle_2.png"
+stralias candle_3,":c;backgrounds\candle_3.png"
+stralias candle_4,":c;backgrounds\candle_4.png"
+stralias doll_1a,":c;backgrounds\doll_1a.png"
+stralias ebook1,":c;backgrounds\ebook1.png"
+stralias for_o1a,":c;backgrounds\for_o1a.png"
+stralias oda_r1a,":c;backgrounds\oda_r1a.png"
+stralias outdoor_1an,":c;backgrounds\outdoor_1an.png"
+
+;--Backgrounds-end--
+
+;--Caches--
+
+stralias goa_memory1_src,":c;graphics\locale\goa_memory1.png"
+stralias goa_memory2_src,":c;graphics\locale\goa_memory2.png"
+stralias goa_memory3_src,":c;graphics\locale\goa_memory3.png"
+stralias goa_memory4_src,":c;graphics\locale\goa_memory4.png"
+stralias goa_memory1,":c;caches\goa_memory1.png"
+stralias goa_memory2,":c;caches\goa_memory2.png"
+stralias goa_memory3,":c;caches\goa_memory3.png"
+stralias goa_memory4,":c;caches\goa_memory4.png"
+
+stralias kakera_memory1_src,":c;graphics\locale\kakera\kakera_memory1.png"
+stralias kakera_memory2_src,":c;graphics\locale\kakera\kakera_memory2.png"
+stralias kakera_memory3_src,":c;graphics\locale\kakera\kakera_memory3.png"
+stralias kakera_memory4_src,":c;graphics\locale\kakera\kakera_memory4.png"
+stralias kakera_memory5_src,":c;graphics\locale\kakera\kakera_memory5.png"
+stralias kakera_memory6_src,":c;graphics\locale\kakera\kakera_memory6.png"
+stralias kakera_memory7_src,":c;graphics\locale\kakera\kakera_memory7.png"
+stralias kakera_memory8_src,":c;graphics\locale\kakera\kakera_memory8.png"
+stralias kakera_memory9_src,":c;graphics\locale\kakera\kakera_memory9.png"
+stralias kakera_memory10_src,":c;graphics\locale\kakera\kakera_memory10.png"
+stralias kakera_memory1,":c;caches\kakera_memory1.png"
+stralias kakera_memory2,":c;caches\kakera_memory2.png"
+stralias kakera_memory3,":c;caches\kakera_memory3.png"
+stralias kakera_memory4,":c;caches\kakera_memory4.png"
+stralias kakera_memory5,":c;caches\kakera_memory5.png"
+stralias kakera_memory6,":c;caches\kakera_memory6.png"
+stralias kakera_memory7,":c;caches\kakera_memory7.png"
+stralias kakera_memory8,":c;caches\kakera_memory8.png"
+stralias kakera_memory9,":c;caches\kakera_memory9.png"
+stralias kakera_memory10,":c;caches\kakera_memory10.png"
+
+;--Caches-end--
+
+;--Efe--
+
+stralias cg_1a,":a;graphics\efe\1a.png"
+stralias cg_1b,":a;graphics\efe\1b.png"
+stralias cg_1c,":a;graphics\efe\1c.png"
+stralias cg_1d,":a;graphics\efe\1d.png"
+stralias cg_1e,":a;graphics\efe\1e.png"
+stralias cg_1f,":a;graphics\efe\1f.png"
+stralias cg_1g,":a;graphics\efe\1g.png"
+
+stralias armor7b,":a;graphics\efe\armor7b.png"
+
+stralias barrier,":a;graphics\efe\barrier.png"
+stralias barrier1,":c;graphics\efe\barrier1.png"
+stralias barrier1p,":a;graphics\efe\barrier1p.png"
+stralias barrierbrake1p1,":a;graphics\efe\barrierbrake1p1.png"
+stralias barrierbrake1p2,":a;graphics\efe\barrierbrake1p2.png"
+stralias barrierbrake1p3,":a;graphics\efe\barrierbrake1p3.png"
+stralias barrierbrake1p4,":a;graphics\efe\barrierbrake1p4.png"
+stralias barrierbrake1p6,":a;graphics\efe\barrierbrake1p6.png"
+stralias barrierbrake2p1,":a;graphics\efe\barrierbrake2p1.png"
+stralias barrierbrake2p2,":a;graphics\efe\barrierbrake2p2.png"
+stralias barrierbrake2p3,":a;graphics\efe\barrierbrake2p3.png"
+stralias barrierbrake2p4,":a;graphics\efe\barrierbrake2p4.png"
+stralias barrierbrake2p5,":a;graphics\efe\barrierbrake2p5.png"
+
+stralias bite,":c;graphics\efe\bite.png"
+
+
+stralias blood_1a,":c;graphics\efe\blood_1a.png"
+stralias blood_1ar,":c;graphics\efe\blood_1ar.png"
+stralias blood_1b,":c;graphics\efe\blood_1b.png"
+stralias blood_2a,":c;graphics\efe\blood_2a.png"
+stralias blood_2b,":c;graphics\efe\blood_2b.png"
+stralias blood_2c,":c;graphics\efe\blood_2c.png"
+stralias blood_2d,":c;graphics\efe\blood_2d.png"
+stralias blood_2e,":c;graphics\efe\blood_2e.png"
+
+stralias bul2,":c;graphics\efe\bul2.png"
+stralias bullet_1a,":c;graphics\efe\bullet_1a.png"
+stralias bullet_1b,":c;graphics\efe\bullet_1b.png"
+stralias bullet_1c,":c;graphics\efe\bullet_1c.png"
+stralias bullet_1d,":c;graphics\efe\bullet_1d.png"
+stralias bullet_1e,":c;graphics\efe\bullet_1e.png"
+
+stralias butterfly_1a,":c;graphics\efe\butterfly_1a.png"
+stralias butterfly_2a,":c;graphics\efe\butterfly_2a.png"
+stralias butterfly_3a,":c;graphics\efe\butterfly_3a.png"
+stralias butterfly_3x,":a;graphics\efe\butterfly_3x.png"
+stralias butterfly_4a,":c;graphics\efe\butterfly_4a.png"
+stralias butterfly_4sp1,":a;graphics\efe\butterfly_4sp1.png"
+stralias butterfly_4sp1r,":a;graphics\efe\butterfly_4sp1r.png"
+stralias butterfly_4sp2,":a;graphics\efe\butterfly_4sp2.png"
+stralias butterfly_4sp2r,":a;graphics\efe\butterfly_4sp2r.png"
+
+stralias chain1r_sp,":a;graphics\efe\chain1r_sp.png"
+stralias chain2r_sp,":a;graphics\efe\chain2r_sp.png"
+stralias chain3r_sp,":a;graphics\efe\chain3r_sp.png"
+stralias chain4r_sp,":a;graphics\efe\chain4r_sp.png"
+stralias chain5r_sp,":a;graphics\efe\chain5r_sp.png"
+stralias chain6r_sp,":a;graphics\efe\chain6r_sp.png"
+stralias chain7r_sp,":a;graphics\efe\chain7r_sp.png"
+
+stralias homing1s,":a;graphics\efe\homing1s.png"
+stralias homing5,":a;graphics\efe\homing5.png"
+stralias homing5s,":a;graphics\efe\homing5s.png"
+stralias homing5sr,":a;graphics\efe\homing5sr.png"
+stralias homing7r,":a;graphics\efe\homing7r.png"
+stralias homing7s,":a;graphics\efe\homing7s.png"
+stralias homing7sr,":a;graphics\efe\homing7sr.png"
+
+stralias magicsquare_gap,":c;graphics\efe\magicsquare_gap.png"
+stralias magicsquare_mars3,":c;graphics\efe\magicsquare_mars3.png"
+stralias magicsquare_mars5,":c;graphics\efe\magicsquare_mars5.png"
+stralias magicsquare_moon1,":c;graphics\efe\magicsquare_moon1.png"
+stralias magicsquare_sun7,":c;graphics\efe\magicsquare_sun7.png"
+
+stralias map01,":c;graphics\efe\map01.png"
+stralias map02,":c;graphics\efe\map02.png"
+stralias map03,":c;graphics\efe\map03.png"
+stralias map04,":c;graphics\efe\map04.png"
+stralias map05,":c;graphics\efe\map05.png"
+stralias map06,":c;graphics\efe\map06.png"
+stralias map07,":c;graphics\efe\map07.png"
+stralias map08,":c;graphics\efe\map08.png"
+stralias map09,":c;graphics\efe\map09.png"
+stralias map10,":c;graphics\efe\map10.png"
+stralias map10b,":c;graphics\efe\map10b.png"
+stralias map10c,":c;graphics\efe\map10c.png"
+
+
+stralias no01_00119,":c;graphics\efe\no01_00119.png"
+stralias no02_00000,":c;graphics\efe\no02_00000.png"
+stralias no02_00178,":a;graphics\efe\no02_00178.png"
+stralias no12_00059,":c;graphics\efe\no12_00059.png"
+stralias no16_00059,":c;graphics\efe\no16_00059.png"
+stralias no21_00059,":a;graphics\efe\no21_00059.png"
+stralias no25_00059,":c;graphics\efe\no25_00059.png"
+stralias no28_00179,":c;graphics\efe\no28_00179.png"
+stralias no29_00179,":a;graphics\efe\no29_00179.png"
+stralias no31_00059,":c;graphics\efe\no31_00059.png"
+stralias no32_00059,":c;graphics\efe\no32_00059.png"
+stralias no33_00068,":a;graphics\efe\no33_00068.png"
+stralias no33_00069,":a;graphics\efe\no33_00069.png"
+stralias no34_00069,":c;graphics\efe\no34_00069.png"
+stralias no38_00149,":c;graphics\efe\no38_00149.png"
+stralias no39_00044,":c;graphics\efe\no39_00044.png"
+stralias no40_00059,":c;graphics\efe\no40_00059.png"
+stralias no41_00000,":c;graphics\efe\no41_00000.png"
+stralias no41_00119,":c;graphics\efe\no41_00119.png"
+stralias no43_00000,":c;graphics\efe\no43_00000.png"
+stralias no43_00089,":c;graphics\efe\no43_00089.png"
+stralias no44_00119,":c;graphics\efe\no44_00119.png"
+stralias no45_00000,":c;graphics\efe\no45_00000.png"
+stralias no45_00150,":c;graphics\efe\no45_00150.png"
+stralias no46_00089,":c;graphics\efe\no46_00089.png"
+stralias no48_00179,":c;graphics\efe\no48_00179.png"
+stralias no49_00119,":c;graphics\efe\no49_00119.png"
+stralias no50_00089,":c;graphics\efe\no50_00089.png"
+stralias no51_00119,":c;graphics\efe\no51_00119.png"
+stralias no52_00089,":c;graphics\efe\no52_00089.png"
+stralias no53_00209,":c;graphics\efe\no53_00209.png"
+stralias no54_00059,":c;graphics\efe\no54_00059.png"
+stralias no55_00000,":c;graphics\efe\no55_00000.png"
+stralias no55_00059,":c;graphics\efe\no55_00059.png"
+stralias no56_00119,":c;graphics\efe\no56_00119.png"
+stralias no57_00119,":c;graphics\efe\no57_00119.png"
+stralias no58_00000,":c;graphics\efe\no58_00000.png"
+stralias no58_00059,":c;graphics\efe\no58_00059.png"
+stralias no59_00073,":c;graphics\efe\no59_00073.png"
+stralias no60_00000,":c;graphics\efe\no60_00000.png"
+stralias no60_00179,":c;graphics\efe\no60_00179.png"
+stralias no61_00089,":c;graphics\efe\no61_00089.png"
+stralias no62_00149,":c;graphics\efe\no62_00149.png"
+stralias no63_00000,":c;graphics\efe\no63_00000.png"
+stralias no63_00089,":c;graphics\efe\no63_00089.png"
+stralias no64_00000,":c;graphics\efe\no64_00000.png"
+stralias no64_00119,":c;graphics\efe\no64_00119.png"
+stralias no65_00159,":c;graphics\efe\no65_00159.png"
+stralias no66_00000,":c;graphics\efe\no66_00000.png"
+stralias no66_00239,":c;graphics\efe\no66_00239.png"
+stralias no80_0045,":a;graphics\efe\no80_0045.png"
+stralias no81_0048,":a;graphics\efe\no81_0048.png"
+stralias no82_0057,":a;graphics\efe\no82_0057.png"
+stralias no83_0051,":a;graphics\efe\no83_0051.png"
+
+stralias hana1,":a;graphics\system\clock\hana1.png"
+stralias ware,":a;graphics\system\clock\ware.png"
+
+stralias anm_no0018a,":a;graphics\efe\anm_no0018a.png"
+stralias anm_no0018c,":a;graphics\efe\anm_no0018c.png"
+stralias anm_no0019a,":c;graphics\efe\anm_no0019a.png"
+stralias anm_no0019b,":c;graphics\efe\anm_no0019b.png"
+stralias anm_no0020a,":c;graphics\efe\anm_no0020a.png"
+stralias barrier1b,":c;graphics\efe\barrier1b.png"
+stralias barrier1g,":c;graphics\efe\barrier1g.png"
+stralias barrierb,":a;graphics\efe\barrierb.png"
+stralias cateye_1,":c;graphics\efe\cateye_1.png"
+stralias cats_eye,":c;graphics\efe\cats_eye.png"
+stralias cats_mouth_a,":c;graphics\efe\cats_mouth_a.png"
+stralias chain_a,":c;graphics\efe\chain_a.png"
+stralias chain_b,":c;graphics\efe\chain_b.png"
+stralias door_00096,":c;graphics\efe\door_00096.png"
+stralias duelsword_g,":c;graphics\efe\duelsword_g.png"
+stralias duelsword_p,":c;graphics\efe\duelsword_p.png"
+stralias efe1,":c;graphics\efe\efe1.png"
+stralias efe1b,":c;graphics\efe\efe1b.png"
+stralias efe1g,":c;graphics\efe\efe1g.png"
+stralias goas_eye1c,":c;graphics\efe\goas_eye1c.png"
+stralias goas_eye2c,":c;graphics\efe\goas_eye2c.png"
+stralias goas_eye2c_a,":a;graphics\efe\goas_eye2c_a.png"
+stralias green_eye,":c;graphics\efe\green_eye.png"
+stralias green_eye1b,":c;graphics\efe\green_eye1b.png"
+stralias green_eye1c,":c;graphics\efe\green_eye1c.png"
+stralias green_eye1d,":c;graphics\efe\green_eye1d.png"
+stralias green_eye2c,":c;graphics\efe\green_eye2c.png"
+stralias green_eye2c_a,":a;graphics\efe\green_eye2c_a.png"
+stralias lambdabullet,":c;graphics\efe\lambdabullet.png"
+stralias lambdagrav_c,":c;graphics\efe\lambdagrav_c.png"
+stralias mabuta2,":a;graphics\efe\mabuta2.png"
+stralias mabuta3,":a;graphics\efe\mabuta3.png"
+stralias mabuta3w,":a;graphics\efe\mabuta3w.png"
+stralias map11,":c;graphics\efe\map11.png"
+stralias map12,":c;graphics\efe\map12.png"
+stralias map12b,":c;graphics\efe\map12b.png"
+stralias map12c,":c;graphics\efe\map12c.png"
+stralias map13,":c;graphics\efe\map13.png"
+stralias map13b,":c;graphics\efe\map13b.png"
+stralias map13c,":c;graphics\efe\map13c.png"
+stralias medaru_1,":c;graphics\efe\medaru_1.png"
+stralias medaru_2,":c;graphics\efe\medaru_2.png"
+stralias no38b_00149,":c;graphics\efe\no38b_00149.png"
+stralias no40b_00059,":c;graphics\efe\no40b_00059.png"
+stralias no5_00012,":a;graphics\efe\no5_00012.png"
+stralias ship_00176,":c;graphics\efe\ship_00176.png"
+stralias sickle_black,":c;graphics\efe\sickle_black.png"
+stralias sickle_purple,":c;graphics\efe\sickle_purple.png"
+stralias sword_1ab,":c;graphics\efe\sword_1ab.png"
+stralias sword_1ab_a,":a;graphics\efe\sword_1ab_a.png"
+stralias sword_1ag,":c;graphics\efe\sword_1ag.png"
+stralias sword_1ag_a,":a;graphics\efe\sword_1ag_a.png"
+stralias sword_1ar2,":c;graphics\efe\sword_1ar2.png"
+stralias view_efe,":a;graphics\efe\view_efe.png"
+stralias view_efes,":a;graphics\efe\view_efes.png"
+stralias view_efe2,":a;graphics\efe\view_efe2.png"
+stralias view_efe3,":a;graphics\efe\view_efe3.png"
+
+;--Efe-end--
+
+;--CG-start--
+
+stralias c_e0406_a,":c;graphics\cg\bea\c_e0406_a.png"
+stralias c_e0406_b,":c;graphics\cg\bea\c_e0406_b.png"
+
+stralias c_e0103_a,":a;graphics\cg\but\c_e0103_a.png"
+stralias c_e0103_b,":a;graphics\cg\but\c_e0103_b.png"
+stralias c_e0103_c,":a;graphics\cg\but\c_e0103_c.png"
+stralias c_e0103_d,":a;graphics\cg\but\c_e0103_d.png"
+stralias c_e0103_la,":a;graphics\cg\but\c_e0103_la.png"
+stralias c_e0103_wall,":a;graphics\cg\but\c_e0103_wall.png"
+stralias c_e0406_c,":c;graphics\cg\but\c_e0406_c.png"
+stralias c_e0406_d,":c;graphics\cg\but\c_e0406_d.png"
+stralias c_e0406_f,":c;graphics\cg\but\c_e0406_f.png"
+
+stralias c0101_a,":c;graphics\cg\cg_box\c0101_a.png"
+stralias c0101_b,":c;graphics\cg\cg_box\c0101_b.png"
+stralias c0101_c,":c;graphics\cg\cg_box\c0101_c.png"
+stralias c0201_a,":c;graphics\cg\cg_box\c0201_a.png"
+stralias c0201_b,":c;graphics\cg\cg_box\c0201_b.png"
+stralias c0201_c,":c;graphics\cg\cg_box\c0201_c.png"
+stralias c0201_d,":c;graphics\cg\cg_box\c0201_d.png"
+stralias c0201_e,":c;graphics\cg\cg_box\c0201_e.png"
+stralias c0201_f,":c;graphics\cg\cg_box\c0201_f.png"
+stralias c0202_a,":c;graphics\cg\cg_box\c0202_a.png"
+stralias c0202_b,":c;graphics\cg\cg_box\c0202_b.png"
+stralias c0301,":c;graphics\cg\cg_box\c0301.png"
+stralias c0302_a,":c;graphics\cg\cg_box\c0302_a.png"
+stralias c0302_b,":c;graphics\cg\cg_box\c0302_b.png"
+stralias c0303,":c;graphics\cg\cg_box\c0303.png"
+stralias c0406,":c;graphics\cg\cg_box\c0406.png"
+stralias e0903_a,":c;graphics\cg\cg_box\e0903_a.png"
+stralias e0104_a,":c;graphics\cg\cg_box\e0104_a.png"
+stralias e0104_b,":c;graphics\cg\cg_box\e0104_b.png"
+stralias e0104_c,":c;graphics\cg\cg_box\e0104_c.png"
+stralias e0104_d,":c;graphics\cg\cg_box\e0104_d.png"
+stralias e0104_e,":c;graphics\cg\cg_box\e0104_e.png"
+stralias e0201,":c;graphics\cg\cg_box\e0201.png"
+stralias e0301_a,":c;graphics\cg\cg_box\e0301_a.png"
+stralias e0301_b,":c;graphics\cg\cg_box\e0301_b.png"
+stralias e0301_c,":c;graphics\cg\cg_box\e0301_c.png"
+stralias e0401_a,":c;graphics\cg\cg_box\e0401_a.png"
+stralias e0401_b,":c;graphics\cg\cg_box\e0401_b.png"
+stralias e0404,":c;graphics\cg\cg_box\e0404.png"
+stralias e0405,":c;graphics\cg\cg_box\e0405.png"
+stralias e0406,":c;graphics\cg\cg_box\e0406.png"
+stralias e0407,":c;graphics\cg\cg_box\e0407.png"
+stralias e0901_a,":c;graphics\cg\cg_box\e0901_a.png"
+stralias e0901_b,":c;graphics\cg\cg_box\e0901_b.png"
+stralias e0901_c,":c;graphics\cg\cg_box\e0901_c.png"
+stralias e0902,":c;graphics\cg\cg_box\e0902.png"
+stralias e0903_b,":c;graphics\cg\cg_box\e0903_b.png"
+stralias e0903_c,":c;graphics\cg\cg_box\e0903_c.png"
+stralias e0904_a,":c;graphics\cg\cg_box\e0904_a.png"
+stralias e0904_b,":c;graphics\cg\cg_box\e0904_b.png"
+stralias g0101,":c;graphics\cg\cg_box\g0101.png"
+stralias g0102,":c;graphics\cg\cg_box\g0102.png"
+stralias g0103,":c;graphics\cg\cg_box\g0103.png"
+stralias g0201,":c;graphics\cg\cg_box\g0201.png"
+stralias g0202,":c;graphics\cg\cg_box\g0202.png"
+stralias g0203_a,":c;graphics\cg\cg_box\g0203_a.png"
+stralias g0203_b,":c;graphics\cg\cg_box\g0203_b.png"
+stralias g0301,":c;graphics\cg\cg_box\g0301.png"
+stralias g0302,":c;graphics\cg\cg_box\g0302.png"
+stralias g0401,":c;graphics\cg\cg_box\g0401.png"
+stralias g0402,":c;graphics\cg\cg_box\g0402.png"
+stralias g0403,":c;graphics\cg\cg_box\g0403.png"
+stralias g0404,":c;graphics\cg\cg_box\g0404.png"
+stralias portrait_ep4,":c;graphics\cg\cg_box\portrait_ep4.png"
+
+stralias ep4_meta_1,":c;graphics\cg\ep4_meta_1.png"
+stralias ep4_meta_2,":c;graphics\cg\ep4_meta_2.png"
+
+stralias cg_e0102_a,":c;graphics\cg\eva\cg_e0102_a.png"
+stralias cg_e0102_b,":c;graphics\cg\eva\cg_e0102_b.png"
+stralias cg_e0102_c,":c;graphics\cg\eva\cg_e0102_c.png"
+stralias cg_e0102_d,":c;graphics\cg\eva\cg_e0102_d.png"
+stralias c_e0102_a,":a;graphics\cg\eva\c_e0102_a.png"
+stralias c_e0102_b,":a;graphics\cg\eva\c_e0102_b.png"
+stralias c_e0102_c,":a;graphics\cg\eva\c_e0102_c.png"
+stralias c_e0102_d,":a;graphics\cg\eva\c_e0102_d.png"
+stralias c_e0102_wall,":a;graphics\cg\eva\c_e0102_wall.png"
+stralias c_e0903_b,":a;graphics\cg\eva\c_e0903_b.png"
+stralias c_e0903_wall,":a;graphics\cg\eva\c_e0903_wall.png"
+stralias e0903a,":c;graphics\cg\eva\e0903a.png"
+stralias e0903d,":c;graphics\cg\eva\e0903d.png"
+
+stralias c_c0402_a,":a;graphics\cg\gap\c_c0402_a.png"
+stralias c_c0402_b,":a;graphics\cg\gap\c_c0402_b.png"
+stralias c_c0402_c,":a;graphics\cg\gap\c_c0402_c.png"
+stralias c_c0402_d,":a;graphics\cg\gap\c_c0402_d.png"
+stralias c_c0402_e,":a;graphics\cg\gap\c_c0402_e.png"
+stralias c_c0402_la,":a;graphics\cg\gap\c_c0402_la.png"
+stralias c_c0402_lb,":a;graphics\cg\gap\c_c0402_lb.png"
+stralias c_c0402_lc,":a;graphics\cg\gap\c_c0402_lc.png"
+stralias c_c0402_ld,":a;graphics\cg\gap\c_c0402_ld.png"
+stralias c_c0402_lwall,":c;graphics\cg\gap\c_c0402_lwall.png"
+stralias c_c0402_wall,":c;graphics\cg\gap\c_c0402_wall.png"
+
+stralias c_c0401_a,":a;graphics\cg\geo\c_c0401_a.png"
+stralias c_c0401_b,":a;graphics\cg\geo\c_c0401_b.png"
+stralias c_c0401_la,":a;graphics\cg\geo\c_c0401_la.png"
+stralias c_c0401_lb,":a;graphics\cg\geo\c_c0401_lb.png"
+stralias c_c0401_lwall,":c;graphics\cg\geo\c_c0401_lwall.png"
+stralias c_c0401_wall,":c;graphics\cg\geo\c_c0401_wall.png"
+
+stralias c_c0403_a,":c;graphics\cg\jes\c_c0403_a.png"
+stralias c_c0403_c,":c;graphics\cg\jes\c_c0403_c.png"
+stralias c_c0403_f,":c;graphics\cg\jes\c_c0403_f.png"
+stralias c_c0403_la,":a;graphics\cg\jes\c_c0403_la.png"
+stralias c_c0403_lb,":a;graphics\cg\jes\c_c0403_lb.png"
+stralias c_c0403_lc,":a;graphics\cg\jes\c_c0403_lc.png"
+stralias c_c0403_ld,":a;graphics\cg\jes\c_c0403_ld.png"
+stralias c_c0403_le,":a;graphics\cg\jes\c_c0403_le.png"
+
+stralias c_c0203_ca,":a;graphics\cg\kan\c_c0203_ca.png"
+stralias c_c0203_cb,":a;graphics\cg\kan\c_c0203_cb.png"
+stralias c_c0203_cwall,":c;graphics\cg\kan\c_c0203_cwall.png"
+stralias c_c0203_la,":a;graphics\cg\kan\c_c0203_la.png"
+stralias c_c0203_lb,":a;graphics\cg\kan\c_c0203_lb.png"
+stralias c_c0203_lc,":a;graphics\cg\kan\c_c0203_lc.png"
+stralias c_c0203_lwall,":c;graphics\cg\kan\c_c0203_lwall.png"
+
+stralias c_c0901_a,":c;graphics\cg\kir\c_c0901_a.png"
+stralias c_c0901_b,":c;graphics\cg\kir\c_c0901_b.png"
+stralias c_c0901_ca,":a;graphics\cg\kir\c_c0901_ca.png"
+
+stralias c_e0101_a,":a;graphics\cg\nat\c_e0101_a.png"
+stralias c_e0101_b,":a;graphics\cg\nat\c_e0101_b.png"
+stralias c_e0101_c,":a;graphics\cg\nat\c_e0101_c.png"
+stralias c_e0101_wall,":a;graphics\cg\nat\c_e0101_wall.png"
+
+stralias c_c0404_a,":c;graphics\cg\ron\c_c0404_a.png"
+stralias c_c0404_b,":c;graphics\cg\ron\c_c0404_b.png"
+stralias c_c0404_d,":c;graphics\cg\ron\c_c0404_d.png"
+stralias c_c0404_e,":c;graphics\cg\ron\c_c0404_e.png"
+stralias c_c0404_la,":a;graphics\cg\ron\c_c0404_la.png"
+stralias c_c0404_lb,":a;graphics\cg\ron\c_c0404_lb.png"
+stralias c_c0404_lc,":a;graphics\cg\ron\c_c0404_lc.png"
+stralias c_c0404_le,":a;graphics\cg\ron\c_c0404_le.png"
+stralias c_c0404_lf,":a;graphics\cg\ron\c_c0404_lf.png"
+
+stralias c_c0205_a,":a;graphics\cg\ros\c_c0205_a.png"
+stralias c_c0205_b,":a;graphics\cg\ros\c_c0205_b.png"
+stralias c_c0205_c,":a;graphics\cg\ros\c_c0205_c.png"
+stralias c_c0205_wall,":a;graphics\cg\ros\c_c0205_wall.png"
+
+stralias c_c0902_a,":c;graphics\cg\rud\c_c0902_a.png"
+
+stralias c_e0305_a,":c;graphics\cg\s\c_e0305_a.png"
+stralias c_e0305_c,":c;graphics\cg\s\c_e0305_c.png"
+stralias c_e0305_d,":c;graphics\cg\s\c_e0305_d.png"
+stralias c_e0305_la,":c;graphics\cg\s\c_e0305_la.png"
+stralias c_e0305_lc,":c;graphics\cg\s\c_e0305_lc.png"
+stralias c_e0305_ld,":c;graphics\cg\s\c_e0305_ld.png"
+
+stralias sakutaro1a,":c;graphics\cg\sak\sakutaro1a.png"
+stralias sakutaro1ab,":c;graphics\cg\sak\sakutaro1ab.png"
+stralias sakutaro1b,":c;graphics\cg\sak\sakutaro1b.png"
+stralias sakutaro1bb,":c;graphics\cg\sak\sakutaro1bb.png"
+stralias sakutaro2a,":c;graphics\cg\sak\sakutaro2a.png"
+stralias sakutaro2ab,":c;graphics\cg\sak\sakutaro2ab.png"
+stralias sakutaro2b,":c;graphics\cg\sak\sakutaro2b.png"
+stralias sakutaro2bb,":c;graphics\cg\sak\sakutaro2bb.png"
+
+stralias c_c0204_a,":c;graphics\cg\sha\c_c0204_a.png"
+stralias c_c0204_b,":c;graphics\cg\sha\c_c0204_b.png"
+stralias c_c0204_c,":c;graphics\cg\sha\c_c0204_c.png"
+stralias c_c0204_d,":c;graphics\cg\sha\c_c0204_d.png"
+
+stralias bec_a,":c;graphics\cg\bea\bec_a.png"
+stralias bec_c2,":c;graphics\cg\bea\bec_c2.png"
+stralias brc_ag,":c;graphics\cg\ber\brc_ag.png"
+stralias brc_bg,":c;graphics\cg\ber\brc_bg.png"
+stralias brc_br,":c;graphics\cg\ber\brc_br.png"
+stralias brc_cg,":c;graphics\cg\ber\brc_cg.png"
+stralias brc_cr,":c;graphics\cg\ber\brc_cr.png"
+stralias brc_dg,":c;graphics\cg\ber\brc_dg.png"
+stralias brc_dr,":c;graphics\cg\ber\brc_dr.png"
+stralias brc_er,":c;graphics\cg\ber\brc_er.png"
+stralias bac_ba2n,":c;graphics\cg\but\bac_ba2n.png"
+stralias bac_ga2n,":c;graphics\cg\but\bac_ga2n.png"
+stralias ep501,":c;graphics\cg\cg_box\ep501.png"
+stralias ep502,":c;graphics\cg\cg_box\ep502.png"
+stralias ep503_a,":c;graphics\cg\cg_box\ep503_a.png"
+stralias ep503_b,":c;graphics\cg\cg_box\ep503_b.png"
+stralias ep504,":c;graphics\cg\cg_box\ep504.png"
+stralias ep505,":c;graphics\cg\cg_box\ep505.png"
+stralias ep601_a2,":c;graphics\cg\cg_box\ep601_a2.png"
+stralias ep601_d2,":c;graphics\cg\cg_box\ep601_d2.png"
+stralias ep601_nd2,":c;graphics\cg\cg_box\ep601_nd2.png"
+stralias ep602_a,":c;graphics\cg\cg_box\ep602_a.png"
+stralias ep602_b,":c;graphics\cg\cg_box\ep602_b.png"
+stralias ep603,":c;graphics\cg\cg_box\ep603.png"
+stralias ep604_2,":c;graphics\cg\cg_box\ep604_2.png"
+stralias ep604_3,":c;graphics\cg\cg_box\ep604_3.png"
+stralias ep605_a1,":c;graphics\cg\cg_box\ep605_a1.png"
+stralias ep605_c1,":c;graphics\cg\cg_box\ep605_c1.png"
+stralias ep605_c2,":c;graphics\cg\cg_box\ep605_c2.png"
+stralias ep606,":c;graphics\cg\cg_box\ep606.png"
+stralias ep606_1,":c;graphics\cg\cg_box\ep606_1.png"
+stralias ep606_2,":c;graphics\cg\cg_box\ep606_2.png"
+stralias ep606_3,":c;graphics\cg\cg_box\ep606_3.png"
+stralias ep607,":c;graphics\cg\cg_box\ep607.png"
+stralias ep701,":c;graphics\cg\cg_box\ep701.png"
+stralias ep702,":c;graphics\cg\cg_box\ep702.png"
+stralias ep703_a,":c;graphics\cg\cg_box\ep703_a.png"
+stralias ep703_b,":c;graphics\cg\cg_box\ep703_b.png"
+stralias ep704_a,":c;graphics\cg\cg_box\ep704_a.png"
+stralias ep704_b,":c;graphics\cg\cg_box\ep704_b.png"
+stralias ep705,":c;graphics\cg\cg_box\ep705.png"
+stralias ep705_1,":c;graphics\cg\cg_box\ep705_1.png"
+stralias ep705_1n,":c;graphics\cg\cg_box\ep705_1n.png"
+stralias ep705_2,":c;graphics\cg\cg_box\ep705_2.png"
+stralias ep705_3,":c;graphics\cg\cg_box\ep705_3.png"
+stralias ep705_4,":c;graphics\cg\cg_box\ep705_4.png"
+stralias ep801,":c;graphics\cg\cg_box\ep801.png"
+stralias ep802,":c;graphics\cg\cg_box\ep802.png"
+stralias ep803,":c;graphics\cg\cg_box\ep803.png"
+stralias ep805,":c;graphics\cg\cg_box\ep805.png"
+stralias ep806,":c;graphics\cg\cg_box\ep806.png"
+stralias ep807_a,":c;graphics\cg\cg_box\ep807_a.png"
+stralias ep808,":c;graphics\cg\cg_box\ep808.png"
+stralias ep809_a,":c;graphics\cg\cg_box\ep809_a.png"
+stralias ep809_b,":c;graphics\cg\cg_box\ep809_b.png"
+stralias ep810_a1,":c;graphics\cg\cg_box\ep810_a1.png"
+stralias ep811,":c;graphics\cg\cg_box\ep811.png"
+stralias ep812,":a;graphics\cg\cg_box\ep812.png"
+stralias ep814_a,":c;graphics\cg\cg_box\ep814_a.png"
+stralias ep814_a2,":c;graphics\cg\cg_box\ep814_a2.png"
+stralias ep814_b2,":c;graphics\cg\cg_box\ep814_b2.png"
+stralias ep814_c3,":c;graphics\cg\cg_box\ep814_c3.png"
+stralias ep814_d2,":c;graphics\cg\cg_box\ep814_d2.png"
+stralias ep815_1,":c;graphics\cg\cg_box\ep815_1.png"
+stralias ep815_1_,":a;graphics\cg\cg_box\ep815_1_.png"
+stralias ep815_2_,":a;graphics\cg\cg_box\ep815_2_.png"
+stralias ep816,":c;graphics\cg\cg_box\ep816.png"
+stralias ep817,":c;graphics\cg\cg_box\ep817.png"
+stralias ep818,":c;graphics\cg\cg_box\ep818.png"
+stralias eve_last1,":c;graphics\cg\cg_box\eve_last1.png"
+stralias eve_last2,":a;graphics\cg\cg_box\eve_last2.png"
+stralias ex01,":c;graphics\cg\cg_box\ex01.png"
+stralias ex02,":c;graphics\cg\cg_box\ex02.png"
+stralias dlc_a1,":c;graphics\cg\dla\dlc_a1.png"
+stralias dlc_d1,":c;graphics\cg\dla\dlc_d1.png"
+stralias enc_a1,":c;graphics\cg\enj\enc_a1.png"
+stralias erc_ba,":c;graphics\cg\eri\erc_ba.png"
+stralias erc_bc,":c;graphics\cg\eri\erc_bc.png"
+stralias erc_ra,":c;graphics\cg\eri\erc_ra.png"
+stralias evc_b,":c;graphics\cg\ev2\evc_b.png"
+stralias evc_c,":c;graphics\cg\ev2\evc_c.png"
+stralias fec_a,":c;graphics\cg\fea\fec_a.png"
+stralias fec_b,":c;graphics\cg\fea\fec_b.png"
+stralias lac_a1,":c;graphics\cg\lam\lac_a1.png"
+stralias lac_a3,":c;graphics\cg\lam\lac_a3.png"
+stralias lac_b1,":c;graphics\cg\lam\lac_b1.png"
+stralias lac_b3,":c;graphics\cg\lam\lac_b3.png"
+stralias wrc_a,":c;graphics\cg\wal\wrc_a.png"
+stralias wic_a,":c;graphics\cg\wil\wic_a.png"
+stralias wic_c,":c;graphics\cg\wil\wic_c.png"
+
+;--CG-end--
+
+;--quiz-start--
+
+stralias quiz_m,":a;graphics\menu\quiz\quiz_m.png"
+stralias qw,":a;graphics\menu\quiz\qw.png"
+stralias q00,":a;graphics\menu\quiz\q00.png"
+stralias q01,":a;graphics\menu\quiz\q01.png"
+stralias q02,":a;graphics\menu\quiz\q02.png"
+stralias q03,":a;graphics\menu\quiz\q03.png"
+stralias q04,":a;graphics\menu\quiz\q04.png"
+stralias q05,":a;graphics\menu\quiz\q05.png"
+stralias q06,":a;graphics\menu\quiz\q06.png"
+stralias q07,":a;graphics\menu\quiz\q07.png"
+stralias q08,":a;graphics\menu\quiz\q08.png"
+stralias q09,":a;graphics\menu\quiz\q09.png"
+stralias q10,":a;graphics\menu\quiz\q10.png"
+stralias q11,":a;graphics\menu\quiz\q11.png"
+stralias q12,":a;graphics\menu\quiz\q12.png"
+stralias q13,":a;graphics\menu\quiz\q13.png"
+stralias q14,":a;graphics\menu\quiz\q14.png"
+stralias q15,":a;graphics\menu\quiz\q15.png"
+stralias q16,":a;graphics\menu\quiz\q16.png"
+stralias q17,":a;graphics\menu\quiz\q17.png"
+stralias q18,":a;graphics\menu\quiz\q18.png";Should be unused
+stralias q19,":a;graphics\menu\quiz\q19.png";Should be unused
+stralias q20,":a;graphics\menu\quiz\q20.png";Should be unused
+
+;--quiz-end--
+
+defsub bgmplay
+defsub bgmplay2
+defsub meplay
+defsub seplay
+
+defsub vol_me
+defsub vol_bgm
+defsub vol_se
+defsub vol_mix_fade
+defsub effect_vol
+defsub voice_vol
+
+defsub E_B
+defsub E_M1
+defsub E_M2
+defsub E_M3
+defsub E_M4
+defsub E_M5
+defsub E_M6
+defsub E_M7
+defsub E_A
+defsub E_MA
+defsub E_MA2
+defsub E_SA
+defsub fede
+defsub fedexx
+defsub cross1
+defsub cross2
+
+defsub trophy_open	;Unlock trophy
+defsub mono			;Mono surface
+defsub log_reset	;Reset Message Browser
+defsub anim			;video playback
+defsub anim2		;extended video playback
+defsub pam			;pam video playback
+defsub rain_load	;rain loading
+defsub rain_pause
+defsub rain_resume
+defsub rain_params
+defsub rain_style
+defsub skip_off
+defsub skip_on
+defsub mask_set
+defsub show_whirl
+defsub new_chapter
+defsub new_episode
+defsub new_tea
+defsub new_ura
+defsub show_characters
+defsub border_pad_push
+defsub border_pad_pop
+defsub gstc
+defsub gstt
+defsub gstg
+defsub ch_done
+defsub rumble 		;slightly a hack
+defsub reset_set
+defsub show_glass
+defsub snow
+
+;Sprite hacks
+defsub csp
+defsub csp_set
+defsub csp_rst
+defsub csp_grst
+defsub flush
+defsub flush2
+defsub csp_slot
+defsub lss
+defsub lbg
+defsub lbg2
+defsub lv
+defsub vv
+
+defsub flg_p
+
+; Choicepoint related
+defsub set_choice
+
+defsub drop_cache
+defsub align_message_l
+defsub align_message_c
+defsub align_buttons_r
+defsub align_buttons_l
+
+defsub break_glass
+defsub break_glass2
+defsub break_glass3
+defsub break_glass4
+defsub display_clock
+defsub display_clock2
+defsub display_clock3
+
+;Textbox mods
+defsub set_name_window_non
+defsub set_name_window
+defsub set_window_monospace
+defsub set_window_simple
+defsub ak
+defsub nj
+defsub set_saving
+
+;Textbox changes
+defsub msgwnd_ama
+defsub msgwnd_bea
+defsub msgwnd_ber
+defsub msgwnd_but
+defsub msgwnd_cla
+defsub msgwnd_enj
+defsub msgwnd_ev2
+defsub msgwnd_eva
+defsub msgwnd_gap
+defsub msgwnd_gen
+defsub msgwnd_geo
+defsub msgwnd_goa
+defsub msgwnd_go2
+defsub msgwnd_goh
+defsub msgwnd_hid
+defsub msgwnd_jes
+defsub msgwnd_kan
+defsub msgwnd_kas
+defsub msgwnd_kaw
+defsub msgwnd_kin
+defsub msgwnd_kir
+defsub msgwnd_ku2
+defsub msgwnd_kum
+defsub msgwnd_lam
+defsub msgwnd_mar
+defsub msgwnd_na2
+defsub msgwnd_nan
+defsub msgwnd_nat
+defsub msgwnd_oko
+defsub msgwnd_pro
+defsub msgwnd_rg1
+defsub msgwnd_rg2
+defsub msgwnd_rg3
+defsub msgwnd_rg4
+defsub msgwnd_rg5
+defsub msgwnd_rg6
+defsub msgwnd_rg7
+defsub msgwnd_ron
+defsub msgwnd_ros
+defsub msgwnd_rud
+defsub msgwnd_s00
+defsub msgwnd_s41
+defsub msgwnd_s45
+defsub msgwnd_sak
+defsub msgwnd_sha
+defsub msgwnd_wal
+defsub msgwnd_eri
+defsub msgwnd_dla
+defsub msgwnd_ger
+defsub msgwnd_cor
+defsub msgwnd_fea
+defsub msgwnd_zep
+defsub msgwnd_fur
+defsub msgwnd_rio
+defsub msgwnd_wil
+defsub msgwnd_cur
+defsub msgwnd_fe2
+defsub msgwnd_bu3
+defsub msgwnd_be3
+defsub msgwnd_be4
+defsub msgwnd_en2
+defsub msgwnd_en3
+defsub msgwnd_non
+
+;ep8
+defsub get_response_cake
+defsub get_response_quiz
+defsub get_response_quiz2
+defsub get_response_murder_story
+defsub show_coin_counter
+defsub show_coin_counter2
+defsub show_coin_counter3
+defsub show_coin_counter_real
+defsub show_coin_counter2_real
+defsub show_coin_counter3_real
+defsub cake
+defsub quiz
+defsub quiz2
+defsub murder_story
+defsub all_presents_discarded
+
+;For possible audio fade in script_state
+uninterruptible *script_state,*seplay,*meplay,*bgmplay,*bgmplay2,*lv
+
+
+;Font related
+;number,font,size,colour,bold,italic,underline,border,border-width,border-colour,shadow,shadow-x,shadow-y,colour,character_spacing,line_height
+;last param (line_height) is to be used only with LSP sprites and for the whole text, -1 means "don't change"
+bold_font 1,2
+italic_font 1,3
+bold_italic_font 1,4
+;GAME PRESETS
+preset_define 0,6,36,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Japanse text
+preset_define 1,1,-1,#FF0000,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Red text
+preset_define 2,1,-1,#39C6FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Blue text
+preset_define 7,6,48,#C0FFFF,0,0,0,1,6,#000000,0,0,0,#000000,0,70,1880 ;Chapter/BGM/Hint
+preset_define 41,1,-1,#FFAA00,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Gold text
+preset_define 42,1,-1,#AA71FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Purple text
+;MENU PRESETS
+;Texts
+preset_define 3,1,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,700 ;Menu chars text
+preset_define 4,6,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40 ;Menu chars/tips/notes text jp
+preset_define 5,1,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,830 ;Menu tips/notes text
+preset_define 13,2,55,#FFFFFF,1,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu tips/notes titles
+;Buttons
+preset_define 11,6,36,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Menu main buttons
+preset_define 12,6,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Menu chars kill/change buttons
+;MusicBox
+preset_define 6,6,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,70 ;Musicbox bgm titles
+;Config
+preset_define 8,1,75,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons
+preset_define 9,1,65,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons (smaller)
+;First setting
+preset_define 10,8,75,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,0,80,1920 ;Menu first setting line
+;Use magic
+preset_define 14,1,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump portrait titles
+preset_define 15,1,42,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump right titles and confirmation
+preset_define 16,8,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,0,40,1920 ;Menu jump portrait line
+;Trophies
+preset_define 18,1,34,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1700 ;Trophy description
+;Credits
+preset_define 20,8,40,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits normal
+preset_define 21,9,90,#000000,0,0,0,1,10,#fae8e8,0,0,0,#000000,6,140,1920 ;Credits h1
+preset_define 22,8,60,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,120,1920 ;Credits h2
+preset_define 23,8,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,50,1920 ;Credits h3
+preset_define 24,8,60,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,0,120,1920 ;Credits h2-sep
+preset_define 25,5,47,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits MVP
+;Load/Save
+preset_define 30,2,45,#FFFFFF,0,0,0,1,5,#000000,0,0,0,#000000,1,40,1920 ;Episode names
+preset_define 31,6,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Save dates
+;ep8 menu murder
+preset_define 32,1,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1590 ;Menu murder
+
+gosub *redefine_text_presets
+
+enable_gradients 1
+
+;System commands
+pretextgosub *pretext
+textgosub *text_cw
+skipgosub *skip_cw
+loadgosub *load_system
+event_callback *script_state
+
+usewheel
+useescspc
+roff
+
+;layers
+setlayer 0,-1,"fall.dll"
+setlayer 1,-1,"fall.dll"
+setlayer 2,-1,"fall.dll"
+setlayer 3,-1,"fall.dll"
+setlayer 4,-1,"fall.dll"
+setlayer 5,-1,"fall.dll"
+setlayer 6,-1,"fall.dll"
+setlayer 7,-1,"fall.dll"
+setlayer 8,-1,"ass.dll"
+setlayer 9,-1,"snow.dll"
+setlayer 10,33,"video.dll"
+
+;Arrays
+
+;60 tips
+;61 r
+;62 grim
+;63 r_cha_text
+numalias cg_list,64 : dim ?cg_list[2][77]	;cg open list for rondo (59)/chiru (77)
+numalias bgm_list,65 : dim ?bgm_list[1018]	;unified bgm open list
+numalias voice_s,66 : dim ?voice_s[7]		;voice states
+;124 slots, 6 subslots with values {enabled,layer_id,objects,speed,wind,paused,orbs}
+numalias rain_s,67 : dim ?rain_s[123][6]	;rain states
+numalias rain_l,68 : dim ?rain_l[7]			;rain layers
+numalias layer_q,69 : dim ?layer_q[10]		;layer queue
+numalias padding_s,70 : dim ?padding_s[10]	;border_padding stack
+numalias rain_q,71 : dim ?rain_q[10]		;rain queue
+
+movs $0,"QT"
+
+numalias exlv,0
+regex_define exlv,"lv \d+\*"+$0+"(\d+)"+$0+"\*"+$0+"([a-zA-Z0-9_]+)"+$0
+numalias exsp,1
+regex_define exsp,"lss s\d_\d+,"+$0+"([a-z0-9_]+)"+$0+","+$0+"([a-z0-9_]+)"
+numalias exbg,2
+getram %Free1 ; Avoid caching big images on low memory devices
+if %Free1 <= 2048 regex_define exbg,"lbg s\d_\d+,"+$0+"([a-z0-9_]+)"+$0
+if %Free1  > 2048 regex_define exbg,"lbg2? s\d_\d+,"+$0+"([a-z0-9_]+)"+$0
+numalias exse,3
+regex_define exse,"seplay \d+,(\d+),"
+
+gosub *bt_def
+loadreg "chiru.file"
+
+;spritesetz 0,s0_0 ;999-936
+spritesetz 1,s1_0 ;935-874
+spritesetz 2,s2_0 ;873-812
+spritesetz 3,s3_0 ;811-750
+
+cache_slot_img 1,"lru",9 ;bg
+cache_slot_img 2,"lru",15 ;ld
+cache_slot_snd 1,"lru",25 ;lv
+cache_slot_snd 2,"lru",25 ;seplay
+
+game
+*start
+
+saveoff
+text_fade 133
+text_speed %textspeed
+erasetextwindow 0  ;This should be disabled throughout the game, we rely on it
+automode_time %automodespeed
+mov $cur_character,"non"
+csp_rst
+rain_style 0
+if %CHIRU_MODE == 1 setvoicewaitmul "1"   : lips_lims "0.2","0.6" ;chiru voices are quieter
+if %CHIRU_MODE == 0 setvoicewaitmul "0.4" : lips_lims "0.3","0.7" ;compensate for no waits in rondo
+
+mov %no_log_gen,on
+mov %autom_no_cur,off
+
+if %title_skip = 0 gosub *verify
+gosub *read_forced_cfg
+
+gosub *character_def
+
+texton
+log_reset
+mov %no_log_gen,off
+clearlog 1
+mov %log_is_generated_to_cvs,-1
+mov %current_op,0
+
+mov ?voice_s[0],0
+mov ?voice_s[1],0
+mov ?voice_s[2],0
+mov ?voice_s[3],0
+mov ?voice_s[4],0
+mov ?voice_s[5],0 
+mov ?voice_s[6],0
+voice_vol
+
+if %firstsetting = 0 goto *first_setting
+gosub *load_font_preference
+
+goto *boot_logo

@@ -1,0 +1,762 @@
+*umi8_op
+;オープニング
+log_reset
+jskip_s
+mov $name_chapter_r_click,r_click_chapters_8_op
+mov $name_chapter_save, "8_op"
+~
+new_episode 8
+seplay 1,28,70
+textoff
+waits 167
+lbg s0_3,"text001"
+flush 2
+wait 5000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+textoff
+waits 167
+lbg s0_3,"text008"
+flush 2
+seplay 2,32,70
+wait 4000
+meplay 1,12,0
+vol_me 1,50,2000
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 42
+vol_me 1,70,2000
+wait 2000
+textoff
+waits 167
+rain_load s0_11
+rain_load s0_7
+rain_params s0_11,400,800,0
+rain_params s0_7,400,500,0
+textoff
+waits 167
+lbg s0_3,"cha_o1a"
+flush 2
+wait 3000
+bgmplay 177,71,0
+textoff
+waits 167
+lbg s0_3,"cha_o2a"
+flush 2
+wait 3000
+csp_slot s0_11
+csp_slot s0_7
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+vol_bgm 70,1000
+vol_me 1,50,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+flush 42
+wait 2000
+textoff
+waits 167
+lbg s0_3,"cha_i1l"
+flush 6
+wait 2000
+*d56733
+d `礼拝堂の中には、……二人の人影。`[@]`{n}それは、兄と、妹の姿。`[\]
+*d56734
+d `１２年前の過去より戻らぬ兄と、それを孤独に待つ１２年の未来の妹。`[\]
+*d56735
+d `しかし、兄は全てを理解し、全てを知っている。`[@]`{n}そして、妹は全てを知らず、何も知っていない。`[\]
+*d56736
+d `だから、妹はいつまで経っても、１２年前の少女のまま。`[\]
+*d56737
+d `いつまでも永遠に、６歳の少女のままだった……。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_9,"but","d11_defo3" ;1
+flush 2
+*d56738
+d `兄の胸に顔を埋めていた妹の嗚咽が、ようやく収まる……。`[\]
+*d56739
+d `そして、兄の次の言葉を静かに待つ。`[\]
+*d56740
+d `兄はその頭をやさしく撫でてから、自分の懐をまさぐる。`[\]
+*d56741
+d `そして、……それを取り出してみせた。`[\]
+lss s0_9,"but","d11_futeki5" ;1
+flush 80
+msgwnd_but
+*d56742
+d [lv 0*"10"*"80100001"]`「いいかい、縁寿。`[@][lv 0*"10"*"80100002"]`これを大事に持つんだ」`[\]
+msgwnd_enj
+*d56743
+d [lv 0*"11"*"82000001"]`「………これ、何…？`[@][lv 0*"11"*"82000002"]`　………鍵…？」`[\]
+msgwnd_non
+*d56744
+d `戦人は懐より、首飾りに繋がった大きな鍵を取り出し、縁寿に差し出す。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"key3"
+flush 22
+*d56745
+d `それは戦人の手の平いっぱいの大きさがあり、`[@]`幼い縁寿には一握りしても余るほどの大きさが感じられた。`[\]
+*d56746
+d `金色に輝き、凝った意匠が施された美しい鍵。`[\]
+*d56747
+d `その重みだけで、さぞ大切な鍵に違いないとわからせてくれた。`[\]
+*d56748
+d `戦人はその鍵のついた首飾りを、縁寿の首に掛ける。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+lss s0_10,"but","d11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 22
+msgwnd_but
+*d56749
+d [lv 0*"10"*"80100003"]`「これは縁寿だけの、大切な鍵だ」`[\]
+seplay 1,31,50
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d56750
+d [lv 0*"11"*"82000003"]`「何の鍵なの……？」`[\]
+lss s0_10,"but","d11_futeki5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56751
+d [lv 0*"10"*"80100004"]`「使うべき時は、すぐに来る。`[@][lv 0*"10"*"80100005"]`そして縁寿が、自分で決めるんだ。`[@][lv 0*"10"*"80100006"]`……わかるね？」`[\]
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_non
+*d56752
+d `……戦人が何を言っているのか、わかるはずもない。`[\]
+*d56753
+d `でも、この鍵を大切にしろという話だけはわかる。`[@]`だから縁寿は、それについてだけ、頷いて見せた。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"key3"
+flush 22
+*d56754
+d `手に持った時は、ずしりと重いと思ったのに。`[@]`首に掛けてみると、普通の首飾り程度の重さにしか感じられなかった。`[\]
+*d56755
+d `とても不思議だった。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_8,"en2","a11_defo3b" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+lss s0_9,"but","d11_defo3" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_but
+*d56756
+d [lv 0*"10"*"80100007"]`「さぁ。行こうか」`[\]
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_enj
+*d56757
+d [lv 0*"11"*"82000004"]`「どこへ……？」`[\]
+msgwnd_non
+*d56758
+d `てっきり、兄は腰を下ろすものだと思っていた。`[\]
+*d56759
+d `兄はついさっき、あの日、六軒島で何があったのかを話そうと言ってくれたのだ。`[\]
+*d56760
+d `それを、ここで語ってくれるのかと思っていた……。`[\]
+csp_slot s0_9
+lss s0_10,"but","d11_futeki4" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_but
+*d56761
+d [lv 0*"10"*"80100008"]`「あの日、あの島で。`[@][lv 0*"10"*"80100009"]`何があったのか」`[\]
+lss s0_8,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56762
+d [lv 0*"11"*"82000005"]`「お兄ちゃんがそれを、聞かせてくれるんじゃないの…？」`[\]
+lss s0_10,"but","d11_futeki5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56763
+d [lv 0*"10"*"80100010"]`「聞かせるとも。`[@][lv 0*"10"*"80100011"]`話して、縁寿に、聞かせる。`[@][lv 0*"10"*"80100012"]`……でもそれは、縁寿にはただ話を聞いているだけには、感じられないかもしれない」`[\]
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56764
+d [lv 0*"11"*"82000006"]`「………それはどういうこと…？」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"cha_i1l"
+flush 26
+msgwnd_but
+*d56765
+d [lv 0*"10"*"80100013"]`「縁寿が本当に望んでいるのは、あの日、あの島であったことを、知りたいんじゃない」`[\]
+msgwnd_non
+*d56766
+d `……やはり、……兄は、わかっていてくれた。`[\]
+*d56767
+d `あの日、あの島で何があったのか。`[\]
+*d56768
+d `それを知ろうとすることが、私に出来る限界だから、敢えてその程度を望んだのだ。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d56769
+d `……もし、許されるなら。`[\]
+*d56770
+d `私は、……行きたい。`[\]
+textoff
+waits 167
+lbg s0_3,"air_out2b"
+color_mod2 s0_3,#ffffff
+flush 22
+*d56771
+d `あの日、`[@]`あの島へ。`[\]
+textoff
+waits 167
+lbg s0_3,"m_o1ac"
+color_mod2 s0_3,#ffffff
+flush 22
+*d56772
+d `私が行けなかったあの日の六軒島へ、右代宮本家のお屋敷へ。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+lss s0_8,"kir","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+color_mod2 s0_8,#ffffff
+lss s0_10,"rud","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+color_mod2 s0_10,#ffffff
+flush 22
+*d56773
+d2 `お父さんやお母さん。`[@][#][*]`いとこたちや親戚たち。`[@][#][*]`みんな、みんな。`[\]
+wait_on_d 0
+lss s0_8,"geo","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+color_mod2 s0_8,#ffffff
+lss s0_9,"jes","a11_warai1" ;1
+color_mod2 s0_9,#ffffff
+lss s0_10,"mar","a22_warai1" ;1
+aspt2 xpos,s0_10,550
+color_mod2 s0_10,#ffffff
+flush 22
+d_continue
+wait_on_d 1
+csp_slot s0_8
+csp_slot s0_9
+csp_slot s0_10
+flush 22
+d_continue
+wait_on_d -1
+*d56774
+d `私は、あの日のあの島へ、……帰りたいのだ。`[\]
+*d56775
+d `だから、私はいつまでも、あの日の私のままなのだ。`[@]`{n}６歳のまま、私の心と魂を、永遠に留めてしまっている…。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1l"
+flush 22
+msgwnd_enj
+*d56776
+d [lv 0*"11"*"82000007"]`「……帰りたいの、私は」`[\]
+msgwnd_but
+*d56777
+d [lv 0*"10"*"80100014"]`「わかってる」`[\]
+msgwnd_enj
+*d56778
+d [lv 0*"11"*"82000008"]`「お父さんとお母さん、お兄ちゃん。`[@][lv 0*"11"*"82000009"]`みんな。`[@][lv 0*"11"*"82000010"]`………私は、みんなのところへ、……帰りたい……」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_9,"but","d11_defo3" ;1
+flush 24
+msgwnd_but
+*d56779
+d [lv 0*"10"*"80100015"]`「だから、……招くことにしたんだ」`[\]
+lss s0_10,"en2","a11_defo2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_enj
+*d56780
+d [lv 0*"11"*"82000011"]`「………え…？」`[\]
+lss s0_9,"but","d11_futeki4" ;1
+flush 80
+msgwnd_but
+*d56781
+d [lv 0*"10"*"80100016"]`「お兄ちゃんはもう、ゲームマスターなんだ。`[@][lv 0*"10"*"80100017"]`ゲーム盤の全てを知る者だけが、ゲーム盤を開き、駒を招くことが出来る。`[@][lv 0*"10"*"80100018"]`……だから俺は、縁寿をゲーム盤へ、招待する」`[\]
+lss s0_10,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d56782
+d [lv 0*"11"*"82000012"]`「私を、……あの日の六軒島へ、……連れていってくれるの……」`[\]
+lss s0_9,"but","d11_futeki5" ;1
+flush 80
+msgwnd_but
+*d56783
+d [lv 0*"10"*"80100019"]`「あぁ。`[@][lv 0*"10"*"80100020"]`縁寿を、１９８６年の六軒島へ、招待しよう」`[\]
+lss s0_10,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d56784
+d [lv 0*"11"*"82000013"]`「会えるの？`[@][lv 0*"11"*"82000014"]`　みんなに……」`[\]
+csp_slot s0_9
+lss s0_8,"but","d11_defo3" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_but
+*d56785
+d [lv 0*"10"*"80100021"]`「もちろん」`[\]
+lss s0_10,"en2","a11_defo3b" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d56786
+d [lv 0*"11"*"82000015"]`「私、……もう記憶もおぼろげで、……みんなの顔、はっきりと思い出せないのに…」`[\]
+lss s0_8,"but","d11_futeki5" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_but
+*d56787
+d [lv 0*"10"*"80100022"]`「すぐに思い出すさ。`[@][lv 0*"10"*"80100023"]`…そして、縁寿にとっては１２年ぶりの再会でも。`[@][lv 0*"10"*"80100024"]`……俺たちにとっては、しばらくぶりでしかないんだ。`[@][lv 0*"10"*"80100025"]`……みんな歓迎する。`[@][lv 0*"10"*"80100026"]`１２年の、遠い未来からようやく帰ってきた縁寿を、みんな歓迎してくれる」`[\]
+textoff
+waits 167
+csp_slot s0_8
+flush 24
+lss s0_10,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_enj
+*d56788
+d [lv 0*"11"*"82000016"]`「私は、……いつまでもそこにいられるの……？」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d56789
+d `これで、永遠に私は、……みんなと一緒にいられる。`[@]`{n}そここそが、私の辿り着くべき場所……。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+flush 26
+msgwnd_but
+*d56790
+d [lv 0*"10"*"80100027"]`「縁寿、よくお聞き」`[\]
+msgwnd_non
+*d56791
+d `しかし戦人は、諭すように言う。`[@]`{n}それは叶わぬ夢だと、釘を刺すかのように…。`[\]
+msgwnd_but
+*d56792
+d [lv 0*"10"*"80100028"]`「六軒島の親族会議は、一泊で終わる。`[@][lv 0*"10"*"80100029"]`あの日は台風だったから、船の都合で二泊だったけれどね」`[\]
+msgwnd_enj
+*d56793
+d [lv 0*"11"*"82000017"]`「それが過ぎたら、……私は島から、帰らなくてはならないの…？」`[\]
+msgwnd_but
+*d56794
+d [lv 0*"10"*"80100030"]`「……少し違う。`[@][lv 0*"10"*"80100031"]`それを決めるのも、縁寿なんだ」`[\]
+msgwnd_enj
+*d56795
+d [lv 0*"11"*"82000018"]`「……………………」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_9,"but","d11_oya1" ;1
+flush 22
+msgwnd_but
+*d56796
+d [lv 0*"10"*"80100032"]`「縁寿が、それを決める」`[\]
+msgwnd_non
+*d56797
+d `……もちろん、わかってる。`[\]
+*d56798
+d `あの日、あの島に、私はいない。`[\]
+*d56799
+d `その私を、あの日のあの島に招いてくれるだけで、……これは、奇跡なのだ。`[\]
+textoff
+waits 167
+csp_slot s0_9
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"sea2bn"
+color_mod2 s0_3,#ffffff
+flush 22
+meplay 2,16,50
+*d56800
+d `台風が過ぎ去るまでの、ほんの二日間。`[@]`その、ほんの二日間をくれるだけでも、それは得がたい、二度とない、奇跡。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+*d56801
+d `それ以上を欲張ったら、そのわずかな奇跡が、爆ぜて消えてしまうかもしれない。`[\]
+*d56802
+d `……そうは思っても、６歳のまま止まった私の幼い心は、そのわずかな時間の奇跡に満足しようとしない…。`[\]
+textoff
+waits 167
+vol_me 2,-1,1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_9,"en2","a11_defo2b" ;1
+flush 22
+msgwnd_enj
+*d56803
+d [lv 0*"11"*"82000019"]`「帰りたくない」`[\]
+lss s0_10,"but","d11_nayamu1" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 24
+msgwnd_but
+*d56804
+d [lv 0*"10"*"80100033"]`「………わかるよ」`[\]
+csp_slot s0_9
+lss s0_8,"en2","a11_defo2a" ;1
+aspt2 xpos,s0_8,-370
+flush 24
+msgwnd_enj
+*d56805
+d [lv 0*"11"*"82000020"]`「いつまでも、みんなと一緒にいる。`[@][lv 0*"11"*"82000021"]`家族で一緒にいる。`[@][lv 0*"11"*"82000022"]`お兄ちゃんが、もう帰らなくちゃって言っても……、私は六軒島に残る」`[\]
+lss s0_10,"but","d11_futeki5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56806
+d [lv 0*"10"*"80100034"]`「残るのが正しいとか、帰るのが正しいとか。`[@][lv 0*"10"*"80100035"]`そういうのじゃないんだよ、縁寿」`[\]
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56807
+d [lv 0*"11"*"82000023"]`「……それでも、それを私が選ぶの……？」`[\]
+lss s0_10,"but","d11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56808
+d [lv 0*"10"*"80100036"]`「そうだよ。`[@][lv 0*"10"*"80100037"]`その為の鍵が、それなんだよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"key3"
+flush 22
+msgwnd_non
+*d56809
+d `戦人は、縁寿の胸元で金色に輝くそれを、そっと撫でる。`[\]
+msgwnd_enj
+*d56810
+d [lv 0*"11"*"82000024"]`「私の答えはもう、決まってるよ」`[\]
+msgwnd_but
+*d56811
+d [lv 0*"10"*"80100037_b"]`「今は選ばなくていい。`[@][lv 0*"10"*"80100037_c"]`選ぶべき時は、すぐに訪れるから。`[@][lv 0*"10"*"80100037_d"]`……その時の、縁寿の素直な心で、その鍵をどう使うか、選びなさい」`[\]
+msgwnd_enj
+*d56812
+d [lv 0*"11"*"82000028"]`「………………………」`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"but","d11_futeki4" ;1
+aspt2 xpos,s0_10,370
+flush 2
+wait 1000
+lss s0_10,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56813
+d [lv 0*"10"*"80100038"]`「お兄ちゃんの言うことなんか何も聞かなくてもいい。`[@][lv 0*"10"*"80100039"]`縁寿のわがままなように、答えを決めても構わない。`[@][lv 0*"10"*"80100040"]`…………でも。`[@][lv 0*"10"*"80100041"]`もしも縁寿が良い子で、お兄ちゃんを信用できるなら」`[\]
+lss s0_8,"en2","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56814
+d [lv 0*"11"*"82000029"]`「……信用できる、なら……？」`[\]
+lss s0_10,"but","d11_futeki5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56815
+d [lv 0*"10"*"80100042"]`「お兄ちゃんの言うことは、すべて信じなさい」`[\]
+lss s0_8,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56816
+d [lv 0*"11"*"82000030"]`「すべて、……信じる…」`[\]
+lss s0_10,"but","d11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56817
+d [lv 0*"10"*"80100043"]`「それが縁寿にとって、一番良い選択になるから。`[@][lv 0*"10"*"80100044"]`お兄ちゃんの言葉に耳を傾け、そしてすべてを信じなさい。`[@][lv 0*"10"*"80100045"]`……出来るかい？」`[\]
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56818
+d [lv 0*"11"*"82000031"]`「…………わかんない」`[\]
+lss s0_10,"but","d11_futeki5" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56819
+d [lv 0*"10"*"80100046"]`「それでもいい。`[@][lv 0*"10"*"80100047"]`信じたいものだけを信じればいい。`[@][lv 0*"10"*"80100048"]`それも、縁寿が決めていいんだよ」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 22
+msgwnd_enj
+*d56820
+d [lv 0*"11"*"82000032"]`「……お兄ちゃんを信じないと。`[@][lv 0*"11"*"82000033"]`……この夢は、醒めてしまうの…？」`[\]
+msgwnd_but
+*d56821
+d [lv 0*"10"*"80100049"]`「そんなことはない。`[@][lv 0*"10"*"80100050"]`だから安心していいよ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+msgwnd_non
+*d56822
+d `縁寿は何となく、兄を疑い、怯えていた。`[\]
+*d56823
+d `彼女の希望は、あの日のあの島に、永遠に留まり、家族といつまでも一緒にいること。`[\]
+*d56824
+d `……奇跡の二日間を得たなら、それに納得し、１２年後の未来にひとりで帰れと、`[@]`……兄がそんなことを言い出しはしないかと、彼女は怯えていた。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+lss s0_10,"but","d11_futeki4" ;1
+aspt2 xpos,s0_10,370
+z_order_override2 s0_10,s0_7
+flush 2
+csp_slot s0_10
+lss s0_9,"but","d11_futeki4" ;1
+z_order_override2 s0_9,s0_7
+flush 24
+msgwnd_but
+*d56825
+d [lv 0*"10"*"80100051"]`「さっきも言ったと思う。`[@][lv 0*"10"*"80100052"]`……残るのが正しいとか、帰るのが正しいとか。`[@][lv 0*"10"*"80100053"]`そういうのはないんだよ。`[@][lv 0*"10"*"80100054"]`それを、縁寿が決める。`[@][lv 0*"10"*"80100055"]`そしてそれは、今すぐ決めなくていい」`[\]
+lss s0_8,"en2","a11_defo2c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56826
+d [lv 0*"11"*"82000034"]`「そのどちらかの選択を、誰も強要しない…？」`[\]
+csp_slot s0_9
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_but
+*d56827
+d [lv 0*"10"*"80100056"]`「もちろん」`[\]
+lss s0_8,"en2","a11_defo2b" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56828
+d [lv 0*"11"*"82000035"]`「お兄ちゃんは私に、未来へ帰れなんて、………言わない……？」`[\]
+lss s0_10,"but","d11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56829
+d [lv 0*"10"*"80100057"]`「………お兄ちゃんは、縁寿に選んでほしいある選択がある。`[@][lv 0*"10"*"80100058"]`……それを縁寿が自発的に選んでくれることを望んでる。`[@][lv 0*"10"*"80100059"]`だから望んではいるが、縁寿の選択は尊重したい」`[\]
+lss s0_8,"en2","a11_defo3c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56830
+d [lv 0*"11"*"82000036"]`「私もさっき言った。`[@][lv 0*"11"*"82000037"]`私の答えは、もう決まっているよ」`[\]
+lss s0_10,"but","d11_futeki1" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56831
+d [lv 0*"10"*"80100060"]`「俺もさっき言った。`[@][lv 0*"10"*"80100061"]`今は、それを選択する時じゃない」`[\]
+lss s0_8,"en2","a11_defo3b" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+msgwnd_enj
+*d56832
+d [lv 0*"11"*"82000038"]`「それはいつ？」`[\]
+lss s0_10,"but","d11_futeki4" ;1
+aspt2 xpos,s0_10,370
+flush 80
+msgwnd_but
+*d56833
+d [lv 0*"10"*"80100062"]`「その鍵がいずれ、教えてくれるよ」`[\]
+lss s0_8,"en2","a12_defo3c" ;1
+aspt2 xpos,s0_8,-370
+flush 80
+seplay 1,31,50
+msgwnd_non
+*d56834
+d `縁寿の首に掛かる、大きな金色の鍵。`[\]
+*d56835
+d `それを、縁寿の小さな手が、ぎゅうっと握り締める……。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 9
+textoff
+waits 167
+lbg s0_3,"cha_i1i"
+flush 2
+wait 2000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 4
+textoff
+waits 167
+lbg s0_3,"ebook1"
+flush 2
+*d56836
+d `………その時、礼拝堂の祭壇の上に置かれた、一冊の本が目に入る。`[\]
+*d56837
+d `その本は、自らに錠前を掛け、鍵がなければ読めないように封印されていた。`[\]
+*d56838
+d `縁寿は、自分の胸元の鍵と、祭壇のその本を、じっと見比べる。`[\]
+textoff
+waits 167
+lbg s0_3,"cha_i1n"
+lss s0_24,"en2","a12_defo2" ;1
+lss s0_10,"but","d11_defo3" ;1
+aspt2 xpos,s0_10,370
+flush 22
+lss s0_24,"en2","a12_defo1" ;1
+flush 80
+msgwnd_enj
+*d56839
+d [lv 0*"11"*"82000039"]`「………あの本は、この鍵で開くの？」`[\]
+vol_bgm -1
+csp_slot s0_24
+lss s0_9,"en2","a12_defo2c" ;1
+lss s0_10,"but","d11_nayamu4" ;1
+aspt2 xpos,s0_10,370
+flush 1
+seplay 1,13,50
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,167,1
+rumble 63,500
+gptwait quakeyamp
+msgwnd_but
+*d56840
+d [lv 0*"10"*"80100063"]`「あの本は駄目だ」`[\]
+msgwnd_non
+*d56841
+d `ぴしゃりと言われ、縁寿は少し面食らう。`[\]
+*d56842
+d `戦人は、縁寿を怖がらせてしまったことに気付き、表情を和らげて言う。`[\]
+bgmplay 163,71,0
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"cha_p1b"
+flush 24
+msgwnd_but
+*d56843
+d [lv 0*"10"*"80100064"]`「さぁ、行こう。`[@][lv 0*"10"*"80100065"]`………１９８６年１０月４日に、縁寿を招待するよ」`[\]
+msgwnd_enj
+*d56844
+d [lv 0*"11"*"82000040"]`「うん」`[\]
+msgwnd_non
+*d56845
+d `戦人が手を伸ばすと、縁寿は固くそれを握る。`[\]
+*d56846
+d `そして二人は、歩き出す。`[\]
+textoff
+waits 167
+lbg s0_3,"ep801"
+flush 2
+*d56847
+d `礼拝堂の扉の向こうには、眩い光が。`[\]
+*d56848
+d `目が潰れそうになるほどの光が、扉の隙間から鋭く入ってくる。`[\]
+*d56849
+d `……その向こうに、二人は歩いていく……。`[\]
+seplay 1,17,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 10,4167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 11
+set_window_simple 80
+msgwnd_but
+*d56850
+d `{a:c:`[lv 0*"10"*"80100066"]`お帰り、縁寿。`[@]`{n}`[|][lv 0*"10"*"80100067"]`そしてこれで最後なんだ。}`[\]
+*d56851
+d `{a:c:`[lv 0*"10"*"80100068"]`このゲーム盤を、縁寿のために、{n}……最後にもう一度だけ開く……。}`[\]
+set_name_window_non
+textoff
+waits 167
+vol_mix_fade 1000
+vol_bgm -1,1000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+skip_off
+pam 749,"op78",0
+skip_on
+textoff
+waits 167
+lbg s0_3,"black"
+flush 1
+textoff
+waits 167
+ch_done flag_scenario_8_op

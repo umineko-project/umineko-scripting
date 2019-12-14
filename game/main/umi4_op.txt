@@ -1,0 +1,611 @@
+*umi4_op
+;オープニング
+log_reset
+mov $name_chapter_r_click,r_click_chapters_4_op
+mov $name_chapter_save, "4_op"
+new_episode 4
+gstc 203
+flush 10,167
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+seplay 1,28,100
+textoff
+waits 167
+lbg s0_3,"text001"
+flush 1
+wait 6000
+textoff
+waits 167
+lbg s0_3,"black"
+flush 2
+meplay 2,5,0
+vol_me 2,70,3000
+wait 3000
+bgmplay 4,0,0
+meplay 1,1,0
+vol_me 1,70,4000
+vol_me 2,40,4000
+wait 4000
+seplay 1,28,100
+textoff
+waits 167
+lbg s0_3,"oct_4_1986"
+flush 80
+wait 3000
+textoff
+waits 167
+lbg s0_3,"white"
+flush 42
+vol_bgm 70,7000
+vol_me 2,0,7000
+wait 7000
+textoff
+waits 167
+lbg s0_3,"airp_w1d"
+flush 22
+wait 3000
+textoff
+waits 167
+lbg s0_3,"white"
+flush 2
+textoff
+waits 167
+lbg s0_3,"airp_w1j"
+flush 22
+wait 1500
+seplay 1,4,71
+waits 167
+seplay 2,20,71
+agpt quakeycycle,67
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+seplay 3,20,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,500,1
+rumble 63,500
+gptwait quakexamp
+seplay 1,12,71
+seplay 2,3,71
+vol_bgm -1,1000
+vol_me 1,-1,1000
+vol_me 2,-1,1000
+textoff
+waits 167
+lbg s0_3,"white"
+flush 1
+agpt quakeycycle,100
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+wait 1000
+bgmplay 2,71,0
+textoff
+waits 167
+lbg s0_3,"air_in1e"
+lss s0_10,"hid","a21_warai1" ;1
+aspt2 xpos,s0_10,370
+flush 5
+lss s0_10,"hid","a21_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_hid
+*d21584
+d [lv 0*"06"*"41100001"]`「わっはっはっは、大丈夫か、戦人くん…！`[@][lv 0*"06"*"41100002"]`　もう地上やで、これ以上は落ちへんでぇ、わっはっはっは…！」`[\]
+textoff
+waits 167
+csp_slot s0_10
+lbg s0_3,"air_in1e"
+lss s0_9,"mar","a22_warai2" ;1
+flush 24
+msgwnd_mar
+*d21585
+d2 [lv 0*"13"*"40400001"]`「うーっきゃっきゃっきゃ！`[@][#][*][lv 0*"13"*"40400002"]`　落ちるー落ちるー、きゃっきゃっきゃ！」`[#][*][\]
+wait_on_d 0
+csp_slot s0_9
+flush 10,167
+d_continue
+wait_on_d 1
+seplay 1,3,71
+agpt quakexcycle,50
+agpt quakexamp,30
+agpt quakexamp,0,667,1
+rumble 63,500
+gptwait quakexamp
+seplay 2,4,71
+agpt quakeycycle,33
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+seplay 3,4,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,667,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+msgwnd_non
+*d21586
+d `新島空港のロビーを、興奮した真里亞が駆け回る。`[@]`{n}機内での戦人の騒ぎがよっぽど面白かったのだろう。`[\]
+lss s0_10,"ros","a32_ikari3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_ros
+*d21587
+d2 [lv 0*"12"*"41400001"]`「こら、真里亞！`[@][lv 0*"12"*"41400002"]`　いい加減にしなさい！`[@][#][*][lv 0*"12"*"41400003"]`　…ごめんね、戦人くん。`[@][lv 0*"12"*"41400004"]`気を悪くしないでね」`[\]
+wait_on_d 0
+lss s0_10,"ros","a13_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"rud","a11_akuwarai1" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_rud
+*d21588
+d [lv 0*"08"*"41200001"]`「なっさけねぇ男だなぁ、お前はぁ。`[@][lv 0*"08"*"41200002"]`でけぇ図体して、相変わらず乗り物はダメなのかよ？」`[\]
+csp_slot s0_10
+flush 10,167
+lss s0_10,"but","b23_odoroki2" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_but
+*d21589
+d [lv 0*"10"*"40100001"]`「うるへー…。`[@][lv 0*"10"*"40100002"]`人間誰しも苦手なモンの一つや二つ、あるもんだぜ…」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"air_in1e"
+lss s0_8,"eva","a11_warai1" ;1
+aspt2 xpos,s0_8,-370
+flush 23
+msgwnd_eva
+*d21590
+d [lv 0*"05"*"41000001"]`「戦人くん、今度伯母さんと一緒に海外旅行に行きましょうよ。`[@][lv 0*"05"*"41000002"]`ヨーロッパとか行かない？`[@][lv 0*"05"*"41000003"]`　半日も飛行機に乗ってればきっと克服できるわよぅ。`[@][lv 0*"05"*"41000004"]`くすくすくす！」`[\]
+lss s0_10,"geo","a12_komaru3" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_geo
+*d21591
+d [lv 0*"07"*"40300001"]`「…母さんもよしなよ。`[@][lv 0*"07"*"40300002"]`戦人くんの乗り物嫌いはきっと遺伝だよ」`[\]
+csp_slot s0_8
+flush 10,167
+lss s0_8,"kir","a11_defo1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_kir
+*d21592
+d [lv 0*"09"*"41300001"]`「あぁ、明日夢さんの？」`[\]
+csp_slot s0_10
+flush 10,167
+lss s0_10,"rud","a11_defo2" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_rud
+*d21593
+d2 [lv 0*"08"*"41200003"]`「……あいつ、どーいうわけか乗り物系がダメでなぁ。`[@][lv 0*"08"*"41200004"]`自転車と車以外はほぼダメだったぜ。`[@][#][*][lv 0*"08"*"41200005"]`どこか遠出しようとすると、アレはダメだコレはダメだ、`[@][lv 0*"08"*"41200006"]`怖い怖い落ちる落ちるぎゃーぎゃーとうるせぇ女だったさ」`[\]
+wait_on_d 0
+lss s0_10,"rud","a11_warai1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_9,"geo","a11k_defo1k" ;1
+flush 10,167
+msgwnd_geo
+*d21594
+d2 [lv 0*"07"*"40300003"]`「子どもは、親が苦手がるモノを危険だと学ぶものです。`[@][#][*][lv 0*"07"*"40300004"]`きっと戦人くんは、明日夢さんのそういうところを見て、乗り物は怖いものだと覚えてしまったんでしょうね」`[\]
+wait_on_d 0
+lss s0_9,"geo","a11_hohoemi1" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"kir","a11_futeki1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_kir
+*d21595
+d [lv 0*"09"*"41300002"]`「くすくす。`[@][lv 0*"09"*"41300003"]`明日夢さんの遺伝子ってわけかしら？」`[\]
+csp_slot s0_9
+csp_slot s0_10
+flush 10,167
+lss s0_9,"rud","a13_defo2" ;1
+flush 10,167
+msgwnd_rud
+*d21596
+d2 [lv 0*"08"*"41200007"]`「さぁな。`[@][lv 0*"08"*"41200008"]`だとしたら迷惑な遺伝子だな。`[@][#][*][lv 0*"08"*"41200009"]`………明日夢の話はよせ。`[@][lv 0*"08"*"41200010"]`今、ここにいるのはお前だ。`[@][lv 0*"08"*"41200011"]`そうだろ？」`[\]
+wait_on_d 0
+lss s0_9,"rud","a12_majime2" ;1
+flush 10,167
+d_continue
+wait_on_d -1
+lss s0_8,"kir","a11_nayamu1" ;1
+aspt2 xpos,s0_8,-550
+flush 10,167
+msgwnd_kir
+*d21597
+d [lv 0*"09"*"41300004"]`「…そうね、ごめんなさい」`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_9
+lbg s0_3,"black"
+flush 24
+textoff
+waits 167
+lbg s0_3,"air_in1e"
+lss s0_10,"hid","a21_warai2" ;1
+aspt2 xpos,s0_10,370
+flush 24
+msgwnd_hid
+*d21598
+d [lv 0*"06"*"41100003"]`「おーい、ハイヤーが来たでぇ！`[@][lv 0*"06"*"41100004"]`　ちょうど３台や。`[@][lv 0*"06"*"41100005"]`乗るで乗るで！」`[\]
+csp_slot s0_10
+flush 10,167
+lss s0_8,"mar","a22_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_mar
+*d21599
+d2 [lv 0*"13"*"40400003"]`「落ちる落ちるー！！`[@][lv 0*"13"*"40400004"]`　パラシュートどこーパラシュートどこー！！`[@][#][*][lv 0*"13"*"40400005"]`　うーうーきゃっきゃっ！！」`[#][*][\]
+wait_on_d 0
+csp_slot s0_8
+flush 10,167
+d_continue
+wait_on_d 1
+seplay 1,3,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,1000,1
+rumble 63,500
+gptwait quakexamp
+d_continue
+wait_on_d -1
+lss s0_9,"but","b22_odoroki2" ;1
+flush 10,167
+msgwnd_but
+*d21600
+d2 [lv 0*"10"*"40100003"]`「こんにゃろ〜！！`[@][lv 0*"10"*"40100004"]`　待て待て待ちやがれー！`[@][#][*][lv 0*"10"*"40100005"]`　くすぐりの刑に処してやる〜！！」`[#][*][\]
+wait_on_d 0
+csp_slot s0_9
+flush 10,167
+d_continue
+wait_on_d 1
+seplay 1,3,71
+agpt quakexcycle,67
+agpt quakexamp,30
+agpt quakexamp,0,1000,1
+rumble 63,500
+gptwait quakexamp
+seplay 2,5,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+seplay 3,4,71
+agpt quakeycycle,50
+agpt quakeyamp,30
+agpt quakeyamp,0,500,1
+rumble 63,500
+gptwait quakeyamp
+d_continue
+wait_on_d -1
+textoff
+waits 167
+lbg s0_3,"air_in1e"
+lss s0_10,"eva","a11_defo1" ;1
+aspt2 xpos,s0_10,370
+flush 23
+msgwnd_eva
+*d21601
+d [lv 0*"05"*"41000005"]`「うっふふふふ。`[@][lv 0*"05"*"41000006"]`元気でいいわ。`[@][lv 0*"05"*"41000007"]`戦人くんと真里亞ちゃんがいてくれなかったら、機内の空気はさぞや硬かったでしょうねぇ」`[\]
+lss s0_8,"rud","a11_defo2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+msgwnd_rud
+*d21602
+d2 [lv 0*"08"*"41200012"]`「ありがとよ。`[@][lv 0*"08"*"41200013"]`言葉通りの意味で受け取っとくぜ。`[@][#][*][lv 0*"08"*"41200014"]`……おら、ガキども！`[@][lv 0*"08"*"41200015"]`　タクシー来てるぞ！`[@][lv 0*"08"*"41200016"]`　お遊びは後にしろぃ」`[\]
+wait_on_d 0
+lss s0_8,"rud","a11_warai2" ;1
+aspt2 xpos,s0_8,-370
+flush 10,167
+d_continue
+wait_on_d -1
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"white"
+flush 24
+meplay 1,5,40
+textoff
+waits 167
+lbg s0_3,"air_out2b"
+lss s0_9,"mar","a22_warai2" ;1
+flush 24
+msgwnd_mar
+*d21603
+d [lv 0*"13"*"40400006"]`「うーうー！！`[@][lv 0*"13"*"40400007"]`　タクシータクシー！！`[@][lv 0*"13"*"40400008"]`　真里亞一番乗りー！`[@][lv 0*"13"*"40400009"]`　きゃっきゃ！！」`[\]
+lss s0_10,"ros","a12_nayamu1" ;1
+aspt2 xpos,s0_10,550
+flush 10,167
+msgwnd_ros
+*d21604
+d [lv 0*"12"*"41400005"]`「コラ！`[@][lv 0*"12"*"41400006"]`　真里亞も戦人くんも、もうはしゃがない！`[@][lv 0*"12"*"41400007"]`　人にぶつかるわよ！」`[\]
+msgwnd_non
+*d21605
+d `楼座叔母さんの声色が、ちょっぴり怖くなる。`[\]
+*d21606
+d `戦人も、さすがにはしゃぎ過ぎたかなと思ったら、案の定、人に肩をぶつけた。`[\]
+seplay 1,13,71
+textoff
+waits 167
+csp_slot s0_9
+csp_slot s0_10
+lbg s0_3,"white"
+flush 1
+agpt quakeycycle,83
+agpt quakeyamp,30
+agpt quakeyamp,0,667,1
+rumble 63,500
+gptwait quakeyamp
+textoff
+waits 167
+lbg s0_3,"air_out2b"
+lss s0_8,"but","b22_odoroki2" ;1
+aspt2 xpos,s0_8,-370
+flush 22
+msgwnd_but
+*d21607
+d [lv 0*"10"*"40100006"]`「あ、すんません…」`[\]
+lss s0_10,"geo","a11k_warai1k" ;1
+aspt2 xpos,s0_10,370
+flush 10,167
+msgwnd_geo
+*d21608
+d [lv 0*"07"*"40300005"]`「戦人くんたちはあっちの車だよ。`[@][lv 0*"07"*"40300006"]`待たせちゃってるよー」`[\]
+msgwnd_non
+*d21609
+d `譲治に急かされ、戦人はぶつかった人に拝む仕草を送りながら、早く来いと呼ぶ両親のもとへ駆けていく。`[\]
+textoff
+waits 167
+csp_slot s0_8
+csp_slot s0_10
+lbg s0_3,"black"
+flush 2
+*d21610
+d `３台のタクシーは、次々にバンバンっと扉を閉め、港へ向けて出発していった……。`[\]
+textoff
+waits 167
+vol_bgm 0,4000
+vol_me 1,70,4000
+wait 4000
+textoff
+waits 167
+lbg s0_3,"air_out2b"
+flush 2
+*d21611
+d `……彼らのタクシーが走り去ると。`[\]
+*d21612
+d `世界の全てが急に鈍りだし、`[!w583]`……緩やかに停止した。`[\]
+textoff
+waits 167
+vol_mix_fade 3000
+vol_bgm -1,3000
+wait 3000
+wait 1000
+bgmplay 49,71,0
+gstc 204
+textoff
+waits 167
+lbg s0_3,"air_out2b"
+color_mod2 s0_3,#ffffff
+flush 48
+*d21613
+d `声も風も、音も。`[@]`……何もかもが止み、動き動こうとする者すべてが、写真に撮られた瞬間でそのまま凍りついたかのように、`[@]`……停止する。`[\]
+*d21614
+d `人も機械も時計の針も、風に舞う砂埃も、凍り付いている。`[@]`{n}歩いてる途中の人が、片足を上げたまま、凍り付いている。`[@]`{n}風に舞う紙くずが、空中に縫い止められ、凍り付いている。`[\]
+*d21615
+d `……その、止まってしまった世界に立ち尽くすはずの人影がひとつ、動く。`[\]
+textoff
+waits 167
+wait 2000
+lss s0_23,"enj","a11_komaru1" ;1
+aspt2 xpos,s0_23,370
+flush 42
+*d21616
+d `それは女。`[@]`さっき、戦人が肩をぶつけた女だった…。`[\]
+*d21617
+d `動いたといっても、それは本当にわずか。`[\]
+*d21618
+d `目線を落とし、ほんの少し肩を下げてため息をつく。`[@]`{n}…それだけ。`[\]
+*d21619
+d `普通の世界でだったら、動いた内にも入らないだろうそれも、`[@]`この静寂の世界では大いなる違和感を見せた。`[\]
+*d21620
+d `…すると、今度は別のものが動く。`[@]`{n}タクシー乗り場の近くの影でまどろんでいた黒猫だった。`[\]
+*d21621
+d `それは女のすぐ後までやってくると、`[@]`……ゆるりと、ニンゲンの姿を模して形を変えた。`[\]
+textoff
+waits 167
+seplay 1,52,40
+lss s0_25,"ber","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+aspt2 breakup,s0_25,1000
+aspt2 alpha,s0_25,0
+flush 1
+aspt2 breakup,s0_25,0,3000
+aspt2 alpha,s0_25,255,3000
+sptwait2 breakup,s0_25
+*d21622
+d `猫ではない。`[@]`魔女だった。`[@]`{n}もちろん、女の方だって、魔女なのだ。`[\]
+*d21623
+d `立ち尽くす魔女は、目線を落としたまま、呟く…。`[\]
+lss s0_23,"enj","a31_komaru3" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_enj
+*d21624
+d [lv 0*"11"*"42000001"]`「………みんなが六軒島へ行くのを、`[|][lv 0*"11"*"42000002"]`……私は、止められないのね」`[\]
+lss s0_25,"ber","a11_defo2" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_ber
+*d21625
+d [lv 0*"28"*"42100001"]`「止められないわ。`[@][lv 0*"28"*"42100002"]`１９８６年１０月４日に、あなたはここにいない」`[\]
+lss s0_23,"enj","a11_komaru2" ;1
+aspt2 xpos,s0_23,370
+flush 10,167
+msgwnd_enj
+*d21626
+d [lv 0*"11"*"42000003"]`「……私がここにいたなら、みんなを止めることも、不可能ではなかったの…？」`[\]
+lss s0_25,"ber","a11_defo1" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_ber
+*d21627
+d [lv 0*"28"*"42100003"]`「６歳の女の子が、どう立ち回れば彼らを引き返させることが出来るのか、`[@][lv 0*"28"*"42100004"]`私には想像もつかないけれど。`[@][lv 0*"28"*"42100005"]`……そうね。`[@][lv 0*"28"*"42100006"]`もしこの場に居たなら、確率はゼロではなかったわ。`[@][lv 0*"28"*"42100007"]`ゼロでない確率ならば、私は奇跡を探し出せる」`[\]
+textoff
+waits 167
+csp_slot s0_25
+csp_slot s0_23
+lbg s0_3,"black"
+flush 22
+msgwnd_enj
+*d21628
+d [lv 0*"11"*"42000004"]`「……私が体調を崩して、`[|][lv 0*"11"*"42000005"]`…置いて行かれなければ……」`[\]
+msgwnd_non
+*d21629
+d `俯いた魔女は、両手の握り拳を固くする…。`[@]`{n}…それは少しだけ震えていた。`[\]
+meplay 1,16,50
+textoff
+waits 167
+lbg s0_3,"different_spiral_1a"
+flush 8
+msgwnd_ber
+*d21630
+d [lv 0*"28"*"42100008"]`「あなたが寝込んだのは１９８６年１０月３日。`[@][lv 0*"28"*"42100009"]`そしてベアトのゲーム盤は１０月４日から切り取られている。`[@][lv 0*"28"*"42100010"]`……あなたには体調を崩さない可能性が与えられていない。`[@][lv 0*"28"*"42100011"]`…つまり、あなたは本来、絶対にゲーム盤に上がれない存在なのよ」`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 22
+textoff
+waits 167
+lbg s0_3,"sky_1a"
+color_mod2 s0_3,#ffffff
+flush 22
+msgwnd_enj
+*d21631
+d [lv 0*"11"*"42000006"]`「恩着せがましくてありがとう。`[@][lv 0*"11"*"42000007"]`……わかってるわ。`[@][lv 0*"11"*"42000008"]`……こうして、お父さんやお母さんや、`[|][lv 0*"11"*"42000009"]`………お兄ちゃんの元気そうな姿を、`[|][lv 0*"11"*"42000010"]`……見られただけでも、`[@][lv 0*"11"*"42000011"]`……これはとても素敵な奇跡なんだって、`[|][lv 0*"11"*"42000012"]`………わかってるもの…」`[\]
+msgwnd_non
+*d21632
+d `縁寿は、家族の前に立ち塞がり、空港の外へ、……六軒島へ行かせまいとしたはずだった。`[\]
+*d21633
+d `…しかし、１９８６年１０月４日に存在し得ない彼女に、それは出来ないこと。`[\]
+*d21634
+d `兄に肩をぶつけられ、謝罪の言葉をもらえただけでも。`[\]
+*d21635
+d `…そして自分が妹だとわかってもらえなくても、`[!w583]`……涙が溢れるほどの、`[!w500]`……奇跡……。`[\]
+textoff
+waits 167
+lbg s0_3,"black"
+flush 5
+vol_bgm -1,3000
+wait 3000
+textoff
+waits 167
+lbg s0_3,"air_out2b"
+color_mod2 s0_3,#ffffff
+lss s0_23,"enj","a11_fuman2" ;1
+aspt2 xpos,s0_23,370
+flush 25
+msgwnd_enj
+*d21636
+d [lv 0*"11"*"42000013"]`「…………嫌味を言ってごめんなさい。`[@][lv 0*"11"*"42000014"]`私はあなたにもらった奇跡を、無駄になんかしないわ」`[\]
+lss s0_25,"ber","a11_defo2" ;1
+aspt2 xpos,s0_25,-370
+flush 10,167
+msgwnd_ber
+*d21637
+d [lv 0*"28"*"42100012"]`「頼もしいわね。`[@][lv 0*"28"*"42100013"]`……さぁ、彼らと一緒に行きましょう。`[@][lv 0*"28"*"42100014"]`六軒島へ。`[@][lv 0*"28"*"42100015"]`駒たちがもうすぐ全て揃う。`[@][lv 0*"28"*"42100016"]`……第４のゲームが幕を開けるわ。`[@][lv 0*"28"*"42100017"]`ベアトも戦人も、もう席についてる頃よ」`[\]
+seplay 1,21,50
+textoff
+waits 167
+csp_slot s0_25
+csp_slot s0_23
+lbg s0_3,"black"
+flush 2
+msgwnd_enj
+*d21638
+d [lv 0*"11"*"42000015"]`「……六軒島へ……。`[@][lv 0*"11"*"42000016"]`…………私の、`[|][lv 0*"11"*"42000017"]`…いや、`[|][lv 0*"11"*"42000018"]`……みんなの運命を変えた、１９８６年１０月４日の、`[|][lv 0*"11"*"42000019"]`…六軒島へ………」`[\]
+msgwnd_non
+*d21639
+d `…あの日に、何があったというの？`[@]`{n}私はそれを暴く。`[@]`知る。`[@]`そして取り戻す…！`[\]
+meplay 2,5,71
+textoff
+waits 167
+lbg s0_3,"white"
+flush 22
+textoff
+waits 167
+lbg s0_3,"sky_1a"
+color_mod2 s0_3,#ffffff
+flush 26
+*d21640
+d `縁寿は両拳を握り締めたまま、きっと天を仰ぐ。`[@]`{n}瞳の淵に溜まった涙の雫が一粒、宙に零れ落ちる。`[\]
+textoff
+waits 167
+seplay 1,52,50
+textoff
+waits 167
+lbg s0_3,"black"
+spriteset_enable 1
+textoff
+waits 167
+lbg s1_3,"sky_1a"
+color_mod2 s1_3,#ffffff
+aspritesetpt breakup,1,0
+flush 1
+aspritesetpt breakup,1,1000,3000
+spritesetptwait breakup,1
+reset_set 1
+csp -11
+flush 1
+*d21641
+d `そして二人の魔女の姿は、時が動き出す時に吹く暴風に飲み込まれて瞬時に消え去った。`[\]
+textoff
+waits 167
+meplay 3,17,0
+meplay 4,14,0
+meplay 5,13,0
+vol_me 1,100,6000
+vol_me 2,100,6000
+vol_me 3,100,6000
+vol_me 4,100,6000
+vol_me 5,100,6000
+wait 6000
+wait 1000
+vol_mix_fade 1000
+wait 1000
+textoff
+waits 167
+skip_off
+pam 749,"op",0
+skip_on
+textoff
+waits 167
+wait 2000
+ch_done flag_scenario_4_op
