@@ -1,0 +1,58 @@
+h1. Dialogue 
+
+h2. Display/Rendering logic
+
+PS3 renders text character-by-character with a *non-constant* character appearance rate. It pauses for longer after commas and maybe before some other characters. 
+The param *a*, which has a non-zero default value estimated at about *8*, indicates the *number of frames* taken for a character to fully fade in after its display has started.
+The param *s* is an override for the message display speed setting. The user setting *has no effect* on character appearance rate while this is explicitly set. However, the exact calculation for how this affects character appearance rate is currently unknown.
+
+{{cut_start(Test and results)}}
+<pre>
+DIALOGUE 1 0 1 34 rテキスト速度ｿﾉﾏﾏテキスト速度ｿﾉﾏﾏ
+  Default slowest text speed has a notable LTR fade spanning around 4 characters.
+DIALOGUE 2 0 1 37 rs0.テキスト速度!s!0テキスト速度!s!0
+  LTR fade is still present with s0. The span is around 4, looking identical to the slowest text speed.
+DIALOGUE 3 0 1 45 rs0.a0.テキスト速度!s!0テキスト速度!s!0､!a!0
+  No LTR fade present with a0 (!). Text appears character-by-character.
+  The first character appears to be present on the first frame.
+  Characters appear no faster than 1 every 2 60fps-frames, but may take longer.
+  The video shows an erratic character apperance rate, but it is unclear whether that is a video problem or whether it depends on the characters being rendered (e.g. there seemed to be a 6-frame pause after comma and a 4-frame pause before a segment of kanji or alphanumerics, or something, but was that just coincidence...) 
+DIALOGUE 4 0 1 51 rs0.a100.テキスト速度!s!0テキスト速度!s!0､!a!1!0!0
+  LTR fade is visible here. Very wide span. 
+  The cursor appears before the fade is finished and at the same time that the final character appears to begin fading in.
+  The final character appears to begin fading in at the same kind of timepoint that it would have appeared under plain character-by-character s0 (it takes a few frames longer than the previous example, which is justified by the fact that the string is now 2 characters longer - a0 to a100)
+  It looks plausible that the last character (and all others) takes 100 frames to finish its fade.
+DIALOGUE 5 0 1 51 rs0.a300.テキスト速度!s!0テキスト速度!s!0､!a!3!0!0
+  Similarly it looks plausible that the last character (and all others) takes 300 frames to finish its fade.
+DIALOGUE 6 0 1 51 rs0.a600.テキスト速度!s!0テキスト速度!s!0､!a!6!0!0
+  Similarly it looks plausible that it takes 600 frames.
+DIALOGUE 7 0 1 52 rs1000.テキスト速度!s!1!0!0!0テキスト速度!s!1!0!0!0
+  All the characters appear at once, but there is a fade-in of around 8 60fps-frames.
+DIALOGUE 8 0 1 60 rs1000.a0.テキスト速度!s!1!0!0!0テキスト速度!s!1!0!0!0､!a!0
+  This is entirely instant, except for the comma, after which there is a 4 60fps-frame pause before the rest of the text renders instantly.
+DIALOGUE 9 0 1 66 rs1000.a100.テキスト速度!s!1!0!0!0テキスト速度!s!1!0!0!0､!a!1!0!0
+DIALOGUE 10 0 1 66 rs1000.a300.テキスト速度!s!1!0!0!0テキスト速度!s!1!0!0!0､!a!3!0!0
+DIALOGUE 11 0 1 66 rs1000.a600.テキスト速度!s!1!0!0!0テキスト速度!s!1!0!0!0､!a!6!0!0
+  Expected behavior.
+DIALOGUE 12 0 1 21 rオートクリックkオフ
+DIALOGUE 13 0 1 24 re!eオートクリックkオン
+  Autoclick pushed us past both k and EOD.
+DIALOGUE 14 0 1 21 rオートクリックkオフ
+DIALOGUE 15 0 1 24 rオートクリックke!eオン
+  Autoclick only pushed us past EOD.
+DIALOGUE 16 0 1 21 rオートクリックkオフ
+DIALOGUE 17 0 0 29 r!p!i!p!eオートクリックkオフ
+PIPE -1
+DIALOGUE 18 0 0 32 re!e!p!i!p!eオートクリックkオン
+PIPE -1
+  Pipes affected nothing, these behave as expected.
+DIALOGUE 19 0 1 21 rオートクリックkオフ
+DIALOGUE 20 0 1 54 r･ｲｯぱｲﾆ満ﾀｻﾚﾀｿﾉ毒々ｼｲ色ｦ見ﾃ酒だﾄ連想でｷﾙ者ﾊ少ﾅｲだﾛｳ｡
+HIDE_DIALOGUE_WINDOW
+WAIT 10
+</pre>
+{{cut_end}}
+
+h2. Other
+
+The param *e* activates autoclick for the rest of that dialogue and can be present in the middle of text. It clicks past both *k* and end-of-dialogue equally, and works with or without pipes.

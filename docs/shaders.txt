@@ -1,0 +1,69 @@
+h1. Shaders
+
+h2. Pixel blur shader (Chiru only)
+
+First analysis seems to indicate that it is a block-blur shader whereby the screen is divided into a grid of blocks and each block is given a color according to the original color of a single pixel within it. This is repeated for decreasing grid size and some kind of onion-alpha with a length of about 2 (at most 4?) frames is placed on top. (Onion-alpha rationale is that we see some large blocks remain in the exact same position a frame later, but faded in or out more.)
+
+The location of the value-pixel chosen for each "block" is unknown... Maybe it's center always, or maybe it is random per block to exaggerate the uneven look?
+
+{{cut_start(Example section)}}
+<pre>struct INSTRUCTION inst[39415] Resource Command (slot 3) PIC Load: KAKERA_MEMORY3 (1) 1290A8h 8h Fg: Bg: 
+struct INSTRUCTION inst[39416] Sprite Command (slot 3) [value=reg20] -> MONOCRO 1290B0h 8h Fg: Bg: 
+struct INSTRUCTION inst[39417] Sprite Command (slot 3) [value=reg21] -> ADD_BLEND 1290B8h 8h Fg: Bg: 
+struct INSTRUCTION inst[39418] SpriteSet Command [value=255] -> SPRITESET_PIXELATED_NOISE 1290C0h 6h Fg: Bg: 
+struct INSTRUCTION inst[39419] Print Command(128): doTransitionEffect(transitionMask=NO duration=NO unknown=NO ons_ef=NO block=1); 1290C6h 3h Fg: Bg: 
+struct INSTRUCTION inst[39420] SpriteSet Command [frames=60] -> SPRITESET_PIXELATED_NOISE 1290C9h 6h Fg: Bg: 
+struct INSTRUCTION inst[39421] SpriteSet Command Wait on property SPRITESET_WAIT_PIXELATED_NOISE 1290CFh 3h Fg: Bg: 
+struct INSTRUCTION inst[39422] wait 80 frames (1.333333 secs) 1290D2h 3h Fg: Bg: 
+struct INSTRUCTION inst[39423] SFX: channel 1, umise_022, volume 178 single_play 1 1290D5h Bh Fg: Bg: 
+struct INSTRUCTION inst[39424] Hide Dialogue Window 1290E0h 1h Fg: Bg: 
+struct INSTRUCTION inst[39425] wait 10 frames (0.166667 secs) 1290E1h 3h Fg: Bg: 
+struct INSTRUCTION inst[39426] Resource Command (slot 4): Remove Slot 1290E4h 6h Fg: Bg: 
+struct INSTRUCTION inst[39427] Resource Command (slot 8): Remove Slot 1290EAh 6h Fg: Bg: 
+struct INSTRUCTION inst[39428] Resource Command (slot 9): Remove Slot 1290F0h 6h Fg: Bg: 
+struct INSTRUCTION inst[39429] Resource Command (slot 10): Remove Slot 1290F6h 6h Fg: Bg: 
+struct INSTRUCTION inst[39430] Resource Command (slot 25): Remove Slot 1290FCh 6h Fg: Bg: 
+struct INSTRUCTION inst[39431] Resource Command (slot 24): Remove Slot 129102h 6h Fg: Bg: 
+struct INSTRUCTION inst[39432] Resource Command (slot 23): Remove Slot 129108h 6h Fg: Bg: 
+struct INSTRUCTION inst[39433] Resource Command (slot 12): Remove Slot 12910Eh 6h Fg: Bg: 
+struct INSTRUCTION inst[39434] Resource Command (slot 13): Remove Slot 129114h 6h Fg: Bg: 
+struct INSTRUCTION inst[39435] Resource Command (slot 14): Remove Slot 12911Ah 6h Fg: Bg: 
+struct INSTRUCTION inst[39436] Resource Command (slot 15): Remove Slot 129120h 6h Fg: Bg: 
+struct INSTRUCTION inst[39437] Resource Command (slot 16): Remove Slot 129126h 6h Fg: Bg: 
+struct INSTRUCTION inst[39438] Resource Command (slot 4): Remove Slot 12912Ch 6h Fg: Bg: 
+struct INSTRUCTION inst[39439] Resource Command (slot 27): Remove Slot 129132h 6h Fg: Bg: 
+struct INSTRUCTION inst[39440] Resource Command (slot 3) PIC Load: KAKERA_MEMORY2 (1) 129138h 8h Fg: Bg: 
+struct INSTRUCTION inst[39441] Sprite Command (slot 3) [value=reg20] -> MONOCRO 129140h 8h Fg: Bg: 
+struct INSTRUCTION inst[39442] Sprite Command (slot 3) [value=reg21] -> ADD_BLEND 129148h 8h Fg: Bg: 
+struct INSTRUCTION inst[39443] SpriteSet Command [value=255] -> SPRITESET_PIXELATED_NOISE 129150h 6h Fg: Bg: 
+struct INSTRUCTION inst[39444] Print Command(128): doTransitionEffect(transitionMask=NO duration=NO unknown=NO ons_ef=NO block=1); 129156h 3h Fg: Bg: 
+struct INSTRUCTION inst[39445] SpriteSet Command [frames=60] -> SPRITESET_PIXELATED_NOISE 129159h 6h Fg: Bg: 
+struct INSTRUCTION inst[39446] SpriteSet Command Wait on property SPRITESET_WAIT_PIXELATED_NOISE 12915Fh 3h Fg: Bg: 
+struct INSTRUCTION inst[39447] wait 80 frames (1.333333 secs) 129162h 3h Fg: Bg: 
+struct INSTRUCTION inst[39448] SFX: channel 2, umise_022, volume 229 single_play 1 129165h Bh Fg: Bg: 
+struct INSTRUCTION inst[39449] Hide Dialogue Window 129170h 1h Fg: Bg: 
+struct INSTRUCTION inst[39450] wait 10 frames (0.166667 secs) 129171h 3h Fg: Bg: 
+struct INSTRUCTION inst[39451] Resource Command (slot 4): Remove Slot 129174h 6h Fg: Bg: 
+struct INSTRUCTION inst[39452] Resource Command (slot 8): Remove Slot 12917Ah 6h Fg: Bg: 
+struct INSTRUCTION inst[39453] Resource Command (slot 9): Remove Slot 129180h 6h Fg: Bg: 
+struct INSTRUCTION inst[39454] Resource Command (slot 10): Remove Slot 129186h 6h Fg: Bg: 
+struct INSTRUCTION inst[39455] Resource Command (slot 25): Remove Slot 12918Ch 6h Fg: Bg: 
+struct INSTRUCTION inst[39456] Resource Command (slot 24): Remove Slot 129192h 6h Fg: Bg: 
+struct INSTRUCTION inst[39457] Resource Command (slot 23): Remove Slot 129198h 6h Fg: Bg: 
+struct INSTRUCTION inst[39458] Resource Command (slot 12): Remove Slot 12919Eh 6h Fg: Bg: 
+struct INSTRUCTION inst[39459] Resource Command (slot 13): Remove Slot 1291A4h 6h Fg: Bg: 
+struct INSTRUCTION inst[39460] Resource Command (slot 14): Remove Slot 1291AAh 6h Fg: Bg: 
+struct INSTRUCTION inst[39461] Resource Command (slot 15): Remove Slot 1291B0h 6h Fg: Bg: 
+struct INSTRUCTION inst[39462] Resource Command (slot 16): Remove Slot 1291B6h 6h Fg: Bg: 
+struct INSTRUCTION inst[39463] Resource Command (slot 4): Remove Slot 1291BCh 6h Fg: Bg: 
+struct INSTRUCTION inst[39464] Resource Command (slot 27): Remove Slot 1291C2h 6h Fg: Bg: 
+struct INSTRUCTION inst[39465] Resource Command (slot 3) PIC Load: KAKERA_MEMORY1 (1) 1291C8h 8h Fg: Bg: 
+struct INSTRUCTION inst[39466] Sprite Command (slot 3) [value=reg20] -> MONOCRO 1291D0h 8h Fg: Bg: 
+struct INSTRUCTION inst[39467] Sprite Command (slot 3) [value=reg21] -> ADD_BLEND 1291D8h 8h Fg: Bg: 
+struct INSTRUCTION inst[39468] SpriteSet Command [value=255] -> SPRITESET_PIXELATED_NOISE 1291E0h 6h Fg: Bg: 
+struct INSTRUCTION inst[39469] Print Command(128): doTransitionEffect(transitionMask=NO duration=NO unknown=NO ons_ef=NO block=1); 1291E6h 3h Fg: Bg: 
+struct INSTRUCTION inst[39470] SpriteSet Command [frames=60] -> SPRITESET_PIXELATED_NOISE 1291E9h 6h Fg: Bg: 
+struct INSTRUCTION inst[39471] SpriteSet Command Wait on property SPRITESET_WAIT_PIXELATED_NOISE 1291EFh 3h Fg: Bg: 
+struct INSTRUCTION inst[39472] wait 80 frames (1.333333 secs) 1291F2h 3h Fg: Bg: 
+struct INSTRUCTION inst[39473] Hide Dialogue Window 1291F5h 1h Fg: Bg: 
+struct INSTRUCTION inst[39474] wait 10 frames (0.166667 secs) 1291F6h 3h Fg: Bg:</pre>{{cut_end}}

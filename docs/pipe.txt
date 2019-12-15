@@ -1,0 +1,90 @@
+h2. Day 2nd, Pipe research.
+
+_This article is valid only for the "non-plain" dialogues._
+
+h2. Related instructions
+
+*1) PIPE_COMMAND*
+It has 0x87 id. Takes a short int N as an argument meaning pipe index (starting from 0). Script processing will suspend here until the Nth (from 0) | character has been hit by dialogue controller (if it was already hit beforehand, that will still count). 
+— If the index is -1, script processing will suspend here until end of dialogue (click) has been hit by the dialogue controller.
+—By default (without any inline syntax) dialogue controller executes all the commands in parallel with text rendering before a first PIPE_COMMAND, so if no PIPE_COMMAND is present we would have had no proper way to stop the execution.
+
+*2) PIPE_RETURN*
+It has 0x88 id. Symbolises event pusher, once it is hit it sends an event to the dialogue controller which may or may not process it anyhow. Obviously, it may be used and may not exist at all. Allows dialogue controller to proceed through 'y' symbols.
+
+h2. Related inline symbols
+
+*1) 'y'*
+Symbolises event listener, it suspends dialogue controller's processing until an event from PIPE_RETURN is received.
+*2) 'Y'*
+Exact behaviour is unknown, may be found only in Chiru (for example, near 62200097 voice). Presumably works the same as 'y', can be a typo.
+*3) '|'*
+Symbolises a semaphore. Allows the next PIPE to process.
+
+h2. Known command usages.
+
+*1) '|' and '||'* (for example, near 11200014 voice). Nothing special, other than '||' usage is ambiguous, they could have removed one PIPE and avoid this nonsense. Episode 1 is the only place this is used and it is one of the most buggy episodes in general.
+*2) '|y'* (almost everwhere, for example, near 11400002 voice). Most general case, the one we can handle with the current approach without any issues.
+*3) 'y'* (for example, near 90100212 voice). Used for fixed timing. One big pipe is not separated by multiple pipes but the dialogue execution is controlled by timers inside the pipes.
+
+h2. Value pass.
+
+At the moment parser.php is completely broken, not worth exploring the madness it tries to hack through. It is also impossible to reproduce all the cases PS3 does, so we will need to code them out first.
+
+h2. ONScripter-RU implementation.
+
+Our current approach is to be changed to something more closely approximating the PS3 one, as there are some sections that cannot be accurately ported with the current code.
+
+PS3 dialogue controller's behavior seems to be that when a certain flag is set, it stores the dialogue from dialogue commands in some location and executes it in the background as the script proceeds onwards.
+
+pseudocode:
+
+<pre>
+*d1384
+d [symbol_for_enable_pipe_mode]`Dialogue1[@][#][symbol_for_wait_on_script_execution]Dialogue2`
+wait_on_dialogue 1
+;commands here
+signal_dialogue_to_continue
+wait_on_dialogue EOD
+</pre>
+
+(command names up to Vit, but I suggest retiring the word "pipe" at this point)
+
+Instead of executing dialogueCommand repeatedly, we will have it return RET_CONTINUE and progress to the next command; dialogue controller will execute asynchronously in CR (/advanceGameState). 
+
+After the dialogue begins rendering, we will start to process the following commands beginning with @wait_on_dialogue@. Main script will suspend here.
+
+When dialogue processing hits <notextile>@</notextile>, we will somehow store the pointer and handle @text_cw@. @text_cw@ will contain a command tentatively called @loan_exec@ before the @txtbtnwait@ that returns control to this pointer temporarily. We will return from @loan_exec@ when we receive some kind of event passed as a param. @loan_exec@ might also be invoked implicitly on @btnwait@ commands. 
+
+>Considering the type of btnwait (and flags set) we can set the list of events which abort execution loan.  
+>That generally includes various button list, including lsp buttons, some keyboard buttons, gamepad and so on.  
+>we have btnwait flags (preceding the command), various btnwait names that define a subset of events we receive.  
+
+>btnwait %Variable, bitfield=0  
+>Where bitfield means:  
+>0 = off  
+>1 = all defined by btnwait  
+>2,4,8,16 — various buttons, numaliases for which are defined internally by ons  
+
+> so, we are safe to write:
+>btnwait2 %BtnRes  
+>btnwait2 %BtnRes, K_OFF  
+>btnwait2 %BtnRes, K_DEFAULT  
+>btnwait2 %BtnRes, K_MOUSE+K_ESC+K_PAD  
+>for example  
+>because for bitset + works equally on separate bits that don't overlap  
+
+This way we can make sure control is restored to @text_cw@ on user-input or when the commands have information to pass back (notably @signal_dialogue_to_continue@ which allows the dialogue to proceed past @symbol_for_wait_on_script_execution@). The list of predefined aliases may not be only used here, since we need to handle various buttons on gamepad control, we probably want some more general solution (which can be separate from the main pipe handling). My spontaneous thoughts on that included something like "set_btnwait_events K_ESC+K_PAD"...
+
+We will have a slight problem in that the current command executing in the @;commands@ section may consume the button press expected by @loan_exec@ or @btnwait@. Concerning this Vit says: 
+
+>For multiple event processing (i. e. when we want to send the event to more than one listener) we create some controller, that will have a list of event listeners (even suspended). So, even if "pipe" execution is suspended (or the opposite), we get the event and apply it to all the listeners when it is their time to be executed.
+
+lend_execution logic should be like:
+1) Check if there are things we can lend the processing to.
+2) Return if there are no things like that.
+3) Change current exec position.
+
+Actual script position transfer model is still rather unclear, but we expect using ons gosubs and returns where possible. We can gosub to *text_cw area and return back on loan_exec, same for the parts of *text_cw (past first loan_exec, for example). "pipe" %index needs to be coded closely to ps3, but including setting a flag (pushing some event) that execution loaning is not needed any more. Otherwise, we need to push some other (i.e. keyboard) event which we accept according to loan_exec (or its friends') params. Both cases might go through the same model (controller).
+
+For "plain" dialogues situation is still discussable (about a return a point from text_cw) but we may try both our current approach and "pause execution? + return before next command" approach.
