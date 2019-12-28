@@ -26603,179 +26603,177 @@ return
 return
 
 *log_jump_next_chapter
-	; FIXME: Use of tab in Episode 8 to skip chapters is broken right now.
-	; The idea of having tab work by checking the presence of magic jump variables (e.g. $flag_scenario_8_1, whether we have ever previously cleared the chapter) cannot work for episode 8.
-	; There is no sane default set of future choices that can be chosen -- they may contain unread lines, which would break the log and are a bad practice to skip even from a theoretical point of view.
-	; A "previous route" (choice_vector_8_N) also cannot be reused since it has probably been deviated from by the choices we made thus far in this playthrough of the episode.
-	; To be clear, the problem occurs when there is not a clear path to the end of the chapter (i.e. there are choicepoints between our current position and chapter end, i.e. the next chapter label is not in the log).
-	; Some imaginable solutions if we find ourselves in this situation:
-	; 1. Do not allow logjump using tab.
-	; 2. Change the behavior of tab to logjump to the last line in the log, which will be immediately before a choicepoint.
-	;    (Making good usage of the work already put into ensuring log has a sane state at all times and that all its lines are reachable.)
-	; 3. Change the behavior of tab to jump exactly to the next choicepoint (cake/quiz/quiz2/murder_story/etc... collectively cqq2m).
-	;    This third choice seems very complicated and I would advise against it. At least three problems I can think of immediately, surely there are more:
-	;    accept_choice, that would kick us out of sskip, is currently *after* cqq2m (in get_response);
-	;    cqq2m has no label to jump to;
-	;    and logjump superskip chokes horribly if it fails to reach its destination (jumping to the dst anyway).
-	; Disabled the use of tab in ep8 entirely for now.
-	if %scenario_Number == 8 jumpf ; Disabled
 	if %scenario_Number != 8 jumpf
-		if $name_chapter_save = "8_op" if %UMINEKOEND >= 81 || $flag_scenario_8_1 = "●" mov $log_ch_current,"*umi8_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_01" if %UMINEKOEND >= 81 || $flag_scenario_8_2 = "●" mov $log_ch_current,"*umi8_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_02" if %UMINEKOEND >= 81 || $flag_scenario_8_3 = "●" mov $log_ch_current,"*umi8_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_03" if %UMINEKOEND >= 81 || $flag_scenario_8_4 = "●" mov $log_ch_current,"*umi8_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_04" if %UMINEKOEND >= 81 || $flag_scenario_8_5 = "●" mov $log_ch_current,"*umi8_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_05" if %UMINEKOEND >= 81 || $flag_scenario_8_6 = "●" mov $log_ch_current,"*umi8_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_06" if %UMINEKOEND >= 81 || $flag_scenario_8_7 = "●" mov $log_ch_current,"*umi8_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_07" if %UMINEKOEND >= 81 || $flag_scenario_8_8 = "●" mov $log_ch_current,"*umi8_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_08" if %UMINEKOEND >= 81 || $flag_scenario_8_9 = "●" mov $log_ch_current,"*umi8_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_09" if %UMINEKOEND >= 81 || $flag_scenario_8_10 = "●" mov $log_ch_current,"*umi8_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_10" if %UMINEKOEND >= 81 || $flag_scenario_8_11 = "●" mov $log_ch_current,"*umi8_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_11" if %UMINEKOEND >= 81 || $flag_scenario_8_12 = "●" mov $log_ch_current,"*umi8_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_12" if %UMINEKOEND >= 81 || $flag_scenario_8_13 = "●" mov $log_ch_current,"*umi8_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_13" if %UMINEKOEND >= 81 || $flag_scenario_8_14 = "●" mov $log_ch_current,"*umi8_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_14" if %UMINEKOEND >= 81 || $flag_scenario_8_15 = "●" mov $log_ch_current,"*umi8_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "8_15" if %UMINEKOEND >= 81 || $flag_scenario_8_16 = "●" mov $log_ch_current,"*umi8_16" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_op" if %UMINEKOEND >= 81 || $flag_scenario_8_1 = "●"  : mov $log_ch_current,"*umi8_op" : mov $log_ch_next,"*umi8_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_01" if %UMINEKOEND >= 81 || $flag_scenario_8_2 = "●"  : mov $log_ch_current,"*umi8_1"  : mov $log_ch_next,"*umi8_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_02" if %UMINEKOEND >= 81 || $flag_scenario_8_3 = "●"  : mov $log_ch_current,"*umi8_2"  : mov $log_ch_next,"*umi8_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_03" if %UMINEKOEND >= 81 || $flag_scenario_8_4 = "●"  : mov $log_ch_current,"*umi8_3"  : mov $log_ch_next,"*umi8_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_04" if %UMINEKOEND >= 81 || $flag_scenario_8_5 = "●"  : mov $log_ch_current,"*umi8_4"  : mov $log_ch_next,"*umi8_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_05" if %UMINEKOEND >= 81 || $flag_scenario_8_6 = "●"  : mov $log_ch_current,"*umi8_5"  : mov $log_ch_next,"*umi8_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_06" if %UMINEKOEND >= 81 || $flag_scenario_8_7 = "●"  : mov $log_ch_current,"*umi8_6"  : mov $log_ch_next,"*umi8_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_07" if %UMINEKOEND >= 81 || $flag_scenario_8_8 = "●"  : mov $log_ch_current,"*umi8_7"  : mov $log_ch_next,"*umi8_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_08" if %UMINEKOEND >= 81 || $flag_scenario_8_9 = "●"  : mov $log_ch_current,"*umi8_8"  : mov $log_ch_next,"*umi8_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_09" if %UMINEKOEND >= 81 || $flag_scenario_8_10 = "●" : mov $log_ch_current,"*umi8_9"  : mov $log_ch_next,"*umi8_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_10" if %UMINEKOEND >= 81 || $flag_scenario_8_11 = "●" : mov $log_ch_current,"*umi8_10" : mov $log_ch_next,"*umi8_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_11" if %UMINEKOEND >= 81 || $flag_scenario_8_12 = "●" : mov $log_ch_current,"*umi8_11" : mov $log_ch_next,"*umi8_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_12" if %UMINEKOEND >= 81 || $flag_scenario_8_13 = "●" : mov $log_ch_current,"*umi8_12" : mov $log_ch_next,"*umi8_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_13" if %UMINEKOEND >= 81 || $flag_scenario_8_14 = "●" : mov $log_ch_current,"*umi8_13" : mov $log_ch_next,"*umi8_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_14" if %UMINEKOEND >= 81 || $flag_scenario_8_15 = "●" : mov $log_ch_current,"*umi8_14" : mov $log_ch_next,"*umi8_15" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "8_15" if %UMINEKOEND >= 81 || $flag_scenario_8_16 = "●" : mov $log_ch_current,"*umi8_15" : mov $log_ch_next,"*umi8_16" : goto *log_jump_next_chapter_ok
 	~
 	if %scenario_Number != 7 jumpf
-		if $name_chapter_save = "7_op" if %UMINEKOEND >= 71 || $flag_scenario_7_1 = "●" mov $log_ch_current,"*umi7_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_01" if %UMINEKOEND >= 71 || $flag_scenario_7_2 = "●" mov $log_ch_current,"*umi7_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_02" if %UMINEKOEND >= 71 || $flag_scenario_7_3 = "●" mov $log_ch_current,"*umi7_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_03" if %UMINEKOEND >= 71 || $flag_scenario_7_4 = "●" mov $log_ch_current,"*umi7_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_04" if %UMINEKOEND >= 71 || $flag_scenario_7_5 = "●" mov $log_ch_current,"*umi7_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_05" if %UMINEKOEND >= 71 || $flag_scenario_7_6 = "●" mov $log_ch_current,"*umi7_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_06" if %UMINEKOEND >= 71 || $flag_scenario_7_7 = "●" mov $log_ch_current,"*umi7_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_07" if %UMINEKOEND >= 71 || $flag_scenario_7_8 = "●" mov $log_ch_current,"*umi7_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_08" if %UMINEKOEND >= 71 || $flag_scenario_7_9 = "●" mov $log_ch_current,"*umi7_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_09" if %UMINEKOEND >= 71 || $flag_scenario_7_10 = "●" mov $log_ch_current,"*umi7_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_10" if %UMINEKOEND >= 71 || $flag_scenario_7_11 = "●" mov $log_ch_current,"*umi7_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_11" if %UMINEKOEND >= 71 || $flag_scenario_7_12 = "●" mov $log_ch_current,"*umi7_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_12" if %UMINEKOEND >= 71 || $flag_scenario_7_13 = "●" mov $log_ch_current,"*umi7_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_13" if %UMINEKOEND >= 71 || $flag_scenario_7_14 = "●" mov $log_ch_current,"*umi7_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_14" if %UMINEKOEND >= 71 || $flag_scenario_7_15 = "●" mov $log_ch_current,"*umi7_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_15" if %UMINEKOEND >= 71 || $flag_scenario_7_16 = "●" mov $log_ch_current,"*umi7_16" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_16" if %UMINEKOEND >= 71 || $flag_scenario_7_17 = "●" mov $log_ch_current,"*umi7_17" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "7_17" if %UMINEKOEND >= 71 || $flag_scenario_7_18 = "●" mov $log_ch_current,"*umi7_18" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_op" if %UMINEKOEND >= 71 || $flag_scenario_7_1 = "●"  : mov $log_ch_current,"*umi7_op" : mov $log_ch_next,"*umi7_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_01" if %UMINEKOEND >= 71 || $flag_scenario_7_2 = "●"  : mov $log_ch_current,"*umi7_1"  : mov $log_ch_next,"*umi7_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_02" if %UMINEKOEND >= 71 || $flag_scenario_7_3 = "●"  : mov $log_ch_current,"*umi7_2"  : mov $log_ch_next,"*umi7_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_03" if %UMINEKOEND >= 71 || $flag_scenario_7_4 = "●"  : mov $log_ch_current,"*umi7_3"  : mov $log_ch_next,"*umi7_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_04" if %UMINEKOEND >= 71 || $flag_scenario_7_5 = "●"  : mov $log_ch_current,"*umi7_4"  : mov $log_ch_next,"*umi7_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_05" if %UMINEKOEND >= 71 || $flag_scenario_7_6 = "●"  : mov $log_ch_current,"*umi7_5"  : mov $log_ch_next,"*umi7_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_06" if %UMINEKOEND >= 71 || $flag_scenario_7_7 = "●"  : mov $log_ch_current,"*umi7_6"  : mov $log_ch_next,"*umi7_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_07" if %UMINEKOEND >= 71 || $flag_scenario_7_8 = "●"  : mov $log_ch_current,"*umi7_7"  : mov $log_ch_next,"*umi7_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_08" if %UMINEKOEND >= 71 || $flag_scenario_7_9 = "●"  : mov $log_ch_current,"*umi7_8"  : mov $log_ch_next,"*umi7_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_09" if %UMINEKOEND >= 71 || $flag_scenario_7_10 = "●" : mov $log_ch_current,"*umi7_9"  : mov $log_ch_next,"*umi7_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_10" if %UMINEKOEND >= 71 || $flag_scenario_7_11 = "●" : mov $log_ch_current,"*umi7_10" : mov $log_ch_next,"*umi7_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_11" if %UMINEKOEND >= 71 || $flag_scenario_7_12 = "●" : mov $log_ch_current,"*umi7_11" : mov $log_ch_next,"*umi7_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_12" if %UMINEKOEND >= 71 || $flag_scenario_7_13 = "●" : mov $log_ch_current,"*umi7_12" : mov $log_ch_next,"*umi7_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_13" if %UMINEKOEND >= 71 || $flag_scenario_7_14 = "●" : mov $log_ch_current,"*umi7_13" : mov $log_ch_next,"*umi7_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_14" if %UMINEKOEND >= 71 || $flag_scenario_7_15 = "●" : mov $log_ch_current,"*umi7_14" : mov $log_ch_next,"*umi7_15" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_15" if %UMINEKOEND >= 71 || $flag_scenario_7_16 = "●" : mov $log_ch_current,"*umi7_15" : mov $log_ch_next,"*umi7_16" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_16" if %UMINEKOEND >= 71 || $flag_scenario_7_17 = "●" : mov $log_ch_current,"*umi7_16" : mov $log_ch_next,"*umi7_17" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "7_17" if %UMINEKOEND >= 71 || $flag_scenario_7_18 = "●" : mov $log_ch_current,"*umi7_17" : mov $log_ch_next,"*umi7_18" : goto *log_jump_next_chapter_ok
 	~
 	if %scenario_Number != 6 jumpf
-		if $name_chapter_save = "6_op" if %UMINEKOEND >= 61 || $flag_scenario_6_1 = "●" mov $log_ch_current,"*umi6_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_01" if %UMINEKOEND >= 61 || $flag_scenario_6_2 = "●" mov $log_ch_current,"*umi6_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_02" if %UMINEKOEND >= 61 || $flag_scenario_6_3 = "●" mov $log_ch_current,"*umi6_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_03" if %UMINEKOEND >= 61 || $flag_scenario_6_4 = "●" mov $log_ch_current,"*umi6_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_04" if %UMINEKOEND >= 61 || $flag_scenario_6_5 = "●" mov $log_ch_current,"*umi6_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_05" if %UMINEKOEND >= 61 || $flag_scenario_6_6 = "●" mov $log_ch_current,"*umi6_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_06" if %UMINEKOEND >= 61 || $flag_scenario_6_7 = "●" mov $log_ch_current,"*umi6_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_07" if %UMINEKOEND >= 61 || $flag_scenario_6_8 = "●" mov $log_ch_current,"*umi6_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_08" if %UMINEKOEND >= 61 || $flag_scenario_6_9 = "●" mov $log_ch_current,"*umi6_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_09" if %UMINEKOEND >= 61 || $flag_scenario_6_10 = "●" mov $log_ch_current,"*umi6_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_10" if %UMINEKOEND >= 61 || $flag_scenario_6_11 = "●" mov $log_ch_current,"*umi6_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_11" if %UMINEKOEND >= 61 || $flag_scenario_6_12 = "●" mov $log_ch_current,"*umi6_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_12" if %UMINEKOEND >= 61 || $flag_scenario_6_13 = "●" mov $log_ch_current,"*umi6_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_13" if %UMINEKOEND >= 61 || $flag_scenario_6_14 = "●" mov $log_ch_current,"*umi6_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_14" if %UMINEKOEND >= 61 || $flag_scenario_6_15 = "●" mov $log_ch_current,"*umi6_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_15" if %UMINEKOEND >= 61 || $flag_scenario_6_16 = "●" mov $log_ch_current,"*umi6_16" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_16" if %UMINEKOEND >= 61 || $flag_scenario_6_17 = "●" mov $log_ch_current,"*umi6_17" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "6_17" if %UMINEKOEND >= 61 || $flag_scenario_6_18 = "●" mov $log_ch_current,"*umi6_18" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_op" if %UMINEKOEND >= 61 || $flag_scenario_6_1 = "●"  : mov $log_ch_current,"*umi6_op" : mov $log_ch_next,"*umi6_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_01" if %UMINEKOEND >= 61 || $flag_scenario_6_2 = "●"  : mov $log_ch_current,"*umi6_1"  : mov $log_ch_next,"*umi6_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_02" if %UMINEKOEND >= 61 || $flag_scenario_6_3 = "●"  : mov $log_ch_current,"*umi6_2"  : mov $log_ch_next,"*umi6_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_03" if %UMINEKOEND >= 61 || $flag_scenario_6_4 = "●"  : mov $log_ch_current,"*umi6_3"  : mov $log_ch_next,"*umi6_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_04" if %UMINEKOEND >= 61 || $flag_scenario_6_5 = "●"  : mov $log_ch_current,"*umi6_4"  : mov $log_ch_next,"*umi6_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_05" if %UMINEKOEND >= 61 || $flag_scenario_6_6 = "●"  : mov $log_ch_current,"*umi6_5"  : mov $log_ch_next,"*umi6_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_06" if %UMINEKOEND >= 61 || $flag_scenario_6_7 = "●"  : mov $log_ch_current,"*umi6_6"  : mov $log_ch_next,"*umi6_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_07" if %UMINEKOEND >= 61 || $flag_scenario_6_8 = "●"  : mov $log_ch_current,"*umi6_7"  : mov $log_ch_next,"*umi6_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_08" if %UMINEKOEND >= 61 || $flag_scenario_6_9 = "●"  : mov $log_ch_current,"*umi6_8"  : mov $log_ch_next,"*umi6_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_09" if %UMINEKOEND >= 61 || $flag_scenario_6_10 = "●" : mov $log_ch_current,"*umi6_9"  : mov $log_ch_next,"*umi6_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_10" if %UMINEKOEND >= 61 || $flag_scenario_6_11 = "●" : mov $log_ch_current,"*umi6_10" : mov $log_ch_next,"*umi6_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_11" if %UMINEKOEND >= 61 || $flag_scenario_6_12 = "●" : mov $log_ch_current,"*umi6_11" : mov $log_ch_next,"*umi6_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_12" if %UMINEKOEND >= 61 || $flag_scenario_6_13 = "●" : mov $log_ch_current,"*umi6_12" : mov $log_ch_next,"*umi6_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_13" if %UMINEKOEND >= 61 || $flag_scenario_6_14 = "●" : mov $log_ch_current,"*umi6_13" : mov $log_ch_next,"*umi6_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_14" if %UMINEKOEND >= 61 || $flag_scenario_6_15 = "●" : mov $log_ch_current,"*umi6_14" : mov $log_ch_next,"*umi6_15" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_15" if %UMINEKOEND >= 61 || $flag_scenario_6_16 = "●" : mov $log_ch_current,"*umi6_15" : mov $log_ch_next,"*umi6_16" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_16" if %UMINEKOEND >= 61 || $flag_scenario_6_17 = "●" : mov $log_ch_current,"*umi6_16" : mov $log_ch_next,"*umi6_17" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "6_17" if %UMINEKOEND >= 61 || $flag_scenario_6_18 = "●" : mov $log_ch_current,"*umi6_17" : mov $log_ch_next,"*umi6_18" : goto *log_jump_next_chapter_ok
 	~
 	if %scenario_Number != 5 jumpf
-		if $name_chapter_save = "5_op" if %UMINEKOEND >= 51 || $flag_scenario_5_1 = "●" mov $log_ch_current,"*umi5_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_01" if %UMINEKOEND >= 51 || $flag_scenario_5_2 = "●" mov $log_ch_current,"*umi5_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_02" if %UMINEKOEND >= 51 || $flag_scenario_5_3 = "●" mov $log_ch_current,"*umi5_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_03" if %UMINEKOEND >= 51 || $flag_scenario_5_4 = "●" mov $log_ch_current,"*umi5_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_04" if %UMINEKOEND >= 51 || $flag_scenario_5_5 = "●" mov $log_ch_current,"*umi5_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_05" if %UMINEKOEND >= 51 || $flag_scenario_5_6 = "●" mov $log_ch_current,"*umi5_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_06" if %UMINEKOEND >= 51 || $flag_scenario_5_7 = "●" mov $log_ch_current,"*umi5_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_07" if %UMINEKOEND >= 51 || $flag_scenario_5_8 = "●" mov $log_ch_current,"*umi5_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_08" if %UMINEKOEND >= 51 || $flag_scenario_5_9 = "●" mov $log_ch_current,"*umi5_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_09" if %UMINEKOEND >= 51 || $flag_scenario_5_10 = "●" mov $log_ch_current,"*umi5_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_10" if %UMINEKOEND >= 51 || $flag_scenario_5_11 = "●" mov $log_ch_current,"*umi5_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_11" if %UMINEKOEND >= 51 || $flag_scenario_5_12 = "●" mov $log_ch_current,"*umi5_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_12" if %UMINEKOEND >= 51 || $flag_scenario_5_13 = "●" mov $log_ch_current,"*umi5_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_13" if %UMINEKOEND >= 51 || $flag_scenario_5_14 = "●" mov $log_ch_current,"*umi5_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "5_14" if %UMINEKOEND >= 51 || $flag_scenario_5_15 = "●" mov $log_ch_current,"*umi5_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_op" if %UMINEKOEND >= 51 || $flag_scenario_5_1 = "●"  : mov $log_ch_current,"*umi5_op" : mov $log_ch_next,"*umi5_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_01" if %UMINEKOEND >= 51 || $flag_scenario_5_2 = "●"  : mov $log_ch_current,"*umi5_1"  : mov $log_ch_next,"*umi5_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_02" if %UMINEKOEND >= 51 || $flag_scenario_5_3 = "●"  : mov $log_ch_current,"*umi5_2"  : mov $log_ch_next,"*umi5_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_03" if %UMINEKOEND >= 51 || $flag_scenario_5_4 = "●"  : mov $log_ch_current,"*umi5_3"  : mov $log_ch_next,"*umi5_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_04" if %UMINEKOEND >= 51 || $flag_scenario_5_5 = "●"  : mov $log_ch_current,"*umi5_4"  : mov $log_ch_next,"*umi5_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_05" if %UMINEKOEND >= 51 || $flag_scenario_5_6 = "●"  : mov $log_ch_current,"*umi5_5"  : mov $log_ch_next,"*umi5_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_06" if %UMINEKOEND >= 51 || $flag_scenario_5_7 = "●"  : mov $log_ch_current,"*umi5_6"  : mov $log_ch_next,"*umi5_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_07" if %UMINEKOEND >= 51 || $flag_scenario_5_8 = "●"  : mov $log_ch_current,"*umi5_7"  : mov $log_ch_next,"*umi5_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_08" if %UMINEKOEND >= 51 || $flag_scenario_5_9 = "●"  : mov $log_ch_current,"*umi5_8"  : mov $log_ch_next,"*umi5_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_09" if %UMINEKOEND >= 51 || $flag_scenario_5_10 = "●" : mov $log_ch_current,"*umi5_9"  : mov $log_ch_next,"*umi5_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_10" if %UMINEKOEND >= 51 || $flag_scenario_5_11 = "●" : mov $log_ch_current,"*umi5_10" : mov $log_ch_next,"*umi5_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_11" if %UMINEKOEND >= 51 || $flag_scenario_5_12 = "●" : mov $log_ch_current,"*umi5_11" : mov $log_ch_next,"*umi5_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_12" if %UMINEKOEND >= 51 || $flag_scenario_5_13 = "●" : mov $log_ch_current,"*umi5_12" : mov $log_ch_next,"*umi5_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_13" if %UMINEKOEND >= 51 || $flag_scenario_5_14 = "●" : mov $log_ch_current,"*umi5_13" : mov $log_ch_next,"*umi5_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "5_14" if %UMINEKOEND >= 51 || $flag_scenario_5_15 = "●" : mov $log_ch_current,"*umi5_14" : mov $log_ch_next,"*umi5_15" : goto *log_jump_next_chapter_ok
 	~
 	if %scenario_Number != 4 jumpf
-		if $name_chapter_save = "4_op" if %UMINEKOEND >= 41 || $flag_scenario_4_1 = "●" mov $log_ch_current,"*umi4_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_01" if %UMINEKOEND >= 41 || $flag_scenario_4_2 = "●" mov $log_ch_current,"*umi4_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_02" if %UMINEKOEND >= 41 || $flag_scenario_4_3 = "●" mov $log_ch_current,"*umi4_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_03" if %UMINEKOEND >= 41 || $flag_scenario_4_4 = "●" mov $log_ch_current,"*umi4_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_04" if %UMINEKOEND >= 41 || $flag_scenario_4_5 = "●" mov $log_ch_current,"*umi4_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_05" if %UMINEKOEND >= 41 || $flag_scenario_4_6 = "●" mov $log_ch_current,"*umi4_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_06" if %UMINEKOEND >= 41 || $flag_scenario_4_7 = "●" mov $log_ch_current,"*umi4_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_07" if %UMINEKOEND >= 41 || $flag_scenario_4_8 = "●" mov $log_ch_current,"*umi4_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_08" if %UMINEKOEND >= 41 || $flag_scenario_4_9 = "●" mov $log_ch_current,"*umi4_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_09" if %UMINEKOEND >= 41 || $flag_scenario_4_10 = "●" mov $log_ch_current,"*umi4_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_10" if %UMINEKOEND >= 41 || $flag_scenario_4_11 = "●" mov $log_ch_current,"*umi4_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_11" if %UMINEKOEND >= 41 || $flag_scenario_4_12 = "●" mov $log_ch_current,"*umi4_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_12" if %UMINEKOEND >= 41 || $flag_scenario_4_13 = "●" mov $log_ch_current,"*umi4_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_13" if %UMINEKOEND >= 41 || $flag_scenario_4_14 = "●" mov $log_ch_current,"*umi4_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_14" if %UMINEKOEND >= 41 || $flag_scenario_4_15 = "●" mov $log_ch_current,"*umi4_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_15" if %UMINEKOEND >= 41 || $flag_scenario_4_16 = "●" mov $log_ch_current,"*umi4_16" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_16" if %UMINEKOEND >= 41 || $flag_scenario_4_17 = "●" mov $log_ch_current,"*umi4_17" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_17" if %UMINEKOEND >= 41 || $flag_scenario_4_18 = "●" mov $log_ch_current,"*umi4_18" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "4_18" if %UMINEKOEND >= 41 || $flag_scenario_4_19 = "●" mov $log_ch_current,"*umi4_19" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_op" if %UMINEKOEND >= 41 || $flag_scenario_4_1 = "●"  : mov $log_ch_current,"*umi4_op" : mov $log_ch_next,"*umi4_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_01" if %UMINEKOEND >= 41 || $flag_scenario_4_2 = "●"  : mov $log_ch_current,"*umi4_1"  : mov $log_ch_next,"*umi4_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_02" if %UMINEKOEND >= 41 || $flag_scenario_4_3 = "●"  : mov $log_ch_current,"*umi4_2"  : mov $log_ch_next,"*umi4_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_03" if %UMINEKOEND >= 41 || $flag_scenario_4_4 = "●"  : mov $log_ch_current,"*umi4_3"  : mov $log_ch_next,"*umi4_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_04" if %UMINEKOEND >= 41 || $flag_scenario_4_5 = "●"  : mov $log_ch_current,"*umi4_4"  : mov $log_ch_next,"*umi4_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_05" if %UMINEKOEND >= 41 || $flag_scenario_4_6 = "●"  : mov $log_ch_current,"*umi4_5"  : mov $log_ch_next,"*umi4_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_06" if %UMINEKOEND >= 41 || $flag_scenario_4_7 = "●"  : mov $log_ch_current,"*umi4_6"  : mov $log_ch_next,"*umi4_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_07" if %UMINEKOEND >= 41 || $flag_scenario_4_8 = "●"  : mov $log_ch_current,"*umi4_7"  : mov $log_ch_next,"*umi4_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_08" if %UMINEKOEND >= 41 || $flag_scenario_4_9 = "●"  : mov $log_ch_current,"*umi4_8"  : mov $log_ch_next,"*umi4_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_09" if %UMINEKOEND >= 41 || $flag_scenario_4_10 = "●" : mov $log_ch_current,"*umi4_9"  : mov $log_ch_next,"*umi4_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_10" if %UMINEKOEND >= 41 || $flag_scenario_4_11 = "●" : mov $log_ch_current,"*umi4_10" : mov $log_ch_next,"*umi4_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_11" if %UMINEKOEND >= 41 || $flag_scenario_4_12 = "●" : mov $log_ch_current,"*umi4_11" : mov $log_ch_next,"*umi4_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_12" if %UMINEKOEND >= 41 || $flag_scenario_4_13 = "●" : mov $log_ch_current,"*umi4_12" : mov $log_ch_next,"*umi4_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_13" if %UMINEKOEND >= 41 || $flag_scenario_4_14 = "●" : mov $log_ch_current,"*umi4_13" : mov $log_ch_next,"*umi4_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_14" if %UMINEKOEND >= 41 || $flag_scenario_4_15 = "●" : mov $log_ch_current,"*umi4_14" : mov $log_ch_next,"*umi4_15" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_15" if %UMINEKOEND >= 41 || $flag_scenario_4_16 = "●" : mov $log_ch_current,"*umi4_15" : mov $log_ch_next,"*umi4_16" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_16" if %UMINEKOEND >= 41 || $flag_scenario_4_17 = "●" : mov $log_ch_current,"*umi4_16" : mov $log_ch_next,"*umi4_17" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_17" if %UMINEKOEND >= 41 || $flag_scenario_4_18 = "●" : mov $log_ch_current,"*umi4_17" : mov $log_ch_next,"*umi4_18" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "4_18" if %UMINEKOEND >= 41 || $flag_scenario_4_19 = "●" : mov $log_ch_current,"*umi4_18" : mov $log_ch_next,"*umi4_19" : goto *log_jump_next_chapter_ok
 	~
 	if %scenario_Number != 3 jumpf
-		if $name_chapter_save = "3_op" if %UMINEKOEND >= 31 || $flag_scenario_3_1 = "●" mov $log_ch_current,"*umi3_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_01" if %UMINEKOEND >= 31 || $flag_scenario_3_2 = "●" mov $log_ch_current,"*umi3_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_02" if %UMINEKOEND >= 31 || $flag_scenario_3_3 = "●" mov $log_ch_current,"*umi3_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_03" if %UMINEKOEND >= 31 || $flag_scenario_3_4 = "●" mov $log_ch_current,"*umi3_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_04" if %UMINEKOEND >= 31 || $flag_scenario_3_5 = "●" mov $log_ch_current,"*umi3_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_05" if %UMINEKOEND >= 31 || $flag_scenario_3_6 = "●" mov $log_ch_current,"*umi3_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_06" if %UMINEKOEND >= 31 || $flag_scenario_3_7 = "●" mov $log_ch_current,"*umi3_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_07" if %UMINEKOEND >= 31 || $flag_scenario_3_8 = "●" mov $log_ch_current,"*umi3_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_08" if %UMINEKOEND >= 31 || $flag_scenario_3_9 = "●" mov $log_ch_current,"*umi3_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_09" if %UMINEKOEND >= 31 || $flag_scenario_3_10 = "●" mov $log_ch_current,"*umi3_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_10" if %UMINEKOEND >= 31 || $flag_scenario_3_11 = "●" mov $log_ch_current,"*umi3_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_11" if %UMINEKOEND >= 31 || $flag_scenario_3_12 = "●" mov $log_ch_current,"*umi3_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_12" if %UMINEKOEND >= 31 || $flag_scenario_3_13 = "●" mov $log_ch_current,"*umi3_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_13" if %UMINEKOEND >= 31 || $flag_scenario_3_14 = "●" mov $log_ch_current,"*umi3_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_14" if %UMINEKOEND >= 31 || $flag_scenario_3_15 = "●" mov $log_ch_current,"*umi3_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_15" if %UMINEKOEND >= 31 || $flag_scenario_3_16 = "●" mov $log_ch_current,"*umi3_16" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_16" if %UMINEKOEND >= 31 || $flag_scenario_3_17 = "●" mov $log_ch_current,"*umi3_17" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "3_17" if %UMINEKOEND >= 31 || $flag_scenario_3_18 = "●" mov $log_ch_current,"*umi3_18" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_op" if %UMINEKOEND >= 31 || $flag_scenario_3_1 = "●"  : mov $log_ch_current,"*umi3_op" : mov $log_ch_next,"*umi3_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_01" if %UMINEKOEND >= 31 || $flag_scenario_3_2 = "●"  : mov $log_ch_current,"*umi3_1"  : mov $log_ch_next,"*umi3_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_02" if %UMINEKOEND >= 31 || $flag_scenario_3_3 = "●"  : mov $log_ch_current,"*umi3_2"  : mov $log_ch_next,"*umi3_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_03" if %UMINEKOEND >= 31 || $flag_scenario_3_4 = "●"  : mov $log_ch_current,"*umi3_3"  : mov $log_ch_next,"*umi3_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_04" if %UMINEKOEND >= 31 || $flag_scenario_3_5 = "●"  : mov $log_ch_current,"*umi3_4"  : mov $log_ch_next,"*umi3_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_05" if %UMINEKOEND >= 31 || $flag_scenario_3_6 = "●"  : mov $log_ch_current,"*umi3_5"  : mov $log_ch_next,"*umi3_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_06" if %UMINEKOEND >= 31 || $flag_scenario_3_7 = "●"  : mov $log_ch_current,"*umi3_6"  : mov $log_ch_next,"*umi3_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_07" if %UMINEKOEND >= 31 || $flag_scenario_3_8 = "●"  : mov $log_ch_current,"*umi3_7"  : mov $log_ch_next,"*umi3_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_08" if %UMINEKOEND >= 31 || $flag_scenario_3_9 = "●"  : mov $log_ch_current,"*umi3_8"  : mov $log_ch_next,"*umi3_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_09" if %UMINEKOEND >= 31 || $flag_scenario_3_10 = "●" : mov $log_ch_current,"*umi3_9"  : mov $log_ch_next,"*umi3_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_10" if %UMINEKOEND >= 31 || $flag_scenario_3_11 = "●" : mov $log_ch_current,"*umi3_10" : mov $log_ch_next,"*umi3_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_11" if %UMINEKOEND >= 31 || $flag_scenario_3_12 = "●" : mov $log_ch_current,"*umi3_11" : mov $log_ch_next,"*umi3_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_12" if %UMINEKOEND >= 31 || $flag_scenario_3_13 = "●" : mov $log_ch_current,"*umi3_12" : mov $log_ch_next,"*umi3_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_13" if %UMINEKOEND >= 31 || $flag_scenario_3_14 = "●" : mov $log_ch_current,"*umi3_13" : mov $log_ch_next,"*umi3_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_14" if %UMINEKOEND >= 31 || $flag_scenario_3_15 = "●" : mov $log_ch_current,"*umi3_14" : mov $log_ch_next,"*umi3_15" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_15" if %UMINEKOEND >= 31 || $flag_scenario_3_16 = "●" : mov $log_ch_current,"*umi3_15" : mov $log_ch_next,"*umi3_16" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_16" if %UMINEKOEND >= 31 || $flag_scenario_3_17 = "●" : mov $log_ch_current,"*umi3_16" : mov $log_ch_next,"*umi3_17" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "3_17" if %UMINEKOEND >= 31 || $flag_scenario_3_18 = "●" : mov $log_ch_current,"*umi3_17" : mov $log_ch_next,"*umi3_18" : goto *log_jump_next_chapter_ok
 	~
 	if %scenario_Number != 2 jumpf
-		if $name_chapter_save = "2_op" if %UMINEKOEND >= 21 || $flag_scenario_2_1 = "●" mov $log_ch_current,"*umi2_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_01" if %UMINEKOEND >= 21 || $flag_scenario_2_2 = "●" mov $log_ch_current,"*umi2_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_02" if %UMINEKOEND >= 21 || $flag_scenario_2_3 = "●" mov $log_ch_current,"*umi2_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_03" if %UMINEKOEND >= 21 || $flag_scenario_2_4 = "●" mov $log_ch_current,"*umi2_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_04" if %UMINEKOEND >= 21 || $flag_scenario_2_5 = "●" mov $log_ch_current,"*umi2_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_05" if %UMINEKOEND >= 21 || $flag_scenario_2_6 = "●" mov $log_ch_current,"*umi2_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_06" if %UMINEKOEND >= 21 || $flag_scenario_2_7 = "●" mov $log_ch_current,"*umi2_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_07" if %UMINEKOEND >= 21 || $flag_scenario_2_8 = "●" mov $log_ch_current,"*umi2_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_08" if %UMINEKOEND >= 21 || $flag_scenario_2_9 = "●" mov $log_ch_current,"*umi2_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_09" if %UMINEKOEND >= 21 || $flag_scenario_2_10 = "●" mov $log_ch_current,"*umi2_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_10" if %UMINEKOEND >= 21 || $flag_scenario_2_11 = "●" mov $log_ch_current,"*umi2_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_11" if %UMINEKOEND >= 21 || $flag_scenario_2_12 = "●" mov $log_ch_current,"*umi2_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_12" if %UMINEKOEND >= 21 || $flag_scenario_2_13 = "●" mov $log_ch_current,"*umi2_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_13" if %UMINEKOEND >= 21 || $flag_scenario_2_14 = "●" mov $log_ch_current,"*umi2_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_14" if %UMINEKOEND >= 21 || $flag_scenario_2_15 = "●" mov $log_ch_current,"*umi2_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_15" if %UMINEKOEND >= 21 || $flag_scenario_2_16 = "●" mov $log_ch_current,"*umi2_16" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_16" if %UMINEKOEND >= 21 || $flag_scenario_2_17 = "●" mov $log_ch_current,"*umi2_17" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "2_17" if %UMINEKOEND >= 21 || $flag_scenario_2_18 = "●" mov $log_ch_current,"*umi2_18" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-	~
+		if $name_chapter_save = "2_op" if %UMINEKOEND >= 21 || $flag_scenario_2_1 = "●"  : mov $log_ch_current,"*umi2_op" : mov $log_ch_next,"*umi2_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_01" if %UMINEKOEND >= 21 || $flag_scenario_2_2 = "●"  : mov $log_ch_current,"*umi2_1"  : mov $log_ch_next,"*umi2_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_02" if %UMINEKOEND >= 21 || $flag_scenario_2_3 = "●"  : mov $log_ch_current,"*umi2_2"  : mov $log_ch_next,"*umi2_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_03" if %UMINEKOEND >= 21 || $flag_scenario_2_4 = "●"  : mov $log_ch_current,"*umi2_3"  : mov $log_ch_next,"*umi2_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_04" if %UMINEKOEND >= 21 || $flag_scenario_2_5 = "●"  : mov $log_ch_current,"*umi2_4"  : mov $log_ch_next,"*umi2_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_05" if %UMINEKOEND >= 21 || $flag_scenario_2_6 = "●"  : mov $log_ch_current,"*umi2_5"  : mov $log_ch_next,"*umi2_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_06" if %UMINEKOEND >= 21 || $flag_scenario_2_7 = "●"  : mov $log_ch_current,"*umi2_6"  : mov $log_ch_next,"*umi2_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_07" if %UMINEKOEND >= 21 || $flag_scenario_2_8 = "●"  : mov $log_ch_current,"*umi2_7"  : mov $log_ch_next,"*umi2_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_08" if %UMINEKOEND >= 21 || $flag_scenario_2_9 = "●"  : mov $log_ch_current,"*umi2_8"  : mov $log_ch_next,"*umi2_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_09" if %UMINEKOEND >= 21 || $flag_scenario_2_10 = "●" : mov $log_ch_current,"*umi2_9"  : mov $log_ch_next,"*umi2_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_10" if %UMINEKOEND >= 21 || $flag_scenario_2_11 = "●" : mov $log_ch_current,"*umi2_10" : mov $log_ch_next,"*umi2_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_11" if %UMINEKOEND >= 21 || $flag_scenario_2_12 = "●" : mov $log_ch_current,"*umi2_11" : mov $log_ch_next,"*umi2_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_12" if %UMINEKOEND >= 21 || $flag_scenario_2_13 = "●" : mov $log_ch_current,"*umi2_12" : mov $log_ch_next,"*umi2_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_13" if %UMINEKOEND >= 21 || $flag_scenario_2_14 = "●" : mov $log_ch_current,"*umi2_13" : mov $log_ch_next,"*umi2_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_14" if %UMINEKOEND >= 21 || $flag_scenario_2_15 = "●" : mov $log_ch_current,"*umi2_14" : mov $log_ch_next,"*umi2_15" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_15" if %UMINEKOEND >= 21 || $flag_scenario_2_16 = "●" : mov $log_ch_current,"*umi2_15" : mov $log_ch_next,"*umi2_16" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_16" if %UMINEKOEND >= 21 || $flag_scenario_2_17 = "●" : mov $log_ch_current,"*umi2_16" : mov $log_ch_next,"*umi2_17" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "2_17" if %UMINEKOEND >= 21 || $flag_scenario_2_18 = "●" : mov $log_ch_current,"*umi2_17" : mov $log_ch_next,"*umi2_18" : goto *log_jump_next_chapter_ok
+
 	if %scenario_Number != 1 jumpf
-		if $name_chapter_save = "1_op" if %UMINEKOEND >= 11 || $flag_scenario_1_1 = "●" mov $log_ch_current,"*umi1_1" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_01" if %UMINEKOEND >= 11 || $flag_scenario_1_2 = "●" mov $log_ch_current,"*umi1_2" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_02" if %UMINEKOEND >= 11 || $flag_scenario_1_3 = "●" mov $log_ch_current,"*umi1_3" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_03" if %UMINEKOEND >= 11 || $flag_scenario_1_4 = "●" mov $log_ch_current,"*umi1_4" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_04" if %UMINEKOEND >= 11 || $flag_scenario_1_5 = "●" mov $log_ch_current,"*umi1_5" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_05" if %UMINEKOEND >= 11 || $flag_scenario_1_6 = "●" mov $log_ch_current,"*umi1_6" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_06" if %UMINEKOEND >= 11 || $flag_scenario_1_7 = "●" mov $log_ch_current,"*umi1_7" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_07" if %UMINEKOEND >= 11 || $flag_scenario_1_8 = "●" mov $log_ch_current,"*umi1_8" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_08" if %UMINEKOEND >= 11 || $flag_scenario_1_9 = "●" mov $log_ch_current,"*umi1_9" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_09" if %UMINEKOEND >= 11 || $flag_scenario_1_10 = "●" mov $log_ch_current,"*umi1_10" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_10" if %UMINEKOEND >= 11 || $flag_scenario_1_11 = "●" mov $log_ch_current,"*umi1_11" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_11" if %UMINEKOEND >= 11 || $flag_scenario_1_12 = "●" mov $log_ch_current,"*umi1_12" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_12" if %UMINEKOEND >= 11 || $flag_scenario_1_13 = "●" mov $log_ch_current,"*umi1_13" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_13" if %UMINEKOEND >= 11 || $flag_scenario_1_14 = "●" mov $log_ch_current,"*umi1_14" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_14" if %UMINEKOEND >= 11 || $flag_scenario_1_15 = "●" mov $log_ch_current,"*umi1_15" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_15" if %UMINEKOEND >= 11 || $flag_scenario_1_16 = "●" mov $log_ch_current,"*umi1_16" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
-		if $name_chapter_save = "1_16" if %UMINEKOEND >= 11 || $flag_scenario_1_17 = "●" mov $log_ch_current,"*umi1_17" : mov $log_ch_next,$log_ch_current : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_op" if %UMINEKOEND >= 11 || $flag_scenario_1_1 = "●"  : mov $log_ch_current,"*umi1_op" : mov $log_ch_next,"*umi1_1"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_01" if %UMINEKOEND >= 11 || $flag_scenario_1_2 = "●"  : mov $log_ch_current,"*umi1_1"  : mov $log_ch_next,"*umi1_2"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_02" if %UMINEKOEND >= 11 || $flag_scenario_1_3 = "●"  : mov $log_ch_current,"*umi1_2"  : mov $log_ch_next,"*umi1_3"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_03" if %UMINEKOEND >= 11 || $flag_scenario_1_4 = "●"  : mov $log_ch_current,"*umi1_3"  : mov $log_ch_next,"*umi1_4"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_04" if %UMINEKOEND >= 11 || $flag_scenario_1_5 = "●"  : mov $log_ch_current,"*umi1_4"  : mov $log_ch_next,"*umi1_5"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_05" if %UMINEKOEND >= 11 || $flag_scenario_1_6 = "●"  : mov $log_ch_current,"*umi1_5"  : mov $log_ch_next,"*umi1_6"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_06" if %UMINEKOEND >= 11 || $flag_scenario_1_7 = "●"  : mov $log_ch_current,"*umi1_6"  : mov $log_ch_next,"*umi1_7"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_07" if %UMINEKOEND >= 11 || $flag_scenario_1_8 = "●"  : mov $log_ch_current,"*umi1_7"  : mov $log_ch_next,"*umi1_8"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_08" if %UMINEKOEND >= 11 || $flag_scenario_1_9 = "●"  : mov $log_ch_current,"*umi1_8"  : mov $log_ch_next,"*umi1_9"  : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_09" if %UMINEKOEND >= 11 || $flag_scenario_1_10 = "●" : mov $log_ch_current,"*umi1_9"  : mov $log_ch_next,"*umi1_10" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_10" if %UMINEKOEND >= 11 || $flag_scenario_1_11 = "●" : mov $log_ch_current,"*umi1_10" : mov $log_ch_next,"*umi1_11" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_11" if %UMINEKOEND >= 11 || $flag_scenario_1_12 = "●" : mov $log_ch_current,"*umi1_11" : mov $log_ch_next,"*umi1_12" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_12" if %UMINEKOEND >= 11 || $flag_scenario_1_13 = "●" : mov $log_ch_current,"*umi1_12" : mov $log_ch_next,"*umi1_13" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_13" if %UMINEKOEND >= 11 || $flag_scenario_1_14 = "●" : mov $log_ch_current,"*umi1_13" : mov $log_ch_next,"*umi1_14" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_14" if %UMINEKOEND >= 11 || $flag_scenario_1_15 = "●" : mov $log_ch_current,"*umi1_14" : mov $log_ch_next,"*umi1_15" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_15" if %UMINEKOEND >= 11 || $flag_scenario_1_16 = "●" : mov $log_ch_current,"*umi1_15" : mov $log_ch_next,"*umi1_16" : goto *log_jump_next_chapter_ok
+		if $name_chapter_save = "1_16" if %UMINEKOEND >= 11 || $flag_scenario_1_17 = "●" : mov $log_ch_current,"*umi1_16" : mov $log_ch_next,"*umi1_17" : goto *log_jump_next_chapter_ok
 	~
 	return
 *log_jump_next_chapter_ok
+	get_unique_log_entry_index %log_ch_next,$log_ch_next
+	if %log_ch_next < 0 jumpf
+		; when dst label is in the log, jump from next to next updating vars.
+		get_log_data %log_ch_next,$log_ch_current,%log_src_cvs
+		mov %log_dst_cvs,%log_src_cvs
+		if $log_ch_current != $log_ch_next error "src must match dst"
+	~
+	if %log_ch_next >= jumpf
+		; when dst label is not in the log (i.e. there is a choicepoint), jump
+		; from current to last before choicepoint.
+		get_unique_log_entry_index %log_src_cvs,$log_ch_current
+		get_log_data %log_src_cvs,$log_ch_current,%log_src_cvs
+		get_log_data -1,$log_ch_next,%log_dst_cvs
+	~
 	vsp TextCC1SpNum,0
 	vsp TextCC2SpNum,0
 	print 1
@@ -27126,11 +27124,6 @@ return
 	mov %r_display_cha_enj,0
 	mov %r_display_cha_ma,0
 
-	; ?????
-	; Is log_jump_next_chapter_ok (is this tab?) broken even for non-ep8?
-	; It does not set the following variables and it bypasses log_jump which does set them: %log_dst_cvs, %log_src_cvs (, ...more?)
-	; EP1-7 may not use choices but it could still be possible that these vars have mad values perhaps...?
-
 	; Before we sskip, we want to update the current choice vector lookup index position used by accept_choice and set it to the src_CVS.
 	accept_choice_next_index %log_src_cvs
 	accept_choice_vector_size %log_dst_cvs
@@ -27177,17 +27170,6 @@ return
 	; Then, the phase 2 (usual) superskip will take the variables from that state to whatever they need to be at the destination line.
 	mov %total_coin_count,0
 	mov %eva_hint_counter,0	
-	; No need to adjust these variables for tea parties or for any of the early chapters (since they are not set before those chapters), so we can just return already -- our job is done.
-	; Should already be prevented from coming in here if we have one of these
-	;if $log_ch_current=="*ura_teatime_8" return
-	;if $log_ch_current=="*teatime_8" return
-	;if $log_ch_current=="*umi8_op" return
-	;if $log_ch_current=="*umi8_6" return
-	;if $log_ch_current=="*umi8_5" return
-	;if $log_ch_current=="*umi8_4" return
-	;if $log_ch_current=="*umi8_3" return
-	;if $log_ch_current=="*umi8_2" return
-	;if $log_ch_current=="*umi8_1" return
 
 	; In addition to all the ordinary ignore_cmds, also ignore d and d2. We don't want to add anything to log. This superskip is solely for setting variables.
 	ignore_cmd "d", "d2", "d_continue", "wait_for_d"
