@@ -13112,7 +13112,9 @@ agpt quakeyamp,0
 agpt quakexamp,0
 gptwait quakexamp
 gptwait quakeyamp
-bgmplay 241,100,1
+bgmplay2 241,100,1
+lsp 2,"*8"
+flush 1
 lbg2 s0_3,"end_8b"
 drop_cache "end_8b"
 aspt2 scaley,s0_3,200
@@ -13129,6 +13131,7 @@ lbg s0_3,"black"
 flush 42
 vol_mix_fade 1000
 vol_bgm -1,1000
+_csp 2
 wait 1000
 wait 2000
 gosub *chiru_ending

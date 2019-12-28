@@ -11,6 +11,8 @@ return
 	if %track_id == 160 mov $track_id,"video\sub\160_pt.ass" : return
 	if %track_id == 161 mov $track_id,"video\sub\161_pt.ass" : return
 	if %track_id == 186 mov $track_id,"video\sub\186_pt.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_pt.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_pt.ass" : return
 	if %track_id == 1014 mov $track_id,"video\sub\op4_pt.ass" : return
 	if %track_id == 1017 mov $track_id,"video\sub\op56_pt.ass" : return
 	if %track_id == 1018 mov $track_id,"video\sub\op78_pt.ass" : return
@@ -27,6 +29,8 @@ return
 	if %track_id == 160 mov $track_id,"video\sub\160_rom_pt.ass" : return
 	if %track_id == 161 mov $track_id,"video\sub\161_rom_pt.ass" : return
 	if %track_id == 186 mov $track_id,"video\sub\186_rom_pt.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_rom_pt.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_rom_pt.ass" : return
 	if %track_id == 1014 mov $track_id,"video\sub\op4_rom_pt.ass" : return
 	if %track_id == 1017 mov $track_id,"video\sub\op56_rom_pt.ass" : return
 	if %track_id == 1018 mov $track_id,"video\sub\op78_rom_pt.ass" : return
@@ -43,6 +47,8 @@ return
 	if %track_id == 160 mov $track_id,"video\sub\160_both_pt.ass" : return
 	if %track_id == 161 mov $track_id,"video\sub\161_both_pt.ass" : return
 	if %track_id == 186 mov $track_id,"video\sub\186_both_pt.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_both_pt.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_both_pt.ass" : return
 	if %track_id == 1014 mov $track_id,"video\sub\op4_both_pt.ass" : return
 	if %track_id == 1017 mov $track_id,"video\sub\op56_both_pt.ass" : return
 	if %track_id == 1018 mov $track_id,"video\sub\op78_both_pt.ass" : return

@@ -19,7 +19,7 @@ define('LF', "\n");
 define('CHIRU', true);
 define('PRINT_USED', false);
 if ($argc < 2)
-	define('BASE_FOLDER', realpath(dirname(__FILE__).'/../../').'/scripting');
+	define('BASE_FOLDER', realpath(dirname(__FILE__).'/../../'));
 else
 	define('BASE_FOLDER', $argv[1]);
 
@@ -1295,6 +1295,28 @@ function initGlobals() {
 			'drop_cache "end_7c"' => [
 				'ignore'	=> true,
 				'count'		=> 1
+			]
+		],
+		// ep8 subtitles
+		69125 => [
+			'lv 0,"00","end_all00"' => [
+				'after'	=> 'ssa_load 8,end_all00_subs,30'.LF.'lsp 2,"*8"'.LF.'flush 1',
+			],
+			'bgmplay 240,100,1' => [
+				'before'	=> '_csp 2'.LF.'flush 1'.LF.'bgmplay2 240,100,1'.LF.'lsp 2,"*8"'.LF.'flush 1',
+				'ignore'	=> true
+			],
+			'lbg s0_3,"last2"' => [
+				'after'	=> '_csp 2'
+			]
+		],
+		65706 => [
+			'bgmplay 241,100,1' => [
+				'before'	=> 'bgmplay2 241,100,1'.LF.'lsp 2,"*8"'.LF.'flush 1',
+				'ignore'	=> true
+			],
+			'vol_bgm -1,1000' => [
+				'after'	=> '_csp 2'
 			]
 		],
 		68721 => [
