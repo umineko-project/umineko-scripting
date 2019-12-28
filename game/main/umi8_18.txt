@@ -2062,6 +2062,9 @@ flush 10,17
 aspt2 xpos,s0_3,-13730,66667
 wait 2000
 lv 0,"00","end_all00"
+ssa_load 8,end_all00_subs,30
+lsp 2,"*8"
+flush 1
 waitvoice
 sptwait2 xpos,s0_3
 seplay 1,22,71
@@ -2218,7 +2221,11 @@ seplay 1,2,100
 wait 2000
 vol_mix_fade 0
 wait 0
-bgmplay 240,100,1
+_csp 2
+flush 1
+bgmplay2 240,100,1
+lsp 2,"*8"
+flush 1
 lbg2 s0_3,"end_8c"
 drop_cache "end_8c"
 aspt2 scaley,s0_3,200
@@ -2245,6 +2252,7 @@ wait 4167
 textoff
 waits 167
 lbg s0_3,"last2"
+_csp 2
 flush 18,5000,msk_1
 wait 10000
 textoff

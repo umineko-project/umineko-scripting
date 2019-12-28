@@ -1,0 +1,44 @@
+h2. Day 1st, Rain research.
+
+_60 fps is assumed by default._
+
+h2. SPRITE_PROPERTY:20 
+
+SPRITE_PROPERTY:20 is defined as *RAIN_DROPS* in SNRTemplate.bt.
+PS3 Rondo uses the following values: 200, 400, 500.
+The property represents the amount of drops on the screen at a single time. The value corresponds to the amount as 1 to 1.
+
+h2. SPRITE_PROPERTY:21
+ 
+SPRITE_PROPERTY:21 is defined as *RAIN_SPEED* in SNRTemplate.bt.
+PS3 Rondo uses the following values: 300, 500, 600, 800, 1000.
+The property influences three visual parameters:
+
+# Length of the rain drop. Research shows that the defined value is ≈3.2 times bigger than the actual one within our bounds in pixels.
+115-117 for 400
+152-160 for 500
+246-251 for 800
+# Width of the rain drop. Research shows that the drop width varies from 1 px to 3 px with changeable opacity. 400 has 2-2.5 px, 100 — 1-1.5.
+# Speed of the rain drop. 
+10 : 808-816 frames
+20 : 260-266 frames
+30 : 124-128 frames
+40 : 96-100  frames
+400: 10-12   frames
+That means about 12-14 frames to cross the screen for 300 with factor varying 0.32-0.37 on low speeds.
+
+h2. SPRITE_PROPERTY:22
+
+SPRITE_PROPERTY:22 is defined as *RAIN_WIND_FACTOR* in SNRTemplate.bt.
+PS3 Rondo uses the following values: 0, -100
+The property sets the angle drops and their track are rotated to. A sane value should vary in -1000..1000 bounds. Where values below zero represent bottom left corner and values above — bottom right corner. 500 is -45 degrees in Cartesian coordinate system.
+
+h2. Drop specialities.
+
+In PS3 Rondo a drop is a gradiented stripe with its lightest place almost in the middle ≈75 RGB ob black bg and up to 255 on bright places, uses additive blend mode. 2/3 of the stripe has values 50—75 (on black), ends have quick colour decrease.
+
+h2. Value pass.
+
+At the moment parser.php passes these values to rain_params command as strings in script. 
+rain_params SPRITE, SPRITE_PROPERTY:21, SPRITE_PROPERTY:20 , SPRITE_PROPERTY:22
+SPRITE_PROPERTY:21 (speed) is converted by the following formula 10-(PS3_VALUE/100), because in ons smaller is "faster".

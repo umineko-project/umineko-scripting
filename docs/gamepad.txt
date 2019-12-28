@@ -1,0 +1,36 @@
+h1. Gamepad
+
+PS3 uses the following key mapping in their engine. 
+Some keys may differ (i.e. mapping skip to ctrl instead of toggling it on or off), but consider sticking with the list when possible.
+
+start: skip movie / skip to next chapter
+select: unused
+d-pad: move selection cursor / scroll message browser (log)
+
+circle: advance messages / choose menu option
+(while message browser displayed) play audio
+(while bookmarks displayed) load selected bookmark
+
+x: back out of settings, message browser, chapter list, characters, tips
+cancel automode / skip
+(while not in automode / sentence skip) show/hide message window
+
+square: display system menu
+cancel automode / skip
+(while message browser displayed) scene jump
+(while bookmarks displayed) delete selected bookmark
+
+triangle: show/hide message browser
+cancel automode / skip
+(while message browser displayed) show chapter list
+(while bookmarks displayed) save to selected bookmark
+
+r1: automode on/off
+(while message browser displayed) select next chapter start
+
+r2: skip on/off
+
+l1: advance messages
+(while message browser displayed) select previous chapter start
+
+l2: unused
