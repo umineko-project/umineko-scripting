@@ -317,7 +317,7 @@ return
 	sptwait2 ypos,s0_5
 	vol_bgm -1,3000
 	wait2 3000
-	lsp s0_5,":s;#FFFFFF`{p:20:{a:c:2011-2019, Umineko Project}{n}}",0,990
+	lsp s0_5,":s;#FFFFFF`{p:20:{a:c:2011-2020, Umineko Project}{n}}",0,990
 	print 2
 	wait2 6000
 	csp_slot s0_5
