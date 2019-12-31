@@ -29,15 +29,21 @@ matrix:
       - cp misc/chiru.file ciout
       - cp misc/game.hash ciout
       - cp misc/default.cfg ciout
+      - cp misc/pt.cfg ciout
+      - cp misc/cn.cfg ciout
       - cd ciout
-      - zip -qry umineko-scripts_r${BUILD}_dev.zip *.txt chiru.file game.hash default.cfg || exit 1
+      - zip -qry umineko-main-scripts_r${BUILD}_dev.zip ru.txt en.txt chiru.file game.hash default.cfg || exit 1
+      - zip -qry umineko-pt-scripts_r${BUILD}_dev.zip pt.txt pt.cfg || exit 1
+      - zip -qry umineko-cn-scripts_r${BUILD}_dev.zip cn.txt cn.cfg || exit 1
       - cd ..
       - php update-manager/update-manager.php script ciout/en.txt "ciout/en.file" "$LAST_EN" || exit 1
       - php update-manager/update-manager.php script ciout/ru.txt "ciout/ru.file" "$LAST_RU" || exit 1
       - php update-manager/update-manager.php script ciout/pt.txt "ciout/pt.file" "$LAST_PT" || exit 1
       - php update-manager/update-manager.php script ciout/cn.txt "ciout/cn.file" "$LAST_CN" || exit 1
       - cd ciout
-      - zip -qry umineko-scripts_r${BUILD}.zip *.file game.hash default.cfg || exit 1
+      - zip -qry umineko-main-scripts_r${BUILD}.zip ru.file en.file game.hash default.cfg || exit 1
+      - zip -qry umineko-pt-scripts_r${BUILD}.zip pt.file pt.cfg || exit 1
+      - zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg || exit 1
       - cd ..
 
 deploy:
