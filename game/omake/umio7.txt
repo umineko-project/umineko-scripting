@@ -12,6 +12,7 @@ rain_params s0_11,500,300,0
 if $omake_return == "trailer" mov $omake_return,"" : bgmplay 8,71,0 : goto *omakeeee_m1f_p1br
 if $omake_return == "omake" mov $omake_return,"" : bgmplay 8,71,0 : goto *omakeeee_ment_1br
 if $omake_return == "omake8" mov $omake_return,"" : bgmplay 8,71,0 : goto *omakeeee_m1f_p1br
+if $omake_return == "omake9" mov $omake_return,"" : bgmplay 8,71,0 : goto *omakeeee_mhal_2ar
 seplay 1,17,71
 waits 167
 lbg s0_1,"mhal_2ar_bg"
@@ -85,6 +86,7 @@ spt2 xpos,s0_3,163,1000
 sptwait2 xpos,s0_3
 msgwnd_non
 d `Интересно, когда же тайфун закончится...`[\]
+if %UMINEKOEND >= 90 goto *omakeeee_second_floor
 spt2 xpos,s0_1,-163,1000
 spt2 xpos,s0_3,-163,1000
 spt2 ypos,s0_1,-143,2000
@@ -478,3 +480,18 @@ goto *omakeeee_m1f_p1br
 goto *omakeeee_mhal_2cr
 *omakeeee__mhal_1ar_down
 goto *omakeeee_mhal_2ar
+
+*omakeeee_second_floor
+textoff
+btndef ""
+lbg s0_3,"black"
+flush 23
+wait 1000
+lbg s0_1,"m2f_p1cr_bg"
+lbg s0_3,"m2f_p1cr"
+flush 24
+wait 1500
+lbg s0_3,"white"
+flush 22
+textoff
+goto *o9_0

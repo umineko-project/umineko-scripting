@@ -2747,6 +2747,7 @@ defsub rumble 		;slightly a hack
 defsub reset_set
 defsub show_glass
 defsub snow
+defsub snow2
 
 ;Sprite hacks
 defsub csp

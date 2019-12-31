@@ -14833,6 +14833,7 @@ gosub *me_generate
 if $omake_return == "trailer" mov %title_skip,0 : goto *omake_chiru_menu
 if $omake_return == "omake" mov %title_skip,0 : goto *omake_chiru_menu
 if $omake_return == "omake8" mov %title_skip,0 : goto *omake_chiru_menu
+if $omake_return == "omake9" mov %title_skip,0 : goto *omake_chiru_menu
 
 ;rondo
 if %CHIRU_MODE != 0 jumpf
@@ -22447,11 +22448,20 @@ return
 *snow
 	getparam %snow_sprite
 	if %snow_sprite <= 0 layermessage 9,"x" : return
-	
+
 	lsp %snow_sprite,"*9"
 	layermessage 9,"i|graphics\system\rain\snow1.bmp,graphics\system\rain\snow2.bmp,graphics\system\rain\snow3.bmp"
 	layermessage 9,"s|1,3,0,16,2"
 	layermessage 9,"f"
+return
+
+*snow2
+	getparam %snow_sprite
+	if %snow_sprite <= 0 layermessage 9,"x" : return
+
+	lsp %snow_sprite,"*9"
+	layermessage 9,"i|graphics\system\rain\snow1.bmp,graphics\system\rain\snow2.bmp,graphics\system\rain\snow3.bmp"
+	layermessage 9,"s|1,3,0,16,2"
 return
 
 ;****************************************************
@@ -26456,7 +26466,7 @@ return
 return
 
 *log_common_ignore
-	ignore_cmd "lss","lsp","lbg","lbg2","rain_load","rain_pause","rain_resume","rain_params","rumble","pam","anim","flush","flush2","color_mod2","color_mod"
+	ignore_cmd "lss","lsp","lbg","lbg2","rain_load","rain_pause","rain_resume","rain_params","rumble","pam","anim","flush","flush2","color_mod2","color_mod","snow","snow2"
 	ignore_cmd "seplay","bgmplay","bgmplay2","ssa_stop","meplay","vol_bgm","vol_me","vol_se","vol_mix_fade","show_whirl","show_glass","gpt","agpt","gptwait","textoff"
 	ignore_cmd "aspt","spt","aspt2","spt2","sptwait","sptwait2","csp_slot","waits","wait","wait2","z_order_override","z_order_override2","lv","csp","waitvideo"
 	ignore_cmd "lips_sprite","gstc","gstt","gstg","break_glass","break_glass2","display_clock","display_clock2","skip_off","skip_on","trophy_open"
