@@ -449,6 +449,7 @@ function main($argc, $argv) {
 			break;
 		case 'dscript':
 			if ($argc < 5) err(getUsage());
+			$ver    = '8.1b' . ($argc > 5 ? ' r' . $argv[5] : '');
 			$locale = $argv[4];
 			$gameid = 'UminekoPS3fication'.ucfirst($locale);
 			$scripting = $argv[3];
@@ -458,6 +459,7 @@ function main($argc, $argv) {
 			$script = str_replace('builder_id', $gameid, $script);
 			$script = str_replace('builder_date', time(), $script);
 			$script = str_replace('builder_localisation', $locale, $script);
+			$script = str_replace('builder_version', $ver, $script);
 			
 			for ($i = 1; $i <= 8; $i++) {
 				$tldir = $scripting.'/story/ep'.$i.'/'.$locale.'/';

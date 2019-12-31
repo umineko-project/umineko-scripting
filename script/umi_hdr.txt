@@ -26,7 +26,7 @@ stralias localisation,"builder_localisation"
 numalias releasedate,builder_date
 numalias CHIRU_MODE,8084
 
-mov $CHIRU_MODE,"v8.1b"
+mov $CHIRU_MODE,"builder_version"
 
 #locale_import "header.txt"
 

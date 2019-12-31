@@ -22,10 +22,10 @@ matrix:
       - if [ -f current/last_cn ]; then LAST_CN=$(<current/last_cn); else LAST_CN="$LAST" ; fi
       - if [ -f current/last_ru ]; then LAST_RU=$(<current/last_ru); else LAST_RU="$LAST" ; fi
       - if [ -f current/last_pt ]; then LAST_PT=$(<current/last_pt); else LAST_PT="$LAST" ; fi
-      - php update-manager/update-manager.php dscript "ciout/en.txt" . en || exit 1
-      - php update-manager/update-manager.php dscript "ciout/ru.txt" . ru || exit 1
-      - php update-manager/update-manager.php dscript "ciout/pt.txt" . pt || exit 1
-      - php update-manager/update-manager.php dscript "ciout/cn.txt" . cn || exit 1
+      - php update-manager/update-manager.php dscript "ciout/en.txt" . en ${BUILD} || exit 1
+      - php update-manager/update-manager.php dscript "ciout/ru.txt" . ru ${BUILD} || exit 1
+      - php update-manager/update-manager.php dscript "ciout/pt.txt" . pt ${BUILD} || exit 1
+      - php update-manager/update-manager.php dscript "ciout/cn.txt" . cn ${BUILD} || exit 1
       - cp misc/chiru.file ciout
       - cp misc/game.hash ciout
       - cp misc/default.cfg ciout

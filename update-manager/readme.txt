@@ -43,7 +43,7 @@ php update-manager.php size "$UMINEKO_FILES" "$UMINEKO_FILES/game.hash"
 # 2. To make an extra update run:
 
 php update-manager.php hash "$UMINEKO_FILES" Current.hash 
-php update-manager.php verify Original_chiru.hash Current.hash Update.info json
+php update-manager.php verify Base.hash Current.hash Update.info json
 php update-manager.php update Update.info "$UMINEKO_FILES" "$TEMP_UPDATE_FOLDER" "$ARCHIVE_PREFIX"
 
 # 3. To get the script for developers run:
