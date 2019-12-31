@@ -49,7 +49,8 @@ $exclude = [
 	'/cn.file',
 	'/cn.cfg',
 	'/chiru.file',
-	'/game.hash'
+	'/game.hash',
+	'/default.cfg'
 ];
 
 $include = [
