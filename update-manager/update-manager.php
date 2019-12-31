@@ -27,6 +27,7 @@ $exclude = [
 	'thumbs.db',
 	'Thumbs.db',
 	'umi_scr',
+	'dlls',
 	'onscripter-ru',
 	'/en.txt',
 	'/ru.txt',
@@ -46,7 +47,9 @@ $exclude = [
 	'/pt.file',
 	'/pt.cfg',
 	'/cn.file',
-	'/cn.cfg'
+	'/cn.cfg',
+	'/chiru.file',
+	'/game.hash'
 ];
 
 $include = [
