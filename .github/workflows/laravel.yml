@@ -1,0 +1,19 @@
+name: Laravel
+
+on: [push]
+
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Generate
+      run: |
+        mkdir ciout
+        BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
+        php update-manager/update-manager.php dscript "ciout/cn.txt" . cn
+        php update-manager/update-manager.php script ciout/cn.txt "ciout/cn.file" 9999
+        cd ciout
+        zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg
+        cd ..
+
