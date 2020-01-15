@@ -14,6 +14,12 @@ jobs:
         php update-manager/update-manager.php dscript "ciout/cn.txt" . cn
         php update-manager/update-manager.php script ciout/cn.txt "ciout/cn.file" 9999
         cd ciout
-        zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg
+        zip -qry umineko-cn-scripts.zip cn.file cn.cfg
         cd ..
+    - name: Upload math result for job 2
+      uses: actions/upload-artifact@v1
+      with:
+        name: build
+        path: ciout/umineko-cn-scripts.zip
+
 
