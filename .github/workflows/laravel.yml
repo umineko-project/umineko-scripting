@@ -7,19 +7,37 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Generate
+    - name: Generate CN
       run: |
-        mkdir ciout
+        mkdir cnout
         BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
-        php update-manager/update-manager.php dscript "ciout/cn.txt" . cn
-        php update-manager/update-manager.php script ciout/cn.txt "ciout/cn.file" 9999
-        cd ciout
-        zip -qry umineko-cn-scripts.zip cn.file cn.txt
-        cd ..
-    - name: Upload math result for job 2
+        php update-manager/update-manager.php dscript "cnout/cn.txt" . cn
+        php update-manager/update-manager.php script cnout/cn.txt "cnout/cn.file" 9999
+    - name: Upload CN
       uses: actions/upload-artifact@v1
       with:
-        name: build
-        path: ciout/umineko-cn-scripts.zip
-
+        name: cn
+        path: cnout/
+    - name: Generate EN
+      run: |
+        mkdir enout
+        BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
+        php update-manager/update-manager.php dscript "enout/en.txt" . en
+        php update-manager/update-manager.php script enout/en.txt "enout/en.file" 9999
+    - name: Upload CN
+      uses: actions/upload-artifact@v1
+      with:
+        name: en
+        path: enout/
+    - name: Generate RU
+      run: |
+        mkdir ruout
+        BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
+        php update-manager/update-manager.php dscript "ruout/ru.txt" . ru
+        php update-manager/update-manager.php script ruout/ru.txt "ruout/ru.file" 9999
+    - name: Upload RU
+      uses: actions/upload-artifact@v1
+      with:
+        name: ru
+        path: ruout/
 
