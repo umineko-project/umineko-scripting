@@ -3,21 +3,21 @@
 return
 
 *sub_get_translation
-	if %track_id == 58 mov $track_id,"video\sub\58_eng.ass" : return
-	if %track_id == 83 mov $track_id,"video\sub\83_eng.ass" : return
-	if %track_id == 109 mov $track_id,"video\sub\109_eng.ass" : return
-	if %track_id == 132 mov $track_id,"video\sub\132_eng.ass" : return
-	if %track_id == 134 mov $track_id,"video\sub\134_eng.ass" : return
-	if %track_id == 160 mov $track_id,"video\sub\160_eng.ass" : return
-	if %track_id == 161 mov $track_id,"video\sub\161_eng.ass" : return
-	if %track_id == 186 mov $track_id,"video\sub\186_eng.ass" : return
-	if %track_id == 240 mov $track_id,"video\sub\240_eng.ass" : return
-	if %track_id == 241 mov $track_id,"video\sub\241_eng.ass" : return
-	if %track_id == 1014 mov $track_id,"video\sub\op4_eng.ass" : return
-	if %track_id == 1017 mov $track_id,"video\sub\op56_eng.ass" : return
-	if %track_id == 1018 mov $track_id,"video\sub\op78_eng.ass" : return
-	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\eng.ass" : return
-	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\eng.ass" : return
+	if %track_id == 58 mov $track_id,"video\sub\58_chn.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_chn.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_chn.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_chn.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_chn.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_chn.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_chn.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_chn.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_chn.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_chn.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_chn.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_chn.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_chn.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\chn.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\chn.ass" : return
 return
 
 *sub_get_romaji
@@ -39,68 +39,66 @@ return
 return
 
 *sub_get_both
-	if %track_id == 58 mov $track_id,"video\sub\58_both_eng.ass" : return
-	if %track_id == 83 mov $track_id,"video\sub\83_both_eng.ass" : return
-	if %track_id == 109 mov $track_id,"video\sub\109_both_eng.ass" : return
-	if %track_id == 132 mov $track_id,"video\sub\132_both_eng.ass" : return
-	if %track_id == 134 mov $track_id,"video\sub\134_both_eng.ass" : return
-	if %track_id == 160 mov $track_id,"video\sub\160_both_eng.ass" : return
-	if %track_id == 161 mov $track_id,"video\sub\161_both_eng.ass" : return
-	if %track_id == 186 mov $track_id,"video\sub\186_both_eng.ass" : return
-	if %track_id == 240 mov $track_id,"video\sub\240_both_eng.ass" : return
-	if %track_id == 241 mov $track_id,"video\sub\241_both_eng.ass" : return
-	if %track_id == 1014 mov $track_id,"video\sub\op4_both_eng.ass" : return
-	if %track_id == 1017 mov $track_id,"video\sub\op56_both_eng.ass" : return
-	if %track_id == 1018 mov $track_id,"video\sub\op78_both_eng.ass" : return
-	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\both_eng.ass" : return
-	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\both_eng.ass" : return
+	if %track_id == 58 mov $track_id,"video\sub\58_both_chn.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_both_chn.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_both_chn.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_both_chn.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_both_chn.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_both_chn.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_both_chn.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_both_chn.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_both_chn.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_both_chn.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_both_chn.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_both_chn.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_both_chn.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\both_chn.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\both_chn.ass" : return
 return
 
 *redefine_text_presets
 	;GAME PRESETS
-	preset_define 0,1,50,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Japanse text
-	preset_define 1,1,50,#FF0000,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Red text
-	preset_define 2,1,50,#39C6FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Blue text
-	preset_define 7,2,40,#C0FFFF,0,0,0,1,6,#000000,0,0,0,#000000,0,70,1880 ;Chapter/BGM/Hint
-	preset_define 41,1,50,#FFAA00,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Gold text
-	preset_define 42,1,50,#AA71FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Purple text
+	preset_define 0,1,60,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Japanse text
+	preset_define 1,1,60,#FF0000,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Red text
+	preset_define 2,1,60,#39C6FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Blue text
+	preset_define 7,5,40,#C0FFFF,0,0,0,1,6,#000000,0,0,0,#000000,0,70,1880 ;Chapter/BGM/Hint
+	preset_define 41,1,60,#FFAA00,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Gold text
+	preset_define 42,1,60,#AA71FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Purple text
 	;MENU PRESETS
 	;Texts
-	preset_define 3,3,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,700 ;Menu chars text
-	preset_define 4,3,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40 ;Menu chars/tips/notes text jp
-	preset_define 5,3,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,830 ;Menu tips/notes text
-	preset_define 13,3,55,#FFFFFF,1,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu tips/notes titles
+	preset_define 3,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,700 ;Menu chars text
+	preset_define 4,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40 ;Menu chars/tips/notes text jp
+	preset_define 5,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,830 ;Menu tips/notes text
+	preset_define 13,6,55,#FFFFFF,1,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu tips/notes titles
 	;Buttons
 	preset_define 11,2,36,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Menu main buttons
 	preset_define 12,2,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Menu chars kill/change buttons
 	;MusicBox
-	preset_define 6,2,43,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,70 ;Musicbox bgm titles
+	preset_define 6,5,36,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,70 ;Musicbox bgm titles
 	;Config
-	preset_define 8,1,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons
+	preset_define 8,1,60,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons
 	preset_define 9,1,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons (smaller)
 	;First setting
-	preset_define 10,8,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,0,80,1920 ;Menu first setting line
+	preset_define 10,9,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,0,80,1920 ;Menu first setting line
 	;Use magic
-	preset_define 14,3,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump portrait titles
-	preset_define 15,3,42,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump right titles and confirmation
-	preset_define 16,8,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,0,40,1920 ;Menu jump portrait line
+	preset_define 14,7,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump portrait titles
+	preset_define 15,7,42,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump right titles and confirmation
+	preset_define 16,4,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,0,40,1920 ;Menu jump portrait line
 	;Trophies
-	preset_define 18,1,50,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1700 ;Trophy description
+	preset_define 18,1,36,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1700 ;Trophy description
 	;Credits
-	preset_define 20,8,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits normal
-	preset_define 21,9,50,#000000,0,0,0,1,10,#fae8e8,0,0,0,#000000,6,140,1920 ;Credits h1
-	preset_define 22,8,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,120,1920 ;Credits h2
-	preset_define 23,8,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,50,1920 ;Credits h3
-	preset_define 24,8,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,0,120,1920 ;Credits h2-sep
-	preset_define 25,5,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits MVP
+	preset_define 20,1,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits normal
+	preset_define 21,4,50,#000000,0,0,0,1,10,#fae8e8,0,0,0,#000000,6,140,1920 ;Credits h1
+	preset_define 22,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,120,1920 ;Credits h2
+	preset_define 23,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,50,1920 ;Credits h3
+	preset_define 24,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,0,120,1920 ;Credits h2-sep
+	preset_define 25,3,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits MVP
 	;Load/Save
-	preset_define 30,2,50,#FFFFFF,0,0,0,1,5,#000000,0,0,0,#000000,1,40,1920 ;Episode names
-	preset_define 31,6,50,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Save dates
+	preset_define 30,1,42,#FFFFFF,0,0,0,1,5,#000000,0,0,0,#000000,1,40,1920 ;Episode names
+	preset_define 31,2,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Save dates
 	;ep8 menu murder
 	preset_define 32,1,50,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1590 ;Menu murder
 	;chinese
-	preset_define 50,1,52,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ; Speaker name (Hatsugen)
-	preset_define 51,1,50,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu (菜单)
 return
 
 *backup_disable_lang
