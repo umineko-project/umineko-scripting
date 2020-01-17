@@ -17,7 +17,7 @@ return
 	if %track_id == 1017 mov $track_id,"video\sub\op56_chn.ass" : return
 	if %track_id == 1018 mov $track_id,"video\sub\op78_chn.ass" : return
 	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\chn.ass" : return
-	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\eng.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\chn.ass" : return
 return
 
 *sub_get_romaji
