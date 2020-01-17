@@ -463,11 +463,11 @@ function main($argc, $argv) {
 			
 			//newly added
 			$main_dir=$scripting.'/game/main/';
-			$locale_main_dir=$main_dir.'/'.$locale;
+			$locale_main_dir=$main_dir.'/'.$locale.'/';
 			if (is_dir($locale_main_dir)
 			    	$main_dir=$locale_main_dir;
 			$omake_dir=$scripting.'/game/omake/';
-			$locale_omake_dir=$main_dir.'/'.$locale;
+			$locale_omake_dir=$main_dir.'/'.$locale.'/';
 			if (is_dir($locale_omake_dir)
 			    	$omake_dir=$locale_omake_dir;
 			 
