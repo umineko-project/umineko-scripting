@@ -480,7 +480,7 @@ function main($argc, $argv) {
 				$scripting.'/story/omake/'.$locale.'/');
 
 			if(file_exists($scripting.'/game/grim/'.$locale.'_grim.txt')) {
-				$grim = str_replace("\n", '', file($scripting.'/game/grim/'.$locale.'.txt'));
+				$grim = str_replace("\n", '', file($scripting.'/game/grim/'.$locale.'_grim.txt'));
 				$len = count($grim);
 				$deformat_grim = [];
 				for ($i = 0; $i < $len; $i++)
