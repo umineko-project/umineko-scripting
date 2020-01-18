@@ -406,6 +406,12 @@ function encodeScript($data) {
 	return $hdr.$data;
 }
 
+function deformat($str){
+	return preg_replace('/\{c\:86EF9C\:([\s\S]*?)\}/i', '$1', 
+		preg_replace('/\[gstg \d+\]/', '', $str)
+	);
+}
+
 function main($argc, $argv) {
 	if ($argc < 2) err(getUsage());
 	
@@ -460,25 +466,29 @@ function main($argc, $argv) {
 			$script = str_replace('builder_date', time(), $script);
 			$script = str_replace('builder_localisation', $locale, $script);
 			$script = str_replace('builder_version', $ver, $script);
-			
-			//newly added
-			$main_dir = $scripting.'/game/main/';
-			$locale_main_dir = $main_dir.'/'.$locale.'/';
-			if (is_dir($locale_main_dir))
-			    	$main_dir = $locale_main_dir;
-			$omake_dir = $scripting.'/game/omake/';
-			$locale_omake_dir = $main_dir.'/'.$locale.'/';
-			if (is_dir($locale_omake_dir))
-			    	$omake_dir = $locale_omake_dir;
+
+			// newly added
+			$tmp_script = '';
 			 
 			for ($i = 1; $i <= 8; $i++) {
 				$tldir = $scripting.'/story/ep'.$i.'/'.$locale.'/';
 				if (!is_dir($tldir))
 					$tldir = $scripting.'/story/ep'.$i.'/en/';
-				$script .= inplaceLines($main_dir, $scripting.'/story/ep'.$i.'/jp/', $tldir);
+				$tmp_script .= inplaceLines($scripting.'/game/main/', $scripting.'/story/ep'.$i.'/jp/', $tldir);
 			}
-			$script .= inplaceLines($omake_dir, $scripting.'/story/omake/jp/',
+			$tmp_script .= inplaceLines($scripting.'/game/omake/', $scripting.'/story/omake/jp/',
 				$scripting.'/story/omake/'.$locale.'/');
+
+			if(file_exists($scripting.'/game/grim/'.$locale.'_grim.txt')) {
+				$grim = str_replace("\n", '', file($scripting.'/game/grim/'.$locale.'.txt'));
+				$len = count($grim);
+				$deformat_grim = [];
+				for ($i = 0; $i < $len; $i++)
+					$deformat_grim[$i] = deformat($grim[$i]);
+				$tmp_script = str_replace($deformat_grim, $grim, deformat($tmp_script));
+			}
+			$script .= $tmp_script;
+			//end
 
 			$footer = file_get_contents($scripting.'/script/umi_ftr.txt');
 			$script .= str_replace(CRLF, LF, $footer);
