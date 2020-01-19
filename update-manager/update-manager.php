@@ -493,7 +493,7 @@ function main($argc, $argv) {
 
 			$script .= $tmp_script;
 
-			$footer = file_get_contents($scripting.'/script/umi_ftr.txt');
+			$footer = file_exists($scripting.'/script/'.$locale.'/umi_ftr.txt') ? file_get_contents($scripting.'/script/'.$locale.'/umi_ftr.txt') : file_get_contents($scripting.'/script/umi_ftr.txt');
 			$script .= str_replace(CRLF, LF, $footer);
 
 			localiseScript($script, $scripting.'/script/'.$locale.'/');
