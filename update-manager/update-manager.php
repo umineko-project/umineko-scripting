@@ -406,8 +406,8 @@ function encodeScript($data) {
 	return $hdr.$data;
 }
 
-function deformat($str){
-	return preg_replace('/\{c\:86EF9C\:([\s\S]*?)\}/i', '$1', 
+function removeGrim($str){
+	return preg_replace('/\{c\:86EF9C\:(.*?)\}/', '$1', 
 		preg_replace('/\[gstg \d+\]/', '', $str)
 	);
 }
@@ -467,7 +467,6 @@ function main($argc, $argv) {
 			$script = str_replace('builder_localisation', $locale, $script);
 			$script = str_replace('builder_version', $ver, $script);
 
-			// newly added
 			$tmp_script = '';
 			 
 			for ($i = 1; $i <= 8; $i++) {
@@ -477,18 +476,22 @@ function main($argc, $argv) {
 				$tmp_script .= inplaceLines($scripting.'/game/main/', $scripting.'/story/ep'.$i.'/jp/', $tldir);
 			}
 			$tmp_script .= inplaceLines($scripting.'/game/omake/', $scripting.'/story/omake/jp/',
-				$scripting.'/story/omake/'.$locale.'/');
+				$scripting.'/story/omake/'.$locale.'/'); // Maybe omake needs grimoire
 
 			if(file_exists($scripting.'/game/grim/'.$locale.'_grim.txt')) {
-				$grim = str_replace("\n", '', file($scripting.'/game/grim/'.$locale.'_grim.txt'));
+				$grim = preg_replace('/^\s*(;.*)?$/', '', 
+					preg_replace('/\n|\r\n$/', '', file($scripting.'/game/grim/'.$locale.'_grim.txt')) // '/(\r)?\n$/' may not work
+				);
 				$len = count($grim);
-				$deformat_grim = [];
-				for ($i = 0; $i < $len; $i++)
-					$deformat_grim[$i] = deformat($grim[$i]);
-				$tmp_script = str_replace($deformat_grim, $grim, deformat($tmp_script));
+				$preg_grim = [];
+				for ($i = 0; $i < $len; $i++)//{
+					$preg_grim[$i] = '/'.preg_quote(removeGrim($grim[$i]), '/').'/';
+					//echo "$i#$grim[$i]#$preg_grim[$i]\n";
+				//}
+				$tmp_script = preg_replace($preg_grim, $grim, removeGrim($tmp_script), 1); // Here I only replace it once, because if there are two same sentences, the one that needs grimoire is definitely the first one
 			}
+
 			$script .= $tmp_script;
-			//end
 
 			$footer = file_get_contents($scripting.'/script/umi_ftr.txt');
 			$script .= str_replace(CRLF, LF, $footer);
