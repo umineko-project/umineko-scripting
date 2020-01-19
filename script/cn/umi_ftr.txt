@@ -37982,54 +37982,6 @@ return
 		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim1_8,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim1_9,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim1_10,%tmp,%tmp1 : add %tmp1,64
-	~
-	
-	if %scenario_Number != 2 jumpf ;ep2
-		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim2_1,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim2_2,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim2_3,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim2_4,%tmp,%tmp1 : add %tmp1,64
-	~
-	
-	if %scenario_Number != 3 jumpf ;ep3
-		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim3_1,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim3_2,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim3_3,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim3_4,%tmp,%tmp1 : add %tmp1,64
-	~
-	
-	if %scenario_Number != 4 jumpf ;ep4
-		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim4_1,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim4_2,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim4_3,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim4_4,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim4_5,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim4_6,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim4_7,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim4_8,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim4_9,%tmp,%tmp1 : add %tmp1,64
-	~
-	
-	if %scenario_Number != 5 jumpf ;ep5
-		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim5_1,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim5_*r_grim_button_new
-	_csp tips1_lsp,tips7_lsp
-	_csp r_tips_txt_lsp
-	_csp r_grim_txt_lsp
-
-	mov %tmp,142 : 	mov %tmp1,170
-	
-	if %scenario_Number != 1 jumpf ;ep1
-		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim1_1,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim1_2,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim1_3,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim1_4,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim1_5,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim1_6,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim1_7,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim1_8,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim1_9,%tmp,%tmp1 : add %tmp1,64
-		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim1_10,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[11][grim_flg] = 1 lsp grim11_lsp,r_grim1_11,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[12][grim_flg] = 1 lsp grim12_lsp,r_grim1_12,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[13][grim_flg] = 1 lsp grim13_lsp,r_grim1_13,%tmp,%tmp1 : add %tmp1,64
