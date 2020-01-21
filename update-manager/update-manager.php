@@ -406,6 +406,12 @@ function encodeScript($data) {
 	return $hdr.$data;
 }
 
+function removeGrim($str){
+	return preg_replace('/\{c\:86EF9C\:(.*?)\}/', '$1', 
+		preg_replace('/\[gstg \d+\]/', '', $str)
+	);
+}
+
 function main($argc, $argv) {
 	if ($argc < 2) err(getUsage());
 	
@@ -460,17 +466,34 @@ function main($argc, $argv) {
 			$script = str_replace('builder_date', time(), $script);
 			$script = str_replace('builder_localisation', $locale, $script);
 			$script = str_replace('builder_version', $ver, $script);
-			
+
+			$tmp_script = '';
+			 
 			for ($i = 1; $i <= 8; $i++) {
 				$tldir = $scripting.'/story/ep'.$i.'/'.$locale.'/';
 				if (!is_dir($tldir))
 					$tldir = $scripting.'/story/ep'.$i.'/en/';
-				$script .= inplaceLines($scripting.'/game/main/', $scripting.'/story/ep'.$i.'/jp/', $tldir);
+				$tmp_script .= inplaceLines($scripting.'/game/main/', $scripting.'/story/ep'.$i.'/jp/', $tldir);
 			}
-			$script .= inplaceLines($scripting.'/game/omake/', $scripting.'/story/omake/jp/',
-				$scripting.'/story/omake/'.$locale.'/');
+			$tmp_script .= inplaceLines($scripting.'/game/omake/', $scripting.'/story/omake/jp/',
+				$scripting.'/story/omake/'.$locale.'/'); // Maybe omake needs grimoire
 
-			$footer = file_get_contents($scripting.'/script/umi_ftr.txt');
+			if(file_exists($scripting.'/game/grim/'.$locale.'_grim.txt')) {
+				$grim = preg_replace('/^\s*(;.*)?$/', '', 
+					preg_replace('/\n|\r\n$/', '', file($scripting.'/game/grim/'.$locale.'_grim.txt')) // '/(\r)?\n$/' may not work
+				);
+				$len = count($grim);
+				$preg_grim = [];
+				for ($i = 0; $i < $len; $i++)//{
+					$preg_grim[$i] = '/'.preg_quote(removeGrim($grim[$i]), '/').'/';
+					//echo "$i#$grim[$i]#$preg_grim[$i]\n";
+				//}
+				$tmp_script = preg_replace($preg_grim, $grim, removeGrim($tmp_script), 1); // Here I only replace it once, because if there are two same sentences, the one that needs grimoire is definitely the first one
+			}
+
+			$script .= $tmp_script;
+
+			$footer = file_get_contents(file_exists($t = $scripting.'/script/'.$locale.'/umi_ftr.txt') ? $t : $scripting.'/script/umi_ftr.txt');
 			$script .= str_replace(CRLF, LF, $footer);
 
 			localiseScript($script, $scripting.'/script/'.$locale.'/');
