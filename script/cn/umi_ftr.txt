@@ -27824,10 +27824,10 @@ return
 	;end
 
 	;Type button
-	if %BtnRes = 47 mov %msgwnd_type,2 : gosub *update_msgwnd : gosub *settings_textbox
-	if %BtnRes = 48 mov %msgwnd_type,1 : gosub *update_msgwnd : gosub *settings_textbox
-	if %BtnRes = 49 mov %msgwnd_type,0 : gosub *update_msgwnd : gosub *settings_textbox
-	if %BtnRes = 50 mov %msgwnd_type,3 : gosub *update_msgwnd : gosub *settings_textbox
+	if %BtnRes = 47 mov %msgwnd_type,2 : gosub *settings_textbox
+	if %BtnRes = 48 mov %msgwnd_type,1 : gosub *settings_textbox
+	if %BtnRes = 49 mov %msgwnd_type,0 : gosub *settings_textbox
+	if %BtnRes = 50 mov %msgwnd_type,3 : gosub *settings_textbox
 	;End
 
 	;Speed button
@@ -29136,6 +29136,7 @@ return
 	seplay 9,1005,100 : wait 50
 	border_pad_pop
 	dwavestop 0
+	gosub *apply_msgwnd_settings
 return
 
 *settings_full_reset
@@ -32247,8 +32248,7 @@ return
 		gosub *set_dynamic_window_base
 	~
 	mov %cur_wndmode,off
-	gosub *update_msgwnd
-return
+	goto *update_msgwnd_direct
 
 *set_name_window_non
 	jskip_s
@@ -32359,14 +32359,21 @@ return
 	text_speed %textspeed
 return
 
-*update_msgwnd
+*apply_msgwnd_settings
+	if %cur_wndmode = on return
+	gosub *set_name_window_base
+	gosub *set_dynamic_window_base
+	goto *update_msgwnd_direct
 
-jskip_s
-	if %msgwnd_type = 0 setwindowd msgwnd
-	if %msgwnd_type = 1 setwindowd msgwnd2
-	if %msgwnd_type = 2 setwindowd msgwnd3
-	if %msgwnd_type = 3 setwindowd msgwnd4
-~
+*update_msgwnd
+	jskip_s
+		if %msgwnd_type = 0 setwindowd msgwnd
+		if %msgwnd_type = 1 setwindowd msgwnd2
+		if %msgwnd_type = 2 setwindowd msgwnd3
+		if %msgwnd_type = 3 setwindowd msgwnd4
+	~
+
+*update_msgwnd_direct
 
 if $cur_character = "ama" gosub *msgwnd_ama : jumpf
 if $cur_character = "bea" gosub *msgwnd_bea : jumpf
@@ -37418,7 +37425,7 @@ return
 	*tips_7
 	~
 	if %scenario_Number != 2 jumpf ;ep2
-		notif %r_display_tips = 1 goto *tips_ep2_1
+	notif %r_display_tips = 1 goto *tips_ep2_1
 		cell tips1_lsp,1
 		mov $r_tips_txt_path,tips_2_1_1
 	*tips_ep2_1
@@ -37455,7 +37462,7 @@ return
 	~
 
 	if %scenario_Number != 3 jumpf ;ep3
-		notif %r_display_tips = 1 goto *tips_ep3_1
+	notif %r_display_tips = 1 goto *tips_ep3_1
 		cell tips1_lsp,1
 		mov $r_tips_txt_path,tips_3_1_1
 	*tips_ep3_1
@@ -37487,7 +37494,7 @@ return
 	~
 	
 	if %scenario_Number != 4 jumpf ;ep4
-		notif %r_display_tips = 1 goto *tips_ep4_1
+	notif %r_display_tips = 1 goto *tips_ep4_1
 		cell tips1_lsp,1
 		mov $r_tips_txt_path,tips_4_1_1
 	*tips_ep4_1
