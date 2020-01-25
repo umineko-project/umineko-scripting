@@ -361,8 +361,8 @@ stralias grim_8_2_1,":s;#FFFFFF`{p:5:{p:4:桃太郎} ({i:Momotarou}) ou “Garot
 
 ;scenario
 stralias use_magic1,":s;#FFFFFF`{p:15:Você pode executar bruxaria para saltar adiante no tempo.}"
-stralias use_magic2,":s;#C7C7C7#FFFFFF`{p:15:Jogue o feitiço}"
-stralias use_magic3,":s;#C7C7C7#FFFFFF`{p:15:Não jogue o feitiço}"
+stralias use_magic2,":s;#C7C7C7#FFFFFF`{p:15:Jogar o feitiço}"
+stralias use_magic3,":s;#C7C7C7#FFFFFF`{p:15:Não jogar o feitiço}"
 stralias show_dream1,":s;#FFFFFF`{p:15:Você gostaria de recordar seu Sonho Dourado?}"
 stralias show_dream2,":s;#C7C7C7#FFFFFF`{p:15:Com certeza}"
 stralias show_dream3,":s;#C7C7C7#FFFFFF`{p:15:Talvez mais tarde}"
@@ -632,7 +632,7 @@ stralias scenario_7_3,"Ushiromiya Kinzo"
 stralias scenario_7_4,"República de Salò"
 stralias scenario_7_5,"A Bruxa que Veio do Mar"
 stralias scenario_7_6,"O Nascimento da Beatrice"
-stralias scenario_7_7,"História de Fantasma do quarto VIP"
+stralias scenario_7_7,"História de Fantasma do Quarto VIP"
 stralias scenario_7_8,"Aqui está o Culpado"
 stralias scenario_7_9,"Uma Vida Nova"
 stralias scenario_7_10,"O Primeiro Amigo"
@@ -878,7 +878,7 @@ stralias save_7_03,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n
 stralias save_7_04,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}República de Salò}`"
 stralias save_7_05,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}A Bruxa que Veio do Mar}`"
 stralias save_7_06,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}O Nascimento da Beatrice}`"
-stralias save_7_07,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}História de Fantasmas do quarto VIP}`"
+stralias save_7_07,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}História de Fantasmas do Quarto VIP}`"
 stralias save_7_08,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}Aqui está o Culpado}`"
 stralias save_7_09,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}Uma Vida Nova}`"
 stralias save_7_10,":s;#FFFFFF`{p:30:Episódio 7. Requiem of the Golden Witch.{n}O Primeiro Amigo}`"
@@ -1951,7 +1951,7 @@ numalias settings_base_off7,1559
 
 ;quiz 8 episode
 stralias quiz_ask_auntie_eva,":a/2,0,3;graphics\menu_pt\quiz\ask_auntie_eva.png"
-stralias quiz_letter,":a/2,0,3;graphics\menu_pt\quiz\quizbtn"
+stralias quiz_letter,":a/2,0,3;graphics\menu_en\quiz\quizbtn"
 stralias m1,":c;graphics\menu_pt\quiz\m1.png" ; Note: Shares filename (but not stralias, luckily) with a mask
 stralias m2,":c;graphics\menu_pt\quiz\m2.png"
 stralias quiz2_back,":c;graphics\menu_pt\quiz2\quiz2_back.png"
