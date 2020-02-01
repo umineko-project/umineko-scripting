@@ -37690,6 +37690,35 @@ return
 		cell grim4_lsp,1
 		mov $r_grim_txt_path,grim_2_4_1
 	*grim_ep2_4
+	
+	notif %r_display_grim = 5 goto *grim_ep2_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_2_5_1
+	*grim_ep2_5
+
+	notif %r_display_grim = 6 goto *grim_ep2_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_2_6_1
+	*grim_ep2_6
+
+	notif %r_display_grim = 7 goto *grim_ep2_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_2_7_1
+	*grim_ep2_7
+
+	notif %r_display_grim = 8 goto *grim_ep2_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_2_8_1
+	*grim_ep2_8
+	notif %r_display_grim = 9 goto *grim_ep2_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_2_9_1
+	*grim_ep2_9
+
+	notif %r_display_grim = 10 goto *grim_ep2_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_2_10_1
+	*grim_ep2_10	
 	~
 	
 	if %scenario_Number != 3 jumpf ;ep3
@@ -37712,6 +37741,36 @@ return
 		cell grim4_lsp,1
 		mov $r_grim_txt_path,grim_3_4_1
 	*grim_ep3_4
+
+	notif %r_display_grim = 5 goto *grim_ep3_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_3_5_1
+	*grim_ep3_5
+	
+	notif %r_display_grim = 6 goto *grim_ep3_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_3_6_1
+	*grim_ep3_6
+	
+	notif %r_display_grim = 7 goto *grim_ep3_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_3_7_1
+	*grim_ep3_7
+	
+	notif %r_display_grim = 8 goto *grim_ep3_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_3_8_1
+	*grim_ep3_8
+	
+	notif %r_display_grim = 9 goto *grim_ep3_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_3_9_1
+	*grim_ep3_9
+	
+	notif %r_display_grim = 10 goto *grim_ep3_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_3_10_1
+	*grim_ep3_10
 	~
 	
 	if %scenario_Number != 4 jumpf ;ep4
@@ -37756,14 +37815,6 @@ return
 		cell grim10_lsp,1
 		mov $r_grim_txt_path,grim_4_10_1
 	*grim_ep4_10
-	notif %r_display_grim = 11 goto *grim_ep4_11
-		cell grim11_lsp,1
-		mov $r_grim_txt_path,grim_4_11_1
-	*grim_ep4_11
-	notif %r_display_grim = 12 goto *grim_ep4_12
-		cell grim12_lsp,1
-		mov $r_grim_txt_path,grim_4_12_1
-	*grim_ep4_12
 	~
 	
 	if %scenario_Number != 5 jumpf ;ep5
@@ -37787,6 +37838,26 @@ return
 		cell grim5_lsp,1
 		mov $r_grim_txt_path,grim_5_5_1
 	*grim_ep5_5
+	notif %r_display_grim = 6 goto *grim_ep5_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_5_6_1
+	*grim_ep5_6
+	notif %r_display_grim = 7 goto *grim_ep5_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_5_7_1
+	*grim_ep5_7
+	notif %r_display_grim = 8 goto *grim_ep5_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_5_8_1
+	*grim_ep5_8	
+	notif %r_display_grim = 9 goto *grim_ep5_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_5_9_1
+	*grim_ep5_9	
+	notif %r_display_grim = 10 goto *grim_ep5_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_5_10_1
+	*grim_ep5_10	
 	~
 	
 	if %scenario_Number != 6 jumpf ;ep6
@@ -37798,6 +37869,38 @@ return
 		cell grim2_lsp,1
 		mov $r_grim_txt_path,grim_6_2_1
 	*grim_ep6_2
+	notif %r_display_grim = 3 goto *grim_ep6_3
+		cell grim3_lsp,1
+		mov $r_grim_txt_path,grim_6_3_1
+	*grim_ep6_3	
+	notif %r_display_grim = 4 goto *grim_ep6_4
+		cell grim4_lsp,1
+		mov $r_grim_txt_path,grim_6_4_1
+	*grim_ep6_4	
+	notif %r_display_grim = 5 goto *grim_ep6_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_6_5_1
+	*grim_ep6_5	
+	notif %r_display_grim = 6 goto *grim_ep6_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_6_6_1
+	*grim_ep6_6	
+	notif %r_display_grim = 7 goto *grim_ep6_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_6_7_1
+	*grim_ep6_7
+	notif %r_display_grim = 8 goto *grim_ep6_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_6_8_1
+	*grim_ep6_8	
+	notif %r_display_grim = 9 goto *grim_ep6_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_6_9_1
+	*grim_ep6_9	
+	notif %r_display_grim = 10 goto *grim_ep6_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_6_10_1
+	*grim_ep6_10	
 	~
 	
 	if %scenario_Number != 7 jumpf ;ep7
@@ -37809,6 +37912,38 @@ return
 		cell grim2_lsp,1
 		mov $r_grim_txt_path,grim_7_2_1
 	*grim_ep7_2
+	notif %r_display_grim = 3 goto *grim_ep7_3
+		cell grim3_lsp,1
+		mov $r_grim_txt_path,grim_7_3_1
+	*grim_ep7_3	
+	notif %r_display_grim = 4 goto *grim_ep7_4
+		cell grim4_lsp,1
+		mov $r_grim_txt_path,grim_7_4_1
+	*grim_ep7_4	
+	notif %r_display_grim = 5 goto *grim_ep7_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_7_5_1
+	*grim_ep7_5	
+	notif %r_display_grim = 6 goto *grim_ep7_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_7_6_1
+	*grim_ep7_6	
+	notif %r_display_grim = 7 goto *grim_ep7_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_7_7_1
+	*grim_ep7_7	
+	notif %r_display_grim = 8 goto *grim_ep7_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_7_8_1
+	*grim_ep7_8	
+	notif %r_display_grim = 9 goto *grim_ep7_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_7_9_1
+	*grim_ep7_9	
+	notif %r_display_grim = 10 goto *grim_ep7_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_7_10_1
+	*grim_ep7_10	
 	~
 	
 	if %scenario_Number != 8 jumpf ;ep8
@@ -37820,6 +37955,38 @@ return
 		cell grim2_lsp,1
 		mov $r_grim_txt_path,grim_8_2_1
 	*grim_ep8_2
+	notif %r_display_grim = 3 goto *grim_ep8_3
+		cell grim3_lsp,1
+		mov $r_grim_txt_path,grim_8_3_1
+	*grim_ep8_3	
+	notif %r_display_grim = 4 goto *grim_ep8_4
+		cell grim4_lsp,1
+		mov $r_grim_txt_path,grim_8_4_1
+	*grim_ep8_4	
+	notif %r_display_grim = 5 goto *grim_ep8_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_8_5_1
+	*grim_ep8_5	
+	notif %r_display_grim = 6 goto *grim_ep8_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_8_6_1
+	*grim_ep8_6	
+	notif %r_display_grim = 7 goto *grim_ep8_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_8_7_1
+	*grim_ep8_7	
+	notif %r_display_grim = 8 goto *grim_ep8_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_8_8_1
+	*grim_ep8_8	
+	notif %r_display_grim = 9 goto *grim_ep8_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_8_9_1
+	*grim_ep8_9	
+	notif %r_display_grim = 10 goto *grim_ep8_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_8_10_1
+	*grim_ep8_10	
 	~
 	
 	vsp 99,0 : vsp 98,0 : mov %r_display_arrow,0 ;disable the arrows
@@ -37926,6 +38093,12 @@ return
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim2_2,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim2_3,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim2_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim2_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim2_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim2_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim2_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim2_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim2_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 3 jumpf ;ep3
@@ -37933,6 +38106,12 @@ return
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim3_2,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim3_3,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim3_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim3_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim3_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim3_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim3_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim3_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim3_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 4 jumpf ;ep4
@@ -37945,6 +38124,7 @@ return
 		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim4_7,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim4_8,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim4_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim4_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 5 jumpf ;ep5
@@ -37953,21 +38133,50 @@ return
 		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim5_3,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim5_4,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim5_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim5_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim5_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim5_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim5_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim5_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 6 jumpf ;ep6
 		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim6_1,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim6_2,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim6_3,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim6_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim6_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim6_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim6_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim6_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim6_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim6_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 7 jumpf ;ep7
 		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim7_1,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim7_2,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim7_3,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim7_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim7_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim7_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim7_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim7_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim7_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim7_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 8 jumpf ;ep8
 		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim8_1,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim8_2,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim8_3,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim8_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim8_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim8_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim8_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim8_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim8_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim8_10,%tmp,%tmp1 : add %tmp1,64
 	~
 return
 
