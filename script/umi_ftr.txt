@@ -32265,7 +32265,7 @@ return
 	border_padding 0
 
 	change_font 1,1
-	setwindow4 160,750,60,1581,1,66,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
+	setwindow4 160,750,50,1581,1,55,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
 	setwindow4name 0,0,50,1581,1,55,0,0,0,0,1
 	borderstyle 5,#000000 : shadedistance 0,0
 	borderstyle 5,#000000,1 : shadedistance 0,0,#000000,1
@@ -32279,9 +32279,9 @@ return
 	if %msgwnd_type = 2 setwindowd msgwnd3
 	if %msgwnd_type = 3 setwindowd msgwnd4
 
-	setwindowd_dimensions 167,725,1586,306
-	setwindowd_padding -20,87,-41,87
-	setwindowd_name_padding 25,100,-60,87
+	setwindowd_dimensions 145,735,1615,295
+	setwindowd_padding -10,80,-40,65
+	setwindowd_name_padding 30,77,-60,65
 	setwindowd_main_region 240,14,1408,274,77
 	setwindowd_non_region 0,235,112,38,60
 	setwindowd_name_region 0,11,224,118,60,170,170,74
@@ -32301,9 +32301,8 @@ return
 	getparam %setwindow_x,%setwindow_y
 
 	;if we passed no params we will use the default ones (0,0 is just senseless)
-	if %setwindow_x = 0 mov %setwindow_x,167
-	if %setwindow_x = 80 mov %setwindow_x,167
-	if %setwindow_y = 0 mov %setwindow_y,320
+	if %setwindow_x = 0 mov %setwindow_x,80
+	if %setwindow_y = 0 mov %setwindow_y,300
 	mov %log_sw_x,%setwindow_x
 	mov %log_sw_y,%setwindow_y
 	jskip_s
@@ -32311,7 +32310,7 @@ return
 		setwindowd_off
 
 		mov %setwindow_x,%setwindow_x*2
-		setwindow4 %setwindow_x/2,%setwindow_y,60,1920-%setwindow_x,1,66,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
+		setwindow4 %setwindow_x/2,%setwindow_y,50,1920-%setwindow_x,1,55,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
 		borderstyle 5,#000000 : shadedistance 0,0
 		if %msgwnd_type = 3 shadedistance 2,2
 		gosub *set_window_options ; locale specfic
