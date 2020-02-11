@@ -62,3 +62,6 @@ return
 *backup_disable_lang
 	backup_disable "language_pt","pt.file","pt.txt"
 return
+
+*set_window_simple_update
+return
