@@ -104,3 +104,7 @@ return
 *backup_disable_lang
 	backup_disable "language_cn","cn.file","cn.txt"
 return
+
+*set_window_simple_update
+	if %setwindow_x = 80 mov %setwindow_x,166
+return

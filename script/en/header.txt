@@ -12,6 +12,10 @@ if %CHIRU_MODE == 1 stralias msgwnd,":a;graphics\system\wnd\msgwnd_ep5_en.png"
 stralias msgwnd2,":a;graphics\system\wnd\msgwnd2.png"
 stralias msgwnd3,":a;graphics\system\wnd\msgwnd3.png"
 stralias msgwnd4,":a;graphics\system\wnd\msgwnd4.png"
+numalias text_main_size,50
+numalias text_main_spacing,55
+numalias text_name_size,50
+numalias text_name_spacing,55
 
 ;--Textboxes-end--
 

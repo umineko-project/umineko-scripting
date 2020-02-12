@@ -2785,7 +2785,6 @@ defsub display_clock3
 ;Textbox mods
 defsub set_name_window_non
 defsub set_name_window
-defsub set_window_monospace
 defsub set_window_simple
 defsub ak
 defsub nj
