@@ -11,8 +11,8 @@ jobs:
       run: |
         mkdir cnout
         BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
-        php update-manager/update-manager.php dscript "cnout/cn.txt" . cn ${BUILD} || exit 1
-        php update-manager/update-manager.php script cnout/cn.txt "cnout/cn.file" 9999 || exit 1
+        php update-manager/update-manager.php dscript "cnout/cn.txt" . cn
+        php update-manager/update-manager.php script cnout/cn.txt "cnout/cn.file" 9999
     - name: Upload CN
       uses: actions/upload-artifact@v1
       with:
@@ -22,8 +22,8 @@ jobs:
       run: |
         mkdir enout
         BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
-        php update-manager/update-manager.php dscript "enout/en.txt" . en ${BUILD} || exit 1
-        php update-manager/update-manager.php script enout/en.txt "enout/en.file" 9999 || exit 1
+        php update-manager/update-manager.php dscript "enout/en.txt" . en
+        php update-manager/update-manager.php script enout/en.txt "enout/en.file" 9999
     - name: Upload EN
       uses: actions/upload-artifact@v1
       with:
@@ -33,8 +33,8 @@ jobs:
       run: |
         mkdir ruout
         BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
-        php update-manager/update-manager.php dscript "ruout/ru.txt" . ru ${BUILD} || exit 1
-        php update-manager/update-manager.php script ruout/ru.txt "ruout/ru.file" 9999 || exit 1
+        php update-manager/update-manager.php dscript "ruout/ru.txt" . ru
+        php update-manager/update-manager.php script ruout/ru.txt "ruout/ru.file" 9999
     - name: Upload RU
       uses: actions/upload-artifact@v1
       with:
