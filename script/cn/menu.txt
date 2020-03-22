@@ -2034,7 +2034,7 @@ numalias settings_base_off7,1559
 
 ;quiz 8 episode
 stralias quiz_ask_auntie_eva,":a/2,0,3;graphics\menu_cn\quiz\ask_auntie_eva.png"
-stralias quiz_letter,":a/2,0,3;graphics\menu_en\quiz\quizbtn"
+stralias quiz_letter,":a/2,0,3;graphics\menu_cn\quiz\quizbtn"
 stralias m1,":c;graphics\menu_cn\quiz\m1.png" ; Note: Shares filename (but not stralias, luckily) with a mask
 stralias m2,":c;graphics\menu_cn\quiz\m2.png"
 stralias quiz2_back,":c;graphics\menu_cn\quiz2\quiz2_back.png"
