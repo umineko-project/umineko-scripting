@@ -47,7 +47,7 @@ matrix:
       - cd ..
 
 deploy:
-  cleanup: false
+  skip_cleanup: true
   provider: releases
   api_key:
     secure: avahdduoEOdHSgri7WKP9owmj0Kaf9sJ5fHGaAAMpijqUtOo5pi0Uw4LK2BRLVKa+5bojZfSJN3rmtQkxIsE8MXKl+AKnrqbIzkgZs65vWR7tL/X3/VPef0O/ujwQAgjCXcYgCc/MFz2CsfZb4PAnBDu9wo2THkoqQH5GSat/gj1xgD+Ig9+BxzL5ykUr1zd4PoJVtF85zzYyxOLm6n1v1lWBtqhP95/AYNbwv9tobCXZ6HGCCEhV57xX2r01U31Bi9kIcR5gtiVJIPCw5LaRfeSLX1pD52rIzSpfzrAl/yv9dl6LUUVN0BR/BALjBWkUyg1t7PKlM7cDui78dlZh21eDfbnYpq1pPVKn4p2lyylXYVm/niePTIZHuCaCXOA2YkyrzXqg2FiFfeBMwxO9PhEjd65UInx6gPjuHLW00BUODDYW37S/L3Mo2O7lPVM4d2hg7UlpmtEqk6lHePFlM+jLUOjod20GhibnN4W28oZ5wvziWIUtSLKu3cQWJ59ROYTRDfabH/zMm/g1hNUaTxZRaC9woDNVyTltE/UIINAQjRcsHGjPwWmuMShMPCSCHCWD/9EbRnOC4HDOGLguI+02u3yOeg6HH5+6vmPqA+WwnDbJg9z/w/n4sXJpoUu/fOkKSLW++THHEpG1bWyBQGuJpFwkCFE6qEkUW5Ytig=
