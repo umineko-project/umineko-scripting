@@ -1976,8 +1976,7 @@ stralias trophy_text_94,"{p:18:Золотой трофей{n}Twilight of the Gol
 stralias trophy_text_95,"{p:18:Золотой трофей{n}CG Hunter{n}Заполните галерею на 100%.}"
 stralias trophy_text_96,"{p:18:Золотой трофей{n}Music Hunter{n}Заполните музыкальную шкатулку на 100%.}"
 
-; ugly temporary config fix
-
+;Hardcoded offsets in menus and other places, which are currently not calculated
 numalias settings_base_off1,1403
 numalias settings_base_off2,1550
 numalias settings_base_off3,1140
@@ -1985,6 +1984,7 @@ numalias settings_base_off4,1377
 numalias settings_base_off5,890
 numalias settings_base_off6,1093
 numalias settings_base_off7,1559
+numalias omake3_line_y,105
 
 ;quiz 8 episode
 stralias quiz_ask_auntie_eva,":a/2,0,3;graphics\menu\quiz\ask_auntie_eva.png"

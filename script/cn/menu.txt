@@ -2022,8 +2022,7 @@ stralias trophy_text_94,"{p:18:金奖杯{n}黄金魔女的暮光：魔法{n}读�
 stralias trophy_text_95,"{p:18:金奖杯{n}CG 猎人{n}达成图片鉴赏 100%全收集。}"
 stralias trophy_text_96,"{p:18:金奖杯{n}音乐猎人{n}达成音乐鉴赏 100%全收集。}"
 
-; ugly temporary config fix
-
+;Hardcoded offsets in menus and other places, which are currently not calculated
 numalias settings_base_off1,1478
 numalias settings_base_off2,1605
 numalias settings_base_off3,1010
@@ -2031,6 +2030,7 @@ numalias settings_base_off4,1377
 numalias settings_base_off5,850
 numalias settings_base_off6,1213
 numalias settings_base_off7,1559
+numalias omake3_line_y,105
 
 ;quiz 8 episode
 stralias quiz_ask_auntie_eva,":a/2,0,3;graphics\menu_cn\quiz\ask_auntie_eva.png"
