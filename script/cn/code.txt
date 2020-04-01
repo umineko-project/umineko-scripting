@@ -113,7 +113,7 @@ return
 if %BGM_Id == 1	mov $BGM_Title,"透百合" : return
 if %BGM_Id == 2	mov $BGM_Title,"夏之扉" : return
 if %BGM_Id == 3	mov $BGM_Title,"羽" : return
-if %BGM_Id == 4	mov $BGM_Title,"奔走" : return
+if %BGM_Id == 4	mov $BGM_Title,"驰骋向前" : return
 if %BGM_Id == 5	mov $BGM_Title,"海" : return
 if %BGM_Id == 6	mov $BGM_Title,"黑暗时刻" : return
 if %BGM_Id == 7	mov $BGM_Title,"短篇小说" : return
@@ -125,7 +125,7 @@ if %BGM_Id == 12 	mov $BGM_Title,"月夜" : return
 if %BGM_Id == 13	mov $BGM_Title,"玫瑰" : return
 if %BGM_Id == 14	mov $BGM_Title,"濒死" : return
 if %BGM_Id == 15	mov $BGM_Title,"炼沙回廊" : return
-if %BGM_Id == 16	mov $BGM_Title,"坚韧" : return
+if %BGM_Id == 16	mov $BGM_Title,"折而不摧" : return
 if %BGM_Id == 17	mov $BGM_Title,"witch in gold(cembalo)" : return
 if %BGM_Id == 18	mov $BGM_Title,"引诱" : return
 if %BGM_Id == 19	mov $BGM_Title,"可疑的味道" : return
@@ -169,7 +169,7 @@ if %BGM_Id == 56	mov $BGM_Title,"休息" : return
 if %BGM_Id == 57	mov $BGM_Title,"白日梦的尽头" : return
 if %BGM_Id == 58	mov $BGM_Title,"旋律" : return
 if %BGM_Id == 59	mov $BGM_Title,"飞越天际" : return
-if %BGM_Id == 60	mov $BGM_Title,"一片阳光" : return
+if %BGM_Id == 60	mov $BGM_Title,"一汪阳光" : return
 if %BGM_Id == 61	mov $BGM_Title,"蜡烛们在跳舞" : return
 if %BGM_Id == 62	mov $BGM_Title,"遥远" : return
 if %BGM_Id == 63	mov $BGM_Title,"psy-chorus" : return
@@ -184,7 +184,7 @@ if %BGM_Id == 71	mov $BGM_Title,"rhythm-changer" : return
 if %BGM_Id == 72	mov $BGM_Title,"牵线人偶的幸福 附赠版" : return
 if %BGM_Id == 73	mov $BGM_Title,"牵线人偶的幸福" : return
 if %BGM_Id == 74	mov $BGM_Title,"月兔之舞" : return
-if %BGM_Id == 75	mov $BGM_Title,"正在消逝" : return
+if %BGM_Id == 75	mov $BGM_Title,"消逝" : return
 if %BGM_Id == 76	mov $BGM_Title,"魂中之魂" : return
 if %BGM_Id == 77	mov $BGM_Title,"miragecoordinator" : return
 if %BGM_Id == 78	mov $BGM_Title,"狱" : return
@@ -205,10 +205,10 @@ if %BGM_Id == 92	mov $BGM_Title,"樱太郎的奋斗故事" : return
 if %BGM_Id == 93	mov $BGM_Title,"平行线" : return
 if %BGM_Id == 95	mov $BGM_Title,"5.99亿次毁灭" : return
 if %BGM_Id == 96	mov $BGM_Title,"祝玛利亚快乐！(伴奏)" : return
-if %BGM_Id == 97	mov $BGM_Title,"周遭四下" : return
+if %BGM_Id == 97	mov $BGM_Title,"围城" : return
 if %BGM_Id == 98	mov $BGM_Title,"枪口" : return
 if %BGM_Id == 99	mov $BGM_Title,"death(from stupefaction)" : return
-if %BGM_Id == 100	mov $BGM_Title,"不共戴天的溃军" : return
+if %BGM_Id == 100	mov $BGM_Title,"绝命溃军" : return
 if %BGM_Id == 101	mov $BGM_Title,"替罪羊" : return
 if %BGM_Id == 102	mov $BGM_Title,"叛乱" : return
 if %BGM_Id == 103	mov $BGM_Title,"炼狱凶狂葬曲" : return
