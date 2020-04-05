@@ -139,7 +139,7 @@ if %BGM_Id == 26	mov $BGM_Title,"绘画的魔女" : return
 if %BGM_Id == 27	mov $BGM_Title,"怀疑" : return
 if %BGM_Id == 28	mov $BGM_Title,"痕音" : return
 if %BGM_Id == 29	mov $BGM_Title,"核心" : return
-if %BGM_Id == 30	mov $BGM_Title,"些微的黑暗" : return
+if %BGM_Id == 30	mov $BGM_Title,"些微黑暗" : return
 if %BGM_Id == 31	mov $BGM_Title,"夜之眼" : return
 if %BGM_Id == 32	mov $BGM_Title,"封闭我心" : return
 if %BGM_Id == 33	mov $BGM_Title,"安魂曲" : return
@@ -173,7 +173,7 @@ if %BGM_Id == 60	mov $BGM_Title,"一汪阳光" : return
 if %BGM_Id == 61	mov $BGM_Title,"蜡烛们在跳舞" : return
 if %BGM_Id == 62	mov $BGM_Title,"遥" : return
 if %BGM_Id == 63	mov $BGM_Title,"psy-chorus" : return
-if %BGM_Id == 64	mov $BGM_Title,"遥远" : return
+if %BGM_Id == 64	mov $BGM_Title,"远" : return
 if %BGM_Id == 65	mov $BGM_Title,"红鞋伪" : return
 if %BGM_Id == 66	mov $BGM_Title,"母亲" : return
 if %BGM_Id == 67	mov $BGM_Title,"朦胧" : return
@@ -257,7 +257,7 @@ if %BGM_Id == 145 	mov $BGM_Title,"活着" : return
 if %BGM_Id == 146 	mov $BGM_Title,"新魔女的诞生(伴奏)" : return
 if %BGM_Id == 147 	mov $BGM_Title,"ruriair" : return
 if %BGM_Id == 148 	mov $BGM_Title,"牵线人偶的婚约" : return
-if %BGM_Id == 149 	mov $BGM_Title,"一生" : return
+if %BGM_Id == 149 	mov $BGM_Title,"人生" : return
 if %BGM_Id == 150 	mov $BGM_Title,"罗蕾莱" : return
 if %BGM_Id == 151 	mov $BGM_Title,"罪" : return
 if %BGM_Id == 152 	mov $BGM_Title,"最初的和最后的" : return
@@ -269,7 +269,7 @@ if %BGM_Id == 157 	mov $BGM_Title,"解枷获释的解放者" : return
 if %BGM_Id == 158 	mov $BGM_Title,"感谢所有的人" : return
 if %BGM_Id == 159 	mov $BGM_Title,"婴儿女王蜂" : return
 if %BGM_Id == 160 	mov $BGM_Title,"新魔女的诞生(简短版)" : return
-if %BGM_Id == 161 	mov $BGM_Title,"可疑的气味" : return
+if %BGM_Id == 161 	mov $BGM_Title,"可疑十足的气味" : return
 if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre" : return
 if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulation" : return
 if %BGM_Id == 164 	mov $BGM_Title,"reflection-call" : return
@@ -281,9 +281,9 @@ if %BGM_Id == 169 	mov $BGM_Title,"ballade-continuer" : return
 if %BGM_Id == 170 	mov $BGM_Title,"无名之歌 2007版 伴奏" : return
 if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia" : return
 if %BGM_Id == 172 	mov $BGM_Title,"黄金夜曲(伴奏)" : return
-if %BGM_Id == 173 	mov $BGM_Title,"遥远(黯淡)" : return
+if %BGM_Id == 173 	mov $BGM_Title,"远(黯淡)" : return
 if %BGM_Id == 174 	mov $BGM_Title,"玩具箱" : return
-if %BGM_Id == 175 	mov $BGM_Title,"终点入口" : return
+if %BGM_Id == 175 	mov $BGM_Title,"终点的入口" : return
 if %BGM_Id == 176 	mov $BGM_Title,"人偶剧" : return
 if %BGM_Id == 177 	mov $BGM_Title,"s/he-end" : return
 if %BGM_Id == 179 	mov $BGM_Title,"无名之歌 完整版伴奏" : return
