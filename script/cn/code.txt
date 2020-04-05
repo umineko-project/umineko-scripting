@@ -128,7 +128,7 @@ if %BGM_Id == 15	mov $BGM_Title,"炼沙回廊" : return
 if %BGM_Id == 16	mov $BGM_Title,"折而不摧" : return
 if %BGM_Id == 17	mov $BGM_Title,"黄金中的魔女(大键琴)" : return
 if %BGM_Id == 18	mov $BGM_Title,"引诱" : return
-if %BGM_Id == 19	mov $BGM_Title,"可疑的味道" : return
+if %BGM_Id == 19	mov $BGM_Title,"可疑的气味" : return
 if %BGM_Id == 20	mov $BGM_Title,"愕然" : return
 if %BGM_Id == 21	mov $BGM_Title,"赞颂" : return
 if %BGM_Id == 22	mov $BGM_Title,"流逝" : return
@@ -249,8 +249,8 @@ if %BGM_Id == 137 	mov $BGM_Title,"爱之试炼" : return
 if %BGM_Id == 138 	mov $BGM_Title,"刹那" : return
 if %BGM_Id == 139 	mov $BGM_Title,"回顾" : return
 if %BGM_Id == 140 	mov $BGM_Title,"蓝蝶" : return
-if %BGM_Id == 141 	mov $BGM_Title,"我亲爱的" : return
-if %BGM_Id == 142 	mov $BGM_Title,"硝烟的味道" : return
+if %BGM_Id == 141 	mov $BGM_Title,"我之所爱" : return
+if %BGM_Id == 142 	mov $BGM_Title,"硝烟的气味" : return
 if %BGM_Id == 143 	mov $BGM_Title,"rog-limitation" : return
 if %BGM_Id == 144 	mov $BGM_Title,"圆舞曲 作品34" : return
 if %BGM_Id == 145 	mov $BGM_Title,"活着" : return
@@ -265,11 +265,11 @@ if %BGM_Id == 153 	mov $BGM_Title,"反魔继抒咏" : return
 if %BGM_Id == 154 	mov $BGM_Title,"战场" : return
 if %BGM_Id == 155 	mov $BGM_Title,"重生" : return
 if %BGM_Id == 156 	mov $BGM_Title,"道路" : return
-if %BGM_Id == 157 	mov $BGM_Title,"解下枷锁的解放者" : return
+if %BGM_Id == 157 	mov $BGM_Title,"解枷获释的解放者" : return
 if %BGM_Id == 158 	mov $BGM_Title,"感谢所有的人" : return
 if %BGM_Id == 159 	mov $BGM_Title,"婴儿女王蜂" : return
 if %BGM_Id == 160 	mov $BGM_Title,"新魔女的诞生(简短版)" : return
-if %BGM_Id == 161 	mov $BGM_Title,"可疑的味道" : return
+if %BGM_Id == 161 	mov $BGM_Title,"可疑的气味" : return
 if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre" : return
 if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulation" : return
 if %BGM_Id == 164 	mov $BGM_Title,"reflection-call" : return
@@ -312,6 +312,6 @@ if %BGM_Id == 1011	mov $BGM_Title,"系统零(原始版本)" : return
 if %legacy_op == off && %BGM_Id == 1012	mov $BGM_Title,"誓响的教堂" : return
 if %legacy_op == on  && %BGM_Id == 1012	mov $BGM_Title,"海猫鸣泣之时" : return
 if %BGM_Id == 1014	mov $BGM_Title,"伊南娜之梦" : return
-if %BGM_Id == 1017  mov $BGM_Title,"超自然的魔女" : return
+if %BGM_Id == 1017  mov $BGM_Title,"神秘莫测的魔女" : return
 if %BGM_Id == 1018  mov $BGM_Title,"雾之瓮棺" : return
 return
