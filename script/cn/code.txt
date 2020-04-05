@@ -172,7 +172,7 @@ if %BGM_Id == 59	mov $BGM_Title,"飞越天际" : return
 if %BGM_Id == 60	mov $BGM_Title,"一汪阳光" : return
 if %BGM_Id == 61	mov $BGM_Title,"蜡烛们在跳舞" : return
 if %BGM_Id == 62	mov $BGM_Title,"遥" : return
-if %BGM_Id == 63	mov $BGM_Title,"psy-chorus" : return
+if %BGM_Id == 63	mov $BGM_Title,"超常者之附和" : return
 if %BGM_Id == 64	mov $BGM_Title,"远" : return
 if %BGM_Id == 65	mov $BGM_Title,"红鞋伪" : return
 if %BGM_Id == 66	mov $BGM_Title,"母亲" : return
@@ -180,7 +180,7 @@ if %BGM_Id == 67	mov $BGM_Title,"朦胧" : return
 if %BGM_Id == 68	mov $BGM_Title,"舞动的烟管" : return
 if %BGM_Id == 69	mov $BGM_Title,"坟墓惊魂 -更多恐惧-" : return
 if %BGM_Id == 70	mov $BGM_Title,"管风琴小曲 第2亿号 c小调" : return
-if %BGM_Id == 71	mov $BGM_Title,"rhythm-changer" : return
+if %BGM_Id == 71	mov $BGM_Title,"旋律之更变者" : return
 if %BGM_Id == 72	mov $BGM_Title,"牵线人偶的幸福 附赠版" : return
 if %BGM_Id == 73	mov $BGM_Title,"牵线人偶的幸福" : return
 if %BGM_Id == 74	mov $BGM_Title,"月兔之舞" : return
@@ -192,7 +192,7 @@ if %BGM_Id == 79	mov $BGM_Title,"感谢你诞生于世" : return
 if %BGM_Id == 80	mov $BGM_Title,"翼" : return
 if %BGM_Id == 81	mov $BGM_Title,"失乐园" : return
 if %BGM_Id == 82	mov $BGM_Title,"无翼" : return
-if %BGM_Id == 83	mov $BGM_Title,"activepain" : return
+if %BGM_Id == 83	mov $BGM_Title,"剧痛" : return
 if %BGM_Id == 84	mov $BGM_Title,"坟墓惊魂 -节奏版-" : return
 if %BGM_Id == 85	mov $BGM_Title,"久远" : return
 if %BGM_Id == 86	mov $BGM_Title,"结束" : return
@@ -230,7 +230,7 @@ if %BGM_Id == 118 	mov $BGM_Title,"死亡之花" : return
 if %BGM_Id == 119 	mov $BGM_Title,"正义" : return
 if %BGM_Id == 120 	mov $BGM_Title,"ACI-L" : return
 if %BGM_Id == 121 	mov $BGM_Title,"喰那" : return
-if %BGM_Id == 122 	mov $BGM_Title,"Proud-dust" : return
+if %BGM_Id == 122 	mov $BGM_Title,"高傲之尘埃" : return
 if %BGM_Id == 123 	mov $BGM_Title,"你好，你的梦" : return
 if %BGM_Id == 124 	mov $BGM_Title,"孤独的深海鱼" : return
 if %BGM_Id == 125 	mov $BGM_Title,"少女们的魔女狩猎" : return
@@ -251,7 +251,7 @@ if %BGM_Id == 139 	mov $BGM_Title,"回顾" : return
 if %BGM_Id == 140 	mov $BGM_Title,"蓝蝶" : return
 if %BGM_Id == 141 	mov $BGM_Title,"我之所爱" : return
 if %BGM_Id == 142 	mov $BGM_Title,"硝烟的气味" : return
-if %BGM_Id == 143 	mov $BGM_Title,"rog-limitation" : return
+if %BGM_Id == 143 	mov $BGM_Title,"向着遗根之极限" : return
 if %BGM_Id == 144 	mov $BGM_Title,"圆舞曲 作品34" : return
 if %BGM_Id == 145 	mov $BGM_Title,"活着" : return
 if %BGM_Id == 146 	mov $BGM_Title,"新魔女的诞生(伴奏)" : return
@@ -270,32 +270,32 @@ if %BGM_Id == 158 	mov $BGM_Title,"感谢所有的人" : return
 if %BGM_Id == 159 	mov $BGM_Title,"婴儿女王蜂" : return
 if %BGM_Id == 160 	mov $BGM_Title,"新魔女的诞生(简短版)" : return
 if %BGM_Id == 161 	mov $BGM_Title,"可疑十足的气味" : return
-if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre" : return
-if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulation" : return
-if %BGM_Id == 164 	mov $BGM_Title,"reflection-call" : return
+if %BGM_Id == 162 	mov $BGM_Title,"十月之四日" : return
+if %BGM_Id == 163 	mov $BGM_Title,"生与死之循环" : return
+if %BGM_Id == 164 	mov $BGM_Title,"反射之呼唤" : return
 if %BGM_Id == 165 	mov $BGM_Title,"雨" : return
-if %BGM_Id == 166 	mov $BGM_Title,"7-weights" : return
+if %BGM_Id == 166 	mov $BGM_Title,"七之罪" : return
 if %BGM_Id == 167 	mov $BGM_Title,"散" : return
-if %BGM_Id == 168 	mov $BGM_Title,"bore-ral" : return
-if %BGM_Id == 169 	mov $BGM_Title,"ballade-continuer" : return
+if %BGM_Id == 168 	mov $BGM_Title,"向往自由之波莱罗" : return
+if %BGM_Id == 169 	mov $BGM_Title,"抒情之延续者" : return
 if %BGM_Id == 170 	mov $BGM_Title,"无名之歌 2007版 伴奏" : return
-if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia" : return
+if %BGM_Id == 171 	mov $BGM_Title,"虚伪之联盟" : return
 if %BGM_Id == 172 	mov $BGM_Title,"黄金夜曲(伴奏)" : return
 if %BGM_Id == 173 	mov $BGM_Title,"远(黯淡)" : return
 if %BGM_Id == 174 	mov $BGM_Title,"玩具箱" : return
 if %BGM_Id == 175 	mov $BGM_Title,"终点的入口" : return
 if %BGM_Id == 176 	mov $BGM_Title,"人偶剧" : return
-if %BGM_Id == 177 	mov $BGM_Title,"s/he-end" : return
+if %BGM_Id == 177 	mov $BGM_Title,"她或他之终焉" : return
 if %BGM_Id == 179 	mov $BGM_Title,"无名之歌 完整版伴奏" : return
 if %BGM_Id == 180 	mov $BGM_Title,"世界的终结" : return
-if %BGM_Id == 181 	mov $BGM_Title,"goddess-gardena" : return
+if %BGM_Id == 181 	mov $BGM_Title,"于众女神之庭院" : return
 if %BGM_Id == 183 	mov $BGM_Title,"嘲笑" : return
 if %BGM_Id == 184 	mov $BGM_Title,"黄泉路堕落" : return
 if %BGM_Id == 185 	mov $BGM_Title,"行刑者" : return
 if %BGM_Id == 186 	mov $BGM_Title,"无名之歌 佐仓片尾版" : return
 if %BGM_Id == 187 	mov $BGM_Title,"布娃娃" : return
 if %BGM_Id == 188 	mov $BGM_Title,"怪奇嬉游曲" : return
-if %BGM_Id == 190 	mov $BGM_Title,"en-counse" : return
+if %BGM_Id == 190 	mov $BGM_Title,"与恕我者之邂逅" : return
 if %BGM_Id == 191 	mov $BGM_Title,"lixAxil" : return
 if %BGM_Id == 192 	mov $BGM_Title,"启示录(伴奏)" : return
 if %BGM_Id == 193 	mov $BGM_Title,"飞翔" : return
