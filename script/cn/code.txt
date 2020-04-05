@@ -192,7 +192,7 @@ if %BGM_Id == 79	mov $BGM_Title,"感谢你诞生于世" : return
 if %BGM_Id == 80	mov $BGM_Title,"翼" : return
 if %BGM_Id == 81	mov $BGM_Title,"失乐园" : return
 if %BGM_Id == 82	mov $BGM_Title,"无翼" : return
-if %BGM_Id == 83	mov $BGM_Title,"剧痛" : return
+if %BGM_Id == 83	mov $BGM_Title,"烈痛" : return
 if %BGM_Id == 84	mov $BGM_Title,"坟墓惊魂 -节奏版-" : return
 if %BGM_Id == 85	mov $BGM_Title,"久远" : return
 if %BGM_Id == 86	mov $BGM_Title,"结束" : return
