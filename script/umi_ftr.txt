@@ -23842,7 +23842,7 @@ z_override_preserve
 if %skip_flg == off skip_off
 if %skip_flg == on skip_on
 
-if %cur_wndmode == off gosub *update_msgwnd
+if %cur_wndmode == off gosub *apply_msgwnd_settings
 gosub *update_textspeed
 mov $chapter_bak,$cur_character
 mov $chapter_rmode,$name_chapter_r_click
