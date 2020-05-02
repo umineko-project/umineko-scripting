@@ -14830,10 +14830,10 @@ gosub *me_generate
 ; Cake test
 ; mov %title_skip,0 : goto *d58138
 
-if $omake_return == "trailer" mov %title_skip,0 : goto *omake_chiru_menu
-if $omake_return == "omake" mov %title_skip,0 : goto *omake_chiru_menu
-if $omake_return == "omake8" mov %title_skip,0 : goto *omake_chiru_menu
-if $omake_return == "omake9" mov %title_skip,0 : goto *omake_chiru_menu
+if $omake_return == "trailer" mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
+if $omake_return == "omake"   mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
+if $omake_return == "omake8"  mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
+if $omake_return == "omake9"  mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
 
 ;rondo
 if %CHIRU_MODE != 0 jumpf
