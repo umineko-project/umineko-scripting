@@ -67,208 +67,208 @@ return
 return
 
 *bgm_locale_title
-if %BGM_Id == 1	mov $BGM_Title,"Тигровая лилия" : return
-if %BGM_Id == 2	mov $BGM_Title,"Врата лета" : return
-if %BGM_Id == 3	mov $BGM_Title,"АЙДА!" : return
-if %BGM_Id == 4	mov $BGM_Title,"В путь" : return
-if %BGM_Id == 5	mov $BGM_Title,"Море" : return
-if %BGM_Id == 6	mov $BGM_Title,"В час угрюмый" : return
-if %BGM_Id == 7	mov $BGM_Title,"Новелетта" : return
-if %BGM_Id == 8	mov $BGM_Title,"Надежда" : return
-if %BGM_Id == 9	mov $BGM_Title,"Бледная тень" : return
-if %BGM_Id == 10	mov $BGM_Title,"“Идиллия”" : return
-if %BGM_Id == 11	mov $BGM_Title,"Кипа летних облаков" : return
-if %BGM_Id == 12 	mov $BGM_Title,"Лунная ночь" : return
-if %BGM_Id == 13	mov $BGM_Title,"Роза" : return
-if %BGM_Id == 14	mov $BGM_Title,"Дыхание смерти" : return
-if %BGM_Id == 15	mov $BGM_Title,"В тёмном лабиринте" : return
-if %BGM_Id == 16	mov $BGM_Title,"Стойкость" : return
-if %BGM_Id == 17	mov $BGM_Title,"Ведьма в золоте (клавесин)" : return
-if %BGM_Id == 18	mov $BGM_Title,"Искушение" : return
-if %BGM_Id == 19	mov $BGM_Title,"Аромат подозрения" : return
-if %BGM_Id == 20	mov $BGM_Title,"Ступор" : return
-if %BGM_Id == 21	mov $BGM_Title,"Хвала" : return
-if %BGM_Id == 22	mov $BGM_Title,"Волшебный пасс" : return
-if %BGM_Id == 23	mov $BGM_Title,"Бабочка" : return
-if %BGM_Id == 24	mov $BGM_Title,"Золотой душегуб" : return
-if %BGM_Id == 25	mov $BGM_Title,"Конец сказки (ксилофон)" : return
-if %BGM_Id == 26	mov $BGM_Title,"Ведьма с картины" : return
-if %BGM_Id == 27	mov $BGM_Title,"Подозрение" : return
-if %BGM_Id == 28	mov $BGM_Title,"Острая струна" : return
-if %BGM_Id == 29	mov $BGM_Title,"Суть" : return
-if %BGM_Id == 30	mov $BGM_Title,"Миг беспросветности" : return
-if %BGM_Id == 31	mov $BGM_Title,"Затмение" : return
-if %BGM_Id == 32	mov $BGM_Title,"Бдящая душа" : return
-if %BGM_Id == 33	mov $BGM_Title,"Реквием" : return
-if %BGM_Id == 34	mov $BGM_Title,"Игры разума" : return
-if %BGM_Id == 35	mov $BGM_Title,"Конец сказки" : return
-if %BGM_Id == 36	mov $BGM_Title,"Игра" : return
-if %BGM_Id == 37	mov $BGM_Title,"system0" : return
-if %BGM_Id == 38	mov $BGM_Title,"Безмолвие" : return
-if %BGM_Id == 39	mov $BGM_Title,"Мёртвый угол" : return
-if %BGM_Id == 40	mov $BGM_Title,"#600 миллионов (короткая). До минор, орган" : return
-if %BGM_Id == 41	mov $BGM_Title,"Сброс ОКОВ" : return
-if %BGM_Id == 42	mov $BGM_Title,"И. Аллегро — Струнный квартет № 1, соль мажор" : return
-if %BGM_Id == 43	mov $BGM_Title,"Клетка" : return
-if %BGM_Id == 44	mov $BGM_Title,"Золотая насмешка" : return
-if %BGM_Id == 45	mov $BGM_Title,"Внутренности скорпиона" : return
-if %BGM_Id == 46	mov $BGM_Title,"Последний бенефис (вер. C)" : return
-if %BGM_Id == 47	mov $BGM_Title,"Ответ" : return
-if %BGM_Id == 48	mov $BGM_Title,"Краткий ответ" : return
-if %BGM_Id == 49	mov $BGM_Title,"Мелодия (инстр. вер.)" : return
-if %BGM_Id == 50	mov $BGM_Title,"Багровый ужас" : return
-if %BGM_Id == 51	mov $BGM_Title,"Луна" : return
-if %BGM_Id == 52	mov $BGM_Title,"Растерянность" : return
-if %BGM_Id == 53	mov $BGM_Title,"Могильный ужас" : return
-if %BGM_Id == 54	mov $BGM_Title,"Властелин конца сказки" : return
-if %BGM_Id == 55	mov $BGM_Title,"Чёрная Лиллиана" : return
-if %BGM_Id == 56	mov $BGM_Title,"Покой" : return
-if %BGM_Id == 57	mov $BGM_Title,"На закате грёз" : return
-if %BGM_Id == 58	mov $BGM_Title,"Мелодия" : return
-if %BGM_Id == 59	mov $BGM_Title,"Свободный полёт" : return
-if %BGM_Id == 60	mov $BGM_Title,"Солнечный уголок" : return
-if %BGM_Id == 61	mov $BGM_Title,"Танец свеч" : return
-if %BGM_Id == 62	mov $BGM_Title,"В дали" : return
-if %BGM_Id == 63	mov $BGM_Title,"Пси-хор" : return
-if %BGM_Id == 64	mov $BGM_Title,"Далеко-далеко..." : return
-if %BGM_Id == 65	mov $BGM_Title,"Красные башмачки. ФАЛЬШЬ" : return
-if %BGM_Id == 66	mov $BGM_Title,"Мама" : return
-if %BGM_Id == 67	mov $BGM_Title,"Дымка" : return
-if %BGM_Id == 68	mov $BGM_Title,"Танцующая трубка" : return
-if %BGM_Id == 69	mov $BGM_Title,"Замогильный ужас" : return
-if %BGM_Id == 70	mov $BGM_Title,"#200 миллионов (короткая). До минор, орган" : return
-if %BGM_Id == 71	mov $BGM_Title,"Собственный ритм" : return
-if %BGM_Id == 72	mov $BGM_Title,"Счастье марионетки (бонус)" : return
-if %BGM_Id == 73	mov $BGM_Title,"Счастье марионетки" : return
-if %BGM_Id == 74	mov $BGM_Title,"Танец лунных кроликов" : return
-if %BGM_Id == 75	mov $BGM_Title,"Оттепель" : return
-if %BGM_Id == 76	mov $BGM_Title,"Духовность души" : return
-if %BGM_Id == 77	mov $BGM_Title,"Иллюзионист" : return
-if %BGM_Id == 78	mov $BGM_Title,"Темница" : return
-if %BGM_Id == 79	mov $BGM_Title,"Славься рожденье твоё" : return
-if %BGM_Id == 80	mov $BGM_Title,"Крылья" : return
-if %BGM_Id == 81	mov $BGM_Title,"Потерянный рай" : return
-if %BGM_Id == 82	mov $BGM_Title,"Бескрылые" : return
-if %BGM_Id == 83	mov $BGM_Title,"Неуёмная боль" : return
-if %BGM_Id == 84	mov $BGM_Title,"Могильный ужас (ритмическая вер.)" : return
-if %BGM_Id == 85	mov $BGM_Title,"Вечность" : return
-if %BGM_Id == 86	mov $BGM_Title,"На грани" : return
-if %BGM_Id == 87	mov $BGM_Title,"Подобно вспышке" : return
-if %BGM_Id == 88	mov $BGM_Title,"F-стиль" : return
-if %BGM_Id == 89	mov $BGM_Title,"Чёрно-белые часы" : return
-if %BGM_Id == 90	mov $BGM_Title,"Безразличие" : return
-if %BGM_Id == 91	mov $BGM_Title,"Таинственный лес" : return
-if %BGM_Id == 92	mov $BGM_Title,"Сказ о стойкости Сакутаро" : return
-if %BGM_Id == 93	mov $BGM_Title,"Параллель" : return
-if %BGM_Id == 95	mov $BGM_Title,"599 миллионов крахов" : return
-if %BGM_Id == 96	mov $BGM_Title,"Счастливая Мария! (инструмент. вер.)" : return
-if %BGM_Id == 97	mov $BGM_Title,"Собираются силы" : return
-if %BGM_Id == 98	mov $BGM_Title,"Искра и порох" : return
-if %BGM_Id == 99	mov $BGM_Title,"Смерть (исх. Ступор)" : return
-if %BGM_Id == 100	mov $BGM_Title,"Очертя голову" : return
-if %BGM_Id == 101	mov $BGM_Title,"Victima propiciatoria (Козёл отпущения)" : return
-if %BGM_Id == 102	mov $BGM_Title,"Мятеж" : return
-if %BGM_Id == 103	mov $BGM_Title,"Катастрофа в чистилище. Рапсодия" : return
-if %BGM_Id == 104	mov $BGM_Title,"Счастливая Мария!" : return
-if %BGM_Id == 105	mov $BGM_Title,"К бою!" : return
-if %BGM_Id == 106	mov $BGM_Title,"Путь" : return
-if %BGM_Id == 107	mov $BGM_Title,"Бесконечная Девятка" : return
-if %BGM_Id == 108	mov $BGM_Title,"Рассеивающий грёзы" : return
-if %BGM_Id == 109	mov $BGM_Title,"Различение" : return
-if %BGM_Id == 110	mov $BGM_Title,"Росчерк"  : return
-if %BGM_Id == 111 	mov $BGM_Title,"Будущее" : return
-if %BGM_Id == 112 	mov $BGM_Title,"Лазурный смех" : return
-if %BGM_Id == 113 	mov $BGM_Title,"Настоящий сыщик знает" : return
-if %BGM_Id == 114 	mov $BGM_Title,"Угрюмый вечер" : return
-if %BGM_Id == 115 	mov $BGM_Title,"Один" : return
-if %BGM_Id == 116 	mov $BGM_Title,"Спираль" : return
-if %BGM_Id == 117 	mov $BGM_Title,"#600 миллионов, струнное трио, фа-диез минор" : return
-if %BGM_Id == 118 	mov $BGM_Title,"Тотенблюме (Мёртвый цветок)" : return
-if %BGM_Id == 119 	mov $BGM_Title,"ПРАВОСУДИЕ" : return
+if %BGM_Id == 1	mov $BGM_Title,"Lilium maculatum" : return
+if %BGM_Id == 2	mov $BGM_Title,"Porta do Verão" : return
+if %BGM_Id == 3	mov $BGM_Title,"PLUMA" : return
+if %BGM_Id == 4	mov $BGM_Title,"Passeio" : return
+if %BGM_Id == 5	mov $BGM_Title,"mar" : return
+if %BGM_Id == 6	mov $BGM_Title,"Hora da Escuridão" : return
+if %BGM_Id == 7	mov $BGM_Title,"Novela" : return
+if %BGM_Id == 8	mov $BGM_Title,"esperança" : return
+if %BGM_Id == 9	mov $BGM_Title,"Sombra Branca" : return
+if %BGM_Id == 10	mov $BGM_Title,"ritmo constante" : return
+if %BGM_Id == 11	mov $BGM_Title,"Cumulonimbus de Verão" : return
+if %BGM_Id == 12 	mov $BGM_Title,"Noite de Lua Cheia" : return
+if %BGM_Id == 13	mov $BGM_Title,"Rosa" : return
+if %BGM_Id == 14	mov $BGM_Title,"A Morte ao Seu Lado" : return
+if %BGM_Id == 15	mov $BGM_Title,"Corredor Infernal" : return
+if %BGM_Id == 16	mov $BGM_Title,"Fortitude" : return
+if %BGM_Id == 17	mov $BGM_Title,"bruxa em ouro(cembalo)" : return
+if %BGM_Id == 18	mov $BGM_Title,"Aceno" : return
+if %BGM_Id == 19	mov $BGM_Title,"Aroma Suspeito" : return
+if %BGM_Id == 20	mov $BGM_Title,"estupefação" : return
+if %BGM_Id == 21	mov $BGM_Title,"elogio" : return
+if %BGM_Id == 22	mov $BGM_Title,"Atravessar" : return
+if %BGM_Id == 23	mov $BGM_Title,"borboleta" : return
+if %BGM_Id == 24	mov $BGM_Title,"matadordourado" : return
+if %BGM_Id == 25	mov $BGM_Title,"fim do mundo(bp)" : return
+if %BGM_Id == 26	mov $BGM_Title,"A Bruxa do Retrato" : return
+if %BGM_Id == 27	mov $BGM_Title,"suspeita" : return
+if %BGM_Id == 28	mov $BGM_Title,"Som de Passos" : return
+if %BGM_Id == 29	mov $BGM_Title,"Núcleo" : return
+if %BGM_Id == 30	mov $BGM_Title,"Minuto da Escuridão" : return
+if %BGM_Id == 31	mov $BGM_Title,"olhosnoturnos" : return
+if %BGM_Id == 32	mov $BGM_Title,"Fechei Meu Coração" : return
+if %BGM_Id == 33	mov $BGM_Title,"Réquiem" : return
+if %BGM_Id == 34	mov $BGM_Title,"mente" : return
+if %BGM_Id == 35	mov $BGM_Title,"fim do mundo" : return
+if %BGM_Id == 36	mov $BGM_Title,"play" : return
+if %BGM_Id == 37	mov $BGM_Title,"sistema0" : return
+if %BGM_Id == 38	mov $BGM_Title,"Áfono" : return
+if %BGM_Id == 39	mov $BGM_Title,"ângulo morto" : return
+if %BGM_Id == 40	mov $BGM_Title,"Composição em Órgão #600 Milhões em Dó menor" : return
+if %BGM_Id == 41	mov $BGM_Title,"Prisão FAIXA" : return
+if %BGM_Id == 42	mov $BGM_Title,"Quarteto de Cordas #1 em Sol maior — I.Allegro" : return
+if %BGM_Id == 43	mov $BGM_Title,"gaiola" : return
+if %BGM_Id == 44	mov $BGM_Title,"Escárnio Dourado" : return
+if %BGM_Id == 45	mov $BGM_Title,"Entranha de Escorpião" : return
+if %BGM_Id == 46	mov $BGM_Title,"Cortina Final VerC" : return
+if %BGM_Id == 47	mov $BGM_Title,"Resposta" : return
+if %BGM_Id == 48	mov $BGM_Title,"Resposta curto" : return
+if %BGM_Id == 49	mov $BGM_Title,"Melodia inst.ver" : return
+if %BGM_Id == 50	mov $BGM_Title,"Pavor Vermelho" : return
+if %BGM_Id == 51	mov $BGM_Title,"lua" : return
+if %BGM_Id == 52	mov $BGM_Title,"onde" : return
+if %BGM_Id == 53	mov $BGM_Title,"Pavor do túmulo" : return
+if %BGM_Id == 54	mov $BGM_Title,"fim do mundo dominante" : return
+if %BGM_Id == 55	mov $BGM_Title,"Liliana Negra" : return
+if %BGM_Id == 56	mov $BGM_Title,"Descanso" : return
+if %BGM_Id == 57	mov $BGM_Title,"Fim de um Devaneio" : return
+if %BGM_Id == 58	mov $BGM_Title,"Melodia" : return
+if %BGM_Id == 59	mov $BGM_Title,"Sobre o céu" : return
+if %BGM_Id == 60	mov $BGM_Title,"lugar ao sol" : return
+if %BGM_Id == 61	mov $BGM_Title,"Dança das Velas" : return
+if %BGM_Id == 62	mov $BGM_Title,"Distante" : return
+if %BGM_Id == 63	mov $BGM_Title,"psy-chorus" : return
+if %BGM_Id == 64	mov $BGM_Title,"longe" : return
+if %BGM_Id == 65	mov $BGM_Title,"sapatinhos vermelhos FALSOS" : return
+if %BGM_Id == 66	mov $BGM_Title,"mãe" : return
+if %BGM_Id == 67	mov $BGM_Title,"neblina" : return
+if %BGM_Id == 68	mov $BGM_Title,"Cachimbo Dançante" : return
+if %BGM_Id == 69	mov $BGM_Title,"Pavor do Túmulo -Mais medo-" : return
+if %BGM_Id == 70	mov $BGM_Title,"Composição em Órgão #200 Milhões em Dó menor" : return
+if %BGM_Id == 71	mov $BGM_Title,"alteração de ritmo" : return
+if %BGM_Id == 72	mov $BGM_Title,"felicidade da marionete bônus" : return
+if %BGM_Id == 73	mov $BGM_Title,"felicidade da marionete" : return
+if %BGM_Id == 74	mov $BGM_Title,"Dança dos Coelhos Lunares" : return
+if %BGM_Id == 75	mov $BGM_Title,"Derretendo-se" : return
+if %BGM_Id == 76	mov $BGM_Title,"alma da alma" : return
+if %BGM_Id == 77	mov $BGM_Title,"miragem coordenada" : return
+if %BGM_Id == 78	mov $BGM_Title,"prisão" : return
+if %BGM_Id == 79	mov $BGM_Title,"Obrigada por nascer" : return
+if %BGM_Id == 80	mov $BGM_Title,"Asas" : return
+if %BGM_Id == 81	mov $BGM_Title,"Paraíso Perdido" : return
+if %BGM_Id == 82	mov $BGM_Title,"sem asas" : return
+if %BGM_Id == 83	mov $BGM_Title,"dorativa" : return
+if %BGM_Id == 84	mov $BGM_Title,"Pavor do Túmulo -ritmo ver-" : return
+if %BGM_Id == 85	mov $BGM_Title,"Eternidade" : return
+if %BGM_Id == 86	mov $BGM_Title,"sobre" : return
+if %BGM_Id == 87	mov $BGM_Title,"Como o temporal" : return
+if %BGM_Id == 88	mov $BGM_Title,"Estilo F" : return
+if %BGM_Id == 89	mov $BGM_Title,"Relógio Monocromático" : return
+if %BGM_Id == 90	mov $BGM_Title,"apatia" : return
+if %BGM_Id == 91	mov $BGM_Title,"Floresta Mística" : return
+if %BGM_Id == 92	mov $BGM_Title,"O Conto do Persistente Sakutarou" : return
+if %BGM_Id == 93	mov $BGM_Title,"Paralelo" : return
+if %BGM_Id == 95	mov $BGM_Title,"599 milhões de ruínas" : return
+if %BGM_Id == 96	mov $BGM_Title,"Happy Maria!(Instrumental)" : return
+if %BGM_Id == 97	mov $BGM_Title,"Circundante" : return
+if %BGM_Id == 98	mov $BGM_Title,"abrir fogo" : return
+if %BGM_Id == 99	mov $BGM_Title,"morte(por estupefação)" : return
+if %BGM_Id == 100	mov $BGM_Title,"debandada mortal" : return
+if %BGM_Id == 101	mov $BGM_Title,"Victima propiciatoria" : return
+if %BGM_Id == 102	mov $BGM_Title,"Revolta" : return
+if %BGM_Id == 103	mov $BGM_Title,"Rapsódia da Catástrofe do Purgatório" : return
+if %BGM_Id == 104	mov $BGM_Title,"Happy Maria!" : return
+if %BGM_Id == 105	mov $BGM_Title,"mergulho à emergência" : return
+if %BGM_Id == 106	mov $BGM_Title,"dir" : return
+if %BGM_Id == 107	mov $BGM_Title,"Endless Nine" : return
+if %BGM_Id == 108	mov $BGM_Title,"dreamenddischarger" : return
+if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
+if %BGM_Id == 110	mov $BGM_Title,"rodopio"  : return
+if %BGM_Id == 111 	mov $BGM_Title,"Futuro" : return
+if %BGM_Id == 112 	mov $BGM_Title,"Irrisão Azure" : return
+if %BGM_Id == 113 	mov $BGM_Title,"A Grande Detetive Sabe" : return
+if %BGM_Id == 114 	mov $BGM_Title,"Soirée sem sorrisos" : return
+if %BGM_Id == 115 	mov $BGM_Title,"um" : return
+if %BGM_Id == 116 	mov $BGM_Title,"Hélix" : return
+if %BGM_Id == 117 	mov $BGM_Title,"Trio de Cordas #600 Milhões em Fá sustenido menor" : return
+if %BGM_Id == 118 	mov $BGM_Title,"Totenblume" : return
+if %BGM_Id == 119 	mov $BGM_Title,"JUSTIÇA" : return
 if %BGM_Id == 120 	mov $BGM_Title,"ACI-L" : return
-if %BGM_Id == 121 	mov $BGM_Title,"Хищник" : return
-if %BGM_Id == 122 	mov $BGM_Title,"Гордая песчинка" : return
-if %BGM_Id == 123 	mov $BGM_Title,"Навстречу мечте" : return
-if %BGM_Id == 124 	mov $BGM_Title,"Одинокая абиссальная рыба" : return
-if %BGM_Id == 125 	mov $BGM_Title,"Женская охота на ведьм" : return
-if %BGM_Id == 126 	mov $BGM_Title,"Лоскутная химера" : return
-if %BGM_Id == 127 	mov $BGM_Title,"Искажение" : return
-if %BGM_Id == 128 	mov $BGM_Title,"Воскресший реплеер" : return
-if %BGM_Id == 129 	mov $BGM_Title,"Окончательный ответ" : return
-if %BGM_Id == 130 	mov $BGM_Title,"Свет" : return
-if %BGM_Id == 131 	mov $BGM_Title,"Хлеб жизни" : return
-if %BGM_Id == 132 	mov $BGM_Title,"Обещание" : return
-if %BGM_Id == 133 	mov $BGM_Title,"Завтрашний день" : return
-if %BGM_Id == 134 	mov $BGM_Title,"КРЫЛЬЯ (Вер. Надежды)" : return
-if %BGM_Id == 135 	mov $BGM_Title,"Улыбка и фальшь" : return
-if %BGM_Id == 136 	mov $BGM_Title,"Вечные оковы" : return
-if %BGM_Id == 137 	mov $BGM_Title,"Испытание любви" : return
-if %BGM_Id == 138 	mov $BGM_Title,"Мгновение" : return
-if %BGM_Id == 139 	mov $BGM_Title,"Взгляд в прошлое" : return
-if %BGM_Id == 140 	mov $BGM_Title,"Синяя бабочка" : return
-if %BGM_Id == 141 	mov $BGM_Title,"Нежность" : return
-if %BGM_Id == 142 	mov $BGM_Title,"Сверху вниз, наискосок" : return
-if %BGM_Id == 143 	mov $BGM_Title,"rog-limitation" : return
-if %BGM_Id == 144 	mov $BGM_Title,"Вальс (соч. 34)" : return
-if %BGM_Id == 145 	mov $BGM_Title,"ЖИВЫЕ" : return
-if %BGM_Id == 146 	mov $BGM_Title,"Рождение новой ведьмы (инст.)" : return
-if %BGM_Id == 147 	mov $BGM_Title,"Застывший лазурит" : return
-if %BGM_Id == 148 	mov $BGM_Title,"Ангажирование марионетки" : return
-if %BGM_Id == 149 	mov $BGM_Title,"Жизнь" : return
-if %BGM_Id == 150 	mov $BGM_Title,"Лорелея" : return
-if %BGM_Id == 151 	mov $BGM_Title,"Грех" : return
-if %BGM_Id == 152 	mov $BGM_Title,"Первый и последний" : return
-if %BGM_Id == 153 	mov $BGM_Title,"Антидемоническая секвенция" : return
-if %BGM_Id == 154 	mov $BGM_Title,"Поле битвы" : return
-if %BGM_Id == 155 	mov $BGM_Title,"Перерождение" : return
-if %BGM_Id == 156 	mov $BGM_Title,"Выход есть" : return
-if %BGM_Id == 157 	mov $BGM_Title,"Освободившийся освободитель" : return
-if %BGM_Id == 158 	mov $BGM_Title,"Спасибо всем" : return
-if %BGM_Id == 159 	mov $BGM_Title,"Пчелиная принцесса" : return
-if %BGM_Id == 160 	mov $BGM_Title,"Рождение новой ведьмы (короткая)" : return
-if %BGM_Id == 161 	mov $BGM_Title,"АРОМАТ ПОДОЗРЕНИЯ" : return
-if %BGM_Id == 162 	mov $BGM_Title,"4 октября" : return
-if %BGM_Id == 163 	mov $BGM_Title,"Круговорот жизни и смерти" : return
-if %BGM_Id == 164 	mov $BGM_Title,"reflection-call" : return
-if %BGM_Id == 165 	mov $BGM_Title,"Дождь" : return
-if %BGM_Id == 166 	mov $BGM_Title,"7 весов" : return
-if %BGM_Id == 167 	mov $BGM_Title,"Осень" : return
+if %BGM_Id == 121 	mov $BGM_Title,"Predador" : return
+if %BGM_Id == 122 	mov $BGM_Title,"Orgulho-poeira" : return
+if %BGM_Id == 123 	mov $BGM_Title,"olá seus sonhos" : return
+if %BGM_Id == 124 	mov $BGM_Title,"Um Solitário Peixe Abissal" : return
+if %BGM_Id == 125 	mov $BGM_Title,"A Caça às Bruxas das Garotas" : return
+if %BGM_Id == 126 	mov $BGM_Title,"Retalhos de Quimera" : return
+if %BGM_Id == 127 	mov $BGM_Title,"discolor" : return
+if %BGM_Id == 128 	mov $BGM_Title,"repetidorressuscitado" : return
+if %BGM_Id == 129 	mov $BGM_Title,"Resposta Final" : return
+if %BGM_Id == 130 	mov $BGM_Title,"luz" : return
+if %BGM_Id == 131 	mov $BGM_Title,"Pão da Vida" : return
+if %BGM_Id == 132 	mov $BGM_Title,"Promessa" : return
+if %BGM_Id == 133 	mov $BGM_Title,"Amanhã" : return
+if %BGM_Id == 134 	mov $BGM_Title,"ASAS(Ver esperança)" : return
+if %BGM_Id == 135 	mov $BGM_Title,"Falso Sorriso Cinza" : return
+if %BGM_Id == 136 	mov $BGM_Title,"Corrente Eterna" : return
+if %BGM_Id == 137 	mov $BGM_Title,"Prova do Amor" : return
+if %BGM_Id == 138 	mov $BGM_Title,"Efêmero Momento" : return
+if %BGM_Id == 139 	mov $BGM_Title,"Olhe para Trás" : return
+if %BGM_Id == 140 	mov $BGM_Title,"Borboleta Azul" : return
+if %BGM_Id == 141 	mov $BGM_Title,"meu querido" : return
+if %BGM_Id == 142 	mov $BGM_Title,"Algo Sobe & Algo Desce" : return
+if %BGM_Id == 143 	mov $BGM_Title,"limitação-rog" : return
+if %BGM_Id == 144 	mov $BGM_Title,"Valsa Op.34" : return
+if %BGM_Id == 145 	mov $BGM_Title,"VIVO" : return
+if %BGM_Id == 146 	mov $BGM_Title,"nascimento de uma nova bruxa(inst)" : return
+if %BGM_Id == 147 	mov $BGM_Title,"ruriair" : return
+if %BGM_Id == 148 	mov $BGM_Title,"Engajamento de marionetes" : return
+if %BGM_Id == 149 	mov $BGM_Title,"Vida" : return
+if %BGM_Id == 150 	mov $BGM_Title,"Lorelei" : return
+if %BGM_Id == 151 	mov $BGM_Title,"O Pecado" : return
+if %BGM_Id == 152 	mov $BGM_Title,"O primeiro e O Último" : return
+if %BGM_Id == 153 	mov $BGM_Title,"Sequentia Anti-Demônio" : return
+if %BGM_Id == 154 	mov $BGM_Title,"campo de batalha" : return
+if %BGM_Id == 155 	mov $BGM_Title,"Renascimento" : return
+if %BGM_Id == 156 	mov $BGM_Title,"O Caminho" : return
+if %BGM_Id == 157 	mov $BGM_Title,"liberadolibertador" : return
+if %BGM_Id == 158 	mov $BGM_Title,"Obrigado por tudo pessoal" : return
+if %BGM_Id == 159 	mov $BGM_Title,"Abelha Rainha Infante" : return
+if %BGM_Id == 160 	mov $BGM_Title,"nascimento de uma nova bruxa(Ver Curta)" : return
+if %BGM_Id == 161 	mov $BGM_Title,"AROMASUSPEITO" : return
+if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre" : return
+if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulação" : return
+if %BGM_Id == 164 	mov $BGM_Title,"chamada-reflexão" : return
+if %BGM_Id == 165 	mov $BGM_Title,"chuva" : return
+if %BGM_Id == 166 	mov $BGM_Title,"7-pesos" : return
+if %BGM_Id == 167 	mov $BGM_Title,"queda" : return
 if %BGM_Id == 168 	mov $BGM_Title,"bore-ral" : return
-if %BGM_Id == 169 	mov $BGM_Title,"Продолжение сказки" : return
-if %BGM_Id == 170 	mov $BGM_Title,"Без названия (инстр. вер., 2007)" : return
-if %BGM_Id == 171 	mov $BGM_Title,"Путальница-ложь" : return
-if %BGM_Id == 172 	mov $BGM_Title,"Золотой ноктюрн (инст.)" : return
-if %BGM_Id == 173 	mov $BGM_Title,"Далеко‐далеко… (бемоль)" : return
-if %BGM_Id == 174 	mov $BGM_Title,"Ящик с игрушками" : return
-if %BGM_Id == 175 	mov $BGM_Title,"Прощальный выход" : return
-if %BGM_Id == 176 	mov $BGM_Title,"Кукольный театр" : return
-if %BGM_Id == 177 	mov $BGM_Title,"Он и она — конец" : return
-if %BGM_Id == 179 	mov $BGM_Title,"Без названия (инстр. вер.)" : return
-if %BGM_Id == 180 	mov $BGM_Title,"Конец вселенной" : return
-if %BGM_Id == 181 	mov $BGM_Title,"Богиня из сада" : return
-if %BGM_Id == 183 	mov $BGM_Title,"Насмешка" : return
-if %BGM_Id == 184 	mov $BGM_Title,"Обвал на склоне мира мёртвых" : return
-if %BGM_Id == 185 	mov $BGM_Title,"Палач" : return
-if %BGM_Id == 186 	mov $BGM_Title,"Без названия (вер. сакуры, ED)" : return
-if %BGM_Id == 187 	mov $BGM_Title,"Мягкая игрушка" : return
-if %BGM_Id == 188 	mov $BGM_Title,"Эксцентричный дивертисмент" : return
+if %BGM_Id == 169 	mov $BGM_Title,"balada-contínua" : return
+if %BGM_Id == 170 	mov $BGM_Title,"Canção sem nome ver.2007 inst" : return
+if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia" : return
+if %BGM_Id == 172 	mov $BGM_Title,"Noturno Dourado(inst)" : return
+if %BGM_Id == 173 	mov $BGM_Title,"longe(bemol)" : return
+if %BGM_Id == 174 	mov $BGM_Title,"Caixa de Brinquedos" : return
+if %BGM_Id == 175 	mov $BGM_Title,"entrada terminal" : return
+if %BGM_Id == 176 	mov $BGM_Title,"Teatro de Fantoches" : return
+if %BGM_Id == 177 	mov $BGM_Title,"fim dele/a" : return
+if %BGM_Id == 179 	mov $BGM_Title,"Canção sem nome full-inst" : return
+if %BGM_Id == 180 	mov $BGM_Title,"O Fim do Mundo" : return
+if %BGM_Id == 181 	mov $BGM_Title,"deusa-gardena" : return
+if %BGM_Id == 183 	mov $BGM_Title,"ridículo" : return
+if %BGM_Id == 184 	mov $BGM_Title,"Corrupção Yomotsu Hirasaka" : return
+if %BGM_Id == 185 	mov $BGM_Title,"o executor" : return
+if %BGM_Id == 186 	mov $BGM_Title,"Canção sem nome ver.sakura ED-size" : return
+if %BGM_Id == 187 	mov $BGM_Title,"Animal de Pelúcia" : return
+if %BGM_Id == 188 	mov $BGM_Title,"Divertimento Bizarro" : return
 if %BGM_Id == 190 	mov $BGM_Title,"en-counse" : return
 if %BGM_Id == 191 	mov $BGM_Title,"lixAxil" : return
-if %BGM_Id == 192 	mov $BGM_Title,"Откровение (инст.)" : return
-if %BGM_Id == 193 	mov $BGM_Title,"В полёте" : return
-if %BGM_Id == 194 	mov $BGM_Title,"Дирижёр окончательного конца" : return
-if %BGM_Id == 195 	mov $BGM_Title,"Откровение" : return
-if %BGM_Id == 240 	mov $BGM_Title,"Кокон чистых снов -Ricordando il passato-" : return
-if %BGM_Id == 241 	mov $BGM_Title,"Когда плачут чайки" : return
+if %BGM_Id == 192 	mov $BGM_Title,"Revelações(inst)" : return
+if %BGM_Id == 193 	mov $BGM_Title,"Voador" : return
+if %BGM_Id == 194 	mov $BGM_Title,"últimaparadacondutor" : return
+if %BGM_Id == 195 	mov $BGM_Title,"Revelações" : return
+if %BGM_Id == 240 	mov $BGM_Title,"Casulo dos Sonhos Brancos -Ricordando il passato-" : return
+if %BGM_Id == 241 	mov $BGM_Title,"Quando as Gaivotas Choram" : return
 if %BGM_Id == 1000	mov $BGM_Title,"SuiSui☆SWEETS(^-^)" : return
-if %BGM_Id == 1010	mov $BGM_Title,"Предъявите судьбу" : return
-if %BGM_Id == 1013  mov $BGM_Title,"Предъявите судьбу (вер. chiru)" : return
+if %BGM_Id == 1010	mov $BGM_Title,"Traga O Destino" : return
+if %BGM_Id == 1013  mov $BGM_Title,"Traga O Destino(Ver chiru)" : return
 ;Extra
-if %BGM_Id == 94	mov $BGM_Title,"tsurupettan (Плоскодонка)" : return
-if %BGM_Id == 1011	mov $BGM_Title,"system0 (оригинальная версия)" : return
-if %legacy_op == off && %BGM_Id == 1012	mov $BGM_Title,"Senkyou no Igreja" : return
-if %legacy_op == on  && %BGM_Id == 1012	mov $BGM_Title,"Когда плачут чайки" : return
-if %BGM_Id == 1014	mov $BGM_Title,"Мечта Инанны" : return
-if %BGM_Id == 1017  mov $BGM_Title,"Оккультная ведьма" : return
-if %BGM_Id == 1018  mov $BGM_Title,"Туманный пифос" : return
+if %BGM_Id == 94	mov $BGM_Title,"Tsurupettan" : return
+if %BGM_Id == 1011	mov $BGM_Title,"sistema0(Original Version)" : return
+if %legacy_op == off && %BGM_Id == 1012	mov $BGM_Title,"Igreja dos Votos Reverberantes" : return
+if %legacy_op == on  && %BGM_Id == 1012	mov $BGM_Title,"Quando as Gaivotas Choram" : return
+if %BGM_Id == 1014	mov $BGM_Title,"Sonho de Inanna" : return
+if %BGM_Id == 1017  mov $BGM_Title,"A Bruxa do Ocultismo" : return
+if %BGM_Id == 1018  mov $BGM_Title,"Pito da Névoa" : return
 return
