@@ -625,8 +625,8 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_1,"m1f_s1ar_bg"
-lbg s0_3,"m1f_s1ar"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"kir","a11_majime1" ;1
 aspt2 xpos,s0_10,370
 flush 23
