@@ -25,12 +25,13 @@ lbg s0_3,"black"
 flush 22
 textoff
 waits 167
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 flush 6
 wait 2000
 textoff
 waits 167
-lbg s0_3,"mdin_1e"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"eva","a11_akire1" ;1
 aspt2 xpos,s0_10,550
 flush 24
@@ -59,7 +60,7 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_9,"cla","a11_defo1" ;1
 flush 23
 msgwnd_cla
@@ -75,8 +76,8 @@ textoff
 waits 167
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_9,"ros","a11_komaru4" ;1
 flush 24
 msgwnd_ros
@@ -92,7 +93,7 @@ textoff
 waits 167
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_9,"nat","a12_majime1" ;1
 flush 23
 msgwnd_nat
@@ -118,7 +119,8 @@ meplay 1,11,71
 wait 1000
 textoff
 waits 167
-lbg s0_3,"mdin_1e"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 flush 2
 *d22744
 d `一気にキナ臭くなった空気を、取り繕うように秀吉が愛想笑いを浮かべ、`[@]`まままま…、と全員をなだめるような仕草をする。`[\]
@@ -144,7 +146,7 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"rud","a12_defo2" ;1
 aspt2 xpos,s0_10,550
 flush 23
@@ -232,8 +234,7 @@ flush 25
 vol_me 1,-1,1000
 textoff
 waits 167
-lbg s0_1,"mdin_1g_bg"
-lbg s0_3,"mdin_1g"
+lbg s0_3,"m1f_s1d"
 flush 22
 meplay 1,16,50
 msgwnd_non
@@ -252,7 +253,7 @@ vol_bgm 0,3000
 wait 3000
 textoff
 waits 167
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"cla","a11_nayamu1" ;1
 aspt2 xpos,s0_10,550
 lss s0_9,"hid","a11_komaru2" ;1
@@ -274,8 +275,8 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"kir","a11_warai2" ;1
 aspt2 xpos,s0_10,370
 flush 23
@@ -298,7 +299,7 @@ textoff
 waits 167
 csp_slot s0_8
 csp_slot s0_10
-lbg s0_3,"mdin_1f"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"rud","a11_majime2" ;1
 aspt2 xpos,s0_10,370
 flush 24
@@ -329,8 +330,8 @@ textoff
 waits 167
 csp_slot s0_8
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_9,"eva","a11_majime1" ;1
 flush 23
 msgwnd_eva
@@ -353,8 +354,8 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_9,"kir","a11_defo1" ;1
 flush 24
 msgwnd_kir
@@ -367,8 +368,8 @@ d [lv 0*"09"*"41300019"]`「私たちにその感謝の気持ちがないから�
 textoff
 waits 167
 csp_slot s0_9
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"cla","a11_akuwarai3" ;1
 aspt2 xpos,s0_10,550
 flush 23
@@ -392,7 +393,7 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"eva","a11_ikari2" ;1
 aspt2 xpos,s0_10,550
 flush 1
@@ -441,8 +442,8 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"kir","a11_futeki1" ;1
 aspt2 xpos,s0_10,370
 flush 23
@@ -507,8 +508,7 @@ lbg s0_3,"black"
 flush 25
 textoff
 waits 167
-lbg s0_1,"mdin_1g_bg"
-lbg s0_3,"mdin_1g"
+lbg s0_3,"m1f_s1d"
 flush 22
 msgwnd_cla
 *d22795
@@ -518,7 +518,7 @@ msgwnd_kir
 d [lv 0*"09"*"41300037"]`「お父さんが、寿命の限りを健やかに過ごせるよう監督するということよ。`[@][lv 0*"09"*"41300038"]`……もっと詳細に言うわ。`[@][lv 0*"09"*"41300039"]`お父さんが自然死以外の理由で死亡した場合、世話人の権利は剥奪され、当主跡継ぎの権利を失う。`[@][lv 0*"09"*"41300040"]`その際の当主跡継ぎには、次の序列である絵羽姉さんを選ぶこと」`[\]
 textoff
 waits 167
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_9,"nat","a32_odoroki2" ;1
 flush 10,167
 flush 26
@@ -535,7 +535,7 @@ d [lv 0*"03"*"40900009"]`「………な、んですって……。`[@][lv 0*"03
 textoff
 waits 167
 csp_slot s0_9
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_8,"cla","a11_nayamu1" ;1
 aspt2 xpos,s0_8,-370
 flush 23
@@ -555,8 +555,8 @@ d [lv 0*"02"*"40800036"]`「しかし、その論法で行くと、これは事�
 textoff
 waits 167
 csp_slot s0_8
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"kir","a11_warai1" ;1
 aspt2 xpos,s0_10,370
 flush 24
@@ -586,7 +586,7 @@ msgwnd_kir
 d [lv 0*"09"*"41300045"]`「例えば、`[@][lv 0*"09"*"41300046"]`……失踪よ」`[\]
 textoff
 waits 167
-lbg s0_3,"mdin_1f"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"cla","a11_komaru1" ;1
 aspt2 xpos,s0_10,550
 flush 26
@@ -625,7 +625,8 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1er"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"kir","a11_majime1" ;1
 aspt2 xpos,s0_10,370
 flush 23
@@ -653,7 +654,7 @@ textoff
 waits 167
 csp_slot s0_8
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_8,"nat","a32_odoroki2" ;1
 aspt2 xpos,s0_8,-550
 flush 23
@@ -864,7 +865,7 @@ lbg s1_22,"hana1"
 aspt2 alpha,s1_22,150
 textoff
 waits 167
-lbg s1_3,"mdin_1a"
+lbg s1_3,"m1f_s1c"
 lss s1_9,"cla","a14_akuwarai1" ;1
 lss s1_8,"nat","a32_odoroki2" ;1
 aspt2 xpos,s1_8,-550
@@ -1669,13 +1670,12 @@ wait 2000
 meplay 1,16,50
 textoff
 waits 167
-lbg s0_1,"mdin_1g_bg"
-lbg s0_3,"mdin_1g"
+lbg s0_3,"m1f_s1d"
 flush 2
 wait 2000
 textoff
 waits 167
-lbg s0_3,"mdin_1f"
+lbg s0_3,"m1f_s1c"
 flush 6
 lss s0_9,"kir","a25_nayamu1" ;1
 flush 10,167
@@ -1691,7 +1691,7 @@ wait_on_d -1
 textoff
 waits 167
 csp_slot s0_9
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_8,"cla","a14_majime1" ;1
 aspt2 xpos,s0_8,-370
 flush 3
@@ -1716,8 +1716,8 @@ textoff
 waits 167
 csp_slot s0_8
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_8,"kir","a11_warai2" ;1
 aspt2 xpos,s0_8,-370
 flush 24
@@ -1758,7 +1758,7 @@ textoff
 waits 167
 csp_slot s0_8
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"rud","a11_akuwarai2" ;1
 aspt2 xpos,s0_10,370
 flush 24
@@ -1780,8 +1780,8 @@ textoff
 waits 167
 csp_slot s0_8
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"cla","a11_majime1" ;1
 aspt2 xpos,s0_10,370
 flush 23
@@ -1827,7 +1827,8 @@ d [lv 0*"09"*"41300086"]`「…………ごめんなさいね、気を悪くし�
 textoff
 waits 167
 csp_slot s0_9
-lbg s0_3,"mdin_1e"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"nat","a12_ikari1" ;1
 aspt2 xpos,s0_10,370
 flush 64
@@ -1897,8 +1898,8 @@ textoff
 waits 167
 csp_slot s0_8
 csp_slot s0_10
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"eva","a11_warai1" ;1
 aspt2 xpos,s0_10,550
 flush 24
@@ -1939,7 +1940,7 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_9,"cla","a11_komaru2" ;1
 flush 23
 msgwnd_cla
@@ -1965,8 +1966,7 @@ lbg s0_3,"black"
 flush 25
 textoff
 waits 167
-lbg s0_1,"mdin_1g_bg"
-lbg s0_3,"mdin_1g"
+lbg s0_3,"m1f_s1d"
 flush 22
 msgwnd_kir
 *d22984
@@ -1997,8 +1997,8 @@ d_continue
 wait_on_d -1
 textoff
 waits 167
-lbg s0_1,"mdin_1c_bg"
-lbg s0_3,"mdin_1c"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_9,"kir","a13_warai1" ;1
 flush 26
 msgwnd_kir
@@ -2011,7 +2011,8 @@ d [lv 0*"09"*"41300111"]`「それこそ、{i:お父様に借りることだっ�
 textoff
 waits 167
 csp_slot s0_9
-lbg s0_3,"mdin_1e"
+lbg s0_1,"m1f_s1a_bg"
+lbg s0_3,"m1f_s1a"
 lss s0_10,"cla","a11_komaru1" ;1
 aspt2 xpos,s0_10,550
 lss s0_8,"nat","a32_odoroki2" ;1
@@ -2096,7 +2097,7 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 flush 24
 lss s0_8,"ros","a11_komaru1" ;1
 aspt2 xpos,s0_8,-550
@@ -2125,7 +2126,7 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"cla","a12_majime1" ;1
 aspt2 xpos,s0_10,370
 lss s0_8,"nat","a11_zutuu1" ;1
@@ -2169,7 +2170,7 @@ vol_me 5,50,3000
 wait 3000
 textoff
 waits 167
-lbg s0_3,"mdin_1f"
+lbg s0_3,"m1f_s1c"
 flush 24
 lss s0_9,"hid","a11_komaru2" ;1
 flush 10,167
@@ -2193,7 +2194,7 @@ waits 167
 csp_slot s0_8
 csp_slot s0_9
 csp_slot s0_10
-lbg s0_3,"mdin_1a"
+lbg s0_3,"m1f_s1c"
 lss s0_10,"ros","a11_komaru3" ;1
 aspt2 xpos,s0_10,550
 flush 23
