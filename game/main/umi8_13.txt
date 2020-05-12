@@ -4723,6 +4723,8 @@ lbg s0_3,"white"
 flush 1
 textoff
 waits 167
+csp_slot s0_7
+csp_slot s0_11
 lbg s0_3,"black"
 flush 24
 *d63285

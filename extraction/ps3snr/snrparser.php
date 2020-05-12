@@ -2332,7 +2332,12 @@ function initGlobals() {
 			'csp_slot s0_17'	=>	[
 				'before'	=> 'set_saving on'
 			]
-		]
+		],
+		63284 => [
+			'lbg s0_3,"black"'	=> [
+				'before'	=> 'csp_slot s0_7'.LF.'csp_slot s0_11'
+			]
+		],
 	];
 
 	$g['voice_remap'] = [
