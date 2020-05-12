@@ -22348,13 +22348,15 @@ mov ?rain_s[%rain_slot][4],0 ;wind
 mov ?rain_s[%rain_slot][5],off ;pause
 mov ?rain_s[%rain_slot][6],%rain_amount ;orbs
 
-if %rain_amount != 1 jumpf 
+if %rain_amount != 1 jumpf
+	fall blend,%rain_layer,"add"
 	fall base, %rain_layer,"graphics\system\rain\orb.png"
 	fall amount,%rain_layer,50
 	fall c_speed,%rain_layer,500
 	fall wind,%rain_layer,1000
 ~
 if %rain_amount = 1 jumpf
+	fall blend,%rain_layer,"add"
 	fall base, %rain_layer,"graphics\system\rain\drop.png"
 	fall amount,%rain_layer,500
 	fall c_speed,%rain_layer,800
