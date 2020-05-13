@@ -115,7 +115,7 @@ if %BGM_Id == 45	mov $BGM_Title,"Entranha de Escorpião" : return
 if %BGM_Id == 46	mov $BGM_Title,"Cortina Final VerC" : return
 if %BGM_Id == 47	mov $BGM_Title,"Resposta" : return
 if %BGM_Id == 48	mov $BGM_Title,"Resposta curto" : return
-if %BGM_Id == 49	mov $BGM_Title,"Melodia inst.ver" : return
+if %BGM_Id == 49	mov $BGM_Title,"Melodia(inst.ver)" : return
 if %BGM_Id == 50	mov $BGM_Title,"Pavor Vermelho" : return
 if %BGM_Id == 51	mov $BGM_Title,"lua" : return
 if %BGM_Id == 52	mov $BGM_Title,"onde" : return
@@ -145,12 +145,12 @@ if %BGM_Id == 75	mov $BGM_Title,"Derretendo-se" : return
 if %BGM_Id == 76	mov $BGM_Title,"alma da alma" : return
 if %BGM_Id == 77	mov $BGM_Title,"miragem coordenada" : return
 if %BGM_Id == 78	mov $BGM_Title,"prisão" : return
-if %BGM_Id == 79	mov $BGM_Title,"Obrigada por nascer" : return
+if %BGM_Id == 79	mov $BGM_Title,"Obrigado por nascer" : return
 if %BGM_Id == 80	mov $BGM_Title,"Asas" : return
 if %BGM_Id == 81	mov $BGM_Title,"Paraíso Perdido" : return
 if %BGM_Id == 82	mov $BGM_Title,"sem asas" : return
 if %BGM_Id == 83	mov $BGM_Title,"dorativa" : return
-if %BGM_Id == 84	mov $BGM_Title,"Pavor do Túmulo -ritmo ver-" : return
+if %BGM_Id == 84	mov $BGM_Title,"Pavor do Túmulo -ritmo ver.-" : return
 if %BGM_Id == 85	mov $BGM_Title,"Eternidade" : return
 if %BGM_Id == 86	mov $BGM_Title,"sobre" : return
 if %BGM_Id == 87	mov $BGM_Title,"Como o temporal" : return
@@ -166,7 +166,7 @@ if %BGM_Id == 97	mov $BGM_Title,"Circundante" : return
 if %BGM_Id == 98	mov $BGM_Title,"abrir fogo" : return
 if %BGM_Id == 99	mov $BGM_Title,"morte(por estupefação)" : return
 if %BGM_Id == 100	mov $BGM_Title,"debandada mortal" : return
-if %BGM_Id == 101	mov $BGM_Title,"Victima propiciatoria" : return
+if %BGM_Id == 101	mov $BGM_Title,"Victima propiciatoria (Bode Expiatório)" : return
 if %BGM_Id == 102	mov $BGM_Title,"Revolta" : return
 if %BGM_Id == 103	mov $BGM_Title,"Rapsódia da Catástrofe do Purgatório" : return
 if %BGM_Id == 104	mov $BGM_Title,"Happy Maria!" : return
@@ -187,19 +187,19 @@ if %BGM_Id == 118 	mov $BGM_Title,"Totenblume" : return
 if %BGM_Id == 119 	mov $BGM_Title,"JUSTIÇA" : return
 if %BGM_Id == 120 	mov $BGM_Title,"ACI-L" : return
 if %BGM_Id == 121 	mov $BGM_Title,"Predador" : return
-if %BGM_Id == 122 	mov $BGM_Title,"Orgulho-poeira" : return
+if %BGM_Id == 122 	mov $BGM_Title,"Orgulhosa-poeira" : return
 if %BGM_Id == 123 	mov $BGM_Title,"olá seus sonhos" : return
 if %BGM_Id == 124 	mov $BGM_Title,"Um Solitário Peixe Abissal" : return
 if %BGM_Id == 125 	mov $BGM_Title,"A Caça às Bruxas das Garotas" : return
-if %BGM_Id == 126 	mov $BGM_Title,"Retalhos de Quimera" : return
-if %BGM_Id == 127 	mov $BGM_Title,"discolor" : return
+if %BGM_Id == 126 	mov $BGM_Title,"Quimera de Retalhos" : return
+if %BGM_Id == 127 	mov $BGM_Title,"descolorir" : return
 if %BGM_Id == 128 	mov $BGM_Title,"repetidorressuscitado" : return
 if %BGM_Id == 129 	mov $BGM_Title,"Resposta Final" : return
 if %BGM_Id == 130 	mov $BGM_Title,"luz" : return
 if %BGM_Id == 131 	mov $BGM_Title,"Pão da Vida" : return
 if %BGM_Id == 132 	mov $BGM_Title,"Promessa" : return
 if %BGM_Id == 133 	mov $BGM_Title,"Amanhã" : return
-if %BGM_Id == 134 	mov $BGM_Title,"ASAS(Ver esperança)" : return
+if %BGM_Id == 134 	mov $BGM_Title,"ASAS(Ver. esperança)" : return
 if %BGM_Id == 135 	mov $BGM_Title,"Falso Sorriso Cinza" : return
 if %BGM_Id == 136 	mov $BGM_Title,"Corrente Eterna" : return
 if %BGM_Id == 137 	mov $BGM_Title,"Prova do Amor" : return
@@ -207,7 +207,7 @@ if %BGM_Id == 138 	mov $BGM_Title,"Efêmero Momento" : return
 if %BGM_Id == 139 	mov $BGM_Title,"Olhe para Trás" : return
 if %BGM_Id == 140 	mov $BGM_Title,"Borboleta Azul" : return
 if %BGM_Id == 141 	mov $BGM_Title,"meu querido" : return
-if %BGM_Id == 142 	mov $BGM_Title,"Algo Sobe & Algo Desce" : return
+if %BGM_Id == 142 	mov $BGM_Title,"Tem caroço nesse angu" : return
 if %BGM_Id == 143 	mov $BGM_Title,"limitação-rog" : return
 if %BGM_Id == 144 	mov $BGM_Title,"Valsa Op.34" : return
 if %BGM_Id == 145 	mov $BGM_Title,"VIVO" : return
@@ -223,19 +223,19 @@ if %BGM_Id == 154 	mov $BGM_Title,"campo de batalha" : return
 if %BGM_Id == 155 	mov $BGM_Title,"Renascimento" : return
 if %BGM_Id == 156 	mov $BGM_Title,"O Caminho" : return
 if %BGM_Id == 157 	mov $BGM_Title,"liberadolibertador" : return
-if %BGM_Id == 158 	mov $BGM_Title,"Obrigado por tudo pessoal" : return
+if %BGM_Id == 158 	mov $BGM_Title,"Obrigada por tudo pessoal" : return
 if %BGM_Id == 159 	mov $BGM_Title,"Abelha Rainha Infante" : return
-if %BGM_Id == 160 	mov $BGM_Title,"nascimento de uma nova bruxa(Ver Curta)" : return
+if %BGM_Id == 160 	mov $BGM_Title,"nascimento de uma nova bruxa(Ver. Curta)" : return
 if %BGM_Id == 161 	mov $BGM_Title,"AROMASUSPEITO" : return
 if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre" : return
-if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulação" : return
+if %BGM_Id == 163 	mov $BGM_Title,"circulação-l&d" : return
 if %BGM_Id == 164 	mov $BGM_Title,"chamada-reflexão" : return
 if %BGM_Id == 165 	mov $BGM_Title,"chuva" : return
 if %BGM_Id == 166 	mov $BGM_Title,"7-pesos" : return
 if %BGM_Id == 167 	mov $BGM_Title,"queda" : return
 if %BGM_Id == 168 	mov $BGM_Title,"bore-ral" : return
 if %BGM_Id == 169 	mov $BGM_Title,"balada-contínua" : return
-if %BGM_Id == 170 	mov $BGM_Title,"Canção sem nome ver.2007 inst" : return
+if %BGM_Id == 170 	mov $BGM_Title,"Canção sem nome ver.2007(inst)" : return
 if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia" : return
 if %BGM_Id == 172 	mov $BGM_Title,"Noturno Dourado(inst)" : return
 if %BGM_Id == 173 	mov $BGM_Title,"longe(bemol)" : return
@@ -243,7 +243,7 @@ if %BGM_Id == 174 	mov $BGM_Title,"Caixa de Brinquedos" : return
 if %BGM_Id == 175 	mov $BGM_Title,"entrada terminal" : return
 if %BGM_Id == 176 	mov $BGM_Title,"Teatro de Fantoches" : return
 if %BGM_Id == 177 	mov $BGM_Title,"fim dele/a" : return
-if %BGM_Id == 179 	mov $BGM_Title,"Canção sem nome full-inst" : return
+if %BGM_Id == 179 	mov $BGM_Title,"Canção sem nome(full-inst)" : return
 if %BGM_Id == 180 	mov $BGM_Title,"O Fim do Mundo" : return
 if %BGM_Id == 181 	mov $BGM_Title,"deusa-gardena" : return
 if %BGM_Id == 183 	mov $BGM_Title,"ridículo" : return
@@ -262,10 +262,10 @@ if %BGM_Id == 240 	mov $BGM_Title,"Casulo dos Sonhos Brancos -Ricordando il pass
 if %BGM_Id == 241 	mov $BGM_Title,"Quando as Gaivotas Choram" : return
 if %BGM_Id == 1000	mov $BGM_Title,"SuiSui☆SWEETS(^-^)" : return
 if %BGM_Id == 1010	mov $BGM_Title,"Traga O Destino" : return
-if %BGM_Id == 1013  mov $BGM_Title,"Traga O Destino(Ver chiru)" : return
+if %BGM_Id == 1013  mov $BGM_Title,"Traga O Destino(Ver. chiru)" : return
 ;Extra
 if %BGM_Id == 94	mov $BGM_Title,"Tsurupettan" : return
-if %BGM_Id == 1011	mov $BGM_Title,"sistema0(Original Version)" : return
+if %BGM_Id == 1011	mov $BGM_Title,"sistema0(Versão Original)" : return
 if %legacy_op == off && %BGM_Id == 1012	mov $BGM_Title,"Igreja dos Votos Reverberantes" : return
 if %legacy_op == on  && %BGM_Id == 1012	mov $BGM_Title,"Quando as Gaivotas Choram" : return
 if %BGM_Id == 1014	mov $BGM_Title,"Sonho de Inanna" : return
