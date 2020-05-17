@@ -32,7 +32,7 @@
 	textoff
 	lsp s0_3,goa_memory3_src,0,0
 		*goa_3p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"Desculpe deixá‐lo esperando!!"{n}"Vocês... Por que estão aqui......"`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Desculpe deixá‐lo esperando!!"{n}"Vocês... Por que estão aqui......?"`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -60,7 +60,7 @@
 	set_name_window_non
 	lsp s0_3,kakera_memory6_src,0,0
 		*kak_6p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"Não, isto está errado. A coisa certa a se dizer é "um assassinato realmente aconteceu = isso não é um quarto fechado"!`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Não, isso está errado. O certo a se dizer é "um assassinato realmente aconteceu = não é um quarto fechado"!`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -84,7 +84,7 @@
 	textoff
 	lsp s0_3,kakera_memory9_src,0,0
 		*kak_9p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`E não só a Kyrie‐san.{n}A Jessica também disse isso pelo telefone.{n}{n}......Não, como este é o começo, de quando conversamos com o Gohda‐san e a Kumasawa‐san, e recebemos a ligação do grupo do Tio Krauss,`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`E não só a Kyrie‐san.{n}A Jessica disse a mesma coisa pelo telefone.{n}{n}......Não, desde o início, quando eu falei com o Gohda‐san e a Kumasawa‐san, e recebi uma ligação do grupo do tio Krauss,`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -97,7 +97,7 @@
 	lsp 5,":a/10,0,3;graphics\system\wnd\cursor1.png",0,0
 	lsp s0_3,kakera_memory1_src,0,0
 		*kak_1p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"Kyaa{p:0:♪} Sakutaroou! Já faz tanto tempoooo!"{n}"Você parece delicioso—digo, fofo como sempre~!!"{n}"Eu prime~iro!! Kyaa, ele é tão macio, bom de apertar, e fo~fo!"`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Kyaa{p:0:♪} Sakutaroou! Há quanto tempo!"{n}"Você parece delici—digo—fofinho como sempre~!!"{n}"Sou a primei~ra!! Kyaa, ele é tão fofinho, elástico e tão foooo~fo!"`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -109,7 +109,7 @@
 	textoff
 	lsp s0_3,kakera_memory2_src,0,0
 		*kak_2p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"Oooooooooooooohh, podem viiiiiiiir!! Quem quiser comer essas balas que a Maria guardou para mim, dê um passo à frenteee, uwoooo{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}oooohhh!!!"`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Oooooooooooooohh, venhammmmmmm!! Quem quiser comer essas balas que a Maria carregou pra mim, dê um passo à frenteeeeee, uwoooo{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}oooohhh!!!"`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -121,7 +121,7 @@
 	textoff
 	lsp s0_3,kakera_memory3_src,0,0
 		*kak_3p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"............Essa não é uma das regras do Mestre, ...e certamente não é uma das suas. .........Eu fiz essa regra pensando em mim mesmo. .........Eu não sou mais uma mobília. .........Eu sou o zero na sua roleta...!"`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"............Essa não é nenhuma das regras do Mestre, ...e certamente não é nenhuma das suas. .........Eu mesmo fiz essa regra. .........Eu não sou mais uma mobília. .........Eu sou o zero na sua maldita roleta...!"`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -133,7 +133,7 @@
 	textoff
 	lsp s0_3,kakera_memory4_src,0,0
 		*kak_4p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"Genji‐san. ......O pai está chamando você. Faça companhia a ele."{n}".........Certamente."`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Genji‐san. ......Ele está chamando você. Faça companhia a ele."{n}".........Certamente."`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -157,7 +157,7 @@
 	textoff
 	lsp s0_3,kakera_memory8_src,0,0
 		*kak_8p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"Certo, Ojou‐sama... Vamos seguir a parede e continuar andando. ...Indo aos poucos. Aos poucos."`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Certo, ojou‐sama... Vamos seguir aquela parede e continuar andando. ...Sempre. E sempre."`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -170,7 +170,7 @@
 	lsp s0_3,kakera_memory10_src,0,0
 	if localisation != "pt" jumpf
 		*kak_10p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`A imagem do desgraçado do meu avô oscilou na minha frente.{n}{n}......Heh, ele está tentando ser algum tipo de cavaleiro, bloqueando o caminho entre eu e a Beato...?!`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`Meu avô de merda está oscilando na minha visão.{n}{n}......Heh, ele está tentando ser algum tipo de cavaleiro, bloqueando o caminho entre mim e a Beato...?!`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
