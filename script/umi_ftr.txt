@@ -26269,7 +26269,7 @@ return
 	ignore_cmd "seplay","bgmplay","bgmplay2","ssa_stop","meplay","vol_bgm","vol_me","vol_se","vol_mix_fade","show_whirl","show_glass","gpt","agpt","gptwait","textoff"
 	ignore_cmd "aspt","spt","aspt2","spt2","sptwait","sptwait2","csp_slot","waits","wait","wait2","z_order_override","z_order_override2","lv","csp","waitvideo"
 	ignore_cmd "lips_sprite","gstc","gstt","gstg","break_glass","break_glass2","display_clock","display_clock2","skip_off","skip_on","trophy_open"
-	ignore_cmd "spritesetptwait","aspritesetpt","spritesetpt","spriteset_enable","mask_set","texec3","ch_done","blend_mode","blend_mode2","ssa_load"
+	ignore_cmd "spritesetptwait","aspritesetpt","spritesetpt","spriteset_enable","mask_set","texec3","blend_mode","blend_mode2","ssa_load"
 	ignore_cmd "saveoff","waittimer","flg_p","set_scale_center","waitvoice","show_characters","reset_set","drop_cache","freemem","systemcall","set_saving","moreram"
 	;Do not ignore "get_response" commands -- these read from the saved choicepoints in superskip, and superskip needs to be able to follow the correct path
 	;Also do not ignore "show_coin_counter" commands -- these do important work setting certain variables... instead we'll ignore some subfn of them
