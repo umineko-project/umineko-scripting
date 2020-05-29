@@ -99,6 +99,7 @@ return
 	;ep8 menu murder
 	preset_define 32,1,50,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1590 ;Menu murder
 	;chinese
+	preset_define 33,7,35,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu murder answer
 return
 
 *backup_disable_lang
