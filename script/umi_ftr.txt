@@ -39282,8 +39282,8 @@ return
 	lsp r_cha_back_lsp,":a;graphics\menu\murder\murder_story_answer_left_bg.png",200,150
 	getspsize r_cha_back_lsp,%Free1,%Free2
 	border_pad_push 5
-	lsp 201,ep8_9_criminal,%Free1/2+200,160		;犯人を選択してください
-	lsp 202,ep8_9_criminal_2,%Free1/2+200,883	;犯人特定
+	lsp 201,ep8_9_criminal,%Free1/2+200,criminal_header_y		;犯人を選択してください
+	lsp 202,ep8_9_criminal_2,%Free1/2+200,criminal_button_y	;犯人特定
 	border_pad_pop
 	getspsize 201,%Free1,%Free2 : spt xpos,201,-%Free1/2
 	getspsize 202,%Free1,%Free2 : spt xpos,202,-%Free1/2
