@@ -21,21 +21,21 @@ return
 return
 
 *sub_get_romaji
-	if %track_id == 58 mov $track_id,"video\sub\58_rom.ass" : return
-	if %track_id == 83 mov $track_id,"video\sub\83_rom.ass" : return
-	if %track_id == 109 mov $track_id,"video\sub\109_rom.ass" : return
-	if %track_id == 132 mov $track_id,"video\sub\132_rom.ass" : return
-	if %track_id == 134 mov $track_id,"video\sub\134_rom.ass" : return
-	if %track_id == 160 mov $track_id,"video\sub\160_rom.ass" : return
-	if %track_id == 161 mov $track_id,"video\sub\161_rom.ass" : return
-	if %track_id == 186 mov $track_id,"video\sub\186_rom.ass" : return
-	if %track_id == 240 mov $track_id,"video\sub\240_rom.ass" : return
-	if %track_id == 241 mov $track_id,"video\sub\241_rom.ass" : return
-	if %track_id == 1014 mov $track_id,"video\sub\op4_rom.ass" : return
-	if %track_id == 1017 mov $track_id,"video\sub\op56_rom.ass" : return
-	if %track_id == 1018 mov $track_id,"video\sub\op78_rom.ass" : return
-	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\rom.ass" : return
-	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\rom.ass" : return
+	if %track_id == 58 mov $track_id,"video\sub\58_jpn.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_jpn.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_jpn.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_jpn.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_jpn.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_jpn.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_jpn.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_jpn.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_jpn.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_jpn.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_jpn.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_jpn.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_jpn.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\jpn.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\jpn.ass" : return
 return
 
 *sub_get_both
