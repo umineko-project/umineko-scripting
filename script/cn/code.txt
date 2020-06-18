@@ -59,11 +59,11 @@ return
 *redefine_text_presets
 	;GAME PRESETS
 	preset_define 0,1,60,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Japanse text
-	preset_define 1,1,60,#FF0000,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Red text
-	preset_define 2,1,60,#39C6FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Blue text
+	preset_define 1,1,-1,#FF0000,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Red text
+	preset_define 2,1,-1,#39C6FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Blue text
 	preset_define 7,5,40,#C0FFFF,0,0,0,1,6,#000000,0,0,0,#000000,0,70,1880 ;Chapter/BGM/Hint
-	preset_define 41,1,60,#FFAA00,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Gold text
-	preset_define 42,1,60,#AA71FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Purple text
+	preset_define 41,1,-1,#FFAA00,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Gold text
+	preset_define 42,1,-1,#AA71FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Purple text
 	;MENU PRESETS
 	;Texts
 	preset_define 3,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,700 ;Menu chars text
