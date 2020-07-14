@@ -213,7 +213,7 @@ if %BGM_Id == 144 	mov $BGM_Title,"Valsa Op.34" : return
 if %BGM_Id == 145 	mov $BGM_Title,"VIVO" : return
 if %BGM_Id == 146 	mov $BGM_Title,"nascimento de uma nova bruxa(instrumental)" : return
 if %BGM_Id == 147 	mov $BGM_Title,"ruriair" : return
-if %BGM_Id == 148 	mov $BGM_Title,"Engajamento de marionetes" : return
+if %BGM_Id == 148 	mov $BGM_Title,"Noivado das marionetes" : return
 if %BGM_Id == 149 	mov $BGM_Title,"Vida" : return
 if %BGM_Id == 150 	mov $BGM_Title,"Lorelei" : return
 if %BGM_Id == 151 	mov $BGM_Title,"Pecado" : return
