@@ -379,7 +379,10 @@ goto *chiru_trailer
 csp_rst
 bg black,0
 vol_mix_fade 1000
+vol_bgm -1,1000
 flush 2
+wait 500
+bgmplay 106,90,0
 wait 500
 goto *o8_0
 goto *omakeeee_m1f_p1br_loop
