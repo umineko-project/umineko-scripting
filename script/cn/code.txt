@@ -244,7 +244,7 @@ if %BGM_Id == 131 	mov $BGM_Title,"生命的粮" : return
 if %BGM_Id == 132 	mov $BGM_Title,"约定" : return
 if %BGM_Id == 133 	mov $BGM_Title,"明天" : return
 if %BGM_Id == 134 	mov $BGM_Title,"翼(希望版)" : return
-if %BGM_Id == 135 	mov $BGM_Title,"钝色的空笑" : return
+if %BGM_Id == 135 	mov $BGM_Title,"铅色的假笑" : return
 if %BGM_Id == 136 	mov $BGM_Title,"永恒之锁" : return
 if %BGM_Id == 137 	mov $BGM_Title,"爱之试炼" : return
 if %BGM_Id == 138 	mov $BGM_Title,"刹那" : return
@@ -281,7 +281,7 @@ if %BGM_Id == 168 	mov $BGM_Title,"bore-ral ～为了自由的波莱罗～" : re
 if %BGM_Id == 169 	mov $BGM_Title,"ballade-continuer ～永远地走下去～" : return
 if %BGM_Id == 170 	mov $BGM_Title,"无名之歌 2007版 伴奏" : return
 if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia ～虚伪的同盟～" : return
-if %BGM_Id == 172 	mov $BGM_Title,"黄金夜曲(伴奏)" : return
+if %BGM_Id == 172 	mov $BGM_Title,"金色的夜想曲(伴奏)" : return
 if %BGM_Id == 173 	mov $BGM_Title,"远(黯淡)" : return
 if %BGM_Id == 174 	mov $BGM_Title,"玩具箱" : return
 if %BGM_Id == 175 	mov $BGM_Title,"终点的入口" : return
