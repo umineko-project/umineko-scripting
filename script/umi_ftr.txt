@@ -33310,9 +33310,10 @@ goto *switch_game_q
 
 	if releasedate + 15552000 > %Free1 return
 
-	border_pad_push 10
-	lsph t_warning_lsp,":s;#FF0000`{p:1:{o:10:"+verification_ancient+"}}",70,920
-	border_pad_pop
+	; border_pad_push 10
+	; lsph t_warning_lsp,":s;#FF0000`{p:1:{o:10:"+verification_ancient+"}}",70,920
+	; border_pad_pop
+	debug_string "This release may be outdated, assuming final version"
 return
 
 *full_verify
