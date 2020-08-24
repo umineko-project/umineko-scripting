@@ -70,12 +70,24 @@ stralias r_grim2_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Сейза}"
 stralias r_grim2_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Голубой и зелёный}"
 stralias r_grim2_3,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Цундора}"
 stralias r_grim2_4,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Утка и лук}"
+stralias r_grim2_5,""
+stralias r_grim2_6,""
+stralias r_grim2_7,""
+stralias r_grim2_8,""
+stralias r_grim2_9,""
+stralias r_grim2_10,""
 
 ;ep3
 stralias r_grim3_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Мерут}"
 stralias r_grim3_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Обсуждение эпитафии}"
 stralias r_grim3_3,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Катакана}"
 stralias r_grim3_4,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Гяру игры}"
+stralias r_grim3_5,""
+stralias r_grim3_6,""
+stralias r_grim3_7,""
+stralias r_grim3_8,""
+stralias r_grim3_9,""
+stralias r_grim3_10,""
 
 ;ep4
 stralias r_grim4_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Карамель Glico}"
@@ -87,6 +99,7 @@ stralias r_grim4_6,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Удайкан}"
 stralias r_grim4_7,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Дневник для записей}"
 stralias r_grim4_8,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Али‐Грей и 666}"
 stralias r_grim4_9,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Флаг неудачника}"
+stralias r_grim4_10,""
 
 ;ep5
 stralias r_grim5_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Донбури}"
@@ -94,18 +107,47 @@ stralias r_grim5_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Син‐хонкаку
 stralias r_grim5_3,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Ина Бауэр не умирает}"
 stralias r_grim5_4,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Озеро и граф}"
 stralias r_grim5_5,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Ты забыл про ноги}"
+stralias r_grim5_6,""
+stralias r_grim5_7,""
+stralias r_grim5_8,""
+stralias r_grim5_9,""
+stralias r_grim5_10,""
 
 ;ep6
 stralias r_grim6_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Мико}"
 stralias r_grim6_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Варава}"
+stralias r_grim6_3,""
+stralias r_grim6_4,""
+stralias r_grim6_5,""
+stralias r_grim6_6,""
+stralias r_grim6_7,""
+stralias r_grim6_8,""
+stralias r_grim6_9,""
+stralias r_grim6_10,""
 
 ;ep7
 stralias r_grim7_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Орихиме и Хикобоши}"
 stralias r_grim7_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Сямисен}"
+stralias r_grim7_3,""
+stralias r_grim7_4,""
+stralias r_grim7_5,""
+stralias r_grim7_6,""
+stralias r_grim7_7,""
+stralias r_grim7_8,""
+stralias r_grim7_9,""
+stralias r_grim7_10,""
 
 ;ep8
 stralias r_grim8_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Атти муитэ хой}"
 stralias r_grim8_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Момотаро}"
+stralias r_grim8_3,""
+stralias r_grim8_4,""
+stralias r_grim8_5,""
+stralias r_grim8_6,""
+stralias r_grim8_7,""
+stralias r_grim8_8,""
+stralias r_grim8_9,""
+stralias r_grim8_10,""
 
 ;System button
 
@@ -1430,7 +1472,7 @@ stralias set_game_language_en,":s;#C7C7C7#FFFFFF`{p:8:Английская}"
 stralias set_game_language_en_on,":s;#FFFFFF`{p:8:Английская}"
 stralias set_bgm_title_language,":s;#FFFFFF`{p:8:Локализация названий треков}"
 stralias set_bgm_title_language_en,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Английская}"
-stralias set_bgm_title_language_ru,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Русская}"
+stralias set_bgm_title_language_tl,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Русская}"
 stralias set_bgm_title_language_jp,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Японская}"
 stralias set_bgm_title_language_rom,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Ромадзи}"
 stralias set_window_size,":s;#FFFFFF`{p:8:Размер окна}"
@@ -1934,8 +1976,7 @@ stralias trophy_text_94,"{p:18:Золотой трофей{n}Twilight of the Gol
 stralias trophy_text_95,"{p:18:Золотой трофей{n}CG Hunter{n}Заполните галерею на 100%.}"
 stralias trophy_text_96,"{p:18:Золотой трофей{n}Music Hunter{n}Заполните музыкальную шкатулку на 100%.}"
 
-; ugly temporary config fix
-
+;Hardcoded offsets in menus and other places, which are currently not calculated
 numalias settings_base_off1,1403
 numalias settings_base_off2,1550
 numalias settings_base_off3,1140
@@ -1943,6 +1984,7 @@ numalias settings_base_off4,1377
 numalias settings_base_off5,890
 numalias settings_base_off6,1093
 numalias settings_base_off7,1559
+numalias omake3_line_y,105
 
 ;quiz 8 episode
 stralias quiz_ask_auntie_eva,":a/2,0,3;graphics\menu\quiz\ask_auntie_eva.png"

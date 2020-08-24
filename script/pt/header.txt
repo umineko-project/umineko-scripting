@@ -12,6 +12,12 @@ if %CHIRU_MODE == 1 stralias msgwnd,":a;graphics\system\wnd\msgwnd_ep5_pt.png"
 stralias msgwnd2,":a;graphics\system\wnd\msgwnd2.png"
 stralias msgwnd3,":a;graphics\system\wnd\msgwnd3.png"
 stralias msgwnd4,":a;graphics\system\wnd\msgwnd4.png"
+numalias text_main_size,50
+numalias text_main_spacing,55
+numalias text_name_size,50
+numalias text_name_spacing,55
+numalias criminal_header_y,160
+numalias criminal_button_y,883
 
 ;--Textboxes-end--
 
@@ -283,7 +289,7 @@ stralias verify_video,"Certifique‐se de ter instalado corretamente a pasta 'vi
 stralias verify_updates,"Certifique‐se de ter instalado todas as atualizações recentes de arquivos. Alguns arquivos não foram localizados."
 stralias verify_engine,"Certifique‐se de estar usando os mais recentes script e engine do jogo. A engine e o script atuais são incompatíveis."
 
-stralias verification_title,"Verificação de arquivos do jogo"
+stralias verification_title,"Verificando arquivos do jogo"
 stralias verification_verifying,"Verificando arquivos...{n}Isso pode levar alguns minutos, seja paciente.{n}"
 stralias verification_legend,"Legenda: "
 stralias verification_modified," Arquivo modificado"

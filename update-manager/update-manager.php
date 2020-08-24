@@ -455,7 +455,7 @@ function main($argc, $argv) {
 			break;
 		case 'dscript':
 			if ($argc < 5) err(getUsage());
-			$ver    = '8.1b' . ($argc > 5 ? ' r' . $argv[5] : '');
+			$ver    = '8.2a' . ($argc > 5 ? ' r' . $argv[5] : '');
 			$locale = $argv[4];
 			$gameid = 'UminekoPS3fication'.ucfirst($locale);
 			$scripting = $argv[3];

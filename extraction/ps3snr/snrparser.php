@@ -2217,7 +2217,7 @@ function initGlobals() {
 		55198 => [
 			'*d55198'.LF.'d [lv 0*"55"*"75500729"]`「織姫と彦星のようにな…！」`[\\]' => [
 				'ignore' => true,
-				'before' => 'd [lv 0*"55"*"75500729"]`「織姫と彦星のようにな…！」`[gstg 1][\\]'
+				'before' => '*d55198'.LF.'d [lv 0*"55"*"75500729"]`「織姫と彦星のようにな…！」`[gstg 1][\\]'
 			]
 		],
 		67587 => [
@@ -2332,7 +2332,12 @@ function initGlobals() {
 			'csp_slot s0_17'	=>	[
 				'before'	=> 'set_saving on'
 			]
-		]
+		],
+		63284 => [
+			'lbg s0_3,"black"'	=> [
+				'before'	=> 'csp_slot s0_7'.LF.'csp_slot s0_11'
+			]
+		],
 	];
 
 	$g['voice_remap'] = [

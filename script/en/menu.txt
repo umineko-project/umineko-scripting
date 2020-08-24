@@ -71,12 +71,24 @@ stralias r_grim2_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Seiza}"
 stralias r_grim2_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Blue and green}"
 stralias r_grim2_3,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Tsundora}"
 stralias r_grim2_4,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Duck and onions}"
+stralias r_grim2_5,""
+stralias r_grim2_6,""
+stralias r_grim2_7,""
+stralias r_grim2_8,""
+stralias r_grim2_9,""
+stralias r_grim2_10,""
 
 ;ep3
 stralias r_grim3_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Merute}"
 stralias r_grim3_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Epitaph Discussions}"
 stralias r_grim3_3,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Katakana}"
 stralias r_grim3_4,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Galge}"
+stralias r_grim3_5,""
+stralias r_grim3_6,""
+stralias r_grim3_7,""
+stralias r_grim3_8,""
+stralias r_grim3_9,""
+stralias r_grim3_10,""
 
 ;ep4
 stralias r_grim4_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Glico caramels}"
@@ -88,6 +100,7 @@ stralias r_grim4_6,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Udaikan}"
 stralias r_grim4_7,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Communication booklet}"
 stralias r_grim4_8,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Ali‐Gray and 666}"
 stralias r_grim4_9,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Loser flags}"
+stralias r_grim4_10,""
 
 ;ep5
 stralias r_grim5_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Donburi}"
@@ -95,18 +108,47 @@ stralias r_grim5_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Shin‐Honkaku}"
 stralias r_grim5_3,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Ina Bauer never dies}"
 stralias r_grim5_4,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Lake & Count}"
 stralias r_grim5_5,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Feet unprotected}"
+stralias r_grim5_6,""
+stralias r_grim5_7,""
+stralias r_grim5_8,""
+stralias r_grim5_9,""
+stralias r_grim5_10,""
 
 ;ep6
 stralias r_grim6_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Miko}"
 stralias r_grim6_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Warawa}"
+stralias r_grim6_3,""
+stralias r_grim6_4,""
+stralias r_grim6_5,""
+stralias r_grim6_6,""
+stralias r_grim6_7,""
+stralias r_grim6_8,""
+stralias r_grim6_9,""
+stralias r_grim6_10,""
 
 ;ep7
 stralias r_grim7_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Orihime and Hikoboshi}"
 stralias r_grim7_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Shamisen}"
+stralias r_grim7_3,""
+stralias r_grim7_4,""
+stralias r_grim7_5,""
+stralias r_grim7_6,""
+stralias r_grim7_7,""
+stralias r_grim7_8,""
+stralias r_grim7_9,""
+stralias r_grim7_10,""
 
 ;ep8
 stralias r_grim8_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Acchi Muite Hoi}"
 stralias r_grim8_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Momotarou}"
+stralias r_grim8_3,""
+stralias r_grim8_4,""
+stralias r_grim8_5,""
+stralias r_grim8_6,""
+stralias r_grim8_7,""
+stralias r_grim8_8,""
+stralias r_grim8_9,""
+stralias r_grim8_10,""
 
 ;System button
 
@@ -322,12 +364,24 @@ stralias grim_2_1_1,":s;#FFFFFF`{p:5:{p:4:正座} ({i:seiza}) is a traditional J
 stralias grim_2_2_1,":s;#FFFFFF`{p:5:The color of {p:4:青} ({i:ao}) in Japanese has a range of meanings, including “pale”, “fresh”, “young”, “naive”, and the colors “blue” and “green”, in one word. The sea and sky are ao, fresh grass is ao, and so is the green on a traffic light.{n}{n}Nowadays, Japanese has a native word {i:midori} for the color green, but the use of the broad word “ao” is still very common, and this is the color Shannon uses to refer to the sea. Kanon wonders if she is using “ao” to mean something other than blue.}"
 stralias grim_2_3_1,":s;#FFFFFF`{p:5:{i:Tsundora} is the word “tundra” converted into the Japanese sound system. It is used as a pun and reference to the term {i:tsundere}, which is a well‐known character personality trait in fictional Japanese works.{n}{n}{i:Tsundere} is composd of two words, {i:tsuntsun} and {i:deredere}, meaning respectively “aloof or cranky” and “lovestruck”.{n}It is used to describe characters that demonstrate an aggressive and/or cold behavior (tsuntsun) but then become all lovey‐dovey (deredere) under some circumstances.}"
 stralias grim_2_4_1,":s;#FFFFFF`{p:5:Duck and green onions are the primary ingredients for a duck stew, and this gave rise to the Japanese phrase “a duck comes bearing green onions”, in which a duck approaches carrying its own seasoning, ready to be eaten.{n}This metaphorically refers to a situation where a series of lucky coincidences benefits you without any effort, or alternatively, where a naive person brings you what you want while unaware of the disadvantage to themselves. {n}Perhaps because of this, a “mark” or a “sucker” in terms of scams is often called a “duck” in Japanese.}"
+stralias grim_2_5_1,""
+stralias grim_2_6_1,""
+stralias grim_2_7_1,""
+stralias grim_2_8_1,""
+stralias grim_2_9_1,""
+stralias grim_2_10_1,""
 
 ;Grimoire texts ep3
 stralias grim_3_1_1,":s;#FFFFFF`{p:5:This word is probably related to a fictional unit of length from “Nausicaa of the Valley of the Wind”, which seems to be about one meter long.}"
 stralias grim_3_2_1,":s;#FFFFFF`{p:5:Characters sometimes discuss their interpretations of the epitaph.{n}If you would like to explore the epitaph, you may find it interesting to browse their discussions in the Message Browser. Additional translation notes may sometimes appear.}"
 stralias grim_3_3_1,":s;#FFFFFF`{p:5:Katakana is one of the phonetic scripts used in Japanese writing, one of its uses being to write foreign words.{n}When foreign words are written in katakana, they are forced into the Japanese sound system, so “Beatrice” in katakana ({p:4:ベアトリーチェ}) is actually pronounced “Beatoriiche”. This Japanized pronunciation of Beatrice is the reason for her nickname of “Beato”.{n}{n}In this scene, Battler is suggesting that she should write the name in its original beautiful form instead of the Japanized version.{n}However, as we have just seen with {f:5:Maria}, a katakana name—which we have represented with small caps—may be a deliberate choice for certain characters, witches in particular.{n}{n}In the original Japanese, many characters, including ordinary real‐world characters like Kumasawa “Chiyo” ({p:4:チヨ}), as well as Ronove, the Chiesters, and all the stakes, use katakana names. To ease reading, we have chosen to restrict the usage of small caps to the full names of witches, where katakana seems to have a special significance.}"
 stralias grim_3_4_1,":s;#FFFFFF`{p:5:Short for “gal games” (“girl games”). The term generally describes non‐adult visual novels that feature attractive girls as a main hook, including but not limited to dating sims. The definition of the term is fuzzy, and it may also be used in a wider sense that includes adult games.}"
+stralias grim_3_5_1,""
+stralias grim_3_6_1,""
+stralias grim_3_7_1,""
+stralias grim_3_8_1,""
+stralias grim_3_9_1,""
+stralias grim_3_10_1,""
 
 ;Grimoire texts ep4
 stralias grim_4_1_1,":s;#FFFFFF`{p:5:The Japanese confectionery company Glico, also famous for producing Pocky, began its business in 1922 with boxes of Glico caramels, which featured art of a running man, triumphantly smiling with his arms raised. The marketing was that a single caramel gives you the energy to run {nobr:300 m}.{n}{n}The Glico running man became an iconic trademark and mascot that the company still uses today.}"
@@ -339,6 +393,7 @@ stralias grim_4_6_1,":s;#FFFFFF`{p:5:“Udaikan” is a misreading of the “Ush
 stralias grim_4_7_1,":s;#FFFFFF`{p:5:A “communication booklet” is a notebook which elementary schoolers in Japan take to school with them, used as a short‐message communication tool between parents and teachers.{n}{n}For instance, the students will be told to write down information that parents need to know about the next day of classes; parents can use them to keep teachers informed of lost items, health issues, or request that their child skips a gym class; and because children tend to go to school in groups, notices of absence or lateness can also be written in them and the booklet handed to the group.}"
 stralias grim_4_8_1,":s;#FFFFFF`{p:5:These are references to modern Japanese fashion subcultures.{n}{n}“Alice and the Graveyard” references “Alice and the Pirates”, a gothic/pirate‐punk lolita fashion brand.{n}{n}“666” references the famous department and fashion store “109” in Shibuya, Japan's popular youth culture district.{n}{n}Finally, “Devilish Pretty” is a reference to “Angelic Pretty”, a very famous sweet lolita fashion brand.}"
 stralias grim_4_9_1,":s;#FFFFFF`{p:5:The term “flag” here originally described an invisible state value in a game's coding, which is said to be “tripped” or “triggered” when the player takes some action that influences future events.{n}The moment of the flag trip itself is usually not visible, and can only be detected through later changes in dialogue or events that signal to the player that they have impacted events or changed route.{n}{n}In casual usage of the term, and especially when applying the concept to a non‐interactive medium, these moments that indicate clearly to the genre‐savvy that events are inexorably unfolding a certain way are {i:themselves} called “flags”, and it is in this sense that the phrase “loser flag” is used here: to refer to the occurrence of a cliché that is almost always followed by total failure for a character in a story.}"
+stralias grim_4_10_1,""
 
 ;Grimoire texts ep5
 stralias grim_5_1_1,":s;#FFFFFF`{p:5:{p:4:丼} ({i:Donburi}) is simply “food served on top of rice in a deep bowl”. The bowl is also called a “donburi”, hence the name.{n}{n}Many types of food can be served donburi style, including curry ({i:karee‐don}), beef ({i:gyuu‐don}), or chicken and egg ({i:oyako‐don}, meaning “parent and child donburi”).}"
@@ -346,18 +401,48 @@ stralias grim_5_2_1,":s;#FFFFFF`{p:5:{p:4:新本格} ({i:Shin‐Honkaku}, New Or
 stralias grim_5_3_1,":s;#FFFFFF`{p:5:Ina Bauer (1941–2014) was a champion German figure skater, whose name is associated with a move in figure skating that became famous in Japan.{n}{n}However, the reference goes deeper than this. Rudolf's voice actor, Koyama Rikiya ({p:4:小山力也}), was the Japanese dub voice for Jack Bauer in the TV series “24” (2001–2010).{n}“He never dies” is a reference to one of a number of comedic Japanese TV commercials for 24, in which Koyama Rikiya sings: “I am Jack Bauer, always in danger / I am Jack Bauer, I never die”.}"
 stralias grim_5_4_1,":s;#FFFFFF`{p:5:Lake Shirakaba is a reference to “Onmoraki no Kizu” ({p:4:陰摩羅鬼の瑕}), an award‐winning 2003 novel by Kyougoku Natsuhiko ({p:4:京極夏彦}).{n}The {y:0:Human}{n:0:human}‐hunting Count is a reference to “Galaxy Express 999”.}"
 stralias grim_5_5_1,":s;#FFFFFF`{p:5:This is a reference to a line in Dragon Ball that achieved meme status in Japanese, spoken by Kami/Hero/Shen in a fight against Yamcha.}"
+stralias grim_5_6_1,""
+stralias grim_5_7_1,""
+stralias grim_5_8_1,""
+stralias grim_5_9_1,""
+stralias grim_5_10_1,""
 
 ;Grimoire texts ep6
 stralias grim_6_1_1,":s;#FFFFFF`{p:5:{p:4:巫女} ({i:Miko}) is often translated as “shrine maiden”. Traditionally dressed in white and red, miko act as assistants at Shinto shrines.{n}In addition to helping out with the day to day running of the shrine, including cleaning the premises and selling charms and fortunes, miko also perform ceremonial dances and assist priests in Shinto rituals and performances.}"
 stralias grim_6_2_1,":s;#FFFFFF`{p:5:{p:4:妾} ({i:Warawa}) is the pronoun that {f:5:Beatrice} used throughout Episodes 1 through 4 to refer to herself.{n}{n}Historically, {i:warawa} (written {p:4:童}) was a word used to refer to handmaids, chambermaids, and children, including errand boys and girls. The pronoun {i:warawa} which derived from these meanings was therefore a humble one, used mostly by women.{n}{n}However, in the context of modern fiction, the use of {i:warawa} is stereotypically associated with noblewomen from olden times, and the anachronism of this choice of pronoun can have the secondary effect of imparting an imperious air on a character's speech.{n}In this sense, it is a perfect fit for {f:5:Beatrice}, and an important part of the role language that makes up her character.}"
+stralias grim_6_3_1,""
+stralias grim_6_4_1,""
+stralias grim_6_5_1,""
+stralias grim_6_6_1,""
+stralias grim_6_7_1,""
+stralias grim_6_8_1,""
+stralias grim_6_9_1,""
+stralias grim_6_10_1,""
+
 
 ;Grimoire texts ep7
 stralias grim_7_1_1,":s;#FFFFFF`{p:5:In the legend of {p:4:七夕} (Tanabata), a Japanese festival held on the seventh day of the seventh month, {p:4:織姫} (Orihime) and {p:4:彦星} (Hikoboshi) are celestial lovers represented by the stars Vega and Altair.{n}{n}The legend states that Orihime and Hikoboshi were placed on opposite sides of the heavenly river that is the Milky Way and forbidden from meeting, except for once per year on Tanabata, when magpies create a bridge across the river to bring the lovers together.{n}However, if it rains on Tanabata, the rise of the river prevents the lovers from meeting, and they must wait another year.}"
 stralias grim_7_2_1,":s;#FFFFFF`{p:5:A {p:4:三味線} ({i:shamisen}) is a traditional Japanese stringed instrument similar to a fretless banjo. The name of the instrument comes from its three strings.{n}{n}The membrane stretched over the hollow body of the shamisen was traditionally made from cat skin.}"
+stralias grim_7_3_1,""
+stralias grim_7_4_1,""
+stralias grim_7_5_1,""
+stralias grim_7_6_1,""
+stralias grim_7_7_1,""
+stralias grim_7_8_1,""
+stralias grim_7_9_1,""
+stralias grim_7_10_1,""
 
 ;Grimoire texts ep8
 stralias grim_8_1_1,":s;#FFFFFF`{p:5:{p:4:あっち向いてホイ} ({i:Acchi Muite Hoi}) is a popular Japanese variant of Rock-Paper-Scissors.{n}{n}In Acchi Muite Hoi, whoever throws the winning hand sign is not immediately declared the winner, but rather earns the {i:opportunity} to win, while the other player must try to avoid losing. The player with “advantage” says “acchi muite” (“look that way”), and then, in time with a call of “hoi!”, he or she points one finger either up, down, left, or right. At the same time, the other player turns their head, also in one of those four directions. If the player with advantage correctly predicts which way the other will turn, they win. Otherwise, the process returns to the beginning with another round of Rock-Paper-Scissors.}"
 stralias grim_8_2_1,":s;#FFFFFF`{p:5:{p:4:桃太郎} ({i:Momotarou}) or “Peach Boy” is a Japanese fairy tale named after its main character, Momotarou.{n}{n}The full story is a little too long to tell properly here, but it should suffice to explain that it is about a boy who was born from a giant peach which came floating down a river.}"
+stralias grim_8_3_1,""
+stralias grim_8_4_1,""
+stralias grim_8_5_1,""
+stralias grim_8_6_1,""
+stralias grim_8_7_1,""
+stralias grim_8_8_1,""
+stralias grim_8_9_1,""
+stralias grim_8_10_1,""
 
 
 ;scenario
@@ -1433,7 +1518,7 @@ stralias set_game_language_en,":s;#C7C7C7#FFFFFF`{p:8:English}"
 stralias set_game_language_en_on,":s;#FFFFFF`{p:8:English}"
 stralias set_bgm_title_language,":s;#FFFFFF`{p:8:BGM title language}"
 stralias set_bgm_title_language_en,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}English}"
-stralias set_bgm_title_language_ru,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Russian}"
+stralias set_bgm_title_language_tl,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Russian}"
 stralias set_bgm_title_language_jp,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Japanese}"
 stralias set_bgm_title_language_rom,":s;#FFFFFF`{p:8:{w:375:}{a:c:}{fit}Romanized}"
 stralias set_window_size,":s;#FFFFFF`{p:8:Window size}"
@@ -1735,7 +1820,7 @@ stralias name_s41,"Chiester410"
 stralias name_s45,"Chiester45"
 stralias name_s55,"Chiester55"
 stralias name_s56,"Chiester556"
-stralias name_sak,"Sakutaro"
+stralias name_sak,"Sakutarou"
 stralias name_sha,"Shannon"
 stralias name_wal,"{f:5:Virgilia}"
 stralias name_fea,"{f:5:Featherine}"
@@ -1937,8 +2022,7 @@ stralias trophy_text_94,"{p:18:Golden trophy{n}Twilight of the Golden Witch: Mag
 stralias trophy_text_95,"{p:18:Golden trophy{n}CG Hunter{n}Achieve 100% completion for the Picture Box.}"
 stralias trophy_text_96,"{p:18:Golden trophy{n}Music Hunter{n}Achieve 100% completion for the Music Box.}"
 
-; ugly temporary config fix
-
+;Hardcoded offsets in menus and other places, which are currently not calculated
 numalias settings_base_off1,1478
 numalias settings_base_off2,1605
 numalias settings_base_off3,1010
@@ -1946,6 +2030,7 @@ numalias settings_base_off4,1377
 numalias settings_base_off5,850
 numalias settings_base_off6,1213
 numalias settings_base_off7,1559
+numalias omake3_line_y,105
 
 ;quiz 8 episode
 stralias quiz_ask_auntie_eva,":a/2,0,3;graphics\menu_en\quiz\ask_auntie_eva.png"

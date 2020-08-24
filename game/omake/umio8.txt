@@ -502,7 +502,7 @@ lbg s0_3,"wsan_1a"
 flush 2
 waittimer 75145
 *o8_21
-d2 [ak][text_speed_t 5]And so, .........Battler...`[#][*]`knew......`[#][*]`{n}I......did reach the truth...`[#][*][\]
+d2 [ak][text_speed_t 5]`And so, .........Battler...`[#][*]`knew......`[#][*]`{n}I......did reach the truth...`[#][*][\]
 wait_on_d 0
 waittimer 75583
 d_continue

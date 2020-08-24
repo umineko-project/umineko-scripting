@@ -14830,10 +14830,10 @@ gosub *me_generate
 ; Cake test
 ; mov %title_skip,0 : goto *d58138
 
-if $omake_return == "trailer" mov %title_skip,0 : goto *omake_chiru_menu
-if $omake_return == "omake" mov %title_skip,0 : goto *omake_chiru_menu
-if $omake_return == "omake8" mov %title_skip,0 : goto *omake_chiru_menu
-if $omake_return == "omake9" mov %title_skip,0 : goto *omake_chiru_menu
+if $omake_return == "trailer" mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
+if $omake_return == "omake"   mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
+if $omake_return == "omake8"  mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
+if $omake_return == "omake9"  mov %title_skip,0 : mov %r_mode_flg,1 : goto *omake_chiru_menu
 
 ;rondo
 if %CHIRU_MODE != 0 jumpf
@@ -22348,13 +22348,15 @@ mov ?rain_s[%rain_slot][4],0 ;wind
 mov ?rain_s[%rain_slot][5],off ;pause
 mov ?rain_s[%rain_slot][6],%rain_amount ;orbs
 
-if %rain_amount != 1 jumpf 
+if %rain_amount != 1 jumpf
+	fall blend,%rain_layer,"add"
 	fall base, %rain_layer,"graphics\system\rain\orb.png"
 	fall amount,%rain_layer,50
 	fall c_speed,%rain_layer,500
 	fall wind,%rain_layer,1000
 ~
 if %rain_amount = 1 jumpf
+	fall blend,%rain_layer,"add"
 	fall base, %rain_layer,"graphics\system\rain\drop.png"
 	fall amount,%rain_layer,500
 	fall c_speed,%rain_layer,800
@@ -23842,7 +23844,7 @@ z_override_preserve
 if %skip_flg == off skip_off
 if %skip_flg == on skip_on
 
-if %cur_wndmode == off gosub *update_msgwnd
+if %cur_wndmode == off gosub *apply_msgwnd_settings
 gosub *update_textspeed
 mov $chapter_bak,$cur_character
 mov $chapter_rmode,$name_chapter_r_click
@@ -24808,212 +24810,9 @@ if %BGM_Id == 1014	mov $BGM_Title,"Inanna’s Dream" : return
 if %BGM_Id == 1017  mov $BGM_Title,"The Witch of Occultics" : return
 if %BGM_Id == 1018  mov $BGM_Title,"The Pithos in the Fog" : return
 ~
-;ru
+;translatiob
 if %bgm_title_language != 2 jumpf 
-if %BGM_Id == 1	mov $BGM_Title,"Тигровая лилия" : return
-if %BGM_Id == 2	mov $BGM_Title,"Врата лета" : return
-if %BGM_Id == 3	mov $BGM_Title,"АЙДА!" : return
-if %BGM_Id == 4	mov $BGM_Title,"В путь" : return
-if %BGM_Id == 5	mov $BGM_Title,"Море" : return
-if %BGM_Id == 6	mov $BGM_Title,"В час угрюмый" : return
-if %BGM_Id == 7	mov $BGM_Title,"Новелетта" : return
-if %BGM_Id == 8	mov $BGM_Title,"Надежда" : return
-if %BGM_Id == 9	mov $BGM_Title,"Бледная тень" : return
-if %BGM_Id == 10	mov $BGM_Title,"“Идиллия”" : return
-if %BGM_Id == 11	mov $BGM_Title,"Кипа летних облаков" : return
-if %BGM_Id == 12 	mov $BGM_Title,"Лунная ночь" : return
-if %BGM_Id == 13	mov $BGM_Title,"Роза" : return
-if %BGM_Id == 14	mov $BGM_Title,"Дыхание смерти" : return
-if %BGM_Id == 15	mov $BGM_Title,"В тёмном лабиринте" : return
-if %BGM_Id == 16	mov $BGM_Title,"Стойкость" : return
-if %BGM_Id == 17	mov $BGM_Title,"Ведьма в золоте (клавесин)" : return
-if %BGM_Id == 18	mov $BGM_Title,"Искушение" : return
-if %BGM_Id == 19	mov $BGM_Title,"Аромат подозрения" : return
-if %BGM_Id == 20	mov $BGM_Title,"Ступор" : return
-if %BGM_Id == 21	mov $BGM_Title,"Хвала" : return
-if %BGM_Id == 22	mov $BGM_Title,"Волшебный пасс" : return
-if %BGM_Id == 23	mov $BGM_Title,"Бабочка" : return
-if %BGM_Id == 24	mov $BGM_Title,"Золотой душегуб" : return
-if %BGM_Id == 25	mov $BGM_Title,"Конец сказки (ксилофон)" : return
-if %BGM_Id == 26	mov $BGM_Title,"Ведьма с картины" : return
-if %BGM_Id == 27	mov $BGM_Title,"Подозрение" : return
-if %BGM_Id == 28	mov $BGM_Title,"Острая струна" : return
-if %BGM_Id == 29	mov $BGM_Title,"Суть" : return
-if %BGM_Id == 30	mov $BGM_Title,"Миг беспросветности" : return
-if %BGM_Id == 31	mov $BGM_Title,"Затмение" : return
-if %BGM_Id == 32	mov $BGM_Title,"Бдящая душа" : return
-if %BGM_Id == 33	mov $BGM_Title,"Реквием" : return
-if %BGM_Id == 34	mov $BGM_Title,"Игры разума" : return
-if %BGM_Id == 35	mov $BGM_Title,"Конец сказки" : return
-if %BGM_Id == 36	mov $BGM_Title,"Игра" : return
-if %BGM_Id == 37	mov $BGM_Title,"system0" : return
-if %BGM_Id == 38	mov $BGM_Title,"Безмолвие" : return
-if %BGM_Id == 39	mov $BGM_Title,"Мёртвый угол" : return
-if %BGM_Id == 40	mov $BGM_Title,"#600 миллионов (короткая). До минор, орган" : return
-if %BGM_Id == 41	mov $BGM_Title,"Сброс ОКОВ" : return
-if %BGM_Id == 42	mov $BGM_Title,"И. Аллегро — Струнный квартет № 1, соль мажор" : return
-if %BGM_Id == 43	mov $BGM_Title,"Клетка" : return
-if %BGM_Id == 44	mov $BGM_Title,"Золотая насмешка" : return
-if %BGM_Id == 45	mov $BGM_Title,"Внутренности скорпиона" : return
-if %BGM_Id == 46	mov $BGM_Title,"Последний бенефис (вер. C)" : return
-if %BGM_Id == 47	mov $BGM_Title,"Ответ" : return
-if %BGM_Id == 48	mov $BGM_Title,"Краткий ответ" : return
-if %BGM_Id == 49	mov $BGM_Title,"Мелодия (инстр. вер.)" : return
-if %BGM_Id == 50	mov $BGM_Title,"Багровый ужас" : return
-if %BGM_Id == 51	mov $BGM_Title,"Луна" : return
-if %BGM_Id == 52	mov $BGM_Title,"Растерянность" : return
-if %BGM_Id == 53	mov $BGM_Title,"Могильный ужас" : return
-if %BGM_Id == 54	mov $BGM_Title,"Властелин конца сказки" : return
-if %BGM_Id == 55	mov $BGM_Title,"Чёрная Лиллиана" : return
-if %BGM_Id == 56	mov $BGM_Title,"Покой" : return
-if %BGM_Id == 57	mov $BGM_Title,"На закате грёз" : return
-if %BGM_Id == 58	mov $BGM_Title,"Мелодия" : return
-if %BGM_Id == 59	mov $BGM_Title,"Свободный полёт" : return
-if %BGM_Id == 60	mov $BGM_Title,"Солнечный уголок" : return
-if %BGM_Id == 61	mov $BGM_Title,"Танец свеч" : return
-if %BGM_Id == 62	mov $BGM_Title,"В дали" : return
-if %BGM_Id == 63	mov $BGM_Title,"Пси-хор" : return
-if %BGM_Id == 64	mov $BGM_Title,"Далеко-далеко..." : return
-if %BGM_Id == 65	mov $BGM_Title,"Красные башмачки. ФАЛЬШЬ" : return
-if %BGM_Id == 66	mov $BGM_Title,"Мама" : return
-if %BGM_Id == 67	mov $BGM_Title,"Дымка" : return
-if %BGM_Id == 68	mov $BGM_Title,"Танцующая трубка" : return
-if %BGM_Id == 69	mov $BGM_Title,"Замогильный ужас" : return
-if %BGM_Id == 70	mov $BGM_Title,"#200 миллионов (короткая). До минор, орган" : return
-if %BGM_Id == 71	mov $BGM_Title,"Собственный ритм" : return
-if %BGM_Id == 72	mov $BGM_Title,"Счастье марионетки (бонус)" : return
-if %BGM_Id == 73	mov $BGM_Title,"Счастье марионетки" : return
-if %BGM_Id == 74	mov $BGM_Title,"Танец лунных кроликов" : return
-if %BGM_Id == 75	mov $BGM_Title,"Оттепель" : return
-if %BGM_Id == 76	mov $BGM_Title,"Духовность души" : return
-if %BGM_Id == 77	mov $BGM_Title,"Иллюзионист" : return
-if %BGM_Id == 78	mov $BGM_Title,"Темница" : return
-if %BGM_Id == 79	mov $BGM_Title,"Славься рожденье твоё" : return
-if %BGM_Id == 80	mov $BGM_Title,"Крылья" : return
-if %BGM_Id == 81	mov $BGM_Title,"Потерянный рай" : return
-if %BGM_Id == 82	mov $BGM_Title,"Бескрылые" : return
-if %BGM_Id == 83	mov $BGM_Title,"Неуёмная боль" : return
-if %BGM_Id == 84	mov $BGM_Title,"Могильный ужас (ритмическая вер.)" : return
-if %BGM_Id == 85	mov $BGM_Title,"Вечность" : return
-if %BGM_Id == 86	mov $BGM_Title,"На грани" : return
-if %BGM_Id == 87	mov $BGM_Title,"Подобно вспышке" : return
-if %BGM_Id == 88	mov $BGM_Title,"F-стиль" : return
-if %BGM_Id == 89	mov $BGM_Title,"Чёрно-белые часы" : return
-if %BGM_Id == 90	mov $BGM_Title,"Безразличие" : return
-if %BGM_Id == 91	mov $BGM_Title,"Таинственный лес" : return
-if %BGM_Id == 92	mov $BGM_Title,"Сказ о стойкости Сакутаро" : return
-if %BGM_Id == 93	mov $BGM_Title,"Параллель" : return
-if %BGM_Id == 95	mov $BGM_Title,"599 миллионов крахов" : return
-if %BGM_Id == 96	mov $BGM_Title,"Счастливая Мария! (инструмент. вер.)" : return
-if %BGM_Id == 97	mov $BGM_Title,"Собираются силы" : return
-if %BGM_Id == 98	mov $BGM_Title,"Искра и порох" : return
-if %BGM_Id == 99	mov $BGM_Title,"Смерть (исх. Ступор)" : return
-if %BGM_Id == 100	mov $BGM_Title,"Очертя голову" : return
-if %BGM_Id == 101	mov $BGM_Title,"Victima propiciatoria (Козёл отпущения)" : return
-if %BGM_Id == 102	mov $BGM_Title,"Мятеж" : return
-if %BGM_Id == 103	mov $BGM_Title,"Катастрофа в чистилище. Рапсодия" : return
-if %BGM_Id == 104	mov $BGM_Title,"Счастливая Мария!" : return
-if %BGM_Id == 105	mov $BGM_Title,"К бою!" : return
-if %BGM_Id == 106	mov $BGM_Title,"Путь" : return
-if %BGM_Id == 107	mov $BGM_Title,"Бесконечная Девятка" : return
-if %BGM_Id == 108	mov $BGM_Title,"Рассеивающий грёзы" : return
-if %BGM_Id == 109	mov $BGM_Title,"Различение" : return
-if %BGM_Id == 110	mov $BGM_Title,"Росчерк"  : return
-if %BGM_Id == 111 	mov $BGM_Title,"Будущее" : return
-if %BGM_Id == 112 	mov $BGM_Title,"Лазурный смех" : return
-if %BGM_Id == 113 	mov $BGM_Title,"Настоящий сыщик знает" : return
-if %BGM_Id == 114 	mov $BGM_Title,"Угрюмый вечер" : return
-if %BGM_Id == 115 	mov $BGM_Title,"Один" : return
-if %BGM_Id == 116 	mov $BGM_Title,"Спираль" : return
-if %BGM_Id == 117 	mov $BGM_Title,"#600 миллионов, струнное трио, фа-диез минор" : return
-if %BGM_Id == 118 	mov $BGM_Title,"Тотенблюме (Мёртвый цветок)" : return
-if %BGM_Id == 119 	mov $BGM_Title,"ПРАВОСУДИЕ" : return
-if %BGM_Id == 120 	mov $BGM_Title,"ACI-L" : return
-if %BGM_Id == 121 	mov $BGM_Title,"Хищник" : return
-if %BGM_Id == 122 	mov $BGM_Title,"Гордая песчинка" : return
-if %BGM_Id == 123 	mov $BGM_Title,"Навстречу мечте" : return
-if %BGM_Id == 124 	mov $BGM_Title,"Одинокая абиссальная рыба" : return
-if %BGM_Id == 125 	mov $BGM_Title,"Женская охота на ведьм" : return
-if %BGM_Id == 126 	mov $BGM_Title,"Лоскутная химера" : return
-if %BGM_Id == 127 	mov $BGM_Title,"Искажение" : return
-if %BGM_Id == 128 	mov $BGM_Title,"Воскресший реплеер" : return
-if %BGM_Id == 129 	mov $BGM_Title,"Окончательный ответ" : return
-if %BGM_Id == 130 	mov $BGM_Title,"Свет" : return
-if %BGM_Id == 131 	mov $BGM_Title,"Хлеб жизни" : return
-if %BGM_Id == 132 	mov $BGM_Title,"Обещание" : return
-if %BGM_Id == 133 	mov $BGM_Title,"Завтрашний день" : return
-if %BGM_Id == 134 	mov $BGM_Title,"КРЫЛЬЯ (Вер. Надежды)" : return
-if %BGM_Id == 135 	mov $BGM_Title,"Улыбка и фальшь" : return
-if %BGM_Id == 136 	mov $BGM_Title,"Вечные оковы" : return
-if %BGM_Id == 137 	mov $BGM_Title,"Испытание любви" : return
-if %BGM_Id == 138 	mov $BGM_Title,"Мгновение" : return
-if %BGM_Id == 139 	mov $BGM_Title,"Взгляд в прошлое" : return
-if %BGM_Id == 140 	mov $BGM_Title,"Синяя бабочка" : return
-if %BGM_Id == 141 	mov $BGM_Title,"Нежность" : return
-if %BGM_Id == 142 	mov $BGM_Title,"Сверху вниз, наискосок" : return
-if %BGM_Id == 143 	mov $BGM_Title,"rog-limitation" : return
-if %BGM_Id == 144 	mov $BGM_Title,"Вальс (соч. 34)" : return
-if %BGM_Id == 145 	mov $BGM_Title,"ЖИВЫЕ" : return
-if %BGM_Id == 146 	mov $BGM_Title,"Рождение новой ведьмы (инст.)" : return
-if %BGM_Id == 147 	mov $BGM_Title,"Застывший лазурит" : return
-if %BGM_Id == 148 	mov $BGM_Title,"Ангажирование марионетки" : return
-if %BGM_Id == 149 	mov $BGM_Title,"Жизнь" : return
-if %BGM_Id == 150 	mov $BGM_Title,"Лорелея" : return
-if %BGM_Id == 151 	mov $BGM_Title,"Грех" : return
-if %BGM_Id == 152 	mov $BGM_Title,"Первый и последний" : return
-if %BGM_Id == 153 	mov $BGM_Title,"Антидемоническая секвенция" : return
-if %BGM_Id == 154 	mov $BGM_Title,"Поле битвы" : return
-if %BGM_Id == 155 	mov $BGM_Title,"Перерождение" : return
-if %BGM_Id == 156 	mov $BGM_Title,"Выход есть" : return
-if %BGM_Id == 157 	mov $BGM_Title,"Освободившийся освободитель" : return
-if %BGM_Id == 158 	mov $BGM_Title,"Спасибо всем" : return
-if %BGM_Id == 159 	mov $BGM_Title,"Пчелиная принцесса" : return
-if %BGM_Id == 160 	mov $BGM_Title,"Рождение новой ведьмы (короткая)" : return
-if %BGM_Id == 161 	mov $BGM_Title,"АРОМАТ ПОДОЗРЕНИЯ" : return
-if %BGM_Id == 162 	mov $BGM_Title,"4 октября" : return
-if %BGM_Id == 163 	mov $BGM_Title,"Круговорот жизни и смерти" : return
-if %BGM_Id == 164 	mov $BGM_Title,"reflection-call" : return
-if %BGM_Id == 165 	mov $BGM_Title,"Дождь" : return
-if %BGM_Id == 166 	mov $BGM_Title,"7 весов" : return
-if %BGM_Id == 167 	mov $BGM_Title,"Осень" : return
-if %BGM_Id == 168 	mov $BGM_Title,"bore-ral" : return
-if %BGM_Id == 169 	mov $BGM_Title,"Продолжение сказки" : return
-if %BGM_Id == 170 	mov $BGM_Title,"Без названия (инстр. вер., 2007)" : return
-if %BGM_Id == 171 	mov $BGM_Title,"Путальница-ложь" : return
-if %BGM_Id == 172 	mov $BGM_Title,"Золотой ноктюрн (инст.)" : return
-if %BGM_Id == 173 	mov $BGM_Title,"Далеко‐далеко… (бемоль)" : return
-if %BGM_Id == 174 	mov $BGM_Title,"Ящик с игрушками" : return
-if %BGM_Id == 175 	mov $BGM_Title,"Прощальный выход" : return
-if %BGM_Id == 176 	mov $BGM_Title,"Кукольный театр" : return
-if %BGM_Id == 177 	mov $BGM_Title,"Он и она — конец" : return
-if %BGM_Id == 179 	mov $BGM_Title,"Без названия (инстр. вер.)" : return
-if %BGM_Id == 180 	mov $BGM_Title,"Конец вселенной" : return
-if %BGM_Id == 181 	mov $BGM_Title,"Богиня из сада" : return
-if %BGM_Id == 183 	mov $BGM_Title,"Насмешка" : return
-if %BGM_Id == 184 	mov $BGM_Title,"Обвал на склоне мира мёртвых" : return
-if %BGM_Id == 185 	mov $BGM_Title,"Палач" : return
-if %BGM_Id == 186 	mov $BGM_Title,"Без названия (вер. сакуры, ED)" : return
-if %BGM_Id == 187 	mov $BGM_Title,"Мягкая игрушка" : return
-if %BGM_Id == 188 	mov $BGM_Title,"Эксцентричный дивертисмент" : return
-if %BGM_Id == 190 	mov $BGM_Title,"en-counse" : return
-if %BGM_Id == 191 	mov $BGM_Title,"lixAxil" : return
-if %BGM_Id == 192 	mov $BGM_Title,"Откровение (инст.)" : return
-if %BGM_Id == 193 	mov $BGM_Title,"В полёте" : return
-if %BGM_Id == 194 	mov $BGM_Title,"Дирижёр окончательного конца" : return
-if %BGM_Id == 195 	mov $BGM_Title,"Откровение" : return
-if %BGM_Id == 240 	mov $BGM_Title,"Кокон чистых снов -Ricordando il passato-" : return
-if %BGM_Id == 241 	mov $BGM_Title,"Когда плачут чайки" : return
-if %BGM_Id == 1000	mov $BGM_Title,"SuiSui☆SWEETS(^-^)" : return
-if %BGM_Id == 1010	mov $BGM_Title,"Предъявите судьбу" : return
-if %BGM_Id == 1013  mov $BGM_Title,"Предъявите судьбу (вер. chiru)" : return
-;Extra
-if %BGM_Id == 94	mov $BGM_Title,"tsurupettan (Плоскодонка)" : return
-if %BGM_Id == 1011	mov $BGM_Title,"system0 (оригинальная версия)" : return
-if %legacy_op == off && %BGM_Id == 1012	mov $BGM_Title,"Senkyou no Igreja" : return
-if %legacy_op == on  && %BGM_Id == 1012	mov $BGM_Title,"Когда плачут чайки" : return
-if %BGM_Id == 1014	mov $BGM_Title,"Мечта Инанны" : return
-if %BGM_Id == 1017  mov $BGM_Title,"Оккультная ведьма" : return
-if %BGM_Id == 1018  mov $BGM_Title,"Туманный пифос" : return
+gosub *bgm_locale_title
 ~
 ;jp
 if %bgm_title_language != 3 jumpf
@@ -29069,7 +28868,7 @@ return
 
 *settings_bgm_title_language
 	if %bgm_title_language = 1 lsp 278,set_bgm_title_language_en,1260,313
-	if %bgm_title_language = 2 lsp 278,set_bgm_title_language_ru,1260,313
+	if %bgm_title_language = 2 lsp 278,set_bgm_title_language_tl,1260,313
 	if %bgm_title_language = 3 lsp 278,set_bgm_title_language_jp,1260,313
 	if %bgm_title_language = 4 lsp 278,set_bgm_title_language_rom,1260,313
 	lsp 282,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,325
@@ -32265,8 +32064,8 @@ return
 	border_padding 0
 
 	change_font 1,1
-	setwindow4 160,750,50,1581,1,55,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
-	setwindow4name 0,0,50,1581,1,55,0,0,0,0,1
+	setwindow4 160,750,text_main_size,1581,1,text_main_spacing,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
+	setwindow4name 0,0,text_name_size,1581,1,text_name_spacing,0,0,0,0,1
 	borderstyle 5,#000000 : shadedistance 0,0
 	borderstyle 5,#000000,1 : shadedistance 0,0,#000000,1
 	if %msgwnd_type == 3 shadedistance 2,2 : shadedistance 2,2,#000000,1
@@ -32279,22 +32078,12 @@ return
 	if %msgwnd_type = 2 setwindowd msgwnd3
 	if %msgwnd_type = 3 setwindowd msgwnd4
 
-	setwindowd_dimensions 145,735,1615,295
-	setwindowd_padding -10,80,-40,65
-	setwindowd_name_padding 30,77,-60,65
+	setwindowd_dimensions 167,725,1586,306
+	setwindowd_padding -20,87,-41,87
+	setwindowd_name_padding 25,100,-60,87
 	setwindowd_main_region 240,14,1408,274,77
 	setwindowd_non_region 0,235,112,38,60
 	setwindowd_name_region 0,11,224,118,60,170,170,74
-return
-
-*set_window_monospace
-	textoff
-	setwindowd_off
-
-	change_font 0
-	setwindow4 0,0,40,1920,1,50,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120 ;second window
-	borderstyle 5,#000000 : shadedistance 0,0
-	no_smart_quotes
 return
 
 *set_window_simple
@@ -32302,7 +32091,8 @@ return
 
 	;if we passed no params we will use the default ones (0,0 is just senseless)
 	if %setwindow_x = 0 mov %setwindow_x,80
-	if %setwindow_y = 0 mov %setwindow_y,300
+	if %setwindow_y = 0 mov %setwindow_y,320
+	gosub *set_window_simple_update
 	mov %log_sw_x,%setwindow_x
 	mov %log_sw_y,%setwindow_y
 	jskip_s
@@ -32310,7 +32100,7 @@ return
 		setwindowd_off
 
 		mov %setwindow_x,%setwindow_x*2
-		setwindow4 %setwindow_x/2,%setwindow_y,50,1920-%setwindow_x,1,55,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
+		setwindow4 %setwindow_x/2,%setwindow_y,text_main_size,1920-%setwindow_x,1,text_main_spacing,%textspeed,0,0,0,0,1,":c;graphics\colour\black.png",0,0,120
 		borderstyle 5,#000000 : shadedistance 0,0
 		if %msgwnd_type = 3 shadedistance 2,2
 		gosub *set_window_options ; locale specfic
@@ -33520,9 +33310,10 @@ goto *switch_game_q
 
 	if releasedate + 15552000 > %Free1 return
 
-	border_pad_push 10
-	lsph t_warning_lsp,":s;#FF0000`{p:1:{o:10:"+verification_ancient+"}}",70,920
-	border_pad_pop
+	; border_pad_push 10
+	; lsph t_warning_lsp,":s;#FF0000`{p:1:{o:10:"+verification_ancient+"}}",70,920
+	; border_pad_pop
+	debug_string "This release may be outdated, assuming final version"
 return
 
 *full_verify
@@ -37690,6 +37481,35 @@ return
 		cell grim4_lsp,1
 		mov $r_grim_txt_path,grim_2_4_1
 	*grim_ep2_4
+	
+	notif %r_display_grim = 5 goto *grim_ep2_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_2_5_1
+	*grim_ep2_5
+
+	notif %r_display_grim = 6 goto *grim_ep2_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_2_6_1
+	*grim_ep2_6
+
+	notif %r_display_grim = 7 goto *grim_ep2_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_2_7_1
+	*grim_ep2_7
+
+	notif %r_display_grim = 8 goto *grim_ep2_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_2_8_1
+	*grim_ep2_8
+	notif %r_display_grim = 9 goto *grim_ep2_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_2_9_1
+	*grim_ep2_9
+
+	notif %r_display_grim = 10 goto *grim_ep2_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_2_10_1
+	*grim_ep2_10	
 	~
 	
 	if %scenario_Number != 3 jumpf ;ep3
@@ -37712,6 +37532,36 @@ return
 		cell grim4_lsp,1
 		mov $r_grim_txt_path,grim_3_4_1
 	*grim_ep3_4
+
+	notif %r_display_grim = 5 goto *grim_ep3_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_3_5_1
+	*grim_ep3_5
+	
+	notif %r_display_grim = 6 goto *grim_ep3_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_3_6_1
+	*grim_ep3_6
+	
+	notif %r_display_grim = 7 goto *grim_ep3_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_3_7_1
+	*grim_ep3_7
+	
+	notif %r_display_grim = 8 goto *grim_ep3_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_3_8_1
+	*grim_ep3_8
+	
+	notif %r_display_grim = 9 goto *grim_ep3_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_3_9_1
+	*grim_ep3_9
+	
+	notif %r_display_grim = 10 goto *grim_ep3_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_3_10_1
+	*grim_ep3_10
 	~
 	
 	if %scenario_Number != 4 jumpf ;ep4
@@ -37756,14 +37606,6 @@ return
 		cell grim10_lsp,1
 		mov $r_grim_txt_path,grim_4_10_1
 	*grim_ep4_10
-	notif %r_display_grim = 11 goto *grim_ep4_11
-		cell grim11_lsp,1
-		mov $r_grim_txt_path,grim_4_11_1
-	*grim_ep4_11
-	notif %r_display_grim = 12 goto *grim_ep4_12
-		cell grim12_lsp,1
-		mov $r_grim_txt_path,grim_4_12_1
-	*grim_ep4_12
 	~
 	
 	if %scenario_Number != 5 jumpf ;ep5
@@ -37787,6 +37629,26 @@ return
 		cell grim5_lsp,1
 		mov $r_grim_txt_path,grim_5_5_1
 	*grim_ep5_5
+	notif %r_display_grim = 6 goto *grim_ep5_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_5_6_1
+	*grim_ep5_6
+	notif %r_display_grim = 7 goto *grim_ep5_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_5_7_1
+	*grim_ep5_7
+	notif %r_display_grim = 8 goto *grim_ep5_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_5_8_1
+	*grim_ep5_8	
+	notif %r_display_grim = 9 goto *grim_ep5_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_5_9_1
+	*grim_ep5_9	
+	notif %r_display_grim = 10 goto *grim_ep5_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_5_10_1
+	*grim_ep5_10	
 	~
 	
 	if %scenario_Number != 6 jumpf ;ep6
@@ -37798,6 +37660,38 @@ return
 		cell grim2_lsp,1
 		mov $r_grim_txt_path,grim_6_2_1
 	*grim_ep6_2
+	notif %r_display_grim = 3 goto *grim_ep6_3
+		cell grim3_lsp,1
+		mov $r_grim_txt_path,grim_6_3_1
+	*grim_ep6_3	
+	notif %r_display_grim = 4 goto *grim_ep6_4
+		cell grim4_lsp,1
+		mov $r_grim_txt_path,grim_6_4_1
+	*grim_ep6_4	
+	notif %r_display_grim = 5 goto *grim_ep6_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_6_5_1
+	*grim_ep6_5	
+	notif %r_display_grim = 6 goto *grim_ep6_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_6_6_1
+	*grim_ep6_6	
+	notif %r_display_grim = 7 goto *grim_ep6_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_6_7_1
+	*grim_ep6_7
+	notif %r_display_grim = 8 goto *grim_ep6_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_6_8_1
+	*grim_ep6_8	
+	notif %r_display_grim = 9 goto *grim_ep6_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_6_9_1
+	*grim_ep6_9	
+	notif %r_display_grim = 10 goto *grim_ep6_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_6_10_1
+	*grim_ep6_10	
 	~
 	
 	if %scenario_Number != 7 jumpf ;ep7
@@ -37809,6 +37703,38 @@ return
 		cell grim2_lsp,1
 		mov $r_grim_txt_path,grim_7_2_1
 	*grim_ep7_2
+	notif %r_display_grim = 3 goto *grim_ep7_3
+		cell grim3_lsp,1
+		mov $r_grim_txt_path,grim_7_3_1
+	*grim_ep7_3	
+	notif %r_display_grim = 4 goto *grim_ep7_4
+		cell grim4_lsp,1
+		mov $r_grim_txt_path,grim_7_4_1
+	*grim_ep7_4	
+	notif %r_display_grim = 5 goto *grim_ep7_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_7_5_1
+	*grim_ep7_5	
+	notif %r_display_grim = 6 goto *grim_ep7_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_7_6_1
+	*grim_ep7_6	
+	notif %r_display_grim = 7 goto *grim_ep7_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_7_7_1
+	*grim_ep7_7	
+	notif %r_display_grim = 8 goto *grim_ep7_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_7_8_1
+	*grim_ep7_8	
+	notif %r_display_grim = 9 goto *grim_ep7_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_7_9_1
+	*grim_ep7_9	
+	notif %r_display_grim = 10 goto *grim_ep7_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_7_10_1
+	*grim_ep7_10	
 	~
 	
 	if %scenario_Number != 8 jumpf ;ep8
@@ -37820,6 +37746,38 @@ return
 		cell grim2_lsp,1
 		mov $r_grim_txt_path,grim_8_2_1
 	*grim_ep8_2
+	notif %r_display_grim = 3 goto *grim_ep8_3
+		cell grim3_lsp,1
+		mov $r_grim_txt_path,grim_8_3_1
+	*grim_ep8_3	
+	notif %r_display_grim = 4 goto *grim_ep8_4
+		cell grim4_lsp,1
+		mov $r_grim_txt_path,grim_8_4_1
+	*grim_ep8_4	
+	notif %r_display_grim = 5 goto *grim_ep8_5
+		cell grim5_lsp,1
+		mov $r_grim_txt_path,grim_8_5_1
+	*grim_ep8_5	
+	notif %r_display_grim = 6 goto *grim_ep8_6
+		cell grim6_lsp,1
+		mov $r_grim_txt_path,grim_8_6_1
+	*grim_ep8_6	
+	notif %r_display_grim = 7 goto *grim_ep8_7
+		cell grim7_lsp,1
+		mov $r_grim_txt_path,grim_8_7_1
+	*grim_ep8_7	
+	notif %r_display_grim = 8 goto *grim_ep8_8
+		cell grim8_lsp,1
+		mov $r_grim_txt_path,grim_8_8_1
+	*grim_ep8_8	
+	notif %r_display_grim = 9 goto *grim_ep8_9
+		cell grim9_lsp,1
+		mov $r_grim_txt_path,grim_8_9_1
+	*grim_ep8_9	
+	notif %r_display_grim = 10 goto *grim_ep8_10
+		cell grim10_lsp,1
+		mov $r_grim_txt_path,grim_8_10_1
+	*grim_ep8_10	
 	~
 	
 	vsp 99,0 : vsp 98,0 : mov %r_display_arrow,0 ;disable the arrows
@@ -37926,6 +37884,12 @@ return
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim2_2,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim2_3,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim2_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim2_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim2_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim2_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim2_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim2_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim2_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 3 jumpf ;ep3
@@ -37933,6 +37897,12 @@ return
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim3_2,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim3_3,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim3_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim3_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim3_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim3_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim3_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim3_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim3_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 4 jumpf ;ep4
@@ -37945,6 +37915,7 @@ return
 		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim4_7,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim4_8,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim4_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim4_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 5 jumpf ;ep5
@@ -37953,21 +37924,50 @@ return
 		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim5_3,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim5_4,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim5_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim5_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim5_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim5_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim5_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim5_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 6 jumpf ;ep6
 		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim6_1,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim6_2,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim6_3,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim6_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim6_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim6_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim6_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim6_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim6_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim6_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 7 jumpf ;ep7
 		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim7_1,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim7_2,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim7_3,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim7_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim7_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim7_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim7_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim7_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim7_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim7_10,%tmp,%tmp1 : add %tmp1,64
 	~
 	
 	if %scenario_Number != 8 jumpf ;ep8
 		if ?grim[1][grim_flg] = 1 lsp grim1_lsp,r_grim8_1,%tmp,%tmp1 : add %tmp1,64
 		if ?grim[2][grim_flg] = 1 lsp grim2_lsp,r_grim8_2,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[3][grim_flg] = 1 lsp grim3_lsp,r_grim8_3,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[4][grim_flg] = 1 lsp grim4_lsp,r_grim8_4,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[5][grim_flg] = 1 lsp grim5_lsp,r_grim8_5,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[6][grim_flg] = 1 lsp grim6_lsp,r_grim8_6,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[7][grim_flg] = 1 lsp grim7_lsp,r_grim8_7,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[8][grim_flg] = 1 lsp grim8_lsp,r_grim8_8,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[9][grim_flg] = 1 lsp grim9_lsp,r_grim8_9,%tmp,%tmp1 : add %tmp1,64
+		if ?grim[10][grim_flg] = 1 lsp grim10_lsp,r_grim8_10,%tmp,%tmp1 : add %tmp1,64
 	~
 return
 
@@ -39283,8 +39283,8 @@ return
 	lsp r_cha_back_lsp,":a;graphics\menu\murder\murder_story_answer_left_bg.png",200,150
 	getspsize r_cha_back_lsp,%Free1,%Free2
 	border_pad_push 5
-	lsp 201,ep8_9_criminal,%Free1/2+200,160		;犯人を選択してください
-	lsp 202,ep8_9_criminal_2,%Free1/2+200,883	;犯人特定
+	lsp 201,ep8_9_criminal,%Free1/2+200,criminal_header_y		;犯人を選択してください
+	lsp 202,ep8_9_criminal_2,%Free1/2+200,criminal_button_y	;犯人特定
 	border_pad_pop
 	getspsize 201,%Free1,%Free2 : spt xpos,201,-%Free1/2
 	getspsize 202,%Free1,%Free2 : spt xpos,202,-%Free1/2

@@ -12,6 +12,12 @@ if %CHIRU_MODE == 1 stralias msgwnd,":a;graphics\system\wnd\msgwnd_ep5_cn.png"
 stralias msgwnd2,":a;graphics\system\wnd\msgwnd2.png"
 stralias msgwnd3,":a;graphics\system\wnd\msgwnd3.png"
 stralias msgwnd4,":a;graphics\system\wnd\msgwnd4.png"
+numalias text_main_size,60
+numalias text_main_spacing,66
+numalias text_name_size,50
+numalias text_name_spacing,55
+numalias criminal_header_y,150
+numalias criminal_button_y,870
 
 ;--Textboxes-end--
 
@@ -182,7 +188,7 @@ stralias end_8a_small,":c;graphics\locale\end_8a_small.png"
 stralias end_8a_t1,":a;graphics\locale_cn\end_8a_t1.png"
 stralias end_8a_t2,":a;graphics\locale_cn\end_8a_t2.png"
 stralias end_8b,":c;graphics\locale_cn\end_8b.png"
-stralias end_8c,":a;graphics\locale\end_8c.png"
+stralias end_8c,":a;graphics\locale_cn\end_8c.png"
 
 stralias ep8ed_01,":c;graphics\locale_cn\ep8ed_01.png"
 stralias ep8ed_02,":c;graphics\locale_cn\ep8ed_02.png"
@@ -206,22 +212,22 @@ stralias last2,":c;graphics\locale_cn\last2.png"
 
 stralias m_door5,":c;graphics\locale\m_door5.png"
 
-stralias mondai_1,":c;graphics\locale\mondai\mondai_1.png"
-stralias mondai_10,":c;graphics\locale\mondai\mondai_10.png"
-stralias mondai_11,":c;graphics\locale\mondai\mondai_11.png"
-stralias mondai_12,":c;graphics\locale\mondai\mondai_12.png"
-stralias mondai_13,":c;graphics\locale\mondai\mondai_13.png"
-stralias mondai_14,":c;graphics\locale\mondai\mondai_14.png"
-stralias mondai_15,":c;graphics\locale\mondai\mondai_15.png"
-stralias mondai_16,":c;graphics\locale\mondai\mondai_16.png"
-stralias mondai_2,":c;graphics\locale\mondai\mondai_2.png"
-stralias mondai_3,":c;graphics\locale\mondai\mondai_3.png"
-stralias mondai_4,":c;graphics\locale\mondai\mondai_4.png"
-stralias mondai_5,":c;graphics\locale\mondai\mondai_5.png"
-stralias mondai_6,":c;graphics\locale\mondai\mondai_6.png"
-stralias mondai_7,":c;graphics\locale\mondai\mondai_7.png"
-stralias mondai_8,":c;graphics\locale\mondai\mondai_8.png"
-stralias mondai_9,":c;graphics\locale\mondai\mondai_9.png"
+stralias mondai_1,":c;graphics\locale_cn\mondai\mondai_1.png"
+stralias mondai_10,":c;graphics\locale_cn\mondai\mondai_10.png"
+stralias mondai_11,":c;graphics\locale_cn\mondai\mondai_11.png"
+stralias mondai_12,":c;graphics\locale_cn\mondai\mondai_12.png"
+stralias mondai_13,":c;graphics\locale_cn\mondai\mondai_13.png"
+stralias mondai_14,":c;graphics\locale_cn\mondai\mondai_14.png"
+stralias mondai_15,":c;graphics\locale_cn\mondai\mondai_15.png"
+stralias mondai_16,":c;graphics\locale_cn\mondai\mondai_16.png"
+stralias mondai_2,":c;graphics\locale_cn\mondai\mondai_2.png"
+stralias mondai_3,":c;graphics\locale_cn\mondai\mondai_3.png"
+stralias mondai_4,":c;graphics\locale_cn\mondai\mondai_4.png"
+stralias mondai_5,":c;graphics\locale_cn\mondai\mondai_5.png"
+stralias mondai_6,":c;graphics\locale_cn\mondai\mondai_6.png"
+stralias mondai_7,":c;graphics\locale_cn\mondai\mondai_7.png"
+stralias mondai_8,":c;graphics\locale_cn\mondai\mondai_8.png"
+stralias mondai_9,":c;graphics\locale_cn\mondai\mondai_9.png"
 
 stralias oct_5_1985,":c;graphics\locale_cn\oct_5_1985.png"
 stralias oct_6_1986,":c;graphics\locale_cn\oct_6_1986.png"
@@ -286,9 +292,9 @@ stralias verify_engine,"请检查你是否正在使用最新版本的游戏代�
 
 stralias verification_title,"游戏文件校验"
 stralias verification_verifying,"正在校验文件…{n}请注意，这可能要花费几分钟。{n}"
-stralias verification_legend,"图例: "
+stralias verification_legend,"文字颜色代表: "
 stralias verification_modified," 文件被修改"
-stralias verification_missing," 文件丢失"
+stralias verification_missing," 文件缺失"
 stralias verification_good,"一切正常！{n}"
 stralias verification_bad,"游戏文件校验失败！{n}"
 stralias verification_nohash,"游戏路径下的 game.hash 文件丢失！{n}"
@@ -296,6 +302,6 @@ stralias verification_unsupported,"游戏路径下的 game.hash 文件不受支�
 stralias verification_outdated,"游戏路径下的 game.hash 文件版本过旧！{n}"
 stralias verification_end,"点击右键继续！"
 
-stralias verification_ancient,"你的游戏已经6个月没有更新过了，请检查更新！"
+stralias verification_ancient,"你的游戏已经 6 个月没有更新过了，请检查更新！"
 
 ;--System-text-end--

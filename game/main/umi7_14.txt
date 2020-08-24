@@ -2345,6 +2345,7 @@ lss s0_8,"cur","a11_warai1" ;1
 aspt2 xpos,s0_8,-370
 flush 80
 msgwnd_bea
+*d55198
 d [lv 0*"55"*"75500729"]`「織姫と彦星のようにな…！」`[gstg 1][\]
 textoff
 waits 167

@@ -26,7 +26,7 @@ align_message_c 501,503,504
 if %omake3_skip < 5 jumpf
 	lsp 505,show_dream4,0,0
 	align_message_c 505
-	msp 505,0,105
+	msp 505,0,omake3_line_y
 ~
 border_pad_pop
 ;Question ask
