@@ -21,6 +21,7 @@ define('VERSION', 110);
 define('MAX_IN', 0x10000000);
 define('UPDATE_MANAGER', true);
 define('PASSWORD', '035646750436634546568555050');
+define('REPLACE_GRIM_WITH_LOCALIZE', array('cn'));
 
 $exclude = [
 	'.DS_Store',
@@ -62,7 +63,7 @@ function err($m) {
 }
 
 function getUsage() {
-	return 
+	return
 	
 	'Usage options:'.PHP_EOL.
 	'	php update-manager.php hash directory hashfile'.PHP_EOL.
@@ -72,7 +73,7 @@ function getUsage() {
 	'	php update-manager.php dscript script_file scripting_folder locale'.PHP_EOL.
 	'	php update-manager.php script script_file new_script last_episode'.PHP_EOL.
 	'	php update-manager.php update update_file source_folder new_folder [archive_prefix]'.PHP_EOL;
-	
+
 }
 
 function str_replace_first($search, $replace, $subject) {
@@ -107,13 +108,13 @@ function generateGuid() {
 	return extractGuid($bytes);
 }
 
-function inplaceLines($data_dir, $in_dir, $by_dir) {
+function inplaceLines($data_dir, $in_dir, $by_dir, $replace_grim = false) {
 	$buffer = '';
 	
 	if (!file_exists($data_dir) || !file_exists($in_dir) || !file_exists($by_dir)) {
 		die('Invalid directory(ies)'.PHP_EOL);
 	}
-
+	
 	//Get the scripts_in
 	$scripts_in = scandir($in_dir);
 	array_shift($scripts_in);
@@ -124,7 +125,7 @@ function inplaceLines($data_dir, $in_dir, $by_dir) {
 		}
 	}
 	sort($scripts_in);
-
+	
 	//Get the scripts_by
 	$scripts_by = scandir($by_dir);
 	array_shift($scripts_by);
@@ -135,7 +136,7 @@ function inplaceLines($data_dir, $in_dir, $by_dir) {
 		}
 	}
 	sort($scripts_by);
-	
+
 	//Get the data_in
 	$data_in = scandir($data_dir);
 	array_shift($data_in);
@@ -161,6 +162,9 @@ function inplaceLines($data_dir, $in_dir, $by_dir) {
 		$data_in = trim(file_get_contents($in_dir.$in));
 		$data_by = trim(file_get_contents($by_dir.$by));
 		$text = trim(file_get_contents($data_dir.$in));
+		if ($replace_grim) {
+			$text = removeGrim($text);
+		}
 		if ($data_in != '' && $data_by != '' && $text != '') {
 			$data_in = explode(LF,$data_in);
 			$data_by = explode(LF,$data_by);
@@ -176,12 +180,20 @@ function inplaceLines($data_dir, $in_dir, $by_dir) {
 				}
 
 				// Fix first and last `s, also spaces, and double replacement.
+				$data_in[$i] = trim($data_in[$i]);
 				$data_by[$i] = trim($data_by[$i]);
+				if ($replace_grim) {
+					preg_match('/\[gstg \d+\]/', $data_by[$i], $line_grim);
+					$data_by[$i] = preg_replace('/\[gstg \d+\]/', '', $data_by[$i]);
+				}
 				$data_by[$i] = '`' . $tmp_guid . substr($data_by[$i], $data_by[$i][0] == '`');
+				
 				if (substr($data_by[$i], -1) != '`')
 					$data_by[$i] .= '`';
-				
-				$text = str_replace_first($data_in[$i],$data_by[$i],$text);
+				if ($replace_grim && $line_grim) {
+					$data_by[$i] .= $line_grim[0];
+				}
+				$text = str_replace_first($data_in[$i], $data_by[$i], $text);
 			}
 		}
 
@@ -384,7 +396,7 @@ function transformScript($data) {
 		$res .= xorData(substr($data, 0, 131072), 1);
 		$data = substr($data, 131072);
 	} while($data != '');
-	
+
 	$data = zlib_encode($res, 15);
 	
 	$res = '';
@@ -405,6 +417,13 @@ function encodeScript($data) {
 
 	return $hdr.$data;
 }
+
+function removeGrim($str) {
+	return preg_replace('/\{c\:86EF9C\:(.*?)\}/', '$1',
+		preg_replace('/\[gstg \d+\]/', '', $str)
+	);
+}
+
 
 function main($argc, $argv) {
 	if ($argc < 2) err(getUsage());
@@ -465,7 +484,7 @@ function main($argc, $argv) {
 				$tldir = $scripting.'/story/ep'.$i.'/'.$locale.'/';
 				if (!is_dir($tldir))
 					$tldir = $scripting.'/story/ep'.$i.'/en/';
-				$script .= inplaceLines($scripting.'/game/main/', $scripting.'/story/ep'.$i.'/jp/', $tldir);
+				$script .= inplaceLines($scripting.'/game/main/', $scripting.'/story/ep'.$i.'/jp/', $tldir, in_array($locale, REPLACE_GRIM_WITH_LOCALIZE));
 			}
 			$script .= inplaceLines($scripting.'/game/omake/', $scripting.'/story/omake/jp/',
 				$scripting.'/story/omake/'.$locale.'/');
@@ -505,7 +524,7 @@ function main($argc, $argv) {
 				system('7z a '.$archive.' -t7z -m0=lzma2 -mx=9 -mfb=64 -md=128m -ms=on -mhe -v1023m -p'.PASSWORD.' '.$folder);
 				system('rm -rf '.$argv[4]);
 			}
-					
+			
 			break;
 		default:
 			 err(getUsage());
