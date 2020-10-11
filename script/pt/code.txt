@@ -107,12 +107,12 @@ if %BGM_Id == 37	mov $BGM_Title,"sistema0" : return
 if %BGM_Id == 38	mov $BGM_Title,"Áfono" : return
 if %BGM_Id == 39	mov $BGM_Title,"ângulo morto" : return
 if %BGM_Id == 40	mov $BGM_Title,"Composição em Órgão #600 Milhões em Dó menor" : return
-if %BGM_Id == 41	mov $BGM_Title,"Prisão FAIXA" : return
+if %BGM_Id == 41	mov $BGM_Title,"PrisãoSTRIP" : return
 if %BGM_Id == 42	mov $BGM_Title,"Quarteto de Cordas #1 em Sol maior — I.Allegro" : return
 if %BGM_Id == 43	mov $BGM_Title,"gaiola" : return
 if %BGM_Id == 44	mov $BGM_Title,"Escárnio Dourado" : return
 if %BGM_Id == 45	mov $BGM_Title,"Entranhas de Escorpião" : return
-if %BGM_Id == 46	mov $BGM_Title,"Cortina Final VerC" : return
+if %BGM_Id == 46	mov $BGM_Title,"O Último Ato VerC" : return
 if %BGM_Id == 47	mov $BGM_Title,"Resposta" : return
 if %BGM_Id == 48	mov $BGM_Title,"Resposta(curta)" : return
 if %BGM_Id == 49	mov $BGM_Title,"Melodia(versão instrumental)" : return
@@ -145,7 +145,7 @@ if %BGM_Id == 75	mov $BGM_Title,"Derretendo-se" : return
 if %BGM_Id == 76	mov $BGM_Title,"alma da alma" : return
 if %BGM_Id == 77	mov $BGM_Title,"miragem coordenada" : return
 if %BGM_Id == 78	mov $BGM_Title,"prisão" : return
-if %BGM_Id == 79	mov $BGM_Title,"Obrigado por nascer" : return
+if %BGM_Id == 79	mov $BGM_Title,"Obrigada por nascer" : return
 if %BGM_Id == 80	mov $BGM_Title,"Asas" : return
 if %BGM_Id == 81	mov $BGM_Title,"Paraíso Perdido" : return
 if %BGM_Id == 82	mov $BGM_Title,"sem asas" : return
