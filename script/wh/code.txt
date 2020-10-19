@@ -1,0 +1,273 @@
+*set_window_options
+	smart_quotes "‘","’","“","”","’"
+return
+
+*sub_get_translation
+	if %track_id == 58 mov $track_id,"video\sub\58_eng.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_eng.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_eng.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_eng.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_eng.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_eng.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_eng.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_eng.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_eng.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_eng.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_eng.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_eng.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_eng.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\eng.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\eng.ass" : return
+return
+
+*sub_get_romaji
+	if %track_id == 58 mov $track_id,"video\sub\58_rom.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_rom.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_rom.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_rom.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_rom.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_rom.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_rom.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_rom.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_rom.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_rom.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_rom.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_rom.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_rom.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\rom.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\rom.ass" : return
+return
+
+*sub_get_both
+	if %track_id == 58 mov $track_id,"video\sub\58_both_eng.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_both_eng.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_both_eng.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_both_eng.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_both_eng.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_both_eng.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_both_eng.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_both_eng.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_both_eng.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_both_eng.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_both_eng.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_both_eng.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_both_eng.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\both_eng.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\both_eng.ass" : return
+return
+
+*redefine_text_presets
+return
+
+*backup_disable_lang
+return
+
+*set_window_simple_update
+return
+
+*bgm_locale_title
+if %BGM_Id == 1	mov $BGM_Title,"Thunberg Lily" : return
+if %BGM_Id == 2	mov $BGM_Title,"Door of Summer" : return
+if %BGM_Id == 3	mov $BGM_Title,"HANE (Feathers)" : return
+if %BGM_Id == 4	mov $BGM_Title,"Ride on" : return
+if %BGM_Id == 5	mov $BGM_Title,"sea" : return
+if %BGM_Id == 6	mov $BGM_Title,"Hour of Darkness" : return
+if %BGM_Id == 7	mov $BGM_Title,"Novelette" : return
+if %BGM_Id == 8	mov $BGM_Title,"hope" : return
+if %BGM_Id == 9	mov $BGM_Title,"White Shadow" : return
+if %BGM_Id == 10	mov $BGM_Title,"steady pace" : return
+if %BGM_Id == 11	mov $BGM_Title,"Towering cloud in summer" : return
+if %BGM_Id == 12 	mov $BGM_Title,"Moonlit Night" : return
+if %BGM_Id == 13	mov $BGM_Title,"Rose" : return
+if %BGM_Id == 14	mov $BGM_Title,"At Death’s Door" : return
+if %BGM_Id == 15	mov $BGM_Title,"Hell’s Halls" : return
+if %BGM_Id == 16	mov $BGM_Title,"Fortitude" : return
+if %BGM_Id == 17	mov $BGM_Title,"witch in gold(cembalo)" : return
+if %BGM_Id == 18	mov $BGM_Title,"Beckoning" : return
+if %BGM_Id == 19	mov $BGM_Title,"Fishy Aroma" : return
+if %BGM_Id == 20	mov $BGM_Title,"stupefaction" : return
+if %BGM_Id == 21	mov $BGM_Title,"praise" : return
+if %BGM_Id == 22	mov $BGM_Title,"Pass" : return
+if %BGM_Id == 23	mov $BGM_Title,"butterfly" : return
+if %BGM_Id == 24	mov $BGM_Title,"goldenslaughterer" : return
+if %BGM_Id == 25	mov $BGM_Title,"Worldend(bp)" : return
+if %BGM_Id == 26	mov $BGM_Title,"The Witch of the Painting" : return
+if %BGM_Id == 27	mov $BGM_Title,"suspicion" : return
+if %BGM_Id == 28	mov $BGM_Title,"Scar in the Score" : return
+if %BGM_Id == 29	mov $BGM_Title,"Core" : return
+if %BGM_Id == 30	mov $BGM_Title,"Minute darkness" : return
+if %BGM_Id == 31	mov $BGM_Title,"nighteyes" : return
+if %BGM_Id == 32	mov $BGM_Title,"Closed My Heart" : return
+if %BGM_Id == 33	mov $BGM_Title,"Requiem" : return
+if %BGM_Id == 34	mov $BGM_Title,"mind" : return
+if %BGM_Id == 35	mov $BGM_Title,"Worldend" : return
+if %BGM_Id == 36	mov $BGM_Title,"play" : return
+if %BGM_Id == 37	mov $BGM_Title,"system0" : return
+if %BGM_Id == 38	mov $BGM_Title,"Voiceless" : return
+if %BGM_Id == 39	mov $BGM_Title,"dead angle" : return
+if %BGM_Id == 40	mov $BGM_Title,"Organ Short #600 Million in C Minor" : return
+if %BGM_Id == 41	mov $BGM_Title,"Prison STRIP" : return
+if %BGM_Id == 42	mov $BGM_Title,"String Quartet #1 in G Major — I.Allegro" : return
+if %BGM_Id == 43	mov $BGM_Title,"cage" : return
+if %BGM_Id == 44	mov $BGM_Title,"Golden Sneer" : return
+if %BGM_Id == 45	mov $BGM_Title,"Scorpion Guts" : return
+if %BGM_Id == 46	mov $BGM_Title,"Life's End (VerC)" : return
+if %BGM_Id == 47	mov $BGM_Title,"Answer" : return
+if %BGM_Id == 48	mov $BGM_Title,"Answer short" : return
+if %BGM_Id == 49	mov $BGM_Title,"Melody inst.ver" : return
+if %BGM_Id == 50	mov $BGM_Title,"Red Dread" : return
+if %BGM_Id == 51	mov $BGM_Title,"moon" : return
+if %BGM_Id == 52	mov $BGM_Title,"where" : return
+if %BGM_Id == 53	mov $BGM_Title,"Dread of the grave" : return
+if %BGM_Id == 54	mov $BGM_Title,"Worldend dominator" : return
+if %BGM_Id == 55	mov $BGM_Title,"Black Liliana" : return
+if %BGM_Id == 56	mov $BGM_Title,"Rest" : return
+if %BGM_Id == 57	mov $BGM_Title,"End of a Daydream" : return
+if %BGM_Id == 58	mov $BGM_Title,"Melody" : return
+if %BGM_Id == 59	mov $BGM_Title,"Over the sky" : return
+if %BGM_Id == 60	mov $BGM_Title,"sunny spot" : return
+if %BGM_Id == 61	mov $BGM_Title,"The Candles Dance" : return
+if %BGM_Id == 62	mov $BGM_Title,"Distant" : return
+if %BGM_Id == 63	mov $BGM_Title,"psy-chorus" : return
+if %BGM_Id == 64	mov $BGM_Title,"far" : return
+if %BGM_Id == 65	mov $BGM_Title,"red shoes FAKE" : return
+if %BGM_Id == 66	mov $BGM_Title,"mother" : return
+if %BGM_Id == 67	mov $BGM_Title,"haze" : return
+if %BGM_Id == 68	mov $BGM_Title,"Dancing Pipe" : return
+if %BGM_Id == 69	mov $BGM_Title,"Dread of the grave -More fear-" : return
+if %BGM_Id == 70	mov $BGM_Title,"Organ Short #200 Million in C Minor" : return
+if %BGM_Id == 71	mov $BGM_Title,"rhythm-changer" : return
+if %BGM_Id == 72	mov $BGM_Title,"happiness of marionette bonus" : return
+if %BGM_Id == 73	mov $BGM_Title,"happiness of marionette" : return
+if %BGM_Id == 74	mov $BGM_Title,"Dance of the Moon Rabbits" : return
+if %BGM_Id == 75	mov $BGM_Title,"Melting away" : return
+if %BGM_Id == 76	mov $BGM_Title,"soul of soul" : return
+if %BGM_Id == 77	mov $BGM_Title,"miragecoordinator" : return
+if %BGM_Id == 78	mov $BGM_Title,"prison" : return
+if %BGM_Id == 79	mov $BGM_Title,"Thanks for being born" : return
+if %BGM_Id == 80	mov $BGM_Title,"Wings" : return
+if %BGM_Id == 81	mov $BGM_Title,"Paradise Lost" : return
+if %BGM_Id == 82	mov $BGM_Title,"wingless" : return
+if %BGM_Id == 83	mov $BGM_Title,"activepain" : return
+if %BGM_Id == 84	mov $BGM_Title,"Dread of the grave -rhythm ver-" : return
+if %BGM_Id == 85	mov $BGM_Title,"Eternity" : return
+if %BGM_Id == 86	mov $BGM_Title,"over" : return
+if %BGM_Id == 87	mov $BGM_Title,"Like the gale" : return
+if %BGM_Id == 88	mov $BGM_Title,"F Style" : return
+if %BGM_Id == 89	mov $BGM_Title,"Monochrome Clock" : return
+if %BGM_Id == 90	mov $BGM_Title,"apathy" : return
+if %BGM_Id == 91	mov $BGM_Title,"Mystic Forest" : return
+if %BGM_Id == 92	mov $BGM_Title,"Sakutarou's Adventure" : return
+if %BGM_Id == 93	mov $BGM_Title,"Parallel" : return
+if %BGM_Id == 95	mov $BGM_Title,"599 million ruins" : return
+if %BGM_Id == 96	mov $BGM_Title,"Happy Maria!(Instrumental)" : return
+if %BGM_Id == 97	mov $BGM_Title,"Surrounding" : return
+if %BGM_Id == 98	mov $BGM_Title,"open fire" : return
+if %BGM_Id == 99	mov $BGM_Title,"death(from stupefaction)" : return
+if %BGM_Id == 100	mov $BGM_Title,"mortal stampede" : return
+if %BGM_Id == 101	mov $BGM_Title,"Victima propiciatoria" : return
+if %BGM_Id == 102	mov $BGM_Title,"Revolt" : return
+if %BGM_Id == 103	mov $BGM_Title,"Purgatory Catastrophe Rhapsodie" : return
+if %BGM_Id == 104	mov $BGM_Title,"Happy Maria!" : return
+if %BGM_Id == 105	mov $BGM_Title,"dive to emergency" : return
+if %BGM_Id == 106	mov $BGM_Title,"dir" : return
+if %BGM_Id == 107	mov $BGM_Title,"Endless Nine" : return
+if %BGM_Id == 108	mov $BGM_Title,"dreamenddischarger" : return
+if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
+if %BGM_Id == 110	mov $BGM_Title,"twirl"  : return
+if %BGM_Id == 111 	mov $BGM_Title,"Future" : return
+if %BGM_Id == 112 	mov $BGM_Title,"Deep Blue Jeer" : return
+if %BGM_Id == 113 	mov $BGM_Title,"The Great Detective Knows" : return
+if %BGM_Id == 114 	mov $BGM_Title,"Smileless Soirée" : return
+if %BGM_Id == 115 	mov $BGM_Title,"one" : return
+if %BGM_Id == 116 	mov $BGM_Title,"Spiral" : return
+if %BGM_Id == 117 	mov $BGM_Title,"String Trio #600 Million in F-Sharp Minor" : return
+if %BGM_Id == 118 	mov $BGM_Title,"Totenblume" : return
+if %BGM_Id == 119 	mov $BGM_Title,"JUSTICE" : return
+if %BGM_Id == 120 	mov $BGM_Title,"ACI-L" : return
+if %BGM_Id == 121 	mov $BGM_Title,"Predator" : return
+if %BGM_Id == 122 	mov $BGM_Title,"Proud-dust" : return
+if %BGM_Id == 123 	mov $BGM_Title,"hello your dream" : return
+if %BGM_Id == 124 	mov $BGM_Title,"A Lonely Deep-Sea Fish" : return
+if %BGM_Id == 125 	mov $BGM_Title,"The Girls’ Witch Hunt" : return
+if %BGM_Id == 126 	mov $BGM_Title,"Patchwork Chimera" : return
+if %BGM_Id == 127 	mov $BGM_Title,"discolor" : return
+if %BGM_Id == 128 	mov $BGM_Title,"resurrectedreplayer" : return
+if %BGM_Id == 129 	mov $BGM_Title,"Final Answer" : return
+if %BGM_Id == 130 	mov $BGM_Title,"light" : return
+if %BGM_Id == 131 	mov $BGM_Title,"Bread of Life" : return
+if %BGM_Id == 132 	mov $BGM_Title,"Promise" : return
+if %BGM_Id == 133 	mov $BGM_Title,"Tomorrow" : return
+if %BGM_Id == 134 	mov $BGM_Title,"WINGS(Ver hope)" : return
+if %BGM_Id == 135 	mov $BGM_Title,"Fake Gray Smile" : return
+if %BGM_Id == 136 	mov $BGM_Title,"Eternal Chains" : return
+if %BGM_Id == 137 	mov $BGM_Title,"Love Examination" : return
+if %BGM_Id == 138 	mov $BGM_Title,"Instant" : return
+if %BGM_Id == 139 	mov $BGM_Title,"Look Back" : return
+if %BGM_Id == 140 	mov $BGM_Title,"Blue Butterfly" : return
+if %BGM_Id == 141 	mov $BGM_Title,"my dear" : return
+if %BGM_Id == 142 	mov $BGM_Title,"Something’s Up & Going Down" : return
+if %BGM_Id == 143 	mov $BGM_Title,"rog-limitation" : return
+if %BGM_Id == 144 	mov $BGM_Title,"Waltz Op.34" : return
+if %BGM_Id == 145 	mov $BGM_Title,"ALIVE" : return
+if %BGM_Id == 146 	mov $BGM_Title,"birth of new witch(inst)" : return
+if %BGM_Id == 147 	mov $BGM_Title,"ruriair" : return
+if %BGM_Id == 148 	mov $BGM_Title,"Engage of marionette" : return
+if %BGM_Id == 149 	mov $BGM_Title,"Life" : return
+if %BGM_Id == 150 	mov $BGM_Title,"Loreley" : return
+if %BGM_Id == 151 	mov $BGM_Title,"The Sin" : return
+if %BGM_Id == 152 	mov $BGM_Title,"The first and The last" : return
+if %BGM_Id == 153 	mov $BGM_Title,"Anti-Demon Sequentia" : return
+if %BGM_Id == 154 	mov $BGM_Title,"battle field" : return
+if %BGM_Id == 155 	mov $BGM_Title,"Rebirth" : return
+if %BGM_Id == 156 	mov $BGM_Title,"The Way" : return
+if %BGM_Id == 157 	mov $BGM_Title,"liberatedliberator" : return
+if %BGM_Id == 158 	mov $BGM_Title,"Thanks for all people" : return
+if %BGM_Id == 159 	mov $BGM_Title,"Infant Queen Bee" : return
+if %BGM_Id == 160 	mov $BGM_Title,"birth of new witch(Short Ver)" : return
+if %BGM_Id == 161 	mov $BGM_Title,"FISHYAROMA" : return
+if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre" : return
+if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulation" : return
+if %BGM_Id == 164 	mov $BGM_Title,"reflection-call" : return
+if %BGM_Id == 165 	mov $BGM_Title,"rain" : return
+if %BGM_Id == 166 	mov $BGM_Title,"7-weights" : return
+if %BGM_Id == 167 	mov $BGM_Title,"fall" : return
+if %BGM_Id == 168 	mov $BGM_Title,"bore-ral" : return
+if %BGM_Id == 169 	mov $BGM_Title,"ballade-continuer" : return
+if %BGM_Id == 170 	mov $BGM_Title,"Song without a name ver.2007 inst" : return
+if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia" : return
+if %BGM_Id == 172 	mov $BGM_Title,"Golden Nocturne(inst)" : return
+if %BGM_Id == 173 	mov $BGM_Title,"far(flat)" : return
+if %BGM_Id == 174 	mov $BGM_Title,"Toybox" : return
+if %BGM_Id == 175 	mov $BGM_Title,"terminal entrance" : return
+if %BGM_Id == 176 	mov $BGM_Title,"Puppet Show" : return
+if %BGM_Id == 177 	mov $BGM_Title,"s/he-end" : return
+if %BGM_Id == 179 	mov $BGM_Title,"Song without a name full-inst" : return
+if %BGM_Id == 180 	mov $BGM_Title,"The End Of The World" : return
+if %BGM_Id == 181 	mov $BGM_Title,"goddess-gardena" : return
+if %BGM_Id == 183 	mov $BGM_Title,"ridicule" : return
+if %BGM_Id == 184 	mov $BGM_Title,"Yomotsu Hirasaka Corruption" : return
+if %BGM_Id == 185 	mov $BGM_Title,"the executioner" : return
+if %BGM_Id == 186 	mov $BGM_Title,"Song without a name ver.sakura ED-size" : return
+if %BGM_Id == 187 	mov $BGM_Title,"Stuffed Animal" : return
+if %BGM_Id == 188 	mov $BGM_Title,"Bizarre Divertimento" : return
+if %BGM_Id == 190 	mov $BGM_Title,"en-counse" : return
+if %BGM_Id == 191 	mov $BGM_Title,"lixAxil" : return
+if %BGM_Id == 192 	mov $BGM_Title,"Revelations(inst)" : return
+if %BGM_Id == 193 	mov $BGM_Title,"Flying" : return
+if %BGM_Id == 194 	mov $BGM_Title,"lastendconductor" : return
+if %BGM_Id == 195 	mov $BGM_Title,"Revelations" : return
+if %BGM_Id == 240 	mov $BGM_Title,"Cocoon of White Dreams -Ricordando il passato-" : return
+if %BGM_Id == 241 	mov $BGM_Title,"When the Seagulls Cry" : return
+if %BGM_Id == 1000	mov $BGM_Title,"SuiSui☆SWEETS(^-^)" : return
+if %BGM_Id == 1010	mov $BGM_Title,"Bring The Fate" : return
+if %BGM_Id == 1013  mov $BGM_Title,"Bring The Fate(Ver chiru)" : return
+;Extra
+if %BGM_Id == 94	mov $BGM_Title,"Tsurupettan" : return
+if %BGM_Id == 1011	mov $BGM_Title,"system0(Original Version)" : return
+if %legacy_op == off && %BGM_Id == 1012	mov $BGM_Title,"Igreja of Echoing Vows" : return
+if %legacy_op == on  && %BGM_Id == 1012	mov $BGM_Title,"When the Seagulls Cry" : return
+if %BGM_Id == 1014	mov $BGM_Title,"Inanna’s Dream" : return
+if %BGM_Id == 1017  mov $BGM_Title,"The Witch of Occultics" : return
+if %BGM_Id == 1018  mov $BGM_Title,"The Pithos in the Fog" : return
+return
