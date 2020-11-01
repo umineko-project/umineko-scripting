@@ -81,7 +81,7 @@ if %BGM_Id == 11	mov $BGM_Title,"Cumulonimbus de Verão" : return
 if %BGM_Id == 12 	mov $BGM_Title,"Noite de Lua Cheia" : return
 if %BGM_Id == 13	mov $BGM_Title,"Rosa" : return
 if %BGM_Id == 14	mov $BGM_Title,"A Morte ao Seu Lado" : return
-if %BGM_Id == 15	mov $BGM_Title,"Corredor Infernal" : return
+if %BGM_Id == 15	mov $BGM_Title,"Claustro de Areia do Purgatório" : return
 if %BGM_Id == 16	mov $BGM_Title,"Fortitude" : return
 if %BGM_Id == 17	mov $BGM_Title,"bruxa em ouro(cembalo)" : return
 if %BGM_Id == 18	mov $BGM_Title,"Aceno" : return
@@ -218,7 +218,7 @@ if %BGM_Id == 149 	mov $BGM_Title,"Vida" : return
 if %BGM_Id == 150 	mov $BGM_Title,"Lorelei" : return
 if %BGM_Id == 151 	mov $BGM_Title,"Pecado" : return
 if %BGM_Id == 152 	mov $BGM_Title,"O primeiro e O Último" : return
-if %BGM_Id == 153 	mov $BGM_Title,"Sequentia Anti-Demônio" : return
+if %BGM_Id == 153 	mov $BGM_Title,"Sequentia Antidemônio" : return
 if %BGM_Id == 154 	mov $BGM_Title,"campo de batalha" : return
 if %BGM_Id == 155 	mov $BGM_Title,"Renascimento" : return
 if %BGM_Id == 156 	mov $BGM_Title,"O Caminho" : return
@@ -247,7 +247,7 @@ if %BGM_Id == 179 	mov $BGM_Title,"Canção sem nome(full-instrumental)" : retur
 if %BGM_Id == 180 	mov $BGM_Title,"O Fim do Mundo" : return
 if %BGM_Id == 181 	mov $BGM_Title,"deusa-gardena" : return
 if %BGM_Id == 183 	mov $BGM_Title,"ridículo" : return
-if %BGM_Id == 184 	mov $BGM_Title,"Corrupção Yomotsu Hirasaka" : return
+if %BGM_Id == 184 	mov $BGM_Title,"Corrupção de Yomotsu Hirasaka" : return
 if %BGM_Id == 185 	mov $BGM_Title,"o executor" : return
 if %BGM_Id == 186 	mov $BGM_Title,"Canção sem nome (ver.sakura ED-size)" : return
 if %BGM_Id == 187 	mov $BGM_Title,"Animal de Pelúcia" : return
