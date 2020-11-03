@@ -37864,6 +37864,11 @@ return
 return
 
 *r_grim_button_new
+	if localisation != "cn" jumpf
+		for %tmp = 1 to 14
+			mov ?grim[%tmp][grim_flg],1
+		next
+	~
 	_csp tips1_lsp,tips7_lsp
 	_csp r_tips_txt_lsp
 	_csp r_grim_txt_lsp
