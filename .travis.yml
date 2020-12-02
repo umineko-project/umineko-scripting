@@ -49,6 +49,9 @@ matrix:
       - zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg || exit 1
       - zip -qry umineko-wh-scripts_r${BUILD}.zip wh.file || exit 1
       - cd ..
+      - cd extra
+      - zip -qry ../ciout/extra_$(date +"%d.%m.%y").zip * || exit 1
+      - cd ..
 
 deploy:
   skip_cleanup: true
