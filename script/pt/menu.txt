@@ -1500,7 +1500,7 @@ stralias chars_bernquiz_nan_1,":s;#FFFFFF`{p:3:• Primeiro crepúsculo{n}“É 
 stralias chars_bernquiz_sha_1,":s;#FFFFFF`{p:3:• Primeiro crepúsculo{n}“Mas não adiantou... {p:42:As mortes de cada um dos parentes foi confirmada pelos próprios filhos}...”{n}{n}• Segundo crepúsculo{n}“Depois de obter a permissão de todos, {p:42:eu destranquei a porta}...”{n}“{p:42:Todos nós, serviçais, estivemos juntos o tempo inteiro}.”}"
 stralias chars_bernquiz_kan_1,":s;#FFFFFF`{p:3:• Primeiro crepúsculo{n}“{p:42:O Doutor Nanjo e eu confirmamos que o Genji‐sama estava morto}.”{n}{n}• Segundo crepúsculo{n}“{p:42:O Krauss‐sama e a Natsuhi‐sama estavam esparramados no chão do quarto}.”{n}“{p:42:Todos nós, serviçais, pode provar que tínhamos álibis}.”}"
 stralias chars_bernquiz_goh_1,":s;#FFFFFF`{p:3:• Primeiro crepúsculo{n}“{p:42:A sala de jantar estava trancada}. É claro, há uma tranca na porta da sala de jantar, mas eles costumam sempre deixar destrancada. Eu bati, mas não houve resposta...”{n}“Quando {p:42:eu destranquei a porta com uma chave mestra}, uma terrível visão me aguardava em seu interior......”{n}{n}• Segundo crepúsculo{n}“{p:42:O quarto da madame estava trancado}! É igual a sala de jantar!”{n}{n}• Quarto crepúsculo{n}“Quando os dois saíram, nós estávamos ocupados confirmando as trancas da casa de hóspedes. Por isso, {p:42:nenhum de nós têm um álibi}...!”{n}“Para impedir o culpado de usar isso para causar algum dano, {p:42:nós destruímos a chave mestra que a Shannon‐san portava}.”}"
-stralias chars_bernquiz_kum_1,":s;#FFFFFF`{p:3:• Primeiro crepúsculo{n}“{p:42:Foi quando eu cheguei}. Eu recomendei que eles tentassem destrancar a porta, só para confirmar.”{n}“{p:42:Eva‐sama, Hideyoshi‐sama, Rudolf‐sama, Kyrie‐sama, Rosa‐sama e o Genji‐san, seis pessoas no total, estavam caídas lá dentro, cobertas de sangue......}”}"
+stralias chars_bernquiz_kum_1,":s;#FFFFFF`{p:3:• Primeiro crepúsculo{n}“{p:42:Foi quando eu cheguei}. Eu recomendei que ele tentasse destrancar a porta, só para confirmar.”{n}“{p:42:Eva‐sama, Hideyoshi‐sama, Rudolf‐sama, Kyrie‐sama, Rosa‐sama e o Genji‐san, seis pessoas no total, estavam caídas lá dentro, cobertas de sangue......}”}"
 
 ;menu settings
 stralias set_restarted_apply,":s;#FFFFFF`{w:1920:}{p:1:{a:c:O jogo precisa ser reiniciado para aplicar as mudanças.}}"
@@ -1846,7 +1846,7 @@ stralias name_non,""
 ;menu answer ep8
 
 stralias ep8_choose_cake,"Escolha uma fatia do bolo"
-stralias ep8_9_menu_1,":s;#C7C7C7#FFFFFF`{p:8:Reler a história}`"
+stralias ep8_9_menu_1,":s;#C7C7C7#FFFFFF`{p:8:Reler história}`"
 stralias ep8_9_menu_2,":s;#C7C7C7#FFFFFF`{p:8:Exibir regras}`"
 stralias ep8_9_menu_3,":s;#C7C7C7#FFFFFF`{p:8:{w:785:}{fit}Checar púrpura (pessoa)}`"
 stralias ep8_9_menu_4,":s;#C7C7C7#FFFFFF`{p:8:{w:785:}{fit}Checar púrpura (capítulo)}`"
@@ -1914,7 +1914,7 @@ stralias ep8_9_page_5_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Cadáver de Nanjo}
 stralias ep8_9_page_5_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Um de nós quatro é o culpado?}"
 
 stralias ep8_9_page_6_1,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Cadáver de Jessica}"
-stralias ep8_9_page_6_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Quem a matau?}"
+stralias ep8_9_page_6_2,":s;#C7C7C7#FFFFFF`{p:13:{fit}{w:700:}Quem a matou?}"
 
 stralias ep8_9_page_1_1_t,":s;#FFFFFF`{p:3:Gohda: “{p:42:A sala de jantar estava trancada}. É claro, há uma tranca na porta da sala de jantar, mas eles costumam sempre deixar destrancada. Eu bati, mas não houve resposta...”{n}{n}Kumasawa: “{p:42:Isso foi quando cheguei}. Eu recomendei que ele tentasse destrancar a porta, só por precaução.”{n}{n}Gohda: “Quando {p:42:eu destranquei a porta com uma chave mestra}, uma terrível visão me aguardava em seu interior......”{n}{n}Kumasawa: “{p:42:Eva‐sama, Hideyoshi‐sama, Rudolf‐sama, Kyrie‐sama, Rosa‐sama, e o Genji‐san, seis pessoas no total, estavam caídas lá dentro, cobertas de sangue}”{n}{n}Krauss: “Um grande tumulto ocorreu. {p:42:Todos se juntaram na sala de jantar}.”}"
 stralias ep8_9_page_1_2_t,":s;#FFFFFF`{p:3:Jessica: “Havia uma chance de que eles ainda estivessem vivos. ......Todos estavam sacudindo eles desesperadamente.”{n}{n}Shannon: “Mas não adiantou... {p:42:As mortes de cada um dos parentes foi confirmada pelos próprios filhos}...”{n}{n}Kanon: “{p:42:O Doutor Nanjo e eu confirmamos que o Genji‐sama estava morto}.”{n}{n}Nanjo: “É uma forma terrível de ser morto......  {p:42:Seja médico ou não, ninguém examinando o cadáver chegaria a uma conclusão errônea}.”{n}{n}Maria: “Parece que {p:42:todas as vítimas morreram instantaneamente}. ......Kihi{0}hi{0}hihi.”}"
