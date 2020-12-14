@@ -46,7 +46,7 @@ matrix:
       - cd ciout
       - zip -qry umineko-main-scripts_r${BUILD}.zip ru.file en.file chiru.file game.hash default.cfg || exit 1
       - zip -qry umineko-pt-scripts_r${BUILD}.zip pt.file pt.cfg || exit 1
-      - zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg || exit 1
+#      - zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg || exit 1
       - zip -qry umineko-wh-scripts_r${BUILD}.zip wh.file || exit 1
       - cd ..
       - cd extra
