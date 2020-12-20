@@ -17,7 +17,9 @@ jobs:
       - name: Compile
         run: |
           BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
+          TODAY=$(date +"%d.%m.%y")
           echo "BUILD=${BUILD}" >> "$GITHUB_ENV"
+          echo "TODAY=${TODAY}" >> "$GITHUB_ENV"
           echo "Build number ${BUILD}"
           mkdir -p ciout
           LAST=$(<current/last)
@@ -54,7 +56,7 @@ jobs:
           zip -qry umineko-wh-scripts_r${BUILD}.zip wh.file || exit 1
           cd ..
           cd extra
-          zip -qry ../ciout/extra_$(date +"%d.%m.%y").zip * || exit 1
+          zip -qry ../ciout/extra_${TODAY}.zip * || exit 1
           cd ..
 
       - name: Release
@@ -70,6 +72,17 @@ jobs:
             Refer to https://forum.umineko-project.org for more details.
           draft: false
           prerelease: false
+
+      - name: Upload Extra
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/extra_${{ env.TODAY }}.zip
+          asset_name: extra_${{ env.TODAY }}.zip
+          asset_content_type: application/zip
 
       - name: Upload Main
         if: github.repository_owner == 'umineko-project'
