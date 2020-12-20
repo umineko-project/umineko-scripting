@@ -1,7 +1,7 @@
 *umi6_15
 ;10/5（日）02:34 ロジックエラー
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_15
 mov $name_chapter_save, "6_15"
 ~

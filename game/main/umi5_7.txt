@@ -1,7 +1,7 @@
 *umi5_7
 ;10/4（土）22:47 黄金狂乱劇
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_7
 mov $name_chapter_save, "5_07"
 ~

@@ -1,7 +1,7 @@
 *umi5_13
 ;10/5（日）12:33 クローゼット
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_13
 mov $name_chapter_save, "5_13"
 ~

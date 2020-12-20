@@ -1,7 +1,7 @@
 *umi8_12
 ;八城十八
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_12
 mov $name_chapter_save, "8_12"
 ~

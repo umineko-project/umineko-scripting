@@ -1,7 +1,7 @@
 *umi6_12
 ;10/5（日）01:11 現場巡り
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_12
 mov $name_chapter_save, "6_12"
 ~

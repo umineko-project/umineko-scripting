@@ -1,7 +1,7 @@
 *umi6_11
 ;10/5（日）00:12 戦わぬ者の末路
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_11
 mov $name_chapter_save, "6_11"
 ~

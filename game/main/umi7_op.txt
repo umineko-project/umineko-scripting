@@ -1,7 +1,7 @@
 *umi7_op
 ;オープニング
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_op
 mov $name_chapter_save, "7_op"
 ~

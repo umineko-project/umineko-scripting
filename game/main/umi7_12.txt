@@ -1,7 +1,7 @@
 *umi7_12
 ;新しき日々
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_12
 mov $name_chapter_save, "7_12"
 ~

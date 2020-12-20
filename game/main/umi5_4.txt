@@ -1,7 +1,7 @@
 *umi5_4
 ;10/4（土）11:00 古戸ヱリカ
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_4
 mov $name_chapter_save, "5_04"
 ~

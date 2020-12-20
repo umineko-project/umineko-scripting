@@ -1,7 +1,7 @@
 *umi6_16
 ;悪魔の結婚式
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_16
 mov $name_chapter_save, "6_16"
 ~

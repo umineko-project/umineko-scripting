@@ -1,7 +1,7 @@
 *umi5_8
 ;10/4（土）23:49 本当の親族会議
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_8
 mov $name_chapter_save, "5_08"
 ~

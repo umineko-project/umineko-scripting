@@ -1,7 +1,7 @@
 *umi5_9
 ;１９年前の復讐
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_9
 mov $name_chapter_save, "5_09"
 ~

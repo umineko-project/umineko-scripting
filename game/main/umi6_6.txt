@@ -1,7 +1,7 @@
 *umi6_6
 ;10/4（土）22:03 恋人たち
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_6
 mov $name_chapter_save, "6_06"
 ~

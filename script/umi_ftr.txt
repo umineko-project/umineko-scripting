@@ -26939,8 +26939,11 @@ return
 	; Delete any log and choice vector entries after the dst choicepoint.
 	clearlog 1,%log_dst_cvs
 	mov %log_is_generated_to_cvs,%log_dst_cvs
+	; Allow handling new chapter names
+	mov %process_chapters,1
 	; And now sskip, last param allows us not to load images until late.
 	sskip $log_ch_prev,$log_ch_current,$log_ch_next,%sskip_turbo
+	mov %process_chapters,0
 
 	ignore_cmd_clear
 	ignore_inl_cmd_clear

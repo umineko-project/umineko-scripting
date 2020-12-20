@@ -1,6 +1,6 @@
 *teatime_8
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_tea
 mov $name_chapter_save, "8_tea"
 ~

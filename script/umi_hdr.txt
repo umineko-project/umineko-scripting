@@ -917,6 +917,7 @@ numalias mcoord_add,%0        : inc %0 ; formerly 918
 numalias trophy_id,%0         : inc %0 ; formerly 250
 ;choicepoint variables
 numalias log_choices,%0       : inc %0 ; for ep8 choices
+numalias process_chapters,%0  : inc %0 ; for chiru logging
 ;debug_var %0,"ps3 total"
 ;PS3Fication numaliases end (no more than 300)
 ;-----------------------------------------------

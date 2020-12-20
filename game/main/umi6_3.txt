@@ -1,7 +1,7 @@
 *umi6_3
 ;偽らざる気持ち
 log_reset
-jskip_s
+if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_3
 mov $name_chapter_save, "6_03"
 ~
