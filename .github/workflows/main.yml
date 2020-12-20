@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Build scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Compile
+        run: |
+          BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
+          echo "BUILD=${BUILD}" >> "$GITHUB_ENV"
+          echo "Build number ${BUILD}"
+          mkdir -p ciout
+          LAST=$(<current/last)
+          if [ "$LAST" == "" ]; then LAST=1; fi
+          if [ -f current/last_en ]; then LAST_EN=$(<current/last_en); else LAST_EN="$LAST" ; fi
+          if [ -f current/last_cn ]; then LAST_CN=$(<current/last_cn); else LAST_CN="$LAST" ; fi
+          if [ -f current/last_ru ]; then LAST_RU=$(<current/last_ru); else LAST_RU="$LAST" ; fi
+          if [ -f current/last_pt ]; then LAST_PT=$(<current/last_pt); else LAST_PT="$LAST" ; fi
+          php update-manager/update-manager.php dscript "ciout/en.txt" . en ${BUILD} || exit 1
+          php update-manager/update-manager.php dscript "ciout/ru.txt" . ru ${BUILD} || exit 1
+          php update-manager/update-manager.php dscript "ciout/pt.txt" . pt ${BUILD} || exit 1
+          php update-manager/update-manager.php dscript "ciout/cn.txt" . cn ${BUILD} || exit 1
+          php update-manager/update-manager.php dscript "ciout/wh.txt" . wh ${BUILD} || exit 1
+          cp misc/chiru.file ciout
+          cp misc/game.hash ciout
+          cp misc/default.cfg ciout
+          cp misc/pt.cfg ciout
+          cp misc/cn.cfg ciout
+          cd ciout
+          zip -qry umineko-main-scripts_r${BUILD}_dev.zip ru.txt en.txt chiru.file game.hash default.cfg || exit 1
+          zip -qry umineko-pt-scripts_r${BUILD}_dev.zip pt.txt pt.cfg || exit 1
+          zip -qry umineko-cn-scripts_r${BUILD}_dev.zip cn.txt cn.cfg || exit 1
+          zip -qry umineko-wh-scripts_r${BUILD}_dev.zip wh.txt || exit 1
+          cd ..
+          php update-manager/update-manager.php script ciout/en.txt "ciout/en.file" "$LAST_EN" || exit 1
+          php update-manager/update-manager.php script ciout/ru.txt "ciout/ru.file" "$LAST_RU" || exit 1
+          php update-manager/update-manager.php script ciout/pt.txt "ciout/pt.file" "$LAST_PT" || exit 1
+          php update-manager/update-manager.php script ciout/cn.txt "ciout/cn.file" "$LAST_CN" || exit 1
+          php update-manager/update-manager.php script ciout/wh.txt "ciout/wh.file" "$LAST_EN" || exit 1
+          cd ciout
+          zip -qry umineko-main-scripts_r${BUILD}.zip ru.file en.file chiru.file game.hash default.cfg || exit 1
+          zip -qry umineko-pt-scripts_r${BUILD}.zip pt.file pt.cfg || exit 1
+          zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg || exit 1
+          zip -qry umineko-wh-scripts_r${BUILD}.zip wh.file || exit 1
+          cd ..
+          cd extra
+          zip -qry ../ciout/extra_$(date +"%d.%m.%y").zip * || exit 1
+          cd ..
+
+      - name: Release
+        if: github.repository_owner == 'umineko-project'
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: z${{ env.BUILD }}
+          release_name: Umineko Scripts r${{ env.BUILD }}
+          body: |
+            Refer to https://forum.umineko-project.org for more details.
+          draft: false
+          prerelease: false
+
+      - name: Upload Main
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-main-scripts_r${{ env.BUILD }}.zip
+          asset_name: umineko-main-scripts_r${{ env.BUILD }}.zip
+          asset_content_type: application/zip
+
+      - name: Upload PT
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-pt-scripts_r${{ env.BUILD }}.zip
+          asset_name: umineko-pt-scripts_r${{ env.BUILD }}.zip
+          asset_content_type: application/zip
+
+      - name: Upload WH
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-wh-scripts_r${{ env.BUILD }}.zip
+          asset_name: umineko-wh-scripts_r${{ env.BUILD }}.zip
+          asset_content_type: application/zip
