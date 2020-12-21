@@ -38,12 +38,12 @@ jobs:
           cp misc/default.cfg ciout
           cp misc/pt.cfg ciout
           cp misc/cn.cfg ciout
-          cd ciout
-          zip -qry umineko-main-scripts_r${BUILD}_dev.zip ru.txt en.txt chiru.file game.hash default.cfg || exit 1
-          zip -qry umineko-pt-scripts_r${BUILD}_dev.zip pt.txt pt.cfg || exit 1
-          zip -qry umineko-cn-scripts_r${BUILD}_dev.zip cn.txt cn.cfg || exit 1
-          zip -qry umineko-wh-scripts_r${BUILD}_dev.zip wh.txt || exit 1
-          cd ..
+          # cd ciout
+          # zip -qry umineko-main-scripts_r${BUILD}_dev.zip ru.txt en.txt chiru.file game.hash default.cfg || exit 1
+          # zip -qry umineko-pt-scripts_r${BUILD}_dev.zip pt.txt pt.cfg || exit 1
+          # zip -qry umineko-cn-scripts_r${BUILD}_dev.zip cn.txt cn.cfg || exit 1
+          # zip -qry umineko-wh-scripts_r${BUILD}_dev.zip wh.txt || exit 1
+          # cd ..
           php update-manager/update-manager.php script ciout/en.txt "ciout/en.file" "$LAST_EN" || exit 1
           php update-manager/update-manager.php script ciout/ru.txt "ciout/ru.file" "$LAST_RU" || exit 1
           php update-manager/update-manager.php script ciout/pt.txt "ciout/pt.file" "$LAST_PT" || exit 1
@@ -58,6 +58,8 @@ jobs:
           cd extra
           zip -qry ../ciout/extra_${TODAY}.zip * || exit 1
           cd ..
+          git show -s --format="%s" > release_notes.md
+          echo "Refer to https://forum.umineko-project.org for more details." >> release_notes.md
 
       - name: Release
         if: github.repository_owner == 'umineko-project'
@@ -68,8 +70,7 @@ jobs:
         with:
           tag_name: z${{ env.BUILD }}
           release_name: Umineko Scripts r${{ env.BUILD }}
-          body: |
-            Refer to https://forum.umineko-project.org for more details.
+          body_path: release_notes.md
           draft: false
           prerelease: false
 
