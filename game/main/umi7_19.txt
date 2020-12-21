@@ -1,9 +1,7 @@
 *teatime_7
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_tea
 mov $name_chapter_save, "7_tea"
-~
 new_tea 7
 flush 10,167
 textoff

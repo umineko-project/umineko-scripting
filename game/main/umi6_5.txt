@@ -1,10 +1,8 @@
 *umi6_5
 ;魔法の原点
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_5
 mov $name_chapter_save, "6_05"
-~
 new_chapter date_scenario_6_5,scenario_6_5
 gstc 40
 meplay 1,13,70

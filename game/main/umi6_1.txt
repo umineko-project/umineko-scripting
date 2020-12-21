@@ -1,10 +1,8 @@
 *umi6_1
 ;観劇の魔女
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_1
 mov $name_chapter_save, "6_01"
-~
 new_chapter date_scenario_6_1,scenario_6_1
 gstc 29
 meplay 1,16,0

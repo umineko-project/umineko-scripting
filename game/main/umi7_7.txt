@@ -1,10 +1,8 @@
 *umi7_7
 ;貴賓室の怪談
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_7
 mov $name_chapter_save, "7_07"
-~
 new_chapter date_scenario_7_7,scenario_7_7
 gstc 67
 bgmplay 162,71,0

@@ -1,10 +1,8 @@
 *umi5_13
 ;10/5（日）12:33 クローゼット
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_13
 mov $name_chapter_save, "5_13"
-~
 new_chapter date_scenario_5_13,scenario_5_13
 gstc 22
 meplay 1,13,70

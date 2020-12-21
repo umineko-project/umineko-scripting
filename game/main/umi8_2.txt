@@ -1,10 +1,8 @@
 *umi8_2
 ;６歳の縁寿
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_2
 mov $name_chapter_save, "8_02"
-~
 new_chapter date_scenario_8_2,scenario_8_2
 gstc 81
 textoff

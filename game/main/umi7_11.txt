@@ -1,10 +1,8 @@
 *umi7_11
 ;虜になる日々
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_11
 mov $name_chapter_save, "7_11"
-~
 new_chapter date_scenario_7_11,scenario_7_11
 gstc 71
 textoff

@@ -1,10 +1,8 @@
 *umi8_4
 ;ハロウィンパーティ
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_4
 mov $name_chapter_save, "8_04"
-~
 new_chapter date_scenario_8_4,scenario_8_4
 gstc 84
 textoff

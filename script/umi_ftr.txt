@@ -26295,6 +26295,12 @@ return
 		mov ?loggen_var_backup[%Free2-1],%%Free3
 	next
 
+	;If you reach last quiz with enj and answer it,
+	;loggen will proceed several chapters forward.
+	;This must not affect the current displayed chapter in rmenu.
+	mov $back_chapter_r_click,$name_chapter_r_click
+	mov $back_chapter_save,$name_chapter_save
+
 	; log generate no longer clears log.
 	; log_reset is now improperly named.
 	if %log_is_generated_to_cvs != -1 jumpf 
@@ -26388,6 +26394,8 @@ return
 		mov %Free3,loggen_var_backup+%Free2
 		mov %%Free3,?loggen_var_backup[%Free2-1]
 	next
+	mov $name_chapter_r_click,$back_chapter_r_click
+	mov $name_chapter_save,$back_chapter_save
 
 	mov %no_log_gen,0
 	vsp TextCC3SpNum,0 
@@ -26939,11 +26947,8 @@ return
 	; Delete any log and choice vector entries after the dst choicepoint.
 	clearlog 1,%log_dst_cvs
 	mov %log_is_generated_to_cvs,%log_dst_cvs
-	; Allow handling new chapter names
-	mov %process_chapters,1
 	; And now sskip, last param allows us not to load images until late.
 	sskip $log_ch_prev,$log_ch_current,$log_ch_next,%sskip_turbo
-	mov %process_chapters,0
 
 	ignore_cmd_clear
 	ignore_inl_cmd_clear
@@ -26980,6 +26985,7 @@ return
 	; The point of this function is to implement phase 1,
 	; which initializes the following two variables to the values they should have at the label $log_ch_current according to the route specified by the choice vector.
 	; Then, the phase 2 (usual) superskip will take the variables from that state to whatever they need to be at the destination line.
+	; NOTE: These two variables are set here since the game does not initialise them. Normally it should, like e.g. with bern_game_mode.
 	mov %total_coin_count,0
 	mov %eva_hint_counter,0	
 

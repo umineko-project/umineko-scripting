@@ -1,10 +1,8 @@
 *umi5_10
 ;10/5（日）07:00 惨劇の朝
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_10
 mov $name_chapter_save, "5_10"
-~
 new_chapter date_scenario_5_10,scenario_5_10
 gstc 13
 meplay 1,12,1

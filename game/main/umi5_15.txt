@@ -1,10 +1,8 @@
 *umi5_15
 ;10/5（日）--:-- １９年越しの復讐
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_15
 mov $name_chapter_save, "5_15"
-~
 new_chapter date_scenario_5_15,scenario_5_15
 gstc 27
 gstt 2

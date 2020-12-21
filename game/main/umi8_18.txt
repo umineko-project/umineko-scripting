@@ -1,9 +1,7 @@
 *ura_teatime_8
 log_reset
-if %process_chapters != 1 jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_ura
 mov $name_chapter_save, "8_ura"
-~
 new_ura 8
 gstc 184
 flush 10,167
