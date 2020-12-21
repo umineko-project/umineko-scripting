@@ -38,12 +38,12 @@ jobs:
           cp misc/default.cfg ciout
           cp misc/pt.cfg ciout
           cp misc/cn.cfg ciout
-          # cd ciout
-          # zip -qry umineko-main-scripts_r${BUILD}_dev.zip ru.txt en.txt chiru.file game.hash default.cfg || exit 1
-          # zip -qry umineko-pt-scripts_r${BUILD}_dev.zip pt.txt pt.cfg || exit 1
-          # zip -qry umineko-cn-scripts_r${BUILD}_dev.zip cn.txt cn.cfg || exit 1
-          # zip -qry umineko-wh-scripts_r${BUILD}_dev.zip wh.txt || exit 1
-          # cd ..
+          cd ciout
+          zip -qry umineko-main-scripts_r${BUILD}_dev.zip ru.txt en.txt chiru.file game.hash default.cfg || exit 1
+          zip -qry umineko-pt-scripts_r${BUILD}_dev.zip pt.txt pt.cfg || exit 1
+          zip -qry umineko-cn-scripts_r${BUILD}_dev.zip cn.txt cn.cfg || exit 1
+          zip -qry umineko-wh-scripts_r${BUILD}_dev.zip wh.txt || exit 1
+          cd ..
           php update-manager/update-manager.php script ciout/en.txt "ciout/en.file" "$LAST_EN" || exit 1
           php update-manager/update-manager.php script ciout/ru.txt "ciout/ru.file" "$LAST_RU" || exit 1
           php update-manager/update-manager.php script ciout/pt.txt "ciout/pt.file" "$LAST_PT" || exit 1
@@ -96,6 +96,17 @@ jobs:
           asset_name: umineko-main-scripts_r${{ env.BUILD }}.zip
           asset_content_type: application/zip
 
+      - name: Upload Main
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-main-scripts_r${{ env.BUILD }}_dev.zip
+          asset_name: umineko-main-scripts_r${{ env.BUILD }}_dev.zip
+          asset_content_type: application/zip
+
       - name: Upload PT
         if: github.repository_owner == 'umineko-project'
         uses: actions/upload-release-asset@v1
@@ -107,6 +118,17 @@ jobs:
           asset_name: umineko-pt-scripts_r${{ env.BUILD }}.zip
           asset_content_type: application/zip
 
+      - name: Upload PT
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-pt-scripts_r${{ env.BUILD }}_dev.zip
+          asset_name: umineko-pt-scripts_r${{ env.BUILD }}_dev.zip
+          asset_content_type: application/zip
+
       - name: Upload WH
         if: github.repository_owner == 'umineko-project'
         uses: actions/upload-release-asset@v1
@@ -116,4 +138,15 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./ciout/umineko-wh-scripts_r${{ env.BUILD }}.zip
           asset_name: umineko-wh-scripts_r${{ env.BUILD }}.zip
+          asset_content_type: application/zip
+
+      - name: Upload WH
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-wh-scripts_r${{ env.BUILD }}_dev.zip
+          asset_name: umineko-wh-scripts_r${{ env.BUILD }}_dev.zip
           asset_content_type: application/zip
