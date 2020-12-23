@@ -96,7 +96,7 @@ jobs:
           asset_name: umineko-main-scripts_r${{ env.BUILD }}.zip
           asset_content_type: application/zip
 
-      - name: Upload Main
+      - name: Upload Main (dev)
         if: github.repository_owner == 'umineko-project'
         uses: actions/upload-release-asset@v1
         env:
@@ -118,7 +118,7 @@ jobs:
           asset_name: umineko-pt-scripts_r${{ env.BUILD }}.zip
           asset_content_type: application/zip
 
-      - name: Upload PT
+      - name: Upload PT (dev)
         if: github.repository_owner == 'umineko-project'
         uses: actions/upload-release-asset@v1
         env:
@@ -140,7 +140,7 @@ jobs:
           asset_name: umineko-wh-scripts_r${{ env.BUILD }}.zip
           asset_content_type: application/zip
 
-      - name: Upload WH
+      - name: Upload WH (dev)
         if: github.repository_owner == 'umineko-project'
         uses: actions/upload-release-asset@v1
         env:
