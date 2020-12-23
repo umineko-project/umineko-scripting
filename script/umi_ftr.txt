@@ -21205,7 +21205,7 @@ return
 	mov %play_scene,60000
 	return
 	*gstcc30
-	mov %side_flg,1
+	;mov %side_flg,1
 	mov %play_scene,60010
 	mov %r_display_side,2
 	mov %r_display_cha_enj,ma5_enj
@@ -21294,7 +21294,7 @@ return
 	mov %grim_scene,602
 	return
 	*gstcc49
-	mov %side_flg,1
+	;mov %side_flg,1
 	mov %play_scene,60090
 	mov %r_display_side,0
 	mov %r_display_cha,NAT
@@ -32088,10 +32088,9 @@ return
 	if %msgwnd_type = 1 setwindowd msgwnd2
 	if %msgwnd_type = 2 setwindowd msgwnd3
 	if %msgwnd_type = 3 setwindowd msgwnd4
-
 	setwindowd_dimensions 167,725,1586,306
-	setwindowd_padding -20,87,-41,87
-	setwindowd_name_padding 25,100,-60,87
+	setwindowd_padding text_main_pad_t,text_main_pad_r,text_main_pad_b,text_main_pad_l
+	setwindowd_name_padding text_name_pad_t,text_name_pad_r,text_name_pad_b,text_name_pad_l
 	setwindowd_main_region 240,14,1408,274,77
 	setwindowd_non_region 0,235,112,38,60
 	setwindowd_name_region 0,11,224,118,60,170,170,74
