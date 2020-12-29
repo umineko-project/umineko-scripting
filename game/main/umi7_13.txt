@@ -1,10 +1,8 @@
 *umi7_13
 ;新しき元素
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_13
 mov $name_chapter_save, "7_13"
-~
 new_chapter date_scenario_7_13,scenario_7_13
 gstc 73
 textoff

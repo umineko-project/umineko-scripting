@@ -16,6 +16,14 @@ numalias text_main_size,60
 numalias text_main_spacing,66
 numalias text_name_size,50
 numalias text_name_spacing,55
+numalias text_main_pad_t,-20
+numalias text_main_pad_r,87
+numalias text_main_pad_b,-41
+numalias text_main_pad_l,87
+numalias text_name_pad_t,25
+numalias text_name_pad_r,100
+numalias text_name_pad_b,-60
+numalias text_name_pad_l,87
 numalias criminal_header_y,150
 numalias criminal_button_y,870
 

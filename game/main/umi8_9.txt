@@ -1,11 +1,9 @@
 *umi8_9
 ;ベルンの出題
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_9
 mov $name_chapter_save, "8_09"
 mov %bern_game_mode,0
-~
 new_chapter date_scenario_8_9,scenario_8_9
 gstc 129
 seplay 1,61,71

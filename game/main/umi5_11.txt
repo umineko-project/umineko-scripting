@@ -1,10 +1,8 @@
 *umi5_11
 ;10/5（日）08:04 魔女を貫く十の楔
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_11
 mov $name_chapter_save, "5_11"
-~
 new_chapter date_scenario_5_11,scenario_5_11
 gstc 17
 textoff

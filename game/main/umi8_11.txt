@@ -1,10 +1,8 @@
 *umi8_11
 ;黒猫の爪痕
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_11
 mov $name_chapter_save, "8_11"
-~
 new_chapter date_scenario_8_11,scenario_8_11
 gstc 165
 bgmplay 12,71,0

@@ -3259,10 +3259,8 @@ function section_convertor( &$inst ) {
 
 			logstr('*teatime_'.$g['episode_num']);
 			logstr('log_reset');
-			logstr('jskip_s');
 			logstr('mov $name_chapter_r_click,r_click_chapters_'.$g['episode_num'].'_tea');
 			logstr('mov $name_chapter_save, "'.$g['episode_num'].'_tea"');
-			logstr('~');
 			logstr('new_tea '.$g['episode_num']);
 		} else if ($sectionName == '????') {
 			finish_section('ura');
@@ -3278,10 +3276,8 @@ function section_convertor( &$inst ) {
 
 			logstr('*ura_teatime_'.$g['episode_num']);
 			logstr('log_reset');
-			logstr('jskip_s');
 			logstr('mov $name_chapter_r_click,r_click_chapters_'.$g['episode_num'].'_ura');
 			logstr('mov $name_chapter_save, "'.$g['episode_num'].'_ura"');
-			logstr('~');
 			logstr('new_ura '.$g['episode_num']);
 		} else {
 			finish_section();
@@ -3295,10 +3291,8 @@ function section_convertor( &$inst ) {
 			logstr('*umi'.$g['episode_num'].'_'.$id);
 			logstr(';'.$sectionName);
 			logstr('log_reset');
-			logstr('jskip_s');
 			logstr('mov $name_chapter_r_click,r_click_chapters_'.$g['episode_num'].'_'.$id);
 			logstr('mov $name_chapter_save, "'.$g['episode_num'].'_'.str_pad($id,2,'0',STR_PAD_LEFT).'"');
-			logstr('~');
 
 			if ($id != 'op') {
 				logstr('new_chapter date_scenario_'.$g['episode_num'].'_'.$id.',scenario_'.$g['episode_num'].'_'.$id);

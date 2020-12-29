@@ -1,10 +1,8 @@
 *umi5_6
 ;10/4（土）22:00 辿り着きし者
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_6
 mov $name_chapter_save, "5_06"
-~
 new_chapter date_scenario_5_6,scenario_5_6
 gstc 9
 textoff

@@ -1,10 +1,8 @@
 *umi8_14
 ;八城幾子
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_14
 mov $name_chapter_save, "8_14"
-~
 new_chapter date_scenario_8_14,scenario_8_14
 gstc 169
 textoff

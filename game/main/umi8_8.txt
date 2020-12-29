@@ -1,10 +1,8 @@
 *umi8_8
 ;人間と魔女の宴
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_8
 mov $name_chapter_save, "8_08"
-~
 new_chapter date_scenario_8_8,scenario_8_8
 gstc 120
 meplay 1,12,70

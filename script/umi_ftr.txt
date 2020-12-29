@@ -21205,7 +21205,7 @@ return
 	mov %play_scene,60000
 	return
 	*gstcc30
-	mov %side_flg,1
+	;mov %side_flg,1
 	mov %play_scene,60010
 	mov %r_display_side,2
 	mov %r_display_cha_enj,ma5_enj
@@ -21294,7 +21294,7 @@ return
 	mov %grim_scene,602
 	return
 	*gstcc49
-	mov %side_flg,1
+	;mov %side_flg,1
 	mov %play_scene,60090
 	mov %r_display_side,0
 	mov %r_display_cha,NAT
@@ -26295,6 +26295,12 @@ return
 		mov ?loggen_var_backup[%Free2-1],%%Free3
 	next
 
+	;If you reach last quiz with enj and answer it,
+	;loggen will proceed several chapters forward.
+	;This must not affect the current displayed chapter in rmenu.
+	mov $back_chapter_r_click,$name_chapter_r_click
+	mov $back_chapter_save,$name_chapter_save
+
 	; log generate no longer clears log.
 	; log_reset is now improperly named.
 	if %log_is_generated_to_cvs != -1 jumpf 
@@ -26388,6 +26394,8 @@ return
 		mov %Free3,loggen_var_backup+%Free2
 		mov %%Free3,?loggen_var_backup[%Free2-1]
 	next
+	mov $name_chapter_r_click,$back_chapter_r_click
+	mov $name_chapter_save,$back_chapter_save
 
 	mov %no_log_gen,0
 	vsp TextCC3SpNum,0 
@@ -26977,6 +26985,7 @@ return
 	; The point of this function is to implement phase 1,
 	; which initializes the following two variables to the values they should have at the label $log_ch_current according to the route specified by the choice vector.
 	; Then, the phase 2 (usual) superskip will take the variables from that state to whatever they need to be at the destination line.
+	; NOTE: These two variables are set here since the game does not initialise them. Normally it should, like e.g. with bern_game_mode.
 	mov %total_coin_count,0
 	mov %eva_hint_counter,0	
 
@@ -32079,10 +32088,9 @@ return
 	if %msgwnd_type = 1 setwindowd msgwnd2
 	if %msgwnd_type = 2 setwindowd msgwnd3
 	if %msgwnd_type = 3 setwindowd msgwnd4
-
 	setwindowd_dimensions 167,725,1586,306
-	setwindowd_padding -20,87,-41,87
-	setwindowd_name_padding 25,100,-60,87
+	setwindowd_padding text_main_pad_t,text_main_pad_r,text_main_pad_b,text_main_pad_l
+	setwindowd_name_padding text_name_pad_t,text_name_pad_r,text_name_pad_b,text_name_pad_l
 	setwindowd_main_region 240,14,1408,274,77
 	setwindowd_non_region 0,235,112,38,60
 	setwindowd_name_region 0,11,224,118,60,170,170,74

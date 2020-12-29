@@ -1,10 +1,8 @@
 *umi7_15
 ;恋の芽、恋の根
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_15
 mov $name_chapter_save, "7_15"
-~
 new_chapter date_scenario_7_15,scenario_7_15
 gstc 75
 textoff

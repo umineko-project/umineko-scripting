@@ -1,10 +1,8 @@
 *umi7_9
 ;新しき生活
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_9
 mov $name_chapter_save, "7_09"
-~
 new_chapter date_scenario_7_9,scenario_7_9
 textoff
 waits 167

@@ -1,9 +1,7 @@
 *teatime_6
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_tea
 mov $name_chapter_save, "6_tea"
-~
 new_tea 6
 gstc 177
 flush 10,167
