@@ -28846,7 +28846,7 @@ return
 	if $Free3 == "ru" mov $Free3,"Русская"
 	if $Free3 == "pt" mov $Free3,"Português"
 	if $Free3 == "wh" mov $Free3,"Witch-Hunt"
-	if $Free3 == "cn" mov $Free3,"简体中文"
+	if $Free3 == "cn" mov $Free3,"Chinese Simp."
 	lsp 268,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,226
 	lsp 380,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,226
 	lsp 381,":a/2,0,3;graphics\menu_en\config\config_right.png",1640,226
@@ -32876,7 +32876,7 @@ csp_rst
 if localisation == "en" mov %game_language,0 : mov $Free3,"English"
 if localisation == "ru" mov %game_language,1 : mov $Free3,"Русская"
 if localisation == "pt" mov %game_language,2 : mov $Free3,"Português"
-if localisation == "cn" mov %game_language,3 : mov $Free3,"简体中文"
+if localisation == "cn" mov %game_language,3 : mov $Free3,"Chinese Simp."
 
 getscriptnum %Free1
 for %Free2 = 0 to %Free1-1
@@ -33068,7 +33068,7 @@ return
 	if $Free3 == "en" mov $Free3,"English" mov %game_language,0
 	if $Free3 == "ru" mov $Free3,"Русская" mov %game_language,1
 	if $Free3 == "pt" mov $Free3,"Português" mov %game_language,2
-	if $Free3 == "cn" mov $Free3,"简体中文" mov %game_language,3
+	if $Free3 == "cn" mov $Free3,"Chinese Simp." mov %game_language,3
 	
 	lsp 273,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,%y
 
