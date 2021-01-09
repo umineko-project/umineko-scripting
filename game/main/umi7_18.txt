@@ -1,10 +1,8 @@
 *umi7_18
 ;魔女幻想、散る
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_18
 mov $name_chapter_save, "7_18"
-~
 new_chapter date_scenario_7_18,scenario_7_18
 gstc 78
 textoff

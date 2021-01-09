@@ -1,10 +1,8 @@
 *umi8_1
 ;六軒島へ
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_1
 mov $name_chapter_save, "8_01"
-~
 new_chapter date_scenario_8_1,scenario_8_1
 gstc 79
 textoff

@@ -1,10 +1,8 @@
 *umi7_1
 ;ベアトリーチェ殺人事件
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_1
 mov $name_chapter_save, "7_01"
-~
 new_chapter date_scenario_7_1,scenario_7_1
 gstc 60
 textoff

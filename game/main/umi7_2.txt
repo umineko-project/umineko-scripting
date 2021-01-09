@@ -1,10 +1,8 @@
 *umi7_2
 ;楼座の告白
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_2
 mov $name_chapter_save, "7_02"
-~
 new_chapter date_scenario_7_2,scenario_7_2
 gstc 62
 vol_mix_fade 1000

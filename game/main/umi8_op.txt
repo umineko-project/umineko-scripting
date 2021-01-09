@@ -1,10 +1,8 @@
 *umi8_op
 ;オープニング
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_op
 mov $name_chapter_save, "8_op"
-~
 new_episode 8
 seplay 1,28,70
 textoff

@@ -1,9 +1,7 @@
 *ura_teatime_6
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_ura
 mov $name_chapter_save, "6_ura"
-~
 new_ura 6
 gstc 182
 flush 10,167

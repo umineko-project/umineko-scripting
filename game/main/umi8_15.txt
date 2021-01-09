@@ -1,10 +1,8 @@
 *umi8_15
 ;大船団の包囲
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_15
 mov $name_chapter_save, "8_15"
-~
 new_chapter date_scenario_8_15,scenario_8_15
 gstc 170
 meplay 1,16,70

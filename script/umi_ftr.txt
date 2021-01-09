@@ -7796,10 +7796,9 @@ return
 ;------------------------------
 *r_cha_eri_ep8_2
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 0 return
-mov %ran,0
-rnd2 %ran,1,16
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_cha_tati_path,":a;graphics\big_chars\ep5_2_eri_EP5_2_eri.png"
-if ?r[%scenario_Number][%r_display_cha_ma][condition] = 2 mov $r_cha_tati_path,":a;graphics\big_chars\ep5_2_eri_EP5_2_eri.png"
+lsp ma5_eri_btn_lsp,$?r[%scenario_Number][%r_display_cha_ma][?r[%scenario_Number][%r_display_cha_ma][condition]],?r[%scenario_Number][%r_display_cha_ma][itiran_x],?r[%scenario_Number][%r_display_cha_ma][itiran_y]
+if ?r[%scenario_Number][%r_display_cha_ma][r_ishou] = 2 && ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_cha_tati_path,":a;graphics\big_chars\ep8_2_eri_1_EP8_2_eri_1.png" : mov ?r[%scenario_Number][%r_display_cha_ma][tati_x],440 : lsp ma5_eri_btn_lsp,":c/1,0,3;graphics\chars\chiru\chars_eri3_s.png",?r[%scenario_Number][%r_display_cha_ma][itiran_x],?r[%scenario_Number][%r_display_cha_ma][itiran_y]
 
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 0 mov $r_txt_path,":a;graphics\menu\chars\chars_right.png"
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_txt_path,chars_8_2_eri_1
@@ -7808,11 +7807,9 @@ return
 *r_cha_dla_ep8_2
 
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 0 return
-mov %ran,0
-rnd2 %ran,1,16
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_cha_tati_path,":a;graphics\big_chars\ep5_2_dla_EP5_2_dla.png"
-if ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 && %ran = 15 mov $r_cha_tati_path,":a;graphics\big_chars\ep5_2_dla_megane_EP5_2_dla_megane.png"
-
+lsp ma5_dla_btn_lsp,$?r[%scenario_Number][%r_display_cha_ma][?r[%scenario_Number][%r_display_cha_ma][condition]],?r[%scenario_Number][%r_display_cha_ma][itiran_x],?r[%scenario_Number][%r_display_cha_ma][itiran_y]
+if ?r[%scenario_Number][%r_display_cha_ma][r_ishou] = 2 && ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_cha_tati_path,":a;graphics\big_chars\ep5_2_dla_megane_EP5_2_dla_megane.png" : mov ?r[%scenario_Number][%r_display_cha_ma][tati_x],440 : lsp ma5_dla_btn_lsp,":c/1,0,3;graphics\chars\chiru\chars_dla1_s.png",?r[%scenario_Number][%r_display_cha_ma][itiran_x],?r[%scenario_Number][%r_display_cha_ma][itiran_y]
 
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 0 mov $r_txt_path,":a;graphics\menu\chars\chars_right.png"
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_txt_path,chars_8_2_dla_1
@@ -7854,8 +7851,11 @@ return
 *r_cha_en2_ep8_2
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 0 return
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_cha_tati_path,":a;graphics\big_chars\ep8_2_en2_2_EP8_2_en2_2.png"
+lsp ma5_en2_btn_lsp,$?r[%scenario_Number][%r_display_cha_ma][?r[%scenario_Number][%r_display_cha_ma][condition]],?r[%scenario_Number][%r_display_cha_ma][itiran_x],?r[%scenario_Number][%r_display_cha_ma][itiran_y]
+if ?r[%scenario_Number][%r_display_cha_ma][r_ishou] = 2 && ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_cha_tati_path,":a;graphics\big_chars\ep8_2_en2_1_EP8_2_en2_1.png" : mov ?r[%scenario_Number][%r_display_cha_ma][tati_x],440 : lsp ma5_en2_btn_lsp,":c/1,0,3;graphics\chars\chars_enj0_s.png",?r[%scenario_Number][%r_display_cha_ma][itiran_x],?r[%scenario_Number][%r_display_cha_ma][itiran_y]
 
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 0 mov $r_txt_path,":a;graphics\menu\chars\chars_right.png"
+if ?r[%scenario_Number][%r_display_cha_ma][r_ishou]   = 2 mov $r_cha_tati_path,":a;graphics\big_chars\ep8_2_en2_1_EP8_2_en2_1.png"
 if ?r[%scenario_Number][%r_display_cha_ma][condition] = 1 mov $r_txt_path,chars_8_2_en2_1
 return
 ;------------------------------
@@ -21205,7 +21205,7 @@ return
 	mov %play_scene,60000
 	return
 	*gstcc30
-	mov %side_flg,1
+	;mov %side_flg,1
 	mov %play_scene,60010
 	mov %r_display_side,2
 	mov %r_display_cha_enj,ma5_enj
@@ -21294,7 +21294,7 @@ return
 	mov %grim_scene,602
 	return
 	*gstcc49
-	mov %side_flg,1
+	;mov %side_flg,1
 	mov %play_scene,60090
 	mov %r_display_side,0
 	mov %r_display_cha,NAT
@@ -26295,6 +26295,12 @@ return
 		mov ?loggen_var_backup[%Free2-1],%%Free3
 	next
 
+	;If you reach last quiz with enj and answer it,
+	;loggen will proceed several chapters forward.
+	;This must not affect the current displayed chapter in rmenu.
+	mov $back_chapter_r_click,$name_chapter_r_click
+	mov $back_chapter_save,$name_chapter_save
+
 	; log generate no longer clears log.
 	; log_reset is now improperly named.
 	if %log_is_generated_to_cvs != -1 jumpf 
@@ -26388,6 +26394,8 @@ return
 		mov %Free3,loggen_var_backup+%Free2
 		mov %%Free3,?loggen_var_backup[%Free2-1]
 	next
+	mov $name_chapter_r_click,$back_chapter_r_click
+	mov $name_chapter_save,$back_chapter_save
 
 	mov %no_log_gen,0
 	vsp TextCC3SpNum,0 
@@ -26977,6 +26985,7 @@ return
 	; The point of this function is to implement phase 1,
 	; which initializes the following two variables to the values they should have at the label $log_ch_current according to the route specified by the choice vector.
 	; Then, the phase 2 (usual) superskip will take the variables from that state to whatever they need to be at the destination line.
+	; NOTE: These two variables are set here since the game does not initialise them. Normally it should, like e.g. with bern_game_mode.
 	mov %total_coin_count,0
 	mov %eva_hint_counter,0	
 
@@ -28837,7 +28846,7 @@ return
 	if $Free3 == "ru" mov $Free3,"Русская"
 	if $Free3 == "pt" mov $Free3,"Português"
 	if $Free3 == "wh" mov $Free3,"Witch-Hunt"
-	if $Free3 == "cn" mov $Free3,"简体中文"
+	if $Free3 == "cn" mov $Free3,"Chinese Simp."
 	lsp 268,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,226
 	lsp 380,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,226
 	lsp 381,":a/2,0,3;graphics\menu_en\config\config_right.png",1640,226
@@ -32079,10 +32088,9 @@ return
 	if %msgwnd_type = 1 setwindowd msgwnd2
 	if %msgwnd_type = 2 setwindowd msgwnd3
 	if %msgwnd_type = 3 setwindowd msgwnd4
-
 	setwindowd_dimensions 167,725,1586,306
-	setwindowd_padding -20,87,-41,87
-	setwindowd_name_padding 25,100,-60,87
+	setwindowd_padding text_main_pad_t,text_main_pad_r,text_main_pad_b,text_main_pad_l
+	setwindowd_name_padding text_name_pad_t,text_name_pad_r,text_name_pad_b,text_name_pad_l
 	setwindowd_main_region 240,14,1408,274,77
 	setwindowd_non_region 0,235,112,38,60
 	setwindowd_name_region 0,11,224,118,60,170,170,74
@@ -32868,7 +32876,7 @@ csp_rst
 if localisation == "en" mov %game_language,0 : mov $Free3,"English"
 if localisation == "ru" mov %game_language,1 : mov $Free3,"Русская"
 if localisation == "pt" mov %game_language,2 : mov $Free3,"Português"
-if localisation == "cn" mov %game_language,3 : mov $Free3,"简体中文"
+if localisation == "cn" mov %game_language,3 : mov $Free3,"Chinese Simp."
 
 getscriptnum %Free1
 for %Free2 = 0 to %Free1-1
@@ -33060,7 +33068,7 @@ return
 	if $Free3 == "en" mov $Free3,"English" mov %game_language,0
 	if $Free3 == "ru" mov $Free3,"Русская" mov %game_language,1
 	if $Free3 == "pt" mov $Free3,"Português" mov %game_language,2
-	if $Free3 == "cn" mov $Free3,"简体中文" mov %game_language,3
+	if $Free3 == "cn" mov $Free3,"Chinese Simp." mov %game_language,3
 	
 	lsp 273,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,%y
 
@@ -34532,6 +34540,15 @@ return
 			if %r_display_cha_ma = ma5_rg_6 && ?r[%scenario_Number][ma5_rg_6][condition] = 1 lsp r_change_lsp,r_change,0,0			
 	~	
 return
+*r_for_title_ep8_2
+  notif %r_for_title = 1 jumpf
+    ;change clothing chars
+    if %r_display > 0 jumpf
+      if %r_display_cha_ma = ma5_dla && ?r[%scenario_Number][ma5_dla][condition] = 1 lsp r_change_lsp,r_change,0,0
+      if %r_display_cha_ma = ma5_eri && ?r[%scenario_Number][ma5_eri][condition] = 1 lsp r_change_lsp,r_change,0,0
+      if %r_display_cha_ma = ma5_en2 && ?r[%scenario_Number][ma5_en2][condition] = 1 lsp r_change_lsp,r_change,0,0
+  ~
+return
 ;=====================
 *r_for_title_0_ep7_2
 	notif %scenario_Number = 7 jumpf
@@ -35029,13 +35046,13 @@ return
 		lsp r_people_lsp,r_people,0,0
 		lsp r_witches_lsp,r_witches_select,0,0
 	~
-	if %r_u_tea_flg =1 mov %r_display,0
+	if %r_u_tea_flg = 1 mov %r_display,0
 	notif %r_for_title = 1 jumpf
 		lsp r_exec_lsp,r_exec,0,0
 		lsp r_resu_lsp,r_resu,0,0
 	~
 
-	notif %r_u_tea_flg  = 1 jumpf
+	notif %r_u_tea_flg = 1 jumpf
 		mov %tmp10,%tmp1 : sub %tmp10,128
 		lsp r_exec_lsp,r_exec,%tmp,%tmp10 : add %tmp10,32
 		lsp r_resu_lsp,r_resu,%tmp,%tmp10 ;: add %tmp1,32
@@ -35059,7 +35076,8 @@ return
 	if %scenario_Number = 4 && %r_display_side = 2 gosub *r_for_title_ep4_3 : align_buttons_l r_people_lsp,r_witches_lsp,r_ange_lsp,r_change_lsp
 	if %scenario_Number = 5 && %r_display_side = 1 gosub *r_for_title_ep5_2 : align_buttons_l r_people_lsp,r_witches_lsp,r_exec_lsp,r_resu_lsp,r_change_lsp
 	if %scenario_Number = 7 && %r_display_side = 1 gosub *r_for_title_ep7_2 : align_buttons_l r_people_lsp,r_witches_lsp,r_exec_lsp,r_resu_lsp,r_change_lsp
-	
+	if %scenario_Number = 8 && %r_display_side = 1 gosub *r_for_title_ep8_2 : align_buttons_l r_people_lsp,r_witches_lsp,r_exec_lsp,r_resu_lsp,r_change_lsp
+
 	btndef ""
 	
 	spbtn r_exec_lsp,r_exec_lsp

@@ -1,10 +1,8 @@
 *umi7_6
 ;ベアトリーチェの誕生
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_6
 mov $name_chapter_save, "7_06"
-~
 new_chapter date_scenario_7_6,scenario_7_6
 gstc 66
 textoff

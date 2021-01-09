@@ -1,11 +1,9 @@
 *umi8_9
 ;ベルンの出題
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_9
 mov $name_chapter_save, "8_09"
 mov %bern_game_mode,0
-~
 new_chapter date_scenario_8_9,scenario_8_9
 gstc 129
 seplay 1,61,71
@@ -3548,6 +3546,7 @@ lbg s0_3,"different_space_1a"
 lss s0_9,"but","d11_futeki2" ;1
 z_order_override2 s0_9,s0_7
 flush 24
+msgwnd_but
 *d60703
 d [lv 0*"10"*"80100780"]`「いや、いいんだ。`[@][lv 0*"10"*"80100781"]`犯人が閉じ込められても。`[@][lv 0*"10"*"80100782"]`……犯人がもう１人いればいい！」`[\]
 lss s0_8,"bea","a11_1_majime5star" ;1

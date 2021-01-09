@@ -1,10 +1,8 @@
 *umi8_10
 ;遅れてきた来訪者
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_10
 mov $name_chapter_save, "8_10"
-~
 new_chapter date_scenario_8_10,scenario_8_10
 gstc 161
 textoff

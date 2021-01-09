@@ -1,10 +1,8 @@
 *umi6_16
 ;悪魔の結婚式
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_16
 mov $name_chapter_save, "6_16"
-~
 new_chapter date_scenario_6_16,scenario_6_16
 gstc 54
 textoff

@@ -1,10 +1,8 @@
 *umi6_9
 ;自立
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_9
 mov $name_chapter_save, "6_09"
-~
 new_chapter date_scenario_6_9,scenario_6_9
 gstc 45
 meplay 1,12,70

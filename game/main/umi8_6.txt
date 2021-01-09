@@ -1,10 +1,8 @@
 *umi8_6
 ;クイズ大会（第一問）
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_6
 mov $name_chapter_save, "8_06"
-~
 new_chapter date_scenario_8_6,scenario_8_6
 if %bgm_current_id != 187 bgmplay 187,71,0
 rain_load s0_11

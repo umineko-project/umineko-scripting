@@ -1,10 +1,8 @@
 *umi7_8
 ;こいつが、犯人だ
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_8
 mov $name_chapter_save, "7_08"
-~
 new_chapter date_scenario_7_8,scenario_7_8
 gstc 68
 meplay 1,13,70

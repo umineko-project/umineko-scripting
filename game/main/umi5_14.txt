@@ -1,10 +1,8 @@
 *umi5_14
 ;10/5（日）24:00 幻想大法廷
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_14
 mov $name_chapter_save, "5_14"
-~
 new_chapter date_scenario_5_14,scenario_5_14
 gstc 24
 textoff

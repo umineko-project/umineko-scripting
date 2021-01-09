@@ -1,10 +1,8 @@
 *umi8_13
 ;真実の書
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_8_13
 mov $name_chapter_save, "8_13"
-~
 new_chapter date_scenario_8_13,scenario_8_13
 gstc 168
 textoff

@@ -1,10 +1,8 @@
 *umi6_8
 ;ゼパルとフルフル
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_8
 mov $name_chapter_save, "6_08"
-~
 new_chapter date_scenario_6_8,scenario_6_8
 gstc 43
 textoff

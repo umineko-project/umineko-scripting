@@ -1,10 +1,8 @@
 *umi5_3
 ;密室結界
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_3
 mov $name_chapter_save, "5_03"
-~
 new_chapter date_scenario_5_3,scenario_5_3
 gstc 4
 textoff

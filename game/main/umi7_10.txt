@@ -1,10 +1,8 @@
 *umi7_10
 ;初めての友人
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_10
 mov $name_chapter_save, "7_10"
-~
 new_chapter date_scenario_7_10,scenario_7_10
 gstc 70
 textoff

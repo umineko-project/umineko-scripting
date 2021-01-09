@@ -1,10 +1,8 @@
 *umi6_2
 ;ゲームマスター
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_2
 mov $name_chapter_save, "6_02"
-~
 new_chapter date_scenario_6_2,scenario_6_2
 gstc 34
 textoff

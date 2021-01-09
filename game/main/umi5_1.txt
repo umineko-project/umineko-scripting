@@ -1,10 +1,8 @@
 *umi5_1
 ;奇跡の魔法
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_1
 mov $name_chapter_save, "5_01"
-~
 new_chapter date_scenario_5_1,scenario_5_1
 gstc 2
 textoff

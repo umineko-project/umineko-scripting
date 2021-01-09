@@ -1,10 +1,8 @@
 *umi6_14
 ;10/5（日）02:22 小さな矛盾
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_14
 mov $name_chapter_save, "6_14"
-~
 new_chapter date_scenario_6_14,scenario_6_14
 gstc 51
 meplay 1,13,70

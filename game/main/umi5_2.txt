@@ -1,10 +1,8 @@
 *umi5_2
 ;正式なミステリー
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_5_2
 mov $name_chapter_save, "5_02"
-~
 new_chapter date_scenario_5_2,scenario_5_2
 gstc 3
 textoff

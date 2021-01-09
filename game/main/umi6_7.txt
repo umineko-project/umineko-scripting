@@ -1,10 +1,8 @@
 *umi6_7
 ;10/4（土）22:59 別の解釈の魔法
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_7
 mov $name_chapter_save, "6_07"
-~
 new_chapter date_scenario_6_7,scenario_6_7
 gstc 42
 textoff

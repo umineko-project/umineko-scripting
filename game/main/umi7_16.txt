@@ -1,10 +1,8 @@
 *umi7_16
 ;黄金郷への旅立ち
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_7_16
 mov $name_chapter_save, "7_16"
-~
 new_chapter date_scenario_7_16,scenario_7_16
 gstc 76
 textoff

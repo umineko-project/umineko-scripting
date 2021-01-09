@@ -1,10 +1,8 @@
 *umi6_17
 ;恋人達の決闘
 log_reset
-jskip_s
 mov $name_chapter_r_click,r_click_chapters_6_17
 mov $name_chapter_save, "6_17"
-~
 new_chapter date_scenario_6_17,scenario_6_17
 gstc 55
 meplay 1,16,50
