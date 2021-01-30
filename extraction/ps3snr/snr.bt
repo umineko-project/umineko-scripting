@@ -422,18 +422,28 @@ struct SNRFILEHEADER {
 #endif
 
 };
+
+// NOTE on <optimize=false>
+// When dealing with variable length arrays where the length is not an int,
+// 010 editor will fail to work properly due to an "optimization": https://www.sweetscape.com/010editor/manual/ArraysDuplicates.htm
+// You need to add <optimize=false> at the end of the struct to get it to work properly.
+
 struct TABLE_MASKS {
+    int table_length;
     int entries_num;
     struct {
-        char data[0x0C];
-    } entries[entries_num];
+        unsigned short len;
+        char data[len];
+    } entries[entries_num] <optimize=false>;
 };
 struct TABLE_BACKGROUNDS {
+    int table_length;
     int entries_num;
     struct TABLE_BACKGROUNDS_ENTRY {
-        char data[0x18];
+        unsigned short len;
+        char data[len];
         short unk1;
-    } entries[entries_num];
+    } entries[entries_num] <optimize=false>;
 };
 struct TABLE_BUSTUP {
     int entries_num;
