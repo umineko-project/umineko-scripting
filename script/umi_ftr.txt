@@ -32921,6 +32921,14 @@ if %game_language != 2 jumpf
 	lsp 304,":s;#FFFFFF`{p:8:Interface}",135,%y+300
 ~
 
+if %game_language != 3 jumpf
+	lsp 300,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: 初始游戏设置 }{p:10:——————}}",135,%y-100
+	lsp 301,":s;#FFFFFF`{p:8:游戏语言}",135,%y
+	lsp 302,":s;#FFFFFF`{p:8:窗口大小}",135,%y+100
+	lsp 303,":s;#FFFFFF`{p:8:显示模式}",135,%y+200
+	lsp 304,":s;#FFFFFF`{p:8:操作界面}",135,%y+300
+~
+
 *first_setting2
 ;Game language button
 	spbtn 268,68
@@ -33101,6 +33109,14 @@ if %game_language != 2 jumpf
 	notif  %full_window_auto = 0 lsp 281,":s;#C7C7C7#FFFFFF`{p:8:Auto}",1559,%y+200
 	if %full_window_auto = 0 lsp 281,":s;#FFFFFF`{p:8:Auto}",1559,%y+200
 ~
+if %game_language != 3 jumpf
+	notif  %full_window_auto = 1 lsp 279,":s;#C7C7C7#FFFFFF`{p:8:窗口化}",850,%y+200
+	if %full_window_auto = 1 lsp 279,":s;#FFFFFF`{p:8:窗口化}",850,%y+200
+	notif  %full_window_auto = 2 lsp 280,":s;#C7C7C7#FFFFFF`{p:8:全屏幕}",1213,%y+200
+	if %full_window_auto = 2 lsp 280,":s;#FFFFFF`{p:8:全屏幕}",1213,%y+200
+	notif  %full_window_auto = 0 lsp 281,":s;#C7C7C7#FFFFFF`{p:8:自动}",1559,%y+200
+	if %full_window_auto = 0 lsp 281,":s;#FFFFFF`{p:8:自动}",1559,%y+200
+~
 return
 
 
@@ -33124,6 +33140,12 @@ if %game_language != 2 jumpf
 	notif %interface_kb_dual = 1 lsp 271,":s;#C7C7C7#FFFFFF`{p:8:DualShock}",1377,%y+300
 	if %interface_kb_dual = 1 lsp 271,":s;#FFFFFF`{p:8:DualShock}",1377,%y+300
 ~
+if %game_language != 3 jumpf
+	notif %interface_kb_dual = 0 lsp 270,":s;#C7C7C7#FFFFFF`{p:8:键盘鼠标}",1010,%y+300
+	if %interface_kb_dual = 0 lsp 270,":s;#FFFFFF`{p:8:键盘鼠标}",1010,%y+300 : vsp 100,0
+	notif %interface_kb_dual = 1 lsp 271,":s;#C7C7C7#FFFFFF`{p:8:DualShock}",1377,%y+300
+	if %interface_kb_dual = 1 lsp 271,":s;#FFFFFF`{p:8:DualShock}",1377,%y+300
+~
 return
 
 
@@ -33137,6 +33159,7 @@ return
 	if %game_language = 0 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}Custom}",1280,%y+100
 	if %game_language = 1 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}Пользовательский}",1280,%y+100
 	if %game_language = 2 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}Personalizada}",1280,%y+100
+	if %game_language = 3 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}自定义}",1280,%y+100
 	~
 	lsp 297,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,%y+112
 	lsp 298,":a/2,0,3;graphics\menu_en\config\config_right.png",1640,%y+112
@@ -33151,6 +33174,9 @@ if %game_language != 0 jumpf
 ~
 if %game_language != 2 jumpf
 	lsp 272,":s;#C7C7C7#FFFFFF`{p:8:Aplicar}",800,%y+500
+~
+if %game_language != 3 jumpf
+	lsp 272,":s;#C7C7C7#FFFFFF`{p:8:应用}",800,%y+500
 ~
 return
 
