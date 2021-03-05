@@ -143,7 +143,7 @@ if %BGM_Id == 29	mov $BGM_Title,"核心" : return
 if %BGM_Id == 30	mov $BGM_Title,"些微的黑暗" : return
 if %BGM_Id == 31	mov $BGM_Title,"夜之眼" : return
 if %BGM_Id == 32	mov $BGM_Title,"我封闭的心" : return
-if %BGM_Id == 33	mov $BGM_Title,"安魂曲" : return
+if %BGM_Id == 33	mov $BGM_Title,"镇魂歌" : return
 if %BGM_Id == 34	mov $BGM_Title,"思维" : return
 if %BGM_Id == 35	mov $BGM_Title,"世界尽头" : return
 if %BGM_Id == 36	mov $BGM_Title,"播放" : return
