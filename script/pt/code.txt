@@ -222,7 +222,7 @@ if %BGM_Id == 153 	mov $BGM_Title,"Sequentia Antidemônio" : return
 if %BGM_Id == 154 	mov $BGM_Title,"campo de batalha" : return
 if %BGM_Id == 155 	mov $BGM_Title,"Renascimento" : return
 if %BGM_Id == 156 	mov $BGM_Title,"O Caminho" : return
-if %BGM_Id == 157 	mov $BGM_Title,"libertadorliberado" : return
+if %BGM_Id == 157 	mov $BGM_Title,"libertadorlibertado" : return
 if %BGM_Id == 158 	mov $BGM_Title,"Obrigada por tudo pessoal" : return
 if %BGM_Id == 159 	mov $BGM_Title,"Abelha Rainha Infante" : return
 if %BGM_Id == 160 	mov $BGM_Title,"nascimento de uma nova bruxa(versão curta)" : return
