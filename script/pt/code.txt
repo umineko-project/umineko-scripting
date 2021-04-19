@@ -161,7 +161,7 @@ if %BGM_Id == 91	mov $BGM_Title,"Floresta Mística" : return
 if %BGM_Id == 92	mov $BGM_Title,"O Conto do Persistente Sakutarou" : return
 if %BGM_Id == 93	mov $BGM_Title,"Paralelo" : return
 if %BGM_Id == 95	mov $BGM_Title,"599 milhões de ruínas" : return
-if %BGM_Id == 96	mov $BGM_Title,"Happy Maria!(instrumental)" : return
+if %BGM_Id == 96	mov $BGM_Title,"Maria Contente!(instrumental)" : return
 if %BGM_Id == 97	mov $BGM_Title,"Circundante" : return
 if %BGM_Id == 98	mov $BGM_Title,"abrir fogo" : return
 if %BGM_Id == 99	mov $BGM_Title,"morte(por estupefação)" : return
@@ -169,10 +169,10 @@ if %BGM_Id == 100	mov $BGM_Title,"debandada mortal" : return
 if %BGM_Id == 101	mov $BGM_Title,"Victima propiciatoria(Bode Expiatório)" : return
 if %BGM_Id == 102	mov $BGM_Title,"Revolta" : return
 if %BGM_Id == 103	mov $BGM_Title,"Rapsódia da Catástrofe do Purgatório" : return
-if %BGM_Id == 104	mov $BGM_Title,"Happy Maria!" : return
+if %BGM_Id == 104	mov $BGM_Title,"Maria Contente!" : return
 if %BGM_Id == 105	mov $BGM_Title,"mergulho à emergência" : return
-if %BGM_Id == 106	mov $BGM_Title,"dir" : return
-if %BGM_Id == 107	mov $BGM_Title,"Endless Nine" : return
+if %BGM_Id == 106	mov $BGM_Title,"dir(a você)" : return
+if %BGM_Id == 107	mov $BGM_Title,"Nove Contínuo" : return
 if %BGM_Id == 108	mov $BGM_Title,"sonhosdispersos" : return
 if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
 if %BGM_Id == 110	mov $BGM_Title,"rodopio"  : return
@@ -222,7 +222,7 @@ if %BGM_Id == 153 	mov $BGM_Title,"Sequentia Antidemônio" : return
 if %BGM_Id == 154 	mov $BGM_Title,"campo de batalha" : return
 if %BGM_Id == 155 	mov $BGM_Title,"Renascimento" : return
 if %BGM_Id == 156 	mov $BGM_Title,"O Caminho" : return
-if %BGM_Id == 157 	mov $BGM_Title,"libertadorliberado" : return
+if %BGM_Id == 157 	mov $BGM_Title,"libertadorlibertado" : return
 if %BGM_Id == 158 	mov $BGM_Title,"Obrigada por tudo pessoal" : return
 if %BGM_Id == 159 	mov $BGM_Title,"Abelha Rainha Infante" : return
 if %BGM_Id == 160 	mov $BGM_Title,"nascimento de uma nova bruxa(versão curta)" : return
@@ -233,7 +233,7 @@ if %BGM_Id == 164 	mov $BGM_Title,"chamada-reflexão" : return
 if %BGM_Id == 165 	mov $BGM_Title,"chuva" : return
 if %BGM_Id == 166 	mov $BGM_Title,"7-pesos" : return
 if %BGM_Id == 167 	mov $BGM_Title,"outono" : return
-if %BGM_Id == 168 	mov $BGM_Title,"bore-ral" : return
+if %BGM_Id == 168 	mov $BGM_Title,"bore-ral(bolero pela liberdade)" : return
 if %BGM_Id == 169 	mov $BGM_Title,"balada-contínua" : return
 if %BGM_Id == 170 	mov $BGM_Title,"Canção sem nome ver.2007(instrumental)" : return
 if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia" : return
