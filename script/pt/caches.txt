@@ -145,7 +145,7 @@
 	textoff
 	lsp s0_3,kakera_memory5_src,0,0
 		*kak_5p
-		d2 [ak][text_fade_t 0][text_speed_t 10]`"Obrigada por entender, Battler‐kun. ...Mas você tem sorte, sabia."{n}"Hã? Por quê?"{n}"Eu gostaria de sair se eu pudesse."{n}"...Ihihihi! Eu aposto que iria. Eu vou deixar vocês adultos com sua alegre conversa familiar sobre a herança."`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Obrigada por entender, Battler‐kun. ...Mas você tem sorte, sabia?"{n}"Hã? Por quê?"{n}"Eu gostaria de sair se eu pudesse."{n}"...Ihihihi! Eu aposto que iria. Eu vou deixar vocês adultos com sua alegre conversa familiar sobre a herança."`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
