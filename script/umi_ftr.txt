@@ -29087,7 +29087,7 @@ return
 	if %BtnRes=2 dec %mcurrent_page : seplay 9,1010,100 : inc %meffect_left ;Уменьшает %mcurrent_page на 1
  	if %BtnRes=3 inc %mcurrent_page : seplay 9,1010,100 : inc %meffect_right ;Увеличивает %mcurrent_page на 1
 	if %BtnRes=-2 && %mcurrent_page>1  dec %mcurrent_page : seplay 9,1010,100 : inc %meffect_left
-	if %BtnRes=-3 && %mcurrent_page<5  inc %mcurrent_page : seplay 9,1010,100 : inc %meffect_right
+	if %CHIRU_MODE == 0 && %BtnRes=-3 && %mcurrent_page<5  inc %mcurrent_page : seplay 9,1010,100 : inc %meffect_right
 	if %CHIRU_MODE == 1 && %BtnRes=-3 && %mcurrent_page<7  inc %mcurrent_page : seplay 9,1010,100 : inc %meffect_right
 	
 	if %meffect_right <> 1 jumpf
