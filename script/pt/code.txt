@@ -153,7 +153,7 @@ if %BGM_Id == 83	mov $BGM_Title,"dorativa" : return
 if %BGM_Id == 84	mov $BGM_Title,"Pavor do Túmulo -versão rítmica-" : return
 if %BGM_Id == 85	mov $BGM_Title,"Eternidade" : return
 if %BGM_Id == 86	mov $BGM_Title,"no limite" : return
-if %BGM_Id == 87	mov $BGM_Title,"Como o temporal" : return
+if %BGM_Id == 87	mov $BGM_Title,"Como o vendaval" : return
 if %BGM_Id == 88	mov $BGM_Title,"Estilo F" : return
 if %BGM_Id == 89	mov $BGM_Title,"Relógio Monocromático" : return
 if %BGM_Id == 90	mov $BGM_Title,"apatia" : return
