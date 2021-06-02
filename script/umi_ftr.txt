@@ -33394,8 +33394,8 @@ mov $Free3,verification_end
 
 *full_verify_locale_skip
 
-mov $Free1,""
-verify_files %Free1,"game.hash",$Free1
+;mov $Free1,""
+;verify_files %Free1,"game.hash",$Free1
 
 _csp 301
 lbsp2 301,":s;#FFFFFF`"+verification_verifying+$Free2+$Free1+$Free3,140,155
