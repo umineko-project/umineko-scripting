@@ -299,16 +299,16 @@ stralias verify_updates,"请检查你是否安装了最近的全部更新。无�
 stralias verify_engine,"请检查你是否正在使用最新版本的游戏代码和引擎。目前的引擎和代码互不兼容。"
 
 stralias verification_title,"游戏文件校验"
-stralias verification_verifying,"正在校验文件…{n}请注意，这可能要花费几分钟。{n}"
+stralias verification_verifying,"为保证游戏处于最新版本，建议使用{c:86EF9C:游戏启动器}检查版本更新。{n}{n}正在校验文件…{n}请注意，这可能要花费几分钟。{n}"
 stralias verification_legend,"文字颜色代表: "
 stralias verification_modified," 文件被修改"
 stralias verification_missing," 文件缺失"
-stralias verification_good,"一切正常！{n}"
-stralias verification_bad,"游戏文件校验失败！{n}"
+stralias verification_good,"一切正常。{n}"
+stralias verification_bad,"以下文件校验错误，请手动修复：{n}"
 stralias verification_nohash,"游戏路径下的 game.hash 文件丢失！{n}"
 stralias verification_unsupported,"游戏路径下的 game.hash 文件不受支持！{n}"
 stralias verification_outdated,"游戏路径下的 game.hash 文件版本过旧！{n}"
-stralias verification_end,"点击右键继续！"
+stralias verification_end,"点击右键开始游戏。"
 
 stralias verification_ancient,"你的游戏已经 6 个月没有更新过了，请检查更新！"
 
