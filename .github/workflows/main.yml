@@ -152,3 +152,25 @@ jobs:
           asset_path: ./ciout/umineko-wh-scripts_r${{ env.BUILD }}_dev.zip
           asset_name: umineko-wh-scripts_r${{ env.BUILD }}_dev.zip
           asset_content_type: application/zip
+
+      - name: Upload CN
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-cn-scripts_r${{ env.BUILD }}.zip
+          asset_name: umineko-cn-scripts_r${{ env.BUILD }}.zip
+          asset_content_type: application/zip
+
+      - name: Upload CN (dev)
+        if: github.repository_owner == 'umineko-project'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-cn-scripts_r${{ env.BUILD }}_dev.zip
+          asset_name: umineko-cn-scripts_r${{ env.BUILD }}_dev.zip
+          asset_content_type: application/zip
