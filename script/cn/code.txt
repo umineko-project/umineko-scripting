@@ -216,7 +216,7 @@ if %BGM_Id == 103	mov $BGM_Title,"炼狱凶狂葬曲" : return
 if %BGM_Id == 104	mov $BGM_Title,"祝玛利亚快乐！" : return
 if %BGM_Id == 105	mov $BGM_Title,"跌入危急" : return
 if %BGM_Id == 106	mov $BGM_Title,"你" : return
-if %BGM_Id == 107	mov $BGM_Title,"Endless Nine" : return
+if %BGM_Id == 107	mov $BGM_Title,"九九无尽" : return
 if %BGM_Id == 108	mov $BGM_Title,"梦境终末倾泻者" : return
 if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
 if %BGM_Id == 110	mov $BGM_Title,"转呀转"  : return
@@ -289,7 +289,7 @@ if %BGM_Id == 176 	mov $BGM_Title,"人偶剧" : return
 if %BGM_Id == 177 	mov $BGM_Title,"s/he-end ～她们或他们的终焉～" : return
 if %BGM_Id == 179 	mov $BGM_Title,"无名之歌 完整版伴奏" : return
 if %BGM_Id == 180 	mov $BGM_Title,"世界的终结" : return
-if %BGM_Id == 181 	mov $BGM_Title,"goddess-gardena ～于众女神的庭院～" : return
+if %BGM_Id == 181 	mov $BGM_Title,"goddess-gardena ～于众女神的庭园～" : return
 if %BGM_Id == 183 	mov $BGM_Title,"嘲笑" : return
 if %BGM_Id == 184 	mov $BGM_Title,"黄泉路堕落" : return
 if %BGM_Id == 185 	mov $BGM_Title,"行刑者" : return

@@ -2,8 +2,8 @@ language japanese
 
 ; Game window caption 
 
-if %CHIRU_MODE == 0 caption "海猫鸣泣之时 ~魔女与推理的轮舞曲~ 测试版 (" + $CHIRU_MODE + ")"
-if %CHIRU_MODE == 1 caption "海猫鸣泣之时散 ~真实与幻想的夜想曲~ 测试版 (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 0 caption "海猫鸣泣之时 ~魔女与推理的轮舞曲~ 公测版 (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 1 caption "海猫鸣泣之时散 ~真实与幻想的夜想曲~ 公测版 (" + $CHIRU_MODE + ")"
 
 ;--Textboxes--
 
@@ -298,8 +298,8 @@ stralias verify_video,"请检查你的 video 文件夹是否正确解压。无�
 stralias verify_updates,"请检查你是否安装了最近的全部更新。无法检测到其中一些文件。"
 stralias verify_engine,"请检查你是否正在使用最新版本的游戏代码和引擎。目前的引擎和代码互不兼容。"
 
-stralias verification_title,"游戏文件校验"
-stralias verification_verifying,"为保证游戏处于最新版本，建议使用{c:86EF9C:启动器}检查更新。{n}{n}正在校验文件…{n}请注意，这可能要花费几分钟。{n}{n}"
+stralias verification_title,"检查游戏完整性"
+stralias verification_verifying,"为保证游戏处于最新版本，建议使用{c:86EF9C:启动器}检查更新。{n}{n}正在校验游戏文件…{n}请注意，这可能要花费几分钟。{n}{n}"
 stralias verification_legend,"文字颜色代表: "
 stralias verification_modified," 文件被修改"
 stralias verification_missing," 文件缺失"
