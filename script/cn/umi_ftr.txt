@@ -13734,107 +13734,107 @@ lsp 4,":c;graphics\omake\touhou_1.png",0,0
 print 28
 
 mov %tmp,20
-lsph %tmp,":s#ffff00ジェシー！！！",0,0 : inc %tmp
-lsph %tmp,":s#00ffff　キャーーーーーーーー！！！",0,0 : inc %tmp
-lsph %tmp,":s#80ff00　　　　　　　　　　　ｷﾀ━━━(ﾟ∀ﾟ)━━━!!!! ",0,0 : inc %tmp
-lsph %tmp,":s#ff0000☆つるぺったん☆　　　　　　　　　　　ジェシ様！！！",0,0 : inc %tmp
-lsph %tmp,":s#ffff00ジェシジェシジェシさまぁああぁああ〜〜〜〜〜〜☆",0,0 : inc %tmp
-lsph %tmp,":s#0000ffらめぇ〜〜〜〜〜　落ちるぅ〜〜〜〜",0,0 : inc %tmp
-lsph %tmp,":s#ffffff　　　　　　　ジェシさま最高！！！",0,0 : inc %tmp
-lsph %tmp,":s#ff8040　お姉様ぁあああぁああ〜〜〜〜☆",0,0 : inc %tmp
+lsph %tmp,":s#ffff00杰西——！！！",0,0 : inc %tmp
+lsph %tmp,":s#00ffff　呀————————！！！",0,0 : inc %tmp
+lsph %tmp,":s#80ff00　　　　　　　　　　　来力来力━━━(ﾟ∀ﾟ)━━━!!!! ",0,0 : inc %tmp
+lsph %tmp,":s#ff0000☆光溜溜平坦坦☆　　　　　　　　　　　杰西大人！！！",0,0 : inc %tmp
+lsph %tmp,":s#ffff00杰西杰西杰西大人啊啊啊啊啊啊～～～～～～☆",0,0 : inc %tmp
+lsph %tmp,":s#0000ff不行了～～～～～　要掉下去了～～～～",0,0 : inc %tmp
+lsph %tmp,":s#ffffff　　　　　　　杰西大人赛高！！！",0,0 : inc %tmp
+lsph %tmp,":s#ff8040　姐姐大人啊啊啊啊啊啊～～～～☆",0,0 : inc %tmp
 
 mov %tmp,30
 lsph %tmp,":a;graphics\omake\pettan.png",0,0 : inc %tmp
 setwindow4 31,16,50,2500,0,50,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ff0000（じゃない！！！）",0,0 : inc %tmp
+lsph %tmp,":s#ff0000（个头啦！！！）",0,0 : inc %tmp
 
-lsph %tmp,":s#80ff00Title ：つるぺったん",0,0 : inc %tmp
+lsph %tmp,":s#80ff00Title ：光溜溜平坦坦",0,0 : inc %tmp
 lsph %tmp,":s#00ffffArtist：Silver Forest ",0,0 : inc %tmp
 
 
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
 mov %tmp,10
-lsph %tmp,":s#00ffffぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffff00　ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ff8040　　ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#80ff00　ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#0000ffぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ff0000　ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#00ffff　　ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffffff　ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#00ffff平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ffff00　平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ff8040　　平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#80ff00　平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#0000ff平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ff0000　平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#00ffff　　平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ffffff　平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
 
 mov %tmp,40
-lsph %tmp,":s#ff0000　　　　( ﾟ∀ﾟ)o彡ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#ff0000　　　　( ﾟ∀ﾟ)o彡平坦坦☆平坦坦☆光溜溜平坦坦☆☆",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　( ﾟ∀ﾟ)o彡( ﾟ∀ﾟ)o彡( ﾟ∀ﾟ)o彡( ﾟ∀ﾟ)o彡",0,0 : inc %tmp
-lsph %tmp,":s#00ffff　　　( ﾟ∀ﾟ)o彡ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#80ff00( ﾟ∀ﾟ)o彡ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#00ffff　　　( ﾟ∀ﾟ)o彡平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#80ff00( ﾟ∀ﾟ)o彡平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
 lsph %tmp,":s#0000ff　　( ﾟ∀ﾟ)o彡( ﾟ∀ﾟ)o彡( ﾟ∀ﾟ)o彡( ﾟ∀ﾟ)o彡( ﾟ∀ﾟ)o彡",0,0 : inc %tmp
 lsph %tmp,":s#00ffff　　　　　　( ﾟ∀ﾟ)o彡ぺったん☆ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ff8040　( ﾟ∀ﾟ)o彡ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffff00　　( ﾟ∀ﾟ)o彡ぺったん☆ぺったん☆つるぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#ff8040　( ﾟ∀ﾟ)o彡平坦坦☆平坦坦☆光溜溜平坦坦☆,0,0 : inc %tmp
+lsph %tmp,":s#ffff00　　( ﾟ∀ﾟ)o彡平坦坦☆平坦坦☆光溜溜平坦坦☆",0,0 : inc %tmp
 
 
 mov %tmp,50
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#00ffffぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffff00　　　　ぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#00ffff平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
+lsph %tmp,":s#ffff00　　　　平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
 
 setwindow4 31,16,50,2500,0,50,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ff8040　ぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#80ff00　　　　　ぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#0000ff　　　　ぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ff0000　　ぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#ff8040　平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
+lsph %tmp,":s#80ff00　　　　　平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
+lsph %tmp,":s#0000ff　　　　平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
+lsph %tmp,":s#ff0000　　平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
 
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#00ffff　ぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffffffぺったん　　　ぺったん　　　餅ぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#00ffff　平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
+lsph %tmp,":s#ffffff平坦坦　　　平坦坦　　　年糕压扁扁☆",0,0 : inc %tmp
 
 
 mov %tmp,60
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#00ffffぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffff00　　　ぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#00ffff平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ffff00　　　平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
 
 setwindow4 31,16,50,2500,0,50,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ff8040　　　ぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#80ff00ぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#0000ff　　　　　　ぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ff0000　　ぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#ff8040　　　平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#80ff00平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#0000ff　　　　　　平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ff0000　　平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
 
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#00ffff　　　　　ぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffffffぺったん　　　ぺったん　　　胸ぺったん☆",0,0 : inc %tmp
+lsph %tmp,":s#00ffff　　　　　平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ffffff平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 : inc %tmp
 
 
 mov %tmp,70
 setwindow4 31,16,36,2500,0,36,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ffff00　　　　　　　　許可取ってんのかよ氏ね",0,0 : inc %tmp
-lsph %tmp,":s#ffff00　　　　　　　　　　　　　　　　↑ちゃんと取りました！",0,0 : inc %tmp
+lsph %tmp,":s#ffff00　　　　　　　　甘霖娘有没有授权啊去shi吧",0,0 : inc %tmp
+lsph %tmp,":s#ffff00　　　　　　　　　　　　　　　　↑有授权哦！",0,0 : inc %tmp
 lsph %tmp,":a;graphics\omake\pettan_aa2.png",270,0 : inc %tmp
 
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ff8040　　　　全俺が萌えた！！！",0,0 : inc %tmp
+lsph %tmp,":s#ff8040　　　　我都可以！！！",0,0 : inc %tmp
 
 setwindow4 31,16,50,2500,0,50,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
 lsph %tmp,":s#00ffff☆　　（　＾∇＾）σ）≧∇≦）　　☆",0,0 : inc %tmp
 
 lsph %tmp,":s#ff0000［←樹海］",0,0 : inc %tmp
-lsph %tmp,":s#ff0000　　||　　　　オワタ ┗(^o^）┓三",0,0 : inc %tmp
+lsph %tmp,":s#ff0000　　||　　　　完蛋力 ┗(^o^）┓三",0,0 : inc %tmp
 lsph %tmp,":s#ff0000　　||　　　　　　　　┏┗　 三",0,0 : inc %tmp
 
 mov %tmp,80
 setwindow4 31,16,50,2500,0,50,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ffff00ヽξ(`・３・)ﾉ うぜぇぜ！",0,0 : inc %tmp
+lsph %tmp,":s#ffff00ヽξ(`・３・)ﾉ 烦死嘞！",0,0 : inc %tmp
 lsph %tmp,":s#ffff00　　（　へ）",0,0 : inc %tmp
 lsph %tmp,":s#ffff00　　 く ",0,0 : inc %tmp
 
 setwindow4 31,16,36,2500,0,36,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ff0000この早さなら言える！　朱志香は俺の嫁！！！",0,0 : inc %tmp
-lsph %tmp,":s#ff0000　　　　　　　　　　　　　　いや、俺の嫁だ！！！",0,0 : inc %tmp
-lsph %tmp,":s#ff0000　　　　　　　　　　　　　　　　　　　朱志香なら、俺の隣で寝ているぜ",0,0 : inc %tmp
+lsph %tmp,":s#ff0000这个速度没人看得见！朱志香是我老婆！！！",0,0 : inc %tmp
+lsph %tmp,":s#ff0000　　　　　　　　　　　　　　滚是我老婆！！！",0,0 : inc %tmp
+lsph %tmp,":s#ff0000　　　　　　　　　　　　　　　　　　　朱志香就睡在我旁边呢",0,0 : inc %tmp
 
 
-;lsph %tmp,":s#ff0000　　　　うぜぇぜ！ヽξ(`・３・)ﾉ ",0,0 : inc %tmp
+;lsph %tmp,":s#ff0000　　　　烦死嘞！ヽξ(`・３・)ﾉ ",0,0 : inc %tmp
 ;lsph %tmp,":s#ff0000　　　　　　　　　　　（へ　）",0,0 : inc %tmp
 ;lsph %tmp,":s#ff0000　　　 　　　　　　　　　　>  ",0,0 : inc %tmp
 
@@ -13843,14 +13843,14 @@ mov %tmp,110
 lsph %tmp,":s#ffffff＼　　　∩─−、　　　＝＝ ",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　＼／　●　､_ ｀ヽ 　　＝＝＝",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　／＼（　●　●　| つ",0,0 : inc %tmp
-lsph %tmp,":s#ffffff　| 　Ｘ＿入＿ノ　　ミ　　　そんな貧乳で俺様が釣られクマ――",0,0 : inc %tmp
+lsph %tmp,":s#ffffff　| 　Ｘ＿入＿ノ　　ミ　　　这种贫乳可是钓不到本熊的啊",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　、　（＿／　　　ノ　／⌒l ",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　／＼＿＿＿ノ＿／　／　　＝＝＝＝",0,0 : inc %tmp
 lsph %tmp,":s#ffffffく　　　　　　　　　　ノ　　＝＝＝＝",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　＼　＼＿　　　　　＼",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　　＼＿＿）　　　　　＼　　　＝＝＝＝　（⌒",0,0 : inc %tmp
 lsph %tmp,":s#ffffff　　　　＼　　＿＿＿＿　＼＿＿　　（⌒（⌒",0,0 : inc %tmp
-lsph %tmp,":s#ffffff　　　　　＼＿＿＿）＿＿＿）（⌒　（⌒　　ズザザザ",0,0 : inc %tmp
+lsph %tmp,":s#ffffff　　　　　＼＿＿＿）＿＿＿）（⌒　（⌒　　嗖嗖嗖",0,0 : inc %tmp
 
 
 
@@ -13860,7 +13860,7 @@ lsph %tmp,":a;graphics\omake\pettan_aa1.png",270,0 : inc %tmp
 lsph %tmp,":a;graphics\omake\pettan_aa3.png",270,0 : inc %tmp
 
 setwindow4 31,16,50,2500,0,50,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-;lsph %tmp,":s#ff0000全俺が萌えた！！！",0,0 : 
+;lsph %tmp,":s#ff0000我都可以！！！",0,0 : 
 inc %tmp
 
 setwindow4 31,16,50,2500,0,50,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
@@ -13875,14 +13875,14 @@ lsph %tmp,":s#ffffff／hidden／hidden／hidden／hidden／hidden／hidden",0,0 
 
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
 mov %tmp,100
-lsph %tmp,":s#ffff00きゃーきゃーきゃーーー！！！",0,0 : inc %tmp
+lsph %tmp,":s#ffff00呀—呀—呀———！！！",0,0 : inc %tmp
 lsph %tmp,":s#00ffff　にゃり〜〜〜〜〜ん☆",0,0 : inc %tmp
-lsph %tmp,":s#80ff00（＞０＜）★タイが曲がっていてよ★（＞０＜） ",0,0 : inc %tmp
-lsph %tmp,":s#ff0000☆つるぺったん☆",0,0 : inc %tmp
-lsph %tmp,":s#ffff00ジェシジェシジェシさまぁああぁああ〜〜〜〜〜〜☆",0,0 : inc %tmp
-lsph %tmp,":s#0000ffらめぇ〜〜〜〜〜　落ちるぅ〜〜〜〜",0,0 : inc %tmp
-lsph %tmp,":s#ffffff　　　　　　　ジェシさま最高！！！",0,0 : inc %tmp
-lsph %tmp,":s#ff8040　お姉様ぁあああぁああ〜〜〜〜☆",0,0 : inc %tmp
+lsph %tmp,":s#80ff00（＞０＜）★领带歪掉了哟★（＞０＜） ",0,0 : inc %tmp
+lsph %tmp,":s#ff0000☆光溜溜平坦坦☆",0,0 : inc %tmp
+lsph %tmp,":s#ffff00杰西杰西杰西大人啊啊啊啊啊啊～～～～～～☆",0,0 : inc %tmp
+lsph %tmp,":s#0000ff不行了～～～～～　要掉下去了～～～～",0,0 : inc %tmp
+lsph %tmp,":s#ffffff　　　　　　　杰西大人赛高！！！",0,0 : inc %tmp
+lsph %tmp,":s#ff8040　姐姐大人啊啊啊啊啊啊～～～～☆",0,0 : inc %tmp
 
 
 bgmplay 94,100,1
