@@ -308,7 +308,7 @@ stralias verification_bad,"以下文件校验错误，请检查游戏资源是�
 stralias verification_nohash,"游戏路径下的 game.hash 文件丢失！{n}"
 stralias verification_unsupported,"游戏路径下的 game.hash 文件不受支持！{n}"
 stralias verification_outdated,"游戏路径下的 game.hash 文件版本过旧！{n}"
-stralias verification_end,"点击右键开始游戏。"
+stralias verification_end,"点击鼠标右键开始游戏。"
 
 stralias verification_ancient,"你的游戏已经 6 个月没有更新过了，请检查更新！"
 
