@@ -178,7 +178,7 @@ if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
 if %BGM_Id == 110	mov $BGM_Title,"rodopio"  : return
 if %BGM_Id == 111 	mov $BGM_Title,"Futuro" : return
 if %BGM_Id == 112 	mov $BGM_Title,"Irrisão Azure" : return
-if %BGM_Id == 113 	mov $BGM_Title,"A Grande Detetive Tudo Sabe" : return
+if %BGM_Id == 113 	mov $BGM_Title,"A Grande Detetive Sabe" : return
 if %BGM_Id == 114 	mov $BGM_Title,"Soirée sem sorrisos" : return
 if %BGM_Id == 115 	mov $BGM_Title,"um" : return
 if %BGM_Id == 116 	mov $BGM_Title,"Hélix" : return
