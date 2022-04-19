@@ -25,6 +25,10 @@ if %CHIRU_MODE == 1 versionstr "Umineko no Naku Koro ni Chiru EP8, ver1.001","cr
 stralias localisation,"builder_localisation"
 numalias releasedate,builder_date
 numalias CHIRU_MODE,8084
+numalias USE_DISCORD,9001
+
+; check if discord is enabled
+operate_config read,$USE_DISCORD,"discord"
 
 mov $CHIRU_MODE,"builder_version"
 
