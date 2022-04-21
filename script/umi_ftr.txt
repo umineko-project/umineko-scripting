@@ -3954,6 +3954,8 @@ return
 	if %skip_flg == on skip_off : mov %skip_flg_bak,on
 
 	*rmenu_btlp
+		if %CHIRU_MODE == 0 && $USE_DISCORD == "noval" discordrpc "~Rondo of the Witch and Reasoning~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
+		if %CHIRU_MODE == 1 && $USE_DISCORD == "noval" discordrpc "Scattering: ~Nocturne of Truth and Illusions~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
 		btndef ""
 		;save/load
 		spbtn r_load_lsp,r_load_lsp
@@ -31880,8 +31882,215 @@ return
 return
 
 *trophy_session_clicks
-	if %savecountClick != 30000 inc %savecountClick
-	if %savecountClick == 30000 trophy_open savecountTrophy : inc %savecountClick
+	if %savecountClick != 30000 inc %savecountClick : gosub *update_rpc
+	if %savecountClick == 30000 trophy_open savecountTrophy : inc %savecountClick : gosub *update_rpc
+return
+
+; sigma chad based epic totally non hacky discord rpc
+*update_rpc
+	itoa $savecountClick,%savecountClick
+	mov $Free1, "🖱️ " +$savecountClick
+	mov $Free2, "🎼 " + $BGM_Title
+	; can be split into two chunks if it checks chiru mode but tbh i cant really be bothered to figure out how to jump multiple tildes
+	; need to do a switch case for name_chapter_save to set the dateclock and the scenario name
+
+	ifnot %scenario_Number == 1 jumpf
+	mov $Free3, "legend"
+	if $name_chapter_save == "1_op" mov $Free4, scenario_1_op : mov $Free5, "Senza amore, La verita non si vede." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "1_01" mov $Free4, scenario_1_1 : mov $Free5, date_scenario_1_1 : mov $Free6, "8_00" : jumpf
+	if $name_chapter_save == "1_02" mov $Free4, scenario_1_2 : mov $Free5, date_scenario_1_2 : mov $Free6, "10_30" : jumpf
+	if $name_chapter_save == "1_03" mov $Free4, scenario_1_3 : mov $Free5, date_scenario_1_3 : mov $Free6, "12_00" : jumpf
+	if $name_chapter_save == "1_04" mov $Free4, scenario_1_4 : mov $Free5, date_scenario_1_4 : mov $Free6, "13_00" : jumpf
+	if $name_chapter_save == "1_05" mov $Free4, scenario_1_5 : mov $Free5, date_scenario_1_5 : mov $Free6, "13_30" : jumpf
+	if $name_chapter_save == "1_06" mov $Free4, scenario_1_6 : mov $Free5, date_scenario_1_6 : mov $Free6, "15_00" : jumpf
+	if $name_chapter_save == "1_07" mov $Free4, scenario_1_7 : mov $Free5, date_scenario_1_7 : mov $Free6, "18_00" : jumpf
+	if $name_chapter_save == "1_08" mov $Free4, scenario_1_8 : mov $Free5, date_scenario_1_8 : mov $Free6, "22_00" : jumpf
+	if $name_chapter_save == "1_09" mov $Free4, scenario_1_9 : mov $Free5, date_scenario_1_9 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "1_10" mov $Free4, scenario_1_10 : mov $Free5, date_scenario_1_10 : mov $Free6, "6_00" : jumpf
+	if $name_chapter_save == "1_11" mov $Free4, scenario_1_11 : mov $Free5, date_scenario_1_11 : mov $Free6, "8_45" : jumpf
+	if $name_chapter_save == "1_12" mov $Free4, scenario_1_12 : mov $Free5, date_scenario_1_12 : mov $Free6, "13_00" : jumpf
+	if $name_chapter_save == "1_13" mov $Free4, scenario_1_13 : mov $Free5, date_scenario_1_13 : mov $Free6, "19_00" : jumpf
+	if $name_chapter_save == "1_14" mov $Free4, scenario_1_14 : mov $Free5, date_scenario_1_14 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "1_15" mov $Free4, scenario_1_15 : mov $Free5, date_scenario_1_15 : mov $Free6, "20_00" : jumpf
+	if $name_chapter_save == "1_16" mov $Free4, scenario_1_16 : mov $Free5, date_scenario_1_16 : mov $Free6, "23_30" : jumpf
+	if $name_chapter_save == "1_17" mov $Free4, scenario_1_17 : mov $Free5, "Bring the Fate" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "1_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "1_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "1_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	ifnot %scenario_Number == 2 jumpf
+	mov $Free3, "turn"
+	if $name_chapter_save == "2_op" mov $Free4, scenario_2_op : mov $Free5, "Senza amore, La verita non si vede." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "2_01" mov $Free4, scenario_2_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "2_02" mov $Free4, scenario_2_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "2_03" mov $Free4, scenario_2_3 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "2_04" mov $Free4, scenario_2_4 : mov $Free5, date_scenario_2_4 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "2_05" mov $Free4, scenario_2_5 : mov $Free5, date_scenario_2_5 : mov $Free6, "10_45" : jumpf
+	if $name_chapter_save == "2_06" mov $Free4, scenario_2_6 : mov $Free5, date_scenario_2_6 : mov $Free6, "13_00" : jumpf
+	if $name_chapter_save == "2_07" mov $Free4, scenario_2_7 : mov $Free5, date_scenario_2_7 : mov $Free6, "18_00" : jumpf
+	if $name_chapter_save == "2_08" mov $Free4, scenario_2_8 : mov $Free5, date_scenario_2_8 : mov $Free6, "22_00" : jumpf
+	if $name_chapter_save == "2_09" mov $Free4, scenario_2_9 : mov $Free5, date_scenario_2_9 : mov $Free6, "6_00" : jumpf
+	if $name_chapter_save == "2_10" mov $Free4, scenario_2_10 : mov $Free5, date_scenario_2_10 : mov $Free6, "6_43" : jumpf
+	if $name_chapter_save == "2_11" mov $Free4, scenario_2_11 : mov $Free5, date_scenario_2_11 : mov $Free6, "6_50" : jumpf
+	if $name_chapter_save == "2_12" mov $Free4, scenario_2_12 : mov $Free5, date_scenario_2_12 : mov $Free6, "7_30" : jumpf
+	if $name_chapter_save == "2_13" mov $Free4, scenario_2_13 : mov $Free5, date_scenario_2_13 : mov $Free6, "13_00" : jumpf
+	if $name_chapter_save == "2_14" mov $Free4, scenario_2_14 : mov $Free5, date_scenario_2_14 : mov $Free6, "13_17" : jumpf
+	if $name_chapter_save == "2_15" mov $Free4, scenario_2_15 : mov $Free5, date_scenario_2_15 : mov $Free6, "18_00" : jumpf
+	if $name_chapter_save == "2_16" mov $Free4, scenario_2_16 : mov $Free5, date_scenario_2_16 : mov $Free6, "21_00" : jumpf
+	if $name_chapter_save == "2_17" mov $Free4, scenario_2_17 : mov $Free5, date_scenario_2_17 : mov $Free6, "23_30" : jumpf
+	if $name_chapter_save == "2_18" mov $Free4, scenario_2_18 : mov $Free5, date_scenario_2_18 : mov $Free6, "23_59" : jumpf
+	if $name_chapter_save == "2_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "2_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "2_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	ifnot %scenario_Number == 3 jumpf
+	mov $Free3, "banquet"
+	if $name_chapter_save == "3_op" mov $Free4, scenario_3_op : mov $Free5, "Senza amore, La verita non si vede." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "3_01" mov $Free4, scenario_3_1 : mov $Free5, date_scenario_3_1 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "3_02" mov $Free4, scenario_3_2 : mov $Free5, date_scenario_3_2 : mov $Free6, "14_00" : jumpf
+	if $name_chapter_save == "3_03" mov $Free4, scenario_3_3 : mov $Free5, date_scenario_3_3 : mov $Free6, "20_00" : jumpf
+	if $name_chapter_save == "3_04" mov $Free4, scenario_3_4 : mov $Free5, date_scenario_3_4 : mov $Free6, "21_00" : jumpf
+	if $name_chapter_save == "3_05" mov $Free4, scenario_3_5 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "3_06" mov $Free4, scenario_3_6 : mov $Free5, date_scenario_3_6 : mov $Free6, "0_00" : jumpf
+	if $name_chapter_save == "3_07" mov $Free4, scenario_3_7 : mov $Free5, date_scenario_3_7 : mov $Free6, "0_21" : jumpf
+	if $name_chapter_save == "3_08" mov $Free4, scenario_3_8 : mov $Free5, date_scenario_3_8 : mov $Free6, "6_00" : jumpf
+	if $name_chapter_save == "3_09" mov $Free4, scenario_3_9 : mov $Free5, date_scenario_3_9 : mov $Free6, "7_00" : jumpf
+	if $name_chapter_save == "3_10" mov $Free4, scenario_3_10 : mov $Free5, date_scenario_3_10 : mov $Free6, "9_00" : jumpf
+	if $name_chapter_save == "3_11" mov $Free4, scenario_3_11 : mov $Free5, date_scenario_3_11 : mov $Free6, "10_00" : jumpf
+	if $name_chapter_save == "3_12" mov $Free4, scenario_3_12 : mov $Free5, date_scenario_3_12 : mov $Free6, "10_30" : jumpf
+	if $name_chapter_save == "3_13" mov $Free4, scenario_3_13 : mov $Free5, date_scenario_3_13 : mov $Free6, "11_00" : jumpf
+	if $name_chapter_save == "3_14" mov $Free4, scenario_3_14 : mov $Free5, date_scenario_3_14 : mov $Free6, "13_00" : jumpf
+	if $name_chapter_save == "3_15" mov $Free4, scenario_3_15 : mov $Free5, date_scenario_3_15 : mov $Free6, "13_30" : jumpf
+	if $name_chapter_save == "3_16" mov $Free4, scenario_3_16 : mov $Free5, date_scenario_3_16 : mov $Free6, "17_44" : jumpf
+	if $name_chapter_save == "3_17" mov $Free4, scenario_3_17 : mov $Free5, date_scenario_3_17 : mov $Free6, "18_03" : jumpf
+	if $name_chapter_save == "3_18" mov $Free4, scenario_3_18 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "3_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "3_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "3_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	ifnot %scenario_Number == 4 jumpf
+	mov $Free3, "alliance"
+	if $name_chapter_save == "4_op" mov $Free4, scenario_4_op : mov $Free5, "Senza amore, La verita non si vede." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_01" mov $Free4, scenario_4_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_02" mov $Free4, scenario_4_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_03" mov $Free4, scenario_4_3 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_04" mov $Free4, scenario_4_4 : mov $Free5, date_scenario_4_4 : mov $Free6, "14_51" : jumpf
+	if $name_chapter_save == "4_05" mov $Free4, scenario_4_5 : mov $Free5, date_scenario_4_5 : mov $Free6, "18_07" : jumpf
+	if $name_chapter_save == "4_06" mov $Free4, scenario_4_6 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_07" mov $Free4, scenario_4_7 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_08" mov $Free4, scenario_4_8 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_09" mov $Free4, scenario_4_9 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_10" mov $Free4, scenario_4_10 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_11" mov $Free4, scenario_4_11 : mov $Free5, date_scenario_4_11 : mov $Free6, "21_48" : jumpf
+	if $name_chapter_save == "4_12" mov $Free4, scenario_4_12 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_13" mov $Free4, scenario_4_13 : mov $Free5, date_scenario_4_13 : mov $Free6, "22_37" : jumpf
+	if $name_chapter_save == "4_14" mov $Free4, scenario_4_14 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_15" mov $Free4, scenario_4_15 : mov $Free5, date_scenario_4_15 : mov $Free6, "23_00" : jumpf
+	if $name_chapter_save == "4_16" mov $Free4, scenario_4_16 : mov $Free5, date_scenario_4_16 : mov $Free6, "23_11" : jumpf
+	if $name_chapter_save == "4_17" mov $Free4, scenario_4_17 : mov $Free5, date_scenario_4_17 : mov $Free6, "23_47" : jumpf
+	if $name_chapter_save == "4_18" mov $Free4, scenario_4_18 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_19" mov $Free4, scenario_4_19 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "4_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	ifnot %scenario_Number == 5 jumpf
+	if $name_chapter_save == "5_op" mov $Free4, scenario_5_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_01" mov $Free4, scenario_5_1 : mov $Free5, date_scenario_5_1 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_02" mov $Free4, scenario_5_2 : mov $Free5, date_scenario_5_2 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_03" mov $Free4, scenario_5_3 : mov $Free5, date_scenario_5_3 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_04" mov $Free4, scenario_5_4 : mov $Free5, date_scenario_5_4 : mov $Free6, "11_00" : jumpf
+	if $name_chapter_save == "5_05" mov $Free4, scenario_5_5 : mov $Free5, date_scenario_5_5 : mov $Free6, "19_00" : jumpf
+	if $name_chapter_save == "5_06" mov $Free4, scenario_5_6 : mov $Free5, date_scenario_5_6 : mov $Free6, "22_00" : jumpf
+	if $name_chapter_save == "5_07" mov $Free4, scenario_5_7 : mov $Free5, date_scenario_5_7 : mov $Free6, "22_47" : jumpf
+	if $name_chapter_save == "5_08" mov $Free4, scenario_5_8 : mov $Free5, date_scenario_5_8 : mov $Free6, "23_49" : jumpf
+	if $name_chapter_save == "5_09" mov $Free4, scenario_5_9 : mov $Free5, date_scenario_5_9 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_10" mov $Free4, scenario_5_10 : mov $Free5, date_scenario_5_10 : mov $Free6, "7_00" : jumpf
+	if $name_chapter_save == "5_11" mov $Free4, scenario_5_11 : mov $Free5, date_scenario_5_11 : mov $Free6, "8_04" : jumpf
+	if $name_chapter_save == "5_12" mov $Free4, scenario_5_12 : mov $Free5, date_scenario_5_12 : mov $Free6, "11_00" : jumpf
+	if $name_chapter_save == "5_13" mov $Free4, scenario_5_13 : mov $Free5, date_scenario_5_13 : mov $Free6, "12_33" : jumpf
+	if $name_chapter_save == "5_14" mov $Free4, scenario_5_14 : mov $Free5, date_scenario_5_14 : mov $Free6, "24_00" : jumpf
+	if $name_chapter_save == "5_15" mov $Free4, scenario_5_15 : mov $Free5, date_scenario_5_15 : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "5_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	ifnot %scenario_Number == 6 jumpf
+	if $name_chapter_save == "6_op" mov $Free4, scenario_6_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_01" mov $Free4, scenario_6_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_02" mov $Free4, scenario_6_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_03" mov $Free4, scenario_6_3 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_04" mov $Free4, scenario_6_4 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_05" mov $Free4, scenario_6_5 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_06" mov $Free4, scenario_6_6 : mov $Free5, date_scenario_6_6 : mov $Free6, "22_03" : jumpf
+	if $name_chapter_save == "6_07" mov $Free4, scenario_6_7 : mov $Free5, date_scenario_6_7 : mov $Free6, "22_59" : jumpf
+	if $name_chapter_save == "6_08" mov $Free4, scenario_6_8 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_09" mov $Free4, scenario_6_9 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_10" mov $Free4, scenario_6_10 : mov $Free5, date_scenario_6_10 : mov $Free6, "0_07" : jumpf
+	if $name_chapter_save == "6_11" mov $Free4, scenario_6_11 : mov $Free5, date_scenario_6_11 : mov $Free6, "0_12" : jumpf
+	if $name_chapter_save == "6_12" mov $Free4, scenario_6_12 : mov $Free5, date_scenario_6_12 : mov $Free6, "1_11" : jumpf
+	if $name_chapter_save == "6_13" mov $Free4, scenario_6_13 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_14" mov $Free4, scenario_6_14 : mov $Free5, date_scenario_6_14 : mov $Free6, "2_22" : jumpf
+	if $name_chapter_save == "6_15" mov $Free4, scenario_6_15 : mov $Free5, date_scenario_6_15 : mov $Free6, "2_34" : jumpf
+	if $name_chapter_save == "6_16" mov $Free4, scenario_6_16 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_17" mov $Free4, scenario_6_17 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_18" mov $Free4, scenario_6_18 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "6_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	ifnot %scenario_Number == 7 jumpf
+	if $name_chapter_save == "7_op" mov $Free4, scenario_7_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_01" mov $Free4, scenario_7_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_02" mov $Free4, scenario_7_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_03" mov $Free4, scenario_7_3 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_04" mov $Free4, scenario_7_4 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_05" mov $Free4, scenario_7_5 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_06" mov $Free4, scenario_7_6 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_07" mov $Free4, scenario_7_7 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_08" mov $Free4, scenario_7_8 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_09" mov $Free4, scenario_7_9 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_10" mov $Free4, scenario_7_10 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_11" mov $Free4, scenario_7_11 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_12" mov $Free4, scenario_7_12 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_13" mov $Free4, scenario_7_13 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_14" mov $Free4, scenario_7_14 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_15" mov $Free4, scenario_7_15 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_16" mov $Free4, scenario_7_16 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_17" mov $Free4, scenario_7_17 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_18" mov $Free4, scenario_7_18 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "7_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	ifnot %scenario_Number == 8 jumpf
+	if $name_chapter_save == "8_op" mov $Free4, scenario_8_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_01" mov $Free4, scenario_8_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_02" mov $Free4, scenario_8_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_03" mov $Free4, scenario_8_3 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_04" mov $Free4, scenario_8_4 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_05" mov $Free4, scenario_8_5 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_06" mov $Free4, scenario_8_6 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_07" mov $Free4, scenario_8_7 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_08" mov $Free4, scenario_8_8 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_09" mov $Free4, scenario_8_9 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_10" mov $Free4, scenario_8_10 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_11" mov $Free4, scenario_8_11 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_12" mov $Free4, scenario_8_12 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_13" mov $Free4, scenario_8_13 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_14" mov $Free4, scenario_8_14 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_15" mov $Free4, scenario_8_15 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_16" mov $Free4, scenario_8_16 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_17" mov $Free4, scenario_8_17 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_18" mov $Free4, scenario_8_18 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_tea" mov $Free4, "Tea Party" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_ura" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	if $name_chapter_save == "8_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
+	~
+	
+	itoa $Free7, %savecountSess - %savecountTime
+	if $USE_DISCORD == "noval" discordrpc $Free2, $Free4, $Free3, $Free1, $Free6, $Free5, $Free7
+	;music, scenario, episode, clicks, clocktime, date, start time
 return
 
 *script_state
