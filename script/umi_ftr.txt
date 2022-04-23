@@ -3954,8 +3954,6 @@ return
 	if %skip_flg == on skip_off : mov %skip_flg_bak,on
 
 	*rmenu_btlp
-		if %CHIRU_MODE == 0 && $USE_DISCORD == "noval" discordrpc "~Rondo of the Witch and Reasoning~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
-		if %CHIRU_MODE == 1 && $USE_DISCORD == "noval" discordrpc "Scattering: ~Nocturne of Truth and Illusions~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
 		btndef ""
 		;save/load
 		spbtn r_load_lsp,r_load_lsp
@@ -15256,6 +15254,9 @@ if %CHIRU_MODE = 1 gosub *verify_chiru
 		if %CHIRU_MODE = 1 lsph t_txt_ep7_lsp,t_txt_ep7,100,470
 		if %CHIRU_MODE = 1 lsph t_txt_ep8_lsp,t_txt_ep8,100,470
 		
+		if %CHIRU_MODE == 0 && $USE_DISCORD == "noval" discordrpc "~Rondo of the Witch and Reasoning~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
+		if %CHIRU_MODE == 1 && $USE_DISCORD == "noval" discordrpc "Scattering: ~Nocturne of Truth and Illusions~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
+
 		lsph t_txt_ep1_4_lsp,t_txt_ep1_4,100,470
 		lsph t_txt_ep5_8_lsp,t_txt_ep5_8,100,470
 		
