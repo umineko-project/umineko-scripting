@@ -31891,6 +31891,8 @@ return
 *update_rpc
 	itoa $savecountClick,%savecountClick
 	mov $Free1, "🖱️ " +$savecountClick
+	; turns out the music can be nothing
+	if $Free2 == "" mov $Free2,"Jamming with Edward!"
 	mov $Free2, "🎼 " + $BGM_Title
 	; can be split into two chunks if it checks chiru mode but tbh i cant really be bothered to figure out how to jump multiple tildes
 	; need to do a switch case for name_chapter_save to set the dateclock and the scenario name
