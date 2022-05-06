@@ -10,3 +10,4 @@ This is the script code and select related tools empowering [Umineko Project por
 - Knox Translations
 - SNS Team
 - All third-party contributors and authors
+- Neurochitin for their great [docs](https://gitlab.com/Neurochitin/kaleido/-/blob/on-ru/onscripter-ru-docs.md)
