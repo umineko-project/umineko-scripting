@@ -31996,6 +31996,7 @@ return
 	if $name_chapter_save == "4_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
 	~
 	if %scenario_Number != 5 jumpf
+	mov $Free3, "end"
 	if $name_chapter_save == "5_op" mov $Free4, scenario_5_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "5_01" mov $Free4, scenario_5_1 : mov $Free5, date_scenario_5_1 : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "5_02" mov $Free4, scenario_5_2 : mov $Free5, date_scenario_5_2 : mov $Free6, "broken" : jumpf
@@ -32017,6 +32018,7 @@ return
 	if $name_chapter_save == "5_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
 	~
 	if %scenario_Number != 6 jumpf
+	mov $Free3, "dawn"
 	if $name_chapter_save == "6_op" mov $Free4, scenario_6_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "6_01" mov $Free4, scenario_6_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "6_02" mov $Free4, scenario_6_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
@@ -32041,6 +32043,7 @@ return
 	if $name_chapter_save == "6_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
 	~
 	if %scenario_Number != 7 jumpf
+	mov $Free3, "requiem"
 	if $name_chapter_save == "7_op" mov $Free4, scenario_7_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "7_01" mov $Free4, scenario_7_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "7_02" mov $Free4, scenario_7_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
@@ -32065,6 +32068,7 @@ return
 	if $name_chapter_save == "7_omake" mov $Free4, "????" : mov $Free5, "????" : mov $Free6, "broken" : jumpf
 	~
 	if %scenario_Number != 8 jumpf
+	mov $Free3, "twilight"
 	if $name_chapter_save == "8_op" mov $Free4, scenario_8_op : mov $Free5, "Illuminato." : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "8_01" mov $Free4, scenario_8_1 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
 	if $name_chapter_save == "8_02" mov $Free4, scenario_8_2 : mov $Free5, "????" : mov $Free6, "broken" : jumpf
