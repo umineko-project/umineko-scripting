@@ -178,7 +178,7 @@ if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
 if %BGM_Id == 110	mov $BGM_Title,"rodopio"  : return
 if %BGM_Id == 111 	mov $BGM_Title,"Futuro" : return
 if %BGM_Id == 112 	mov $BGM_Title,"Irrisão Azure" : return
-if %BGM_Id == 113 	mov $BGM_Title,"A Grande Detetive Tudo Sabe" : return
+if %BGM_Id == 113 	mov $BGM_Title,"A Grande Detetive Sabe" : return
 if %BGM_Id == 114 	mov $BGM_Title,"Soirée sem sorrisos" : return
 if %BGM_Id == 115 	mov $BGM_Title,"um" : return
 if %BGM_Id == 116 	mov $BGM_Title,"Hélix" : return
@@ -233,7 +233,7 @@ if %BGM_Id == 164 	mov $BGM_Title,"chamada-reflexão" : return
 if %BGM_Id == 165 	mov $BGM_Title,"chuva" : return
 if %BGM_Id == 166 	mov $BGM_Title,"7-pesos" : return
 if %BGM_Id == 167 	mov $BGM_Title,"outono" : return
-if %BGM_Id == 168 	mov $BGM_Title,"bore-ral (bolero pela liberdade)" : return
+if %BGM_Id == 168 	mov $BGM_Title,"bore-ral" : return
 if %BGM_Id == 169 	mov $BGM_Title,"balada-contínua" : return
 if %BGM_Id == 170 	mov $BGM_Title,"Canção sem nome ver.2007 (instrumental)" : return
 if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia" : return
