@@ -490,6 +490,8 @@ function main($argc, $argv) {
 				$scripting.'/story/omake/'.$locale.'/');
 
 			$footer = file_get_contents($scripting.'/script/umi_ftr.txt');
+			if ($locale == 'cn')
+				$footer = file_get_contents($scripting.'/script/cn/umi_ftr.txt');
 			$script .= str_replace(CRLF, LF, $footer);
 
 			localiseScript($script, $scripting.'/script/'.$locale.'/');

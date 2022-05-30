@@ -196,7 +196,7 @@ if %BGM_Id == 82	mov $BGM_Title,"失翼" : return
 if %BGM_Id == 83	mov $BGM_Title,"烈痛" : return
 if %BGM_Id == 84	mov $BGM_Title,"坟墓惊魂 -节奏版-" : return
 if %BGM_Id == 85	mov $BGM_Title,"久远" : return
-if %BGM_Id == 86	mov $BGM_Title,"过越" : return
+if %BGM_Id == 86	mov $BGM_Title,"凌驾" : return
 if %BGM_Id == 87	mov $BGM_Title,"有如狂风" : return
 if %BGM_Id == 88	mov $BGM_Title,"F Style" : return
 if %BGM_Id == 89	mov $BGM_Title,"黑白时钟" : return

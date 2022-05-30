@@ -3895,6 +3895,7 @@ wait 500
 lss s0_10,"en2","a15_defo2b" ;1
 aspt2 xpos,s0_10,550
 flush 80
+msgwnd_enj
 *d58777
 d [lv 0*"11"*"82000566"]`「…………わかんない」`[\]
 lss s0_9,"eva","b25_odoroki1" ;1
