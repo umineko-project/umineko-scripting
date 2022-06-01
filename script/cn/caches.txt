@@ -8,7 +8,7 @@
 	lsp 5,":a/10,0,3;graphics\system\wnd\cursor0.png",0,0
 	lsp s0_3,goa_memory1_src,0,0
 		*goa_1c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`我要被吃掉了～～！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`要—被—吃—掉—了——！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -20,7 +20,7 @@
 	textoff
 	lsp s0_3,goa_memory2_src,0,0
 		*goa_2c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「这事我来处理，去吧！」{n}「前辈？！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「这里交给我，你走吧！」{n}「前辈？！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -32,7 +32,7 @@
 	textoff
 	lsp s0_3,goa_memory3_src,0,0
 		*goa_3c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「抱歉，久等了！！」{n}「你们……你怎么在这……」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「让你久等了！！」{n}「你们…，怎么会在这里……」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -60,7 +60,7 @@
 	set_name_window_non
 	lsp s0_3,kakera_memory6_src,0,0
 		*kak_6c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「不对，错了。“实际发生了杀人事件=不是密室”才为正确！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「不，错了。“实际发生了杀人事件=不是密室”才是正确的！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -72,7 +72,7 @@
 	textoff
 	lsp s0_3,kakera_memory7_src,0,0
 		*kak_7c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「抵抗，还有逃跑都是没有用的。`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「抵抗，还有逃跑，都是没有用的。`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -84,7 +84,7 @@
 	textoff
 	lsp s0_3,kakera_memory9_src,0,0
 		*kak_9c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`并不仅仅是雾江姐。{n}朱志香也在电话里说过。{n}{n}……不，追溯上去，最最开始时，乡田他们的话与藏臼伯父他们打来的电话，`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`并不仅仅是雾江姐。{n}朱志香也在电话里说过。{n}{n}……不，追根溯源，最最开始时，乡田他们的话与藏臼伯父他们打来的电话里，大家也一致地说着同样的话。`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -97,7 +97,7 @@
 	lsp 5,":a/10,0,3;graphics\system\wnd\cursor1.png",0,0
 	lsp s0_3,kakera_memory1_src,0,0
 		*kak_1c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「呀——☆ 樱太郎——！好久不见——！」{n}「依旧是副可口，啊不对、是副可爱样呢～！！」{n}「我第一～！！呀——，今天也软软绵绵的，好～可爱～！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「呀——♪ 樱太郎——！好久不见——！」{n}「依旧是副可口，啊不对，是副可爱样呢～！！」{n}「我第一～！！呀——，今天也软软绵绵的，好——可爱～！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -109,7 +109,7 @@
 	textoff
 	lsp s0_3,kakera_memory2_src,0,0
 		*kak_2c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「呜哦哦哦哦哦哦哦哦来呀～～～～～！！想吃真里亚为我装填的枪子的家伙，给我滚到前面来～～～～，呜喔哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦～～！！！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「「呜哦哦哦哦哦哦哦哦来呀—————！！想吃真里亚为我装填的枪子的家伙，给我滚到前面来—————，呜喔哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦！！！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -145,7 +145,7 @@
 	textoff
 	lsp s0_3,kakera_memory5_src,0,0
 		*kak_5c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「谢谢你能理解，战人君。…不过你很幸运哟。」{n}「嗨——。为什么这么说？」{n}「我要是能出去的话，也想出去哟。」{n}「…嘿嘿嘿嘿！没错。大人就和大人们一起，尽情享受围绕着遗产的全家团聚之乐吧。」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「谢谢你能理解，战人君。…不过你很幸运哟。」{n}「是么？为啥？」{n}「我要是能出去的话，也想出去了。」{n}「…嘿嘿嘿嘿！没错儿。大人就和大人们一起，围绕着遗产，尽情享受一下全家团聚之乐吧。」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -157,7 +157,7 @@
 	textoff
 	lsp s0_3,kakera_memory8_src,0,0
 		*kak_8c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「来——，小姐…。请沿着墙壁，一直往前走。…一直。一直地往前走。」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「来，小姐…。请沿着墙壁，一直往前走。…一直。一直往前走。」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -169,7 +169,7 @@
 	textoff
 	lsp s0_3,kakera_memory10_src,0,0
 		*kak_10c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`混帐老头的身姿，缓缓显现。{n}{n}……嗨～，你丫是在庇护着背后的贝阿朵，过骑士瘾么…！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`混帐老头的身形缓缓显现。{n}{n}……嗨——，你丫是在庇护着背后的贝阿朵，过骑士瘾么…？！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
