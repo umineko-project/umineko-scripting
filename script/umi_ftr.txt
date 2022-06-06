@@ -33087,7 +33087,7 @@ return
 	if $Free3 == "ru" mov $Free3,"Русская" mov %game_language,1
 	if $Free3 == "pt" mov $Free3,"Português" mov %game_language,2
 	if $Free3 == "cn" mov $Free3,"Chinese Simp." mov %game_language,3
-	if $Free3 == "zhtw" mov $Free3,"Chinese Simp." mov %game_language,4
+	if $Free3 == "zhtw" mov $Free3,"Chinese Trad." mov %game_language,4
 	lsp 273,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,%y
 
 	lsp 269,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,%y

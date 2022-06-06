@@ -2,8 +2,8 @@ language japanese
 
 ; Game window caption 
 
-if %CHIRU_MODE == 0 caption "海猫鸣泣之时 ~魔女与推理的轮舞曲~ 公测版 (" + $CHIRU_MODE + ")"
-if %CHIRU_MODE == 1 caption "海猫鸣泣之时散 ~真实与幻想的夜想曲~ 公测版 (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 0 caption "海貓悲鳴時 ~魔女與推理的輪舞曲~ 公測版 (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 1 caption "海貓悲鳴時散 ~真實與幻想的夜想曲~ 公測版 (" + $CHIRU_MODE + ")"
 
 ;--Textboxes--
 
@@ -290,26 +290,26 @@ stralias murderer_thumb_8,":c;graphics\locale_cn\murderer\murderer_thumb_8.png"
 
 ;--System-text--
 
-stralias verify_backgrounds,"请检查你的 backgrounds 文件夹是否正确解压。无法检测到其中一些文件。"
-stralias verify_graphics,"请检查你的 graphics 文件夹是否正确解压。无法检测到其中一些文件。"
-stralias verify_sound,"请检查你的 sound 文件夹是否正确解压。无法检测到其中一些文件。"
-stralias verify_sprites,"请检查你的 sprites 文件夹是否正确解压。无法检测到其中一些文件。"
-stralias verify_video,"请检查你的 video 文件夹是否正确解压。无法检测到其中一些文件。"
-stralias verify_updates,"请检查你是否安装了最近的全部更新。无法检测到其中一些文件。"
-stralias verify_engine,"请检查你是否正在使用最新版本的游戏代码和引擎。目前的引擎和代码互不兼容。"
+stralias verify_backgrounds,"請檢查你的 backgrounds 資料夾是否正確解壓。無法檢測到其中一些檔案。"
+stralias verify_graphics,"請檢查你的 graphics 資料夾是否正確解壓。無法檢測到其中一些檔案。"
+stralias verify_sound,"請檢查你的 sound 資料夾是否正確解壓。無法檢測到其中一些檔案。"
+stralias verify_sprites,"請檢查你的 sprites 資料夾是否正確解壓。無法檢測到其中一些檔案。"
+stralias verify_video,"請檢查你的 video 資料夾是否正確解壓。無法檢測到其中一些檔案。"
+stralias verify_updates,"請檢查你是否安裝了最近的全部更新。無法檢測到其中一些檔案。"
+stralias verify_engine,"請檢查你是否正在使用最新版本的遊戲程式碼和引擎。目前的引擎和程式碼互不相容。"
 
-stralias verification_title,"检查游戏完整性"
-stralias verification_verifying,"为保证游戏处于最新版本，建议使用{c:86EF9C:启动器}检查更新。{n}{n}正在校验游戏文件…{n}请注意，这可能要花费几分钟。{n}{n}"
-stralias verification_legend,"文字颜色代表: "
-stralias verification_modified," 文件被修改"
-stralias verification_missing," 文件缺失"
+stralias verification_title,"檢查遊戲完整性"
+stralias verification_verifying,"為保證遊戲處於最新版本，建議使用{c:86EF9C:啟動器}檢查更新。{n}{n}正在校驗遊戲檔案…{n}請注意，這可能要花費幾分鐘。{n}{n}"
+stralias verification_legend,"文字顏色代表: "
+stralias verification_modified," 檔案被修改"
+stralias verification_missing," 檔案缺失"
 stralias verification_good,"一切正常。{n}"
-stralias verification_bad,"以下文件校验错误，请检查游戏资源是否解压正常：{n}"
-stralias verification_nohash,"游戏路径下的 game.hash 文件丢失！{n}"
-stralias verification_unsupported,"游戏路径下的 game.hash 文件不受支持！{n}"
-stralias verification_outdated,"游戏路径下的 game.hash 文件版本过旧！{n}"
-stralias verification_end,"点击鼠标右键开始游戏。"
+stralias verification_bad,"以下檔案校驗錯誤，請檢查遊戲資源是否解壓正常：{n}"
+stralias verification_nohash,"遊戲路徑下的 game.hash 檔案丟失！{n}"
+stralias verification_unsupported,"遊戲路徑下的 game.hash 檔案不受支援！{n}"
+stralias verification_outdated,"遊戲路徑下的 game.hash 檔案版本過舊！{n}"
+stralias verification_end,"點選滑鼠右鍵開始遊戲。"
 
-stralias verification_ancient,"你的游戏已经 6 个月没有更新过了，请检查更新！"
+stralias verification_ancient,"你的遊戲已經 6 個月沒有更新過了，請檢查更新！"
 
 ;--System-text-end--
