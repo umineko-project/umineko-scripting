@@ -20,7 +20,7 @@
 	textoff
 	lsp s0_3,goa_memory2_src,0,0
 		*goa_2c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「这里交给我，你走吧！」{n}「前辈？！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「這裡交給我，你走吧！」{n}「前輩？！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -32,7 +32,7 @@
 	textoff
 	lsp s0_3,goa_memory3_src,0,0
 		*goa_3c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「让你久等了！！」{n}「你们…，怎么会在这里……」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「讓你久等了！！」{n}「你們…，怎麼會在這裡……」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -60,7 +60,7 @@
 	set_name_window_non
 	lsp s0_3,kakera_memory6_src,0,0
 		*kak_6c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「不，错了。“实际发生了杀人事件=不是密室”才是正确的！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「不，錯了。“實際發生了殺人事件=不是密室”才是正確的！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -72,7 +72,7 @@
 	textoff
 	lsp s0_3,kakera_memory7_src,0,0
 		*kak_7c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「抵抗，还有逃跑，都是没有用的。`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「抵抗，還有逃跑，都是沒有用的。`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -84,7 +84,7 @@
 	textoff
 	lsp s0_3,kakera_memory9_src,0,0
 		*kak_9c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`并不仅仅是雾江姐。{n}朱志香也在电话里说过。{n}{n}……不，追根溯源，最最开始时，乡田他们的话与藏臼伯父他们打来的电话里，大家也一致地说着同样的话。`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`並不僅僅是霧江姐。{n}朱志香也在電話裡說過。{n}{n}……不，追根溯源，最最開始時，鄉田他們的話與藏臼伯父他們打來的電話裡，大家也一致地說著同樣的話。`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -97,7 +97,7 @@
 	lsp 5,":a/10,0,3;graphics\system\wnd\cursor1.png",0,0
 	lsp s0_3,kakera_memory1_src,0,0
 		*kak_1c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「呀——♪ 樱太郎——！好久不见——！」{n}「依旧是副可口，啊不对，是副可爱样呢～！！」{n}「我第一～！！呀——，今天也软软绵绵的，好——可爱～！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「呀——♪ 櫻太郎——！好久不見——！」{n}「依舊是副可口，啊不對，是副可愛樣呢～！！」{n}「我第一～！！呀——，今天也軟軟綿綿的，好——可愛～！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -109,7 +109,7 @@
 	textoff
 	lsp s0_3,kakera_memory2_src,0,0
 		*kak_2c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「「呜哦哦哦哦哦哦哦哦来呀—————！！想吃真里亚为我装填的枪子的家伙，给我滚到前面来—————，呜喔哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦！！！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「「嗚哦哦哦哦哦哦哦哦來呀—————！！想吃真里亞為我裝填的槍子的傢伙，給我滾到前面來—————，嗚喔哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦！！！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -121,7 +121,7 @@
 	textoff
 	lsp s0_3,kakera_memory3_src,0,0
 		*kak_3c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「…………这，不是老爷定下的规则，…更不是你定下的规则。………这规则是我自己定的。………我，已经不再是家具了。………我就是，你轮盘游戏里的零…！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「…………這，不是老爺定下的規則，…更不是你定下的規則。………這規則是我自己定的。………我，已經不再是家具了。………我就是，你輪盤遊戲裡的零…！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -133,7 +133,7 @@
 	textoff
 	lsp s0_3,kakera_memory4_src,0,0
 		*kak_4c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「源次。爸在叫你呢。接下来就拜托你了。」{n}「知道了。」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「源次。爸在叫你呢。接下來就拜託你了。」{n}「知道了。」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -145,7 +145,7 @@
 	textoff
 	lsp s0_3,kakera_memory5_src,0,0
 		*kak_5c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「谢谢你能理解，战人君。…不过你很幸运哟。」{n}「是么？为啥？」{n}「我要是能出去的话，也想出去了。」{n}「…嘿嘿嘿嘿！没错儿。大人就和大人们一起，围绕着遗产，尽情享受一下全家团聚之乐吧。」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「謝謝你能理解，戰人君。…不過你很幸運喲。」{n}「是麼？為啥？」{n}「我要是能出去的話，也想出去了。」{n}「…嘿嘿嘿嘿！沒錯兒。大人就和大人們一起，圍繞著遺產，盡情享受一下全家團聚之樂吧。」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -157,7 +157,7 @@
 	textoff
 	lsp s0_3,kakera_memory8_src,0,0
 		*kak_8c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「来，小姐…。请沿着墙壁，一直往前走。…一直。一直往前走。」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「來，小姐…。請沿著牆壁，一直往前走。…一直。一直往前走。」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -169,7 +169,7 @@
 	textoff
 	lsp s0_3,kakera_memory10_src,0,0
 		*kak_10c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`混帐老头的身形缓缓显现。{n}{n}……嗨——，你丫是在庇护着背后的贝阿朵，过骑士瘾么…？！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`混帳老頭的身形緩緩顯現。{n}{n}……嗨——，你丫是在庇護著背後的貝阿朵，過騎士癮麼…？！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
