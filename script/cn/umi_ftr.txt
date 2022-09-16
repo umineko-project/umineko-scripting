@@ -39361,7 +39361,7 @@ return
 	mov ?r[8][EN2][condition],-1
 	mov ?r[8][bea][condition],-1
 	
-	lsp r_cha_back_lsp,":a;graphics\menu\murder\murder_story_answer_left_bg.png",200,150
+	lsp r_cha_back_lsp,":c;graphics\menu_cn\murder\murder_story_answer_left_bg.png",200,150
 	getspsize r_cha_back_lsp,%Free1,%Free2
 	border_pad_push 5
 	lsp 201,ep8_9_criminal,%Free1/2+200,criminal_header_y		;犯人を選択してください
