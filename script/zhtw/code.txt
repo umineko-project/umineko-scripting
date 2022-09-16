@@ -103,7 +103,7 @@ return
 return
 
 *backup_disable_lang
-	backup_disable "language_cn","cn.file","cn.txt"
+	backup_disable "language_cht","cht.file","cht.txt"
 return
 
 *set_window_simple_update
