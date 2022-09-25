@@ -33278,7 +33278,7 @@ if %Free1==0 mov $Free1,verify_engine : gosub *verify_err
 
 if %Free2==1 lsp 50,":s;#FFFFFF`{p:11:"+$Free2+"}", 150,50 : print 1 : click : end
 
-fileexist %Free1,"locale_game.hash",%Free2
+fileexist %Free1,"locale_cht_game.hash",%Free2
 if %Free2!=%last_locale_gamehash goto *full_verify
 fileexist %Free1,"game.hash",%Free2
 if %Free2!=%last_gamehash goto *full_verify
@@ -33409,11 +33409,11 @@ goto *full_verify_locale_skip
 
 *full_verify_locale
 
-fileexist %Free1,"locale_game.hash",%Free2
+fileexist %Free1,"locale_cht_game.hash",%Free2
 if %Free1 == 0 mov %last_locale_gamehash,0 : goto *full_verify_locale_skip
 
-verify_files %Free1,"locale_game.hash",$Free1
-if %Free1 == 0 mov $Free2,verification_good : fileexist %Free3,"locale_game.hash",%last_locale_gamehash
+verify_files %Free1,"locale_cht_game.hash",$Free1
+if %Free1 == 0 mov $Free2,verification_good : fileexist %Free3,"locale_cht_game.hash",%last_locale_gamehash
 if %Free1 == 1 mov $Free2,verification_bad
 if %Free1 == -1 mov $Free2,verification_nohash
 if %Free1 == -2 || %Free1 == -3 mov $Free2,verification_unsupported
