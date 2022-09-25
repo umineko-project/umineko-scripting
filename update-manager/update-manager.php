@@ -21,7 +21,7 @@ define('VERSION', 110);
 define('MAX_IN', 0x10000000);
 define('UPDATE_MANAGER', true);
 define('PASSWORD', '035646750436634546568555050');
-define('REPLACE_GRIM_WITH_LOCALIZE', array('cn','zhtw'));
+define('REPLACE_GRIM_WITH_LOCALIZE', array('cn','cht'));
 
 $exclude = [
 	'.DS_Store',
@@ -34,7 +34,7 @@ $exclude = [
 	'/ru.txt',
 	'/pt.txt',
 	'/cn.txt',
-	'/zhtw.txt',
+	'/cht.txt',
 	'/test.txt',
 	'gmon.out',
 	'head.png',
@@ -44,15 +44,15 @@ $exclude = [
 	'script.file',
 	'language_pt',
 	'language_cn',
-	'language_zhtw',
+	'language_cht',
 	'/en.file',
 	'/ru.file',
 	'/pt.file',
 	'/pt.cfg',
 	'/cn.file',
 	'/cn.cfg',
-	'/zhtw.file',
-	'/zhtw.cfg',	
+	'/cht.file',
+	'/cht.cfg',	
 	'/chiru.file',
 	'/game.hash',
 	'/default.cfg'
@@ -496,8 +496,8 @@ function main($argc, $argv) {
 			$footer = file_get_contents($scripting.'/script/umi_ftr.txt');
 			if ($locale == 'cn')
 				$footer = file_get_contents($scripting.'/script/cn/umi_ftr.txt');
-			if ($locale == 'zhtw')
-				$footer = file_get_contents($scripting.'/script/zhtw/umi_ftr.txt');				
+			if ($locale == 'cht')
+				$footer = file_get_contents($scripting.'/script/cht/umi_ftr.txt');				
 			$script .= str_replace(CRLF, LF, $footer);
 
 			localiseScript($script, $scripting.'/script/'.$locale.'/');

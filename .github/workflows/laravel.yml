@@ -18,17 +18,17 @@ jobs:
       with:
         name: cn
         path: cnout/
-    - name: Generate ZHTW
+    - name: Generate cht
       run: |
-        mkdir zhtwout
+        mkdir chtout
         BUILD=$(($(git rev-list --count --first-parent HEAD)+3500))
-        php update-manager/update-manager.php dscript "zhtwout/zhtw.txt" . zhtw
-        php update-manager/update-manager.php script zhtwout/zhtw.txt "zhtwout/zhtw.file" 9999
-    - name: Upload ZHTW
+        php update-manager/update-manager.php dscript "chtout/cht.txt" . cht
+        php update-manager/update-manager.php script chtout/cht.txt "chtout/cht.file" 9999
+    - name: Upload cht
       uses: actions/upload-artifact@v1
       with:
-        name: zhtw
-        path: zhtwout/        
+        name: cht
+        path: chtout/        
     - name: Generate EN
       run: |
         mkdir enout
