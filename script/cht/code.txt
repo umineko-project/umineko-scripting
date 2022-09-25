@@ -1,0 +1,318 @@
+*set_window_options
+	smart_quotes "‘","’","“","”","’"
+return
+
+*sub_get_translation
+	if %track_id == 58 mov $track_id,"video\sub\58_chn.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_chn.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_chn.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_chn.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_chn.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_chn.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_chn.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_chn.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_chn.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_chn.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_chn.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_chn.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_chn.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\chn.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\chn.ass" : return
+return
+
+*sub_get_romaji
+	if %track_id == 58 mov $track_id,"video\sub\58_jpn.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_jpn.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_jpn.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_jpn.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_jpn.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_jpn.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_jpn.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_jpn.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_jpn.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_jpn.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_jpn.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_jpn.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_jpn.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\jpn.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\jpn.ass" : return
+return
+
+*sub_get_both
+	if %track_id == 58 mov $track_id,"video\sub\58_both_chn.ass" : return
+	if %track_id == 83 mov $track_id,"video\sub\83_both_chn.ass" : return
+	if %track_id == 109 mov $track_id,"video\sub\109_both_chn.ass" : return
+	if %track_id == 132 mov $track_id,"video\sub\132_both_chn.ass" : return
+	if %track_id == 134 mov $track_id,"video\sub\134_both_chn.ass" : return
+	if %track_id == 160 mov $track_id,"video\sub\160_both_chn.ass" : return
+	if %track_id == 161 mov $track_id,"video\sub\161_both_chn.ass" : return
+	if %track_id == 186 mov $track_id,"video\sub\186_both_chn.ass" : return
+	if %track_id == 240 mov $track_id,"video\sub\240_both_chn.ass" : return
+	if %track_id == 241 mov $track_id,"video\sub\241_both_chn.ass" : return
+	if %track_id == 1014 mov $track_id,"video\sub\op4_both_chn.ass" : return
+	if %track_id == 1017 mov $track_id,"video\sub\op56_both_chn.ass" : return
+	if %track_id == 1018 mov $track_id,"video\sub\op78_both_chn.ass" : return
+	if %legacy_op == off && %track_id == 1012 mov $track_id,"video\sub\both_chn.ass" : return
+	if %legacy_op == on  && %track_id == 1012 mov $track_id,"legacy\sub\both_chn.ass" : return
+return
+
+*redefine_text_presets
+	;GAME PRESETS
+	preset_define 0,1,60,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Japanse text
+	preset_define 1,1,-1,#FF0000,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Red text
+	preset_define 2,1,-1,#39C6FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Blue text
+	preset_define 7,5,40,#C0FFFF,0,0,0,1,6,#000000,0,0,0,#000000,0,70,1880 ;Chapter/BGM/Hint
+	preset_define 41,1,-1,#FFAA00,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Gold text
+	preset_define 42,1,-1,#AA71FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Purple text
+	;MENU PRESETS
+	;Texts
+	preset_define 3,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,700 ;Menu chars text
+	preset_define 4,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40 ;Menu chars/tips/notes text jp
+	preset_define 5,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,830 ;Menu tips/notes text
+	preset_define 13,6,55,#FFFFFF,1,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu tips/notes titles
+	;Buttons
+	preset_define 11,2,36,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Menu main buttons
+	preset_define 12,2,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Menu chars kill/change buttons
+	;MusicBox
+	preset_define 6,5,36,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,70 ;Musicbox bgm titles
+	;Config
+	preset_define 8,1,60,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons
+	preset_define 9,1,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons (smaller)
+	;First setting
+	preset_define 10,9,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,0,80,1920 ;Menu first setting line
+	;Use magic
+	preset_define 14,7,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump portrait titles
+	preset_define 15,7,42,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu jump right titles and confirmation
+	preset_define 16,4,30,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,0,40,1920 ;Menu jump portrait line
+	;Trophies
+	preset_define 18,1,36,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1700 ;Trophy description
+	;Credits
+	preset_define 20,1,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits normal
+	preset_define 21,4,50,#000000,0,0,0,1,10,#fae8e8,0,0,0,#000000,6,140,1920 ;Credits h1
+	preset_define 22,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,120,1920 ;Credits h2
+	preset_define 23,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,50,1920 ;Credits h3
+	preset_define 24,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,0,120,1920 ;Credits h2-sep
+	preset_define 25,3,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits MVP
+	;Load/Save
+	preset_define 30,1,42,#FFFFFF,0,0,0,1,5,#000000,0,0,0,#000000,1,40,1920 ;Episode names
+	preset_define 31,2,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Save dates
+	;ep8 menu murder
+	preset_define 32,1,50,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1590 ;Menu murder
+	;chinese
+	preset_define 33,7,35,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,1920 ;Menu murder answer
+return
+
+*backup_disable_lang
+	backup_disable "language_cht","cht.file","cht.txt"
+return
+
+*set_window_simple_update
+	if %setwindow_x = 80 mov %setwindow_x,166
+return
+
+*bgm_locale_title
+if %BGM_Id == 1	mov $BGM_Title,"透百合" : return
+if %BGM_Id == 2	mov $BGM_Title,"夏之扉" : return
+if %BGM_Id == 3	mov $BGM_Title,"羽" : return
+if %BGM_Id == 4	mov $BGM_Title,"馳騁向前" : return
+if %BGM_Id == 5	mov $BGM_Title,"海" : return
+if %BGM_Id == 6	mov $BGM_Title,"黑暗時刻" : return
+if %BGM_Id == 7	mov $BGM_Title,"新事曲" : return
+if %BGM_Id == 8	mov $BGM_Title,"希望" : return
+if %BGM_Id == 9	mov $BGM_Title,"白影" : return
+if %BGM_Id == 10	mov $BGM_Title,"信步漫行" : return
+if %BGM_Id == 11	mov $BGM_Title,"高聳的夏云" : return
+if %BGM_Id == 12 	mov $BGM_Title,"月夜" : return
+if %BGM_Id == 13	mov $BGM_Title,"玫瑰" : return
+if %BGM_Id == 14	mov $BGM_Title,"瀕死" : return
+if %BGM_Id == 15	mov $BGM_Title,"煉沙回廊" : return
+if %BGM_Id == 16	mov $BGM_Title,"折而不摧" : return
+if %BGM_Id == 17	mov $BGM_Title,"身裹金色的魔女 (大鍵琴)" : return
+if %BGM_Id == 18	mov $BGM_Title,"引誘" : return
+if %BGM_Id == 19	mov $BGM_Title,"可疑的氣味" : return
+if %BGM_Id == 20	mov $BGM_Title,"錯愕" : return
+if %BGM_Id == 21	mov $BGM_Title,"稱讚" : return
+if %BGM_Id == 22	mov $BGM_Title,"流逝" : return
+if %BGM_Id == 23	mov $BGM_Title,"鳳蝶" : return
+if %BGM_Id == 24	mov $BGM_Title,"黃金屠殺者" : return
+if %BGM_Id == 25	mov $BGM_Title,"世界盡頭 (兒童鋼琴)" : return
+if %BGM_Id == 26	mov $BGM_Title,"繪畫中的魔女" : return
+if %BGM_Id == 27	mov $BGM_Title,"懷疑" : return
+if %BGM_Id == 28	mov $BGM_Title,"痕音" : return
+if %BGM_Id == 29	mov $BGM_Title,"核心" : return
+if %BGM_Id == 30	mov $BGM_Title,"些微的黑暗" : return
+if %BGM_Id == 31	mov $BGM_Title,"夜之眼" : return
+if %BGM_Id == 32	mov $BGM_Title,"我封閉的心" : return
+if %BGM_Id == 33	mov $BGM_Title,"鎮魂歌" : return
+if %BGM_Id == 34	mov $BGM_Title,"思維" : return
+if %BGM_Id == 35	mov $BGM_Title,"世界盡頭" : return
+if %BGM_Id == 36	mov $BGM_Title,"播放" : return
+if %BGM_Id == 37	mov $BGM_Title,"系統零" : return
+if %BGM_Id == 38	mov $BGM_Title,"無聲" : return
+if %BGM_Id == 39	mov $BGM_Title,"死角" : return
+if %BGM_Id == 40	mov $BGM_Title,"管風琴小曲 第6億號 c小調" : return
+if %BGM_Id == 41	mov $BGM_Title,"牢獄剝奪" : return
+if %BGM_Id == 42	mov $BGM_Title,"弦樂四重奏曲 第1號 G大調 — 第一樂章 快板" : return
+if %BGM_Id == 43	mov $BGM_Title,"鳥籠" : return
+if %BGM_Id == 44	mov $BGM_Title,"金色的嘲笑" : return
+if %BGM_Id == 45	mov $BGM_Title,"毒蠍心腸" : return
+if %BGM_Id == 46	mov $BGM_Title,"終焉 版本C" : return
+if %BGM_Id == 47	mov $BGM_Title,"回答" : return
+if %BGM_Id == 48	mov $BGM_Title,"回答 簡短版" : return
+if %BGM_Id == 49	mov $BGM_Title,"旋律 伴奏版" : return
+if %BGM_Id == 50	mov $BGM_Title,"紅之恐懼" : return
+if %BGM_Id == 51	mov $BGM_Title,"月" : return
+if %BGM_Id == 52	mov $BGM_Title,"何處" : return
+if %BGM_Id == 53	mov $BGM_Title,"墳墓驚魂" : return
+if %BGM_Id == 54	mov $BGM_Title,"世界盡頭主宰者" : return
+if %BGM_Id == 55	mov $BGM_Title,"黑之莉莉安娜" : return
+if %BGM_Id == 56	mov $BGM_Title,"休息" : return
+if %BGM_Id == 57	mov $BGM_Title,"白日夢的盡頭" : return
+if %BGM_Id == 58	mov $BGM_Title,"旋律" : return
+if %BGM_Id == 59	mov $BGM_Title,"飛越天際" : return
+if %BGM_Id == 60	mov $BGM_Title,"一汪陽光" : return
+if %BGM_Id == 61	mov $BGM_Title,"蠟燭們起舞" : return
+if %BGM_Id == 62	mov $BGM_Title,"遙" : return
+if %BGM_Id == 63	mov $BGM_Title,"psy-chorus ～超常者們的附和～" : return
+if %BGM_Id == 64	mov $BGM_Title,"遠" : return
+if %BGM_Id == 65	mov $BGM_Title,"紅鞋偽" : return
+if %BGM_Id == 66	mov $BGM_Title,"母親" : return
+if %BGM_Id == 67	mov $BGM_Title,"朦朧" : return
+if %BGM_Id == 68	mov $BGM_Title,"舞動的煙管" : return
+if %BGM_Id == 69	mov $BGM_Title,"墳墓驚魂 -更多恐懼-" : return
+if %BGM_Id == 70	mov $BGM_Title,"管風琴小曲 第2億號 c小調" : return
+if %BGM_Id == 71	mov $BGM_Title,"rhythm-changer ～改變節奏之存在～" : return
+if %BGM_Id == 72	mov $BGM_Title,"牽線人偶的幸福 附贈版" : return
+if %BGM_Id == 73	mov $BGM_Title,"牽線人偶的幸福" : return
+if %BGM_Id == 74	mov $BGM_Title,"月兔之舞" : return
+if %BGM_Id == 75	mov $BGM_Title,"消融" : return
+if %BGM_Id == 76	mov $BGM_Title,"魂中之魂" : return
+if %BGM_Id == 77	mov $BGM_Title,"幻影調停者" : return
+if %BGM_Id == 78	mov $BGM_Title,"獄" : return
+if %BGM_Id == 79	mov $BGM_Title,"感謝你誕生於世" : return
+if %BGM_Id == 80	mov $BGM_Title,"翼" : return
+if %BGM_Id == 81	mov $BGM_Title,"失樂園" : return
+if %BGM_Id == 82	mov $BGM_Title,"失翼" : return
+if %BGM_Id == 83	mov $BGM_Title,"烈痛" : return
+if %BGM_Id == 84	mov $BGM_Title,"墳墓驚魂 -節奏版-" : return
+if %BGM_Id == 85	mov $BGM_Title,"久遠" : return
+if %BGM_Id == 86	mov $BGM_Title,"凌駕" : return
+if %BGM_Id == 87	mov $BGM_Title,"有如狂風" : return
+if %BGM_Id == 88	mov $BGM_Title,"F Style" : return
+if %BGM_Id == 89	mov $BGM_Title,"黑白時鐘" : return
+if %BGM_Id == 90	mov $BGM_Title,"漠然" : return
+if %BGM_Id == 91	mov $BGM_Title,"神秘之森" : return
+if %BGM_Id == 92	mov $BGM_Title,"櫻太郎的奮鬥故事" : return
+if %BGM_Id == 93	mov $BGM_Title,"平行" : return
+if %BGM_Id == 95	mov $BGM_Title,"5.99億次毀滅" : return
+if %BGM_Id == 96	mov $BGM_Title,"祝瑪利亞快樂！(伴奏)" : return
+if %BGM_Id == 97	mov $BGM_Title,"圍城" : return
+if %BGM_Id == 98	mov $BGM_Title,"開火" : return
+if %BGM_Id == 99	mov $BGM_Title,"死亡 (取自錯愕)" : return
+if %BGM_Id == 100	mov $BGM_Title,"絕命潰軍" : return
+if %BGM_Id == 101	mov $BGM_Title,"替罪羊" : return
+if %BGM_Id == 102	mov $BGM_Title,"起義" : return
+if %BGM_Id == 103	mov $BGM_Title,"煉獄凶狂葬曲" : return
+if %BGM_Id == 104	mov $BGM_Title,"祝瑪利亞快樂！" : return
+if %BGM_Id == 105	mov $BGM_Title,"跌入危急" : return
+if %BGM_Id == 106	mov $BGM_Title,"你" : return
+if %BGM_Id == 107	mov $BGM_Title,"九九無盡" : return
+if %BGM_Id == 108	mov $BGM_Title,"夢境終末傾瀉者" : return
+if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
+if %BGM_Id == 110	mov $BGM_Title,"轉呀轉"  : return
+if %BGM_Id == 111 	mov $BGM_Title,"未來" : return
+if %BGM_Id == 112 	mov $BGM_Title,"蒼色的冷笑" : return
+if %BGM_Id == 113 	mov $BGM_Title,"名偵探了然於心" : return
+if %BGM_Id == 114 	mov $BGM_Title,"失笑的夜場演出" : return
+if %BGM_Id == 115 	mov $BGM_Title,"一" : return
+if %BGM_Id == 116 	mov $BGM_Title,"螺旋" : return
+if %BGM_Id == 117 	mov $BGM_Title,"弦樂三重奏曲 第6億號 升f小調" : return
+if %BGM_Id == 118 	mov $BGM_Title,"死亡之花" : return
+if %BGM_Id == 119 	mov $BGM_Title,"正義" : return
+if %BGM_Id == 120 	mov $BGM_Title,"ACI-L" : return
+if %BGM_Id == 121 	mov $BGM_Title,"喰那" : return
+if %BGM_Id == 122 	mov $BGM_Title,"Proud-dust ～高傲的塵埃～" : return
+if %BGM_Id == 123 	mov $BGM_Title,"你好，你的夢" : return
+if %BGM_Id == 124 	mov $BGM_Title,"孤獨的深海魚" : return
+if %BGM_Id == 125 	mov $BGM_Title,"少女們的魔女狩獵" : return
+if %BGM_Id == 126 	mov $BGM_Title,"拼接奇美拉" : return
+if %BGM_Id == 127 	mov $BGM_Title,"失色" : return
+if %BGM_Id == 128 	mov $BGM_Title,"重獲新生的重演者" : return
+if %BGM_Id == 129 	mov $BGM_Title,"最後的回答" : return
+if %BGM_Id == 130 	mov $BGM_Title,"光" : return
+if %BGM_Id == 131 	mov $BGM_Title,"生命的糧" : return
+if %BGM_Id == 132 	mov $BGM_Title,"約定" : return
+if %BGM_Id == 133 	mov $BGM_Title,"明天" : return
+if %BGM_Id == 134 	mov $BGM_Title,"翼 (希望版)" : return
+if %BGM_Id == 135 	mov $BGM_Title,"鉛色的假笑" : return
+if %BGM_Id == 136 	mov $BGM_Title,"永恒之鎖" : return
+if %BGM_Id == 137 	mov $BGM_Title,"愛之考驗" : return
+if %BGM_Id == 138 	mov $BGM_Title,"剎那" : return
+if %BGM_Id == 139 	mov $BGM_Title,"回顧" : return
+if %BGM_Id == 140 	mov $BGM_Title,"藍蝶" : return
+if %BGM_Id == 141 	mov $BGM_Title,"我親愛的" : return
+if %BGM_Id == 142 	mov $BGM_Title,"硝煙的氣味" : return
+if %BGM_Id == 143 	mov $BGM_Title,"rog-limitation ～向著遺根的極限～" : return
+if %BGM_Id == 144 	mov $BGM_Title,"圓舞曲 作品34" : return
+if %BGM_Id == 145 	mov $BGM_Title,"活著" : return
+if %BGM_Id == 146 	mov $BGM_Title,"新魔女的誕生 (伴奏)" : return
+if %BGM_Id == 147 	mov $BGM_Title,"ruriair" : return
+if %BGM_Id == 148 	mov $BGM_Title,"牽線人偶的婚約" : return
+if %BGM_Id == 149 	mov $BGM_Title,"人生" : return
+if %BGM_Id == 150 	mov $BGM_Title,"羅蕾萊" : return
+if %BGM_Id == 151 	mov $BGM_Title,"罪" : return
+if %BGM_Id == 152 	mov $BGM_Title,"最初的和最後的" : return
+if %BGM_Id == 153 	mov $BGM_Title,"反魔繼抒咏" : return
+if %BGM_Id == 154 	mov $BGM_Title,"戰場" : return
+if %BGM_Id == 155 	mov $BGM_Title,"重生" : return
+if %BGM_Id == 156 	mov $BGM_Title,"道路" : return
+if %BGM_Id == 157 	mov $BGM_Title,"解枷獲釋的解放者" : return
+if %BGM_Id == 158 	mov $BGM_Title,"感謝所有的人" : return
+if %BGM_Id == 159 	mov $BGM_Title,"嬰兒女王蜂" : return
+if %BGM_Id == 160 	mov $BGM_Title,"新魔女的誕生 (簡短版)" : return
+if %BGM_Id == 161 	mov $BGM_Title,"可疑十足的氣味" : return
+if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre ～十月四日～" : return
+if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulation ～生與死的循環～" : return
+if %BGM_Id == 164 	mov $BGM_Title,"reflection-call ～回響的呼喚聲～" : return
+if %BGM_Id == 165 	mov $BGM_Title,"雨" : return
+if %BGM_Id == 166 	mov $BGM_Title,"7-weights ～七大罪～" : return
+if %BGM_Id == 167 	mov $BGM_Title,"散" : return
+if %BGM_Id == 168 	mov $BGM_Title,"bore-ral ～為了自由的波萊羅～" : return
+if %BGM_Id == 169 	mov $BGM_Title,"ballade-continuer ～永遠地走下去～" : return
+if %BGM_Id == 170 	mov $BGM_Title,"無名之歌 2007版 伴奏" : return
+if %BGM_Id == 171 	mov $BGM_Title,"lie-alaia ～虛偽的同盟～" : return
+if %BGM_Id == 172 	mov $BGM_Title,"金色的夜想曲 (伴奏)" : return
+if %BGM_Id == 173 	mov $BGM_Title,"遠 (黯淡)" : return
+if %BGM_Id == 174 	mov $BGM_Title,"玩具箱" : return
+if %BGM_Id == 175 	mov $BGM_Title,"終點的入口" : return
+if %BGM_Id == 176 	mov $BGM_Title,"人偶劇" : return
+if %BGM_Id == 177 	mov $BGM_Title,"s/he-end ～她們或他們的終焉～" : return
+if %BGM_Id == 179 	mov $BGM_Title,"無名之歌 完整版伴奏" : return
+if %BGM_Id == 180 	mov $BGM_Title,"世界的終結" : return
+if %BGM_Id == 181 	mov $BGM_Title,"goddess-gardena ～於眾女神的庭園～" : return
+if %BGM_Id == 183 	mov $BGM_Title,"嘲笑" : return
+if %BGM_Id == 184 	mov $BGM_Title,"黃泉路墮落" : return
+if %BGM_Id == 185 	mov $BGM_Title,"行刑者" : return
+if %BGM_Id == 186 	mov $BGM_Title,"無名之歌 佐倉片尾版" : return
+if %BGM_Id == 187 	mov $BGM_Title,"布娃娃" : return
+if %BGM_Id == 188 	mov $BGM_Title,"怪奇嬉游曲" : return
+if %BGM_Id == 190 	mov $BGM_Title,"en-counse ～與恕我之人的邂逅～" : return
+if %BGM_Id == 191 	mov $BGM_Title,"lixAxil" : return
+if %BGM_Id == 192 	mov $BGM_Title,"啟示錄 (伴奏)" : return
+if %BGM_Id == 193 	mov $BGM_Title,"飛翔" : return
+if %BGM_Id == 194 	mov $BGM_Title,"最終結局指揮者" : return
+if %BGM_Id == 195 	mov $BGM_Title,"啟示錄" : return
+if %BGM_Id == 240 	mov $BGM_Title,"白夢之繭 -往昔追憶-" : return
+if %BGM_Id == 241 	mov $BGM_Title,"海貓鳴泣之時" : return
+if %BGM_Id == 1000	mov $BGM_Title,"糖糖☆糖果(^-^)" : return
+if %BGM_Id == 1010	mov $BGM_Title,"帶來命運" : return
+if %BGM_Id == 1013  mov $BGM_Title,"帶來命運 (散版)" : return
+;Extra
+if %BGM_Id == 94	mov $BGM_Title,"光溜溜平坦坦" : return
+if %BGM_Id == 1011	mov $BGM_Title,"系統零 (原始版本)" : return
+if %legacy_op == off && %BGM_Id == 1012	mov $BGM_Title,"誓響的教堂" : return
+if %legacy_op == on  && %BGM_Id == 1012	mov $BGM_Title,"海貓鳴泣之時" : return
+if %BGM_Id == 1014	mov $BGM_Title,"伊南娜之夢" : return
+if %BGM_Id == 1017  mov $BGM_Title,"神秘莫測的魔女" : return
+if %BGM_Id == 1018  mov $BGM_Title,"霧之瓮棺" : return
+return
