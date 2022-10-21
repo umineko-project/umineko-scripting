@@ -733,7 +733,7 @@ aspt2 xpos,s0_10,370
 lss s0_8,"ki2","a12_futeki4" ;1
 aspt2 xpos,s0_8,-370
 flush 10,167
-msgwnd_be3
+msgwnd_be4
 *trailer40
 d [ak][text_speed_t 10][text_fade_t 0]`«......I'm happy too.`[text_speed_t 5][text_fade_t 133][@][lv 0*"59"*"70700060"]` You always call me Beatrice.`[|][\]
 textoff2
