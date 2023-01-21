@@ -33147,10 +33147,10 @@ if %game_language != 4 jumpf
 	if %full_window_auto = 0 lsp 281,":s;#FFFFFF`{p:8:自动}",1559,%y+200
 ~
 if %game_language != 5 jumpf
-	notif  %full_window_auto = 1 lsp 279,":s;#C7C7C7#FFFFFF`{p:8:In Finestra}",995,%y+200
-	if %full_window_auto = 1 lsp 279,":s;#FFFFFF`{p:8:In Finestra}",995,%y+200
-	notif  %full_window_auto = 2 lsp 280,":s;#C7C7C7#FFFFFF`{p:8:Intero}",1213,%y+200
-	if %full_window_auto = 2 lsp 280,":s;#FFFFFF`{p:8:Intero}",1213,%y+200
+	notif  %full_window_auto = 1 lsp 279,":s;#C7C7C7#FFFFFF`{p:8:In Finestra}",850,%y+200
+	if %full_window_auto = 1 lsp 279,":s;#FFFFFF`{p:8:In Finestra}",850,%y+200
+	notif  %full_window_auto = 2 lsp 280,":s;#C7C7C7#FFFFFF`{p:8:Intera}",1280,%y+200
+	if %full_window_auto = 2 lsp 280,":s;#FFFFFF`{p:8:Intera}",1280,%y+200
 	notif  %full_window_auto = 0 lsp 281,":s;#C7C7C7#FFFFFF`{p:8:Auto}",1559,%y+200
 	if %full_window_auto = 0 lsp 281,":s;#FFFFFF`{p:8:Auto}",1559,%y+200
 ~

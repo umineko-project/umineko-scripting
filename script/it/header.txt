@@ -298,7 +298,7 @@ stralias verify_updates,"Assicurarsi di aver installato tutti gli aggiornamenti 
 stralias verify_engine,"Assicurarsi di utilizzare uno script e un motore di gioco più recenti. Il motore e lo script attuali sono incompatibili."
 
 stralias verification_title,"Verifica dei file di gioco"
-stralias verification_verifying,"Verifica dei file...{n}Si prega di notare che potrebbe richiedere alcuni minuti.{n}"
+stralias verification_verifying,"Verifica dei file...{n}Si prega di notare che l'operazione potrebbe richiedere alcuni minuti.{n}"
 stralias verification_legend,"Legenda: "
 stralias verification_modified," File modificato"
 stralias verification_missing," File mancante"
