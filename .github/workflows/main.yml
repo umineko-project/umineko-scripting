@@ -50,7 +50,7 @@ jobs:
           zip -qry umineko-cn-scripts_r${BUILD}_dev.zip cn.txt cn.cfg || exit 1
           zip -qry umineko-wh-scripts_r${BUILD}_dev.zip wh.txt || exit 1
           zip -qry umineko-cht-scripts_r${BUILD}_dev.zip cht.txt cht.cfg || exit 1
-          zip -qry umineko-cht-scripts_r${BUILD}_dev.zip it.txt cht.cfg || exit 1
+          zip -qry umineko-it-scripts_r${BUILD}_dev.zip it.txt it.cfg || exit 1
           cd ..
           php update-manager/update-manager.php script ciout/en.txt "ciout/en.file" "$LAST_EN" || exit 1
           php update-manager/update-manager.php script ciout/ru.txt "ciout/ru.file" "$LAST_RU" || exit 1
@@ -65,7 +65,7 @@ jobs:
           zip -qry umineko-cn-scripts_r${BUILD}.zip cn.file cn.cfg || exit 1
           zip -qry umineko-wh-scripts_r${BUILD}.zip wh.file || exit 1
           zip -qry umineko-cht-scripts_r${BUILD}.zip cht.file cht.cfg || exit 1
-          zip -qry umineko-cht-scripts_r${BUILD}.zip it.file it.cfg || exit 1
+          zip -qry umineko-it-scripts_r${BUILD}.zip it.file it.cfg || exit 1
           cd ..
           cd extra
           zip -qry ../ciout/extra_${TODAY}.zip * || exit 1
@@ -74,7 +74,7 @@ jobs:
           echo "Refer to https://forum.umineko-project.org for more details." >> release_notes.md
 
       - name: Release
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -87,7 +87,7 @@ jobs:
           prerelease: false
 
       - name: Upload Extra
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -98,7 +98,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload Main
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -109,7 +109,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload Main (dev)
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -120,7 +120,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload PT
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -131,7 +131,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload PT (dev)
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -142,7 +142,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload WH
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -153,7 +153,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload WH (dev)
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -164,7 +164,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CN
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -175,7 +175,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CN (dev)
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -186,7 +186,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CHT
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -197,7 +197,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload CHT (dev)
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -208,7 +208,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload IT
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -219,7 +219,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload IT (dev)
-        if: github.repository_owner == 'umineko-project'
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -228,4 +228,3 @@ jobs:
           asset_path: ./ciout/umineko-it-scripts_r${{ env.BUILD }}_dev.zip
           asset_name: umineko-it-scripts_r${{ env.BUILD }}_dev.zip
           asset_content_type: application/zip
-
