@@ -168,7 +168,6 @@
 		wait_on_d -1
 	textoff
 	lsp s0_3,kakera_memory10_src,0,0
-	if localisation != "it" jumpf
 		*kak_10i
 		d2 [ak][text_fade_t 0][text_speed_t 10]`My goddamn grandad wavered into vision.{n}{n}......Heh, is he trying to be some kind of knight, blocking the way between me and Beato...?!`[#][*][\]
 		wait_on_d 0
