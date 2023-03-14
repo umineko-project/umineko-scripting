@@ -28851,6 +28851,7 @@ return
 	if $Free3 == "wh" mov $Free3,"Witch-Hunt"
 	if $Free3 == "cn" mov $Free3,"Chinese Simp."
 	if $Free3 == "cht" mov $Free3,"Chinese Trad."
+	if $Free3 == "it" mov $Free3,"Italiano"
 	lsp 268,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,226
 	lsp 380,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,226
 	lsp 381,":a/2,0,3;graphics\menu_en\config\config_right.png",1640,226
@@ -33095,6 +33096,7 @@ if localisation == "ru" mov %game_language,1 : mov $Free3,"Русская"
 if localisation == "pt" mov %game_language,2 : mov $Free3,"Português"
 if localisation == "cn" mov %game_language,3 : mov $Free3,"Chinese Simp."
 if localisation == "cht" mov %game_language,4 : mov $Free3,"Chinese Trad."
+if localisation == "it" mov %game_language,5 : mov $Free3,"Italiano"
 
 getscriptnum %Free1
 for %Free2 = 0 to %Free1-1
@@ -33153,6 +33155,14 @@ if %game_language != 4 jumpf
 	lsp 302,":s;#FFFFFF`{p:8:視窗大小}",135,%y+100
 	lsp 303,":s;#FFFFFF`{p:8:顯示模式}",135,%y+200
 	lsp 304,":s;#FFFFFF`{p:8:操作介面}",135,%y+300
+~
+
+if %game_language != 5 jumpf
+	lsp 300,":s;#FFFFFF`{p:10:——————}{p:9:{a:c: Configurazione Iniziale di Gioco }{p:10:——————}}",135,%y-100
+	lsp 301,":s;#FFFFFF`{p:8:Lingua di Gioco}",135,%y
+	lsp 302,":s;#FFFFFF`{p:8:Dimensione Finestra}",135,%y+100
+	lsp 303,":s;#FFFFFF`{p:8:Schermata}",135,%y+200
+	lsp 304,":s;#FFFFFF`{p:8:Interfaccia}",135,%y+300
 ~
 
 *first_setting2
@@ -33304,6 +33314,7 @@ return
 	if $Free3 == "pt" mov $Free3,"Português" mov %game_language,2
 	if $Free3 == "cn" mov $Free3,"Chinese Simp." mov %game_language,3
 	if $Free3 == "cht" mov $Free3,"Chinese Trad." mov %game_language,4
+	if $Free3 == "it" mov $Free3,"Italiano" mov %game_language,5
 	lsp 273,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,%y
 
 	lsp 269,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,%y
@@ -33351,6 +33362,14 @@ if %game_language != 4 jumpf
 	notif  %full_window_auto = 0 lsp 281,":s;#C7C7C7#FFFFFF`{p:8:自动}",1559,%y+200
 	if %full_window_auto = 0 lsp 281,":s;#FFFFFF`{p:8:自动}",1559,%y+200
 ~
+if %game_language != 5 jumpf
+	notif  %full_window_auto = 1 lsp 279,":s;#C7C7C7#FFFFFF`{p:8:In Finestra}",850,%y+200
+	if %full_window_auto = 1 lsp 279,":s;#FFFFFF`{p:8:In Finestra}",850,%y+200
+	notif  %full_window_auto = 2 lsp 280,":s;#C7C7C7#FFFFFF`{p:8:Intera}",1280,%y+200
+	if %full_window_auto = 2 lsp 280,":s;#FFFFFF`{p:8:Intera}",1280,%y+200
+	notif  %full_window_auto = 0 lsp 281,":s;#C7C7C7#FFFFFF`{p:8:Auto}",1559,%y+200
+	if %full_window_auto = 0 lsp 281,":s;#FFFFFF`{p:8:Auto}",1559,%y+200
+~
 return
 
 
@@ -33386,6 +33405,12 @@ if %game_language != 4 jumpf
 	notif %interface_kb_dual = 1 lsp 271,":s;#C7C7C7#FFFFFF`{p:8:DualShock}",1377,%y+300
 	if %interface_kb_dual = 1 lsp 271,":s;#FFFFFF`{p:8:DualShock}",1377,%y+300
 ~
+if %game_language != 5 jumpf
+	notif %interface_kb_dual = 0 lsp 270,":s;#C7C7C7#FFFFFF`{p:8:KB+Mouse}",1010,%y+300
+	if %interface_kb_dual = 0 lsp 270,":s;#FFFFFF`{p:8:KB+Mouse}",1010,%y+300 : vsp 100,0
+	notif %interface_kb_dual = 1 lsp 271,":s;#C7C7C7#FFFFFF`{p:8:DualShock}",1377,%y+300
+	if %interface_kb_dual = 1 lsp 271,":s;#FFFFFF`{p:8:DualShock}",1377,%y+300
+~
 return
 
 
@@ -33401,6 +33426,7 @@ return
 	if %game_language = 2 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}Personalizada}",1280,%y+100
 	if %game_language = 3 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}自定义}",1280,%y+100
 	if %game_language = 4 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}自定義}",1280,%y+100
+	if %game_language = 5 lsp 299,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}Personalizzata}",1280,%y+100
 	~
 	lsp 297,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,%y+112
 	lsp 298,":a/2,0,3;graphics\menu_en\config\config_right.png",1640,%y+112
@@ -33421,6 +33447,9 @@ if %game_language != 3 jumpf
 ~
 if %game_language != 4 jumpf
 	lsp 272,":s;#C7C7C7#FFFFFF`{p:8:套用}",800,%y+500
+~
+if %game_language != 5 jumpf
+	lsp 272,":s;#C7C7C7#FFFFFF`{p:8:Applica}",800,%y+500
 ~
 return
 
