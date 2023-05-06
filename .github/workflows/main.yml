@@ -44,6 +44,7 @@ jobs:
           cp misc/pt.cfg ciout
           cp misc/cn.cfg ciout
           cp misc/cht.cfg ciout
+          cp misc/it.cfg ciout
           cd ciout
           zip -qry umineko-main-scripts_r${BUILD}_dev.zip ru.txt en.txt chiru.file game.hash default.cfg || exit 1
           zip -qry umineko-pt-scripts_r${BUILD}_dev.zip pt.txt pt.cfg || exit 1
