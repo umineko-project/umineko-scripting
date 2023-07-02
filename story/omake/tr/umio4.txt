@@ -1,0 +1,124 @@
+`A warm welcome to you, traveler, and congratulations on your final steps to complete our port of {i:Umineko no Naku Koro ni ~Rondo of the Witch and Reasoning~}.`
+` We appreciate your effort to check every hidden part of the game.`
+`Those who have been waiting for this since 2011, when the first promo videos appeared, please accept our deep apologies.`
+`After all that arduous labor, we have finally reached the grand finale of the first half.`
+` Each month was needed to refine things to the level they are now, and it has to be admitted that our current schedule matches our planned deadlines very closely.`
+` Your wild applause, please.`
+`This omake is likely going to be the last one, and we thought long and hard about what to include in it.`
+` Maybe some scary stories of what happened to us during the development, reverse‐engineering, and translation process.`
+` Perhaps the minutes of blank despair we had.`
+` The times we wanted to sit down, pour our glasses full of something heavy, and send the whole thing to ashes.`
+` Or even the upcoming news we plan to announce sooner or later.`
+`We even thought of sharing some of the experiences we had.`
+` But, no, that would have been boring.`
+`In the end we decided to talk about some easter eggs(?) that we found in the remake.`
+` Most of them you are supposed to find yourself, so call ours an appetizer preceding the next reread.`
+`Hope you enjoyed the opening video for at least the fifth time.`
+`Did you notice anything strange in it?`
+` Here is a hint: it's on the record at the beginning.`
+`The first thing that comes to mind is "Senza {nobreak:{m:-5:——}—}, la verità non si vede".`
+`{n}Without {nobreak:{m:-5:——}—}, the truth cannot be seen.`
+`{n}We think that word is "a monocle", since that small blurry text on the edges of the record that cannot be seen is:`
+`“Il destino, chi festeggerà?/{0}Oh Maga!/{0}Oh Maga!/{0}Che cosa mi annuncerai?{n}Il vento diviene bufera/{0}Infuriano i marosi/{0}Il mare chiama mugghiando la Maga che ha vissuto mille anni/{0}Ho tanto atteso questo giorno! Ho tanto temuto questo giorno!`
+`Beatrice! Maga crudele!/{0}Di bellezza senza pari/{0}Beatrice! Oh! Di dolcezza capricciosa/{0}Mai potrò liberarmi dal tuo incantesimo/{0}Se questa pena deve durare, almeno una volta abbi pietà”`
+`We doubt we need to say where these lyrics come from.`
+` And your homework will be to decipher the first twenty seconds of Igreja of Echoing Vows.`
+`Incidentally, while we're on the topic of music, let's ask a simple question.`
+` What's the BGM playing now?`
+`The answer is "suspicion".`
+` (Those of you who have BGM Title Display enabled get zero points.)`
+` However, on PS3—Episodes 1 to 4 only—you will actually hear a {i:different track} under this name.`
+` Furthermore, under the name of the other track, you will find that it instead plays "suspicion".`
+` Not so bad for your next piece of homework?`
+`Next up: Alchemist did some level of harm to Umineko by the means of censorship.`
+` Not only did they remove the references to Touhou and tsurupettan, but also the words from system0.`
+` For some reason probably relating to ratings boards and Japan's drinking age, they removed references to Battler drinking alcohol in Episodes 1, 2, and 4.`
+` They also removed a number of references to real people, brands, and places, including references to Doraemon, Card Captor Sakura, Steve McQueen, Château Pétrus, and Germany.`
+`Furthermore, there are unused voice files left on the disc that show that at one point, they were even considering deleting references to Higurashi, referring instead to "the mystery novel you were reading the other day".`
+` To our relief, they ultimately found this unnecessary.`
+` Mii,`
+` nipah~{p:0:☆}`
+`In fact, the disc has a number of treasures hidden in the voice files—not only censored and uncensored dialogues, but also faulty texts and incorrect speakers.`
+` There are also a few interesting errors that actually made it into the game.`
+` We'd like to take you on a tour of them now.`
+`The guests had already been greeted, so it was time for some tea to be prepared for them.`
+`...That tea was late, and having the guests talk about making some themselves was an embarrassment for the host.`
+`Natsuhi bit her lower lip, frustrated with the ineptitude of the servants who were taking too long to bring the tea.`
+`...Seeing her face, Eva, without hesitation, started to giggle.`
+`......Of course, Shannon had no way of knowing what was taking place in the parlor.`
+`As she came in pushing a dish cart piled with tea cups,`
+` Natsuhi gave her a pained look for no apparent reason, and Shannon couldn't help but flinch without knowing what she had done wrong.`
+`"......E‐excuse me.`
+` I shall prepare some tea for you."`
+`"Oh, Shannon‐chan, it's been a while!`
+` You keep getting prettier every time I see you!"`
+`".........Oh,`
+` ...um,`
+` .........thanks—"`
+`"Leave the chatting for after you've set the table.`
+` The tea will get cold."`
+`Notice anything strange here?`
+`The answer is:`
+` the location.`
+` For some reason, even though the text describes them {i:twice} as being in the parlor, this is definitely the dining hall!`
+` The background file is even called "{nobr:mdin}", short for "mansion dining".`
+`This error was present in the released PS3 game, and we fixed it in our port.`
+` Worst of all is that this is the very first time you ever see the parlor, and in PS3 it is presented with dining hall backgrounds throughout this scene, confusing readers as to what the parlor is meant to look like.`
+` We think that Episode 1 was quite rushed.`
+`Returning to the scene a few moments later, we found something buried in the unused voice files.`
+`"Shannon‐chan?`
+` Do you know what silver spoons are used for?`
+` Or why they have to be silver?`
+` Do you know why?"`
+`"...............no...`
+`.........umm......"`
+`Eva's eyes played over Shannon, who was setting the table, as a catty smile floated onto her face.`
+`...Taken on its own, the expression on Eva's face may have been charming, in an impish sort of way.`
+`However, the words being spun from her lips held within them the keenness of a razor.`
+`Shannon tried with all her might to avoid Eva's gaze, which continued to focus on her.`
+`Grasping that Shannon was hard‐pressed for an answer, Rosa promptly gave some timely help.`
+` ({i:Courtesy of the unused voice files, Rosa's part will be played today by Eva herself!})`
+`"They say that silver dims if it is touched by poison.`
+` ...*giggle*, you've learned something, right, Shannon‐chan?"`
+`"I have a memo with the epitaph on it!`
+` Let's all solve the puzzle, let's all solve the puzzle...!"`
+`"This story probably went wrong ever since that time."`
+`".........That may be so.`
+` Maybe we should have tried solving the epitaph's riddle from the beginning, like {f:5:Beatrice}‐sama said."`
+` ({i:Hold on, wasn't this line supposed to belong to...})`
+`"It makes no fucking sense!!`
+` Don't talk to meeeeeeeeeee, uuo{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}oohhh!!!"`
+`"C'mon c'mon c'mon c'mon, don't cry, alright??`
+` Kaboom, kabang, it's magic!!"`
+`"If you want, I'll crush the moon and make comets fall like rain!`
+` I can even bury the whole island in those {b:sexy dynamite nee‐chans} you like so much, seeeeeeeeee??`
+` Hihhihhihhihhi!!"`
+`When I think about it, the world is so vast, ......and yet so small.`
+`Billions of people live on the Earth.`
+`{n}But I probably won't meet even one percent of those people.`
+`Even so, I will speak of the world.`
+`{n}Without knowing even one percent of the world—I will speak of "my world".`
+`"I'm not qualified to deny the laws of a world I don't know.`
+` ......So just because magic doesn't exist in my world, I can't deny that magic exists in a world I don't know."`
+`"That makes it a true Devil's Proof.`
+` No, maybe it's more like "when in Rome, do as the Romans do"."`
+`I can be confident in the world I know.`
+` So even if my world {i:is} denied by a complete stranger who doesn't know a thing about it, that's nothing to worry about.`
+`And in the same way, just because I don't know another world,`
+` that doesn't make me qualified to deny it.`
+`"Which is why,`
+` regardless of whether there is magic in my world or not,`
+` ......I cannot deny the magic Maria onee‐chan taught me."`
+`We are pretty grateful for the materials they left on the disc, actually.`
+` Leaving the fixed and uncensored unused dialogues untouched in the resources actually allowed us to implement a more complete port.`
+`They were likely in a hurry.`
+` If you play the game on PSP, you will notice that some sprites stop smiling where inappropriate.`
+`Some mistakes didn't get a fix even there.`
+`Hmm, something feels wrong here.`
+` No, the water‐proof makeup still looks fine.`
+` Oh, right, did {f:5:Beatrice} randomly lose her previously obtained ring for no reason?`
+`In the end we would like to once again thank all our testers for spending their time on our work.`
+` Without you it would not have been seen!`
+`That's all I want to say.`
+` Well then,`
+` <see you again, have a nice day>.`
