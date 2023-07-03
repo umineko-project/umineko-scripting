@@ -1687,14 +1687,14 @@ if %init_done = 1 jumpf
 	if %Free1 >  2048 mov %video_res,0
 	mov %video_res,0
 	mov %old_wording,1
-	mov %msgwnd_type,0
+	mov %msgwnd_type,1
 	mov %animated_lips,1
 	;mov %animated_rain,1
 	mov %enable_cache,1
 	mov %init_done,1
 	mov %bgm_title_language,1
 
-	mov %op_ed_song_subtitles,2
+	mov %op_ed_song_subtitles,5
 	mov %rumble_strength,50
 	mov %bgm_chapter_display,1
 	mov %sskip_turbo,0
@@ -24607,7 +24607,7 @@ mov $BGM_Title,"FIXME"
 if %bgm_title_language != 1 jumpf
 if %BGM_Id == 1	mov $BGM_Title,"Thunberg Lily" : return
 if %BGM_Id == 2	mov $BGM_Title,"Door of Summer" : return
-if %BGM_Id == 3	mov $BGM_Title,"BOUNCE" : return
+if %BGM_Id == 3	mov $BGM_Title,"HANE (Feathers)" : return
 if %BGM_Id == 4	mov $BGM_Title,"Ride on" : return
 if %BGM_Id == 5	mov $BGM_Title,"sea" : return
 if %BGM_Id == 6	mov $BGM_Title,"Hour of Darkness" : return
@@ -24623,7 +24623,7 @@ if %BGM_Id == 15	mov $BGM_Title,"Hell’s Halls" : return
 if %BGM_Id == 16	mov $BGM_Title,"Fortitude" : return
 if %BGM_Id == 17	mov $BGM_Title,"witch in gold(cembalo)" : return
 if %BGM_Id == 18	mov $BGM_Title,"Beckoning" : return
-if %BGM_Id == 19	mov $BGM_Title,"Suspicious Scent" : return
+if %BGM_Id == 19	mov $BGM_Title,"Fishy Aroma" : return
 if %BGM_Id == 20	mov $BGM_Title,"stupefaction" : return
 if %BGM_Id == 21	mov $BGM_Title,"praise" : return
 if %BGM_Id == 22	mov $BGM_Title,"Pass" : return
@@ -24650,7 +24650,7 @@ if %BGM_Id == 42	mov $BGM_Title,"String Quartet #1 in G Major — I.Allegro" : r
 if %BGM_Id == 43	mov $BGM_Title,"cage" : return
 if %BGM_Id == 44	mov $BGM_Title,"Golden Sneer" : return
 if %BGM_Id == 45	mov $BGM_Title,"Scorpion Guts" : return
-if %BGM_Id == 46	mov $BGM_Title,"Final Curtain VerC" : return
+if %BGM_Id == 46	mov $BGM_Title,"Life's End (VerC)" : return
 if %BGM_Id == 47	mov $BGM_Title,"Answer" : return
 if %BGM_Id == 48	mov $BGM_Title,"Answer short" : return
 if %BGM_Id == 49	mov $BGM_Title,"Melody inst.ver" : return
@@ -24696,7 +24696,7 @@ if %BGM_Id == 88	mov $BGM_Title,"F Style" : return
 if %BGM_Id == 89	mov $BGM_Title,"Monochrome Clock" : return
 if %BGM_Id == 90	mov $BGM_Title,"apathy" : return
 if %BGM_Id == 91	mov $BGM_Title,"Mystic Forest" : return
-if %BGM_Id == 92	mov $BGM_Title,"The Tale of Sakutarou’s Tenacity" : return
+if %BGM_Id == 92	mov $BGM_Title,"Sakutarou's Adventure" : return
 if %BGM_Id == 93	mov $BGM_Title,"Parallel" : return
 if %BGM_Id == 95	mov $BGM_Title,"599 million ruins" : return
 if %BGM_Id == 96	mov $BGM_Title,"Happy Maria!(Instrumental)" : return
@@ -24715,7 +24715,7 @@ if %BGM_Id == 108	mov $BGM_Title,"dreamenddischarger" : return
 if %BGM_Id == 109	mov $BGM_Title,"Discode" : return
 if %BGM_Id == 110	mov $BGM_Title,"twirl"  : return
 if %BGM_Id == 111 	mov $BGM_Title,"Future" : return
-if %BGM_Id == 112 	mov $BGM_Title,"Azure Jeer" : return
+if %BGM_Id == 112 	mov $BGM_Title,"Deep Blue Jeer" : return
 if %BGM_Id == 113 	mov $BGM_Title,"The Great Detective Knows" : return
 if %BGM_Id == 114 	mov $BGM_Title,"Smileless Soirée" : return
 if %BGM_Id == 115 	mov $BGM_Title,"one" : return
@@ -24764,7 +24764,7 @@ if %BGM_Id == 157 	mov $BGM_Title,"liberatedliberator" : return
 if %BGM_Id == 158 	mov $BGM_Title,"Thanks for all people" : return
 if %BGM_Id == 159 	mov $BGM_Title,"Infant Queen Bee" : return
 if %BGM_Id == 160 	mov $BGM_Title,"birth of new witch(Short Ver)" : return
-if %BGM_Id == 161 	mov $BGM_Title,"SUSPICIOUSSCENT" : return
+if %BGM_Id == 161 	mov $BGM_Title,"FISHYAROMA" : return
 if %BGM_Id == 162 	mov $BGM_Title,"le4-octobre" : return
 if %BGM_Id == 163 	mov $BGM_Title,"l&d-circulation" : return
 if %BGM_Id == 164 	mov $BGM_Title,"reflection-call" : return
@@ -25238,6 +25238,7 @@ mov $track_id,""
 if %op_ed_song_subtitles = 2 goto *sub_get_translation
 if %op_ed_song_subtitles = 3 goto *sub_get_romaji
 if %op_ed_song_subtitles = 4 goto *sub_get_both 
+if %op_ed_song_subtitles = 5 goto *sub_get_tr 
 
 return
 
@@ -27706,11 +27707,11 @@ return
 	
 	;Op/Ed song subtitles button
 	if %BtnRes != 76 jumpf
-		if %op_ed_song_subtitles = 1 mov %op_ed_song_subtitles,5
+		if %op_ed_song_subtitles = 1 mov %op_ed_song_subtitles,6
 		dec %op_ed_song_subtitles : gosub *settings_op_ed_song_subtitles
 	~	
 	if %BtnRes != 77 jumpf
-		if %op_ed_song_subtitles = 4 mov %op_ed_song_subtitles,0
+		if %op_ed_song_subtitles = 5 mov %op_ed_song_subtitles,0
 		inc %op_ed_song_subtitles : gosub *settings_op_ed_song_subtitles
 	~
 	;end
@@ -28849,6 +28850,7 @@ return
 	if $Free3 == "cn" mov $Free3,"Chinese Simp."
 	if $Free3 == "cht" mov $Free3,"Chinese Trad."
 	if $Free3 == "it" mov $Free3,"Italiano"
+	if $Free3 == "tr" mov $Free3,"Witch Love"
 	lsp 268,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,226
 	lsp 380,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,226
 	lsp 381,":a/2,0,3;graphics\menu_en\config\config_right.png",1640,226
@@ -28866,6 +28868,7 @@ return
 	if %op_ed_song_subtitles = 2 lsp 272,set_song_subtitles_trans,1260+%mcoord_add,748
 	if %op_ed_song_subtitles = 3 lsp 272,set_song_subtitles_rom,1260+%mcoord_add,748
 	if %op_ed_song_subtitles = 4 lsp 272,set_song_subtitles_both,1260+%mcoord_add,748
+	if %op_ed_song_subtitles = 5 lsp 272,set_song_subtitles_tr,1260+%mcoord_add,748
 	lsp 276,":a/2,0,3;graphics\menu_en\config\config_left.png",1210+%mcoord_add,759
 	lsp 277,":a/2,0,3;graphics\menu_en\config\config_right.png",1640+%mcoord_add,759
 return
@@ -32840,9 +32843,10 @@ reset
 
 	operate_config u_read,$op_ed_song_subtitles,"subtitles"
 	if $op_ed_song_subtitles == "None" mov %op_ed_song_subtitles,1
-	if $op_ed_song_subtitles == "Translation" mov %op_ed_song_subtitles,2
+	if $op_ed_song_subtitles == "English" mov %op_ed_song_subtitles,2
 	if $op_ed_song_subtitles == "Romaji" mov %op_ed_song_subtitles,3
 	if $op_ed_song_subtitles == "Both" mov %op_ed_song_subtitles,4
+	if $op_ed_song_subtitles == "Türkçe" mov %op_ed_song_subtitles,5
 
     operate_config u_read,$skip_unread,"skip_unread_dialogues"
     if $skip_unread == "false" mov %skip_unread,1 ;off
@@ -33108,6 +33112,7 @@ return
 	if $Free3 == "cn" mov $Free3,"Chinese Simp." mov %game_language,3
 	if $Free3 == "cht" mov $Free3,"Chinese Trad." mov %game_language,4
 	if $Free3 == "it" mov $Free3,"Italiano" mov %game_language,5
+	if $Free3 == "tr" mov $Free3,"Witch Love" mov %game_language,6
 	lsp 273,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,%y
 
 	lsp 269,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,%y
@@ -33327,6 +33332,8 @@ if %Free1==0 mov $Free1,verify_updates : gosub *verify_err : jumpf
 	if %Free1==0 || %Free2!=21406 mov $Free1,verify_updates : gosub *verify_err : jumpf
 	fileexist %Free1,"game.hash"
 	if %Free1==0 mov $Free1,verify_updates : gosub *verify_err : jumpf
+	fileexist %Free1,"locale_tr_game.hash"
+	if %Free1==0 mov $Free1,verify_updates : gosub *verify_err : jumpf
 ~
 
 api_compat %Free1,2,2,0
@@ -33334,7 +33341,7 @@ if %Free1==0 mov $Free1,verify_engine : gosub *verify_err
 
 if %Free2==1 lsp 50,":s;#FFFFFF`{p:11:"+$Free2+"}", 150,50 : print 1 : click : end
 
-fileexist %Free1,"locale_game.hash",%Free2
+fileexist %Free1,"locale_tr_game.hash",%Free2
 if %Free2!=%last_locale_gamehash goto *full_verify
 fileexist %Free1,"game.hash",%Free2
 if %Free2!=%last_gamehash goto *full_verify
@@ -33465,11 +33472,8 @@ goto *full_verify_locale_skip
 
 *full_verify_locale
 
-fileexist %Free1,"locale_game.hash",%Free2
-if %Free1 == 0 mov %last_locale_gamehash,0 : goto *full_verify_locale_skip
-
-verify_files %Free1,"locale_game.hash",$Free1
-if %Free1 == 0 mov $Free2,verification_good : fileexist %Free3,"locale_game.hash",%last_locale_gamehash
+verify_files %Free1,"locale_tr_game.hash",$Free1
+if %Free1 == 0 mov $Free2,verification_good : fileexist %Free3,"locale_tr_game.hash",%last_locale_gamehash
 if %Free1 == 1 mov $Free2,verification_bad
 if %Free1 == -1 mov $Free2,verification_nohash
 if %Free1 == -2 || %Free1 == -3 mov $Free2,verification_unsupported
