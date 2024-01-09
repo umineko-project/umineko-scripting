@@ -86,7 +86,7 @@
 ` Kihihi{0}hi{0}hi{0}hi{0}hihih.`
 ` Cugino George, non credi in {f:5:Beatrice} perché non è una persona che puoi picchiare?"`
 `"Vuoi prendertela con qualcuno, per sfogare il tuo sconforto con la violenza.`
-` Quindi non ti soddisferà un avversario che non sia un {y:0:essere umano}{n:0:essere umano} da menare..."`
+` Quindi non ti soddisferà un avversario che non sia un {y:0:Umano}{n:0:umano} da menare..."`
 `"Per cui, anche se ti dicessi la verità, tu non l'accetteresti, cugino George.`
 ` Pertanto è inutile che te lo dica.`
 ` Non mi crederesti..."`
@@ -117,7 +117,7 @@
 ` E tu, mamma?!`
 ` Maria sa chi è il colpevole, e ce lo sta nascondendo!`
 ` Magari non ne è direttamente responsabile!"`
-`"Ma è senza dubbio una complice del colpevole!`
+`"Ma è senza dubbio un complice del colpevole!`
 ` Esatto, è una spia!`
 `{n}Non possiamo lasciare che resti con noi!"`
 `"...Kihihihih."`
@@ -185,7 +185,7 @@
 `Ma se l'avesse proferito ad alta voce, l'atmosfera sarebbe ritornata nervosa.`
 ` Intuendolo, decisi di fermarla...`
 `"...Se posso permettermi,`
-` esiste una sola locazione in cui non si può entrare neanche con i mazzi di chiavi della servitù."`
+` esiste un solo luogo in cui non si può entrare neanche con i mazzi di chiavi della servitù."`
 `"Sai dove si trova?"`
 `"...Certo...`
 ` Sarebbe lo studio del padrone."`
@@ -733,7 +733,7 @@
 ` Il colpevole non è un essere umano.`
 ` {i:Sono solo i sacrifici scelti dalla chiave}’.`
 `"Questo non ha niente a che vedere con il nascondiglio dell'oro!!`
-` È magia nera, sono istruzioni per una cerimonia di resurrezione!`
+` È magia nera, sono istruzioni per un rituale di resurrezione!`
 ` In fondo, l'epigrafe richiede un gran numero di {i:morti}!"`
 `"...H-Hai ragione.`
 ` Basta anche una rapida lettura, e sarebbero 6+2+5...`
@@ -743,12 +743,12 @@
 ` E due o tre domestici...`
 ` Ieri e oggi ce n'erano cinque, ma normalmente non ce ne sono così tanti."`
 `"Il che significa una cosa...`
-` che di norma, non ci sarebbero abbastanza sacrifici per portare avanti questa {i:cerimonia}...`
+` che di norma, non ci sarebbero abbastanza sacrifici per portare avanti quel {i:rituale}...`
 ` No, aspettate...`
 ` La diceria per cui il nonno stesse assumendo domestici da un orfanotrofio per usarli in qualche spaventosa cerimonia..."`
 `"Che vuoi dire?!`
 ` Che lui incrementò il numero dei domestici per aumentare il numero dei sacrifici... e che la riunione annuale di famiglia, in cui si sarebbero radunate ancora più persone...`
-` fosse l'unica occasione in tutto l'anno in cui poteva attuare la cerimonia?!"`
+` fosse l'unica occasione in tutto l'anno in cui poteva attuare il rituale?!"`
 `Quando Jessica lo urlò, Maria esplose in una spaventosa risata, sembrando particolarmente compiaciuta.`
 `"...Kihihihihihihihihihihihihihih...`
 ` Non avete mai pregato che qualche probabilità si avverasse, così da poter mettere alla prova la vostra fortuna?"`
@@ -766,7 +766,7 @@
 ` La chiave sorteggia casualmente i sacrifici.`
 ` E per portare avanti la cerimonia, ha optato per il giorno con il maggior numero di persone sull'isola, in modo da ridurre al minimo le probabilità che lui stesso venisse scelto..."`
 `"Ridicolo!!`
-` Stai dicendo che tutti questi incidenti sono parte di un'incresciosa cerimonia magica?!"`
+` Stai dicendo che tutti questi incidenti sono parte di un'increscioso rituale magico?!"`
 `Natsuhi gridò...`
 `Nella sua mente, vi era il terrore provocato dal pensiero di poter essere stata risparmiata grazie all'amuleto con lo scorpione...`
 `Se non lo avessi ricevuto da Jessica, per poi appenderlo alla maniglia...`
@@ -826,7 +826,7 @@
 ` Su, guardate il secondo e il terzo tesoro."`
 `"...‘Uno sarà la resurrezione di tutte le anime dei morti.`
 ` Uno sarà perfino la resurrezione dell'amore andato perduto’...`
-` Quindi il nonno credeva che, anche se fosse morto nel corso della cerimonia, alla fine sarebbe stato riportato in vita...?"`
+` Quindi il nonno credeva che, anche se fosse morto nel corso del rituale, alla fine sarebbe stato riportato in vita...?"`
 `"Ma è assurdo, roba da svalvolati!!`
 ` Quando muori è finita, giusto?!`
 ` I morti non tornano in vita.`
@@ -847,7 +847,7 @@
 `"I-Io non ne so niente...!`
 ` È la verità, non lo so...`
 ` Pensa che se ne fossi stata a conoscenza, oggi sarei qui sull'isola?`
-` Avrei finto di essere malata, o avrei fatto in modo di prendermi un giorno libero, proprio così!!"`
+` Avrei finto di essere malata, o avrei fatto in modo di prendermi un giorno libero, sissignore!!"`
 `"Dottor Nanjo, qual è la sua opinione, visto che lei è stato amico di nostro nonno per molti anni..."`
 `"...I-Io sono della stessa opinione di Genji-san...`
 ` Kinzo-san era ben al di là della gente comune.`
@@ -1009,10 +1009,10 @@
 `"...Maria non capisce...`
 ` Chi dovrebbe essere il colpevole per te e gli altri, Battler?"`
 `"Quando non volete credere che il colpevole sia uno di voi, credete in {f:5:Beatrice}...`
-` Solo quando volete vendicarvi per l'uccisione di qualcuno a voi caro cominciate a credere in un colpevole {y:0:umano}{n:0:umano} su cui potete usare la violenza, per poi negare {f:5:Beatrice}."`
-`"...Ecco perché non potete {y:1:‘osservarla’}{n:1:osservarla}...`
+` Solo quando volete vendicarvi per l'uccisione di qualcuno a voi caro cominciate a credere in un colpevole {y:0:Umano}{n:0:umano} su cui potete usare la violenza, per poi negare {f:5:Beatrice}."`
+`"...Ecco perché non potete {y:1:‘vederla’}{n:1:vederla} veramente...`
 ` {f:5:Beatrice} {i:esiste}.`
-` Voi non siete capaci di {y:1:‘osservarla’}{n:1:osservarla}!"`
+` Voi non siete capaci di {y:1:‘vederla’}{n:1:vederla} veramente!"`
 `"Silenzio!!!`
 ` Non voglio presumere che tu sia la colpevole, ma visto che ti diverti a peggiorare la situazione, e che le tue azioni forniscono assistenza al nemico, non c'è ombra di dubbio!!"`
 `"...Kihihihihihihihih...`
