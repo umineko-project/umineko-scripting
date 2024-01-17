@@ -44,7 +44,7 @@
 	textoff
 	lsp s0_3,goa_memory4_src,0,0
 		*goa_4i
-		d2 [ak][text_fade_t 0][text_speed_t 10]`Aaah aaah`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`Aaah aaah.`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
