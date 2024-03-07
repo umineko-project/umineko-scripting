@@ -25,8 +25,19 @@ if %CHIRU_MODE == 1 versionstr "Umineko no Naku Koro ni Chiru EP8, ver1.001","cr
 stralias localisation,"builder_localisation"
 numalias releasedate,builder_date
 numalias CHIRU_MODE,8084
+numalias USE_DISCORD,9001
+numalias Free1,9002
+timestamp %Free1
+
+itoa $Free1,%Free1
+
+; check if discord is enabled
+operate_config read,$USE_DISCORD,"discord"
 
 mov $CHIRU_MODE,"builder_version"
+
+if %CHIRU_MODE == 0 && $USE_DISCORD == "noval" discordrpc "~Rondo of the Witch and Reasoning~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
+if %CHIRU_MODE == 1 && $USE_DISCORD == "noval" discordrpc "Scattering: ~Nocturne of Truth and Illusions~", "In title screen", "butterfly", "You should read Umineko now!!!", "edsmiley", "Discord rich presence integration by Ed", $Free1
 
 #locale_import "header.txt"
 
