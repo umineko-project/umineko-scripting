@@ -28849,6 +28849,7 @@ return
 	if $Free3 == "cn" mov $Free3,"Chinese Simp."
 	if $Free3 == "cht" mov $Free3,"Chinese Trad."
 	if $Free3 == "it" mov $Free3,"Italiano"
+	if $Free3 == "tr" mov $Free3,"Witch Love"
 	lsp 268,":s;#FFFFFF`{p:8:{w:350:}{a:c:}{fit}" + $Free3 + "}",1280,226
 	lsp 380,":a/2,0,3;graphics\menu_en\config\config_left.png",1210,226
 	lsp 381,":a/2,0,3;graphics\menu_en\config\config_right.png",1640,226
