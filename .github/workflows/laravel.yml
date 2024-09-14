@@ -36,7 +36,7 @@ jobs:
         php update-manager/update-manager.php dscript "enout/en.txt" . en
         php update-manager/update-manager.php script enout/en.txt "enout/en.file" 9999
     - name: Upload EN
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: en
         path: enout/
@@ -47,7 +47,7 @@ jobs:
         php update-manager/update-manager.php dscript "ruout/ru.txt" . ru
         php update-manager/update-manager.php script ruout/ru.txt "ruout/ru.file" 9999
     - name: Upload RU
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: ru
         path: ruout/
