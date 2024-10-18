@@ -16,6 +16,7 @@ jobs:
     - name: Upload CN
       uses: actions/upload-artifact@v4
       with:
+        retention-days: 3
         name: cn
         path: cnout/
     - name: Generate cht
@@ -27,6 +28,7 @@ jobs:
     - name: Upload cht
       uses: actions/upload-artifact@v4
       with:
+        retention-days: 3
         name: cht
         path: chtout/        
     - name: Generate EN
@@ -38,6 +40,7 @@ jobs:
     - name: Upload EN
       uses: actions/upload-artifact@v4
       with:
+        retention-days: 3
         name: en
         path: enout/
     - name: Generate RU
@@ -49,6 +52,7 @@ jobs:
     - name: Upload RU
       uses: actions/upload-artifact@v4
       with:
+        retention-days: 3
         name: ru
         path: ruout/
 
