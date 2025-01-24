@@ -4021,14 +4021,14 @@ return
 		add $ts_session,"{n}" + sess_real_world + ": "
 		time %Hour,%Minute,%SaveTime
 		date %Year,%Month,%Day
-		if %Day < 10 add $ts_session,"0"
-		itoa $savecountTime,%Day
+		if %Year < 10 add $ts_session,"0"
+		itoa $savecountTime,%Year
 		add $ts_session,$savecountTime + "/"
 		if %Month < 10 add $ts_session,"0"
 		itoa $savecountTime,%Month
-		add $ts_session,$savecountTime + "/20"
-		if %Year < 10 add $ts_session,"0"
-		itoa $savecountTime,%Year
+		add $ts_session,$savecountTime + "/"
+		if %Day < 10 add $ts_session,"0"
+		itoa $savecountTime,%Day
 		add $ts_session,$savecountTime + " "
 		if %Hour < 10 add $ts_session,"0"
 		itoa $savecountTime,%Hour

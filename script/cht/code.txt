@@ -61,20 +61,20 @@ return
 	preset_define 0,1,60,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Japanse text
 	preset_define 1,1,-1,#FF0000,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Red text
 	preset_define 2,1,-1,#39C6FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Blue text
-	preset_define 7,5,40,#C0FFFF,0,0,0,1,6,#000000,0,0,0,#000000,0,70,1880 ;Chapter/BGM/Hint
+	preset_define 7,1,40,#FFFFFF,0,0,0,1,6,#000000,0,0,0,#000000,0,70,1880 ;Chapter/BGM/Hint
 	preset_define 41,1,-1,#FFAA00,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Gold text
 	preset_define 42,1,-1,#AA71FF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Purple text
 	;MENU PRESETS
 	;Texts
-	preset_define 3,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,700 ;Menu chars text
-	preset_define 4,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40 ;Menu chars/tips/notes text jp
-	preset_define 5,5,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,830 ;Menu tips/notes text
-	preset_define 13,6,55,#FFFFFF,1,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu tips/notes titles
+	preset_define 3,1,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40,700 ;Menu chars text
+	preset_define 4,1,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,40 ;Menu chars/tips/notes text jp
+	preset_define 5,1,40,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,830 ;Menu tips/notes text
+	preset_define 13,1,55,#FFFFFF,1,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu tips/notes titles
 	;Buttons
 	preset_define 11,2,36,#FFFFFF,0,0,0,1,-1,#000000,0,-1,-1,#000000,1,-1 ;Menu main buttons
 	preset_define 12,2,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Menu chars kill/change buttons
 	;MusicBox
-	preset_define 6,5,36,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,70 ;Musicbox bgm titles
+	preset_define 6,2,36,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,70 ;Musicbox bgm titles
 	;Config
 	preset_define 8,1,60,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons
 	preset_define 9,1,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons (smaller)
@@ -92,10 +92,10 @@ return
 	preset_define 22,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,120,1920 ;Credits h2
 	preset_define 23,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,3,50,1920 ;Credits h3
 	preset_define 24,1,50,#a90303,0,0,0,1,10,#000000,0,0,0,#000000,0,120,1920 ;Credits h2-sep
-	preset_define 25,3,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits MVP
+	preset_define 25,4,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,40,1920 ;Credits MVP
 	;Load/Save
 	preset_define 30,1,42,#FFFFFF,0,0,0,1,5,#000000,0,0,0,#000000,1,40,1920 ;Episode names
-	preset_define 31,2,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Save dates
+	preset_define 31,7,36,#FFFFFF,0,0,0,1,3,#000000,0,0,0,#000000,-2,-1 ;Save dates
 	;ep8 menu murder
 	preset_define 32,1,50,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,20,1590 ;Menu murder
 	;chinese

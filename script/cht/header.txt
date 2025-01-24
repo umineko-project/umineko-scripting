@@ -2,8 +2,8 @@ language japanese
 
 ; Game window caption 
 
-if %CHIRU_MODE == 0 caption "海貓鳴泣之時 ~魔女與推理的輪舞曲~ 公測版 (" + $CHIRU_MODE + ")"
-if %CHIRU_MODE == 1 caption "海貓鳴泣之時散 ~真實與幻想的夜想曲~ 公測版 (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 0 caption "海貓鳴泣之時 ~魔女與推理的輪舞曲~ (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 1 caption "海貓鳴泣之時散 ~真實與幻想的夜想曲~ (" + $CHIRU_MODE + ")"
 
 ;--Textboxes--
 
