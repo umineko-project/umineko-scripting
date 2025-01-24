@@ -4021,6 +4021,7 @@ return
 		add $ts_session,"{n}" + sess_real_world + ": "
 		time %Hour,%Minute,%SaveTime
 		date %Year,%Month,%Day
+		add $ts_session,"20"
 		if %Year < 10 add $ts_session,"0"
 		itoa $savecountTime,%Year
 		add $ts_session,$savecountTime + "/"
@@ -14596,15 +14597,15 @@ return
 	time %Hour,%Minute
 	date %Year,%Month,%Day
 
-	;Add Day
+	;Add Year
 	mov $SaveTime,"`"
-	if %Day < 10 add $SaveTime,"0" : itoa $Free1,%Day : add $SaveTime,$Free1 : add $SaveTime,"/"
-	if %Day >= 10 itoa $Free1,%Day : add $SaveTime,$Free1 : add $SaveTime,"/"
+	add $SaveTime,"20" : itoa $Free1,%Year : add $SaveTime,$Free1 : add $SaveTime," "
 	;Add Month
 	if %Month < 10 add $SaveTime,"0" : itoa $Free1,%Month : add $SaveTime,$Free1 : add $SaveTime,"/"
 	if %Month >= 10 itoa $Free1,%Month : add $SaveTime,$Free1 : add $SaveTime,"/"
-	;Add Year
-	add $SaveTime,"20" : itoa $Free1,%Year : add $SaveTime,$Free1 : add $SaveTime," "
+	;Add Day
+	if %Day < 10 add $SaveTime,"0" : itoa $Free1,%Day : add $SaveTime,$Free1 : add $SaveTime,"/"
+	if %Day >= 10 itoa $Free1,%Day : add $SaveTime,$Free1 : add $SaveTime,"/"
 	;Add Hour
 	if %Hour < 10 add $SaveTime,"0" : itoa $Free1,%Hour : add $SaveTime,$Free1 : add $SaveTime,":"
 	if %Hour >= 10 itoa $Free1,%Hour : add $SaveTime,$Free1 : add $SaveTime,":"
