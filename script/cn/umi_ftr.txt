@@ -13876,7 +13876,7 @@ lsph %tmp,":s#ffffff／hidden／hidden／hidden／hidden／hidden／hidden",0,0 
 
 setwindow4 31,16,72,2500,0,72,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
 mov %tmp,100
-lsph %tmp,":s#ffff00呀—呀—呀———！！！",0,0 : inc %tmp
+lsph %tmp,":s#ffff00呀——呀——呀———！！！",0,0 : inc %tmp
 lsph %tmp,":s#00ffff　にゃり〜〜〜〜〜ん☆",0,0 : inc %tmp
 lsph %tmp,":s#80ff00（＞０＜）★领带歪掉了哟★（＞０＜） ",0,0 : inc %tmp
 lsph %tmp,":s#ff0000☆光溜溜平坦坦☆",0,0 : inc %tmp

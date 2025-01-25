@@ -76,8 +76,8 @@ return
 	;MusicBox
 	preset_define 6,2,36,#FFFFFF,0,0,0,1,8,#000000,0,0,0,#000000,2,70 ;Musicbox bgm titles
 	;Config
-	preset_define 8,1,60,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons
-	preset_define 9,1,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons (smaller)
+	preset_define 8,2,60,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons
+	preset_define 9,2,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,3,80 ;Menu titles and buttons (smaller)
 	;First setting
 	preset_define 10,9,50,#FFFFFF,0,0,0,1,10,#000000,0,0,0,#000000,0,80,1920 ;Menu first setting line
 	;Use magic

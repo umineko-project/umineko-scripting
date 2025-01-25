@@ -8,7 +8,7 @@
 	lsp 5,":a/10,0,3;graphics\system\wnd\cursor0.png",0,0
 	lsp s0_3,goa_memory1_src,0,0
 		*goa_1c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`要—被—吃—掉—了——！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`要——被——吃——掉——了——！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -169,7 +169,7 @@
 	textoff
 	lsp s0_3,kakera_memory10_src,0,0
 		*kak_10c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`混帐老头的身形缓缓显现。{n}{n}……嗨——，你丫是在庇护着背后的贝阿朵，过骑士瘾么…？！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`混帐老头的身形缓缓显现。{n}{n}……呵，你丫是在庇护着背后的贝阿朵，过骑士瘾么…？！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
