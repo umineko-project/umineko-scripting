@@ -97,7 +97,7 @@
 	lsp 5,":a/10,0,3;graphics\system\wnd\cursor1.png",0,0
 	lsp s0_3,kakera_memory1_src,0,0
 		*kak_1c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「呀——♪ 櫻太郎——！好久不見——！」{n}「依舊是副可口，啊不對，是副可愛樣呢～！！」{n}「我第一～！！呀——，今天也軟軟綿綿的，好——可愛～！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「呀——♪ 櫻太郎——！好久不見——！」{n}「依舊是副可口，啊不對，是副可愛樣呢～！！」{n}「我第一～！！呀——，今天也軟軟綿綿的，好可愛～！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -109,7 +109,7 @@
 	textoff
 	lsp s0_3,kakera_memory2_src,0,0
 		*kak_2c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`「「嗚哦哦哦哦哦哦哦哦來呀—————！！想吃真里亞為我裝填的槍子的傢伙，給我滾到前面來—————，嗚喔哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦！！！」`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`「嗚哦哦哦哦哦哦哦哦來呀—————！！想吃真里亞為我裝填的槍子的傢伙，給我滾到前面來—————，嗚喔哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦哦！！！」`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33
@@ -169,7 +169,7 @@
 	textoff
 	lsp s0_3,kakera_memory10_src,0,0
 		*kak_10c
-		d2 [ak][text_fade_t 0][text_speed_t 10]`混帳老頭的身形緩緩顯現。{n}{n}……呵，你丫是在庇護著背後的貝阿朵，過騎士癮麼…？！`[#][*][\]
+		d2 [ak][text_fade_t 0][text_speed_t 10]`混帳老頭的身形緩緩顯現。{n}{n}……哦？你丫是在庇護著背後的貝阿朵，過騎士癮麼…？！`[#][*][\]
 		wait_on_d 0
 		getcursorpos %x,%y
 		amsp 5,%x,%y-33

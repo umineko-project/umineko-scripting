@@ -14599,7 +14599,7 @@ return
 
 	;Add Year
 	mov $SaveTime,"`"
-	add $SaveTime,"20" : itoa $Free1,%Year : add $SaveTime,$Free1 : add $SaveTime," "
+	add $SaveTime,"20" : itoa $Free1,%Year : add $SaveTime,$Free1 : add $SaveTime,"/"
 	;Add Month
 	if %Month < 10 add $SaveTime,"0" : itoa $Free1,%Month : add $SaveTime,$Free1 : add $SaveTime,"/"
 	if %Month >= 10 itoa $Free1,%Month : add $SaveTime,$Free1 : add $SaveTime,"/"
