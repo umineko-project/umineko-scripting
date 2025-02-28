@@ -13809,7 +13809,7 @@ lsph %tmp,":s#ffffff平坦坦　　　平坦坦　　　胸部平坦坦☆",0,0 
 
 mov %tmp,70
 setwindow4 31,16,36,2500,0,36,%textspeed,1,0,0,1,1,#999999,0,0,1919,1079
-lsph %tmp,":s#ffff00　　　　　　　　甘霖娘有没有授权啊去shi吧",0,0 : inc %tmp
+lsph %tmp,":s#ffff00　　　　　　　　有没有授权啊去 shi 吧",0,0 : inc %tmp
 lsph %tmp,":s#ffff00　　　　　　　　　　　　　　　　↑有授权哦！",0,0 : inc %tmp
 lsph %tmp,":a;graphics\omake\pettan_aa2.png",270,0 : inc %tmp
 
