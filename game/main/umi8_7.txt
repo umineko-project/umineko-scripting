@@ -5109,6 +5109,7 @@ d [lv 0*"01"*"81500277"]`「紗音、嘉音よ。`[@][lv 0*"01"*"81500278"]`結�
 lss s0_8,"sha","a11_tokui1" ;1
 aspt2 xpos,s0_8,-550
 flush 23
+msgwnd_sha
 mov %branch_tmp,%total_coin_count
 if %branch_tmp = 0 goto *uu_uu_0x5e5cfe
 if %branch_tmp = 1 goto *uu_uu_0x5e5d2e
@@ -5129,7 +5130,6 @@ if %branch_tmp = 15 goto *uu_uu_0x5e5fd8
 if %branch_tmp = 16 goto *uu_uu_0x5e600a
 if %branch_tmp = 17 goto *uu_uu_0x5e603c
 *uu_uu_0x5e5cfe
-msgwnd_sha
 *d59523
 d [lv 0*"15"*"80500102"]`「……０枚でございます」`[\]
 goto *uu_uu_0x5e6069
