@@ -34,6 +34,7 @@ export OUT_DIR=~/Desktop
 export LAST_EPISODE=$(cat "$UMINEKO_SCRIPTING/current/last")
 export LAST_EPISODE_PT=$(cat "$UMINEKO_SCRIPTING/current/last_pt")
 export LAST_EPISODE_CN=$(cat "$UMINEKO_SCRIPTING/current/last_cn")
+export LAST_EPISODE_IDN=$(cat "$UMINEKO_SCRIPTING/current/last_idn")
 
 # 1. To generate the latest verification file run:
 
