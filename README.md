@@ -1,6 +1,6 @@
 # Indonesian Umineko Team ~ Project Terjemahan Umineko Bahasa Indonesia
 
-[![Status Build](../../workflows/Build/badge.svg)](../../actions)
+[![Build Status](../../workflows/Build/badge.svg)](../../actions)
 
 Proyek terjemahan Umineko kami bersifat open source dan siapa pun boleh berkontribusi kapan saja! Prioritas kami adalah kualitas terjemahan, bukan kecepatan, sehingga tidak ada batasan waktu.
 
