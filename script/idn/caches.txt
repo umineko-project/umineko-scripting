@@ -1,0 +1,189 @@
+	border_pad_push 5
+	set_window_simple 150,100
+	setwindow5 ":a;graphics\system\empty.png"
+	lsp 10,":s;#FFFFFF`{p:8:{a:c:Please wait for a moment.{n}Data caching is being performed.}}",150,450
+	print 1
+	screenflip 0
+	_csp 10
+	lsp 5,":a/10,0,3;graphics\system\wnd\cursor0.png",0,0
+	lsp s0_3,goa_memory1_src,0,0
+		*goa_1e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`I'm gonna be eateeeen!`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory1.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,goa_memory2_src,0,0
+		*goa_2e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Leave this to me and go on ahead!"{n}"Senpai?!"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory2.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,goa_memory3_src,0,0
+		*goa_3e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Sorry to keep you waiting!!"{n}"You guys... Why are you here......"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory3.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,goa_memory4_src,0,0
+		*goa_4e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`haah haah`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\goa_memory4.png"
+		d_continue
+		wait_on_d -1
+	if %CHIRU_MODE = 0 goto *cache_skip_chiru
+	textoff
+	mov %Free9,%msgwnd_type
+	mov %msgwnd_type,3
+	set_name_window_non
+	lsp s0_3,kakera_memory6_src,0,0
+		*kak_6e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"No, that's wrong. The right thing to say is "a murder really happened = it isn't a locked room"!`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory6.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory7_src,0,0
+		*kak_7e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"It's useless to try and resist or escape.`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory7.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory9_src,0,0
+		*kak_9e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`And not just Kyrie‐san.{n}Jessica said it over the phone too.{n}{n}......No, since the very beginning, from the time we talked with Gohda‐san and Kumasawa‐san, and got the phone call from Uncle Krauss's group,`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory9.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp 5,":a/10,0,3;graphics\system\wnd\cursor1.png",0,0
+	lsp s0_3,kakera_memory1_src,0,0
+		*kak_1e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Kyaa{p:0:♪} Sakutaroo! It's been so looong!"{n}"You look as deli—I mean—cute as ever~!!"{n}"I'm fi~rst!! Kyaa, he's so fluffy, squishy, and cuuu~te!"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory1.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory2_src,0,0
+		*kak_2e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Oooooooooooooohh, come ooooooon!! Whoever wants to eat these bullets Maria chambered for me, step forwaaaaaaard, uwoooo{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}o{0}oooohhh!!!"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory2.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory3_src,0,0
+		*kak_3e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"............This isn't one of the Master's rules, ...and it certainly isn't one of yours. .........I made this rule myself. .........I'm not furniture anymore. .........I'm the zero on your roulette...!"`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory3.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory4_src,0,0
+		*kak_4e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Genji‐san. ......Father is calling for you. Keep him company."{n}".........Certainly."`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory4.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory5_src,0,0
+		*kak_5e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Thank you for understanding, Battler‐kun. ...But you're lucky, you know."{n}"Huh? Why?"{n}"I'd want to leave if I could."{n}"...Ihihihi! I bet you would. I'll let you adults enjoy your happy family chat about the inheritance."`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory5.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory8_src,0,0
+		*kak_8e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`"Alright, Milady... Let's follow that wall and keep walking. ...On and on. And on."`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory8.png"
+		d_continue
+		wait_on_d -1
+	textoff
+	lsp s0_3,kakera_memory10_src,0,0
+		*kak_10e
+		d2 [ak][text_fade_t 0][text_speed_t 10]`My goddamn grandad wavered into vision.{n}{n}......Heh, is he trying to be some kind of knight, blocking the way between me and Beato...?!`[#][*][\]
+		wait_on_d 0
+		getcursorpos %x,%y
+		amsp 5,%x,%y-33
+		print 1
+		getscreenshot 1920,1080
+		savescreenshot "caches\kakera_memory10.png"
+		d_continue
+		wait_on_d -1
+	mov %msgwnd_type,%Free9
+	*cache_skip_chiru
+	textoff
+	_csp s0_3
+	_csp 5
+	print 1
+	screenflip 1
+	border_pad_pop
+	mov $font_preference,$Free1
