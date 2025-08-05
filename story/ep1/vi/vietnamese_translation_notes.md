@@ -37,6 +37,7 @@
 - Thanks to HeavyHalblade for reviewing the `umi1_op.txt` part.
 - Thanks to [Lambdadelta Umineko](https://lambdadeltaumineko.blogspot.com) and the translation group [All For Manga](http://allformanga-group.blogspot.com) for inspiring the start of this project.
 - Thanks to [Umineko Project](https://umineko-project.org), [07th-Mod](https://07th-mod.com), and all translation groups and others who have contributed to the When They Cry franchise in general and Umineko in particular.
+- Thanks to translation tools like [Google Translate](https://translate.google.com) and [ChatGPT](https://chatgpt.com/) for their support in the translation process.
 - And a special thanks to [Ryukishi07 and 07th Expansion](https://07th-expansion.net) for creating Umineko.
 
 ## Vietnamese
@@ -76,4 +77,5 @@
 - Cảm ơn HeavyHalblade đã giúp review phần `umi1_op.txt`.
 - Cảm ơn [Lambdadelta Umineko](https://lambdadeltaumineko.blogspot.com) và nhóm dịch [All For Manga](http://allformanga-group.blogspot.com) đã truyền cảm hứng cho sự bắt đầu dự án.
 - Cảm ơn [Umineko Project](https://umineko-project.org), [07th-Mod](https://07th-mod.com), và toàn thể các nhóm dịch và những bên khác đã có đóng góp tới franchise When They Cry nói chung và Umineko nói riêng.
+- Cảm ơn các công cụ dịch thuật như [Google Translate](https://translate.google.com) và [ChatGPT](https://chatgpt.com/) đã hỗ trợ trong quá trình dịch.
 - Và không thể quên lời cảm ơn đặc biệt tới [Ryukishi07 và 07th Expansion](https://07th-expansion.net) vì đã tạo ra Umineko.
