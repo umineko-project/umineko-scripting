@@ -13,7 +13,7 @@
 - Current progress notes:
   - [x] umi1_op.txt
   - [x] umi1_01.txt
-  - [ ] umi1_02.txt
+  - [x] umi1_02.txt
   - [ ] umi1_03.txt
   - [ ] umi1_04.txt
   - [ ] umi1_05.txt
@@ -36,6 +36,7 @@
 
 - Thanks to HeavyHalblade for reviewing the `umi1_op.txt` part.
 - Thanks to [Lambdadelta Umineko](https://lambdadeltaumineko.blogspot.com) and the translation group [All For Manga](http://allformanga-group.blogspot.com) for inspiring the start of this project.
+- Thanks to the previous attempt at translating Umineko by [taletp and Karman7](https://github.com/taletp/umineko-scripting-vn/blob/master/script/vi/header.txt) as I referenced it for the Vietnamese name of the game.
 - Thanks to [Umineko Project](https://umineko-project.org), [07th-Mod](https://07th-mod.com), and all translation groups and others who have contributed to the When They Cry franchise in general and Umineko in particular.
 - Thanks to translation tools like [Google Translate](https://translate.google.com) and [ChatGPT](https://chatgpt.com/) for their support in the translation process.
 - And a special thanks to [Ryukishi07 and 07th Expansion](https://07th-expansion.net) for creating Umineko.
