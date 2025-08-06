@@ -1,9 +1,9 @@
-language english
+language vietnamese
 
 ; Game window caption 
 
-if %CHIRU_MODE == 0 caption "Umineko no Naku Koro ni ~Rondo of the Witch and Reasoning~ (" + $CHIRU_MODE + ")"
-if %CHIRU_MODE == 1 caption "Umineko no Naku Koro ni Chiru ~Nocturne of Truth and Illusions~ (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 0 caption "Umineko no Naku Koro ni ~Luân Khúc của Phù Thủy và Suy Luận~ (" + $CHIRU_MODE + ")"
+if %CHIRU_MODE == 1 caption "Umineko no Naku Koro ni Chiru ~Dạ Khúc của Sự Thật và Ảo Ảnh~ (" + $CHIRU_MODE + ")"
 
 ;--Textboxes--
 
@@ -289,26 +289,26 @@ stralias murderer_thumb_8,":c;graphics\locale_en\murderer\murderer_thumb_8.png"
 
 ;--System-text--
 
-stralias verify_backgrounds,"Make sure you have properly unpacked 'backgrounds' folder. Some files in it are not reachable."
-stralias verify_graphics,"Make sure you have properly unpacked 'graphics' folder. Some files in it are not reachable."
-stralias verify_sound,"Make sure you have properly unpacked 'sound' folder. Some files in it are not reachable."
-stralias verify_sprites,"Make sure you have properly unpacked 'sprites' folder. Some files in it are not reachable."
-stralias verify_video,"Make sure you have properly unpacked 'video' folder. Some files in it are not reachable."
-stralias verify_updates,"Make sure you have installed all recent file updates. Some files are not reachable."
-stralias verify_engine,"Make sure you are using a most recent game script and engine. Current engine and script are incompatible."
+stralias verify_backgrounds,"Hãy đảm bảo bạn đã giải nén thư mục 'backgrounds' mà không gặp vấn đề gì. Một số tệp trong đó không thể truy cập được."
+stralias verify_graphics,"Hãy đảm bảo bạn đã giải nén thư mục 'graphics' mà không gặp vấn đề gì. Một số tệp trong đó không thể truy cập được."
+stralias verify_sound,"Hãy đảm bảo bạn đã giải nén thư mục 'sound' mà không gặp vấn đề gì. Một số tệp trong đó không thể truy cập được."
+stralias verify_sprites,"Hãy đảm bảo bạn đã giải nén thư mục 'sprites' mà không gặp vấn đề gì. Một số tệp trong đó không thể truy cập được."
+stralias verify_video,"Hãy đảm bảo bạn đã giải nén đúng thư mục 'video'. Một số tệp trong đó không thể truy cập được."
+stralias verify_updates,"Hãy đảm bảo bạn đã cài đặt tất cả các bản cập nhật tệp gần đây. Một số tệp không thể truy cập được."
+stralias verify_engine,"Hãy đảm bảo bạn đang sử dụng phiên bản script và engine mới nhất. Engine hiện tại không tương thích với script hiện tại."
 
-stralias verification_title,"Game file verification"
-stralias verification_verifying,"Verifying files...{n}Please note that it may take several minutes.{n}"
-stralias verification_legend,"Legend: "
-stralias verification_modified," File modified"
-stralias verification_missing," File missing"
-stralias verification_good,"All good!{n}"
-stralias verification_bad,"Game file verification failed!{n}"
-stralias verification_nohash,"Missing game.hash file in the game directory!{n}"
-stralias verification_unsupported,"Unsupported game.hash file found in the game directory!{n}"
-stralias verification_outdated,"Outdated game.hash file found in the game directory!{n}"
-stralias verification_end,"Right-click to exit!"
+stralias verification_title,"Xác minh tệp trò chơi"
+stralias verification_verifying,"Đang xác minh các tệp...{n}Lưu ý rằng quá trình này có thể mất vài phút.{n}"
+stralias verification_legend,"Chú thích: "
+stralias verification_modified," Tệp đã bị sửa đổi"
+stralias verification_missing," Tệp bị thiếu"
+stralias verification_good,"Tất cả đều ổn!{n}"
+stralias verification_bad,"Xác minh tệp trò chơi thất bại!{n}"
+stralias verification_nohash,"Thiếu tệp game.hash trong thư mục trò chơi!{n}"
+stralias verification_unsupported,"Tìm thấy tệp game.hash không được hỗ trợ trong thư mục trò chơi!{n}"
+stralias verification_outdated,"Tìm thấy tệp game.hash không phù hợp với phiên bản trong thư mục trò chơi!{n}"
+stralias verification_end,"Nhấp chuột phải để thoát!"
 
-stralias verification_ancient,"Your game is over 6 months old, it might be outdated!"
+stralias verification_ancient,"Trò chơi của bạn đã được cài đặt từ hơn 6 tháng trước, có thể cần cập nhật để tránh phát sinh lỗi!"
 
 ;--System-text-end--
