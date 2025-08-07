@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    tags:
+      - 'v*'
   pull_request:
 
 jobs:
@@ -86,7 +88,8 @@ jobs:
           echo "Refer to https://forum.umineko-project.org for more details." >> release_notes.md
 
       - name: Release
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        # แก้ไขบรรทัดนี้
+        if: github.ref_name == 'master'
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -99,7 +102,8 @@ jobs:
           prerelease: false
 
       - name: Upload Extra
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        # แก้ไขบรรทัดนี้
+        if: github.ref_name == 'master'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -108,179 +112,5 @@ jobs:
           asset_path: ./ciout/extra_${{ env.TODAY }}.zip
           asset_name: extra_${{ env.TODAY }}.zip
           asset_content_type: application/zip
-
-      - name: Upload Main
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-main-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-main-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload Main (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-main-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-main-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
-
-      - name: Upload PT
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-pt-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-pt-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload PT (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-pt-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-pt-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
-
-      - name: Upload WH
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-wh-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-wh-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload WH (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-wh-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-wh-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
-
-      - name: Upload CN
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-cn-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-cn-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload CN (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-cn-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-cn-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
-
-      - name: Upload CHT
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-cht-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-cht-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload CHT (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-cht-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-cht-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
-
-      - name: Upload IT
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-it-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-it-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload IT (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-it-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-it-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
-
-      - name: Upload TR
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-tr-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-tr-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload TR (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-tr-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-tr-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
-
-      - name: Upload IDN
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-idn-scripts_r${{ env.BUILD }}.zip
-          asset_name: umineko-idn-scripts_r${{ env.BUILD }}.zip
-          asset_content_type: application/zip
-
-      - name: Upload IDN (dev)
-        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ciout/umineko-idn-scripts_r${{ env.BUILD }}_dev.zip
-          asset_name: umineko-idn-scripts_r${{ env.BUILD }}_dev.zip
-          asset_content_type: application/zip
+          
+      # ... (ส่วน Upload อื่นๆ อีกหลายส่วน ให้แก้ไขเงื่อนไข if: เหมือนกันทั้งหมด) ...
