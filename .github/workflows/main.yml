@@ -33,6 +33,7 @@ jobs:
           if [ -f current/last_it ]; then LAST_IT=$(<current/last_it); else LAST_IT="$LAST" ; fi
           if [ -f current/last_tr ]; then LAST_TR=$(<current/last_tr); else LAST_TR="$LAST" ; fi
           if [ -f current/last_idn ]; then LAST_IDN=$(<current/last_idn); else LAST_IDN="$LAST" ; fi
+          if [ -f current/last_vi ]; then LAST_VI=$(<current/last_vi); else LAST_VI="$LAST" ; fi
           php update-manager/update-manager.php dscript "ciout/en.txt" . en ${BUILD} || exit 1
           php update-manager/update-manager.php dscript "ciout/ru.txt" . ru ${BUILD} || exit 1
           php update-manager/update-manager.php dscript "ciout/pt.txt" . pt ${BUILD} || exit 1
@@ -42,6 +43,7 @@ jobs:
           php update-manager/update-manager.php dscript "ciout/it.txt" . it ${BUILD} || exit 1
           php update-manager/update-manager.php dscript "ciout/tr.txt" . tr ${BUILD} || exit 1
           php update-manager/update-manager.php dscript "ciout/idn.txt" . idn ${BUILD} || exit 1
+          php update-manager/update-manager.php dscript "ciout/vi.txt" . vi ${BUILD} || exit 1
           cp misc/chiru.file ciout
           cp misc/game.hash ciout
           cp misc/default.cfg ciout
@@ -59,6 +61,7 @@ jobs:
           zip -qry umineko-it-scripts_r${BUILD}_dev.zip it.txt it.cfg || exit 1
           zip -qry umineko-tr-scripts_r${BUILD}_dev.zip tr.txt tr.cfg || exit 1
           zip -qry umineko-idn-scripts_r${BUILD}_dev.zip idn.txt default.cfg || exit 1
+          zip -qry umineko-vi-scripts_r${BUILD}_dev.zip vi.txt vi.cfg || exit 1
           cd ..
           php update-manager/update-manager.php script ciout/en.txt "ciout/en.file" "$LAST_EN" || exit 1
           php update-manager/update-manager.php script ciout/ru.txt "ciout/ru.file" "$LAST_RU" || exit 1
@@ -69,6 +72,7 @@ jobs:
           php update-manager/update-manager.php script ciout/it.txt "ciout/it.file" "$LAST_IT" || exit 1
           php update-manager/update-manager.php script ciout/tr.txt "ciout/tr.file" "$LAST_TR" || exit 1
           php update-manager/update-manager.php script ciout/idn.txt "ciout/idn.file" "$LAST_IDN" || exit 1
+          php update-manager/update-manager.php script ciout/vi.txt "ciout/vi.file" "$LAST_VI" || exit 1
           cd ciout
           zip -qry umineko-main-scripts_r${BUILD}.zip ru.file en.file chiru.file game.hash default.cfg || exit 1
           zip -qry umineko-pt-scripts_r${BUILD}.zip pt.file pt.cfg || exit 1
@@ -78,6 +82,7 @@ jobs:
           zip -qry umineko-it-scripts_r${BUILD}.zip it.file it.cfg || exit 1
           zip -qry umineko-tr-scripts_r${BUILD}.zip tr.file tr.cfg || exit 1
           zip -qry umineko-idn-scripts_r${BUILD}.zip idn.file default.cfg || exit 1
+          zip -qry umineko-vi-scripts_r${BUILD}.zip vi.file vi.cfg || exit 1
           cd ..
           cd extra
           zip -qry ../ciout/extra_${TODAY}.zip * || exit 1
@@ -283,4 +288,26 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./ciout/umineko-idn-scripts_r${{ env.BUILD }}_dev.zip
           asset_name: umineko-idn-scripts_r${{ env.BUILD }}_dev.zip
+          asset_content_type: application/zip
+          
+      - name: Upload VI
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-vi-scripts_r${{ env.BUILD }}.zip
+          asset_name: umineko-vi-scripts_r${{ env.BUILD }}.zip
+          asset_content_type: application/zip
+
+      - name: Upload VI (dev)
+        if: github.repository_owner == 'umineko-project' && github.ref_name == 'master'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./ciout/umineko-vi-scripts_r${{ env.BUILD }}_dev.zip
+          asset_name: umineko-vi-scripts_r${{ env.BUILD }}_dev.zip
           asset_content_type: application/zip
