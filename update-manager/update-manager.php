@@ -4,12 +4,15 @@
  * Umineko Project update manager
  * Encoding: UTF-8
  *
- * Copyright (c) 2011-2019 Umineko Project
+ * Copyright (c) 2011-2025 Umineko Project. All rights reserved.
  *
- * This document is considered confidential and proprietary,
- * and may not be reproduced or transmitted in any form 
- * in whole or in part, without the express written permission
- * of Umineko Project.
+ * This program and the accompanying materials
+ * are licensed and made available under the terms and conditions of the BSD License
+ * which accompanies this distribution.  The full text of the license may be found at
+ * http://opensource.org/licenses/bsd-license.php
+ * 
+ * THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
  */
 
 define('LF', "\n");
