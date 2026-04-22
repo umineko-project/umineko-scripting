@@ -23807,6 +23807,8 @@ return
 
 gosub *chain_sprites
 
+bgmvol %Rel_vol_bgm
+
 ;E_MA2
 
 ;Load ME
