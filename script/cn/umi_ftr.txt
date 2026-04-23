@@ -23725,13 +23725,13 @@ return
 
 *effect_vol
 
-vol_me 1,%me_current_vol_1
-vol_me 2,%me_current_vol_2
-vol_me 3,%me_current_vol_3
-vol_me 4,%me_current_vol_4
-vol_me 5,%me_current_vol_5
-vol_me 6,%me_current_vol_6
-vol_me 7,%me_current_vol_7
+chvol 3,%sfx_vol*%me_current_vol_1/100
+chvol 4,%sfx_vol*%me_current_vol_2/100
+chvol 5,%sfx_vol*%me_current_vol_3/100
+chvol 6,%sfx_vol*%me_current_vol_4/100
+chvol 7,%sfx_vol*%me_current_vol_5/100
+chvol 8,%sfx_vol*%me_current_vol_6/100
+chvol 9,%sfx_vol*%me_current_vol_7/100
 
 chvol 10,%sfx_vol
 chvol 11,%sfx_vol
@@ -23806,6 +23806,8 @@ return
 *load_system
 
 gosub *chain_sprites
+
+bgmvol %Rel_vol_bgm
 
 ;E_MA2
 
