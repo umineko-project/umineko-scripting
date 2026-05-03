@@ -23507,12 +23507,12 @@ return
 	;Real ME channels are 3+ (whether params use 1+)
 	add %Me_Channel,2
 	;Calculate the real volume
-	if %Rel_vol_me == 0 jumpf
-	if %Rel_vol_me == -1 jumpf
-		mov %Rel_vol_me,%sfx_vol * %Rel_vol_me / 100
+	if %Rel_vol_me == 0 mov %Rel_vol_se,0 : jumpf
+	if %Rel_vol_me == -1 mov %Rel_vol_se,-1 : jumpf
+		mov %Rel_vol_se,%sfx_vol * %Rel_vol_me / 100
 	~
-	if %Vol_dur == 0 ach_prop %Me_Channel,%Rel_vol_me
-	if %Vol_dur != 0 ach_prop %Me_Channel,%Rel_vol_me,%Vol_dur
+	if %Vol_dur == 0 ach_prop %Me_Channel,%Rel_vol_se
+	if %Vol_dur != 0 ach_prop %Me_Channel,%Rel_vol_se,%Vol_dur
 	;Disable channels
 	if %Me_Channel = 3 && %Rel_vol_me == -1 mov %me_enable_1,0 : mov %Rel_vol_me,0
 	if %Me_Channel = 4 && %Rel_vol_me == -1 mov %me_enable_2,0 : mov %Rel_vol_me,0
@@ -23724,13 +23724,13 @@ return
 
 *effect_vol
 
-chvol 3,%sfx_vol*%me_current_vol_1/100
-chvol 4,%sfx_vol*%me_current_vol_2/100
-chvol 5,%sfx_vol*%me_current_vol_3/100
-chvol 6,%sfx_vol*%me_current_vol_4/100
-chvol 7,%sfx_vol*%me_current_vol_5/100
-chvol 8,%sfx_vol*%me_current_vol_6/100
-chvol 9,%sfx_vol*%me_current_vol_7/100
+vol_me 1,%me_current_vol_1
+vol_me 2,%me_current_vol_2
+vol_me 3,%me_current_vol_3
+vol_me 4,%me_current_vol_4
+vol_me 5,%me_current_vol_5
+vol_me 6,%me_current_vol_6
+vol_me 7,%me_current_vol_7
 
 chvol 10,%sfx_vol
 chvol 11,%sfx_vol
@@ -23806,7 +23806,7 @@ return
 
 gosub *chain_sprites
 
-bgmvol %Rel_vol_bgm
+vol_bgm %bgm_current_vol
 
 ;E_MA2
 
