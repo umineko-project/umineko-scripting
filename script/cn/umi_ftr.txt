@@ -22795,6 +22795,10 @@ if $lbg_name == "c_e0103_c" mov ?cg_list[0][50],1 : return
 if $lbg_name == "c_e0305_d" mov ?cg_list[0][51],1 : return
 if $lbg_name == "c_e0406_f" mov ?cg_list[0][52],1 : return
 if $lbg_name == "c_e0903_b" mov ?cg_list[0][53],1 : return
+
+if $lbg_name == "portrait_ep4" mov ?cg_list[0][57],1 : return
+if $lbg_name == "package01" mov ?cg_list[0][58],1 : return
+if $lbg_name == "package02" mov ?cg_list[0][59],1 : return
 if $lbg_name == "portrait1" mov ?cg_list[0][54],1 : return
 if $lbg_name == "portrait3" mov ?cg_list[0][55],1 : return
 if $lbg_name == "portrait4" mov ?cg_list[0][56],1 : return
@@ -25689,6 +25693,7 @@ return
 	mov ?bgm_list[1017],1
 
 *load_bgms_4
+	mov ?bgm_list[94],1
 	;chiru op
 	mov ?bgm_list[1014],1
 
@@ -25779,6 +25784,7 @@ return
 	mov ?bgm_list[55],1
 
 *load_bgms_1
+	mov ?bgm_list[1011],1
 	;tea
 	mov ?bgm_list[42],1
 	mov ?bgm_list[40],1
@@ -25831,6 +25837,8 @@ return
 
 
 *load_cgs_8
+	mov $lbg_name,"package03" : gosub *load_cg
+	mov $lbg_name,"package04" : gosub *load_cg
 	mov $lbg_name,"ep801" : gosub *load_cg
 	mov $lbg_name,"ep802" : gosub *load_cg
 	mov $lbg_name,"c_e0102_a" : gosub *load_cg
@@ -25915,6 +25923,9 @@ return
 	mov $lbg_name,"bac_ga2n" : gosub *load_cg
 
 *load_cgs_4
+	mov $lbg_name,"portrait_ep4" : gosub *load_cg
+	mov $lbg_name,"package01" : gosub *load_cg
+	mov $lbg_name,"package02" : gosub *load_cg
 	;ura
 	mov $lbg_name,"e0902" : gosub *load_cg
 
@@ -31030,164 +31041,166 @@ lsph2 446,":a/2,0,3;graphics\menu\trophy\bgs\chiru\046.png",0,0
 spbtn backlogdownbtn,backlogdownbtn
 spbtn backlogupbtn,backlogupbtn
 
+operate_config u_read,$Free9,"trophy_unlock"
+
 tree_clear 6
 
 if %CHIRU_MODE != 0 jumpf
 
-if %8700==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8700!=0 tree_seta %Free1,6,"auto","text",trophy_text_00 : tree_set 6,%Free1,"bg","400"
-if %8701==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8701!=0 tree_seta %Free1,6,"auto","text",trophy_text_01 : tree_set 6,%Free1,"bg","401"
-if %8702==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8702!=0 tree_seta %Free1,6,"auto","text",trophy_text_02 : tree_set 6,%Free1,"bg","402"
-if %8703==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8703!=0 tree_seta %Free1,6,"auto","text",trophy_text_03 : tree_set 6,%Free1,"bg","403"
-if %8704==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8704!=0 tree_seta %Free1,6,"auto","text",trophy_text_04 : tree_set 6,%Free1,"bg","404"
-if %8705==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8705!=0 tree_seta %Free1,6,"auto","text",trophy_text_05 : tree_set 6,%Free1,"bg","405"
-if %8706==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8706!=0 tree_seta %Free1,6,"auto","text",trophy_text_06 : tree_set 6,%Free1,"bg","406"
-if %8707==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8707!=0 tree_seta %Free1,6,"auto","text",trophy_text_07 : tree_set 6,%Free1,"bg","407"
-if %8708==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8708!=0 tree_seta %Free1,6,"auto","text",trophy_text_08 : tree_set 6,%Free1,"bg","408"
-if %8709==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8709!=0 tree_seta %Free1,6,"auto","text",trophy_text_09 : tree_set 6,%Free1,"bg","409"
-if %8710==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8710!=0 tree_seta %Free1,6,"auto","text",trophy_text_10 : tree_set 6,%Free1,"bg","410"
-if %8711==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8711!=0 tree_seta %Free1,6,"auto","text",trophy_text_11 : tree_set 6,%Free1,"bg","411"
-if %8712==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8712!=0 tree_seta %Free1,6,"auto","text",trophy_text_12 : tree_set 6,%Free1,"bg","412"
-if %8713==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8713!=0 tree_seta %Free1,6,"auto","text",trophy_text_13 : tree_set 6,%Free1,"bg","413"
-if %8714==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8714!=0 tree_seta %Free1,6,"auto","text",trophy_text_14 : tree_set 6,%Free1,"bg","414"
-if %8715==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8715!=0 tree_seta %Free1,6,"auto","text",trophy_text_15 : tree_set 6,%Free1,"bg","415"
-if %8716==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8716!=0 tree_seta %Free1,6,"auto","text",trophy_text_16 : tree_set 6,%Free1,"bg","416"
-if %8717==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8717!=0 tree_seta %Free1,6,"auto","text",trophy_text_17 : tree_set 6,%Free1,"bg","417"
-if %8718==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8718!=0 tree_seta %Free1,6,"auto","text",trophy_text_18 : tree_set 6,%Free1,"bg","418"
-if %8719==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8719!=0 tree_seta %Free1,6,"auto","text",trophy_text_19 : tree_set 6,%Free1,"bg","419"
-if %8720==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8720!=0 tree_seta %Free1,6,"auto","text",trophy_text_20 : tree_set 6,%Free1,"bg","420"
-if %8721==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8721!=0 tree_seta %Free1,6,"auto","text",trophy_text_21 : tree_set 6,%Free1,"bg","421"
-if %8722==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8722!=0 tree_seta %Free1,6,"auto","text",trophy_text_22 : tree_set 6,%Free1,"bg","422"
-if %8723==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8723!=0 tree_seta %Free1,6,"auto","text",trophy_text_23 : tree_set 6,%Free1,"bg","423"
-if %8724==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8724!=0 tree_seta %Free1,6,"auto","text",trophy_text_24 : tree_set 6,%Free1,"bg","424"
-if %8725==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8725!=0 tree_seta %Free1,6,"auto","text",trophy_text_25 : tree_set 6,%Free1,"bg","425"
-if %8726==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8726!=0 tree_seta %Free1,6,"auto","text",trophy_text_26 : tree_set 6,%Free1,"bg","426"
-if %8727==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8727!=0 tree_seta %Free1,6,"auto","text",trophy_text_27 : tree_set 6,%Free1,"bg","427"
+if %8700==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8700!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_00 : tree_set 6,%Free1,"bg","400"
+if %8701==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8701!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_01 : tree_set 6,%Free1,"bg","401"
+if %8702==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8702!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_02 : tree_set 6,%Free1,"bg","402"
+if %8703==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8703!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_03 : tree_set 6,%Free1,"bg","403"
+if %8704==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8704!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_04 : tree_set 6,%Free1,"bg","404"
+if %8705==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8705!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_05 : tree_set 6,%Free1,"bg","405"
+if %8706==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8706!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_06 : tree_set 6,%Free1,"bg","406"
+if %8707==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8707!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_07 : tree_set 6,%Free1,"bg","407"
+if %8708==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8708!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_08 : tree_set 6,%Free1,"bg","408"
+if %8709==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8709!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_09 : tree_set 6,%Free1,"bg","409"
+if %8710==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8710!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_10 : tree_set 6,%Free1,"bg","410"
+if %8711==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8711!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_11 : tree_set 6,%Free1,"bg","411"
+if %8712==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8712!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_12 : tree_set 6,%Free1,"bg","412"
+if %8713==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8713!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_13 : tree_set 6,%Free1,"bg","413"
+if %8714==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8714!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_14 : tree_set 6,%Free1,"bg","414"
+if %8715==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8715!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_15 : tree_set 6,%Free1,"bg","415"
+if %8716==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8716!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_16 : tree_set 6,%Free1,"bg","416"
+if %8717==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8717!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_17 : tree_set 6,%Free1,"bg","417"
+if %8718==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8718!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_18 : tree_set 6,%Free1,"bg","418"
+if %8719==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8719!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_19 : tree_set 6,%Free1,"bg","419"
+if %8720==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8720!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_20 : tree_set 6,%Free1,"bg","420"
+if %8721==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8721!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_21 : tree_set 6,%Free1,"bg","421"
+if %8722==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8722!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_22 : tree_set 6,%Free1,"bg","422"
+if %8723==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8723!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_23 : tree_set 6,%Free1,"bg","423"
+if %8724==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8724!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_24 : tree_set 6,%Free1,"bg","424"
+if %8725==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8725!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_25 : tree_set 6,%Free1,"bg","425"
+if %8726==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8726!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_26 : tree_set 6,%Free1,"bg","426"
+if %8727==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8727!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_27 : tree_set 6,%Free1,"bg","427"
 ~
 
 if %CHIRU_MODE != 1 jumpf
 
-if %8750==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8750!=0 tree_seta %Free1,6,"auto","text",trophy_text_50 : tree_set 6,%Free1,"bg","400"
-if %8751==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8751!=0 tree_seta %Free1,6,"auto","text",trophy_text_51 : tree_set 6,%Free1,"bg","401"
-if %8752==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8752!=0 tree_seta %Free1,6,"auto","text",trophy_text_52 : tree_set 6,%Free1,"bg","402"
-if %8753==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8753!=0 tree_seta %Free1,6,"auto","text",trophy_text_53 : tree_set 6,%Free1,"bg","403"
-if %8754==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8754!=0 tree_seta %Free1,6,"auto","text",trophy_text_54 : tree_set 6,%Free1,"bg","404"
-if %8755==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8755!=0 tree_seta %Free1,6,"auto","text",trophy_text_55 : tree_set 6,%Free1,"bg","405"
-if %8756==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8756!=0 tree_seta %Free1,6,"auto","text",trophy_text_56 : tree_set 6,%Free1,"bg","406"
-if %8757==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8757!=0 tree_seta %Free1,6,"auto","text",trophy_text_57 : tree_set 6,%Free1,"bg","407"
-if %8758==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8758!=0 tree_seta %Free1,6,"auto","text",trophy_text_58 : tree_set 6,%Free1,"bg","408"
-if %8759==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8759!=0 tree_seta %Free1,6,"auto","text",trophy_text_59 : tree_set 6,%Free1,"bg","409"
-if %8760==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8760!=0 tree_seta %Free1,6,"auto","text",trophy_text_60 : tree_set 6,%Free1,"bg","410"
-if %8761==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8761!=0 tree_seta %Free1,6,"auto","text",trophy_text_61 : tree_set 6,%Free1,"bg","411"
-if %8762==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8762!=0 tree_seta %Free1,6,"auto","text",trophy_text_62 : tree_set 6,%Free1,"bg","412"
-if %8763==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8763!=0 tree_seta %Free1,6,"auto","text",trophy_text_63 : tree_set 6,%Free1,"bg","413"
-if %8764==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8764!=0 tree_seta %Free1,6,"auto","text",trophy_text_64 : tree_set 6,%Free1,"bg","414"
-if %8765==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8765!=0 tree_seta %Free1,6,"auto","text",trophy_text_65 : tree_set 6,%Free1,"bg","415"
-if %8766==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8766!=0 tree_seta %Free1,6,"auto","text",trophy_text_66 : tree_set 6,%Free1,"bg","416"
-if %8767==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8767!=0 tree_seta %Free1,6,"auto","text",trophy_text_67 : tree_set 6,%Free1,"bg","417"
-if %8768==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8768!=0 tree_seta %Free1,6,"auto","text",trophy_text_68 : tree_set 6,%Free1,"bg","418"
-if %8769==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8769!=0 tree_seta %Free1,6,"auto","text",trophy_text_69 : tree_set 6,%Free1,"bg","419"
-if %8770==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8770!=0 tree_seta %Free1,6,"auto","text",trophy_text_70 : tree_set 6,%Free1,"bg","420"
-if %8771==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8771!=0 tree_seta %Free1,6,"auto","text",trophy_text_71 : tree_set 6,%Free1,"bg","421"
-if %8772==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8772!=0 tree_seta %Free1,6,"auto","text",trophy_text_72 : tree_set 6,%Free1,"bg","422"
-if %8773==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8773!=0 tree_seta %Free1,6,"auto","text",trophy_text_73 : tree_set 6,%Free1,"bg","423"
-if %8774==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8774!=0 tree_seta %Free1,6,"auto","text",trophy_text_74 : tree_set 6,%Free1,"bg","424"
-if %8775==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8775!=0 tree_seta %Free1,6,"auto","text",trophy_text_75 : tree_set 6,%Free1,"bg","425"
-if %8776==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8776!=0 tree_seta %Free1,6,"auto","text",trophy_text_76 : tree_set 6,%Free1,"bg","426"
-if %8777==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8777!=0 tree_seta %Free1,6,"auto","text",trophy_text_77 : tree_set 6,%Free1,"bg","427"
-if %8778==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8778!=0 tree_seta %Free1,6,"auto","text",trophy_text_78 : tree_set 6,%Free1,"bg","428"
-if %8779==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8779!=0 tree_seta %Free1,6,"auto","text",trophy_text_79 : tree_set 6,%Free1,"bg","429"
-if %8780==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8780!=0 tree_seta %Free1,6,"auto","text",trophy_text_80 : tree_set 6,%Free1,"bg","430"
-if %8781==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8781!=0 tree_seta %Free1,6,"auto","text",trophy_text_81 : tree_set 6,%Free1,"bg","431"
-if %8782==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8782!=0 tree_seta %Free1,6,"auto","text",trophy_text_82 : tree_set 6,%Free1,"bg","432"
-if %8783==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8783!=0 tree_seta %Free1,6,"auto","text",trophy_text_83 : tree_set 6,%Free1,"bg","433"
-if %8784==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8784!=0 tree_seta %Free1,6,"auto","text",trophy_text_84 : tree_set 6,%Free1,"bg","434"
-if %8785==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8785!=0 tree_seta %Free1,6,"auto","text",trophy_text_85 : tree_set 6,%Free1,"bg","435"
-if %8786==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8786!=0 tree_seta %Free1,6,"auto","text",trophy_text_86 : tree_set 6,%Free1,"bg","436"
-if %8787==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8787!=0 tree_seta %Free1,6,"auto","text",trophy_text_87 : tree_set 6,%Free1,"bg","437"
-if %8788==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8788!=0 tree_seta %Free1,6,"auto","text",trophy_text_88 : tree_set 6,%Free1,"bg","438"
-if %8789==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8789!=0 tree_seta %Free1,6,"auto","text",trophy_text_89 : tree_set 6,%Free1,"bg","439"
-if %8790==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8790!=0 tree_seta %Free1,6,"auto","text",trophy_text_90 : tree_set 6,%Free1,"bg","440"
-if %8791==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8791!=0 tree_seta %Free1,6,"auto","text",trophy_text_91 : tree_set 6,%Free1,"bg","441"
-if %8792==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8792!=0 tree_seta %Free1,6,"auto","text",trophy_text_92 : tree_set 6,%Free1,"bg","442"
-if %8793==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8793!=0 tree_seta %Free1,6,"auto","text",trophy_text_93 : tree_set 6,%Free1,"bg","443"
-if %8794==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8794!=0 tree_seta %Free1,6,"auto","text",trophy_text_94 : tree_set 6,%Free1,"bg","444"
-if %8795==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8795!=0 tree_seta %Free1,6,"auto","text",trophy_text_95 : tree_set 6,%Free1,"bg","445"
-if %8796==0 tree_seta %Free1,6,"auto","text",trophy_text_locked
-if %8796!=0 tree_seta %Free1,6,"auto","text",trophy_text_96 : tree_set 6,%Free1,"bg","446"
+if %8750==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8750!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_50 : tree_set 6,%Free1,"bg","400"
+if %8751==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8751!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_51 : tree_set 6,%Free1,"bg","401"
+if %8752==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8752!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_52 : tree_set 6,%Free1,"bg","402"
+if %8753==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8753!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_53 : tree_set 6,%Free1,"bg","403"
+if %8754==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8754!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_54 : tree_set 6,%Free1,"bg","404"
+if %8755==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8755!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_55 : tree_set 6,%Free1,"bg","405"
+if %8756==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8756!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_56 : tree_set 6,%Free1,"bg","406"
+if %8757==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8757!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_57 : tree_set 6,%Free1,"bg","407"
+if %8758==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8758!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_58 : tree_set 6,%Free1,"bg","408"
+if %8759==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8759!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_59 : tree_set 6,%Free1,"bg","409"
+if %8760==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8760!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_60 : tree_set 6,%Free1,"bg","410"
+if %8761==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8761!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_61 : tree_set 6,%Free1,"bg","411"
+if %8762==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8762!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_62 : tree_set 6,%Free1,"bg","412"
+if %8763==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8763!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_63 : tree_set 6,%Free1,"bg","413"
+if %8764==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8764!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_64 : tree_set 6,%Free1,"bg","414"
+if %8765==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8765!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_65 : tree_set 6,%Free1,"bg","415"
+if %8766==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8766!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_66 : tree_set 6,%Free1,"bg","416"
+if %8767==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8767!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_67 : tree_set 6,%Free1,"bg","417"
+if %8768==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8768!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_68 : tree_set 6,%Free1,"bg","418"
+if %8769==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8769!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_69 : tree_set 6,%Free1,"bg","419"
+if %8770==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8770!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_70 : tree_set 6,%Free1,"bg","420"
+if %8771==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8771!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_71 : tree_set 6,%Free1,"bg","421"
+if %8772==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8772!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_72 : tree_set 6,%Free1,"bg","422"
+if %8773==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8773!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_73 : tree_set 6,%Free1,"bg","423"
+if %8774==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8774!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_74 : tree_set 6,%Free1,"bg","424"
+if %8775==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8775!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_75 : tree_set 6,%Free1,"bg","425"
+if %8776==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8776!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_76 : tree_set 6,%Free1,"bg","426"
+if %8777==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8777!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_77 : tree_set 6,%Free1,"bg","427"
+if %8778==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8778!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_78 : tree_set 6,%Free1,"bg","428"
+if %8779==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8779!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_79 : tree_set 6,%Free1,"bg","429"
+if %8780==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8780!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_80 : tree_set 6,%Free1,"bg","430"
+if %8781==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8781!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_81 : tree_set 6,%Free1,"bg","431"
+if %8782==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8782!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_82 : tree_set 6,%Free1,"bg","432"
+if %8783==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8783!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_83 : tree_set 6,%Free1,"bg","433"
+if %8784==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8784!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_84 : tree_set 6,%Free1,"bg","434"
+if %8785==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8785!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_85 : tree_set 6,%Free1,"bg","435"
+if %8786==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8786!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_86 : tree_set 6,%Free1,"bg","436"
+if %8787==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8787!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_87 : tree_set 6,%Free1,"bg","437"
+if %8788==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8788!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_88 : tree_set 6,%Free1,"bg","438"
+if %8789==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8789!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_89 : tree_set 6,%Free1,"bg","439"
+if %8790==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8790!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_90 : tree_set 6,%Free1,"bg","440"
+if %8791==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8791!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_91 : tree_set 6,%Free1,"bg","441"
+if %8792==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8792!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_92 : tree_set 6,%Free1,"bg","442"
+if %8793==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8793!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_93 : tree_set 6,%Free1,"bg","443"
+if %8794==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8794!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_94 : tree_set 6,%Free1,"bg","444"
+if %8795==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8795!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_95 : tree_set 6,%Free1,"bg","445"
+if %8796==0 && $Free9 != "1" tree_seta %Free1,6,"auto","text",trophy_text_locked
+if %8796!=0 || $Free9 == "1" tree_seta %Free1,6,"auto","text",trophy_text_96 : tree_set 6,%Free1,"bg","446"
 ~
 
 scrollable 320,6,0,0,1785,1080
